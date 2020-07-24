@@ -1330,7 +1330,17 @@
                 "description": "",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "MarkdownRemarkFrontmatterFilterInput",
+                  "name": "FrontmatterFilterInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "fields",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "FieldsFilterInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -1361,16 +1371,6 @@
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "StringQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "fields",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "MarkdownRemarkFieldsFilterInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -3533,7 +3533,17 @@
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "MarkdownRemarkFrontmatterFilterInput",
+              "name": "FrontmatterFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "fields",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "FieldsFilterInput",
               "ofType": null
             },
             "defaultValue": null
@@ -3564,16 +3574,6 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "fields",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "MarkdownRemarkFieldsFilterInput",
               "ofType": null
             },
             "defaultValue": null
@@ -3685,7 +3685,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "MarkdownRemarkFrontmatterFilterInput",
+        "name": "FrontmatterFilterInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -4218,7 +4218,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "MarkdownRemarkFieldsFilterInput",
+        "name": "FieldsFilterInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -7937,9 +7937,29 @@
             "description": null,
             "args": [],
             "type": {
-              "kind": "OBJECT",
-              "name": "MarkdownRemarkFrontmatter",
-              "ofType": null
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Frontmatter",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fields",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Fields",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8006,18 +8026,6 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "fields",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "MarkdownRemarkFields",
               "ofType": null
             },
             "isDeprecated": false,
@@ -8250,7 +8258,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "MarkdownRemarkFrontmatter",
+        "name": "Frontmatter",
         "description": null,
         "fields": [
           {
@@ -8258,9 +8266,13 @@
             "description": null,
             "args": [],
             "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8311,9 +8323,13 @@
               }
             ],
             "type": {
-              "kind": "SCALAR",
-              "name": "Date",
-              "ofType": null
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Date",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8323,9 +8339,13 @@
             "description": null,
             "args": [],
             "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8338,6 +8358,33 @@
               "kind": "OBJECT",
               "name": "File",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Fields",
+        "description": null,
+        "fields": [
+          {
+            "name": "slug",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8375,29 +8422,6 @@
             "deprecationReason": null
           }
         ],
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "MarkdownRemarkFields",
-        "description": null,
-        "fields": [
-          {
-            "name": "slug",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
         "possibleTypes": null
       },
       {
@@ -10196,6 +10220,12 @@
             "deprecationReason": null
           },
           {
+            "name": "childMarkdownRemark___fields___slug",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childMarkdownRemark___excerpt",
             "description": null,
             "isDeprecated": true,
@@ -10209,12 +10239,6 @@
           },
           {
             "name": "childMarkdownRemark___fileAbsolutePath",
-            "description": null,
-            "isDeprecated": true,
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
-          },
-          {
-            "name": "childMarkdownRemark___fields___slug",
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
@@ -18876,6 +18900,12 @@
             "deprecationReason": null
           },
           {
+            "name": "fields___slug",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "excerpt",
             "description": null,
             "isDeprecated": true,
@@ -18889,12 +18919,6 @@
           },
           {
             "name": "fileAbsolutePath",
-            "description": null,
-            "isDeprecated": true,
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
-          },
-          {
-            "name": "fields___slug",
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."

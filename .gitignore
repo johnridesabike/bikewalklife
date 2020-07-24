@@ -72,3 +72,6 @@ yarn-error.log
 _esy/
 .merlin
 lib/
+.bsb.lock
+.graphql_ppx_cache/
+*.bs.js

@@ -1,20 +1,23 @@
-import { graphql, useStaticQuery } from "gatsby"
+%raw
+"import { graphql } from 'gatsby'";
 
-export default function useBlogData() {
-  const data = useStaticQuery(graphql`
+module ImageFluid = Query_Frag_ImageFluid;
+
+[%graphql
+  {|
     query getBlogData {
-      allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
+      allMarkdownRemark(sort: { order: [DESC], fields: [frontmatter___date] }) {
         edges {
           node {
             id
             frontmatter {
-              date(formatString: "MMMM Do, YYYY")
+              date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
               author
               title
               hero_image {
                 childImageSharp {
                   fluid( maxWidth: 800 ) {
-                    ...GatsbyImageSharpFluid
+                    ...ImageFluid
                   }
                 }
               }
@@ -27,6 +30,9 @@ export default function useBlogData() {
         }
       }
     }
-  `)
-  return data.allMarkdownRemark.edges
-}
+|};
+  {inline: true}
+];
+
+let useBlogData: unit => t =
+  () => query->Gatsby.useStaticQueryUnsafe->parse;
