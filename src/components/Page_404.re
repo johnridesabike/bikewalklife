@@ -1,9 +1,9 @@
 [@react.component]
 let make = () =>
-  <Layout page="404">
+  <Layout title={String("Not Found")}>
     <div>
-      <Gatsby.Link _to="/">
+      <Router.Link to_=Index>
         <h1> "Sorry, couldn't find that page."->React.string </h1>
-      </Gatsby.Link>
+      </Router.Link>
     </div>
   </Layout>;

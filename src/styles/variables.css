@@ -1,0 +1,53 @@
+:root {
+  /**
+   * Typography
+   */
+  --font-sans-serif:
+    "Cooper Hewitt",
+    "Helvetica Neue",
+    sans-serif;
+  --font-serif:
+    "Charter",
+    serif;
+  --font-ui:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    "Helvetica Neue",
+    sans-serif;
+  --font-pre: "Courier 10 Pitch", Courier, monospace;
+  --font-base-size: 18px;
+  --font-size-base-mobile: 16px;
+  --font-size-xs: calc(1em / 1.25); /* 16 */
+  --font-size-sm: calc(1em / 1.125); /* 17.78 */
+  --font-size-md: calc(1em * 1); /* 20 */
+  --font-size-lg: calc(1em * 1.25); /* 25 */
+  --font-size-xl: calc(1em * 1.5); /* 30 */
+  --font-size-xxl: calc(1em * 1.75); /* 35 */
+  --letter-spacing-allcaps: 0.06em;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /**
+   * Layout
+   */
+  --width-site: 900px;
+  --width-content: 600px;
+  --column-margin: 3.8%;
+
+  /**
+   * Colors
+   * https://coolors.co/73eedc-4c191b-d4c2fc-007ea7-63c7b2
+   */
+  --color-background: #fff;
+  --color-text: #000;
+  --color-primary: #457B9D;
+  --color-primary-light: #A8DADC;
+  --color-primary-dark: #1D3557;
+  --color-secondary: #E63946;
+  --color-secondary-light: #F1FAEE;
+}

@@ -6,5 +6,4 @@ let parse = x =>
   | Some(x) => x
   };
 
-/* This isn't completely safe but also it isn't used for anything. */
 let serialize = Js.Json.string;

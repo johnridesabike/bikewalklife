@@ -1,5 +1,8 @@
 {
-  "title": "Brevifolia",
-  "description": "Starter blog using Forestry CMS with Gatsby.",
-  "repository_url": "https://github.com/kendallstrautman/starter-blog-gatsby"
+  "title": "Bike Walk Life",
+  "description": "News about the world of biking and walking.",
+  "site_url": "http://bikewalk.life/",
+  "archive_per_page": 100,
+  "copyright" : 2020,
+  "feed_url": "/feed.xml"
 }

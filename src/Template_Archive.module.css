@@ -1,0 +1,32 @@
+.pageTitle {
+  text-align: center;
+}
+
+.entry {
+  margin: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: var(--font-ui);
+  margin-bottom: 1.5em;
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  text-transform: uppercase;
+  line-height: 1.25;
+  font-family: var(--font-sans-serif);
+  flex-basis: 100%;
+  margin-bottom: 0.5em;
+}
+
+.navTitle {
+  text-align: center;
+  font-family: var(--font-ui);
+  color: var(--color-secondary);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}

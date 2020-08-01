@@ -11,5 +11,8 @@ fields:
 - type: text
   name: repository_url
   label: repository_url
+- type: text
+  name: site_url
+  label: site_url
 pages:
 - config.json

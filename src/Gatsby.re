@@ -1,11 +1,3 @@
-module Link = {
-  [@bs.module "gatsby"] [@react.component]
-  external make:
-    (~_to: string, ~activeClassName: string=?, ~children: React.element) =>
-    React.element =
-    "Link";
-};
-
 [@bs.module "gatsby"]
 external useStaticQueryUnsafe: 'a => 'b = "useStaticQuery";
 
@@ -13,26 +5,51 @@ external useStaticQueryUnsafe: 'a => 'b = "useStaticQuery";
 
 module Img = {
   module Fluid = {
-    type t = {
-      src: string,
-      srcSet: string,
-      sizes: string,
-      aspectRatio: float,
-      media: string,
-    };
+    type t;
+    [@bs.obj]
+    external make:
+      (
+        ~src: string,
+        ~srcSet: string,
+        ~sizes: string,
+        ~aspectRatio: float,
+        ~media: string,
+        ~base64: string=?,
+        ~tracedSVG: string=?,
+        unit
+      ) =>
+      t;
+    [@bs.get] external src: t => string = "src";
     let make =
-        ({Query_Frag_ImageFluid.src, srcSet, sizes, aspectRatio}, media) => {
-      media,
-      src,
-      srcSet,
-      sizes,
-      aspectRatio,
-    };
+        (
+          Fragments.ImageFluid.{src, srcSet, sizes, aspectRatio, base64},
+          media,
+        ) =>
+      make(~media, ~src, ~srcSet, ~sizes, ~aspectRatio, ~base64?, ());
+  };
+  module Fixed = {
+    type t;
+    [@bs.obj]
+    external make:
+      (
+        ~src: string,
+        ~srcSet: string,
+        ~height: float,
+        ~width: float,
+        ~media: string,
+        ~base64: string=?,
+        unit
+      ) =>
+      t;
+    let make =
+        (Fragments.ImageFixed.{src, srcSet, height, width, base64}, media) =>
+      make(~src, ~srcSet, ~height, ~width, ~media, ~base64?, ());
   };
   [@bs.module "gatsby-image"] [@react.component]
   external make:
     (
       ~fluid: array(Fluid.t)=?,
+      ~fixed: array(Fixed.t)=?,
       ~alt: string,
       ~className: string=?,
       ~style: ReactDOMRe.Style.t=?

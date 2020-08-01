@@ -1,16 +1,18 @@
 const config = require("./config.json")
-const infoData = require("./content/data/info.json")
+const aboutData = require("./content/data/about.json")
 
 module.exports = {
   //this makes the site config available to forestry cms
   siteMetadata: {
     title: config.title,
     description: config.description,
-    repoUrl: config.repository_url,
     about: config.about,
     contact: config.contact,
-    primaryColor: config.primary_color,
-    infoData: infoData
+    aboutData: aboutData,
+    siteUrl: config.site_url,
+    archivePerPage: config.archive_per_page,
+    copyright: config.copyright,
+    feedUrl: config.feed_url
   },
   plugins: [
     "gatsby-transformer-remark",
@@ -65,6 +67,32 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: require("./lib/js/src/GatsbyConfig.bs.js").PluginFeed.options,
+    },
+    {
+      resolve: "gatsby-plugin-postcss",
+      options: {
+        postCssPlugins: [
+          require("postcss-custom-properties")({
+            importFrom: `${__dirname}/src/styles/variables.css`
+          })
+        ]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: config.title,
+        short_name: config.title,
+        start_url: "/",
+        background_color: "#fff",
+        theme_color: "#457B9D",
+        display: "standalone",
+        icon: "./src/images/nps-bicycle-trail.svg",
       },
     },
   ],

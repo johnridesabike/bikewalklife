@@ -1,0 +1,148 @@
+html {
+  font-size: var(--font-base-size);
+  line-height: 1.50967;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: var(--font-base-size-mobile);
+    line-height: 1.58566;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+}
+
+body,
+textarea {
+  font-family: var(--font-sans-serif);
+}
+
+input {
+  font-family: var(--font-ui);
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-size: var(--font-size-md);
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: var(--font-weight-medium);
+  hyphens: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: var(--color-primary-light);
+}
+
+/**
+ * Layout
+ */
+.small-screen-padding {
+  margin: 0 1em;
+}
+
+.small-screen-full-bleed {
+  margin: 0 -1em;
+  width: 100vw;
+}
+
+@media screen and (min-width: 600px) {
+  .small-screen-padding,
+  .small-screen-full-bleed {
+    margin: 0;
+  }
+
+  .small-screen-full-bleed {
+    margin-left: calc(-100vw / 2 + 600px / 2);
+    margin-right: calc(-100vw / 2 + 600px / 2);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .small-screen-full-bleed {
+    width: 900px;
+    margin-left: -150px;
+
+  }
+}
+
+/**
+ * Typography
+ */
+.ui-font {
+  font-family: var(--font-ui);
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.sans-serif {
+  font-family: var(--font-sans-serif);
+}
+
+.icon {
+  color: currentColor;
+  height: 1em;
+  vertical-align: text-bottom;
+}
+
+.font-size-small {
+  font-size: var(--font-size-sm);
+}
+
+/**
+ * Colors
+ */
+.active-page {
+  border-bottom-color: var(--color-secondary);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.color-primary-dark {
+  color: var(--color-primary-dark);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+/**
+ * Because I forget:
+ * phone =< 600px
+ * tablet portrait =< 900px
+ * tablet landscape =< 1200px
+ * desktop =< 1800px
+ * https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+ */
