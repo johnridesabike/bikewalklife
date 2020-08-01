@@ -5,14 +5,43 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: text
   name: description
   label: description
-- type: text
-  name: repository_url
-  label: repository_url
+  config:
+    required: true
 - type: text
   name: site_url
   label: site_url
+  config:
+    required: true
+- name: archive_per_page
+  type: number
+  label: Items per archive page
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: copyright
+  type: number
+  label: Copyright year
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: feed_url
+  type: text
+  config:
+    required: true
+  label: Feed url
 pages:
 - config.json
