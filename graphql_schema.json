@@ -3740,7 +3740,7 @@
             "defaultValue": null
           },
           {
-            "name": "link",
+            "name": "external_link",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -8440,7 +8440,7 @@
             "deprecationReason": null
           },
           {
-            "name": "link",
+            "name": "external_link",
             "description": null,
             "args": [],
             "type": {
@@ -10158,7 +10158,7 @@
             "deprecationReason": null
           },
           {
-            "name": "childMarkdownRemark___frontmatter___link",
+            "name": "childMarkdownRemark___frontmatter___external_link",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -14068,6 +14068,36 @@
             "defaultValue": null
           },
           {
+            "name": "host",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "policy",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "SitePluginPluginOptionsPolicyFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "output",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "pathCheck",
             "description": "",
             "type": {
@@ -14274,6 +14304,58 @@
           },
           {
             "name": "title",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "SitePluginPluginOptionsPolicyFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "SitePluginPluginOptionsPolicyFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "SitePluginPluginOptionsPolicyFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "userAgent",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "disallow",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -15363,6 +15445,46 @@
             "deprecationReason": null
           },
           {
+            "name": "host",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "policy",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SitePluginPluginOptionsPolicy",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "output",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "pathCheck",
             "description": null,
             "args": [],
@@ -15561,6 +15683,41 @@
           },
           {
             "name": "title",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SitePluginPluginOptionsPolicy",
+        "description": null,
+        "fields": [
+          {
+            "name": "userAgent",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "disallow",
             "description": null,
             "args": [],
             "type": {
@@ -17042,6 +17199,36 @@
             "deprecationReason": null
           },
           {
+            "name": "pluginCreator___pluginOptions___host",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginCreator___pluginOptions___policy",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginCreator___pluginOptions___policy___userAgent",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginCreator___pluginOptions___policy___disallow",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginCreator___pluginOptions___output",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "pluginCreator___pluginOptions___pathCheck",
             "description": null,
             "isDeprecated": false,
@@ -17588,7 +17775,7 @@
             "defaultValue": null
           },
           {
-            "name": "copyright",
+            "name": "copyrightYear",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -17956,7 +18143,7 @@
             "deprecationReason": null
           },
           {
-            "name": "copyright",
+            "name": "copyrightYear",
             "description": null,
             "args": [],
             "type": {
@@ -18284,7 +18471,7 @@
             "deprecationReason": null
           },
           {
-            "name": "siteMetadata___copyright",
+            "name": "siteMetadata___copyrightYear",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -19521,7 +19708,7 @@
             "deprecationReason": null
           },
           {
-            "name": "frontmatter___link",
+            "name": "frontmatter___external_link",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -24561,6 +24748,36 @@
           },
           {
             "name": "pluginOptions___cacheDigest",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginOptions___host",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginOptions___policy",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginOptions___policy___userAgent",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginOptions___policy___disallow",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pluginOptions___output",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

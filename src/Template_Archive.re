@@ -17,7 +17,7 @@
           }
           frontmatter {
             title
-            link
+            external_link
             isoDate: date @ppxCustom(module: "DateTime")
             date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
           }
@@ -65,7 +65,7 @@ let default =
          (
            {
              node: {
-               frontmatter: {title, link, date, isoDate},
+               frontmatter: {title, external_link, date, isoDate},
                fields: {slug},
              },
            },
@@ -78,7 +78,7 @@ let default =
              date={DateTime.parse(date)}
              isoDate={DateTime.parse(isoDate)}
            />
-           {switch (Js.Nullable.toOption(link)) {
+           {switch (Js.Nullable.toOption(external_link)) {
             | Some(href) => <Entry.OriginalLink href />
             | None => React.null
             }}

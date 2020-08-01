@@ -8,7 +8,7 @@
         siteMetadata {
           title
           description
-          copyright
+          copyrightYear
           siteUrl
           feedUrl
           aboutData {

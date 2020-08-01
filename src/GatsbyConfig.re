@@ -232,3 +232,62 @@ module PluginFeed = {
     |],
   };
 };
+
+module PluginSiteMap = {
+  [%graphql
+    {|
+    query SiteMap {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+      allSitePage {
+        edges {
+          node {
+            path
+          }
+        }
+      }
+    }
+  |};
+    {taggedTemplate: false}
+  ];
+
+  module Page = {
+    type t;
+    [@bs.obj]
+    external make:
+      (~url: string, ~changefreq: string=?, ~priority: float=?, unit) => t;
+  };
+
+  type t = {
+    output: string,
+    exclude: array(string),
+    query: string,
+    resolveSiteUrl: SiteMap.Raw.t => string,
+    serialize: SiteMap.Raw.t => array(Page.t),
+  };
+
+  let options = {
+    output: "/sitemap.xml",
+    exclude: [||],
+    query: SiteMap.query,
+    resolveSiteUrl: query =>
+      switch (SiteMap.parse(query)) {
+      | {site: Some({siteMetadata: {siteUrl}}), _} => siteUrl
+      | _ => failwith("Error building sitemap.")
+      },
+    serialize: query =>
+      switch (SiteMap.parse(query)) {
+      | {site: Some({siteMetadata: {siteUrl}}), allSitePage: {edges}} =>
+        Array.map(edges, ({node: {path}}) =>
+          Page.make(
+            ~url=Web.Url.make(~url=path, ~base=siteUrl)->Web.Url.toString,
+            (),
+          )
+        )
+      | _ => failwith("Error building sitemap.")
+      },
+  };
+};

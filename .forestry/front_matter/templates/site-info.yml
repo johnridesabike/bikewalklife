@@ -28,7 +28,7 @@ fields:
     max: 
     step: 
     required: true
-- name: copyright
+- name: copyright_year
   type: number
   label: Copyright year
   description: ''

@@ -7,7 +7,7 @@ module Img = {
   module Fluid = {
     type t;
     [@bs.obj]
-    external make:
+    external _make:
       (
         ~src: string,
         ~srcSet: string,
@@ -25,7 +25,20 @@ module Img = {
           Fragments.ImageFluid.{src, srcSet, sizes, aspectRatio, base64},
           media,
         ) =>
-      make(~media, ~src, ~srcSet, ~sizes, ~aspectRatio, ~base64?, ());
+      _make(~media, ~src, ~srcSet, ~sizes, ~aspectRatio, ~base64?, ());
+
+    let makeWithSVG =
+        (
+          Fragments.ImageFluid_tracedSVG.{
+            src,
+            srcSet,
+            sizes,
+            aspectRatio,
+            tracedSVG,
+          },
+          media,
+        ) =>
+      _make(~media, ~src, ~srcSet, ~sizes, ~aspectRatio, ~tracedSVG?, ());
   };
   module Fixed = {
     type t;

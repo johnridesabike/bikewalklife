@@ -195,7 +195,7 @@ let createSchemaCustomization = ({actions: {createTypes, _}, _}) =>
       description: String!
       siteUrl: String!
       archivePerPage: Int!
-      copyright: Int!
+      copyrightYear: Int!
       feedUrl: String!
       aboutData: AboutData!
     }

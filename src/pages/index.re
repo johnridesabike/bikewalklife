@@ -17,7 +17,7 @@ open Fragments;
               isoDate: date @ppxCustom(module: "DateTime")
               date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
               title
-              link
+              external_link
               hero_image {
                 alt
                 caption
@@ -53,7 +53,7 @@ let default = () => {
              node: {
                html,
                fields: {slug},
-               frontmatter: {title, hero_image, isoDate, date, link},
+               frontmatter: {title, hero_image, isoDate, date, external_link},
              },
            },
          ) =>
@@ -91,7 +91,7 @@ let default = () => {
                    ((fluid, media)) =>
                    switch (fluid) {
                    | Some(fluid) =>
-                     Some(Gatsby.Img.Fluid.make(fluid, media))
+                     Some(Gatsby.Img.Fluid.makeWithSVG(fluid, media))
                    | None => None
                    }
                  );
@@ -113,7 +113,7 @@ let default = () => {
            date
            footer={
              <footer>
-               {switch (link) {
+               {switch (external_link) {
                 | Some(href) => <Entry.OriginalLink href />
                 | None => React.null
                 }}

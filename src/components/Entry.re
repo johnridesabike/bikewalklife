@@ -57,7 +57,7 @@ let make =
   <article className=Cn.(styles##article <:> className)>
     {switch (img) {
      | Some(img) =>
-       <figure className="small-screen-full-bleed">
+       <figure className="full-bleed">
          {switch (linkedHeader) {
           | `Linked => <Router.Link to_={Entry(slug)}> img </Router.Link>
           | `Unlinked => img

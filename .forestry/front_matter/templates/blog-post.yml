@@ -50,7 +50,7 @@ fields:
       required: false
     label: Caption
   label: Hero image
-- name: link
+- name: external_link
   type: text
   config:
     required: false

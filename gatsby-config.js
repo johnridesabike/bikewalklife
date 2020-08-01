@@ -1,5 +1,6 @@
 const config = require("./config.json")
 const aboutData = require("./content/data/about.json")
+const rePlugins = require("./lib/js/src/GatsbyConfig.bs.js");
 
 module.exports = {
   //this makes the site config available to forestry cms
@@ -11,7 +12,7 @@ module.exports = {
     aboutData: aboutData,
     siteUrl: config.site_url,
     archivePerPage: config.archive_per_page,
-    copyright: config.copyright,
+    copyrightYear: config.copyright_year,
     feedUrl: config.feed_url
   },
   plugins: [
@@ -71,7 +72,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-feed`,
-      options: require("./lib/js/src/GatsbyConfig.bs.js").PluginFeed.options,
+      options: rePlugins.PluginFeed.options,
     },
     {
       resolve: "gatsby-plugin-postcss",
@@ -106,6 +107,10 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: rePlugins.PluginSiteMap.options
     }
   ],
 }

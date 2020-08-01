@@ -2,7 +2,7 @@
 title: "People for Bikes: 2020 Community Survey"
 date: 2020-07-31T22:42:09.000+00:00
 author: John Jackson
-link: https://www.surveygizmo.com/s3/5649932/pfbcommsvy20
+external_link: https://www.surveygizmo.com/s3/5649932/pfbcommsvy20
 published: true
 
 ---

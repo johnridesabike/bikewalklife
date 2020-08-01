@@ -67,25 +67,25 @@ a:focus {
   margin: 0 1em;
 }
 
-.small-screen-full-bleed {
+.full-bleed {
   margin: 0 -1em;
   width: 100vw;
 }
 
 @media screen and (min-width: 600px) {
   .small-screen-padding,
-  .small-screen-full-bleed {
+  .full-bleed {
     margin: 0;
   }
 
-  .small-screen-full-bleed {
+  .full-bleed {
     margin-left: calc(-100vw / 2 + 600px / 2);
     margin-right: calc(-100vw / 2 + 600px / 2);
   }
 }
 
 @media screen and (min-width: 900px) {
-  .small-screen-full-bleed {
+  .full-bleed {
     width: 900px;
     margin-left: -150px;
 

@@ -58,7 +58,7 @@ let make = (~title as pageTitle, ~children) => {
   let SiteMetadata.{site} = SiteMetadata.useQuery();
   <div className=styles##page>
     {switch (site) {
-     | Some({siteMetadata: {title, description, copyright, _}}) =>
+     | Some({siteMetadata: {title, description, copyrightYear, _}}) =>
        <>
          <BsReactHelmet>
            <html lang="en" />
@@ -118,7 +118,10 @@ let make = (~title as pageTitle, ~children) => {
          </main>
          <footer className=styles##footerWrapper>
            <div className=Cn.("small-screen-padding" <:> styles##footer)>
-             <p> {j|Copyright © |j}->React.string copyright->React.int </p>
+             <p>
+               {j|Copyright © |j}->React.string
+               copyrightYear->React.int
+             </p>
              <p>
                <Router.Link to_=Index activeClassName="">
                  "Home"->React.string
