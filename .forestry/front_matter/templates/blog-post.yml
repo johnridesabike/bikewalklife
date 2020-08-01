@@ -42,7 +42,7 @@ fields:
   - name: alt
     type: text
     config:
-      required: true
+      required: false
     label: Alternate text
   - name: caption
     type: text
