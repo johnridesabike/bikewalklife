@@ -51,7 +51,7 @@
     "typeface-source-sans-pro": "^1.1.5"
   },
   "devDependencies": {
-    "@reasonml-community/graphql-ppx": "^1.0.0-beta.21",
+    "@reasonml-community/graphql-ppx": "1.0.0-beta.21",
     "bs-platform": "^8.0.3",
     "get-graphql-schema": "^2.1.2"
   },
