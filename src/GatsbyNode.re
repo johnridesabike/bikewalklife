@@ -180,8 +180,8 @@ let createSchemaCustomization = ({actions: {createTypes, _}, _}) =>
       hero_image: HeroImage
     }
     type HeroImage {
-      image: File! @fileByRelativePath
-      alt: String!
+      image: File @fileByRelativePath
+      alt: String
       caption: String
     }
     type Fields {

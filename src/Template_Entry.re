@@ -83,14 +83,16 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
       <BsReactHelmet>
         {switch (hero_image) {
          | Some({
-             image: {childImageSharp: Some({mobile: Some({src, _}), _})},
+             image:
+               Some({childImageSharp: Some({mobile: Some({src, _}), _})}),
              _,
            }) =>
            <meta property="og:image" content=src />
          | _ => React.null
          }}
         {switch (hero_image) {
-         | Some({alt, _}) => <meta name="twitter:image:alt" content=alt />
+         | Some({alt: Some(alt), _}) =>
+           <meta name="twitter:image:alt" content=alt />
          | _ => React.null
          }}
         {switch (site) {
@@ -115,7 +117,8 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
           switch (hero_image) {
           | Some({
               alt,
-              image: {childImageSharp: Some({mobileSmall, mobile, full})},
+              image:
+                Some({childImageSharp: Some({mobileSmall, mobile, full})}),
               _,
             }) =>
             let fluid =
@@ -131,8 +134,11 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
                 | None => None
                 }
               );
-            (fluid, alt);
-          | _ => ([||], "")
+            switch (alt) {
+            | Some(alt) => `Image((fluid, alt))
+            | None => `ImageNoAlt(fluid)
+            };
+          | _ => `NoImage
           }
         }
         imageCaption={

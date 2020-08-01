@@ -75,7 +75,10 @@ let default = () => {
              switch (hero_image) {
              | Some({
                  alt,
-                 image: {childImageSharp: Some({mobileSmall, mobile, full})},
+                 image:
+                   Some({
+                     childImageSharp: Some({mobileSmall, mobile, full}),
+                   }),
                  _,
                }) =>
                let fluid =
@@ -92,8 +95,11 @@ let default = () => {
                    | None => None
                    }
                  );
-               (fluid, alt);
-             | _ => ([||], "")
+               switch (alt) {
+               | Some(alt) => `Image((fluid, alt))
+               | None => `ImageNoAlt(fluid)
+               };
+             | _ => `NoImage
              }
            }
            imageCaption={
