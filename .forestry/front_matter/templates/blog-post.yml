@@ -5,6 +5,8 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - name: author
   type: select
   default: ''
@@ -23,15 +25,37 @@ fields:
   label: date
   description: Date post was created
   config:
-    required: false
+    required: true
     date_format: 
     time_format: 
     display_utc: false
   default: now
 - name: hero_image
-  type: file
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: alt
+    type: text
+    config:
+      required: true
+    label: Alternate text
+  - name: caption
+    type: text
+    config:
+      required: false
+    label: Caption
+  label: Hero image
+- name: link
+  type: text
   config:
-    maxSize: '10'
-  label: hero image
-  description: Enter hero image for blog post here
-  default: "/content/images/sarah-dorweiler-9Z1KRIfpBTM-unsplash.jpg"
+    required: false
+  label: External link
+- name: published
+  type: boolean
+  label: Published
+  default: false
