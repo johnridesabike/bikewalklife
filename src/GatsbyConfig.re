@@ -174,7 +174,7 @@ module PluginFeed = {
           ~description,
           ~site_url=siteUrl,
           ~feed_url=
-            Web.Url.make(~url=config##feed_url, ~base=siteUrl)
+            Web.Url.make(config##feed_url, ~base=siteUrl, ())
             ->Web.Url.toString,
           (),
         )
@@ -200,6 +200,13 @@ module PluginFeed = {
             ) =>
             switch (site) {
             | Some({siteMetadata: {siteUrl: site_url, _}}) =>
+              let url =
+                Web.Url.make(
+                  Router.Entry(slug)->Router.toString,
+                  ~base=site_url,
+                  (),
+                )
+                ->Web.Url.toString;
               Rss.Item.options(
                 ~title,
                 ~description=
@@ -208,10 +215,8 @@ module PluginFeed = {
                   | None => ""
                   },
                 ~date,
-                ~url=
-                  Web.Url.make(~url=slug, ~base=site_url)->Web.Url.toString,
-                ~guid=
-                  Web.Url.make(~url=slug, ~base=site_url)->Web.Url.toString,
+                ~url,
+                ~guid=url,
                 ~custom_elements=
                   switch (html) {
                   | Some(html) => [|
@@ -220,7 +225,7 @@ module PluginFeed = {
                   | None => [||]
                   },
                 (),
-              )
+              );
             | None => failwith("PluginFeed.serialize")
             }
           );
@@ -283,7 +288,7 @@ module PluginSiteMap = {
       | {site: Some({siteMetadata: {siteUrl}}), allSitePage: {edges}} =>
         Array.map(edges, ({node: {path}}) =>
           Page.make(
-            ~url=Web.Url.make(~url=path, ~base=siteUrl)->Web.Url.toString,
+            ~url=Web.Url.make(path, ~base=siteUrl, ())->Web.Url.toString,
             (),
           )
         )
