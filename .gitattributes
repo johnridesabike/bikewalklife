@@ -1,2 +1,4 @@
+*.re linguist-language=Reason
+*.rei linguist-language=Reason
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.jpeg filter=lfs diff=lfs merge=lfs -text

@@ -6,7 +6,7 @@
   "version": "0.1.0",
   "author": "John Jackson",
   "scripts": {
-    "build": "npm run re:cleanbuild && gatsby build",
+    "build": "bsb -clean-world -make-world && gatsby build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
@@ -29,6 +29,7 @@
     "gatsby-plugin-manifest": "^2.4.21",
     "gatsby-plugin-postcss": "^2.3.11",
     "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sharp": "^2.6.24",
     "gatsby-remark-images": "^3.3.23",
     "gatsby-remark-normalize-paths": "^1.0.0",

@@ -95,5 +95,17 @@ module.exports = {
         icon: "./src/images/nps-bicycle-trail.svg",
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: config.site_url,
+        policy: [
+          {
+            userAgent: "*",
+            disallow: "/"
+          }
+        ]
+      }
+    }
   ],
 }
