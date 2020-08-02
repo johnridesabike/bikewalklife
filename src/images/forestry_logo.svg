@@ -15,17 +15,8 @@
       font-size: 24px;
       font-family: "Cooper Hewitt", "Helvetica Neue", sans-serif;
       font-weight:400;
-      filter:url(#logo-text-shadow)
     }
   </style>
-  <filter id="logo-text-shadow">
-    <feDropShadow 
-      dx="-0.5"
-      dy="0.5"
-      stdDeviation="0.5"
-      flood-color="#fff"
-      flood-opacity="0.5" />
-  </filter>
   <g class="text" fill="#fff">
     <text x="6" y="24">Bike</text>
     <text x="26" y="45">Walk</text>
