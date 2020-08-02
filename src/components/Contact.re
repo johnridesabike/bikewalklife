@@ -129,6 +129,7 @@ let make = () => {
             type_="text"
             id="contact-form-name"
             name="name"
+            className=styles##input
             disabled={form.submitting}
             onBlur={_ => form.blurName()}
             value={form.input.name}
@@ -168,6 +169,7 @@ let make = () => {
             type_="text"
             id="contact-form-email"
             name="email"
+            className=styles##input
             ariaDescribedby="contact-form-email-error"
             disabled={form.submitting}
             onBlur={_ => form.blurEmail()}
@@ -207,6 +209,7 @@ let make = () => {
             id="contact-form-message"
             name="message"
             ariaDescribedby="contact-form-message-error"
+            className=styles##message
             disabled={form.submitting}
             onBlur={_ => form.blurMessage()}
             value={form.input.message}
@@ -229,7 +232,7 @@ let make = () => {
           </label>
         </Externals.VisuallyHidden>
       </div>
-      <button disabled={form.submitting || !form.valid()}>
+      <button disabled={form.submitting || !form.valid()} className="ui-font">
         "Submit"->React.string
       </button>
       {switch (form.status) {

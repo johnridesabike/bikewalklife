@@ -19,3 +19,11 @@
 .error {
   color: var(--color-secondary);
 }
+
+.input {
+  font-family: var(--font-ui);
+}
+
+.message {
+  font-family: var(--font-ui);
+}
