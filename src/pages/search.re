@@ -10,7 +10,7 @@ let default = () =>
         <iframe
           src={
             "https://duckduckgo.com/search.html?width=256&site="
-            ++ Web.Url.make(siteUrl, ())->Web.Url.hostname
+            ++ Web.Url.make(siteUrl)->Web.Url.hostname
             ++ "&prefill=Search with DuckDuckGo&focus=yes"
           }
           style={ReactDOMRe.Style.make(

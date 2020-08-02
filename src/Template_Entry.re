@@ -100,7 +100,10 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
            <meta
              property="og:url"
              content={
-               Web.Url.make(Router.toString(Entry(slug)), ~base=siteUrl, ())
+               Web.Url.makeWithBase(
+                 Router.toString(Entry(slug)),
+                 ~base=siteUrl,
+               )
                ->Web.Url.toString
              }
            />

@@ -174,7 +174,7 @@ module PluginFeed = {
           ~description,
           ~site_url=siteUrl,
           ~feed_url=
-            Web.Url.make(config##feed_url, ~base=siteUrl, ())
+            Web.Url.makeWithBase(config##feed_url, ~base=siteUrl)
             ->Web.Url.toString,
           (),
         )
@@ -201,10 +201,9 @@ module PluginFeed = {
             switch (site) {
             | Some({siteMetadata: {siteUrl: site_url, _}}) =>
               let url =
-                Web.Url.make(
+                Web.Url.makeWithBase(
                   Router.Entry(slug)->Router.toString,
                   ~base=site_url,
-                  (),
                 )
                 ->Web.Url.toString;
               Rss.Item.options(
@@ -288,7 +287,7 @@ module PluginSiteMap = {
       | {site: Some({siteMetadata: {siteUrl}}), allSitePage: {edges}} =>
         Array.map(edges, ({node: {path}}) =>
           Page.make(
-            ~url=Web.Url.make(path, ~base=siteUrl, ())->Web.Url.toString,
+            ~url=Web.Url.makeWithBase(path, ~base=siteUrl)->Web.Url.toString,
             (),
           )
         )
