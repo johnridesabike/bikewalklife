@@ -14,9 +14,6 @@
           aboutData {
             title
             description
-            contact {
-              email
-            }
           }
         }
       }

@@ -6,7 +6,7 @@ module Clock = {
 module Calendar = {
   [@bs.module "react-feather"] [@react.component]
   external make: (~className: string=?) => React.element = "Calendar";
-}
+};
 
 module ArrowRight = {
   [@bs.module "react-feather"] [@react.component]
@@ -21,4 +21,9 @@ module ArrowLeft = {
 module ExternalLink = {
   [@bs.module "react-feather"] [@react.component]
   external make: (~className: string=?) => React.element = "ExternalLink";
+};
+
+module Rss = {
+  [@bs.module "react-feather"] [@react.component]
+  external make: (~className: string=?) => React.element = "Rss";
 };

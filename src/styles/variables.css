@@ -41,13 +41,13 @@
 
   /**
    * Colors
-   * https://coolors.co/73eedc-4c191b-d4c2fc-007ea7-63c7b2
+   * https://coolors.co/457b9d-a8dadc-1d3557-da1b2b-f1faee
    */
   --color-background: #fff;
   --color-text: #000;
   --color-primary: #457B9D;
   --color-primary-light: #A8DADC;
   --color-primary-dark: #1D3557;
-  --color-secondary: #E63946;
+  --color-secondary: #DA1B2B;
   --color-secondary-light: #F1FAEE;
 }

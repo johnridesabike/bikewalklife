@@ -1,0 +1,250 @@
+module Form = [%form
+  type input = {
+    name: string,
+    email: string,
+    message: string,
+    [@bs.as "form-name"]
+    formName: string,
+  };
+  type output = input;
+  let validators = {
+    name: {
+      strategy: OnFirstBlur,
+      validate: ({name, _}) =>
+        switch (name) {
+        | "" => Error("Name is required.")
+        | name => Ok(name)
+        },
+    },
+    email: {
+      strategy: OnFirstBlur,
+      validate: ({email, _}) =>
+        switch (email) {
+        | "" => Error("Email is required.")
+        | email => Ok(email)
+        },
+    },
+    message: {
+      strategy: OnFirstBlur,
+      validate: ({message, _}) =>
+        switch (message) {
+        | "" => Error("Message is required.")
+        | message => Ok(message)
+        },
+    },
+    formName: {
+      strategy: OnSubmit,
+      validate: ({formName, _}) => Ok(formName),
+    },
+  }
+];
+
+/**
+ https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
+ */
+
+let encode = ({name, email, message, formName}: Form.output) => {
+  let e = Web.encodeURIComponent;
+  [|
+    ("name", name),
+    ("email", email),
+    ("message", message),
+    ("form-name", formName),
+  |]
+  ->Array.map(((key, value)) => e(key) ++ "=" ++ e(value))
+  ->Js.Array2.joinWith("&");
+};
+
+module Spread = {
+  [@react.component]
+  let make = (~props, ~children) => React.cloneElement(children, props);
+};
+
+let styles = Gatsby.importCss("./Contact.module.css");
+
+let initialInput: Form.input = {
+  name: "",
+  email: "",
+  message: "",
+  formName: "contact",
+};
+
+[@react.component]
+let make = () => {
+  let form =
+    Form.useForm(~initialInput, ~onSubmit=(output, callback) => {
+      Fetch.fetchWithInit(
+        "/",
+        Fetch.RequestInit.make(
+          ~method_=Fetch.Post,
+          ~headers=
+            Fetch.HeadersInit.make({
+              "Content-Type": "application/x-www-form-urlencoded",
+            }),
+          ~body=Fetch.BodyInit.make(encode(output)),
+          (),
+        ),
+      )
+      ->Promise.Js.fromBsPromise
+      ->Promise.Js.toResult
+      ->Promise.tapOk(_ => {callback.notifyOnSuccess(Some(initialInput))})
+      ->Promise.tapError(x => {
+          callback.notifyOnFailure();
+          Js.Console.error(x);
+        })
+      ->ignore
+    });
+  <Spread props={"data-netlify": true, "data-netlify-honeypot": "honeypot"}>
+    <form
+      className=styles##form
+      name="contact"
+      onSubmit={event => {
+        event->ReactEvent.Form.preventDefault;
+        form.submit();
+      }}>
+      <input type_="hidden" name="form-name" value="contact" />
+      <div className=styles##inputWrapper>
+        <div className=styles##labelWrapper>
+          <label className=styles##label htmlFor="contact-form-name">
+            "Name"->React.string
+          </label>
+          <div className=styles##error id="contact-form-name-error">
+            {switch (form.nameResult) {
+             | Some(Error(message)) => message->React.string
+             | Some(Ok(_))
+             | None => React.null
+             }}
+          </div>
+        </div>
+        <Spread
+          props={
+            "aria-invalid":
+              switch (form.nameResult) {
+              | Some(Error(_)) => "true"
+              | Some(Ok(_))
+              | None => "false"
+              },
+          }>
+          <input
+            type_="text"
+            id="contact-form-name"
+            name="name"
+            disabled={form.submitting}
+            onBlur={_ => form.blurName()}
+            value={form.input.name}
+            ariaDescribedby="contact-form-name-error"
+            onChange={event =>
+              form.updateName(
+                (input, name) => {...input, name},
+                event->ReactEvent.Form.target##value,
+              )
+            }
+          />
+        </Spread>
+      </div>
+      <div className=styles##inputWrapper>
+        <div className=styles##labelWrapper>
+          <label className=styles##label htmlFor="contact-form-email">
+            "Email"->React.string
+          </label>
+          <div className=styles##error id="contact-form-email-error">
+            {switch (form.emailResult) {
+             | Some(Error(message)) => message->React.string
+             | Some(Ok(_))
+             | None => React.null
+             }}
+          </div>
+        </div>
+        <Spread
+          props={
+            "aria-invalid":
+              switch (form.emailResult) {
+              | Some(Error(_)) => "true"
+              | Some(Ok(_))
+              | None => "false"
+              },
+          }>
+          <input
+            type_="text"
+            id="contact-form-email"
+            name="email"
+            ariaDescribedby="contact-form-email-error"
+            disabled={form.submitting}
+            onBlur={_ => form.blurEmail()}
+            value={form.input.email}
+            onChange={event =>
+              form.updateEmail(
+                (input, email) => {...input, email},
+                event->ReactEvent.Form.target##value,
+              )
+            }
+          />
+        </Spread>
+      </div>
+      <div className=styles##inputWrapper>
+        <div className=styles##labelWrapper>
+          <label className=styles##label htmlFor="contact-form-message">
+            "Message"->React.string
+          </label>
+          <div className=styles##error id="contact-form-message-error">
+            {switch (form.messageResult) {
+             | Some(Error(message)) => message->React.string
+             | Some(Ok(_))
+             | None => React.null
+             }}
+          </div>
+        </div>
+        <Spread
+          props={
+            "aria-invalid":
+              switch (form.messageResult) {
+              | Some(Error(_)) => "true"
+              | Some(Ok(_))
+              | None => "false"
+              },
+          }>
+          <textarea
+            id="contact-form-message"
+            name="message"
+            ariaDescribedby="contact-form-message-error"
+            disabled={form.submitting}
+            onBlur={_ => form.blurMessage()}
+            value={form.input.message}
+            cols=40
+            rows=10
+            onChange={event =>
+              form.updateMessage(
+                (input, message) => {...input, message},
+                event->ReactEvent.Form.target##value,
+              )
+            }
+          />
+        </Spread>
+      </div>
+      <div ariaHidden=true>
+        <Externals.VisuallyHidden>
+          <label>
+            "Don't fill this out"->React.string
+            <input name="honeypot" />
+          </label>
+        </Externals.VisuallyHidden>
+      </div>
+      <button disabled={form.submitting || !form.valid()}>
+        "Submit"->React.string
+      </button>
+      {switch (form.status) {
+       | Editing => React.null
+       | Submitting(_) => <p> "Submitting..."->React.string </p>
+       | Submitted =>
+         <p>
+           <strong> "Message submitted. "->React.string </strong>
+           <span ariaHidden=true> {j|🎉|j}->React.string </span>
+         </p>
+       | SubmissionFailed(_) =>
+         <p className=styles##error>
+           "Something went wrong. Try again later."->React.string
+         </p>
+       }}
+    </form>
+  </Spread>;
+};

@@ -5,11 +5,7 @@ let default = () => {
     | {
         site:
           Some({
-            siteMetadata: {
-              feedUrl,
-              aboutData: {title, description, contact: {email}},
-              _,
-            },
+            siteMetadata: {feedUrl, aboutData: {title, description}, _},
           }),
       } =>
       <Layout title={String("About")}>
@@ -18,12 +14,21 @@ let default = () => {
           className="serif"
           dangerouslySetInnerHTML={"__html": description}
         />
+        <h2> "Subscribe"->React.string </h2>
         <dl className="ui-font font-size-small">
-          <dt> "Email"->React.string </dt>
-          <dd> <a href={"mailto:" ++ email}> email->React.string </a> </dd>
           <dt> "Feed"->React.string </dt>
-          <dd> <a href=feedUrl> "RSS"->React.string </a> </dd>
+          <dd>
+            <a href=feedUrl>
+              <span ariaHidden=true> <Icons.Rss className="icon" /> </span>
+              "RSS"->React.string
+            </a>
+          </dd>
         </dl>
+        <h2> "Contact"->React.string </h2>
+        <p className="ui-font">
+          "Send tips, questions, comments, or just say \"hi.\""->React.string
+        </p>
+        <Contact />
       </Layout>
     | _ => React.null
     }

@@ -60,6 +60,14 @@ a:focus {
   color: var(--color-primary-light);
 }
 
+dt {
+  font-weight: var(--font-weight-bold);
+}
+
+dd {
+  margin-left: 1em;
+}
+
 /**
  * Layout
  */

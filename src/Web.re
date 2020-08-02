@@ -6,3 +6,5 @@ module Url = {
   [@bs.send] external toString: t => string = "toString";
   [@bs.get] external hostname: t => string = "hostname";
 };
+
+[@bs.val] external encodeURIComponent: string => string = "encodeURIComponent";

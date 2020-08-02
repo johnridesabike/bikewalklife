@@ -2948,6 +2948,11 @@ browserslist@^4.0.0, browserslist@^4.12.0, browserslist@^4.12.2, browserslist@^4
     escalade "^3.0.1"
     node-releases "^1.1.58"
 
+bs-fetch@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/bs-fetch/-/bs-fetch-0.6.2.tgz#37d982e9f79b9bc44c23e87ae78ccbee1f869adf"
+  integrity sha512-VXEjp8kY3vHPckaoy3d96Bx0KYjJAPLNISBwfpwMN26K6DtuZYwI2HKhx7zeHBajz1bRArfx7O8OOLcdtujMvg==
+
 bs-platform@^8.0.3:
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-8.0.3.tgz#574e41ec04fee381d4c400dac547735368caa48f"
@@ -11268,6 +11273,18 @@ re-classnames@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/re-classnames/-/re-classnames-5.0.1.tgz#f107e5b328b79ad423c33e991d9dd11d089400b3"
   integrity sha512-tTdlHyRnS22+59xeOmj3/eOkW9gtP4Gw1pcIscl9csPvJEZTqnHEfIoGDiCPVKi3yreAOWtPFCPuWk49SlffAA==
+
+re-debouncer@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/re-debouncer/-/re-debouncer-2.1.0.tgz#2eaf7994ba41590f4f80d4a363ae8905156b7dc1"
+  integrity sha512-Iy9BecWF9X4V6zXfL3ROZpKGkCnpzYdjG/j6NIBxQn7gEwO2DzED5BsbfRUiPeqr7C0tAD0HPHF6tYIcQFEnyA==
+
+re-formality@^4.0.0-beta.7:
+  version "4.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/re-formality/-/re-formality-4.0.0-beta.8.tgz#ffdd4831c17fae3c49c411b39e311e47b9db07d8"
+  integrity sha512-LdhIzuctVBH+Qkr2tHOAN/LHSqgYjklFHaFssOgCHq99xENa4dFZjfLPeYxCKWtVjJQvqHdzL4oFousduioIpQ==
+  dependencies:
+    re-debouncer "2.1.0"
 
 react-dev-utils@^4.2.3:
   version "4.2.3"

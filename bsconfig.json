@@ -35,14 +35,17 @@
     "@moox/bs-react-helmet",
     "reason-nodejs",
     "reason-promise",
-    "@reasonml-community/graphql-ppx"
+    "@reasonml-community/graphql-ppx",
+    "re-formality",
+    "bs-fetch"
   ],
   "ppx-flags": [
-    "@reasonml-community/graphql-ppx/ppx"
+    "@reasonml-community/graphql-ppx/ppx",
+    "re-formality/ppx"
   ],
   "refmt": 3,
   "warnings": {
-    "number": "+A-48",
+    "number": "+A-48-103",
     "error": "+A-3-44-102"
   },
   "graphql": {

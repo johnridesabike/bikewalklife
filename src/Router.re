@@ -8,11 +8,11 @@ type t =
 let toString =
   fun
   | Index => "/"
-  | About => "/about"
+  | About => "/about/"
   | Entry(slug) => "/entry/" ++ slug
-  | Archive(1) => "/archive"
+  | Archive(1) => "/archive/"
   | Archive(page) => "/archive/" ++ Int.toString(page)
-  | Search => "/search";
+  | Search => "/search/";
 
 module GatsbyLink = {
   [@bs.module "gatsby"] [@react.component]
