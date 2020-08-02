@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  viewBox="0 0 128 48"
+  width="226"
+  height="64">
+  <title id="logo-title">Bike Walk Life</title>
+  <desc>Bike Walk Life site logo.</desc>
+  <xhtml:link
+    rel="stylesheet"
+    href="https://unpkg.com/typeface-cooper-hewitt@0.0.44/index.css" />
+  <style type="text/css">
+    .text {
+      font-size: 24px;
+      font-family: "Cooper Hewitt", "Helvetica Neue", sans-serif;
+      font-weight:400;
+      filter:url(#logo-text-shadow)
+    }
+  </style>
+  <filter id="logo-text-shadow">
+    <feDropShadow 
+      dx="-0.5"
+      dy="0.5"
+      stdDeviation="0.5"
+      flood-color="#fff"
+      flood-opacity="0.5" />
+  </filter>
+  <g class="text" fill="#fff">
+    <text x="6" y="24">Bike</text>
+    <text x="26" y="45">Walk</text>
+    <text style="font-style:italic" x="78" y="45">Life</text>
+  </g>
+</svg>
