@@ -5,8 +5,14 @@ open Fragments;
 
 [%graphql
   {|
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query($slug: String!, $year: Int!, $month: Int!) {
+    markdownRemark(
+      fields: {
+        slug: { eq: $slug },
+        year: { eq: $year },
+        month: { eq: $month }
+      }
+    ) {
       frontmatter {
         title
         external_link
@@ -24,12 +30,23 @@ open Fragments;
       }
       html
     }
+    site {
+      siteMetadata {
+        siteTitle: title
+        aboutData {
+          description
+        }
+        siteUrl
+      }
+    }
   }
 |}
 ];
 
 module Neighbor = {
   type t = {
+    year: int,
+    month: int,
     slug: string,
     title: string,
   };
@@ -37,6 +54,8 @@ module Neighbor = {
 
 type pageContext = {
   slug: string,
+  year: int,
+  month: int,
   next: option(Neighbor.t),
   previous: option(Neighbor.t),
 };
@@ -45,12 +64,7 @@ let styles = Gatsby.importCss("./Template_Entry.module.css");
 
 module About = {
   [@react.component]
-  let make =
-      (
-        ~site as {
-          SiteMetadata.siteMetadata: {title, aboutData: {description, _}, _},
-        },
-      ) =>
+  let make = (~title, ~description) =>
     <div className=styles##about>
       <h2 className=styles##aboutHeading>
         {"About " ++ title |> React.string}
@@ -69,7 +83,7 @@ module About = {
 };
 
 [@react.component]
-let default = (~data, ~pageContext as {slug, previous, next}) =>
+let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
   switch (parse(data)) {
   | {
       markdownRemark:
@@ -77,8 +91,8 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
           html: Some(html),
           frontmatter: {hero_image, title, date, isoDate, external_link},
         }),
+      site: Some({siteMetadata: {siteTitle, siteUrl, aboutData}}),
     } =>
-    let SiteMetadata.{site} = SiteMetadata.useQuery();
     <Layout title={String(title)}>
       <BsReactHelmet>
         {switch (hero_image) {
@@ -95,24 +109,20 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
            <meta name="twitter:image:alt" content=alt />
          | _ => React.null
          }}
-        {switch (site) {
-         | Some({siteMetadata: {siteUrl, _}}) =>
-           <meta
-             property="og:url"
-             content={
-               Web.Url.makeWithBase(
-                 Router.toString(Entry(slug)),
-                 ~base=siteUrl,
-               )
-               ->Web.Url.toString
-             }
-           />
-         | None => React.null
-         }}
+        <meta
+          property="og:url"
+          content={
+            Webapi.Url.makeWithBase(
+              Router.toString(Entry({year, month, slug})),
+              siteUrl,
+            )
+            ->Webapi.Url.href
+          }
+        />
       </BsReactHelmet>
       <Entry
         body={<div dangerouslySetInnerHTML={"__html": html} />}
-        slug
+        url={Entry({year, month, slug})}
         hero_image={
           switch (hero_image) {
           | Some({
@@ -158,10 +168,7 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
              | Some(href) => <Entry.OriginalLink href />
              | None => React.null
              }}
-            {switch (site) {
-             | Some(site) => <About site />
-             | None => React.null
-             }}
+            <About title=siteTitle description={aboutData.description} />
             <h2 className=styles##morePosts>
               "More recent posts"->React.string
             </h2>
@@ -169,10 +176,11 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
               <ul className=styles##recentList>
                 {switch (previous) {
                  | None => React.null
-                 | Some({slug, title}) =>
+                 | Some({year, month, slug, title}) =>
                    <li className=styles##recentItem>
                      <Router.Link
-                       to_={Entry(slug)} className=styles##recentLink>
+                       to_={Entry({year, month, slug})}
+                       className=styles##recentLink>
                        <span ariaHidden=true>
                          <Icons.ArrowLeft
                            className=Cn.("icon" <:> styles##arrow)
@@ -189,10 +197,10 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
                  }}
                 {switch (next) {
                  | None => React.null
-                 | Some({slug, title}) =>
+                 | Some({year, month, slug, title}) =>
                    <li className=styles##recentItem>
                      <Router.Link
-                       to_={Entry(slug)}
+                       to_={Entry({year, month, slug})}
                        className=styles##recentLink
                        style={ReactDOMRe.Style.make(
                          ~justifyContent="flex-end",
@@ -218,7 +226,7 @@ let default = (~data, ~pageContext as {slug, previous, next}) =>
           </footer>
         }
       />
-    </Layout>;
+    </Layout>
 
   | _ => React.null
   };

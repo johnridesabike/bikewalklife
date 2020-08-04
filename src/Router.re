@@ -1,7 +1,11 @@
 type t =
   | Index
   | About
-  | Entry(string)
+  | Entry({
+      year: int,
+      month: int,
+      slug: string,
+    })
   | Archive(int)
   | Search;
 
@@ -9,9 +13,16 @@ let toString =
   fun
   | Index => "/"
   | About => "/about/"
-  | Entry(slug) => "/entry/" ++ slug
+  | Entry({year, month, slug}) =>
+    "/"
+    ++ Int.toString(year)
+    ++ "/"
+    ++ Int.toString(month)
+    ++ "/"
+    ++ slug
+    ++ "/"
   | Archive(1) => "/archive/"
-  | Archive(page) => "/archive/" ++ Int.toString(page)
+  | Archive(page) => "/archive/" ++ Int.toString(page) ++ "/"
   | Search => "/search/";
 
 module GatsbyLink = {
@@ -22,6 +33,7 @@ module GatsbyLink = {
       ~activeClassName: string=?,
       ~partiallyActive: bool=?,
       ~children: React.element,
+      ~tabIndex: int=?,
       ~className: string=?,
       ~style: ReactDOMRe.Style.t=?
     ) =>
@@ -36,12 +48,18 @@ module Link = {
         ~to_,
         ~activeClassName="active-page",
         ~partiallyActive=false,
+        ~tabIndex=?,
         ~className=?,
         ~style=?,
         ~children,
       ) =>
     <GatsbyLink
-      _to={toString(to_)} activeClassName partiallyActive ?className ?style>
+      _to={toString(to_)}
+      activeClassName
+      partiallyActive
+      ?className
+      ?style
+      ?tabIndex>
       children
     </GatsbyLink>;
 };

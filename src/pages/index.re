@@ -13,6 +13,13 @@ open Fragments;
       ) {
         edges {
           node {
+            id
+            html
+            fields {
+              slug
+              year
+              month
+            }
             frontmatter {
               isoDate: date @ppxCustom(module: "DateTime")
               date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
@@ -28,10 +35,6 @@ open Fragments;
                 }
               }
             }
-            html
-            fields {
-              slug
-            }
           }
         }
       }
@@ -43,22 +46,22 @@ open Fragments;
 let styles = Gatsby.importCss("./index.module.css");
 
 [@react.component]
-let default = () => {
-  let blogData = query->Gatsby.useStaticQueryUnsafe->parse;
+let default = (~data) => {
   <Layout title=Site>
-    {blogData.allMarkdownRemark.edges
+    {parse(data).allMarkdownRemark.edges
      ->Array.map(
          (
            {
              node: {
+               id,
                html,
-               fields: {slug},
+               fields: {slug, year, month},
                frontmatter: {title, hero_image, isoDate, date, external_link},
              },
            },
          ) =>
          <Entry
-           key=slug
+           key=id
            body={
              switch (html) {
              | Some(html) =>
@@ -69,7 +72,7 @@ let default = () => {
              | None => React.null
              }
            }
-           slug
+           url={Entry({year, month, slug})}
            title
            hero_image={
              switch (hero_image) {

@@ -42,9 +42,10 @@ module Form = [%form
 /**
  https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
  */
+[@bs.val] external encodeURIComponent: string => string = "encodeURIComponent";
 
 let encode = ({name, email, message, formName}: Form.output) => {
-  let e = Web.encodeURIComponent;
+  let e = encodeURIComponent;
   [|
     ("name", name),
     ("email", email),

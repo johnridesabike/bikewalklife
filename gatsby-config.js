@@ -16,16 +16,8 @@ module.exports = {
     feedUrl: config.feed_url
   },
   plugins: [
-    "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-yaml",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "src",
-        path: `${__dirname}/src/`,
-      },
-    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -93,7 +85,7 @@ module.exports = {
         background_color: "#fff",
         theme_color: "#457B9D",
         display: "standalone",
-        icon: "./src/images/nps-bicycle-trail.svg",
+        icon: `${__dirname}/src/images/nps-bicycle-trail.svg`,
       },
     },
     {

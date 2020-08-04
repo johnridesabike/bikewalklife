@@ -37,7 +37,8 @@
     "reason-promise",
     "@reasonml-community/graphql-ppx",
     "re-formality",
-    "bs-fetch"
+    "bs-fetch",
+    "bs-webapi"
   ],
   "ppx-flags": [
     "@reasonml-community/graphql-ppx/ppx",

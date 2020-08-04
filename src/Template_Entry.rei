@@ -4,6 +4,8 @@ let query: string;
 
 module Neighbor: {
   type t = {
+    year: int,
+    month: int,
     slug: string,
     title: string,
   };
@@ -11,6 +13,8 @@ module Neighbor: {
 
 type pageContext = {
   slug: string,
+  year: int,
+  month: int,
   next: option(Neighbor.t),
   previous: option(Neighbor.t),
 };

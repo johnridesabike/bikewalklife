@@ -18,7 +18,7 @@ type image = [
 let make:
   (
     ~body: React.element,
-    ~slug: string,
+    ~url: Router.t,
     ~title: string,
     ~linkedHeader: [ | `Linked | `Unlinked],
     ~hero_image: image,

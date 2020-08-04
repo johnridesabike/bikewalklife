@@ -22,6 +22,13 @@
   margin: 0.25em 0;
 }
 
+.menu a:hover,
+.menu a:active,
+.menu a:focus {
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-secondary);
+}
+
 .menuList {
   list-style: none;
   padding: 0;
@@ -29,7 +36,6 @@
   margin: 0;
   justify-content: center;
 }
-
 .menuItem {
   padding-left: 1em;
 }
@@ -57,6 +63,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   color: var(--color-primary-light);
+  font-size: var(--font-size-sm);
 }
 
 .footer > * {

@@ -1,7 +1,11 @@
 type t =
   | Index
   | About
-  | Entry(string)
+  | Entry({
+      year: int,
+      month: int,
+      slug: string,
+    })
   | Archive(int)
   | Search;
 
@@ -14,6 +18,7 @@ module Link: {
       ~to_: t,
       ~activeClassName: string=?,
       ~partiallyActive: bool=?,
+      ~tabIndex: int=?,
       ~className: string=?,
       ~style: ReactDOMRe.Style.t=?,
       ~children: React.element

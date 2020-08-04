@@ -93,6 +93,8 @@ module PluginFeed = {
             html
             fields {
               slug
+              year
+              month
             }
             frontmatter {
               title
@@ -174,8 +176,8 @@ module PluginFeed = {
           ~description,
           ~site_url=siteUrl,
           ~feed_url=
-            Web.Url.makeWithBase(config##feed_url, ~base=siteUrl)
-            ->Web.Url.toString,
+            Webapi.Url.makeWithBase(config##feed_url, siteUrl)
+            ->Webapi.Url.href,
           (),
         )
       | None => failwith("PluginFeed.setup")
@@ -193,7 +195,7 @@ module PluginFeed = {
                 node: {
                   excerpt,
                   html,
-                  fields: {slug},
+                  fields: {slug, year, month},
                   frontmatter: {title, date},
                 },
               },
@@ -201,11 +203,11 @@ module PluginFeed = {
             switch (site) {
             | Some({siteMetadata: {siteUrl: site_url, _}}) =>
               let url =
-                Web.Url.makeWithBase(
-                  Router.Entry(slug)->Router.toString,
-                  ~base=site_url,
+                Webapi.Url.makeWithBase(
+                  Router.Entry({year, month, slug})->Router.toString,
+                  site_url,
                 )
-                ->Web.Url.toString;
+                ->Webapi.Url.href;
               Rss.Item.options(
                 ~title,
                 ~description=
@@ -287,7 +289,7 @@ module PluginSiteMap = {
       | {site: Some({siteMetadata: {siteUrl}}), allSitePage: {edges}} =>
         Array.map(edges, ({node: {path}}) =>
           Page.make(
-            ~url=Web.Url.makeWithBase(path, ~base=siteUrl)->Web.Url.toString,
+            ~url=Webapi.Url.makeWithBase(path, siteUrl)->Webapi.Url.href,
             (),
           )
         )

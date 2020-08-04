@@ -30,7 +30,7 @@ type image = [
 let make =
     (
       ~body,
-      ~slug,
+      ~url,
       ~title,
       ~linkedHeader,
       ~hero_image,
@@ -49,7 +49,7 @@ let make =
   let titleEl =
     switch (linkedHeader) {
     | `Linked =>
-      <Router.Link to_={Entry(slug)} className=styles##headerLink>
+      <Router.Link to_=url className=styles##headerLink>
         title->React.string
       </Router.Link>
     | `Unlinked => title->React.string
@@ -59,7 +59,7 @@ let make =
      | Some(img) =>
        <figure className="full-bleed">
          {switch (linkedHeader) {
-          | `Linked => <Router.Link to_={Entry(slug)}> img </Router.Link>
+          | `Linked => <Router.Link to_=url tabIndex=(-1)> img </Router.Link>
           | `Unlinked => img
           }}
          {switch (imageCaption) {

@@ -1,3 +1,6 @@
-[@react.component]
-let default: unit => React.element;
+module Raw: {type t;};
 
+let query: string;
+
+[@react.component]
+let default: (~data: Raw.t) => React.element;

@@ -5,19 +5,20 @@ type internal = {
   type_: string,
 };
 
+type frontmatter = {date: string};
+
 type node = {
   internal,
   parent,
+  frontmatter: option(frontmatter),
   fileAbsolutePath: string,
 };
 
 type fileNode = {relativePath: string};
 
-type field = {
-  name: string,
-  node,
-  value: string,
-};
+type field;
+
+[@bs.obj] external field: (~name: string, ~node: node, ~value: 'a) => field;
 
 /* Each context type is defined inside page templates. */
 [@unboxed]
@@ -53,25 +54,42 @@ type t('data) = {
 
 let onCreateNode = ({node, actions: {createNodeField, _}, _}) =>
   switch (node) {
-  | {internal: {type_: "MarkdownRemark"}, fileAbsolutePath, _} =>
+  | {
+      internal: {type_: "MarkdownRemark"},
+      frontmatter: Some({date}),
+      fileAbsolutePath,
+      _,
+    } =>
+    let date = Js.Date.fromString(date);
+    let year = Js.Date.getFullYear(date);
+    let month = Js.Date.getMonth(date) +. 1.0;
     let slug = NodeJs.Path.basenameExt(fileAbsolutePath, ".md");
-    createNodeField(. {node, name: "slug", value: slug});
+    createNodeField(. field(~node, ~name="slug", ~value=slug));
+    createNodeField(. field(~node, ~name="year", ~value=year));
+    createNodeField(. field(~node, ~name="month", ~value=month));
   | _ => ()
   };
 
 [%graphql
   {|
     query CreatePages {
-      allMarkdownRemark(sort: {fields: [frontmatter___date], order: [DESC]}) {
+      allMarkdownRemark(
+        sort: {fields: [frontmatter___date], order: [DESC]},
+        filter: {frontmatter: {published: {eq: true}}}
+      ) {
         edges {
           node {
             fields {
               slug
+              year
+              month
             }
           }
           next {
             fields {
               slug
+              year
+              month
             }
               frontmatter {
               title
@@ -80,6 +98,8 @@ let onCreateNode = ({node, actions: {createNodeField, _}, _}) =>
           previous {
             fields {
               slug
+              year
+              month
             }
             frontmatter {
               title
@@ -116,24 +136,39 @@ let createPages =
             site: Some({siteMetadata: {archivePerPage}}),
           } =>
           Array.forEach(
-            edges, ({CreatePages.node: {fields: {slug}}, next, previous}) =>
+            edges,
+            (
+              {
+                CreatePages.node: {fields: {slug, year, month}},
+                next,
+                previous,
+              },
+            ) =>
             createPage(. {
               component: blogTemplate,
-              path: Router.toString(Entry(slug)),
+              path: Router.toString(Entry({year, month, slug})),
               context:
                 Context(
                   Template_Entry.{
                     slug,
+                    year,
+                    month,
                     next:
                       switch (next) {
-                      | Some({fields: {slug}, frontmatter: {title}}) =>
-                        Some({Neighbor.slug, title})
+                      | Some({
+                          fields: {slug, year, month},
+                          frontmatter: {title},
+                        }) =>
+                        Some({Neighbor.slug, year, month, title})
                       | None => None
                       },
                     previous:
                       switch (previous) {
-                      | Some({fields: {slug}, frontmatter: {title}}) =>
-                        Some({Neighbor.slug, title})
+                      | Some({
+                          fields: {slug, year, month},
+                          frontmatter: {title},
+                        }) =>
+                        Some({Neighbor.slug, year, month, title})
                       | None => None
                       },
                   },
@@ -186,6 +221,8 @@ let createSchemaCustomization = ({actions: {createTypes, _}, _}) =>
     }
     type Fields {
       slug: String!
+      year: Int!
+      month: Int!
     }
     type Site {
       siteMetadata: SiteMetadata!

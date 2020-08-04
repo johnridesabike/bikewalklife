@@ -12,8 +12,11 @@
     ) {
       edges {
         node {
+          id
           fields {
             slug
+            year
+            month
           }
           frontmatter {
             title
@@ -65,13 +68,15 @@ let default =
          (
            {
              node: {
+               id,
                frontmatter: {title, external_link, date, isoDate},
-               fields: {slug},
+               fields: {slug, year, month},
              },
            },
          ) => {
-         <div key=slug className=styles##entry>
-           <Router.Link to_={Entry(slug)} className=styles##title>
+         <div key=id className=styles##entry>
+           <Router.Link
+             to_={Entry({year, month, slug})} className=styles##title>
              title->React.string
            </Router.Link>
            <Entry.Date

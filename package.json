@@ -6,7 +6,7 @@
   "version": "0.1.0",
   "author": "John Jackson",
   "scripts": {
-    "build": "bsb -clean-world -make-world && gatsby build",
+    "build": "bsb -make-world && gatsby build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
@@ -23,6 +23,7 @@
     "@reach/skip-nav": "^0.10.5",
     "@reach/visually-hidden": "^0.10.4",
     "bs-fetch": "^0.6.2",
+    "bs-webapi": "^0.18.0",
     "charter-webfont": "^3.0.1",
     "gatsby": "^2.24.15",
     "gatsby-image": "^2.4.14",
@@ -51,11 +52,10 @@
     "reason-nodejs": "^13.0.0-beta.1",
     "reason-promise": "^1.1.1",
     "reason-react": "^0.9.1",
-    "typeface-cooper-hewitt": "0.0.44",
-    "typeface-source-sans-pro": "^1.1.5"
+    "typeface-cooper-hewitt": "0.0.44"
   },
   "devDependencies": {
-    "@reasonml-community/graphql-ppx": "1.0.0-beta.21",
+    "@reasonml-community/graphql-ppx": "^1.0.0-beta.21",
     "bs-platform": "^8.0.3",
     "get-graphql-schema": "^2.1.2"
   },
@@ -65,6 +65,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kendallstrautman/brevifolia-gatsby-forestry"
+    "url": "https://github.com/johnridesabike/bikewalklife.git"
   }
 }
