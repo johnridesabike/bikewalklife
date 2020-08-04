@@ -16,7 +16,8 @@
     "re:build": "bsb -make-world",
     "re:cleanbuild": "bsb -make-world -clean-world",
     "re:watch": "bsb -make-world -w",
-    "get-graphql-schema": "get-graphql-schema http://localhost:8000/___graphql -j > graphql_schema.json"
+    "get-graphql-schema": "get-graphql-schema http://localhost:8000/___graphql -j > graphql_schema.json",
+    "lint:css": "stylelint src/**/*.css"
   },
   "dependencies": {
     "@moox/bs-react-helmet": "^3.0.0",
@@ -57,7 +58,9 @@
   "devDependencies": {
     "@reasonml-community/graphql-ppx": "^1.0.0-beta.21",
     "bs-platform": "^8.0.3",
-    "get-graphql-schema": "^2.1.2"
+    "get-graphql-schema": "^2.1.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-wordpress": "^17.0.0"
   },
   "keywords": [
     "gatsby",

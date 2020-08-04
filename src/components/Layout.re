@@ -85,7 +85,10 @@ let make = (~title as pageTitle, ~children) => {
         <div className=Cn.("small-screen-padding" <:> styles##header)>
           <h1 className=Cn.(styles##title <:> "reading-font")>
             <Router.Link
-              className=styles##titleLink to_=Index activeClassName="">
+              className=styles##titleLink
+              to_=Index
+              activeClassName=""
+              tabIndex=(-1)>
               <Logo width="192" />
               <Externals.VisuallyHidden>
                 "Bike Walk Life"->React.string
@@ -93,24 +96,30 @@ let make = (~title as pageTitle, ~children) => {
             </Router.Link>
           </h1>
           <p className=styles##description> description->React.string </p>
-          <nav
-            role="navigation"
-            ariaLabel="main navigation"
-            className=styles##menu>
+          <nav role="navigation" ariaLabel="main navigation">
             <ul className=styles##menuList>
               <li className=styles##menuItem>
-                <Router.Link to_=Index> "Home"->React.string </Router.Link>
+                <Router.Link to_=Index className=styles##menuLink>
+                  "Home"->React.string
+                </Router.Link>
               </li>
               <li className=styles##menuItem>
-                <Router.Link to_=About> "About"->React.string </Router.Link>
+                <Router.Link to_=About className=styles##menuLink>
+                  "About"->React.string
+                </Router.Link>
               </li>
               <li className=styles##menuItem>
-                <Router.Link to_={Archive(1)} partiallyActive=true>
+                <Router.Link
+                  to_={Archive(1)}
+                  partiallyActive=true
+                  className=styles##menuLink>
                   "Archive"->React.string
                 </Router.Link>
               </li>
               <li className=styles##menuItem>
-                <Router.Link to_=Search> "Search"->React.string </Router.Link>
+                <Router.Link to_=Search className=styles##menuLink>
+                  "Search"->React.string
+                </Router.Link>
               </li>
             </ul>
           </nav>

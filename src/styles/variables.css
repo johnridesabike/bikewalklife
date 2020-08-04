@@ -1,25 +1,26 @@
 :root {
+
   /**
    * Typography
    */
   --font-sans-serif:
-    "Cooper Hewitt",
-    "Helvetica Neue",
+    "cooper hewitt",
+    "helvetica neue",
     sans-serif;
   --font-serif:
-    "Charter",
+    "charter",
     serif;
   --font-ui:
     -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen-Sans,
-    Ubuntu,
-    Cantarell,
-    "Helvetica Neue",
+    blinkmacsystemfont,
+    "segoe UI",
+    roboto,
+    oxygen-sans,
+    ubuntu,
+    cantarell,
+    "helvetica neue",
     sans-serif;
-  --font-pre: "Courier 10 Pitch", Courier, monospace;
+  --font-pre: "courier 10 pitch", courier, monospace;
   --font-base-size: 18px;
   --font-size-base-mobile: 16px;
   --font-size-xs: calc(1em / 1.25); /* 16 */
@@ -45,9 +46,9 @@
    */
   --color-background: #fff;
   --color-text: #000;
-  --color-primary: #457B9D;
-  --color-primary-light: #7CC8CB;
-  --color-primary-dark: #1D3557;
-  --color-secondary: #DA1B2B;
-  --color-secondary-light: #F1FAEE;
+  --color-primary: #457b9d;
+  --color-primary-light: #7cc8cb;
+  --color-primary-dark: #1d3557;
+  --color-secondary: #da1b2b;
+  --color-secondary-light: #f1faee;
 }
