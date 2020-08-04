@@ -84,7 +84,8 @@ let make = (~title as pageTitle, ~children) => {
       <header className=Cn.("ui-font" <:> styles##headerWrapper)>
         <div className=Cn.("small-screen-padding" <:> styles##header)>
           <h1 className=Cn.(styles##title <:> "reading-font")>
-            <Router.Link to_=Index activeClassName="">
+            <Router.Link
+              className=styles##titleLink to_=Index activeClassName="">
               <Logo width="192" />
               <Externals.VisuallyHidden>
                 "Bike Walk Life"->React.string
