@@ -18,8 +18,8 @@ sections:
   path: content/data/authors.yaml
   label: Author List
 - type: document
-  path: content/data/info.json
-  label: Info Page
+  path: content/data/about.json
+  label: About Page
 - type: heading
   label: General Config
 - type: document
