@@ -9,3 +9,10 @@ fields:
   label: Page
   hidden: true
   default: AUTHORS
+- name: authors
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Authors
