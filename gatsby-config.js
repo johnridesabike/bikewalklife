@@ -1,5 +1,4 @@
 const config = require("./config.json")
-const aboutData = require("./content/data/about.json")
 const rePlugins = require("./lib/js/src/GatsbyConfig.bs.js");
 
 module.exports = {
@@ -9,7 +8,6 @@ module.exports = {
     description: config.description,
     about: config.about,
     contact: config.contact,
-    aboutData: aboutData,
     siteUrl: config.site_url,
     archivePerPage: config.archive_per_page,
     copyrightYear: config.copyright_year,

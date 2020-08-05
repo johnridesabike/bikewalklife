@@ -43,5 +43,5 @@ let default = (~data) =>
         />
       </div>
     </Layout>
-  | _ => React.null
+  | _ => <Page_404 />
   };

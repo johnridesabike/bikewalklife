@@ -1,0 +1,8 @@
+page: ABOUT
+title: About
+intro: "<p>Hi, this is John. I created Bike Walk Life as a blog to curate news and voices from the world of Biking and walking. I currently tend to focus on the Southeast US, where I live.</p>"
+body: "<p>This site is still in its infancy, and I'm experimenting with how I want to develop it. Please pardon the dust, and feel free to contact me if you have any thoughts or questions.</p>"
+contact:
+  email: "info@forestry.io"
+  form: true
+

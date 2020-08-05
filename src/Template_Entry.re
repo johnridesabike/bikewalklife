@@ -33,10 +33,10 @@ open Fragments;
     site {
       siteMetadata {
         siteTitle: title
-        aboutData {
-          description
-        }
       }
+    }
+    about: dataYaml(page: {eq: ABOUT}) {
+      intro
     }
   }
 |}
@@ -90,7 +90,8 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           html: Some(html),
           frontmatter: {hero_image, title, date, isoDate, external_link},
         }),
-      site: Some({siteMetadata: {siteTitle, aboutData}}),
+      site: Some({siteMetadata: {siteTitle}}),
+      about,
     } =>
     <Layout title={String(title)} route={Entry({year, month, slug})}>
       <BsReactHelmet>
@@ -157,7 +158,11 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
              | Some(href) => <Entry.OriginalLink href />
              | None => React.null
              }}
-            <About title=siteTitle description={aboutData.description} />
+            {switch (about) {
+             | Some({intro: Some(intro)}) =>
+               <About title=siteTitle description=intro />
+             | _ => React.null
+             }}
             <h2 className=styles##morePosts>
               "More recent posts"->React.string
             </h2>
@@ -217,5 +222,5 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       />
     </Layout>
 
-  | _ => React.null
+  | _ => <Page_404 />
   };

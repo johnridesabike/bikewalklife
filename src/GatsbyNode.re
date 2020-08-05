@@ -236,6 +236,13 @@ let createSchemaCustomization = ({actions: {createTypes, _}, _}) =>
       feedUrl: String!
       aboutData: AboutData!
     }
+    type DataYaml implements Node {
+      page: YamlPageId
+    }
+    enum YamlPageId {
+      ABOUT
+      AUTHORS
+    }
     type AboutData {
       title: String!
       description: String!

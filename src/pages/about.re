@@ -7,10 +7,14 @@
     site {
       siteMetadata {
         feedUrl
-        aboutData {
-          title
-          description
-        }
+      }
+    }
+    dataYaml(page: {eq: ABOUT}) {
+      title
+      intro
+      body
+      contact {
+        form
       }
     }
   }
@@ -21,15 +25,25 @@
 let default = (~data) => {
   switch (parse(data)) {
   | {
-      site: Some({siteMetadata: {feedUrl, aboutData: {title, description}}}),
+      site: Some({siteMetadata: {feedUrl}}),
+      dataYaml: Some({title, intro, body, contact}),
     } =>
     <Layout title={String("About")} route=About>
       <article>
-        <h1> title->React.string </h1>
-        <div
-          className="serif"
-          dangerouslySetInnerHTML={"__html": description}
-        />
+        {switch (title) {
+         | Some(title) => <h1> title->React.string </h1>
+         | None => React.null
+         }}
+        {switch (intro) {
+         | Some(intro) =>
+           <div className="serif" dangerouslySetInnerHTML={"__html": intro} />
+         | None => React.null
+         }}
+        {switch (body) {
+         | Some(body) =>
+           <div className="serif" dangerouslySetInnerHTML={"__html": body} />
+         | None => React.null
+         }}
         <h2> "Subscribe"->React.string </h2>
         <dl className="ui-font font-size-small">
           <dt> "Feed"->React.string </dt>
@@ -40,13 +54,20 @@ let default = (~data) => {
             </a>
           </dd>
         </dl>
-        <h2> "Contact"->React.string </h2>
-        <p className="ui-font">
-          {|Send tips, questions, comments, or just say "hi."|}->React.string
-        </p>
-        <Contact />
+        {switch (contact) {
+         | Some({form: Some(true)}) =>
+           <>
+             <h2> "Contact"->React.string </h2>
+             <p className="ui-font">
+               {|Send tips, questions, comments, or just say "hi."|}
+               ->React.string
+             </p>
+             <Contact />
+           </>
+         | _ => React.null
+         }}
       </article>
     </Layout>
-  | _ => React.null
+  | _ => <Page_404 />
   };
 };
