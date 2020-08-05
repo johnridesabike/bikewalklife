@@ -43,3 +43,5 @@ fields:
   - name: form
     type: boolean
     label: Contact form
+pages:
+- content/data/about.yaml
