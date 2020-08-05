@@ -61,7 +61,8 @@ let default =
       | 1 => String("Archive")
       | currentPage => String("Archive page " ++ Int.toString(currentPage))
       }
-    }>
+    }
+    route={Archive(currentPage)}>
     <h1 className=styles##pageTitle> "Archive"->React.string </h1>
     {edges
      ->Array.map(

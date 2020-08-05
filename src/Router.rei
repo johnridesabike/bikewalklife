@@ -11,6 +11,8 @@ type t =
 
 let toString: t => string;
 
+let toStringWithBase: (t, string) => string;
+
 module Link: {
   [@react.component]
   let make:

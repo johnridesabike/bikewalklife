@@ -25,6 +25,9 @@ let toString =
   | Archive(page) => "/archive/" ++ Int.toString(page) ++ "/"
   | Search => "/search/";
 
+let toStringWithBase = (route, base) =>
+  Webapi.Url.makeWithBase(toString(route), base)->Webapi.Url.href;
+
 module GatsbyLink = {
   [@bs.module "gatsby"] [@react.component]
   external make:

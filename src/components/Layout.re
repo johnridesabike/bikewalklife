@@ -9,6 +9,7 @@
           siteTitle: title
           description
           copyrightYear
+          siteUrl
         }
       }
     }
@@ -35,12 +36,7 @@ module Logo = {
       <desc> "Bike Walk Life site logo."->React.string </desc>
       <g
         className="sans-serif"
-        style={ReactDOMRe.Style.make(
-          ~fontSize="24px",
-          ~fontWeight="400",
-          ~textShadow="-1px 1px 1px var(--color-primary)",
-          (),
-        )}>
+        style={ReactDOMRe.Style.make(~fontSize="24px", ~fontWeight="400", ())}>
         <text x="6" y="24" fill="var(--color-primary-dark)">
           "Bike"->React.string
         </text>
@@ -59,9 +55,14 @@ module Logo = {
 };
 
 [@react.component]
-let make = (~title as pageTitle, ~children) => {
+let make = (~title as pageTitle, ~route=?, ~children) => {
   switch (query->Gatsby.useStaticQueryUnsafe->parse) {
-  | {site: Some({siteMetadata: {siteTitle, description, copyrightYear}})} =>
+  | {
+      site:
+        Some({
+          siteMetadata: {siteTitle, description, copyrightYear, siteUrl},
+        }),
+    } =>
     <div className=styles##page>
       <BsReactHelmet>
         <html lang="en" />
@@ -79,6 +80,22 @@ let make = (~title as pageTitle, ~children) => {
         <meta name="description" content=description />
         <meta property="og:description" content=description />
         <meta property="og:site_name" content=siteTitle />
+        {switch (route) {
+         | Some(route) =>
+           <link
+             rel="canonical"
+             content={Router.toStringWithBase(route, siteUrl)}
+           />
+         | None => React.null
+         }}
+        {switch (route) {
+         | Some(route) =>
+           <meta
+             property="og:url"
+             content={Router.toStringWithBase(route, siteUrl)}
+           />
+         | None => React.null
+         }}
       </BsReactHelmet>
       <Externals.SkipNav.Link />
       <header className=Cn.("ui-font" <:> styles##headerWrapper)>

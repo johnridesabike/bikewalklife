@@ -7,7 +7,7 @@
   "author": "John Jackson",
   "scripts": {
     "build": "bsb -make-world && gatsby build",
-    "start": "gatsby develop",
+    "start": "concurrently \"bsb -make-world -w\" \"gatsby develop\"",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "forestry-preview": "bsb -make-world && gatsby develop -p 8080 -H 0.0.0.0",
@@ -58,6 +58,7 @@
   "devDependencies": {
     "@reasonml-community/graphql-ppx": "^1.0.0-beta.21",
     "bs-platform": "^8.0.3",
+    "concurrently": "^5.2.0",
     "get-graphql-schema": "^2.1.2",
     "stylelint": "^13.6.1",
     "stylelint-config-wordpress": "^17.0.0"

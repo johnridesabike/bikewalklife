@@ -203,11 +203,10 @@ module PluginFeed = {
             switch (site) {
             | Some({siteMetadata: {siteUrl: site_url, _}}) =>
               let url =
-                Webapi.Url.makeWithBase(
-                  Router.Entry({year, month, slug})->Router.toString,
+                Router.toStringWithBase(
+                  Entry({year, month, slug}),
                   site_url,
-                )
-                ->Webapi.Url.href;
+                );
               Rss.Item.options(
                 ~title,
                 ~description=

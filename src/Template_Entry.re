@@ -36,7 +36,6 @@ open Fragments;
         aboutData {
           description
         }
-        siteUrl
       }
     }
   }
@@ -91,9 +90,9 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           html: Some(html),
           frontmatter: {hero_image, title, date, isoDate, external_link},
         }),
-      site: Some({siteMetadata: {siteTitle, siteUrl, aboutData}}),
+      site: Some({siteMetadata: {siteTitle, aboutData}}),
     } =>
-    <Layout title={String(title)}>
+    <Layout title={String(title)} route={Entry({year, month, slug})}>
       <BsReactHelmet>
         {switch (hero_image) {
          | Some({
@@ -109,16 +108,6 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
            <meta name="twitter:image:alt" content=alt />
          | _ => React.null
          }}
-        <meta
-          property="og:url"
-          content={
-            Webapi.Url.makeWithBase(
-              Router.toString(Entry({year, month, slug})),
-              siteUrl,
-            )
-            ->Webapi.Url.href
-          }
-        />
       </BsReactHelmet>
       <Entry
         body={<div dangerouslySetInnerHTML={"__html": html} />}

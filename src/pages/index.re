@@ -47,7 +47,7 @@ let styles = Gatsby.importCss("./index.module.css");
 
 [@react.component]
 let default = (~data) => {
-  <Layout title=Site>
+  <Layout title=Site route=Index>
     {parse(data).allMarkdownRemark.edges
      ->Array.map(
          (

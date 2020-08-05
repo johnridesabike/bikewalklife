@@ -23,7 +23,7 @@ let default = (~data) => {
   | {
       site: Some({siteMetadata: {feedUrl, aboutData: {title, description}}}),
     } =>
-    <Layout title={String("About")}>
+    <Layout title={String("About")} route=About>
       <article>
         <h1> title->React.string </h1>
         <div
