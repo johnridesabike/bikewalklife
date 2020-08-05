@@ -1,4 +1,11 @@
 ---
 label: Author List
 hide_body: true
-fields: []
+fields:
+- name: page
+  type: text
+  config:
+    required: false
+  label: Page
+  hidden: true
+  default: AUTHORS
