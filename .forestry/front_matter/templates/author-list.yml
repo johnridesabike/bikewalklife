@@ -16,3 +16,5 @@ fields:
     min: 
     max: 
   label: Authors
+pages:
+- content/data/authors.yaml
