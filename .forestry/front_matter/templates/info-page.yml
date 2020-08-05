@@ -2,12 +2,19 @@
 label: About Page
 hide_body: true
 fields:
+- name: page
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: page
+  default: ABOUT
 - name: title
   type: text
   config:
     required: true
   label: Title
-- name: description
+- name: intro
   type: textarea
   default: ''
   config:
@@ -15,14 +22,24 @@ fields:
     wysiwyg: true
     schema:
       format: html-blocks
-  label: description
+  label: Intro
   description: Enter description here
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Body
 - type: field_group
   name: contact
-  label: contact
+  label: Contact
   fields:
   - type: text
     name: email
-    label: email
-pages:
-- content/data/about.json
+    label: Email
+  - name: form
+    type: boolean
+    label: Contact form
