@@ -178,6 +178,9 @@ module PluginFeed = {
           ~feed_url=
             Webapi.Url.makeWithBase(config##feed_url, siteUrl)
             ->Webapi.Url.href,
+          ~image_url=
+            Webapi.Url.makeWithBase("/icons/icon-256x256.png", siteUrl)
+            ->Webapi.Url.href,
           (),
         )
       | None => failwith("PluginFeed.setup")
