@@ -59,3 +59,5 @@ fields:
   type: boolean
   label: Published
   default: false
+pages:
+- content/posts/2020/research-examines-cities-mini-heat-islands-and-their-ties-to-racism.md
