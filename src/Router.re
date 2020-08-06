@@ -7,7 +7,8 @@ type t =
       slug: string,
     })
   | Archive(int)
-  | Search;
+  | Search
+  | Contact;
 
 let toString =
   fun
@@ -23,7 +24,8 @@ let toString =
     ++ "/"
   | Archive(1) => "/archive/"
   | Archive(page) => "/archive/" ++ Int.toString(page) ++ "/"
-  | Search => "/search/";
+  | Search => "/search/"
+  | Contact => "/contact/";
 
 let toStringWithBase = (route, base) =>
   Webapi.Url.makeWithBase(toString(route), base)->Webapi.Url.href;

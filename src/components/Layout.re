@@ -123,6 +123,11 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
                 </Router.Link>
               </li>
               <li className=styles##menuItem>
+                <Router.Link to_=Contact className=styles##menuLink>
+                  "Contact"->React.string
+                </Router.Link>
+              </li>
+              <li className=styles##menuItem>
                 <Router.Link
                   to_={Archive(1)}
                   partiallyActive=true
@@ -157,7 +162,12 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
           </p>
           <p>
             <Router.Link to_=About activeClassName="">
-              "About / Contact"->React.string
+              "About"->React.string
+            </Router.Link>
+          </p>
+          <p>
+            <Router.Link to_=Contact activeClassName="">
+              "Contact"->React.string
             </Router.Link>
           </p>
         </div>

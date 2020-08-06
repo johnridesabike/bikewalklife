@@ -38,6 +38,9 @@ open Fragments;
     about: dataYaml(page: {eq: ABOUT}) {
       intro
     }
+    strings: dataYaml(page: {eq: STRINGS}) {
+      contact_text
+    }
   }
 |}
 ];
@@ -63,7 +66,7 @@ let styles = Gatsby.importCss("./Template_Entry.module.css");
 
 module About = {
   [@react.component]
-  let make = (~title, ~description) =>
+  let make = (~title, ~description, ~strings) =>
     <div className=styles##about>
       <h2 className=styles##aboutHeading>
         {"About " ++ title |> React.string}
@@ -78,6 +81,21 @@ module About = {
           <span ariaHidden=true> <Icons.ArrowRight className="icon" /> </span>
         </Router.Link>
       </p>
+      {switch (strings) {
+       | Some({contact_text: Some(text)}) =>
+         <>
+           <p className=styles##aboutContent> text->React.string </p>
+           <p className=styles##aboutLink>
+             <Router.Link to_=Contact>
+               "Contact"->React.string
+               <span ariaHidden=true>
+                 <Icons.ArrowRight className="icon" />
+               </span>
+             </Router.Link>
+           </p>
+         </>
+       | _ => React.null
+       }}
     </div>;
 };
 
@@ -92,6 +110,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         }),
       site: Some({siteMetadata: {siteTitle}}),
       about,
+      strings,
     } =>
     <Layout title={String(title)} route={Entry({year, month, slug})}>
       <BsReactHelmet>
@@ -160,7 +179,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
              }}
             {switch (about) {
              | Some({intro: Some(intro)}) =>
-               <About title=siteTitle description=intro />
+               <About title=siteTitle description=intro strings />
              | _ => React.null
              }}
             <h2 className=styles##morePosts>

@@ -61,7 +61,7 @@ module Spread = {
   let make = (~props, ~children) => React.cloneElement(children, props);
 };
 
-let styles = Gatsby.importCss("./Contact.module.css");
+let styles = Gatsby.importCss("./Contact_Form.module.css");
 
 let initialInput: Form.input = {
   name: "",

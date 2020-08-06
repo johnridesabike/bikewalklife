@@ -13,10 +13,6 @@
       title
       intro
       body
-      contact {
-        text
-        form
-      }
     }
   }
 |}
@@ -27,7 +23,7 @@ let default = (~data) => {
   switch (parse(data)) {
   | {
       site: Some({siteMetadata: {feedUrl}}),
-      dataYaml: Some({title, intro, body, contact}),
+      dataYaml: Some({title, intro, body}),
     } =>
     <Layout title={String("About")} route=About>
       <article>
@@ -55,18 +51,6 @@ let default = (~data) => {
             </a>
           </dd>
         </dl>
-        {switch (contact) {
-         | Some({form: Some(true), text}) =>
-           <>
-             <h2> "Contact"->React.string </h2>
-             {switch (text) {
-              | Some(text) => <p className="ui-font"> text->React.string </p>
-              | None => React.null
-              }}
-             <Contact />
-           </>
-         | _ => React.null
-         }}
       </article>
     </Layout>
   | _ => <Page_404 />

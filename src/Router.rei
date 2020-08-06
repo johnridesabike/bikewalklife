@@ -7,7 +7,8 @@ type t =
       slug: string,
     })
   | Archive(int)
-  | Search;
+  | Search
+  | Contact;
 
 let toString: t => string;
 

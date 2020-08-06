@@ -33,21 +33,5 @@ fields:
     schema:
       format: html-blocks
   label: Body
-- type: field_group
-  name: contact
-  label: Contact
-  fields:
-  - name: text
-    type: text
-    config:
-      required: true
-    label: Text
-    description: Text displayed before the contact form.
-  - type: text
-    name: email
-    label: Email
-  - name: form
-    type: boolean
-    label: Contact form
 pages:
 - content/data/about.yaml

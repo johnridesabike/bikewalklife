@@ -3,3 +3,7 @@ page: STRINGS
 open_linked: Open linked page
 archive_link: View the archive
 footer: "<p>Copyright © 2020</p>"
+contact_text: "I would be delighted to hear your thoughts. Please send tips,
+  questions, comments, or just say “hi.”"
+contact_form: true
+email: info@forestry.io

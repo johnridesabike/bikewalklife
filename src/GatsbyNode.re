@@ -233,7 +233,6 @@ let createSchemaCustomization = ({actions: {createTypes, _}, _}) =>
       siteUrl: String!
       archivePerPage: Int!
       feedUrl: String!
-      aboutData: AboutData!
     }
     type DataYaml implements Node {
       page: YamlPageId
@@ -242,14 +241,6 @@ let createSchemaCustomization = ({actions: {createTypes, _}, _}) =>
       ABOUT
       AUTHORS
       STRINGS
-    }
-    type AboutData {
-      title: String!
-      description: String!
-      contact: ContactData!
-    }
-    type ContactData {
-      email: String!
     }
   |},
   );
