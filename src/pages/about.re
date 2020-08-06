@@ -14,6 +14,7 @@
       intro
       body
       contact {
+        text
         form
       }
     }
@@ -55,13 +56,13 @@ let default = (~data) => {
           </dd>
         </dl>
         {switch (contact) {
-         | Some({form: Some(true)}) =>
+         | Some({form: Some(true), text}) =>
            <>
              <h2> "Contact"->React.string </h2>
-             <p className="ui-font">
-               {|Send tips, questions, comments, or just say "hi."|}
-               ->React.string
-             </p>
+             {switch (text) {
+              | Some(text) => <p className="ui-font"> text->React.string </p>
+              | None => React.null
+              }}
              <Contact />
            </>
          | _ => React.null

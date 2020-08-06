@@ -1,14 +1,32 @@
+%raw
+"import { graphql } from 'gatsby'";
+
 let styles = Gatsby.importCss("./Entry.module.css");
+
+[%graphql
+  {|
+  query {
+    strings: dataYaml(page: {eq: STRINGS}) {
+      open_linked
+    }
+  }
+|}
+];
 
 module OriginalLink = {
   [@react.component]
-  let make = (~href, ~className="") =>
+  let make = (~href,  ~className="") => {
+    let data = query->Gatsby.useStaticQueryUnsafe->parse;
     <div className=Cn.(styles##link <:> className)>
       <a href target="_blank" rel="noopener">
-        "open linked page"->React.string
+        {switch (data) {
+         | {strings: Some({open_linked: Some(text)})} => text->React.string
+         | _ => React.null
+         }}
         <span ariaHidden=true> <Icons.ExternalLink className="icon" /> </span>
       </a>
     </div>;
+  };
 };
 
 module Date = {

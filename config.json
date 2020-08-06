@@ -3,6 +3,5 @@
   "description": "News about the world of biking and walking.",
   "site_url": "https://bikewalklife.netlify.app/",
   "archive_per_page": 100,
-  "copyright_year": 2020,
   "feed_url": "/feed.xml"
 }

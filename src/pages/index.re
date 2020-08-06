@@ -38,6 +38,9 @@ open Fragments;
           }
         }
       }
+      strings: dataYaml(page: {eq: STRINGS}) {
+        archive_link
+      }
     }
 |};
   {inline: true}
@@ -47,8 +50,9 @@ let styles = Gatsby.importCss("./index.module.css");
 
 [@react.component]
 let default = (~data) => {
+  let data = parse(data);
   <Layout title=Site route=Index>
-    {parse(data).allMarkdownRemark.edges
+    {data.allMarkdownRemark.edges
      ->Array.map(
          (
            {
@@ -126,10 +130,12 @@ let default = (~data) => {
          />
        )
      ->React.array}
-    <div className=styles##archiveLink>
-      <Router.Link to_={Archive(1)}>
-        "View the archive"->React.string
-      </Router.Link>
-    </div>
+    {switch (data.strings) {
+     | Some({archive_link: Some(text)}) =>
+       <div className=styles##archiveLink>
+         <Router.Link to_={Archive(1)}> text->React.string </Router.Link>
+       </div>
+     | _ => React.null
+     }}
   </Layout>;
 };

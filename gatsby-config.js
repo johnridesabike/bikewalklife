@@ -10,7 +10,6 @@ module.exports = {
     contact: config.contact,
     siteUrl: config.site_url,
     archivePerPage: config.archive_per_page,
-    copyrightYear: config.copyright_year,
     feedUrl: config.feed_url
   },
   plugins: [
