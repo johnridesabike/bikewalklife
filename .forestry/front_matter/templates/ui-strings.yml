@@ -1,4 +1,33 @@
 ---
 label: UI Strings
 hide_body: true
-fields: []
+fields:
+- name: page
+  type: text
+  config:
+    required: false
+  label: Page
+  hidden: true
+  default: STRINGS
+- name: open_linked
+  type: text
+  config:
+    required: true
+  label: Open Linked
+  description: Text to display on external linked pages.
+- name: archive_link
+  type: text
+  config:
+    required: true
+  label: Archive Link
+  description: Text to display on the link to the archive.
+- name: footer
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Footer
+  description: Footer content.
