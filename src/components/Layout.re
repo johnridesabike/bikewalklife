@@ -3,16 +3,18 @@
 
 [%graphql
   {|
-    query getMetadata {
-      site {
-        siteMetadata {
-          siteTitle: title
-          description
-          copyrightYear
-          siteUrl
-        }
+  query getMetadata {
+    site {
+      siteMetadata {
+        siteTitle: title
+        description
+        siteUrl
       }
     }
+    strings: dataYaml(page: {eq: STRINGS}) {
+      footer
+    }
+  }
 |};
   {inline: true}
 ];
@@ -57,12 +59,7 @@ module Logo = {
 [@react.component]
 let make = (~title as pageTitle, ~route=?, ~children) => {
   switch (query->Gatsby.useStaticQueryUnsafe->parse) {
-  | {
-      site:
-        Some({
-          siteMetadata: {siteTitle, description, copyrightYear, siteUrl},
-        }),
-    } =>
+  | {site: Some({siteMetadata: {siteTitle, description, siteUrl}}), strings} =>
     <div className=styles##page>
       <BsReactHelmet>
         <html lang="en" />
@@ -148,7 +145,11 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
       </main>
       <footer className=styles##footerWrapper>
         <div className=Cn.("small-screen-padding" <:> styles##footer)>
-          <p> {j|Copyright © |j}->React.string copyrightYear->React.int </p>
+          {switch (strings) {
+           | Some({footer: Some(text)}) =>
+             <div dangerouslySetInnerHTML={"__html": text} />
+           | _ => React.null
+           }}
           <p>
             <Router.Link to_=Index activeClassName="">
               "Home"->React.string
@@ -162,6 +163,6 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
         </div>
       </footer>
     </div>
-  | {site: None} => React.null
+  | {site: None, _} => React.null
   };
 };

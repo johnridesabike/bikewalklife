@@ -232,7 +232,6 @@ let createSchemaCustomization = ({actions: {createTypes, _}, _}) =>
       description: String!
       siteUrl: String!
       archivePerPage: Int!
-      copyrightYear: Int!
       feedUrl: String!
       aboutData: AboutData!
     }
@@ -242,6 +241,7 @@ let createSchemaCustomization = ({actions: {createTypes, _}, _}) =>
     enum YamlPageId {
       ABOUT
       AUTHORS
+      STRINGS
     }
     type AboutData {
       title: String!

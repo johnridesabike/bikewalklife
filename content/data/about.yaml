@@ -8,5 +8,6 @@ body: "<p>This site is still in its infancy, and I'm experimenting with how I wa
   to develop it. Please pardon the dust, and feel free to contact me if you have any
   thoughts or questions.</p>"
 contact:
+  text: "Send tips, questions, comments, or just say \"hi.\""
   email: info@forestry.io
   form: true
