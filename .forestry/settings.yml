@@ -4,10 +4,6 @@ auto_deploy: false
 admin_path: "/static/admin/"
 webhook_url: 
 sections:
-- type: document
-  path: content/data/strings.yaml
-  label: UI Strings
-  match: "**/*"
 - type: heading
   label: Content
 - type: directory
@@ -29,6 +25,9 @@ sections:
 - type: document
   path: config.json
   label: Site Info
+- type: document
+  path: content/data/strings.yaml
+  label: UI Strings
 upload_dir: content/images
 public_path: "/content/images"
 front_matter_path: ''

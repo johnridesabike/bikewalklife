@@ -31,3 +31,5 @@ fields:
       format: html-blocks
   label: Footer
   description: Footer content.
+pages:
+- content/data/strings.yaml
