@@ -42,7 +42,8 @@ module Form = [%form
 /**
  https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
  */
-[@bs.val] external encodeURIComponent: string => string = "encodeURIComponent";
+[@bs.val]
+external encodeURIComponent: string => string = "encodeURIComponent";
 
 let encode = ({name, email, message, formName}: Form.output) => {
   let e = encodeURIComponent;
@@ -213,8 +214,9 @@ let make = () => {
           disabled={form.submitting}
           onBlur={_ => form.blurMessage()}
           value={form.input.message}
-          cols=40
+          cols=34
           rows=10
+          style={ReactDOMRe.Style.make(~width="100%", ())}
           onChange={event =>
             form.updateMessage(
               (input, message) => {...input, message},
