@@ -7,7 +7,8 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://nextcity.org/daily/entry/can-we-abolish-the-police-without-challenging-the-status-quo-of-car-culture
-published: true
+draft: false
+slug: tight-connection-policing-car-culture
 
 ---
 [Nick DeMarsh and Rick Banks write for Next City:](https://nextcity.org/daily/entry/can-we-abolish-the-police-without-challenging-the-status-quo-of-car-culture)

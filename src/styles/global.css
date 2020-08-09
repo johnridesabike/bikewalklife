@@ -11,14 +11,17 @@ html {
   }
 }
 
-body {
+body,
+textarea,
+input[type="text"] {
   background-color: var(--color-background);
-  color: var(--color-primary-dark);
+  color: var(--color-text);
+  font-family: var(--font-sans-serif);
 }
 
-body,
-textarea {
-  font-family: var(--font-sans-serif);
+textarea,
+input[type="text"] {
+  border: 1px solid var(--color-primary);
 }
 
 input {

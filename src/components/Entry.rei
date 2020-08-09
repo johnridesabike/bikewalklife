@@ -1,9 +1,6 @@
-let query: string;
-
 module OriginalLink: {
   [@react.component]
-  let make:
-    (~href: string,  ~className: string=?) => React.element;
+  let make: (~href: string, ~className: string=?) => React.element;
 };
 
 module Date: {
@@ -28,6 +25,7 @@ let make:
     ~imageCaption: option(string),
     ~isoDate: string,
     ~date: string,
+    ~draft: bool,
     ~footer: React.element,
     ~className: string=?
   ) =>

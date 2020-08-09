@@ -3,7 +3,7 @@ title: "Smart Cities Dive: \"US traffic fatality rate surges amid 'open season' 
 date: 2020-07-30T22:42:09.000+00:00
 author: John Jackson
 external_link: https://www.smartcitiesdive.com/news/us-traffic-fatality-rate-surges-amid-open-season-of-reckless-driving/582039/
-published: true
+draft: false
 
 ---
 Current events reveal how our roads are dangerous by design:

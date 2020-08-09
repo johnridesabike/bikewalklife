@@ -1,5 +1,3 @@
-let query: string;
-
 type metadata =
   | Site
   | String(string);

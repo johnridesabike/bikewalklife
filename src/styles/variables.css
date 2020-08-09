@@ -42,7 +42,7 @@
 
   /**
    * Colors
-   * https://coolors.co/457b9d-a8dadc-1d3557-da1b2b-f1faee
+   * https://coolors.co/457b9d-7cc8cb-1d3557-da1b2b-f1faee
    */
   --color-background: #fff;
   --color-text: #000;
@@ -51,4 +51,21 @@
   --color-primary-dark: #1d3557;
   --color-secondary: #da1b2b;
   --color-secondary-light: #f1faee;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+
+    /**
+     * https://coolors.co/65a5cd-1d3557-d4eded-f76470-f1faee
+     */
+    --color-background: #282a36;
+    --color-text: #f8f8f2;
+    --color-primary: #65a5cd;
+    --color-primary-light: #1d3557;  /* actually darker */
+    --color-primary-dark: #d4eded;/* actually lighter */
+    --color-secondary: #f76470;
+    --color-secondary-light: #f1faee;
+  }
 }

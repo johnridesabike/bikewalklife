@@ -12,5 +12,7 @@ let createPages:
 let createSchemaCustomization: t(_) => unit;
 
 type onCreatePage;
-
 let onCreatePage: onCreatePage => unit;
+
+type createResolvers;
+let createResolvers: createResolvers => unit;

@@ -32,9 +32,13 @@ fields:
   label: Footer
   description: Footer content.
 - name: contact_text
-  type: text
+  type: textarea
+  default: ''
   config:
     required: true
+    wysiwyg: true
+    schema:
+      format: html-blocks
   label: Contact text
   description: Call-to-action for contact form.
 - name: contact_form

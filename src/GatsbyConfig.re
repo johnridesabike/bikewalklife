@@ -85,7 +85,7 @@ module PluginFeed = {
     query AllMarkdown {
       allMarkdownRemark(
         sort: { order: [DESC], fields: [frontmatter___date] },
-        filter: {frontmatter: {published: {eq: true}}}
+        filter: {published: {eq: true}}
       ) {
         edges {
           node {

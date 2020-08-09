@@ -75,3 +75,5 @@ lib/
 .bsb.lock
 .graphql_ppx_cache/
 *.bs.js
+
+content/posts/__testdata__/

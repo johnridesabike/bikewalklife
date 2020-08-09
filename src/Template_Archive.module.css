@@ -30,3 +30,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.draft {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+}

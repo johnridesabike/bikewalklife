@@ -5,7 +5,11 @@ type internal = {
   type_: string,
 };
 
-type frontmatter = {date: string};
+type frontmatter = {
+  date: string,
+  draft: bool,
+  slug: option(string),
+};
 
 type node = {
   internal,
@@ -56,14 +60,19 @@ let onCreateNode = ({node, actions: {createNodeField, _}, _}) =>
   switch (node) {
   | {
       internal: {type_: "MarkdownRemark"},
-      frontmatter: Some({date}),
+      frontmatter: Some({date, slug, _}),
       fileAbsolutePath,
       _,
     } =>
     let date = Js.Date.fromString(date);
     let year = Js.Date.getFullYear(date);
-    let month = Js.Date.getMonth(date) +. 1.0;
-    let slug = NodeJs.Path.basenameExt(fileAbsolutePath, ".md");
+    let month = date->Js.Date.getMonth->Float.toInt + 1;
+    let slug =
+      switch (slug) {
+      | None
+      | Some("") => NodeJs.Path.basenameExt(fileAbsolutePath, ".md")
+      | Some(slug) => slug
+      };
     createNodeField(. field(~node, ~name="slug", ~value=slug));
     createNodeField(. field(~node, ~name="year", ~value=year));
     createNodeField(. field(~node, ~name="month", ~value=month));
@@ -73,10 +82,7 @@ let onCreateNode = ({node, actions: {createNodeField, _}, _}) =>
 [%graphql
   {|
     query CreatePages {
-      allMarkdownRemark(
-        sort: {fields: [frontmatter___date], order: [DESC]},
-        filter: {frontmatter: {published: {eq: true}}}
-      ) {
+      allMarkdownRemark(filter: {published: {eq: true}}) {
         edges {
           node {
             fields {
@@ -91,7 +97,7 @@ let onCreateNode = ({node, actions: {createNodeField, _}, _}) =>
               year
               month
             }
-              frontmatter {
+            frontmatter {
               title
             }
           }
@@ -150,7 +156,7 @@ let createPages =
               context:
                 Context(
                   Template_Entry.{
-                    slug,
+                    Template_Entry.slug,
                     year,
                     month,
                     next:
@@ -203,46 +209,87 @@ let createPages =
 let createSchemaCustomization = ({actions: {createTypes, _}, _}) =>
   createTypes(.
     {|
-    type MarkdownRemark implements Node {
+    type MarkdownRemark implements Node @dontinfer {
       frontmatter: Frontmatter!
       fields: Fields!
+      """
+      If `false`, the post will not appear in the production build. In
+      developement, this is always `true`. In production, it is always the
+      opposite of `frontmatter.draft`.
+      """
+      published: Boolean!
     }
-    type Frontmatter {
+
+    type Frontmatter @dontinfer {
       title: String!
       date: Date! @dateformat
       author: String!
-      published: Boolean!
       hero_image: HeroImage
+      """
+      If `true` then the post will appear in the production build.
+      """
+      draft: Boolean!
+      """
+      Optional custom slug.
+      """
+      slug: String
     }
-    type HeroImage {
+
+    type HeroImage @dontinfer {
       image: File @fileByRelativePath
       alt: String
       caption: String
     }
-    type Fields {
+
+    type Fields @dontinfer {
       slug: String!
       year: Int!
       month: Int!
     }
-    type Site {
+
+    type Site implements Node @dontinfer {
       siteMetadata: SiteMetadata!
     }
-    type SiteMetadata {
+
+    type SiteMetadata @dontinfer {
       title: String!
       description: String!
-      siteUrl: String!
       archivePerPage: Int!
+      siteUrl: String!
       feedUrl: String!
     }
+
     type DataYaml implements Node {
       page: YamlPageId
     }
+
     enum YamlPageId {
       ABOUT
       AUTHORS
       STRINGS
     }
-  |},
+    |},
+  );
+
+[@unboxed]
+type resolvers =
+  | Resolvers(Js.t({..})): resolvers;
+
+type createResolvers = {createResolvers: (. resolvers) => unit};
+
+let createResolvers = ({createResolvers}) =>
+  createResolvers(.
+    Resolvers({
+      "MarkdownRemark": {
+        "published": {
+          "resolve": (source, _args, _context, _info) =>
+            switch (NodeJs.Process.(process->env)->Js.Dict.get("NODE_ENV")) {
+            | Some("development") => true
+            | _ => !source##frontmatter##draft
+            },
+        },
+      },
+    }),
   );
 
 [@bs.val] [@bs.scope "Object"]

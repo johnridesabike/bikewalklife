@@ -3,7 +3,7 @@ title: "People for Bikes: 2020 Community Survey"
 date: 2020-07-31T22:42:09.000+00:00
 author: John Jackson
 external_link: https://www.surveygizmo.com/s3/5649932/pfbcommsvy20
-published: true
+draft: false
 
 ---
 The annual People for Bikes Community Survey is here until October 15th.

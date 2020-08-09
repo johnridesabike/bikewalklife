@@ -15,6 +15,8 @@ module Img = {
         ~aspectRatio: float,
         ~media: string,
         ~base64: string=?,
+        ~srcWebp: string=?,
+        ~srcSetWebp: string=?,
         ~tracedSVG: string=?,
         unit
       ) =>
@@ -27,7 +29,7 @@ module Img = {
         ) =>
       _make(~media, ~src, ~srcSet, ~sizes, ~aspectRatio, ~base64?, ());
 
-    let makeWithSVG =
+    let makeWithSvg =
         (
           Fragments.ImageFluid_tracedSVG.{
             src,
@@ -39,6 +41,31 @@ module Img = {
           media,
         ) =>
       _make(~media, ~src, ~srcSet, ~sizes, ~aspectRatio, ~tracedSVG?, ());
+
+    let makeWithWebpSvg =
+        (
+          Fragments.ImageFluid_withWebp_tracedSVG.{
+            src,
+            srcSet,
+            sizes,
+            aspectRatio,
+            tracedSVG,
+            srcWebp,
+            srcSetWebp,
+          },
+          media,
+        ) =>
+      _make(
+        ~media,
+        ~src,
+        ~srcSet,
+        ~sizes,
+        ~aspectRatio,
+        ~tracedSVG?,
+        ~srcWebp?,
+        ~srcSetWebp?,
+        (),
+      );
   };
   module Fixed = {
     type t;

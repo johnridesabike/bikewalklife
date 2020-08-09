@@ -20,7 +20,11 @@ let default = (~data) => {
       <article>
         <h1> "Contact"->React.string </h1>
         {switch (contact_text) {
-         | Some(text) => <p className="ui-font"> text->React.string </p>
+         | Some(text) =>
+           <div
+             className="ui-font"
+             dangerouslySetInnerHTML={"__html": text}
+           />
          | None => React.null
          }}
         {switch (contact_form) {

@@ -48,3 +48,9 @@
   margin-left: 0.25em;
   opacity: 0.75;
 }
+
+.draft {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+}

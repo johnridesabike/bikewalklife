@@ -15,7 +15,7 @@ let styles = Gatsby.importCss("./Entry.module.css");
 
 module OriginalLink = {
   [@react.component]
-  let make = (~href,  ~className="") => {
+  let make = (~href, ~className="") => {
     let data = query->Gatsby.useStaticQueryUnsafe->parse;
     <div className=Cn.(styles##link <:> className)>
       <a href target="_blank" rel="noopener">
@@ -38,6 +38,15 @@ module Date = {
     </time>;
 };
 
+module DraftNotice = {
+  [@react.component]
+  let make = () =>
+    <div className=styles##draft>
+      "This is a draft. It will not appear in the published site."
+      ->React.string
+    </div>;
+};
+
 type image = [
   | `NoImage
   | `Image(array(Gatsby.Img.Fluid.t), string)
@@ -55,6 +64,7 @@ let make =
       ~imageCaption,
       ~isoDate,
       ~date,
+      ~draft,
       ~footer,
       ~className="",
     ) => {
@@ -94,6 +104,11 @@ let make =
       <header className=styles##header>
         <h1 className=styles##title> titleEl </h1>
         <Date date isoDate />
+        {if (draft) {
+           <DraftNotice />;
+         } else {
+           React.null;
+         }}
       </header>
       body
       footer

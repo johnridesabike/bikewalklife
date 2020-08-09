@@ -8,7 +8,7 @@
       sort: { fields: [frontmatter___date], order: [DESC] },
       limit: $limit,
       skip: $skip,
-      filter: {frontmatter: {published: {eq: true}}}
+      filter: {published: {eq: true}}
     ) {
       edges {
         node {
@@ -23,6 +23,7 @@
             external_link
             isoDate: date @ppxCustom(module: "DateTime")
             date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
+            draft
           }
         }
       }
@@ -70,7 +71,7 @@ let default =
            {
              node: {
                id,
-               frontmatter: {title, external_link, date, isoDate},
+               frontmatter: {title, external_link, date, isoDate, draft},
                fields: {slug, year, month},
              },
            },
@@ -84,6 +85,11 @@ let default =
              date={DateTime.parse(date)}
              isoDate={DateTime.parse(isoDate)}
            />
+           {if (draft) {
+              <div className=styles##draft> "Draft"->React.string </div>;
+            } else {
+              React.null;
+            }}
            {switch (Js.Nullable.toOption(external_link)) {
             | Some(href) => <Entry.OriginalLink href />
             | None => React.null

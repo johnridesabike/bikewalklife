@@ -92,6 +92,29 @@
   color: var(--color-secondary);
 }
 
+@media (prefers-color-scheme: dark) {
+
+  .headerWrapper {
+    box-shadow: 0 8px 4px -4px rgba(255, 255, 255, 0.125);
+  }
+
+  .footerWrapper {
+    background-color: var(--color-primary-light);
+    box-shadow:
+      0 -4px 4px 0 rgba(255, 255, 255, 0.125),
+      /* Make the footer extend off the screen with this one weird trick. */
+      0 50vh 0 50vh var(--color-primary-light);
+  }
+
+  .footer {
+    color: var(--color-primary-dark);
+  }
+
+  .footer a {
+    color: var(--color-primary-dark);
+  }
+}
+
 @media screen and (min-width: 600px) {
 
   .headerWrapper {

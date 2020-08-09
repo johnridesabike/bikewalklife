@@ -9,7 +9,7 @@ open Fragments;
       allMarkdownRemark(
         sort: { order: [DESC], fields: [frontmatter___date] },
         limit: 24,
-        filter: {frontmatter: {published: {eq: true}}}
+        filter: {published: {eq: true}}
       ) {
         edges {
           node {
@@ -25,6 +25,7 @@ open Fragments;
               date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
               title
               external_link
+              draft
               hero_image {
                 alt
                 caption
@@ -60,7 +61,14 @@ let default = (~data) => {
                id,
                html,
                fields: {slug, year, month},
-               frontmatter: {title, hero_image, isoDate, date, external_link},
+               frontmatter: {
+                 title,
+                 hero_image,
+                 isoDate,
+                 date,
+                 draft,
+                 external_link,
+               },
              },
            },
          ) =>
@@ -98,7 +106,7 @@ let default = (~data) => {
                    ((fluid, media)) =>
                    switch (fluid) {
                    | Some(fluid) =>
-                     Some(Gatsby.Img.Fluid.makeWithSVG(fluid, media))
+                     Some(Gatsby.Img.Fluid.makeWithWebpSvg(fluid, media))
                    | None => None
                    }
                  );
@@ -118,6 +126,7 @@ let default = (~data) => {
            linkedHeader=`Linked
            isoDate
            date
+           draft
            footer={
              <footer>
                {switch (external_link) {

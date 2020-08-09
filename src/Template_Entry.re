@@ -18,6 +18,7 @@ open Fragments;
         external_link
         isoDate: date  @ppxCustom(module: "DateTime")
         date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
+        draft
         hero_image {
           alt
           caption
@@ -84,7 +85,10 @@ module About = {
       {switch (strings) {
        | Some({contact_text: Some(text)}) =>
          <>
-           <p className=styles##aboutContent> text->React.string </p>
+           <div
+             className=styles##aboutContent
+             dangerouslySetInnerHTML={"__html": text}
+           />
            <p className=styles##aboutLink>
              <Router.Link to_=Contact>
                "Contact"->React.string
@@ -106,7 +110,14 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       markdownRemark:
         Some({
           html: Some(html),
-          frontmatter: {hero_image, title, date, isoDate, external_link},
+          frontmatter: {
+            hero_image,
+            title,
+            date,
+            isoDate,
+            draft,
+            external_link,
+          },
         }),
       site: Some({siteMetadata: {siteTitle}}),
       about,
@@ -150,7 +161,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
                 ((fluid, media)) =>
                 switch (fluid) {
                 | Some(fluid) =>
-                  Some(Gatsby.Img.Fluid.makeWithSVG(fluid, media))
+                  Some(Gatsby.Img.Fluid.makeWithWebpSvg(fluid, media))
                 | None => None
                 }
               );
@@ -171,6 +182,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         linkedHeader=`Unlinked
         isoDate
         date
+        draft
         footer={
           <footer className=styles##footer>
             {switch (external_link) {

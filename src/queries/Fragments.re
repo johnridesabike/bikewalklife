@@ -50,17 +50,32 @@ fragment ImageFluid_tracedSVG on ImageSharpFluid {
 /* Export the query in a way Gatsby can read it. */
 let imageFluidSVG = ImageFluid_tracedSVG.query;
 
+[%graphql 
+  {|
+fragment ImageFluid_withWebp_tracedSVG on ImageSharpFluid {
+  tracedSVG
+  aspectRatio
+  src
+  srcSet
+  srcWebp
+  srcSetWebp
+  sizes
+}
+|}]
+
+let imageFluidSVGWebp = ImageFluid_withWebp_tracedSVG.query;
+
 [%graphql
   {|
   fragment HeroImage on ImageSharp {
     mobileSmall: fluid ( maxWidth: 414, maxHeight: 207, fit: COVER) {
-      ...ImageFluid_tracedSVG
+      ...ImageFluid_withWebp_tracedSVG
     }
     mobile: fluid ( maxWidth: 600, maxHeight: 300, fit: COVER) {
-      ...ImageFluid_tracedSVG
+      ...ImageFluid_withWebp_tracedSVG
     }
     full: fluid ( maxWidth: 900, maxHeight: 450, fit: COVER) {
-      ...ImageFluid_tracedSVG
+      ...ImageFluid_withWebp_tracedSVG
     }
   }
 |}

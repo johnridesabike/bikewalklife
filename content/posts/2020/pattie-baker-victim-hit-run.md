@@ -3,7 +3,7 @@ title: Pattie Baker, bike blogger & activist, victim of hit-and-run
 date: 2020-07-28T22:42:09.000+00:00
 author: John Jackson
 external_link: https://travelingatthespeedofbike.com/2020/07/13/i-was-the-victim-of-a-hit-and-run-today-i-am-lucky-to-be-alive/
-published: true
+draft: false
 hero_image: 
   image: /content/images/fullsizeoutput_354b.jpeg
   alt: Pattie Baker's bike noodle.

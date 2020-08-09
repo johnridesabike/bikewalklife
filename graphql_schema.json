@@ -1516,6 +1516,16 @@
                 "defaultValue": null
               },
               {
+                "name": "published",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "BooleanQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "excerpt",
                 "description": "",
                 "type": {
@@ -1726,16 +1736,6 @@
                 "defaultValue": null
               },
               {
-                "name": "authors",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "StringQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
                 "name": "title",
                 "description": "",
                 "type": {
@@ -1757,6 +1757,16 @@
               },
               {
                 "name": "body",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "StringQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "authors",
                 "description": "",
                 "type": {
                   "kind": "INPUT_OBJECT",
@@ -3649,6 +3659,16 @@
             "defaultValue": null
           },
           {
+            "name": "published",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "BooleanQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "excerpt",
             "description": "",
             "type": {
@@ -3820,7 +3840,17 @@
             "defaultValue": null
           },
           {
-            "name": "published",
+            "name": "hero_image",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "HeroImageFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "draft",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -3830,11 +3860,11 @@
             "defaultValue": null
           },
           {
-            "name": "hero_image",
+            "name": "slug",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "HeroImageFilterInput",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -4333,16 +4363,6 @@
             "defaultValue": null
           },
           {
-            "name": "authors",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "title",
             "description": "",
             "type": {
@@ -4364,6 +4384,16 @@
           },
           {
             "name": "body",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "authors",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -8334,6 +8364,22 @@
             "deprecationReason": null
           },
           {
+            "name": "published",
+            "description": "If `false`, the post will not appear in the production build. In\ndevelopement, this is always `true`. In production, it is always the\nopposite of `frontmatter.draft`.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "excerpt",
             "description": null,
             "args": [
@@ -8720,8 +8766,20 @@
             "deprecationReason": null
           },
           {
-            "name": "published",
+            "name": "hero_image",
             "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "HeroImage",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "draft",
+            "description": "If `true` then the post will appear in the production build.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -8736,12 +8794,12 @@
             "deprecationReason": null
           },
           {
-            "name": "hero_image",
-            "description": null,
+            "name": "slug",
+            "description": "Optional custom slug.",
             "args": [],
             "type": {
-              "kind": "OBJECT",
-              "name": "HeroImage",
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -9059,22 +9117,6 @@
             "deprecationReason": null
           },
           {
-            "name": "authors",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "title",
             "description": null,
             "args": [],
@@ -9106,6 +9148,22 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "authors",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -10600,12 +10658,6 @@
             "deprecationReason": null
           },
           {
-            "name": "childMarkdownRemark___frontmatter___published",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "childMarkdownRemark___frontmatter___hero_image___alt",
             "description": null,
             "isDeprecated": false,
@@ -10613,6 +10665,18 @@
           },
           {
             "name": "childMarkdownRemark___frontmatter___hero_image___caption",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___draft",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___slug",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -10637,6 +10701,12 @@
           },
           {
             "name": "childMarkdownRemark___fields___month",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___published",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -10960,12 +11030,6 @@
             "deprecationReason": null
           },
           {
-            "name": "childDataYaml___authors",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "childDataYaml___title",
             "description": null,
             "isDeprecated": false,
@@ -10979,6 +11043,12 @@
           },
           {
             "name": "childDataYaml___body",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childDataYaml___authors",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -18455,21 +18525,21 @@
             "defaultValue": null
           },
           {
-            "name": "siteUrl",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "archivePerPage",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "siteUrl",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -18729,22 +18799,6 @@
             "deprecationReason": null
           },
           {
-            "name": "siteUrl",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "archivePerPage",
             "description": null,
             "args": [],
@@ -18754,6 +18808,22 @@
               "ofType": {
                 "kind": "SCALAR",
                 "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "siteUrl",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
                 "ofType": null
               }
             },
@@ -18959,13 +19029,13 @@
             "deprecationReason": null
           },
           {
-            "name": "siteMetadata___siteUrl",
+            "name": "siteMetadata___archivePerPage",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "siteMetadata___archivePerPage",
+            "name": "siteMetadata___siteUrl",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -21193,12 +21263,6 @@
             "deprecationReason": null
           },
           {
-            "name": "frontmatter___published",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "frontmatter___hero_image___image___sourceInstanceName",
             "description": null,
             "isDeprecated": false,
@@ -21427,6 +21491,18 @@
             "deprecationReason": null
           },
           {
+            "name": "frontmatter___draft",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___slug",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "frontmatter___external_link",
             "description": null,
             "isDeprecated": false,
@@ -21446,6 +21522,12 @@
           },
           {
             "name": "fields___month",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "published",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -22466,12 +22548,6 @@
             "deprecationReason": null
           },
           {
-            "name": "authors",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "title",
             "description": null,
             "isDeprecated": false,
@@ -22485,6 +22561,12 @@
           },
           {
             "name": "body",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "authors",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
