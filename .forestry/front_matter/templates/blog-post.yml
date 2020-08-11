@@ -4,7 +4,7 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
   config:
     required: true
 - name: author
@@ -18,12 +18,11 @@ fields:
       section: author-list
       file: content/data/authors.yaml
       path: authors
-  label: author
+  label: Author
   description: Enter author of post
 - name: date
   type: datetime
-  label: date
-  description: Date post was created
+  label: Date
   config:
     required: true
     date_format: 
@@ -44,27 +43,36 @@ fields:
     config:
       required: false
     label: Alternate text
+    description: Use this text to describe the image for humans and robots who can’t
+      see images.
   - name: caption
     type: text
     config:
       required: false
     label: Caption
+    description: This text will appear under the image. It shouldn’t be the same as
+      the <em>alternate text</em>.
   label: Hero image
+  description: This will appear in the header of the post.
 - name: external_link
   type: text
   config:
     required: false
   label: External link
+  description: 'The URL to the external page this post is about, if applicable. '
 - name: draft
   type: boolean
   label: Draft
   default: true
+  description: Turn this off to publish the post on the public site. Keep it on to
+    preview the post.
 - name: slug
   type: text
   config:
     required: false
   label: Slug
-  description: Optional custom slug for the post's URL.
+  description: Optional custom slug for the post's URL. If blank, the URL will be
+    generated automatically.
 pages:
 - content/posts/2020/miss-manners-advises-on-how-to-address-pedestrians-in-bike-lanes.md
 - content/posts/2020/on-advocating-for-bike-lanes.md
