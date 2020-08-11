@@ -1,6 +1,6 @@
 ---
 date: 2020-08-10T21:13:04-04:00
-draft: true
+draft: false
 title: On advocating for bike lanes
 author: John Jackson
 hero_image:
