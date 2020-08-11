@@ -1,6 +1,6 @@
 ---
 date: 2020-08-11T10:06:50-04:00
-draft: true
+draft: false
 title: On the success of Asheville’s “road diet” project
 author: John Jackson
 hero_image:
@@ -18,3 +18,5 @@ PJ Jackson writes for Citizen Times:
 > \[...\]
 >
 > Now, with this latest project, started around the time of our statewide lockdown and completed by the end of June, we can officially feel safe walking around our own neighborhood. Everyone is safer — whether you’re in a car, on a bike, on foot or in a wheelchair.
+
+It’s always good to see a success story like this one.
