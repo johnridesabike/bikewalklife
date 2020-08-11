@@ -67,5 +67,6 @@ fields:
   description: Optional custom slug for the post's URL.
 pages:
 - content/posts/2020/miss-manners-advises-on-how-to-address-pedestrians-in-bike-lanes.md
+- content/posts/2020/on-advocating-for-bike-lanes.md
 - content/posts/2020/research-examines-cities-mini-heat-islands-and-their-ties-to-racism.md
 - content/posts/2020/the-tight-connection-between-policing-and-car-culture.md
