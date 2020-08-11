@@ -4,9 +4,9 @@ draft: false
 title: On the success of Asheville’s “road diet” project
 author: John Jackson
 hero_image:
-  image: "/content/images/13e7575e-7c23-4526-b360-3b14598fba95-charlotte_street_road_diet.JPG"
-  alt: Art depicting the changes
-  caption: Image from City of Asheville
+  image: ''
+  alt: ''
+  caption: ''
 external_link: https://www.citizen-times.com/story/opinion/2020/08/09/asheville-should-proud-charlotte-street-innovation-opinion/3313771001/
 slug: ''
 
