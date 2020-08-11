@@ -32,7 +32,7 @@ upload_dir: content/images
 public_path: "/content/images"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ":year:/:filename:"
 build:
   preview_output_directory: public
   install_dependencies_command: yarn install
