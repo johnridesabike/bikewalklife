@@ -99,45 +99,35 @@ module PluginFeed = {
             frontmatter {
               title
               date @ppxCustom(module: "DateTime")
+              external_link
             }
           }
         }
+      }
+      strings: dataYaml(page: {eq: STRINGS}) {
+        open_linked
       }
     }
   |};
     {taggedTemplate: false}
   ];
 
-  /*
-   let figure =
-       (
-         siteUrl,
-         image:
-           option(
-             AllMarkdown.t_allMarkdownRemark_edges_node_frontmatter_hero_image,
-           ),
-       ) =>
-     switch (image) {
-     | Some({
-         alt,
-         caption,
-         image: {childImageSharp: Some({fluid: Some({src, _}), _})},
-       }) =>
-       "<figure><img src=\""
-       ++ Url.make(~url=src, ~base=siteUrl)->Url.toString
-       ++ "\" alt=\""
-       ++ alt
-       ++ "\"/>"
-       ++ {
-         switch (caption) {
-         | Some(caption) => "<figcaption>" ++ caption ++ "</figcaption>"
-         | None => ""
-         };
-       }
-       ++ "</figure>"
-     | _ => ""
-     };
-     */
+  let externalLink = (~strings, href) =>
+    switch (href, strings) {
+    | (Some(href), Some(AllMarkdown.{open_linked: Some(text)})) =>
+      ReactDOMServer.renderToStaticMarkup(
+        <p>
+          <a href>
+            text->React.string
+            " "->React.string
+            <span ariaHidden=true>
+              <Icons.ExternalLink height=16 width=16 />
+            </span>
+          </a>
+        </p>,
+      )
+    | _ => ""
+    };
 
   type query('a) = {query: 'a};
 
@@ -179,7 +169,7 @@ module PluginFeed = {
             Webapi.Url.makeWithBase(config##feed_url, siteUrl)
             ->Webapi.Url.href,
           ~image_url=
-            Webapi.Url.makeWithBase("/icons/icon-256x256.png", siteUrl)
+            Webapi.Url.makeWithBase("/icons/icon-96x96.png", siteUrl)
             ->Webapi.Url.href,
           (),
         )
@@ -189,7 +179,10 @@ module PluginFeed = {
     feeds: [|
       {
         serialize: ({query}) => {
-          let (Site.{site}, AllMarkdown.{allMarkdownRemark: {edges}}) =
+          let (
+            Site.{site},
+            AllMarkdown.{allMarkdownRemark: {edges}, strings},
+          ) =
             Serialize.unsafeParse(query);
           Array.map(
             edges,
@@ -199,7 +192,7 @@ module PluginFeed = {
                   excerpt,
                   html,
                   fields: {slug, year, month},
-                  frontmatter: {title, date},
+                  frontmatter: {title, date, external_link},
                 },
               },
             ) =>
@@ -223,7 +216,10 @@ module PluginFeed = {
                 ~custom_elements=
                   switch (html) {
                   | Some(html) => [|
-                      Rss.CustomElement({"content:encoded": html}),
+                      Rss.CustomElement({
+                        "content:encoded":
+                          html ++ externalLink(~strings, external_link),
+                      }),
                     |]
                   | None => [||]
                   },

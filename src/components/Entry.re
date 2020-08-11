@@ -1,6 +1,7 @@
 %raw
 "import { graphql } from 'gatsby'";
 
+
 let styles = Gatsby.importCss("./Entry.module.css");
 
 [%graphql
