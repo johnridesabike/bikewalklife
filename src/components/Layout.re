@@ -26,6 +26,7 @@ type metadata =
 let styles = Gatsby.importCss("./Layout.module.css");
 
 module Logo = {
+  /* Use CSS classnames for colors so variables are processed by postcss. */
   [@react.component]
   let make = (~height=?, ~width=?) =>
     <svg
@@ -39,16 +40,17 @@ module Logo = {
       <g
         className="sans-serif"
         style={ReactDOMRe.Style.make(~fontSize="24px", ~fontWeight="400", ())}>
-        <text x="6" y="24" fill="var(--color-primary-dark)">
+        <text x="6" y="24" className="color-primary-dark" fill="currentColor">
           "Bike"->React.string
         </text>
-        <text x="26" y="45" fill="var(--color-primary)">
+        <text x="26" y="45" className="color-primary" fill="currentColor">
           "Walk"->React.string
         </text>
         <text
           x="78"
           y="45"
-          fill="var(--color-secondary)"
+          className="color-secondary"
+          fill="currentColor"
           style={ReactDOMRe.Style.make(~fontStyle="italic", ())}>
           "Life"->React.string
         </text>
