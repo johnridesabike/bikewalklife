@@ -28,7 +28,7 @@ let toString =
   | Contact => "/contact/";
 
 let toStringWithBase = (route, base) =>
-  Webapi.Url.makeWithBase(toString(route), base)->Webapi.Url.href;
+  Webapi.Url.(makeWith(toString(route), ~base)->href);
 
 module GatsbyLink = {
   [@bs.module "gatsby"] [@react.component]

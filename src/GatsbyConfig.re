@@ -166,10 +166,10 @@ module PluginFeed = {
           ~description,
           ~site_url=siteUrl,
           ~feed_url=
-            Webapi.Url.makeWithBase(config##feed_url, siteUrl)
+            Webapi.Url.makeWith(config##feed_url, ~base=siteUrl)
             ->Webapi.Url.href,
           ~image_url=
-            Webapi.Url.makeWithBase("/icons/icon-96x96.png", siteUrl)
+            Webapi.Url.makeWith("/icons/icon-96x96.png", ~base=siteUrl)
             ->Webapi.Url.href,
           (),
         )
@@ -272,7 +272,7 @@ module PluginSiteMap = {
       | {site: Some({siteMetadata: {siteUrl}}), allSitePage: {nodes}} =>
         Array.map(nodes, ({path}) =>
           Page.make(
-            ~url=Webapi.Url.makeWithBase(path, siteUrl)->Webapi.Url.href,
+            ~url=Webapi.Url.makeWith(path, ~base=siteUrl)->Webapi.Url.href,
             (),
           )
         )

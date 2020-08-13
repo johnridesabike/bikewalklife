@@ -130,7 +130,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
            }) =>
            <meta
              property="og:image"
-             content=Webapi.Url.(makeWithBase(src, siteUrl)->href)
+             content=Webapi.Url.(makeWith(src, ~base=siteUrl)->href)
            />
          | _ => React.null
          }}
