@@ -33,6 +33,7 @@ open Fragments;
     site {
       siteMetadata {
         siteTitle: title
+        siteUrl
       }
     }
     about: dataYaml(page: {eq: ABOUT}) {
@@ -116,7 +117,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           externalLink,
           parent: Some(`MarkdownRemark({html: Some(html), _})),
         }),
-      site: Some({siteMetadata: {siteTitle}}),
+      site: Some({siteMetadata: {siteTitle, siteUrl}}),
       about,
       strings,
     } =>
@@ -127,7 +128,10 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
              image: Some({image: Some({fluid: Some({src, _}), _})}),
              _,
            }) =>
-           <meta property="og:image" content=src />
+           <meta
+             property="og:image"
+             content=Webapi.Url.(makeWithBase(src, siteUrl)->href)
+           />
          | _ => React.null
          }}
         {switch (heroImage) {
