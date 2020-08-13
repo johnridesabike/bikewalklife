@@ -56,7 +56,7 @@
     "typeface-cooper-hewitt": "0.0.44"
   },
   "devDependencies": {
-    "@reasonml-community/graphql-ppx": "^1.0.0-beta.21",
+    "@reasonml-community/graphql-ppx": "^1.0.0-beta.22",
     "bs-platform": "^8.0.3",
     "concurrently": "^5.2.0",
     "get-graphql-schema": "^2.1.2",

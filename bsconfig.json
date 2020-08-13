@@ -11,10 +11,6 @@
     {
       "dir": "src",
       "subdirs": true
-    },
-    {
-      "dir": ".",
-      "subdirs": false
     }
   ],
   "package-specs": [

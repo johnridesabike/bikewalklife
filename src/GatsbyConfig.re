@@ -82,24 +82,24 @@ module PluginFeed = {
 
   [%graphql
     {|
-    query AllMarkdown {
-      allMarkdownRemark(
-        sort: { order: [DESC], fields: [frontmatter___date] },
+    query AllPosts {
+      allPost(
+        sort: { order: [DESC], fields: [date] },
         filter: {published: {eq: true}}
+        limit: 24,
       ) {
-        edges {
-          node {
-            excerpt
-            html
-            fields {
-              slug
-              year
-              month
-            }
-            frontmatter {
-              title
-              date @ppxCustom(module: "DateTime")
-              external_link
+        nodes {
+          slug
+          year
+          month
+          title
+          date @ppxCustom(module: "DateTime")
+          externalLink
+          parent {
+            ... on MarkdownRemark {
+              __typename
+              excerpt
+              html
             }
           }
         }
@@ -112,9 +112,9 @@ module PluginFeed = {
     {taggedTemplate: false}
   ];
 
-  let externalLink = (~strings, href) =>
+  let renderLink = (~strings, href) =>
     switch (href, strings) {
-    | (Some(href), Some(AllMarkdown.{open_linked: Some(text)})) =>
+    | (Some(href), Some(AllPosts.{open_linked: Some(text)})) =>
       ReactDOMServer.renderToStaticMarkup(
         <p>
           <a href>
@@ -138,7 +138,7 @@ module PluginFeed = {
     };
     let unsafeParse = query => (
       query->Obj.magic->Site.parse,
-      query->Obj.magic->AllMarkdown.parse,
+      query->Obj.magic->AllPosts.parse,
     );
   };
 
@@ -179,23 +179,10 @@ module PluginFeed = {
     feeds: [|
       {
         serialize: ({query}) => {
-          let (
-            Site.{site},
-            AllMarkdown.{allMarkdownRemark: {edges}, strings},
-          ) =
+          let (Site.{site}, AllPosts.{allPost: {nodes}, strings}) =
             Serialize.unsafeParse(query);
           Array.map(
-            edges,
-            (
-              {
-                node: {
-                  excerpt,
-                  html,
-                  fields: {slug, year, month},
-                  frontmatter: {title, date, external_link},
-                },
-              },
-            ) =>
+            nodes, ({slug, year, month, title, date, externalLink, parent}) =>
             switch (site) {
             | Some({siteMetadata: {siteUrl: site_url, _}}) =>
               let url =
@@ -206,22 +193,22 @@ module PluginFeed = {
               Rss.Item.options(
                 ~title,
                 ~description=
-                  switch (excerpt) {
-                  | Some(excerpt) => excerpt
-                  | None => ""
+                  switch (parent) {
+                  | Some(`MarkdownRemark({excerpt: Some(excerpt), _})) => excerpt
+                  | _ => ""
                   },
                 ~date,
                 ~url,
                 ~guid=url,
                 ~custom_elements=
-                  switch (html) {
-                  | Some(html) => [|
+                  switch (parent) {
+                  | Some(`MarkdownRemark({html: Some(html), _})) => [|
                       Rss.CustomElement({
                         "content:encoded":
-                          html ++ externalLink(~strings, external_link),
+                          html ++ renderLink(~strings, externalLink),
                       }),
                     |]
-                  | None => [||]
+                  | _ => [||]
                   },
                 (),
               );
@@ -229,7 +216,7 @@ module PluginFeed = {
             }
           );
         },
-        query: AllMarkdown.query,
+        query: AllPosts.query,
         output: config##feed_url,
         title: config##title,
       },
@@ -247,10 +234,8 @@ module PluginSiteMap = {
         }
       }
       allSitePage {
-        edges {
-          node {
-            path
-          }
+        nodes {
+          path
         }
       }
     }
@@ -284,8 +269,8 @@ module PluginSiteMap = {
       },
     serialize: query =>
       switch (SiteMap.parse(query)) {
-      | {site: Some({siteMetadata: {siteUrl}}), allSitePage: {edges}} =>
-        Array.map(edges, ({node: {path}}) =>
+      | {site: Some({siteMetadata: {siteUrl}}), allSitePage: {nodes}} =>
+        Array.map(nodes, ({path}) =>
           Page.make(
             ~url=Webapi.Url.makeWithBase(path, siteUrl)->Webapi.Url.href,
             (),

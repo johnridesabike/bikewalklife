@@ -4,28 +4,22 @@
 [%graphql
   {|
   query blogListQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: [DESC] },
+    allPost(
+      sort: { fields: [date], order: [DESC] },
       limit: $limit,
       skip: $skip,
       filter: {published: {eq: true}}
     ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-            year
-            month
-          }
-          frontmatter {
-            title
-            external_link
-            isoDate: date @ppxCustom(module: "DateTime")
-            date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
-            draft
-          }
-        }
+      nodes {
+        id
+        slug
+        year
+        month
+        title
+        externalLink
+        isoDate: date @ppxCustom(module: "DateTime")
+        date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
+        draft
       }
       pageInfo {
         currentPage
@@ -50,8 +44,8 @@ let styles = Gatsby.importCss("./Template_Archive.module.css");
 let default =
     (
       ~data as {
-        Raw.allMarkdownRemark: {
-          edges,
+        Raw.allPost: {
+          nodes,
           pageInfo: {currentPage, hasNextPage, hasPreviousPage},
         },
       },
@@ -65,16 +59,10 @@ let default =
     }
     route={Archive(currentPage)}>
     <h1 className=styles##pageTitle> "Archive"->React.string </h1>
-    {edges
+    {nodes
      ->Array.map(
          (
-           {
-             node: {
-               id,
-               frontmatter: {title, external_link, date, isoDate, draft},
-               fields: {slug, year, month},
-             },
-           },
+           {id, title, externalLink, date, isoDate, draft, slug, year, month},
          ) => {
          <div key=id className=styles##entry>
            <Router.Link
@@ -90,7 +78,7 @@ let default =
             } else {
               React.null;
             }}
-           {switch (Js.Nullable.toOption(external_link)) {
+           {switch (Js.Nullable.toOption(externalLink)) {
             | Some(href) => <Entry.OriginalLink href />
             | None => React.null
             }}

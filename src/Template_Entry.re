@@ -6,30 +6,31 @@ open Fragments;
 [%graphql
   {|
   query($slug: String!, $year: Int!, $month: Int!) {
-    markdownRemark(
-      fields: {
-        slug: { eq: $slug },
-        year: { eq: $year },
-        month: { eq: $month }
-      }
+    post(
+      slug: { eq: $slug },
+      year: { eq: $year },
+      month: { eq: $month }
     ) {
-      frontmatter {
-        title
-        external_link
-        isoDate: date  @ppxCustom(module: "DateTime")
-        date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
-        draft
-        hero_image {
-          alt
-          caption
-          image {
-            childImageSharp {
-              ...HeroImage
-            }
+      title
+      externalLink
+      isoDate: date  @ppxCustom(module: "DateTime")
+      date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
+      draft
+      heroImage {
+        alt
+        caption
+        image {
+          childImageSharp {
+            ...HeroImage
           }
         }
       }
-      html
+      parent {
+        ... on MarkdownRemark {
+          __typename
+          html
+        }
+      }
     }
     site {
       siteMetadata {
@@ -107,17 +108,15 @@ module About = {
 let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
   switch (parse(data)) {
   | {
-      markdownRemark:
+      post:
         Some({
-          html: Some(html),
-          frontmatter: {
-            hero_image,
-            title,
-            date,
-            isoDate,
-            draft,
-            external_link,
-          },
+          heroImage,
+          title,
+          date,
+          isoDate,
+          draft,
+          externalLink,
+          parent: Some(`MarkdownRemark({html: Some(html), _})),
         }),
       site: Some({siteMetadata: {siteTitle}}),
       about,
@@ -125,7 +124,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
     } =>
     <Layout title={String(title)} route={Entry({year, month, slug})}>
       <BsReactHelmet>
-        {switch (hero_image) {
+        {switch (heroImage) {
          | Some({
              image:
                Some({childImageSharp: Some({mobile: Some({src, _}), _})}),
@@ -134,7 +133,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
            <meta property="og:image" content=src />
          | _ => React.null
          }}
-        {switch (hero_image) {
+        {switch (heroImage) {
          | Some({alt: Some(alt), _}) =>
            <meta name="twitter:image:alt" content=alt />
          | _ => React.null
@@ -144,7 +143,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         body={<div dangerouslySetInnerHTML={"__html": html} />}
         url={Entry({year, month, slug})}
         hero_image={
-          switch (hero_image) {
+          switch (heroImage) {
           | Some({
               alt,
               image:
@@ -173,7 +172,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           }
         }
         imageCaption={
-          switch (hero_image) {
+          switch (heroImage) {
           | Some({caption, _}) => caption
           | _ => None
           }
@@ -185,7 +184,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         draft
         footer={
           <footer className=styles##footer>
-            {switch (external_link) {
+            {switch (externalLink) {
              | Some(href) => <Entry.OriginalLink href />
              | None => React.null
              }}

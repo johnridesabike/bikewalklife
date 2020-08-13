@@ -6,35 +6,34 @@ open Fragments;
 [%graphql
   {|
     query Entries {
-      allMarkdownRemark(
-        sort: { order: [DESC], fields: [frontmatter___date] },
+      allPost(
+        sort: { order: [DESC], fields: [date] },
         limit: 24,
         filter: {published: {eq: true}}
       ) {
-        edges {
-          node {
-            id
-            html
-            fields {
-              slug
-              year
-              month
-            }
-            frontmatter {
-              isoDate: date @ppxCustom(module: "DateTime")
-              date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
-              title
-              external_link
-              draft
-              hero_image {
-                alt
-                caption
-                image {
-                  childImageSharp {
-                    ...HeroImage
-                  }
-                }
+        nodes {
+          id
+          slug
+          year
+          month
+          isoDate: date @ppxCustom(module: "DateTime")
+          date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
+          title
+          externalLink
+          draft
+          heroImage {
+            alt
+            caption
+            image {
+              childImageSharp {
+                ...HeroImage
               }
+            }
+          }
+          parent {
+            ... on MarkdownRemark {
+              __typename
+              html
             }
           }
         }
@@ -53,41 +52,39 @@ let styles = Gatsby.importCss("./index.module.css");
 let default = (~data) => {
   let data = parse(data);
   <Layout title=Site route=Index>
-    {data.allMarkdownRemark.edges
+    {data.allPost.nodes
      ->Array.map(
          (
            {
-             node: {
-               id,
-               html,
-               fields: {slug, year, month},
-               frontmatter: {
-                 title,
-                 hero_image,
-                 isoDate,
-                 date,
-                 draft,
-                 external_link,
-               },
-             },
+             id,
+             slug,
+             year,
+             month,
+             title,
+             heroImage,
+             isoDate,
+             date,
+             draft,
+             externalLink,
+             parent,
            },
          ) =>
          <Entry
            key=id
            body={
-             switch (html) {
-             | Some(html) =>
+             switch (parent) {
+             | Some(`MarkdownRemark({html: Some(html), _})) =>
                <div
                  className=styles##body
                  dangerouslySetInnerHTML={"__html": html}
                />
-             | None => React.null
+             | _ => React.null
              }
            }
            url={Entry({year, month, slug})}
            title
            hero_image={
-             switch (hero_image) {
+             switch (heroImage) {
              | Some({
                  alt,
                  image:
@@ -118,7 +115,7 @@ let default = (~data) => {
              }
            }
            imageCaption={
-             switch (hero_image) {
+             switch (heroImage) {
              | Some({caption, _}) => caption
              | _ => None
              }
@@ -129,7 +126,7 @@ let default = (~data) => {
            draft
            footer={
              <footer>
-               {switch (external_link) {
+               {switch (externalLink) {
                 | Some(href) => <Entry.OriginalLink href />
                 | None => React.null
                 }}
