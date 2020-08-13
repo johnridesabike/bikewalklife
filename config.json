@@ -1,7 +1,7 @@
 {
   "title": "Bike Walk Life",
   "description": "News about the world of biking and walking.",
-  "site_url": "https://bikewalklife.netlify.app/",
+  "site_url": "https://bikewalk.life/",
   "archive_per_page": 100,
   "feed_url": "/feed.xml"
 }
