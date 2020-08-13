@@ -76,7 +76,7 @@ module.exports = {
         title: node.frontmatter.title,
         date: node.frontmatter.date,
         author: node.frontmatter.author,
-        heroImage: node.frontmatter.heroImage,
+        heroImage: node.frontmatter.hero_image,
         draft: node.frontmatter.draft,
         externalLink: node.frontmatter.external_link,
         slug:

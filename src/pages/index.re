@@ -25,9 +25,7 @@ open Fragments;
             alt
             caption
             image {
-              childImageSharp {
-                ...HeroImage
-              }
+              ...HeroImage
             }
           }
           parent {
@@ -89,27 +87,14 @@ let default = (~data) => {
                  alt,
                  image:
                    Some({
-                     childImageSharp: Some({mobileSmall, mobile, full}),
+                     image: Some({fluid: Some(fluid)}),
                    }),
                  _,
                }) =>
-               let fluid =
-                 Array.keepMap(
-                   [|
-                     (mobileSmall, "(max-width: 414px)"),
-                     (mobile, "(max-width: 600px)"),
-                     (full, "(min-width: 600px)"),
-                   |],
-                   ((fluid, media)) =>
-                   switch (fluid) {
-                   | Some(fluid) =>
-                     Some(Gatsby.Img.Fluid.makeWithWebpSvg(fluid, media))
-                   | None => None
-                   }
-                 );
+               let image =Gatsby.Img.Fluid.makeWithWebpSvg(fluid)
                switch (alt) {
-               | Some(alt) => `Image((fluid, alt))
-               | None => `ImageNoAlt(fluid)
+               | Some(alt) => `Image(([|image|], alt))
+               | None => `ImageNoAlt([|image|])
                };
              | _ => `NoImage
              }

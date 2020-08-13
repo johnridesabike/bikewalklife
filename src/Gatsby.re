@@ -13,7 +13,7 @@ module Img = {
         ~srcSet: string,
         ~sizes: string,
         ~aspectRatio: float,
-        ~media: string,
+        ~media: string=?,
         ~base64: string=?,
         ~srcWebp: string=?,
         ~srcSetWebp: string=?,
@@ -24,13 +24,14 @@ module Img = {
     [@bs.get] external src: t => string = "src";
     let make =
         (
+          ~media=?,
           Fragments.ImageFluid.{src, srcSet, sizes, aspectRatio, base64},
-          media,
         ) =>
-      _make(~media, ~src, ~srcSet, ~sizes, ~aspectRatio, ~base64?, ());
+      _make(~media?, ~src, ~srcSet, ~sizes, ~aspectRatio, ~base64?, ());
 
     let makeWithSvg =
         (
+          ~media=?,
           Fragments.ImageFluid_tracedSVG.{
             src,
             srcSet,
@@ -38,12 +39,12 @@ module Img = {
             aspectRatio,
             tracedSVG,
           },
-          media,
         ) =>
-      _make(~media, ~src, ~srcSet, ~sizes, ~aspectRatio, ~tracedSVG?, ());
+      _make(~media?, ~src, ~srcSet, ~sizes, ~aspectRatio, ~tracedSVG?, ());
 
     let makeWithWebpSvg =
         (
+          ~media=?,
           Fragments.ImageFluid_withWebp_tracedSVG.{
             src,
             srcSet,
@@ -53,10 +54,9 @@ module Img = {
             srcWebp,
             srcSetWebp,
           },
-          media,
         ) =>
       _make(
-        ~media,
+        ~media?,
         ~src,
         ~srcSet,
         ~sizes,

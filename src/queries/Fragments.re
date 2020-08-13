@@ -4,7 +4,6 @@
 /**
  * https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-sharp/src/fragments.js
  */
-
 [%graphql
   {|
 fragment ImageFixed on ImageSharpFixed {
@@ -50,7 +49,7 @@ fragment ImageFluid_tracedSVG on ImageSharpFluid {
 /* Export the query in a way Gatsby can read it. */
 let imageFluidSVG = ImageFluid_tracedSVG.query;
 
-[%graphql 
+[%graphql
   {|
 fragment ImageFluid_withWebp_tracedSVG on ImageSharpFluid {
   tracedSVG
@@ -61,21 +60,24 @@ fragment ImageFluid_withWebp_tracedSVG on ImageSharpFluid {
   srcSetWebp
   sizes
 }
-|}]
+|}
+];
 
 let imageFluidSVGWebp = ImageFluid_withWebp_tracedSVG.query;
 
 [%graphql
   {|
-  fragment HeroImage on ImageSharp {
-    mobileSmall: fluid ( maxWidth: 414, maxHeight: 207, fit: COVER) {
-      ...ImageFluid_withWebp_tracedSVG
-    }
-    mobile: fluid ( maxWidth: 600, maxHeight: 300, fit: COVER) {
-      ...ImageFluid_withWebp_tracedSVG
-    }
-    full: fluid ( maxWidth: 900, maxHeight: 450, fit: COVER) {
-      ...ImageFluid_withWebp_tracedSVG
+  fragment HeroImage on File {
+    image: childImageSharp {
+      fluid (
+        maxWidth: 900,
+        maxHeight: 450,
+        fit: COVER,
+        cropFocus: ATTENTION,
+        srcSetBreakpoints: [414, 600, 900],
+      ) {
+        ...ImageFluid_withWebp_tracedSVG
+      }
     }
   }
 |}
