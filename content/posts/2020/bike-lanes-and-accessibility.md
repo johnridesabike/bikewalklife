@@ -1,7 +1,7 @@
 ---
 date: 2020-08-14T11:13:56-04:00
-draft: true
-title: Bike lanes and accessibility
+draft: false
+title: Manchester’s Bike lanes and accessibility
 author: John Jackson
 hero_image:
   image: ''
