@@ -1,8 +1,7 @@
 ---
 date: 2020-08-14T08:20:10-04:00
-draft: true
-title: Denver’ design for future streets prioritizes pedestrians and cyclists over
-  cars
+draft: false
+title: Denver’s future street design prioritizes pedestrians and cyclists over cars
 author: John Jackson
 hero_image:
   image: ''
@@ -22,4 +21,4 @@ Marshall Zelinger writes:
 >
 > Bicycles are the fruits and vegetables.
 
-This is the right way of thinking, and I wish the best for Denver. But we’ll have to wait and see how it plays out, though. Like the article says, this “might” change. 
+This is the right way of thinking, and I wish the best for Denver. But we’ll have to wait and see how it plays out. Like the article says, things “might” change.
