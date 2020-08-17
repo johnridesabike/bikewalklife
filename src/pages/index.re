@@ -1,7 +1,7 @@
 %raw
-"import { graphql } from 'gatsby'";
+{|import { graphql } from "gatsby"|};
 
-open Fragments;
+open QueryFragments;
 
 [%graphql
   {|
@@ -76,7 +76,9 @@ let default = (~data) => {
                  className=styles##body
                  dangerouslySetInnerHTML={"__html": html}
                />
-             | _ => React.null
+             | Some(`UnspecifiedFragment(_))
+             | Some(`MarkdownRemark(_))
+             | None => React.null
              }
            }
            url={Entry({year, month, slug})}
@@ -85,18 +87,15 @@ let default = (~data) => {
              switch (heroImage) {
              | Some({
                  alt,
-                 image:
-                   Some({
-                     image: Some({fluid: Some(fluid)}),
-                   }),
+                 image: Some({sharp: Some({fluid: Some(fluid)})}),
                  _,
                }) =>
-               let image =Gatsby.Img.Fluid.makeWithWebpSvg(fluid)
+               let image = Gatsby.Img.Fluid.makeWithWebpSvg(fluid);
                switch (alt) {
-               | Some(alt) => `Image(([|image|], alt))
-               | None => `ImageNoAlt([|image|])
+               | Some(alt) => Image([|image|], alt)
+               | None => ImageNoAlt([|image|])
                };
-             | _ => `NoImage
+             | _ => NoImage
              }
            }
            imageCaption={
@@ -105,7 +104,7 @@ let default = (~data) => {
              | _ => None
              }
            }
-           linkedHeader=`Linked
+           linkedHeader=Linked
            isoDate
            date
            draft

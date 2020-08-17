@@ -1,5 +1,5 @@
 %raw
-"import { graphql } from 'gatsby'";
+{|import { graphql } from "gatsby"|};
 
 [%graphql
   {|
@@ -61,9 +61,7 @@ let default =
     <h1 className=styles##pageTitle> "Archive"->React.string </h1>
     {nodes
      ->Array.map(
-         (
-           {id, title, externalLink, date, isoDate, draft, slug, year, month},
-         ) => {
+         ({id, title, externalLink, date, isoDate, draft, slug, year, month}) => {
          <div key=id className=styles##entry>
            <Router.Link
              to_={Entry({year, month, slug})} className=styles##title>

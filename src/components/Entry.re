@@ -1,6 +1,5 @@
 %raw
-"import { graphql } from 'gatsby'";
-
+{|import { graphql } from "gatsby"|};
 
 let styles = Gatsby.importCss("./Entry.module.css");
 
@@ -48,11 +47,14 @@ module DraftNotice = {
     </div>;
 };
 
-type image = [
-  | `NoImage
-  | `Image(array(Gatsby.Img.Fluid.t), string)
-  | `ImageNoAlt(array(Gatsby.Img.Fluid.t))
-];
+type image =
+  | NoImage
+  | Image(array(Gatsby.Img.Fluid.t), string)
+  | ImageNoAlt(array(Gatsby.Img.Fluid.t));
+
+type linked =
+  | Linked
+  | Unlinked;
 
 [@react.component]
 let make =
@@ -71,25 +73,25 @@ let make =
     ) => {
   let img =
     switch (hero_image) {
-    | `NoImage => None
-    | `Image(fluid, alt) => Some(<Gatsby.Img fluid alt />)
-    | `ImageNoAlt(fluid) => Some(<Gatsby.Img fluid alt="Cover image" />)
+    | NoImage => None
+    | Image(fluid, alt) => Some(<Gatsby.Img fluid alt />)
+    | ImageNoAlt(fluid) => Some(<Gatsby.Img fluid alt="Cover image" />)
     };
   let titleEl =
     switch (linkedHeader) {
-    | `Linked =>
+    | Linked =>
       <Router.Link to_=url className=styles##headerLink>
         title->React.string
       </Router.Link>
-    | `Unlinked => title->React.string
+    | Unlinked => title->React.string
     };
   <article className=Cn.(styles##article <:> className)>
     {switch (img) {
      | Some(img) =>
        <figure className="full-bleed">
          {switch (linkedHeader) {
-          | `Linked => <Router.Link to_=url tabIndex=(-1)> img </Router.Link>
-          | `Unlinked => img
+          | Linked => <Router.Link to_=url tabIndex=(-1)> img </Router.Link>
+          | Unlinked => img
           }}
          {switch (imageCaption) {
           | Some(text) =>

@@ -9,9 +9,7 @@ type page = {
   mutable path: string,
 };
 
-type actions = {
-  createPage: (. page) => unit,
-};
+type actions = {createPage: (. page) => unit};
 
 type graphqlResult('data) = {
   errors: option(Js.Exn.t),
@@ -39,13 +37,13 @@ query CreatePages {
         year
         month
       }
-      next {
+      next @ppxAs(type: "Template_Entry.Neighbor.t") {
         slug
         year
         month
         title
       }
-      previous {
+      previous @ppxAs(type: "Template_Entry.Neighbor.t") {
         slug
         year
         month
@@ -84,25 +82,7 @@ let createPages =
               component: blogTemplate,
               path: Router.toString(Entry({year, month, slug})),
               context:
-                Context(
-                  Template_Entry.{
-                    Template_Entry.slug,
-                    year,
-                    month,
-                    next:
-                      switch (next) {
-                      | Some({slug, year, month, title}) =>
-                        Some({Neighbor.slug, year, month, title})
-                      | None => None
-                      },
-                    previous:
-                      switch (previous) {
-                      | Some({slug, year, month, title}) =>
-                        Some({Neighbor.slug, year, month, title})
-                      | None => None
-                      },
-                  },
-                ),
+                Context({Template_Entry.slug, year, month, next, previous}),
             })
           );
           let numPages =

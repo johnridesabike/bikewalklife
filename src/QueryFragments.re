@@ -1,5 +1,5 @@
 %raw
-"import { graphql } from 'gatsby'";
+{|import { graphql } from "gatsby"|};
 
 /**
  * https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-sharp/src/fragments.js
@@ -68,7 +68,7 @@ let imageFluidSVGWebp = ImageFluid_withWebp_tracedSVG.query;
 [%graphql
   {|
   fragment HeroImage on File {
-    image: childImageSharp {
+    sharp: childImageSharp {
       fluid (
         maxWidth: 900,
         maxHeight: 450,

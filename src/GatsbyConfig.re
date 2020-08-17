@@ -195,7 +195,9 @@ module PluginFeed = {
                 ~description=
                   switch (parent) {
                   | Some(`MarkdownRemark({excerpt: Some(excerpt), _})) => excerpt
-                  | _ => ""
+                  | Some(`UnspecifiedFragment(_))
+                  | Some(`MarkdownRemark(_))
+                  | None => ""
                   },
                 ~date,
                 ~url,
@@ -208,7 +210,9 @@ module PluginFeed = {
                           html ++ renderLink(~strings, externalLink),
                       }),
                     |]
-                  | _ => [||]
+                  | Some(`UnspecifiedFragment(_))
+                  | Some(`MarkdownRemark(_))
+                  | None => [||]
                   },
                 (),
               );

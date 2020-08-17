@@ -30,7 +30,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
         path: `${__dirname}/content/images`,
@@ -42,7 +42,7 @@ module.exports = {
         defaultQuality: 75
       }
     },
-    `gatsby-transformer-sharp`,
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -60,7 +60,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: "gatsby-plugin-feed",
       options: rePlugins.PluginFeed.options,
     },
     {
@@ -101,6 +101,22 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: rePlugins.PluginSiteMap.options
-    }
+    },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyzer",
+      options: {
+        production: true,
+        disable: !process.env.ANALYZE_BUNDLE_SIZE,
+        generateStatsFile: true,
+        analyzerMode: "static",
+      }
+    },
+    {
+      resolve: "gatsby-plugin-nprogress",
+      options: {
+        color: "#457b9d",
+        showSpinner: false,
+      },
+    },
   ],
 }

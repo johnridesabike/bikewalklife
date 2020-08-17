@@ -1,7 +1,7 @@
 %raw
-"import { graphql } from 'gatsby'";
+{|import { graphql } from "gatsby"|};
 
-open Fragments;
+open QueryFragments;
 
 [%graphql
   {|
@@ -125,7 +125,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       <BsReactHelmet>
         {switch (heroImage) {
          | Some({
-             image: Some({image: Some({fluid: Some({src, _}), _})}),
+             image: Some({sharp: Some({fluid: Some({src, _}), _})}),
              _,
            }) =>
            <meta
@@ -147,15 +147,15 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           switch (heroImage) {
           | Some({
               alt,
-              image: Some({image: Some({fluid: Some(fluid)})}),
+              image: Some({sharp: Some({fluid: Some(fluid)})}),
               _,
             }) =>
             let image = Gatsby.Img.Fluid.makeWithWebpSvg(fluid);
             switch (alt) {
-            | Some(alt) => `Image(([|image|], alt))
-            | None => `ImageNoAlt([|image|])
+            | Some(alt) => Image([|image|], alt)
+            | None => ImageNoAlt([|image|])
             };
-          | _ => `NoImage
+          | _ => NoImage
           }
         }
         imageCaption={
@@ -165,7 +165,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           }
         }
         title
-        linkedHeader=`Unlinked
+        linkedHeader=Unlinked
         isoDate
         date
         draft
@@ -238,6 +238,14 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         }
       />
     </Layout>
-
-  | _ => <Page_404 />
+  | {
+      post:
+        Some({
+          parent: Some(`MarkdownRemark(_) | `UnspecifiedFragment(_)) | None,
+          _,
+        }) |
+        None,
+      _,
+    } =>
+    <Page_404 />
   };

@@ -25,14 +25,14 @@ module Img = {
     let make =
         (
           ~media=?,
-          Fragments.ImageFluid.{src, srcSet, sizes, aspectRatio, base64},
+          QueryFragments.ImageFluid.{src, srcSet, sizes, aspectRatio, base64},
         ) =>
       _make(~media?, ~src, ~srcSet, ~sizes, ~aspectRatio, ~base64?, ());
 
     let makeWithSvg =
         (
           ~media=?,
-          Fragments.ImageFluid_tracedSVG.{
+          QueryFragments.ImageFluid_tracedSVG.{
             src,
             srcSet,
             sizes,
@@ -45,7 +45,7 @@ module Img = {
     let makeWithWebpSvg =
         (
           ~media=?,
-          Fragments.ImageFluid_withWebp_tracedSVG.{
+          QueryFragments.ImageFluid_withWebp_tracedSVG.{
             src,
             srcSet,
             sizes,
@@ -82,7 +82,10 @@ module Img = {
       ) =>
       t;
     let make =
-        (Fragments.ImageFixed.{src, srcSet, height, width, base64}, media) =>
+        (
+          QueryFragments.ImageFixed.{src, srcSet, height, width, base64},
+          media,
+        ) =>
       make(~src, ~srcSet, ~height, ~width, ~media, ~base64?, ());
   };
   [@bs.module "gatsby-image"] [@react.component]

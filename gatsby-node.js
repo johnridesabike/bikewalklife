@@ -79,14 +79,14 @@ module.exports = {
         heroImage: node.frontmatter.hero_image,
         draft: node.frontmatter.draft,
         externalLink: node.frontmatter.external_link,
-        slug:
+        slug: 
           node.frontmatter.slug !== undefined && node.frontmatter.slug !== ""
-          ? node.frontmatter.slug
-          : Path.basename(node.fileAbsolutePath, ".md"),
+            ? node.frontmatter.slug
+            : Path.basename(node.fileAbsolutePath, ".md"),
         published:
           Process.env.NODE_ENV === "development" 
-          ? true 
-          : !node.frontmatter.draft,
+            ? true 
+            : !node.frontmatter.draft,
         year: date.getFullYear(),
         month: date.getMonth() + 1,
       };
