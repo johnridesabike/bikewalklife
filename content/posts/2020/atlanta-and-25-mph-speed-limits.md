@@ -1,6 +1,6 @@
 ---
 date: 2020-08-19T10:06:51-04:00
-draft: true
+draft: false
 title: Atlanta and 25 mph speed limits
 author: John Jackson
 hero_image:
@@ -21,4 +21,4 @@ John Ruch reports on a recent neighborhood planning meeting:
 
 It’s clear from the conversation (as it’s reported) that these changes are not intended to disrupt car-domination. But lowering speed limits, and challenging the bias that we need our cars to always move as fast as possible, is a step in the right direction.
 
-A “vision zero” plan for street safety should include a strategy to lower the number of total cars, not just slow the existing ones.
+A “vision zero” plan for street safety should ideally include a strategy to lower the total number of cars, not just slow the existing ones.
