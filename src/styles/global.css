@@ -13,14 +13,16 @@ html {
 
 body,
 textarea,
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-sans-serif);
 }
 
 textarea,
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   border: 1px solid var(--color-primary);
 }
 
@@ -132,6 +134,10 @@ dd {
 
 .font-size-small {
   font-size: var(--font-size-sm);
+}
+
+.font-size-xsmall {
+  font-size: var(--font-size-xs);
 }
 
 /**

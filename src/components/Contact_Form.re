@@ -167,7 +167,7 @@ let make = () => {
             },
         }>
         <input
-          type_="text"
+          type_="email"
           id="contact-form-email"
           name="email"
           className=styles##input
