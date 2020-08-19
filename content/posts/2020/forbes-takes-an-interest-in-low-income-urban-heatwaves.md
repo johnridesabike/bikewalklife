@@ -21,4 +21,4 @@ Nives Dolsak and Aseem Prakash report:
 >
 > To capture the experiences of the vulnerable sections, media and local officials could report (alongside the average temperature) the temperatures for low-income areas.
 
-This shouldn’t be news to anyone who lives in a city with a major divide between the rich and the poor. It’s astoundingly obvious when you walk or bike across neighborhoods. [My own city is in the top ten](https://www.npr.org/2020/01/14/795961381/racist-housing-practices-from-the-1930s-linked-to-hotter-neighborhoods-today).
+This shouldn’t be news to anyone who lives in a city with a major divide between the rich and the poor. The difference in temperature is astoundingly obvious when you walk or bike across neighborhoods. [My own city is in the top ten list of places with this issue](https://www.npr.org/2020/01/14/795961381/racist-housing-practices-from-the-1930s-linked-to-hotter-neighborhoods-today).
