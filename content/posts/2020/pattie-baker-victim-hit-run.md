@@ -8,6 +8,8 @@ hero_image:
   image: /content/images/fullsizeoutput_354b.jpeg
   alt: Pattie Baker's bike noodle.
   caption: "Image credit: travelingatthespeedofbike.com"
+tags:
+  - violence
 
 ---
 

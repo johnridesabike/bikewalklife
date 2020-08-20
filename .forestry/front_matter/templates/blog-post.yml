@@ -60,7 +60,12 @@ fields:
   config:
     required: false
   label: External link
-  description: 'The URL to the external page this post is about, if applicable. '
+  description: The URL to the external page this post is about, if applicable.
+- name: tags
+  type: tag_list
+  label: Tags
+  description: Tags are used to display posts related to this post.
+  hidden: false
 - name: draft
   type: boolean
   label: Draft

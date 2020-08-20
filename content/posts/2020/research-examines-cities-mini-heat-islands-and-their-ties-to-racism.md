@@ -8,6 +8,8 @@ hero_image:
   caption: ''
 external_link: https://usa.streetsblog.org/2020/08/04/video-how-car-dominance-makes-non-white-neighborhoods-hotter/
 draft: false
+tags:
+  - heat
 
 ---
 [Streetsblog has a new article with a video](https://usa.streetsblog.org/2020/08/04/video-how-car-dominance-makes-non-white-neighborhoods-hotter/) about the heat islands within our cities.

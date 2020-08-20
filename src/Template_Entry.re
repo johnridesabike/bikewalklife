@@ -13,7 +13,7 @@ open QueryFragments;
     ) {
       title
       externalLink
-      isoDate: date  @ppxCustom(module: "DateTime")
+      isoDate: date @ppxCustom(module: "DateTime")
       date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
       draft
       heroImage {
@@ -28,6 +28,14 @@ open QueryFragments;
           __typename
           html
         }
+      }
+      related {
+        title
+        year
+        month
+        slug
+        isoDate: date @ppxCustom(module: "DateTime")
+        date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
       }
     }
     site {
@@ -69,7 +77,7 @@ module About = {
   [@react.component]
   let make = (~title, ~description, ~strings) =>
     <div className=styles##about>
-      <h2 className=styles##aboutHeading>
+      <h2 className=styles##footerHeading>
         {"About " ++ title |> React.string}
       </h2>
       <div
@@ -116,6 +124,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           draft,
           externalLink,
           parent: Some(`MarkdownRemark({html: Some(html), _})),
+          related,
         }),
       site: Some({siteMetadata: {siteTitle, siteUrl}}),
       about,
@@ -180,63 +189,78 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
                <About title=siteTitle description=intro strings />
              | _ => React.null
              }}
-            <h2 className=styles##morePosts>
-              "More recent posts"->React.string
-            </h2>
-            <nav>
-              <ul className=styles##recentList>
-                {switch (previous) {
-                 | None => React.null
-                 | Some({year, month, slug, title}) =>
-                   <li className=styles##recentItem>
-                     <Router.Link
-                       to_={Entry({year, month, slug})}
-                       className=styles##recentLink>
-                       <span ariaHidden=true>
-                         <Icons.ArrowLeft
-                           className=Cn.("icon" <:> styles##arrow)
-                         />
-                       </span>
-                       <span>
-                         <Externals.VisuallyHidden>
-                           "Previous post: "->React.string
-                         </Externals.VisuallyHidden>
-                         title->React.string
-                       </span>
-                     </Router.Link>
-                   </li>
-                 }}
-                {switch (next) {
-                 | None => React.null
-                 | Some({year, month, slug, title}) =>
-                   <li className=styles##recentItem>
-                     <Router.Link
-                       to_={Entry({year, month, slug})}
-                       className=styles##recentLink
-                       style={ReactDOMRe.Style.make(
-                         ~justifyContent="flex-end",
-                         (),
-                       )}>
-                       <span
-                         style={ReactDOMRe.Style.make(~textAlign="right", ())}>
-                         <Externals.VisuallyHidden>
-                           "Next post: "->React.string
-                         </Externals.VisuallyHidden>
-                         title->React.string
-                       </span>
-                       <span ariaHidden=true>
-                         <Icons.ArrowRight
-                           className=Cn.("icon" <:> styles##arrow)
-                         />
-                       </span>
-                     </Router.Link>
-                   </li>
-                 }}
-              </ul>
-            </nav>
           </footer>
         }
       />
+      <nav className=styles##nav>
+        {switch (related) {
+         | [||] => React.null
+         | related =>
+           <>
+             <h2 className=styles##footerHeading>
+               "Related posts"->React.string
+             </h2>
+             <ul className=styles##relatedList>
+               {related
+                ->Array.map(({title, year, month, slug, date, isoDate}) =>
+                    <li className=styles##relatedItem>
+                      <div>
+                        <Router.Link to_={Entry({year, month, slug})}>
+                          title->React.string
+                        </Router.Link>
+                      </div>
+                      <Entry.Date date isoDate />
+                    </li>
+                  )
+                ->React.array}
+             </ul>
+           </>
+         }}
+        <h2 className=styles##footerHeading>
+          "Other recent posts"->React.string
+        </h2>
+        <ul className=styles##recentList>
+          {switch (previous) {
+           | None => React.null
+           | Some({year, month, slug, title}) =>
+             <li className=styles##recentItem>
+               <Router.Link
+                 to_={Entry({year, month, slug})}
+                 className=styles##recentLink>
+                 <span ariaHidden=true>
+                   <Icons.ArrowLeft className=Cn.("icon" <:> styles##arrow) />
+                 </span>
+                 <span>
+                   <Externals.VisuallyHidden>
+                     "Previous post: "->React.string
+                   </Externals.VisuallyHidden>
+                   title->React.string
+                 </span>
+               </Router.Link>
+             </li>
+           }}
+          {switch (next) {
+           | None => React.null
+           | Some({year, month, slug, title}) =>
+             <li className=styles##recentItem>
+               <Router.Link
+                 to_={Entry({year, month, slug})}
+                 className=styles##recentLink
+                 style={ReactDOMRe.Style.make(~justifyContent="flex-end", ())}>
+                 <span style={ReactDOMRe.Style.make(~textAlign="right", ())}>
+                   <Externals.VisuallyHidden>
+                     "Next post: "->React.string
+                   </Externals.VisuallyHidden>
+                   title->React.string
+                 </span>
+                 <span ariaHidden=true>
+                   <Icons.ArrowRight className=Cn.("icon" <:> styles##arrow) />
+                 </span>
+               </Router.Link>
+             </li>
+           }}
+        </ul>
+      </nav>
     </Layout>
   | {
       post:

@@ -1,9 +1,9 @@
+/**
+ GraphQL-PPX types Dates as Js.Json.t, but they're just strings.
+ */
+
 type t = string;
 
-let parse = x =>
-  switch (Js.Json.decodeString(x)) {
-  | None => failwith("DateTime.parse")
-  | Some(x) => x
-  };
+external parse: Js.Json.t => string = "%identity";
 
-let serialize = Js.Json.string;
+external serialize: string => Js.Json.t = "%identity";

@@ -29,8 +29,13 @@ module.exports = {
         opposite of \`frontmatter.draft\`.
         """
         published: Boolean!
+        tags: [String!]!
+        """
+        A list of posts with any of the same tags.
+        """
+        related: [Post!]!
       }
-  
+
       type HeroImage @dontinfer {
         image: File @fileByRelativePath
         alt: String
@@ -60,6 +65,30 @@ module.exports = {
       }
     `);
   },
+  createResolvers: ({createResolvers}) =>
+    createResolvers({
+      Post: {
+        related: {
+          resolve: (source, args, context, _info) =>
+            context.nodeModel.runQuery({
+              type: "Post",
+              firstOnly: false,
+              query: {
+                sort: {
+                  fields: ["date"],
+                  order: ["DESC"]
+                },
+                filter: {
+                  tags: {in: source.tags},
+                  id: {ne: source.id},
+                },
+              },
+            }).then(
+              result => result || []
+            )
+        },
+      },
+    }),
   onCreateNode: ({
     node,
     actions: {createNode, createParentChildLink},
@@ -79,6 +108,7 @@ module.exports = {
         heroImage: node.frontmatter.hero_image,
         draft: node.frontmatter.draft,
         externalLink: node.frontmatter.external_link,
+        tags: node.frontmatter.tags || [],
         slug: 
           node.frontmatter.slug !== undefined && node.frontmatter.slug !== ""
             ? node.frontmatter.slug
@@ -103,5 +133,5 @@ module.exports = {
       createNode(postNode);
       createParentChildLink({ parent: node, child: postNode });
     }
-  }
+  },
 };
