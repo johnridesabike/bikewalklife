@@ -30,6 +30,7 @@ open QueryFragments;
         }
       }
       related {
+        id
         title
         year
         month
@@ -202,8 +203,8 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
              </h2>
              <ul className=styles##relatedList>
                {related
-                ->Array.map(({title, year, month, slug, date, isoDate}) =>
-                    <li className=styles##relatedItem>
+                ->Array.map(({id, title, year, month, slug, date, isoDate}) =>
+                    <li className=styles##relatedItem key=id>
                       <div>
                         <Router.Link to_={Entry({year, month, slug})}>
                           title->React.string
