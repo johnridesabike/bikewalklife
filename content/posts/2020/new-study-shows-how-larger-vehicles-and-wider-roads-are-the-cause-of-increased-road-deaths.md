@@ -2,7 +2,7 @@
 date: 2020-08-20T16:37:06-04:00
 draft: false
 title: New study shows how larger vehicles and wider roads are the cause of increased
-  road deaths
+  pedestrian deaths
 author: John Jackson
 hero_image:
   image: ''
