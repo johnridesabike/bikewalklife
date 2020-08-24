@@ -80,6 +80,7 @@ fields:
   description: Optional custom slug for the post's URL. If blank, the URL will be
     generated automatically.
 pages:
+- content/posts/2020/a-timely-simple-plan-to-reduce-traffic-fatalities.md
 - content/posts/2020/atlanta-and-25-mph-speed-limits.md
 - content/posts/2020/bike-lanes-and-accessibility.md
 - content/posts/2020/denver-design-for-future-streets-prioritizes-pedestrians-and-cyclists-over-cars.md
