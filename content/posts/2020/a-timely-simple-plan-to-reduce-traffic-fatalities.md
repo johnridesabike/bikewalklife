@@ -25,4 +25,4 @@ Charles Marohn of [Strong Towns](https://www.strongtowns.org/journal/2020/8/21/t
 >
 > The time to act is now.
 
-He continues with a short, step-by-step plan on how we can achieve just that.
+He continues with a short, step-by-step plan on how we can achieve it.
