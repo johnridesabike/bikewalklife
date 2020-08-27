@@ -1,13 +1,13 @@
 ---
 date: 2020-08-27T09:28:16-04:00
-draft: true
+draft: false
 title: Fundraiser for family of Obianuju Osuegbu, teen killed while riding bicycle
 author: John Jackson
 hero_image:
   image: ''
   alt: ''
   caption: ''
-external_link: https://www.gofundme.com/f/funeral-expense-relief-for-obianuju-osuegbu
+external_link: https://gf.me/u/yt282z
 tags:
 - fundraiser
 - teen
