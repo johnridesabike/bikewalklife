@@ -8,10 +8,17 @@ module Date: {
   let make: (~date: string, ~isoDate: string) => React.element;
 };
 
-type image =
-  | NoImage
-  | Image(array(Gatsby.Img.Fluid.t), string)
-  | ImageNoAlt(array(Gatsby.Img.Fluid.t));
+module Image: {
+  type position =
+    | AboveFold
+    | BelowFold;
+
+  type t;
+
+  let empty: t;
+
+  let make: (~alt: string=?, array(Gatsby.Img.Fluid.t), position) => t;
+};
 
 type linked =
   | Linked
@@ -24,7 +31,7 @@ let make:
     ~url: Router.t,
     ~title: string,
     ~linkedHeader: linked,
-    ~hero_image: image,
+    ~heroImage: Image.t,
     ~imageCaption: option(string),
     ~isoDate: string,
     ~date: string,

@@ -95,7 +95,9 @@ module Img = {
       ~fixed: array(Fixed.t)=?,
       ~alt: string,
       ~className: string=?,
-      ~style: ReactDOMRe.Style.t=?
+      ~style: ReactDOMRe.Style.t=?,
+      ~fadeIn: bool=?,
+      ~loading: string=? // lazy | eager | auto
     ) =>
     React.element =
     "default";

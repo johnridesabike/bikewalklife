@@ -153,19 +153,19 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       <Entry
         body={<div dangerouslySetInnerHTML={"__html": html} />}
         url={Entry({year, month, slug})}
-        hero_image={
+        heroImage={
           switch (heroImage) {
           | Some({
               alt,
               image: Some({sharp: Some({fluid: Some(fluid)})}),
               _,
             }) =>
-            let image = Gatsby.Img.Fluid.makeWithWebpSvg(fluid);
-            switch (alt) {
-            | Some(alt) => Image([|image|], alt)
-            | None => ImageNoAlt([|image|])
-            };
-          | _ => NoImage
+            Entry.Image.make(
+              ~alt?,
+              [|Gatsby.Img.Fluid.makeWithWebpSvg(fluid)|],
+              AboveFold,
+            )
+          | _ => Entry.Image.empty
           }
         }
         imageCaption={

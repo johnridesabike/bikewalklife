@@ -62,6 +62,7 @@
     "@reasonml-community/graphql-ppx": "^1.0.0-beta.22",
     "bs-platform": "^8.0.3",
     "concurrently": "^5.3.0",
+    "gatsby-plugin-goatcounter": "^0.4.0",
     "get-graphql-schema": "^2.1.2",
     "json-sort-cli": "^1.15.25",
     "stylelint": "^13.6.1",

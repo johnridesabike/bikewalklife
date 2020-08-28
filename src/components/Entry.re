@@ -47,14 +47,33 @@ module DraftNotice = {
     </div>;
 };
 
-type image =
-  | NoImage
-  | Image(array(Gatsby.Img.Fluid.t), string)
-  | ImageNoAlt(array(Gatsby.Img.Fluid.t));
-
 type linked =
   | Linked
   | Unlinked;
+
+module Image = {
+  type position =
+    | AboveFold
+    | BelowFold;
+
+  type t = option(React.element);
+
+  let empty = None;
+
+  let make = (~alt="Cover image.", fluid, position) => {
+    let fadeIn =
+      switch (position) {
+      | AboveFold => false
+      | BelowFold => true
+      };
+    let loading =
+      switch (position) {
+      | AboveFold => "auto"
+      | BelowFold => "lazy"
+      };
+    Some(<Gatsby.Img fluid alt fadeIn loading />);
+  };
+};
 
 [@react.component]
 let make =
@@ -63,7 +82,7 @@ let make =
       ~url,
       ~title,
       ~linkedHeader,
-      ~hero_image,
+      ~heroImage,
       ~imageCaption,
       ~isoDate,
       ~date,
@@ -71,12 +90,6 @@ let make =
       ~footer,
       ~className="",
     ) => {
-  let img =
-    switch (hero_image) {
-    | NoImage => None
-    | Image(fluid, alt) => Some(<Gatsby.Img fluid alt />)
-    | ImageNoAlt(fluid) => Some(<Gatsby.Img fluid alt="Cover image" />)
-    };
   let titleEl =
     switch (linkedHeader) {
     | Linked =>
@@ -86,7 +99,7 @@ let make =
     | Unlinked => title->React.string
     };
   <article className=Cn.(styles##article <:> className)>
-    {switch (img) {
+    {switch (heroImage) {
      | Some(img) =>
        <figure className="full-bleed">
          {switch (linkedHeader) {

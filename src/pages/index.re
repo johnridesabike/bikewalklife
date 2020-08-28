@@ -51,8 +51,9 @@ let default = (~data) => {
   let data = parse(data);
   <Layout title=Site route=Index>
     {data.allPost.nodes
-     ->Array.map(
+     ->Array.mapWithIndex(
          (
+           index,
            {
              id,
              slug,
@@ -83,19 +84,22 @@ let default = (~data) => {
            }
            url={Entry({year, month, slug})}
            title
-           hero_image={
+           heroImage={
              switch (heroImage) {
              | Some({
                  alt,
                  image: Some({sharp: Some({fluid: Some(fluid)})}),
                  _,
                }) =>
-               let image = Gatsby.Img.Fluid.makeWithWebpSvg(fluid);
-               switch (alt) {
-               | Some(alt) => Image([|image|], alt)
-               | None => ImageNoAlt([|image|])
-               };
-             | _ => NoImage
+               Entry.Image.make(
+                 ~alt?,
+                 [|Gatsby.Img.Fluid.makeWithWebpSvg(fluid)|],
+                 switch (index) {
+                 | 0 => AboveFold
+                 | _ => BelowFold
+                 },
+               )
+             | _ => Entry.Image.empty
              }
            }
            imageCaption={
