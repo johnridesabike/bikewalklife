@@ -29,7 +29,6 @@
     "reason-react",
     "re-classnames",
     "@moox/bs-react-helmet",
-    "reason-nodejs",
     "reason-promise",
     "@reasonml-community/graphql-ppx",
     "re-formality",

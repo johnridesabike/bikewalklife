@@ -61,9 +61,14 @@ query CreatePages {
   {taggedTemplate: false}
 ];
 
-let blogTemplate = NodeJs.Path.resolve([|"src", "Template_Entry.bs.js"|]);
-let archiveTemplate =
-  NodeJs.Path.resolve([|"src", "Template_Archive.bs.js"|]);
+module Path = {
+  [@bs.module "path"] [@bs.splice]
+  external resolve: array(string) => string = "resolve";
+};
+
+let blogTemplate = Path.resolve([|"src", "Template_Entry.bs.js"|]);
+
+let archiveTemplate = Path.resolve([|"src", "Template_Archive.bs.js"|]);
 
 let createPages =
     ({graphql, actions: {createPage, _}, reporter: {panicOnBuild}, _}) =>

@@ -7,19 +7,20 @@
   "author": "John Jackson",
   "scripts": {
     "build": "bsb -make-world && gatsby build",
-    "start": "concurrently \"bsb -make-world -w\" \"gatsby develop\"",
+    "start": "concurrently \"bsb-w\" \"gatsby develop\"",
     "serve": "gatsby serve",
-    "forestry-preview": "bsb -make-world && gatsby develop -p 8080 -H 0.0.0.0",
+    "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0",
     "clean": "bsb -clean-world && gatsby clean",
     "re:clean": "bsb -clean-world",
     "re:build": "bsb -make-world",
     "re:cleanbuild": "bsb -make-world -clean-world",
-    "re:watch": "bsb -make-world -w",
+    "re:watch": "bsb -w",
     "get-graphql-schema": "get-graphql-schema http://localhost:8000/___graphql -j > graphql_schema.json && jsonsort graphql_schema.json",
     "lint:css": "stylelint src/**/*.css",
     "lint:js": "eslint \"*.js\" \"src/**/*.js\"",
     "test": "yarn lint:css && yarn lint:js",
-    "analyze": "ANALYZE_BUNDLE_SIZE=true yarn build"
+    "analyze": "ANALYZE_BUNDLE_SIZE=true yarn build",
+    "postinstall": "bsb -make-world"
   },
   "dependencies": {
     "@moox/bs-react-helmet": "^3.0.0",
@@ -53,7 +54,6 @@
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
     "react-helmet": "^6.1.0",
-    "reason-nodejs": "^13.0.0-beta.1",
     "reason-promise": "^1.1.1",
     "reason-react": "^0.9.1",
     "typeface-cooper-hewitt": "0.0.44"
