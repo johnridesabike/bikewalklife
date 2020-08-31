@@ -7,7 +7,7 @@
   "author": "John Jackson",
   "scripts": {
     "build": "bsb -make-world && gatsby build",
-    "start": "concurrently \"bsb-w\" \"gatsby develop\"",
+    "start": "concurrently \"bsb -w\" \"gatsby develop\"",
     "serve": "gatsby serve",
     "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0",
     "clean": "bsb -clean-world && gatsby clean",
@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@reasonml-community/graphql-ppx": "^1.0.0-beta.22",
-    "bs-platform": "^8.0.3",
+    "bs-platform": "^8.2.0",
     "concurrently": "^5.3.0",
     "gatsby-plugin-goatcounter": "^0.4.0",
     "get-graphql-schema": "^2.1.2",
