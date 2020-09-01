@@ -81,6 +81,7 @@ module.exports = {
                 filter: {
                   tags: {in: source.tags},
                   id: {ne: source.id},
+                  published: {eq: true},
                 },
               },
             }).then(
