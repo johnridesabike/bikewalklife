@@ -64,7 +64,7 @@ module Image = {
     | BelowFold => true
     }
     let loading = switch position {
-    | AboveFold => #auto
+    | AboveFold => #eager
     | BelowFold => #\"lazy"
     }
     Some(<Gatsby.Img fluid alt fadeIn loading />)

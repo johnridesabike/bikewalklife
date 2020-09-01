@@ -83,7 +83,7 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
          | Some(route) =>
            <link
              rel="canonical"
-             content={Router.toStringWithBase(route, siteUrl)}
+             href={Router.toStringWithBase(route, siteUrl)}
            />
          | None => React.null
          }}

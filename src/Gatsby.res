@@ -69,7 +69,7 @@ module Img = {
     ~className: string=?,
     ~style: ReactDOMRe.Style.t=?,
     ~fadeIn: bool=?,
-    ~loading: [#\"lazy" | #eager | #auto ]=?,
+    ~loading: [#\"lazy" | #eager ]=?,
   ) => 
   React.element = "default"
 }
