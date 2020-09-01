@@ -1,22 +1,22 @@
 ---
-date: 2020-08-31T20:08:04-04:00
-draft: true
+date: 2020-08-31T20:08:04.000-04:00
+draft: false
 title: Pattie Baker’s “You Go, Girl!” blog series
 author: John Jackson
 hero_image:
   image: "/content/images/2020/you-go-girl.jpg"
   alt: "“You Go, Girl!” header image."
-  caption: 'Image credit: Pattie Baker at travelingatthespeedofbike.com'
-external_link: https://travelingatthespeedofbike.com/2020/08/31/meet-yourself/
+  caption: 'Image credit: Pattie Baker'
+external_link: ''
 tags:
 - Pattie Baker
 - profiles
 slug: ''
 
 ---
-During the month of August, Pattie Baker of _Traveling at the Speed of Bike_ ran a series called “You Go, Girl!” It’s a thirty-one-part series that profiles inspiring women who are helping make our streets safer for bicycles.
+During the month of August, Pattie Baker of [_Traveling at the Speed of Bike_](https://travelingatthespeedofbike.com/) ran a series called “You Go, Girl!” It showcases thirty-one women who are helping make our streets more welcoming for bicycles.
 
-It’s a great collection of articles. I especially like her conclusion:
+It’s a great collection. I especially like her conclusion:
 
 > Meet _yourself_. Meet the woman on the wall who sees you, who _is_ you, as you are Traveling at the Speed of Bike.
 >
@@ -26,7 +26,7 @@ It’s a great collection of articles. I especially like her conclusion:
 >
 > Meet your life in all its gore and glory head-on, on a path and at a pace that lets you look humanity in the face and recognize your unique and necessary place in it.
 
-## The complete “You Go, Girl!” series
+## The complete list of “You Go, Girl!” articles
 
 * [Meet Alison Dewey](https://travelingatthespeedofbike.com/2020/08/01/meet-alison-dewey/)
 * [Meet Courtney Cobbs](https://travelingatthespeedofbike.com/2020/08/02/meet-courtney-cobbs/)
