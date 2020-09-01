@@ -79,17 +79,3 @@ fields:
   label: Slug
   description: Optional custom slug for the post's URL. If blank, the URL will be
     generated automatically.
-pages:
-- content/posts/2020/a-timely-simple-plan-to-reduce-traffic-fatalities.md
-- content/posts/2020/atlanta-and-25-mph-speed-limits.md
-- content/posts/2020/bike-lanes-and-accessibility.md
-- content/posts/2020/denver-design-for-future-streets-prioritizes-pedestrians-and-cyclists-over-cars.md
-- content/posts/2020/exploring-georgia-s-multi-use-paths.md
-- content/posts/2020/forbes-takes-an-interest-in-low-income-urban-heatwaves.md
-- content/posts/2020/fundraiser-for-family-of-obianuju-osuegbu-teen-killed-while-riding-bicycle.md
-- content/posts/2020/miss-manners-advises-on-how-to-address-pedestrians-in-bike-lanes.md
-- content/posts/2020/new-study-shows-how-larger-vehicles-and-wider-roads-are-the-cause-of-increased-road-deaths.md
-- content/posts/2020/on-advocating-for-bike-lanes.md
-- content/posts/2020/on-the-success-of-asheville-s-road-diet-project.md
-- content/posts/2020/research-examines-cities-mini-heat-islands-and-their-ties-to-racism.md
-- content/posts/2020/the-tight-connection-between-policing-and-car-culture.md

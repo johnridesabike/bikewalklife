@@ -4,15 +4,15 @@ date: 2020-07-28T22:42:09.000+00:00
 author: John Jackson
 external_link: https://travelingatthespeedofbike.com/2020/07/13/i-was-the-victim-of-a-hit-and-run-today-i-am-lucky-to-be-alive/
 draft: false
-hero_image: 
-  image: /content/images/fullsizeoutput_354b.jpeg
+hero_image:
+  image: "/content/images/fullsizeoutput_354b.jpeg"
   alt: Pattie Baker's bike noodle.
-  caption: "Image credit: travelingatthespeedofbike.com"
+  caption: 'Image credit: travelingatthespeedofbike.com'
 tags:
-  - violence
+- violence
+- Pattie Baker
 
 ---
-
 Pattie Baker has been an influencial and inspirational figure in bike advocacy.
 If there's any silver lining to this story, it's at least that it is drawing
 attention to the seriousness of bicycle safety.
