@@ -60,9 +60,7 @@ module Rss = {
   };
 };
 
-[@bs.val] external unsafeRequire: string => Js.t({..}) = "require";
-
-let config = unsafeRequire("../../../config.json");
+[@bs.module ] external config: Js.t({..}) = "../../../config.json";
 
 module PluginFeed = {
   [%graphql
@@ -190,6 +188,15 @@ module PluginFeed = {
                   Entry({year, month, slug}),
                   site_url,
                 );
+              let urlWithCampaign = {
+                let params =
+                  [|("ref", "feed")|]
+                  ->Webapi.Url.URLSearchParams.makeWithArray
+                  ->Webapi.Url.URLSearchParams.toString;
+                let url = Webapi.Url.make(url); // clone the url
+                Webapi.Url.setSearch(url, params);
+                Webapi.Url.href(url);
+              };
               Rss.Item.options(
                 ~title,
                 ~description=
@@ -200,7 +207,7 @@ module PluginFeed = {
                   | None => ""
                   },
                 ~date,
-                ~url,
+                ~url=urlWithCampaign,
                 ~guid=url,
                 ~custom_elements=
                   switch (parent) {
