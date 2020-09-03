@@ -65,6 +65,7 @@
     "gatsby-plugin-goatcounter": "^0.4.0",
     "get-graphql-schema": "^2.1.2",
     "json-sort-cli": "^1.15.25",
+    "postcss-custom-media": "^7.0.8",
     "stylelint": "^13.6.1",
     "stylelint-config-wordpress": "^17.0.0"
   },

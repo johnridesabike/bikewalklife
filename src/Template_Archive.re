@@ -38,8 +38,6 @@ type pageContext =
     limit: int,
   };
 
-let styles = Gatsby.importCss("./Template_Archive.module.css");
-
 [@react.component]
 let default =
     (
@@ -58,13 +56,14 @@ let default =
       }
     }
     route={Archive(currentPage)}>
-    <h1 className=styles##pageTitle> "Archive"->React.string </h1>
+    <h1 className="archive__page-title"> "Archive"->React.string </h1>
     {nodes
      ->Array.map(
          ({id, title, externalLink, date, isoDate, draft, slug, year, month}) => {
-         <div key=id className=styles##entry>
+         <div key=id className="archive__entry">
            <Router.Link
-             to_={Entry({year, month, slug})} className=styles##title>
+             to_={Entry({year, month, slug})}
+             className="archive__entry-title">
              title->React.string
            </Router.Link>
            <Entry.Date
@@ -72,7 +71,7 @@ let default =
              isoDate={DateTime.parse(isoDate)}
            />
            {if (draft) {
-              <div className=styles##draft> "Draft"->React.string </div>;
+              <div className="entry__draft"> "Draft"->React.string </div>;
             } else {
               React.null;
             }}
@@ -84,14 +83,14 @@ let default =
        })
      ->React.array}
     {if (hasPreviousPage || hasNextPage) {
-       <div className=styles##navTitle>
+       <div className="archive__nav-title">
          "Page "->React.string
          currentPage->React.int
        </div>;
      } else {
        React.null;
      }}
-    <nav className=styles##nav>
+    <nav className="archive__nav">
       <div>
         {if (hasPreviousPage) {
            <Router.Link to_={Archive(currentPage - 1)}>

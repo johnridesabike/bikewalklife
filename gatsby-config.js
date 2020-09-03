@@ -68,8 +68,9 @@ module.exports = {
       options: {
         postCssPlugins: [
           require("postcss-custom-properties")({
-            importFrom: `${__dirname}/src/styles/variables.css`
-          })
+            importFrom: `${__dirname}/src/style.css`
+          }),
+          require("postcss-custom-media"),
         ]
       }
     },

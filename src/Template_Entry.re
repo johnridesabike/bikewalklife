@@ -72,20 +72,18 @@ type pageContext = {
   previous: option(Neighbor.t),
 };
 
-let styles = Gatsby.importCss("./Template_Entry.module.css");
-
 module About = {
   [@react.component]
   let make = (~title, ~description, ~strings) =>
-    <div className=styles##about>
-      <h2 className=styles##footerHeading>
+    <div className="entry-page__about">
+      <h2 className="entry-page__footer-heading">
         {"About " ++ title |> React.string}
       </h2>
       <div
-        className=styles##aboutContent
+        className="entry-page__about-content"
         dangerouslySetInnerHTML={"__html": description}
       />
-      <p className=styles##aboutLink>
+      <p className="entry-page__about-link">
         <Router.Link to_=About>
           {"read more about " ++ title |> React.string}
           <span ariaHidden=true> <Icons.ArrowRight className="icon" /> </span>
@@ -95,10 +93,10 @@ module About = {
        | Some({contact_text: Some(text)}) =>
          <>
            <div
-             className=styles##aboutContent
+             className="entry-page__about-content"
              dangerouslySetInnerHTML={"__html": text}
            />
-           <p className=styles##aboutLink>
+           <p className="entry-page__about-link">
              <Router.Link to_=Contact>
                "Contact"->React.string
                <span ariaHidden=true>
@@ -180,7 +178,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         date
         draft
         footer={
-          <footer className=styles##footer>
+          <footer className="entry-page__footer">
             {switch (externalLink) {
              | Some(href) => <Entry.OriginalLink href />
              | None => React.null
@@ -193,18 +191,18 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           </footer>
         }
       />
-      <nav className=styles##nav>
+      <nav className="entry-page__nav">
         {switch (related) {
          | [||] => React.null
          | related =>
            <>
-             <h2 className=styles##footerHeading>
+             <h2 className="entry-page__footer-header">
                "Related posts"->React.string
              </h2>
-             <ul className=styles##relatedList>
+             <ul className="entry-page__related-list">
                {related
                 ->Array.map(({id, title, year, month, slug, date, isoDate}) =>
-                    <li className=styles##relatedItem key=id>
+                    <li className="entry-page__related-item" key=id>
                       <div>
                         <Router.Link to_={Entry({year, month, slug})}>
                           title->React.string
@@ -217,19 +215,19 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
              </ul>
            </>
          }}
-        <h2 className=styles##footerHeading>
+        <h2 className="entry-page__footer-heading">
           "Other recent posts"->React.string
         </h2>
-        <ul className=styles##recentList>
+        <ul className="entry-page__recent-list">
           {switch (previous) {
            | None => React.null
            | Some({year, month, slug, title}) =>
-             <li className=styles##recentItem>
+             <li className="entry-page__recent-item">
                <Router.Link
                  to_={Entry({year, month, slug})}
-                 className=styles##recentLink>
+                 className="entry-page__recent-link">
                  <span ariaHidden=true>
-                   <Icons.ArrowLeft className=Cn.("icon" <:> styles##arrow) />
+                   <Icons.ArrowLeft className="icon entry-page__arrow" />
                  </span>
                  <span>
                    <Externals.VisuallyHidden>
@@ -243,10 +241,10 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           {switch (next) {
            | None => React.null
            | Some({year, month, slug, title}) =>
-             <li className=styles##recentItem>
+             <li className="entry-page__recent-item">
                <Router.Link
                  to_={Entry({year, month, slug})}
-                 className=styles##recentLink
+                 className="entry-page__recent-link"
                  style={ReactDOMRe.Style.make(~justifyContent="flex-end", ())}>
                  <span style={ReactDOMRe.Style.make(~textAlign="right", ())}>
                    <Externals.VisuallyHidden>
@@ -255,7 +253,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
                    title->React.string
                  </span>
                  <span ariaHidden=true>
-                   <Icons.ArrowRight className=Cn.("icon" <:> styles##arrow) />
+                   <Icons.ArrowRight className="icon entry-page__arrow" />
                  </span>
                </Router.Link>
              </li>

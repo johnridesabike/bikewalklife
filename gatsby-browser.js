@@ -3,5 +3,4 @@ import "normalize.css";
 import "typeface-cooper-hewitt";
 import "charter-webfont";
 import "@reach/skip-nav/styles.css";
-import "./src/styles/global.css";
-import "./src/styles/variables.css";
+import "./src/style.css";

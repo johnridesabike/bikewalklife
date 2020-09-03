@@ -62,8 +62,6 @@ module Spread = {
   let make = (~props, ~children) => React.cloneElement(children, props);
 };
 
-let styles = Gatsby.importCss("./Contact_Form.module.css");
-
 let initialInput: Form.input = {
   name: "",
   email: "",
@@ -99,17 +97,17 @@ let make = () => {
   <Netlify.Form
     name="contact"
     honeypot="honeypot"
-    className=styles##form
+    className="contact-form"
     onSubmit={event => {
       event->ReactEvent.Form.preventDefault;
       form.submit();
     }}>
-    <div className=styles##inputWrapper>
-      <div className=styles##labelWrapper>
-        <label className=styles##label htmlFor="contact-form-name">
+    <div className="contact-form__input-wrapper">
+      <div className="contact-form__label-wrapper">
+        <label className="contact-form__label" htmlFor="contact-form-name">
           "Name"->React.string
         </label>
-        <div className=styles##error id="contact-form-name-error">
+        <div className="contact-form__error" id="contact-form-name-error">
           {switch (form.nameResult) {
            | Some(Error(message)) => message->React.string
            | Some(Ok(_))
@@ -130,7 +128,7 @@ let make = () => {
           type_="text"
           id="contact-form-name"
           name="name"
-          className=styles##input
+          className="contact-form__input"
           disabled={form.submitting}
           onBlur={_ => form.blurName()}
           value={form.input.name}
@@ -144,12 +142,12 @@ let make = () => {
         />
       </Spread>
     </div>
-    <div className=styles##inputWrapper>
-      <div className=styles##labelWrapper>
-        <label className=styles##label htmlFor="contact-form-email">
+    <div className="contact-form__input-wrapper">
+      <div className="contact-form__label-wrapper">
+        <label className="contact-form__label" htmlFor="contact-form-email">
           "Email"->React.string
         </label>
-        <div className=styles##error id="contact-form-email-error">
+        <div className="contact-form__error" id="contact-form-email-error">
           {switch (form.emailResult) {
            | Some(Error(message)) => message->React.string
            | Some(Ok(_))
@@ -170,7 +168,7 @@ let make = () => {
           type_="email"
           id="contact-form-email"
           name="email"
-          className=styles##input
+          className="contact-form__input"
           ariaDescribedby="contact-form-email-error"
           disabled={form.submitting}
           onBlur={_ => form.blurEmail()}
@@ -184,12 +182,12 @@ let make = () => {
         />
       </Spread>
     </div>
-    <div className=styles##inputWrapper>
-      <div className=styles##labelWrapper>
-        <label className=styles##label htmlFor="contact-form-message">
+    <div className="contact-form__input-wrapper">
+      <div className="contact-form__label-wrapper">
+        <label className="contact-form__label" htmlFor="contact-form-message">
           "Message"->React.string
         </label>
-        <div className=styles##error id="contact-form-message-error">
+        <div className="contact-form__error" id="contact-form-message-error">
           {switch (form.messageResult) {
            | Some(Error(message)) => message->React.string
            | Some(Ok(_))
@@ -210,7 +208,7 @@ let make = () => {
           id="contact-form-message"
           name="message"
           ariaDescribedby="contact-form-message-error"
-          className=styles##message
+          className="contact-form__message"
           disabled={form.submitting}
           onBlur={_ => form.blurMessage()}
           value={form.input.message}
@@ -238,7 +236,7 @@ let make = () => {
          <span ariaHidden=true> {j|🎉|j}->React.string </span>
        </p>
      | SubmissionFailed(_) =>
-       <p className=styles##error>
+       <p className="contact-form__error">
          "Something went wrong. Try again later."->React.string
        </p>
      }}

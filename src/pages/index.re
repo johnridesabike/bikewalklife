@@ -44,8 +44,6 @@ open QueryFragments;
   {inline: true}
 ];
 
-let styles = Gatsby.importCss("./index.module.css");
-
 [@react.component]
 let default = (~data) => {
   let data = parse(data);
@@ -74,7 +72,7 @@ let default = (~data) => {
              switch (parent) {
              | Some(`MarkdownRemark({html: Some(html), _})) =>
                <div
-                 className=styles##body
+                 className="index-page__body"
                  dangerouslySetInnerHTML={"__html": html}
                />
              | Some(`UnspecifiedFragment(_))
@@ -118,7 +116,7 @@ let default = (~data) => {
                 | Some(href) => <Entry.OriginalLink href />
                 | None => React.null
                 }}
-               <hr className=styles##separator />
+               <hr className="index-page__separator" />
              </footer>
            }
          />
@@ -126,7 +124,7 @@ let default = (~data) => {
      ->React.array}
     {switch (data.strings) {
      | Some({archive_link: Some(text)}) =>
-       <div className=styles##archiveLink>
+       <div className="index-page__archive-link">
          <Router.Link to_={Archive(1)}> text->React.string </Router.Link>
        </div>
      | _ => React.null

@@ -1,7 +1,5 @@
 %%raw(`import { graphql } from "gatsby"`)
 
-let styles = Gatsby.importCss("./Entry.module.css")
-
 %graphql(`
   query {
     strings: dataYaml(page: {eq: STRINGS}) {
@@ -14,8 +12,7 @@ module OriginalLink = {
   @react.component
   let make = (~href, ~className="") => {
     let data = query->Gatsby.useStaticQueryUnsafe->parse
-    <div
-      className={Cn.fromList(list{styles["link"], className})}>
+    <div className={Cn.fromList(list{"entry__link", className})}>
       <a href target="_blank" rel="noopener">
         {switch data {
         | {strings: Some({open_linked: Some(text)})} => text->React.string
@@ -30,7 +27,7 @@ module OriginalLink = {
 module Date = {
   @react.component
   let make = (~date, ~isoDate) =>
-    <time dateTime=isoDate className={styles["date"]}>
+    <time dateTime=isoDate className="entry__date">
       <span ariaHidden=true> <Icons.Calendar className="icon" /> </span>
       {date->React.string}
     </time>
@@ -39,7 +36,7 @@ module Date = {
 module DraftNotice = {
   @react.component
   let make = () =>
-    <div className={styles["draft"]}>
+    <div className="entry__draft">
       {"This is a draft. It will not appear in the published site."
       ->React.string}
     </div>
@@ -87,13 +84,12 @@ let make = (
 ) => {
   let titleEl = switch linkedHeader {
   | Linked =>
-    <Router.Link to_=url className={styles["headerLink"]}>
+    <Router.Link to_=url className="entry__header-link">
       {title->React.string}
     </Router.Link>
   | Unlinked => title->React.string
   }
-  <article
-    className={Cn.fromList(list{styles["article"], className})}>
+  <article className={Cn.fromList(list{"entry__article", className})}>
     {switch heroImage {
     | Some(img) =>
       <figure className="full-bleed">
@@ -103,7 +99,7 @@ let make = (
         }}
         {switch imageCaption {
         | Some(text) =>
-          <figcaption className={styles["caption"]}>
+          <figcaption className="entry__caption">
             {text->React.string}
           </figcaption>
         | None => React.null
@@ -111,9 +107,9 @@ let make = (
       </figure>
     | None => React.null
     }}
-    <div className={styles["body"]}>
-      <header className={styles["header"]}>
-        <h1 className={styles["title"]}> titleEl </h1>
+    <div className="entry__body">
+      <header className="entry__header">
+        <h1 className="entry__title"> titleEl </h1>
         <Date date isoDate />
         {if draft {
           <DraftNotice />

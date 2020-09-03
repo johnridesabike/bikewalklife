@@ -23,8 +23,6 @@ type metadata =
   | Site
   | String(string);
 
-let styles = Gatsby.importCss("./Layout.module.css");
-
 module Logo = {
   /* Use CSS classnames for colors so variables are processed by postcss. */
   [@react.component]
@@ -62,7 +60,7 @@ module Logo = {
 let make = (~title as pageTitle, ~route=?, ~children) => {
   switch (query->Gatsby.useStaticQueryUnsafe->parse) {
   | {site: Some({siteMetadata: {siteTitle, description, siteUrl}}), strings} =>
-    <div className=styles##page>
+    <div className="page">
       <BsReactHelmet>
         <html lang="en" />
         <title>
@@ -97,11 +95,11 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
          }}
       </BsReactHelmet>
       <Externals.SkipNav.Link />
-      <header className=Cn.("ui-font" <:> styles##headerWrapper)>
-        <div className=Cn.("small-screen-padding" <:> styles##header)>
-          <h1 className=Cn.(styles##title <:> "reading-font")>
+      <header className="ui-font header__wrapper">
+        <div className="small-screen-padding header">
+          <h1 className="header__title reading-font">
             <Router.Link
-              className=styles##titleLink
+              className="header__title-link"
               to_=Index
               activeClassName=""
               tabIndex=(-1)>
@@ -111,34 +109,34 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
               </Externals.VisuallyHidden>
             </Router.Link>
           </h1>
-          <p className=styles##description> description->React.string </p>
+          <p className="header__description"> description->React.string </p>
           <nav role="navigation" ariaLabel="main navigation">
-            <ul className=styles##menuList>
-              <li className=styles##menuItem>
-                <Router.Link to_=Index className=styles##menuLink>
+            <ul className="menu__list">
+              <li className="menu__item">
+                <Router.Link to_=Index className="menu__link">
                   "Home"->React.string
                 </Router.Link>
               </li>
-              <li className=styles##menuItem>
-                <Router.Link to_=About className=styles##menuLink>
+              <li className="menu__item">
+                <Router.Link to_=About className="menu__link">
                   "About"->React.string
                 </Router.Link>
               </li>
-              <li className=styles##menuItem>
-                <Router.Link to_=Contact className=styles##menuLink>
+              <li className="menu__item">
+                <Router.Link to_=Contact className="menu__link">
                   "Contact"->React.string
                 </Router.Link>
               </li>
-              <li className=styles##menuItem>
+              <li className="menu__item">
                 <Router.Link
                   to_={Archive(1)}
                   partiallyActive=true
-                  className=styles##menuLink>
+                  className="menu__link">
                   "Archive"->React.string
                 </Router.Link>
               </li>
-              <li className=styles##menuItem>
-                <Router.Link to_=Search className=styles##menuLink>
+              <li className="menu__item">
+                <Router.Link to_=Search className="menu__link">
                   "Search"->React.string
                 </Router.Link>
               </li>
@@ -147,11 +145,9 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
         </div>
       </header>
       <Externals.SkipNav.Content />
-      <main className=Cn.("small-screen-padding" <:> styles##content)>
-        children
-      </main>
-      <footer className=styles##footerWrapper>
-        <div className=Cn.("small-screen-padding" <:> styles##footer)>
+      <main className="small-screen-padding content"> children </main>
+      <footer className="footer__wrapper">
+        <div className="small-screen-padding footer">
           {switch (strings) {
            | Some({footer: Some(text)}) =>
              <div dangerouslySetInnerHTML={"__html": text} />
