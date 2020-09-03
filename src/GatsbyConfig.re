@@ -1,66 +1,4 @@
-module Rss = {
-  /** https://www.npmjs.com/package/rss */
-  [@unboxed]
-  type customElement =
-    | CustomElement(Js.t({..})): customElement;
-
-  type enclosure;
-  /*
-   [@bs.obj]
-   external enclosureUrl:
-     (~url: string, ~size: int=?, ~type_: string=?, unit) => enclosure;
-     */
-
-  module Feed = {
-    type options;
-    [@bs.obj]
-    external options:
-      (
-        ~title: string,
-        ~description: string=?,
-        ~generator: string=?,
-        ~feed_url: string,
-        ~site_url: string,
-        ~image_url: string=?,
-        ~docs: string=?,
-        ~managingEditor: string=?,
-        ~webMaster: string=?,
-        ~copyright: string=?,
-        ~language: string=?,
-        ~categories: array(string)=?,
-        ~pubDate: string=?,
-        ~ttl: int=?,
-        ~hub: string=?,
-        ~custom_namespaces: Js.Dict.t(string)=?,
-        ~custom_elements: array(customElement)=?,
-        unit
-      ) =>
-      options;
-  };
-
-  module Item = {
-    type options;
-    [@bs.obj]
-    external options:
-      (
-        ~title: string,
-        ~description: string,
-        ~url: string,
-        ~guid: string,
-        ~categories: array(string)=?,
-        ~author: string=?,
-        ~date: string,
-        ~lat: float=?,
-        ~long: float=?,
-        ~custom_elements: array(customElement)=?,
-        ~enclosure: enclosure=?,
-        unit
-      ) =>
-      options;
-  };
-};
-
-[@bs.module ] external config: Js.t({..}) = "../../../config.json";
+[@bs.module] external config: Js.t({..}) = "../../../config.json";
 
 module PluginFeed = {
   [%graphql
@@ -143,14 +81,14 @@ module PluginFeed = {
   module Feed = {
     type t = {
       query: string,
-      serialize: query(Serialize.Raw.t) => array(Rss.Item.options),
+      serialize: query(Serialize.Raw.t) => array(Externals.Rss.Item.options),
       output: string,
       title: string,
     };
   };
   type t = {
     query: string,
-    setup: query(Site.Raw.t) => Rss.Feed.options,
+    setup: query(Site.Raw.t) => Externals.Rss.Feed.options,
     feeds: array(Feed.t),
   };
 
@@ -159,7 +97,7 @@ module PluginFeed = {
     setup: ({query}) => {
       switch (Site.parse(query).site) {
       | Some({siteMetadata: {title, description, siteUrl}}) =>
-        Rss.Feed.options(
+        Externals.Rss.Feed.options(
           ~title,
           ~description,
           ~site_url=siteUrl,
@@ -197,7 +135,7 @@ module PluginFeed = {
                 Webapi.Url.setSearch(url, params);
                 Webapi.Url.href(url);
               };
-              Rss.Item.options(
+              Externals.Rss.Item.options(
                 ~title,
                 ~description=
                   switch (parent) {
@@ -212,7 +150,7 @@ module PluginFeed = {
                 ~custom_elements=
                   switch (parent) {
                   | Some(`MarkdownRemark({html: Some(html), _})) => [|
-                      Rss.CustomElement({
+                      Externals.Rss.CustomElement({
                         "content:encoded":
                           html ++ renderLink(~strings, externalLink),
                       }),

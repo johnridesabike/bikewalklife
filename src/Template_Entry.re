@@ -5,7 +5,7 @@ open QueryFragments;
 
 [%graphql
   {|
-  query($slug: String!, $year: Int!, $month: Int!) {
+  query EntryQuery($slug: String!, $year: Int!, $month: Int!) {
     post(
       slug: { eq: $slug },
       year: { eq: $year },
@@ -52,7 +52,8 @@ open QueryFragments;
       contact_text
     }
   }
-|}
+|};
+  {inline: true}
 ];
 
 module Neighbor = {
@@ -84,7 +85,7 @@ module About = {
         dangerouslySetInnerHTML={"__html": description}
       />
       <p className="entry-page__about-link">
-        <Router.Link to_=About>
+        <Router.Link route=About>
           {"read more about " ++ title |> React.string}
           <span ariaHidden=true> <Icons.ArrowRight className="icon" /> </span>
         </Router.Link>
@@ -97,7 +98,7 @@ module About = {
              dangerouslySetInnerHTML={"__html": text}
            />
            <p className="entry-page__about-link">
-             <Router.Link to_=Contact>
+             <Router.Link route=Contact>
                "Contact"->React.string
                <span ariaHidden=true>
                  <Icons.ArrowRight className="icon" />
@@ -150,7 +151,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       </BsReactHelmet>
       <Entry
         body={<div dangerouslySetInnerHTML={"__html": html} />}
-        url={Entry({year, month, slug})}
+        route={Entry({year, month, slug})}
         heroImage={
           switch (heroImage) {
           | Some({
@@ -204,7 +205,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
                 ->Array.map(({id, title, year, month, slug, date, isoDate}) =>
                     <li className="entry-page__related-item" key=id>
                       <div>
-                        <Router.Link to_={Entry({year, month, slug})}>
+                        <Router.Link route={Entry({year, month, slug})}>
                           title->React.string
                         </Router.Link>
                       </div>
@@ -224,7 +225,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
            | Some({year, month, slug, title}) =>
              <li className="entry-page__recent-item">
                <Router.Link
-                 to_={Entry({year, month, slug})}
+                 route={Entry({year, month, slug})}
                  className="entry-page__recent-link">
                  <span ariaHidden=true>
                    <Icons.ArrowLeft className="icon entry-page__arrow" />
@@ -243,7 +244,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
            | Some({year, month, slug, title}) =>
              <li className="entry-page__recent-item">
                <Router.Link
-                 to_={Entry({year, month, slug})}
+                 route={Entry({year, month, slug})}
                  className="entry-page__recent-link"
                  style={ReactDOMRe.Style.make(~justifyContent="flex-end", ())}>
                  <span style={ReactDOMRe.Style.make(~textAlign="right", ())}>

@@ -3,7 +3,7 @@
 
 [%graphql
   {|
-  query blogListQuery($skip: Int!, $limit: Int!) {
+  query ArchiveQuery($skip: Int!, $limit: Int!) {
     allPost(
       sort: { fields: [date], order: [DESC] },
       limit: $limit,
@@ -62,7 +62,7 @@ let default =
          ({id, title, externalLink, date, isoDate, draft, slug, year, month}) => {
          <div key=id className="archive__entry">
            <Router.Link
-             to_={Entry({year, month, slug})}
+             route={Entry({year, month, slug})}
              className="archive__entry-title">
              title->React.string
            </Router.Link>
@@ -93,7 +93,7 @@ let default =
     <nav className="archive__nav">
       <div>
         {if (hasPreviousPage) {
-           <Router.Link to_={Archive(currentPage - 1)}>
+           <Router.Link route={Archive(currentPage - 1)}>
              <span ariaHidden=true>
                <Icons.ArrowLeft className="icon" />
              </span>
@@ -105,7 +105,7 @@ let default =
       </div>
       <div>
         {if (hasNextPage) {
-           <Router.Link to_={Archive(currentPage + 1)}>
+           <Router.Link route={Archive(currentPage + 1)}>
              "next"->React.string
              <span ariaHidden=true>
                <Icons.ArrowRight className="icon" />

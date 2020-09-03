@@ -28,7 +28,7 @@ let toString =
   | Contact => "/contact/";
 
 let toStringWithBase = (route, base) =>
-  Webapi.Url.(makeWith(toString(route), ~base)->href);
+  Webapi.Url.makeWith(toString(route), ~base)->Webapi.Url.href;
 
 module GatsbyLink = {
   [@bs.module "gatsby"] [@react.component]
@@ -50,7 +50,7 @@ module Link = {
   [@react.component]
   let make =
       (
-        ~to_,
+        ~route,
         ~activeClassName="active-page",
         ~partiallyActive=false,
         ~tabIndex=?,
@@ -59,7 +59,7 @@ module Link = {
         ~children,
       ) =>
     <GatsbyLink
-      _to={toString(to_)}
+      _to={toString(route)}
       activeClassName
       partiallyActive
       ?className

@@ -12,7 +12,7 @@ module OriginalLink = {
   @react.component
   let make = (~href, ~className="") => {
     let data = query->Gatsby.useStaticQueryUnsafe->parse
-    <div className={Cn.fromList(list{"entry__link", className})}>
+    <div className={Cn.append("entry__link", className)}>
       <a href target="_blank" rel="noopener">
         {switch data {
         | {strings: Some({open_linked: Some(text)})} => text->React.string
@@ -71,7 +71,7 @@ module Image = {
 @react.component
 let make = (
   ~body,
-  ~url,
+  ~route,
   ~title,
   ~linkedHeader,
   ~heroImage,
@@ -81,20 +81,13 @@ let make = (
   ~draft,
   ~footer,
   ~className="",
-) => {
-  let titleEl = switch linkedHeader {
-  | Linked =>
-    <Router.Link to_=url className="entry__header-link">
-      {title->React.string}
-    </Router.Link>
-  | Unlinked => title->React.string
-  }
-  <article className={Cn.fromList(list{"entry__article", className})}>
+) => 
+  <article className={Cn.append("entry__article", className)}>
     {switch heroImage {
     | Some(img) =>
       <figure className="full-bleed">
         {switch linkedHeader {
-        | Linked => <Router.Link to_=url tabIndex={-1}> img </Router.Link>
+        | Linked => <Router.Link route=route tabIndex={-1}> img </Router.Link>
         | Unlinked => img
         }}
         {switch imageCaption {
@@ -109,7 +102,15 @@ let make = (
     }}
     <div className="entry__body">
       <header className="entry__header">
-        <h1 className="entry__title"> titleEl </h1>
+        <h1 className="entry__title">
+          {switch linkedHeader {
+          | Linked =>
+            <Router.Link route=route className="entry__header-link">
+              {title->React.string}
+            </Router.Link>
+          | Unlinked => title->React.string
+          }}
+        </h1>
         <Date date isoDate />
         {if draft {
           <DraftNotice />
@@ -121,4 +122,4 @@ let make = (
       footer
     </div>
   </article>
-}
+

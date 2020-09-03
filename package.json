@@ -1,7 +1,7 @@
 {
   "name": "bike-walk-life",
   "private": true,
-  "description": "A simple starter blog to get up and developing quickly with Forestry & Gatsby",
+  "description": "The source code for the Bike Walk Life blog.",
   "license": "MIT",
   "version": "0.1.0",
   "author": "John Jackson",
@@ -17,7 +17,7 @@
     "re:watch": "bsb -w",
     "get-graphql-schema": "get-graphql-schema http://localhost:8000/___graphql -j > graphql_schema.json && jsonsort graphql_schema.json",
     "lint:css": "stylelint src/**/*.css",
-    "lint:js": "eslint \"*.js\" \"src/**/*.js\"",
+    "lint:js": "eslint *.js src/**/*.js",
     "test": "yarn lint:css && yarn lint:js",
     "analyze": "ANALYZE_BUNDLE_SIZE=true yarn build",
     "postinstall": "bsb -make-world"
@@ -47,9 +47,10 @@
     "gatsby-transformer-sharp": "^2.5.12",
     "gatsby-transformer-yaml": "^2.4.10",
     "normalize.css": "^8.0.1",
+    "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^9.1.1",
     "re-classnames": "^5.0.1",
-    "re-formality": "^4.0.0-beta.7",
+    "re-formality": "^4.0.0-beta.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
@@ -65,7 +66,6 @@
     "gatsby-plugin-goatcounter": "^0.4.0",
     "get-graphql-schema": "^2.1.2",
     "json-sort-cli": "^1.15.25",
-    "postcss-custom-media": "^7.0.8",
     "stylelint": "^13.6.1",
     "stylelint-config-wordpress": "^17.0.0"
   },

@@ -3,7 +3,7 @@
 
 [%graphql
   {|
-  query getMetadata {
+  query Metadata {
     site {
       siteMetadata {
         siteTitle: title
@@ -100,7 +100,7 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
           <h1 className="header__title reading-font">
             <Router.Link
               className="header__title-link"
-              to_=Index
+              route=Index
               activeClassName=""
               tabIndex=(-1)>
               <Logo width="192" />
@@ -113,30 +113,30 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
           <nav role="navigation" ariaLabel="main navigation">
             <ul className="menu__list">
               <li className="menu__item">
-                <Router.Link to_=Index className="menu__link">
+                <Router.Link route=Index className="menu__link">
                   "Home"->React.string
                 </Router.Link>
               </li>
               <li className="menu__item">
-                <Router.Link to_=About className="menu__link">
+                <Router.Link route=About className="menu__link">
                   "About"->React.string
                 </Router.Link>
               </li>
               <li className="menu__item">
-                <Router.Link to_=Contact className="menu__link">
+                <Router.Link route=Contact className="menu__link">
                   "Contact"->React.string
                 </Router.Link>
               </li>
               <li className="menu__item">
                 <Router.Link
-                  to_={Archive(1)}
+                  route={Archive(1)}
                   partiallyActive=true
                   className="menu__link">
                   "Archive"->React.string
                 </Router.Link>
               </li>
               <li className="menu__item">
-                <Router.Link to_=Search className="menu__link">
+                <Router.Link route=Search className="menu__link">
                   "Search"->React.string
                 </Router.Link>
               </li>
@@ -154,17 +154,17 @@ let make = (~title as pageTitle, ~route=?, ~children) => {
            | _ => React.null
            }}
           <p>
-            <Router.Link to_=Index activeClassName="">
+            <Router.Link route=Index activeClassName="">
               "Home"->React.string
             </Router.Link>
           </p>
           <p>
-            <Router.Link to_=About activeClassName="">
+            <Router.Link route=About activeClassName="">
               "About"->React.string
             </Router.Link>
           </p>
           <p>
-            <Router.Link to_=Contact activeClassName="">
+            <Router.Link route=Contact activeClassName="">
               "Contact"->React.string
             </Router.Link>
           </p>

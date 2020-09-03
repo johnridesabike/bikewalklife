@@ -18,7 +18,7 @@ module Link: {
   [@react.component]
   let make:
     (
-      ~to_: t,
+      ~route: t,
       ~activeClassName: string=?,
       ~partiallyActive: bool=?,
       ~tabIndex: int=?,

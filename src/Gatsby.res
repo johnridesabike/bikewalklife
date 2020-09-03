@@ -1,11 +1,10 @@
 @bs.module("gatsby")
 external useStaticQueryUnsafe: 'a => 'b = "useStaticQuery"
 
-@bs.val external importCss: string => {..} = "require"
-
 module Img = {
   module Fluid = {
     type t
+
     @bs.obj
     external _make: (
       ~src: string,
@@ -23,18 +22,24 @@ module Img = {
     @bs.get external src: t => string = "src"
     let make = (
       ~media=?,
-      {QueryFragments.ImageFluid.src: src, srcSet, sizes, aspectRatio, base64},
+      {QueryFragments.ImageFluid.src, srcSet, sizes, aspectRatio, base64},
     ) => _make(~media?, ~src, ~srcSet, ~sizes, ~aspectRatio, ~base64?, ())
 
     let makeWithSvg = (
       ~media=?,
-      {QueryFragments.ImageFluid_tracedSVG.src: src, srcSet, sizes, aspectRatio, tracedSVG},
+      {
+        QueryFragments.ImageFluid_tracedSVG.src,
+        srcSet,
+        sizes,
+        aspectRatio,
+        tracedSVG
+      },
     ) => _make(~media?, ~src, ~srcSet, ~sizes, ~aspectRatio, ~tracedSVG?, ())
 
     let makeWithWebpSvg = (
       ~media=?,
       {
-        QueryFragments.ImageFluid_withWebp_tracedSVG.src: src,
+        QueryFragments.ImageFluid_withWebp_tracedSVG.src,
         srcSet,
         sizes,
         aspectRatio,
@@ -43,10 +48,21 @@ module Img = {
         srcSetWebp,
       },
     ) =>
-      _make(~media?, ~src, ~srcSet, ~sizes, ~aspectRatio, ~tracedSVG?, ~srcWebp?, ~srcSetWebp?, ())
+      _make(
+        ~media?,
+        ~src,
+        ~srcSet,
+        ~sizes,
+        ~aspectRatio,
+        ~tracedSVG?,
+        ~srcWebp?,
+        ~srcSetWebp?,
+        ()
+      )
   }
   module Fixed = {
     type t
+
     @bs.obj
     external make: (
       ~src: string,
@@ -58,7 +74,16 @@ module Img = {
       unit,
     ) => t = ""
 
-    let make = ({QueryFragments.ImageFixed.src: src, srcSet, height, width, base64}, media) =>
+    let make = (
+      {
+        QueryFragments.ImageFixed.src,
+        srcSet,
+        height,
+        width,
+        base64
+      },
+      media
+    ) =>
       make(~src, ~srcSet, ~height, ~width, ~media, ~base64?, ())
   }
   @bs.module("gatsby-image") @react.component

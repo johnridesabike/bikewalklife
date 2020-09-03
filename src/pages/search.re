@@ -3,14 +3,15 @@
 
 [%graphql
   {|
-  query {
+  query SearchPage {
     site {
       siteMetadata {
         siteUrl
       }
     }
   }
-|}
+|};
+  {inline: true}
 ];
 
 [@react.component]

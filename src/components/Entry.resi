@@ -27,7 +27,7 @@ type linked =
 @react.component
 let make: (
   ~body: React.element,
-  ~url: Router.t,
+  ~route: Router.t,
   ~title: string,
   ~linkedHeader: linked,
   ~heroImage: Image.t,

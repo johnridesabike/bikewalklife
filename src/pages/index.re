@@ -5,7 +5,7 @@ open QueryFragments;
 
 [%graphql
   {|
-    query Entries {
+    query IndexEntries {
       allPost(
         sort: { order: [DESC], fields: [date] },
         limit: 24,
@@ -80,7 +80,7 @@ let default = (~data) => {
              | None => React.null
              }
            }
-           url={Entry({year, month, slug})}
+           route={Entry({year, month, slug})}
            title
            heroImage={
              switch (heroImage) {
@@ -125,7 +125,7 @@ let default = (~data) => {
     {switch (data.strings) {
      | Some({archive_link: Some(text)}) =>
        <div className="index-page__archive-link">
-         <Router.Link to_={Archive(1)}> text->React.string </Router.Link>
+         <Router.Link route={Archive(1)}> text->React.string </Router.Link>
        </div>
      | _ => React.null
      }}

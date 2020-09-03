@@ -11998,7 +11998,7 @@ re-debouncer@2.1.0:
   resolved "https://registry.yarnpkg.com/re-debouncer/-/re-debouncer-2.1.0.tgz#2eaf7994ba41590f4f80d4a363ae8905156b7dc1"
   integrity sha512-Iy9BecWF9X4V6zXfL3ROZpKGkCnpzYdjG/j6NIBxQn7gEwO2DzED5BsbfRUiPeqr7C0tAD0HPHF6tYIcQFEnyA==
 
-re-formality@^4.0.0-beta.7:
+re-formality@^4.0.0-beta.8:
   version "4.0.0-beta.8"
   resolved "https://registry.yarnpkg.com/re-formality/-/re-formality-4.0.0-beta.8.tgz#ffdd4831c17fae3c49c411b39e311e47b9db07d8"
   integrity sha512-LdhIzuctVBH+Qkr2tHOAN/LHSqgYjklFHaFssOgCHq99xENa4dFZjfLPeYxCKWtVjJQvqHdzL4oFousduioIpQ==

@@ -3,13 +3,14 @@
 
 [%graphql
   {|
-  query {
+  query ContactPage {
     dataYaml(page: {eq: STRINGS}) {
       contact_text
       contact_form
     }
   }
-|}
+|};
+  {inline: true}
 ];
 
 [@react.component]

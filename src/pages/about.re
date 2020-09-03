@@ -3,7 +3,7 @@
 
 [%graphql
   {|
-  query {
+  query AboutPage {
     site {
       siteMetadata {
         feedUrl
@@ -15,7 +15,8 @@
       body
     }
   }
-|}
+|};
+  {inline: true}
 ];
 
 [@react.component]
