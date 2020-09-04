@@ -20,7 +20,7 @@ When you’ve always lived in a car-dominated society, it may be hard to imagine
 
 Denis Shiryaev took the 1906 film “A Trip Down Market Street” and restored it by upscaling the resolution to 4K, dubbing sound effects, colorizing it, and more. [You can watch it here: “\[4k, 60 fps\] San Francisco, a Trip down Market Street, April 14, 1906”](https://youtu.be/VO_1AdYRGW8). This version is not only technically impressive, it reveals with new clarity just how different our streets once were.
 
-[Arian Horbovetz has an excellent analysis on Strong Towns](https://www.strongtowns.org/journal/2020/8/28/when-streets-were-for-everyone?utm_campaign=090220+Wednesday+Jab+-+General+List&utm_medium=email&utm_source=autopilot):
+[Arian Horbovetz has an excellent analysis on Strong Towns](https://www.strongtowns.org/journal/2020/8/28/when-streets-were-for-everyone):
 
 > **Lesson #1. Multiple Modes of Mobility:** Trolleys, carriages, bikes, cars and pedestrians—count the number of different forms of mobility in this video. The streets were truly for everyone, regardless of speed, size, or socioeconomic status.
 >
