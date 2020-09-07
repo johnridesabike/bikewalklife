@@ -1,8 +1,8 @@
 %%raw(`import { graphql } from "gatsby"`)
 
 %graphql(
-`
-  query Metadata {
+  `
+  query Metadata @ppxConfig(inline: true) {
     site {
       siteMetadata {
         siteTitle: title
@@ -14,8 +14,7 @@
       footer
     }
   }
-`;
-  {inline: true}
+  `
 )
 
 type metadata =
@@ -25,13 +24,12 @@ type metadata =
 module Logo = {
   /* Use CSS classnames for colors so variables are processed by postcss. */
   @react.component
-  let make = (~height=?, ~width=?) =>
+  let make = (~width) =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 48"
       ariaHidden=true
-      ?height
-      ?width>
+      width>
       <title id="logo-title"> {"Bike Walk Life"->React.string} </title>
       <desc> {"Bike Walk Life site logo."->React.string} </desc>
       <g

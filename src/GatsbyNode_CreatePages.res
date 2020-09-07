@@ -24,40 +24,39 @@ type t<'data> = {
 }
 
 %graphql(
-`
-query CreatePages {
-  allPost(
-    filter: {published: {eq: true}},
-    sort: {fields: [date], order: [DESC]}
-  ) {
-    edges {
-      node {
-        slug
-        year
-        month
+  `
+  query CreatePages @ppxConfig(taggedTemplate: false) {
+    allPost(
+      filter: {published: {eq: true}},
+      sort: {fields: [date], order: [DESC]}
+    ) {
+      edges {
+        node {
+          slug
+          year
+          month
+        }
+        next @ppxAs(type: "Template_Entry.Neighbor.t") {
+          slug
+          year
+          month
+          title
+        }
+        previous @ppxAs(type: "Template_Entry.Neighbor.t") {
+          slug
+          year
+          month
+          title
+        }
       }
-      next @ppxAs(type: "Template_Entry.Neighbor.t") {
-        slug
-        year
-        month
-        title
-      }
-      previous @ppxAs(type: "Template_Entry.Neighbor.t") {
-        slug
-        year
-        month
-        title
+    }
+    site {
+      siteMetadata {
+        archivePerPage
       }
     }
   }
-  site {
-    siteMetadata {
-      archivePerPage
-    }
-  }
-}
-`;
-  {taggedTemplate: false};
+  `
 )
 
 module Path = {

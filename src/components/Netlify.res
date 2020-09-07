@@ -5,9 +5,9 @@ module Spread = {
 
 module Form = {
   @react.component
-  let make = (~name, ~honeypot, ~className=?, ~onSubmit=?, ~children) =>
+  let make = (~name, ~honeypot, ~className="", ~onSubmit, ~children) =>
     <Spread props={"data-netlify": true, "data-netlify-honeypot": honeypot}>
-      <form ?className ?onSubmit name>
+      <form className onSubmit name>
         <input type_="hidden" name="form-name" value=name />
         <div ariaHidden=true>
           <Externals.VisuallyHidden>

@@ -2,7 +2,7 @@
 
 %graphql(
   `
-  query AboutPage {
+  query AboutPage @ppxConfig(inline: true) {
     site {
       siteMetadata {
         feedUrl
@@ -14,8 +14,7 @@
       body
     }
   }
-`;
-  {inline: true}
+  `
 )
 
 @react.component

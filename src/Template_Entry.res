@@ -4,11 +4,15 @@ open QueryFragments
 
 %graphql(
   `
-  query EntryQuery($slug: String!, $year: Int!, $month: Int!) {
+  query EntryQuery(
+    $slug: String!,
+    $year: Int!,
+    $month: Int!
+  ) @ppxConfig(inline: true) {
     post(
-      slug: { eq: $slug },
-      year: { eq: $year },
-      month: { eq: $month }
+      slug: {eq: $slug},
+      year: {eq: $year},
+      month: {eq: $month}
     ) {
       title
       externalLink
@@ -51,8 +55,7 @@ open QueryFragments
       contact_text
     }
   }
-`;
-  {inline: true}
+  `
 )
 
 module Neighbor = {
@@ -153,7 +156,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>
           Entry.Image.make(
             ~alt?,
-            [Gatsby.Img.Fluid.makeWithWebpSvg(fluid)],
+            Gatsby.Img.Fluid.makeWithWebpSvg(fluid),
             AboveFold
           )
         | _ => Entry.Image.empty

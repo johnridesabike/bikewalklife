@@ -3,41 +3,30 @@ external useStaticQueryUnsafe: 'a => 'b = "useStaticQuery"
 
 module Img = {
   module Fluid = {
-    type t
+    type t = 
+      | Fluid({
+          src: string,
+          srcSet: string,
+          sizes: string,
+          aspectRatio: float,
+          base64: option<string>,
+        })
+      | WebpSvg({
+          src: string,
+          srcSet: string,
+          sizes: string,
+          aspectRatio: float,
+          srcWebp: option<string>,
+          srcSetWebp: option<string>,
+          tracedSVG: option<string>,
+        })
 
-    @bs.obj
-    external _make: (
-      ~src: string,
-      ~srcSet: string,
-      ~sizes: string,
-      ~aspectRatio: float,
-      ~media: string=?,
-      ~base64: string=?,
-      ~srcWebp: string=?,
-      ~srcSetWebp: string=?,
-      ~tracedSVG: string=?,
-      unit,
-    ) => t = ""
 
-    @bs.get external src: t => string = "src"
     let make = (
-      ~media=?,
       {QueryFragments.ImageFluid.src, srcSet, sizes, aspectRatio, base64},
-    ) => _make(~media?, ~src, ~srcSet, ~sizes, ~aspectRatio, ~base64?, ())
-
-    let makeWithSvg = (
-      ~media=?,
-      {
-        QueryFragments.ImageFluid_tracedSVG.src,
-        srcSet,
-        sizes,
-        aspectRatio,
-        tracedSVG
-      },
-    ) => _make(~media?, ~src, ~srcSet, ~sizes, ~aspectRatio, ~tracedSVG?, ())
+    ) => Fluid({src, srcSet, sizes, aspectRatio, base64})
 
     let makeWithWebpSvg = (
-      ~media=?,
       {
         QueryFragments.ImageFluid_withWebp_tracedSVG.src,
         srcSet,
@@ -48,31 +37,25 @@ module Img = {
         srcSetWebp,
       },
     ) =>
-      _make(
-        ~media?,
-        ~src,
-        ~srcSet,
-        ~sizes,
-        ~aspectRatio,
-        ~tracedSVG?,
-        ~srcWebp?,
-        ~srcSetWebp?,
-        ()
-      )
+      WebpSvg({
+        src,
+        srcSet,
+        sizes,
+        aspectRatio,
+        tracedSVG,
+        srcWebp,
+        srcSetWebp,
+      })
   }
   module Fixed = {
-    type t
-
-    @bs.obj
-    external make: (
-      ~src: string,
-      ~srcSet: string,
-      ~height: float,
-      ~width: float,
-      ~media: string,
-      ~base64: string=?,
-      unit,
-    ) => t = ""
+    type t =
+      | Fixed({
+          src: string,
+          srcSet: string,
+          height: float,
+          width: float,
+          base64: option<string>,
+        })
 
     let make = (
       {
@@ -82,14 +65,14 @@ module Img = {
         width,
         base64
       },
-      media
     ) =>
-      make(~src, ~srcSet, ~height, ~width, ~media, ~base64?, ())
+      Fixed({src, srcSet, height, width, base64})
   }
+
   @bs.module("gatsby-image") @react.component
   external make: (
-    ~fluid: array<Fluid.t>=?,
-    ~fixed: array<Fixed.t>=?,
+    ~fluid: Fluid.t=?,
+    ~fixed: Fixed.t=?,
     ~alt: string,
     ~className: string=?,
     ~style: ReactDOMRe.Style.t=?,

@@ -1,17 +1,22 @@
 %%raw(`import { graphql } from "gatsby"`)
 
-%graphql(`
-  query {
+%graphql(
+ `
+  query EntryStrings {
     strings: dataYaml(page: {eq: STRINGS}) {
       open_linked
     }
   }
-`)
+  `
+)
 
 module OriginalLink = {
   @react.component
   let make = (~href, ~className="") => {
-    let data = query->Gatsby.useStaticQueryUnsafe->parse
+    let data =
+      EntryStrings.query
+      ->Gatsby.useStaticQueryUnsafe
+      ->EntryStrings.parse
     <div className={Cn.append("entry__link", className)}>
       <a href target="_blank" rel="noopener">
         {switch data {
@@ -42,18 +47,17 @@ module DraftNotice = {
     </div>
 }
 
-type linked =
-  | Linked
-  | Unlinked
-
 module Image = {
   type position =
     | AboveFold
     | BelowFold
 
-  type t = option<React.element>
 
-  let empty = None
+  type t =
+    | NoImage
+    | Image(React.element)
+
+  let empty = NoImage
 
   let make = (~alt="Cover image.", fluid, position) => {
     let fadeIn = switch position {
@@ -64,9 +68,13 @@ module Image = {
     | AboveFold => #eager
     | BelowFold => #\"lazy"
     }
-    Some(<Gatsby.Img fluid alt fadeIn loading />)
+    Image(<Gatsby.Img fluid alt fadeIn loading />)
   }
 }
+
+type linked =
+  | Linked
+  | Unlinked
 
 @react.component
 let make = (
@@ -84,7 +92,7 @@ let make = (
 ) => 
   <article className={Cn.append("entry__article", className)}>
     {switch heroImage {
-    | Some(img) =>
+    | Image.Image(img) =>
       <figure className="full-bleed">
         {switch linkedHeader {
         | Linked => <Router.Link route=route tabIndex={-1}> img </Router.Link>
@@ -98,7 +106,7 @@ let make = (
         | None => React.null
         }}
       </figure>
-    | None => React.null
+    | NoImage => React.null
     }}
     <div className="entry__body">
       <header className="entry__header">

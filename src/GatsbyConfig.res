@@ -1,8 +1,9 @@
 @bs.module external config: {..} = "../../../config.json"
 
 module PluginFeed = {
-  %graphql(`
-    query Site {
+  %graphql(
+    `
+    query Site @ppxConfig(taggedTemplate: false) {
       site {
         siteMetadata {
           title
@@ -11,12 +12,12 @@ module PluginFeed = {
         }
       }
     }
-  `;
-    {taggedTemplate: false}
+    `
   )
 
-  %graphql(`
-    query AllPosts {
+  %graphql(
+    `
+    query AllPosts @ppxConfig(taggedTemplate: false) {
       allPost(
         sort: { order: [DESC], fields: [date] },
         filter: {published: {eq: true}}
@@ -42,8 +43,7 @@ module PluginFeed = {
         open_linked
       }
     }
-  `;
-    {taggedTemplate: false}
+    `
   )
 
 
@@ -161,8 +161,9 @@ module PluginFeed = {
 }
 
 module PluginSiteMap = {
-  %graphql(`
-    query SiteMap {
+  %graphql(
+    `
+    query SiteMap @ppxConfig(taggedTemplate: false) {
       site {
         siteMetadata {
           siteUrl
@@ -174,8 +175,7 @@ module PluginSiteMap = {
         }
       }
     }
-  `;
-    {taggedTemplate: false}
+    `
   )
 
   module Page = {

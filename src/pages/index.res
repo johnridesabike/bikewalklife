@@ -4,43 +4,42 @@ open QueryFragments
 
 %graphql(
   `
-    query IndexEntries {
-      allPost(
-        sort: { order: [DESC], fields: [date] },
-        limit: 24,
-        filter: {published: {eq: true}}
-      ) {
-        nodes {
-          id
-          slug
-          year
-          month
-          isoDate: date @ppxCustom(module: "DateTime")
-          date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
-          title
-          externalLink
-          draft
-          heroImage {
-            alt
-            caption
-            image {
-              ...HeroImage
-            }
+  query IndexEntries @ppxConfig(inline: true) {
+    allPost(
+      sort: {order: [DESC], fields: [date]},
+      limit: 24,
+      filter: {published: {eq: true}}
+    ) {
+      nodes {
+        id
+        slug
+        year
+        month
+        isoDate: date @ppxCustom(module: "DateTime")
+        date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
+        title
+        externalLink
+        draft
+        heroImage {
+          alt
+          caption
+          image {
+            ...HeroImage
           }
-          parent {
-            ... on MarkdownRemark {
-              __typename
-              html
-            }
+        }
+        parent {
+          ... on MarkdownRemark {
+            __typename
+            html
           }
         }
       }
-      strings: dataYaml(page: {eq: STRINGS}) {
-        archive_link
-      }
     }
-`;
-  {inline: true};
+    strings: dataYaml(page: {eq: STRINGS}) {
+      archive_link
+    }
+  }
+  `
 )
 
 @react.component
@@ -81,7 +80,7 @@ let default = (~data) => {
         | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>
           Entry.Image.make(
             ~alt?,
-            [Gatsby.Img.Fluid.makeWithWebpSvg(fluid)],
+            Gatsby.Img.Fluid.makeWithWebpSvg(fluid),
             switch index {
             | 0 => AboveFold
             | _ => BelowFold

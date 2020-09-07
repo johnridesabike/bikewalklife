@@ -1,15 +1,15 @@
 %%raw(`import { graphql } from "gatsby"`)
 
-%graphql(`
-  query SearchPage {
+%graphql(
+  `
+  query SearchPage @ppxConfig(inline: true) {
     site {
       siteMetadata {
         siteUrl
       }
     }
   }
-`;
-  {inline: true}
+  `
 )
 
 @react.component

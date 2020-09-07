@@ -60,7 +60,7 @@
     "typeface-cooper-hewitt": "0.0.44"
   },
   "devDependencies": {
-    "@reasonml-community/graphql-ppx": "^1.0.0-beta.22",
+    "@reasonml-community/graphql-ppx": "^1.0.0",
     "bs-platform": "^8.2.0",
     "concurrently": "^5.3.0",
     "gatsby-plugin-goatcounter": "^0.4.0",

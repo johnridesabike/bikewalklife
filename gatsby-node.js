@@ -1,5 +1,5 @@
-const Path = require("path");
-const Process = require("process");
+const path = require("path");
+const process = require("process");
 const {
   createPages,
   onCreatePage
@@ -113,9 +113,9 @@ module.exports = {
         slug: 
           node.frontmatter.slug !== undefined && node.frontmatter.slug !== ""
             ? node.frontmatter.slug
-            : Path.basename(node.fileAbsolutePath, ".md"),
+            : path.basename(node.fileAbsolutePath, ".md"),
         published:
-          Process.env.NODE_ENV === "development" 
+          process.env.NODE_ENV === "development" 
             ? true 
             : !node.frontmatter.draft,
         year: date.getFullYear(),

@@ -2,9 +2,9 @@
 
 %graphql(
   `
-  query ArchiveQuery($skip: Int!, $limit: Int!) {
+  query ArchiveQuery($skip: Int!, $limit: Int!) @ppxConfig(inline: true) {
     allPost(
-      sort: { fields: [date], order: [DESC] },
+      sort: {fields: [date], order: [DESC]},
       limit: $limit,
       skip: $skip,
       filter: {published: {eq: true}}
@@ -27,8 +27,7 @@
       }
     }
   }
-`;
-  {inline: true};
+  `
 )
 
 type pageContext = t_variables = {
