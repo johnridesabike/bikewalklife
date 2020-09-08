@@ -30,6 +30,7 @@ module PluginFeed = {
           title
           date @ppxCustom(module: "DateTime")
           externalLink
+          author
           parent {
             ... on MarkdownRemark {
               __typename
@@ -113,44 +114,65 @@ module PluginFeed = {
         serialize: ({query}) => {
           let ({Site.site: site}, {AllPosts.allPost: {nodes}, strings}) =
             Serialize.unsafeParse(query)
-          Array.map(nodes, ({slug, year, month, title, date, externalLink, parent}) =>
-            switch site {
-            | Some({siteMetadata: {siteUrl: site_url, _}}) =>
-              let url = Router.toStringWithBase(
-                Entry({year: year, month: month, slug: slug}),
-                site_url,
-              )
-              let urlWithCampaign = {
-                let params =
-                  [("ref", "feed")]
-                  ->Webapi.Url.URLSearchParams.makeWithArray
-                  ->Webapi.Url.URLSearchParams.toString
-                let url = Webapi.Url.make(url) // clone the url
-                Webapi.Url.setSearch(url, params)
-                Webapi.Url.href(url)
+          switch site {
+          | Some({siteMetadata: {siteUrl: site_url, _}}) =>
+            Array.map(
+              nodes,
+              (
+                {
+                  slug,
+                  year,
+                  month,
+                  title,
+                  date,
+                  externalLink,
+                  parent,
+                  author
+                }
+              ) => {
+                let url = Router.toStringWithBase(
+                  Entry({year: year, month: month, slug: slug}),
+                  site_url,
+                )
+                let urlWithCampaign = {
+                  let params =
+                    [("ref", "feed")]
+                    ->Webapi.Url.URLSearchParams.makeWithArray
+                    ->Webapi.Url.URLSearchParams.toString
+                  let url = Webapi.Url.make(url) // clone the url
+                  Webapi.Url.setSearch(url, params)
+                  Webapi.Url.href(url)
+                }
+                Externals.Rss.Item.options(
+                  ~title,
+                  ~description=switch parent {
+                  | Some(#MarkdownRemark({excerpt: Some(excerpt), _})) =>
+                    excerpt
+                  | Some(#UnspecifiedFragment(_))
+                  | Some(#MarkdownRemark(_))
+                  | None => ""
+                  },
+                  ~date,
+                  ~url=urlWithCampaign,
+                  ~guid=url,
+                  ~custom_elements=switch parent {
+                  | Some(#MarkdownRemark({html: Some(html), _})) => [
+                      Externals.Rss.CustomElement({
+                        "content:encoded":
+                          html ++ renderLink(~strings, externalLink),
+                      }),
+                      Externals.Rss.CustomElement({"dc:creator": author}),
+                    ]
+                  | Some(#UnspecifiedFragment(_))
+                  | Some(#MarkdownRemark(_))
+                  | None => []
+                  },
+                  (),
+                )
               }
-              Externals.Rss.Item.options(
-                ~title,
-                ~description=switch parent {
-                | Some(#MarkdownRemark({excerpt: Some(excerpt), _})) => excerpt
-                | Some(#UnspecifiedFragment(_)) | Some(#MarkdownRemark(_)) | None => ""
-                },
-                ~date,
-                ~url=urlWithCampaign,
-                ~guid=url,
-                ~custom_elements=switch parent {
-                | Some(#MarkdownRemark({html: Some(html), _})) => [
-                    Externals.Rss.CustomElement({
-                      "content:encoded": html ++ renderLink(~strings, externalLink),
-                    }),
-                  ]
-                | Some(#UnspecifiedFragment(_)) | Some(#MarkdownRemark(_)) | None => []
-                },
-                (),
-              )
-            | None => failwith("PluginFeed.serialize")
-            }
-          )
+            )
+          | None => failwith("PluginFeed.serialize")
+          }
         },
         query: AllPosts.query,
         output: config["feed_url"],
