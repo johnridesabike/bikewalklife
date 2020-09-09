@@ -1,7 +1,7 @@
 ---
 date: 2020-09-09T17:12:49-04:00
-draft: true
-title: A Quick Brown Fox Reviews the Burley Travoy Trailer
+draft: false
+title: A Quick Brown Fox reviews the Burley Travoy trailer
 author: John Jackson
 hero_image:
   image: "/content/images/2020/travoy-trailer.jpeg"
@@ -15,7 +15,7 @@ tags:
 slug: ''
 
 ---
-Ayesha writes:
+[Ayesha writes](https://www.aquickbrownfox.com/blog/2020/9/4/product-review-burley-travoy-trailer):
 
 > [The Burley Travoy®](https://www.burley.com/product/travoy/) is impressive. If I don’t win the #CarryShitOlympics with this thing, I deserve a podium spot at least. It’s super steady, not super wide, and didn’t even flinch when I was doing crit turns on a road bike. I went for it at full speed, and the trailer came right along with me. I didn’t even feel it back there!
 >
