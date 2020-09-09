@@ -22,5 +22,3 @@ attention to the seriousness of bicycle safety.
 > City of Dunwoody Officer Forman is trying to identify the owner of the car in order to press appropriate charges, which I expect will include the expanded charges under the Vulnerable Road User ordinance.
 
 [There's a follow-up article here.](https://travelingatthespeedofbike.com/2020/07/16/thank-you-fox-5-atlanta/)
-
-![](/content/images/2020/greg-bike.jpg)
