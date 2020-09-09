@@ -49,10 +49,10 @@ fields:
   type: text
   label: Email
 - name: subscribe_feed_cta
-  label: "Subscribe call-to-action: feed"
+  label: 'Subscribe call-to-action: feed'
   type: text
 - name: subscribe_email_cta
-  label: "Subscribe call-to-action: email"
+  label: 'Subscribe call-to-action: email'
   type: text
 pages:
 - content/data/strings.yaml
