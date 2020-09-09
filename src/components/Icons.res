@@ -39,3 +39,10 @@ module Rss = {
     (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
     "Rss"
 }
+
+module Mail = {
+  @bs.module("react-feather") @react.component
+  external make:
+    (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
+    "Mail"
+}

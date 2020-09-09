@@ -3,11 +3,6 @@
 %graphql(
   `
   query AboutPage @ppxConfig(inline: true) {
-    site {
-      siteMetadata {
-        feedUrl
-      }
-    }
     dataYaml(page: {eq: ABOUT}) {
       title
       intro
@@ -19,13 +14,10 @@
 
 @react.component
 let default = (~data) =>
-  switch parse(data) {
-  | {
-      site: Some({siteMetadata: {feedUrl}}),
-      dataYaml: Some({title, intro, body})
-    } =>
+  switch data->unsafe_fromJson->parse {
+  | {dataYaml: Some({title, intro, body})} =>
     <Layout title=String("About") route=About>
-      <article>
+      <main>
         {switch title {
         | Some(title) => <h1> {title->React.string} </h1>
         | None => React.null
@@ -40,19 +32,10 @@ let default = (~data) =>
           <div className="serif" dangerouslySetInnerHTML={"__html": body} />
         | None => React.null
         }}
-        <h2> {"Subscribe"->React.string} </h2>
-        <dl className="ui-font font-size-small">
-          <dt> {"Feed"->React.string} </dt>
-          <dd>
-            <a href=feedUrl>
-              <span ariaHidden=true>
-                <Icons.Rss className="icon" />
-              </span>
-              {"RSS"->React.string}
-            </a>
-          </dd>
-        </dl>
-      </article>
+      </main>
+      <aside>
+        <Subscribe />
+      </aside>
     </Layout>
   | _ => <Page_404 />
   }

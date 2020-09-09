@@ -13,10 +13,10 @@
 
 @react.component
 let default = (~data) =>
-  switch parse(data) {
+  switch data->unsafe_fromJson->parse {
   | {dataYaml: Some({contact_text, contact_form})} =>
     <Layout title=String("About") route=Contact>
-      <article>
+      <main>
         <h1> {"Contact"->React.string} </h1>
         {switch contact_text {
         | Some(text) =>
@@ -27,7 +27,7 @@ let default = (~data) =>
         | Some(true) => <Contact_Form />
         | _ => React.null
         }}
-      </article>
+      </main>
     </Layout>
   | _ => <Page_404 />
   }

@@ -13,7 +13,7 @@ module Form = {
           <Externals.VisuallyHidden>
             <label>
               {"Don't fill this out"->React.string}
-              <input name=honeypot />
+              <input name=honeypot tabIndex=(-1) />
             </label>
           </Externals.VisuallyHidden>
         </div>

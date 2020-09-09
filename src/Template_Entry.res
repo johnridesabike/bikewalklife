@@ -78,7 +78,7 @@ type pageContext = {
 module About = {
   @react.component
   let make = (~title, ~description, ~strings) =>
-    <div className="entry-page__about">
+    <section className="entry-page__about">
       <h2 className="entry-page__footer-heading">
         {"About " ++ title |> React.string}
       </h2>
@@ -108,12 +108,12 @@ module About = {
         </>
       | _ => React.null
       }}
-    </div>
+    </section>
 }
 
 @react.component
 let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
-  switch parse(data) {
+  switch data->unsafe_fromJson->parse {
   | {
       post:
         Some({
@@ -149,39 +149,43 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         | _ => React.null
         }}
       </BsReactHelmet>
-      <Entry
-        body={<div dangerouslySetInnerHTML={"__html": html} />}
-        route=Entry({year, month, slug})
-        heroImage={switch heroImage {
-        | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>
-          Entry.Image.make(
-            ~alt?,
-            Gatsby.Img.Fluid.makeWithWebpSvg(fluid),
-            AboveFold
-          )
-        | _ => Entry.Image.empty
-        }}
-        imageCaption={switch heroImage {
-        | Some({caption, _}) => caption
-        | _ => None
-        }}
-        title
-        linkedHeader=Unlinked
-        isoDate
-        date
-        draft
-        footer={<footer className="entry-page__footer">
-          {switch externalLink {
-          | Some(href) => <Entry.OriginalLink href />
-          | None => React.null
+      <main>
+        <Entry
+          body={<div dangerouslySetInnerHTML={"__html": html} />}
+          route=Entry({year, month, slug})
+          heroImage={switch heroImage {
+          | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>
+            Entry.Image.make(~alt?, fluid, AboveFold)
+          | _ => Entry.Image.empty
           }}
-          {switch about {
-          | Some({intro: Some(intro)}) =>
-            <About title=siteTitle description=intro strings />
-          | _ => React.null
+          imageCaption={switch heroImage {
+          | Some({caption, _}) => caption
+          | _ => None
           }}
-        </footer>}
-      />
+          title
+          linkedHeader=Unlinked
+          isoDate
+          date
+          draft
+          footer={<footer className="entry-page__footer">
+            {switch externalLink {
+            | Some(href) => <Entry.OriginalLink href />
+            | None => React.null
+            }}
+          </footer>}
+        />
+      </main>
+      <hr className="separator" />
+      <aside className="ui-font">
+        {switch about {
+        | Some({intro: Some(intro)}) =>
+          <About title=siteTitle description=intro strings />
+        | _ => React.null
+        }}
+        <hr className="separator" />
+        <Subscribe />
+      </aside>
+      <hr className="separator" />
       <nav className="entry-page__nav">
         {switch related {
         | [] => React.null
@@ -203,6 +207,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
               )
               ->React.array}
             </ul>
+            <hr className="separator" />
           </>
         }}
         <h2 className="entry-page__footer-heading">
@@ -236,7 +241,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
                 route=Entry({year, month, slug})
                 className="entry-page__recent-link"
                 style={ReactDOMRe.Style.make(~justifyContent="flex-end", ())}>
-                <span style={ReactDOMRe.Style.make(~textAlign="right", ())}>
+                <span>
                   <Externals.VisuallyHidden>
                     {"Next post: "->React.string}
                   </Externals.VisuallyHidden>

@@ -36,53 +36,51 @@ type pageContext = t_variables = {
 }
 
 @react.component
-let default = (
-  ~data as {
-    Raw.allPost: {
-      nodes,
-      pageInfo: {currentPage, hasNextPage, hasPreviousPage}
-    }
-  },
-) =>
+let default = (~data) => {
+  let {
+    Raw.allPost: {nodes, pageInfo: {currentPage, hasNextPage, hasPreviousPage}}
+  } = unsafe_fromJson(data)
   <Layout
     title={switch currentPage {
     | 1 => String("Archive")
     | currentPage => String("Archive page " ++ Int.toString(currentPage))
     }}
     route=Archive(currentPage)>
-    <h1 className="archive__page-title"> {"Archive"->React.string} </h1>
-    {nodes
-    ->Array.map(
-      ({id, title, externalLink, date, isoDate, draft, slug, year, month}) =>
-        <div key=id className="archive__entry">
-          <Router.Link
-            route=Entry({year: year, month: month, slug: slug})
-            className="archive__entry-title">
-            {title->React.string}
-          </Router.Link>
-          <Entry.Date
-            date={DateTime.parse(date)}
-            isoDate={DateTime.parse(isoDate)} />
-          {if draft {
-            <div className="entry__draft"> {"Draft"->React.string} </div>
-          } else {
-            React.null
-          }}
-          {switch Js.Nullable.toOption(externalLink) {
-          | Some(href) => <Entry.OriginalLink href />
-          | None => React.null
-          }}
+    <main>
+      <h1 className="archive__page-title"> {"Archive"->React.string} </h1>
+      {nodes
+      ->Array.map(
+        ({id, title, externalLink, date, isoDate, draft, slug, year, month}) =>
+          <div key=id className="archive__entry">
+            <Router.Link
+              route=Entry({year: year, month: month, slug: slug})
+              className="archive__entry-title">
+              {title->React.string}
+            </Router.Link>
+            <Entry.Date
+              date={DateTime.parse(date)}
+              isoDate={DateTime.parse(isoDate)} />
+            {if draft {
+              <div className="entry__draft"> {"Draft"->React.string} </div>
+            } else {
+              React.null
+            }}
+            {switch Js.Nullable.toOption(externalLink) {
+            | Some(href) => <Entry.OriginalLink href />
+            | None => React.null
+            }}
+          </div>
+      )
+      ->React.array}
+      {if hasPreviousPage || hasNextPage {
+        <div className="archive__nav-title">
+          {"Page "->React.string}
+          {currentPage->React.int}
         </div>
-    )
-    ->React.array}
-    {if hasPreviousPage || hasNextPage {
-      <div className="archive__nav-title">
-        {"Page "->React.string}
-        {currentPage->React.int}
-      </div>
-    } else {
-      React.null
-    }}
+      } else {
+        React.null
+      }}
+    </main>
     <nav className="archive__nav">
       <div>
         {if hasPreviousPage {
@@ -106,3 +104,4 @@ let default = (
       </div>
     </nav>
   </Layout>
+}

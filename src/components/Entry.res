@@ -15,7 +15,7 @@ module OriginalLink = {
   let make = (~href, ~className="") => {
     let data =
       EntryStrings.query
-      ->Gatsby.useStaticQueryUnsafe
+      ->EntryStrings.useStaticQuery
       ->EntryStrings.parse
     <div className={Cn.append("entry__link", className)}>
       <a href target="_blank" rel="noopener">

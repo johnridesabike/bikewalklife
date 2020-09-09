@@ -1,7 +1,3 @@
-module Raw: {
-  type t
-}
-
 let query: string
 
 module Neighbor: {
@@ -22,4 +18,4 @@ type pageContext = {
 }
 
 @react.component
-let default: (~data: Raw.t, ~pageContext: pageContext) => React.element
+let default: (~data: Js.Json.t, ~pageContext: pageContext) => React.element

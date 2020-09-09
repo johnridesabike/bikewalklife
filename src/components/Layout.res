@@ -55,7 +55,7 @@ module Logo = {
 
 @react.component
 let make = (~title as pageTitle, ~route=?, ~children) =>
-  switch query->Gatsby.useStaticQueryUnsafe->parse {
+  switch query->useStaticQuery->parse {
   | {site: Some({siteMetadata: {siteTitle, description, siteUrl}}), strings} =>
     <div className="page">
       <BsReactHelmet>
@@ -139,7 +139,7 @@ let make = (~title as pageTitle, ~route=?, ~children) =>
         </div>
       </header>
       <Externals.SkipNav.Content />
-      <main className="small-screen-padding content"> children </main>
+      <div className="small-screen-padding content"> children </div>
       <footer className="footer__wrapper">
         <div className="small-screen-padding footer">
           {switch strings {

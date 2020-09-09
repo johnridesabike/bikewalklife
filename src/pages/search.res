@@ -14,10 +14,10 @@
 
 @react.component
 let default = (~data) =>
-  switch parse(data) {
+  switch data->unsafe_fromJson->parse {
   | {site: Some({siteMetadata: {siteUrl}})} =>
     <Layout title=String("Search") route=Search>
-      <div style={ReactDOMRe.Style.make(~margin="3em 0", ())}>
+      <main style={ReactDOMRe.Style.make(~margin="3em 0", ())}>
         <h1 style={ReactDOMRe.Style.make(~textAlign="center", ())}>
           {"Search"->React.string}
         </h1>
@@ -38,7 +38,7 @@ let default = (~data) =>
             (),
           )}
         />
-      </div>
+      </main>
     </Layout>
   | _ => <Page_404 />
   }

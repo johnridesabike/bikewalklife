@@ -17,7 +17,7 @@ module Image: {
 
   let empty: t
 
-  let make: (~alt: string=?, Gatsby.Img.Fluid.t, position) => t
+  let make: (~alt: string=?, 'fluid, position) => t
 }
 
 type linked =

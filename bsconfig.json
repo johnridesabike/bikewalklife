@@ -46,6 +46,7 @@
   },
   "graphql": {
     "template-tag": "graphql",
-    "fragment-in-query": "exclude"
+    "fragment-in-query": "exclude",
+    "extendQuery": "Gatsby.ExtendQuery"
   }
 }

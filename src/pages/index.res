@@ -44,76 +44,98 @@ open QueryFragments
 
 @react.component
 let default = (~data) => {
-  let data = parse(data)
+  let data = data->unsafe_fromJson->parse
   <Layout title=Site route=Index>
-    {data.allPost.nodes
-    ->Array.mapWithIndex(
-      (
-        index,
-        {
-          id,
-          slug,
-          year,
-          month,
-          title,
-          heroImage,
-          isoDate,
-          date,
-          draft,
-          externalLink,
-          parent,
-        }
-      ) =>
-      <Entry
-        key=id
-        body={switch parent {
-        | Some(#MarkdownRemark({html: Some(html), _})) =>
-          <div
-            className="index-page__body"
-            dangerouslySetInnerHTML={"__html": html} />
-        | Some(#UnspecifiedFragment(_)) | Some(#MarkdownRemark(_)) | None =>
-          React.null
-        }}
-        route=Entry({year: year, month: month, slug: slug})
-        title
-        heroImage={switch heroImage {
-        | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>
-          Entry.Image.make(
-            ~alt?,
-            Gatsby.Img.Fluid.makeWithWebpSvg(fluid),
-            switch index {
-            | 0 => AboveFold
-            | _ => BelowFold
-            },
-          )
-        | _ => Entry.Image.empty
-        }}
-        imageCaption={switch heroImage {
-        | Some({caption, _}) => caption
-        | _ => None
-        }}
-        linkedHeader=Linked
-        isoDate
-        date
-        draft
-        footer={
-          <footer>
-            {switch externalLink {
-            | Some(href) => <Entry.OriginalLink href />
-            | None => React.null
+    <main>
+      {data.allPost.nodes
+      ->Array.mapWithIndex(
+        (
+          index,
+          {
+            id,
+            slug,
+            year,
+            month,
+            title,
+            heroImage,
+            isoDate,
+            date,
+            draft,
+            externalLink,
+            parent,
+          }
+        ) =>
+        <React.Fragment key=id>
+          <Entry
+            body={switch parent {
+            | Some(#MarkdownRemark({html: Some(html), _})) =>
+              <div
+                className="index-page__body"
+                dangerouslySetInnerHTML={"__html": html} />
+            | Some(#UnspecifiedFragment(_) | #MarkdownRemark(_)) | None =>
+              React.null
             }}
-            <hr className="index-page__separator" />
-          </footer>
-        }
-      />
-    )
-    ->React.array}
-    {switch data.strings {
-    | Some({archive_link: Some(text)}) =>
-      <div className="index-page__archive-link">
-        <Router.Link route=Archive(1)> {text->React.string} </Router.Link>
-      </div>
-    | _ => React.null
-    }}
+            route=Entry({year: year, month: month, slug: slug})
+            title
+            heroImage={switch heroImage {
+            | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>
+              Entry.Image.make(
+                ~alt?,
+                fluid,
+                switch index {
+                | 0 => AboveFold
+                | _ => BelowFold
+                },
+              )
+            | _ => Entry.Image.empty
+            }}
+            imageCaption={switch heroImage {
+            | Some({caption, _}) => caption
+            | _ => None
+            }}
+            linkedHeader=Linked
+            isoDate
+            date
+            draft
+            footer={
+              <footer>
+                {switch externalLink {
+                | Some(href) => <Entry.OriginalLink href />
+                | None => React.null
+                }}
+              </footer>
+            }
+          />
+          {switch index {
+          | 0 => 
+            <div className="full-bleed">
+              <hr className="separator" />
+              <Subscribe className="small-screen-padding" />
+              <hr className="separator" />
+            </div>
+          | _ => <hr className="separator" />
+          }}
+        </React.Fragment>
+      )
+      ->React.array}
+    </main>
+    <nav>
+      {switch data.strings {
+      | Some({archive_link: Some(text)}) =>
+        <div className="index-page__archive-link">
+          <Router.Link route=Archive(1)>
+            {text->React.string}
+            <span ariaHidden=true>
+              <Icons.ArrowRight className="icon" />
+            </span>
+          </Router.Link>
+        </div>
+      | _ => React.null
+      }}
+    </nav>
+    <hr className="separator" />
+    <aside>
+      <Subscribe />
+    </aside>
   </Layout>
 }
