@@ -1,8 +1,7 @@
 ---
 date: 2020-09-10T12:54:46-04:00
-draft: true
-title: Strong Towns on the difference between the suburban experiment and traditional
-  development
+draft: false
+title: The differences between the Suburban Experiment and traditional development
 author: John Jackson
 hero_image:
   image: ''
@@ -28,4 +27,4 @@ When we think of “the suburbs,” we often imagine specific structures: cul-de
 >
 > > _A city built in the traditional development pattern—the human settlement approach used for millennia across geographies and cultures—has high upside and low downside. In periods of robust growth, it will prosper. In periods of stagnation and decline, it will not fall apart or implode but actually experience innovation and undergo renewal. This is beyond resilience; it is antifragile._
 
-Pattinson then breaks down the seven key differences between the suburban experiment and traditional development using these categories: **origins**, **how we build**, **where the energy comes from**, **scale**, **balancing multiple priorities**, **response to adversity**, and **resilience**. He breaks each of these down into succinct bullet points, and he includes links to further reading for each one. It’s a great primer to what we’re really talking about when we say “the suburban experiment.” 
+Pattinson lists seven categorical differences between the suburban experiment and traditional development: **origins**, **how we build**, **where the energy comes from**, **scale**, **balancing multiple priorities**, **response to adversity**, and **resilience**. He breaks each one into succinct bullet points and includes links to further reading. It’s a great primer to what we’re really talking about when we say “the suburban experiment.”
