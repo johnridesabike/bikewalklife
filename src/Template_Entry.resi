@@ -1,4 +1,4 @@
-let query: string
+let query: Gatsby.query
 
 module Neighbor: {
   type t = {

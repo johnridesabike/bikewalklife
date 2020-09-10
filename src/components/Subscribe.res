@@ -2,7 +2,7 @@
 
 %graphql(
   `
-  query SubscribeQuery @ppxConfig(inline: true) {
+  query SubscribeQuery @ppxConfig(inline: true, extend: "Gatsby.ExtendQuery") {
     site {
       siteMetadata {
         title

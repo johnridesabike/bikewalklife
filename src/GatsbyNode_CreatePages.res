@@ -25,7 +25,7 @@ type t<'data> = {
 
 %graphql(
   `
-  query CreatePages @ppxConfig(taggedTemplate: false) {
+  query CreatePages @ppxConfig(taggedTemplate: false, templateTagReturnType: "string") {
     allPost(
       filter: {published: {eq: true}},
       sort: {fields: [date], order: [DESC]}

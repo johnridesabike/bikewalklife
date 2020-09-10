@@ -1,16 +1,18 @@
+type query
+
 module type GraphQLQuery = {
   module Raw: {
     type t
   }
   type t
-  let query: string
+  let query: query
   external unsafe_fromJson: Js.Json.t => Raw.t = "%identity"
   let parse: Raw.t => t
 }
 
 module ExtendQuery = (M: GraphQLQuery) => {
   @bs.module("gatsby")
-  external useStaticQuery: string => M.Raw.t = "useStaticQuery"
+  external useStaticQuery: query => M.Raw.t = "useStaticQuery"
 }
 
 module Img = {

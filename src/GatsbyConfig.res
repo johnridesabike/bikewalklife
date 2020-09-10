@@ -3,7 +3,7 @@
 module PluginFeed = {
   %graphql(
     `
-    query Site @ppxConfig(taggedTemplate: false) {
+    query Site @ppxConfig(taggedTemplate: false, templateTagReturnType: "string") {
       site {
         siteMetadata {
           title
@@ -17,7 +17,7 @@ module PluginFeed = {
 
   %graphql(
     `
-    query AllPosts @ppxConfig(taggedTemplate: false) {
+    query AllPosts @ppxConfig(taggedTemplate: false, templateTagReturnType: "string") {
       allPost(
         sort: { order: [DESC], fields: [date] },
         filter: {published: {eq: true}}
@@ -185,7 +185,7 @@ module PluginFeed = {
 module PluginSiteMap = {
   %graphql(
     `
-    query SiteMap @ppxConfig(taggedTemplate: false) {
+    query SiteMap @ppxConfig(taggedTemplate: false, templateTagReturnType: "string") {
       site {
         siteMetadata {
           siteUrl

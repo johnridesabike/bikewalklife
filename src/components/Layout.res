@@ -2,7 +2,7 @@
 
 %graphql(
   `
-  query Metadata @ppxConfig(inline: true) {
+  query Metadata @ppxConfig(inline: true, extend: "Gatsby.ExtendQuery") {
     site {
       siteMetadata {
         siteTitle: title
