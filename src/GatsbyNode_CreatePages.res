@@ -10,16 +10,16 @@ type page = {
 
 type actions = {createPage: (. page) => unit}
 
-type graphqlResult<'data> = {
+type graphqlResult = {
   errors: option<Js.Exn.t>,
-  data: 'data,
+  data: Js.Json.t,
 }
 
 type reporter = {panicOnBuild: (. string, Js.Exn.t) => unit}
 
-type t<'data> = {
+type t = {
   actions: actions,
-  graphql: (. string) => Js.Promise.t<graphqlResult<'data>>,
+  graphql: (. string) => Js.Promise.t<graphqlResult>,
   reporter: reporter,
 }
 
@@ -80,7 +80,7 @@ let createPages = (
     switch x {
     | {errors: Some(error), _} => panicOnBuild(. "Error creating pages", error)
     | {data, errors: None} =>
-      switch CreatePages.parse(data) {
+      switch data->CreatePages.unsafe_fromJson->CreatePages.parse {
       | {allPost: {edges}, site: Some({siteMetadata: {archivePerPage}})} =>
         Array.forEach(
           edges,
