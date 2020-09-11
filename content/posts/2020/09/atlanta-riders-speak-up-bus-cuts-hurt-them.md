@@ -1,7 +1,7 @@
 ---
 date: 2020-09-11T13:25:59-04:00
-draft: true
-title: Atlanta’s riders speak up about how bus cut hurt them
+draft: false
+title: Atlanta’s riders speak up about how bus cuts hurt them
 author: John Jackson
 hero_image:
   image: ''
@@ -21,4 +21,4 @@ David Wickert, writing for AJC, published a few of the comments they received fr
 >
 > \- Marsha Fullins
 
-It looks like the pandemic has exasperated the inequalities that have long plagued our transportation system.
+It looks like the pandemic has exasperated the inequalities that have already long plagued our transportation system.
