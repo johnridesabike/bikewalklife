@@ -52,15 +52,7 @@ module PluginFeed = {
     switch (href, strings) {
     | (Some(href), Some({FeedPosts.open_linked: Some(text)})) =>
       ReactDOMServer.renderToStaticMarkup(
-        <p>
-          <a href>
-            {text->React.string}
-            {" "->React.string}
-            <span ariaHidden=true>
-              <Icons.ExternalLink height=16 width=16 />
-            </span>
-          </a>
-        </p>,
+        <p> <a href> {text->React.string} </a> </p>,
       )
     | _ => ""
     }
