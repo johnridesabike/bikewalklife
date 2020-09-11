@@ -54,7 +54,9 @@ module.exports = {
             options: {
               maxWidth: 600,
               linkImagesToOriginal: false,
+              // 414 = width of large iPhone in portrait
               srcSetBreakpoints: [414, 600],
+              withWebp: true,
             },
           },
         ],

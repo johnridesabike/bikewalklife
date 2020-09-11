@@ -74,6 +74,7 @@ let imageFluidSVGWebp = ImageFluid_withWebp_tracedSVG.query
         maxHeight: 450,
         fit: COVER,
         cropFocus: ATTENTION,
+        # 414 = width of large iPhone in portrait
         srcSetBreakpoints: [414, 600, 900],
       ) {
         ...ImageFluid_withWebp_tracedSVG
