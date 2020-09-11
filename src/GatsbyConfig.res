@@ -17,7 +17,7 @@ module PluginFeed = {
 
   %graphql(
     `
-    query AllPosts @ppxConfig(taggedTemplate: false, templateTagReturnType: "string") {
+    query FeedPosts @ppxConfig(taggedTemplate: false, templateTagReturnType: "string") {
       allPost(
         sort: { order: [DESC], fields: [date] },
         filter: {published: {eq: true}}
@@ -34,7 +34,7 @@ module PluginFeed = {
           parent {
             ... on MarkdownRemark {
               __typename
-              excerpt
+              excerpt(pruneLength: 280)
               html
             }
           }
@@ -50,7 +50,7 @@ module PluginFeed = {
 
   let renderLink = (~strings, href) =>
     switch (href, strings) {
-    | (Some(href), Some({AllPosts.open_linked: Some(text)})) =>
+    | (Some(href), Some({FeedPosts.open_linked: Some(text)})) =>
       ReactDOMServer.renderToStaticMarkup(
         <p>
           <a href>
@@ -73,7 +73,7 @@ module PluginFeed = {
       type t
     }
     let unsafeParse = query =>
-      (query->Obj.magic->Site.parse, query->Obj.magic->AllPosts.parse)
+      (query->Obj.magic->Site.parse, query->Obj.magic->FeedPosts.parse)
   }
 
   module Feed = {
@@ -112,7 +112,7 @@ module PluginFeed = {
     feeds: [
       {
         serialize: ({query}) => {
-          let ({Site.site: site}, {AllPosts.allPost: {nodes}, strings}) =
+          let ({Site.site: site}, {FeedPosts.allPost: {nodes}, strings}) =
             Serialize.unsafeParse(query)
           switch site {
           | Some({siteMetadata: {siteUrl: site_url, _}}) =>
@@ -174,7 +174,7 @@ module PluginFeed = {
           | None => failwith("PluginFeed.serialize")
           }
         },
-        query: AllPosts.query,
+        query: FeedPosts.query,
         output: config["feed_url"],
         title: config["title"],
       },
