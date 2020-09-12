@@ -1,10 +1,10 @@
 ---
-date: 2020-09-12T17:30:58-04:00
-draft: true
+date: 2020-09-12T17:30:58.000-04:00
+draft: false
 title: When a demand trail meets a stroad
 author: John Jackson
 hero_image:
-  image: /content/images/2020/img_5002-greyscale.jpeg
+  image: "/content/images/2020/img_5002-greyscale.jpeg"
   alt: Cover photo showing the road under construction.
   caption: ''
 external_link: ''
