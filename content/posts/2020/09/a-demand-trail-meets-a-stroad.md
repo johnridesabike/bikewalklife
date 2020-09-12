@@ -1,25 +1,25 @@
 ---
 date: 2020-09-12T17:30:58-04:00
 draft: true
-title: A demand trail meets a stroad
+title: When a demand trail meets a stroad
 author: John Jackson
 hero_image:
-  image: ''
-  alt: ''
+  image: /content/images/2020/img_5002-greyscale.jpeg
+  alt: Cover photo showing the road under construction.
   caption: ''
 external_link: ''
 tags:
 - originals
-- photos
+- photography
 - demand trail
 - stroad
 - pedestrian
 slug: ''
 
 ---
-![Photograph of a trail across grass and leading to a road.](/content/images/2020/img_5002.jpeg)
-
 This tiny trail has existed since before I moved here, five years ago. It's a “demand trail.” Those are formed when people regularly need to cross an area with no paved path.
+
+![Photograph of a trail across grass and leading to a road.](/content/images/2020/img_5002.jpeg)
 
 Some storefronts are across the street. A neighborhood is behind me. But even if I had a wider shot, you still wouldn't be able to see any crosswalks. There aren't any in sight.
 
