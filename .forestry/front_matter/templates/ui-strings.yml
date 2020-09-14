@@ -50,9 +50,19 @@ fields:
   label: Email
 - name: subscribe_feed_cta
   label: 'Subscribe call-to-action: feed'
-  type: text
+  type: textarea
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: html
 - name: subscribe_email_cta
   label: 'Subscribe call-to-action: email'
-  type: text
+  type: textarea
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: html
 pages:
 - content/data/strings.yaml

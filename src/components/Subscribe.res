@@ -42,9 +42,7 @@ let make = (~className="") =>
           </dd>
           {switch strings {
           | Some({subscribe_feed_cta: Some(text), _}) =>
-            <dd>
-              {text->React.string}
-            </dd>
+            <dd dangerouslySetInnerHTML={"__html": text} />
           | _ => React.null
           }}
           </div>
@@ -60,9 +58,7 @@ let make = (~className="") =>
           </dd>
           {switch strings {
           | Some({subscribe_email_cta: Some(text), _}) =>
-            <dd>
-              {text->React.string}
-            </dd>
+            <dd dangerouslySetInnerHTML={"__html": text} />
           | _ => React.null
           }}
         </div>
