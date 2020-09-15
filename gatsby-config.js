@@ -49,6 +49,7 @@ module.exports = {
         plugins: [
           
           "gatsby-remark-normalize-paths",
+          "gatsby-remark-copy-linked-files",
           {
             resolve: "gatsby-remark-images",
             options: {
