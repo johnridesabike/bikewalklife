@@ -29,6 +29,7 @@ open QueryFragments
       parent {
         ... on MarkdownRemark {
           html
+          excerpt(pruneLength: 140)
         }
       }
       related {
@@ -122,7 +123,12 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           isoDate,
           draft,
           externalLink,
-          parent: Some(#MarkdownRemark({html: Some(html), _})),
+          parent: Some(
+            #MarkdownRemark({
+              html: Some(html),
+              excerpt: Some(excerpt)
+            })
+          ),
           related,
         }),
       site: Some({siteMetadata: {siteTitle, siteUrl}}),
@@ -147,10 +153,19 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
               <meta name="twitter:image:alt" content=alt />
             | _ => React.null
             }}
+            {switch alt {
+            | Some(alt) =>
+              <meta property="og:image:alt" content=alt />
+            | _ => React.null
+            }}
+            <meta name="description" content=excerpt />
+            <meta property="og:description" content=excerpt />
           </BsReactHelmet>
       | _ =>
         <BsReactHelmet>
           <meta name="twitter:card" content="summary" />
+          <meta name="description" content=excerpt />
+          <meta property="og:description" content=excerpt />
         </BsReactHelmet>
       }}
       <main>
