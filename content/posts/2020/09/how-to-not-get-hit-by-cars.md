@@ -20,7 +20,7 @@ A lot of biking resources try to downplay or avoid talking about these dangers. 
 
 > **This page shows you real ways you can get hit and real ways to avoid them.** This is a far cry from normal bicycle safety guides, which usually tell you little more than to wear your helmet and to follow the law.
 
-I suppose many of us who promote bicycles don’t talk about this as to avoid adding stress and scaring away potential converts, especially when we are already fighting the popular misconception that biking is more deadly than other forms of transportation. However, cars pose real threats that any bike rider should be aware of. Bluejay’s guide doesn’t mince words and lays everything out in much-appreciated clarity. 
+I suppose many of us who promote bicycles don’t talk about this as to avoid adding stress and scaring away potential converts, especially when we are already fighting the popular misconception that biking is more dangerous than other forms of transportation. But we must face the reality that cars real threats that every bike rider should be aware of. Bluejay’s guide doesn’t mince words and lays everything out in much-appreciated clarity.
 
 I also quite like the banner he made for anyone linking to his site:
 
