@@ -1,5 +1,5 @@
 ---
-date: 2020-09-15T11:15:55-04:00
+date: 2020-09-15T11:15:55.000-04:00
 draft: false
 title: How to Not Get Hit by Cars
 author: John Jackson
@@ -26,6 +26,6 @@ I suppose many of us bike riders don’t like to use language like “how to not
 
 Even with safety education, crashes are still possible due to our dangerous-by-design streets and vehicles. If you want to dive deeper into those scenarios, [Bike Law’s website](https://www.bikelaw.com/learn/) has excellent information.
 
-I also quite like the banner Bluejay made for anyone linking to BicycleSafety.com:
+I also quite like the banner Bluejay made for anyone linking to BicycleSafe.com:
 
 [![“How to Not Get Hit By Cars” banner.](/content/images/2020/bikesafe-banner.gif)](https://bicyclesafe.com)
