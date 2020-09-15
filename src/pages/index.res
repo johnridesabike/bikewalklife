@@ -67,13 +67,9 @@ let default = (~data) => {
         ) =>
         <React.Fragment key=id>
           <Entry
-            body={switch parent {
-            | Some(#MarkdownRemark({html: Some(html), _})) =>
-              <div
-                className="index-page__body"
-                dangerouslySetInnerHTML={"__html": html} />
-            | Some(#UnspecifiedFragment(_) | #MarkdownRemark(_)) | None =>
-              React.null
+            html={switch parent {
+            | Some(#MarkdownRemark({html: Some(html), _})) => html
+            | Some(#UnspecifiedFragment(_) | #MarkdownRemark(_)) | None => ""
             }}
             route=Entry({year: year, month: month, slug: slug})
             title

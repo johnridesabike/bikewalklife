@@ -28,7 +28,6 @@ open QueryFragments
       }
       parent {
         ... on MarkdownRemark {
-          __typename
           html
         }
       }
@@ -131,27 +130,32 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       strings,
     } =>
     <Layout title=String(title) route=Entry({year, month, slug})>
-      <BsReactHelmet>
-        {switch heroImage {
-        | Some({image: Some({sharp: Some({fluid: Some({src, _}), _})}), _}) =>
-          <meta
-            property="og:image"
-            content={
-              open Webapi.Url
-              makeWith(src, ~base=siteUrl)->href
-            }
-          />
-        | _ => React.null
-        }}
-        {switch heroImage {
-        | Some({alt: Some(alt), _}) =>
-          <meta name="twitter:image:alt" content=alt />
-        | _ => React.null
-        }}
-      </BsReactHelmet>
+      {switch heroImage {
+      | Some({
+          alt,
+          image: Some({sharp: Some({fluid: Some({src, _}), _})}),
+          _
+        }) =>
+          <BsReactHelmet>
+            <meta
+              property="og:image"
+              content={src->Webapi.Url.makeWith(~base=siteUrl)->Webapi.Url.href}
+            />
+            <meta name="twitter:card" content="summary_large_image"/ >
+            {switch alt {
+            | Some(alt) =>
+              <meta name="twitter:image:alt" content=alt />
+            | _ => React.null
+            }}
+          </BsReactHelmet>
+      | _ =>
+        <BsReactHelmet>
+          <meta name="twitter:card" content="summary" />
+        </BsReactHelmet>
+      }}
       <main>
         <Entry
-          body={<div dangerouslySetInnerHTML={"__html": html} />}
+          html
           route=Entry({year, month, slug})
           heroImage={switch heroImage {
           | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>

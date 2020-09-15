@@ -63,6 +63,7 @@ let imageFluidSVG = ImageFluid_tracedSVG.query
   `
 )
 
+/* Export the query in a way Gatsby can read it. */
 let imageFluidSVGWebp = ImageFluid_withWebp_tracedSVG.query
 
 %graphql(

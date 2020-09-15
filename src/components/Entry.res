@@ -78,7 +78,7 @@ type linked =
 
 @react.component
 let make = (
-  ~body,
+  ~html,
   ~route,
   ~title,
   ~linkedHeader,
@@ -126,7 +126,7 @@ let make = (
           React.null
         }}
       </header>
-      body
+      <div dangerouslySetInnerHTML={"__html": html} />
       footer
     </div>
   </article>

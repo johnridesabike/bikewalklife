@@ -569,10 +569,6 @@ dd {
  * Index page
  ******************************************************************************/
 
-.index-page__body {
-  margin-bottom: 0;
-}
-
 .index-page__keep-reading {
   text-align: right;
   font-size: var(--font-size-md);

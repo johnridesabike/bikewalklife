@@ -73,6 +73,7 @@ let make = (~title as pageTitle, ~route=?, ~children) =>
         <meta name="description" content=description />
         <meta property="og:description" content=description />
         <meta property="og:site_name" content=siteTitle />
+        <meta name="twitter:site" content="@BikeWalkLife" />
         {switch route {
         | Some(route) =>
           <link
