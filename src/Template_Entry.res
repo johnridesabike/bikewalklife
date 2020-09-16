@@ -158,16 +158,15 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
               <meta property="og:image:alt" content=alt />
             | _ => React.null
             }}
-            <meta name="description" content=excerpt />
-            <meta property="og:description" content=excerpt />
           </BsReactHelmet>
-      | _ =>
-        <BsReactHelmet>
-          <meta name="twitter:card" content="summary" />
-          <meta name="description" content=excerpt />
-          <meta property="og:description" content=excerpt />
-        </BsReactHelmet>
+      | _ => React.null
       }}
+      <BsReactHelmet>
+        <meta name="description" content=excerpt />
+        <meta property="og:description" content=excerpt />
+        <meta property="og:type" content="article" />
+        <meta property="article:published_time" content=isoDate />
+      </BsReactHelmet>
       <main>
         <Entry
           html

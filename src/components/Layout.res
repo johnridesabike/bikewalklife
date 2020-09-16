@@ -59,7 +59,9 @@ let make = (~title as pageTitle, ~route=?, ~children) =>
   | {site: Some({siteMetadata: {siteTitle, description, siteUrl}}), strings} =>
     <div className="page">
       <BsReactHelmet>
-        <html lang="en" />
+        <html
+          lang="en"
+          prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#"/>
         <title>
           {switch pageTitle {
           | Site => siteTitle->React.string
@@ -73,7 +75,7 @@ let make = (~title as pageTitle, ~route=?, ~children) =>
         <meta name="description" content=description />
         <meta property="og:description" content=description />
         <meta property="og:site_name" content=siteTitle />
-        <meta name="twitter:site" content="@BikeWalkLife" />
+        <meta property="og:type" content="website" />
         {switch route {
         | Some(route) =>
           <link
@@ -88,6 +90,8 @@ let make = (~title as pageTitle, ~route=?, ~children) =>
             content={Router.toStringWithBase(route, siteUrl)} />
         | None => React.null
         }}
+        <meta name="twitter:site" content="@BikeWalkLife" />
+        <meta name="twitter:card" content="summary" />
       </BsReactHelmet>
       <Externals.SkipNav.Link />
       <header className="ui-font header__wrapper">
