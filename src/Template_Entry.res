@@ -32,7 +32,7 @@ open QueryFragments
           excerpt(pruneLength: 140)
         }
       }
-      related {
+      related(limit: 8) {
         id
         title
         year

@@ -33,7 +33,7 @@ module.exports = {
         """
         A list of posts with any of the same tags.
         """
-        related: [Post!]!
+        related(limit: Int): [Post!]!
       }
 
       type HeroImage @dontinfer {
@@ -41,11 +41,11 @@ module.exports = {
         alt: String
         caption: String
       }
-  
+
       type Site implements Node @dontinfer {
         siteMetadata: SiteMetadata!
       }
-  
+
       type SiteMetadata @dontinfer {
         title: String!
         description: String!
@@ -53,11 +53,11 @@ module.exports = {
         siteUrl: String!
         feedUrl: String!
       }
-  
+
       type DataYaml implements Node {
         page: YamlPageId
       }
-  
+
       enum YamlPageId {
         ABOUT
         AUTHORS
@@ -69,23 +69,38 @@ module.exports = {
     createResolvers({
       Post: {
         related: {
+          // https://www.gatsbyjs.com/docs/node-model/#runQuery
+          // I have no knowledge of this function's performance. It may be
+          // worthwhile to test it once my data grows larger.
+          // E.g.: Due to how Gatsby caches query results, it may be more
+          // performant to filter the result rather than in the query.
           resolve: (source, args, context, _info) =>
-            context.nodeModel.runQuery({
-              type: "Post",
-              firstOnly: false,
-              query: {
-                sort: {
-                  fields: ["date"],
-                  order: ["DESC"]
-                },
-                filter: {
-                  tags: {in: source.tags},
-                  id: {ne: source.id},
-                  published: {eq: true},
+            context.nodeModel.runQuery(
+              {
+                type: "Post",
+                firstOnly: false,
+                query: {
+                  sort: {
+                    fields: ["date"],
+                    order: ["DESC"],
+                  },
+                  filter: {
+                    tags: {in: source.tags},
+                    id: {ne: source.id},
+                    published: {eq: true},
+                  },
                 },
               },
-            }).then(
-              result => result || []
+            ).then(
+              result => {
+                if (!result) {
+                  return [];
+                } else if (args.limit) {
+                  return result.slice(0, args.limit);
+                } else {
+                  return result;
+                }
+              }
             )
         },
       },
