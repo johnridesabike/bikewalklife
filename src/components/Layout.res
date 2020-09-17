@@ -72,8 +72,10 @@ let make = (~title as pageTitle, ~route=?, ~children) =>
         | Site => <meta property="og:title" content=siteTitle />
         | String(pageTitle) => <meta property="og:title" content=pageTitle />
         }}
-        <meta name="description" content=description />
-        <meta property="og:description" content=description />
+        <meta
+          name="description"
+          property="og:description"
+          content=description />
         <meta property="og:site_name" content=siteTitle />
         <meta property="og:type" content="website" />
         {switch route {

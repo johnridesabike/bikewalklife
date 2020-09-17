@@ -19,6 +19,7 @@ open QueryFragments
       isoDate: date @ppxCustom(module: "DateTime")
       date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
       draft
+      author
       heroImage {
         alt
         caption
@@ -122,6 +123,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           date,
           isoDate,
           draft,
+          author,
           externalLink,
           parent: Some(
             #MarkdownRemark({
@@ -150,20 +152,18 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
             <meta name="twitter:card" content="summary_large_image"/ >
             {switch alt {
             | Some(alt) =>
-              <meta name="twitter:image:alt" content=alt />
-            | _ => React.null
-            }}
-            {switch alt {
-            | Some(alt) =>
-              <meta property="og:image:alt" content=alt />
+              <meta
+                name="twitter:image:alt"
+                property="og:image:alt"
+                content=alt />
             | _ => React.null
             }}
           </BsReactHelmet>
       | _ => React.null
       }}
       <BsReactHelmet>
-        <meta name="description" content=excerpt />
-        <meta property="og:description" content=excerpt />
+        <meta name="description" property="og:description" content=excerpt />
+        <meta name="author" content=author />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content=isoDate />
       </BsReactHelmet>
