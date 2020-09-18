@@ -1,5 +1,5 @@
 ---
-date: 2020-08-20T16:37:06-04:00
+date: 2020-08-20T16:37:06.000-04:00
 draft: false
 title: New study shows how larger vehicles and wider roads are the cause of increased
   pedestrian deaths
@@ -11,6 +11,7 @@ hero_image:
 external_link: https://www.ssti.us/2020/08/whats-driving-pedestrian-deaths-darkness-speed-wider-roads-and-larger-vehicles/
 tags:
 - violence
+- SUV
 slug: study-larger-vehicles-wider-roads-increased-deaths
 
 ---
