@@ -16,7 +16,7 @@
 let default = (~data) =>
   switch data->unsafe_fromJson->parse {
   | {site: Some({siteMetadata: {siteUrl}})} =>
-    <Layout title=String("Search") route=Search>
+    <Layout metadata=Title({title: "Search", route: Search})>
       <main style={ReactDOMRe.Style.make(~margin="3em 0", ())}>
         <h1 style={ReactDOMRe.Style.make(~textAlign="center", ())}>
           {"Search"->React.string}

@@ -28,7 +28,6 @@
   "bs-dependencies": [
     "reason-react",
     "re-classnames",
-    "@moox/bs-react-helmet",
     "reason-promise",
     "@reasonml-community/graphql-ppx",
     "re-formality",

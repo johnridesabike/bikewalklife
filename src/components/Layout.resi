@@ -3,4 +3,4 @@ type metadata =
   | String(string)
 
 @react.component
-let make: (~title: metadata, ~route: Router.t=?, ~children: React.element) => React.element
+let make: (~metadata: Metadata.t, ~children: React.element) => React.element

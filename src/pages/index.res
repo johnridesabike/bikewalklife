@@ -45,7 +45,7 @@ open QueryFragments
 @react.component
 let default = (~data) => {
   let data = data->unsafe_fromJson->parse
-  <Layout title=Site route=Index>
+  <Layout metadata=Default({route: Index})>
     <main>
       {data.allPost.nodes
       ->Array.mapWithIndex(

@@ -16,7 +16,7 @@
 let default = (~data) =>
   switch data->unsafe_fromJson->parse {
   | {dataYaml: Some({title, intro, body})} =>
-    <Layout title=String("About") route=About>
+    <Layout metadata=Title({title: "About", route: About})>
       <main>
         {switch title {
         | Some(title) => <h1> {title->React.string} </h1>

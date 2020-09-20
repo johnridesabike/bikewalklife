@@ -2,12 +2,11 @@
 
 %graphql(
   `
-  query Metadata @ppxConfig(inline: true, extend: "Gatsby.ExtendQuery") {
+  query Layout @ppxConfig(inline: true, extend: "Gatsby.ExtendQuery") {
     site {
       siteMetadata {
-        siteTitle: title
+        title
         description
-        siteUrl
       }
     }
     strings: dataYaml(page: {eq: STRINGS}) {
@@ -54,47 +53,11 @@ module Logo = {
 }
 
 @react.component
-let make = (~title as pageTitle, ~route=?, ~children) =>
+let make = (~metadata, ~children) =>
   switch query->useStaticQuery->parse {
-  | {site: Some({siteMetadata: {siteTitle, description, siteUrl}}), strings} =>
+  | {site: Some({siteMetadata: {title, description}}), strings} =>
     <div className="page">
-      <BsReactHelmet>
-        <html
-          lang="en"
-          prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#"/>
-        <title>
-          {switch pageTitle {
-          | Site => siteTitle->React.string
-          | String(pageTitle) => pageTitle ++ " | " ++ siteTitle |> React.string
-          }}
-        </title>
-        {switch pageTitle {
-        | Site => <meta property="og:title" content=siteTitle />
-        | String(pageTitle) => <meta property="og:title" content=pageTitle />
-        }}
-        <meta
-          name="description"
-          property="og:description"
-          content=description />
-        <meta property="og:site_name" content=siteTitle />
-        <meta property="og:type" content="website" />
-        {switch route {
-        | Some(route) =>
-          <link
-            rel="canonical"
-            href={Router.toStringWithBase(route, siteUrl)} />
-        | None => React.null
-        }}
-        {switch route {
-        | Some(route) =>
-          <meta
-            property="og:url"
-            content={Router.toStringWithBase(route, siteUrl)} />
-        | None => React.null
-        }}
-        <meta name="twitter:site" content="@BikeWalkLife" />
-        <meta name="twitter:card" content="summary" />
-      </BsReactHelmet>
+      <Metadata> metadata </Metadata>
       <Externals.SkipNav.Link />
       <header className="ui-font header__wrapper">
         <div className="small-screen-padding header">
@@ -106,7 +69,7 @@ let make = (~title as pageTitle, ~route=?, ~children) =>
               tabIndex={-1}>
               <Logo width="192" />
               <Externals.VisuallyHidden>
-                {"Bike Walk Life"->React.string}
+                {title->React.string}
               </Externals.VisuallyHidden>
             </Router.Link>
           </h1>

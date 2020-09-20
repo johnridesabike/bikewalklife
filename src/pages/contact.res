@@ -15,7 +15,7 @@
 let default = (~data) =>
   switch data->unsafe_fromJson->parse {
   | {dataYaml: Some({contact_text, contact_form})} =>
-    <Layout title=String("About") route=Contact>
+    <Layout metadata=Title({title: "Contact", route: Contact})>
       <main>
         <h1> {"Contact"->React.string} </h1>
         {switch contact_text {

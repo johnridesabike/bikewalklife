@@ -46,7 +46,6 @@ open QueryFragments
     site {
       siteMetadata {
         siteTitle: title
-        siteUrl
       }
     }
     about: dataYaml(page: {eq: ABOUT}) {
@@ -133,40 +132,29 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           ),
           related,
         }),
-      site: Some({siteMetadata: {siteTitle, siteUrl}}),
+      site: Some({siteMetadata: {siteTitle}}),
       about,
       strings,
     } =>
-    <Layout title=String(title) route=Entry({year, month, slug})>
-      {switch heroImage {
-      | Some({
-          alt,
-          image: Some({sharp: Some({fluid: Some({src, _}), _})}),
-          _
-        }) =>
-          <BsReactHelmet>
-            <meta
-              property="og:image"
-              content={src->Webapi.Url.makeWith(~base=siteUrl)->Webapi.Url.href}
-            />
-            <meta name="twitter:card" content="summary_large_image"/ >
-            {switch alt {
-            | Some(alt) =>
-              <meta
-                name="twitter:image:alt"
-                property="og:image:alt"
-                content=alt />
-            | _ => React.null
-            }}
-          </BsReactHelmet>
-      | _ => React.null
-      }}
-      <BsReactHelmet>
-        <meta name="description" property="og:description" content=excerpt />
-        <meta name="author" content=author />
-        <meta property="og:type" content="article" />
-        <meta property="article:published_time" content=isoDate />
-      </BsReactHelmet>
+    <Layout
+      metadata={
+        Article({
+          title,
+          description: excerpt,
+          author,
+          date: isoDate,
+          route: Entry({year, month, slug}),
+          image: switch heroImage {
+            | Some({
+                alt,
+                image: Some({sharp: Some({fluid: Some({src, _}), _})}),
+                _
+              }) =>
+              Some({url: src, alt})
+            | _ => None
+          },
+        })
+      }>
       <main>
         <Entry
           html

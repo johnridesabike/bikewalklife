@@ -41,11 +41,16 @@ let default = (~data) => {
     Raw.allPost: {nodes, pageInfo: {currentPage, hasNextPage, hasPreviousPage}}
   } = unsafe_fromJson(data)
   <Layout
-    title={switch currentPage {
-    | 1 => String("Archive")
-    | currentPage => String("Archive page " ++ Int.toString(currentPage))
-    }}
-    route=Archive(currentPage)>
+    metadata={
+      Title({
+        title:
+          switch currentPage {
+          | 1 => "Archive"
+          | currentPage => "Archive page " ++ Int.toString(currentPage)
+          },
+        route: Archive(currentPage)
+      })
+    }>
     <main>
       <h1 className="archive__page-title"> {"Archive"->React.string} </h1>
       {nodes

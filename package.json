@@ -23,7 +23,6 @@
     "postinstall": "bsb -make-world"
   },
   "dependencies": {
-    "@moox/bs-react-helmet": "^3.0.0",
     "@reach/skip-nav": "^0.10.5",
     "@reach/visually-hidden": "^0.10.4",
     "bs-fetch": "^0.6.2",
