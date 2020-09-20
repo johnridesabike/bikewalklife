@@ -10,7 +10,8 @@ module.exports = {
     contact: config.contact,
     siteUrl: config.site_url,
     archivePerPage: config.archive_per_page,
-    feedUrl: config.feed_url
+    feedUrl: config.feed_url,
+    twitterHandle: config.twitter_handle,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -34,6 +35,13 @@ module.exports = {
       options: {
         name: "images",
         path: `${__dirname}/content/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src-images",
+        path: `${__dirname}/src/images`,
       },
     },
     {

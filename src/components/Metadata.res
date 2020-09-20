@@ -13,6 +13,14 @@ module Helmet = {
         siteTitle: title
         siteDescription: description
         siteUrl
+        twitterHandle
+      }
+    }
+    logo: file(relativePath: {eq: "logo-large.png"}) {
+      childImageSharp {
+        fixed(width: 1200) {
+          src
+        }
       }
     }
   }
@@ -37,7 +45,12 @@ type t =
 @react.component
 let make = (~children) => {
   switch Metadata.query->Metadata.useStaticQuery->Metadata.parse {
-  | {site: Some({siteMetadata: {siteTitle, siteDescription, siteUrl}})} =>
+  | {
+      site: Some({
+        siteMetadata: {siteTitle, siteDescription, siteUrl, twitterHandle}
+      }),
+      logo: Some({childImageSharp: Some({fixed: Some({src})})})
+    } =>
     <>
       <Helmet>
         <html
@@ -45,8 +58,20 @@ let make = (~children) => {
           prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#"
         />
         <meta property="og:site_name" content=siteTitle />
-        <meta name="twitter:site" content="@BikeWalkLife" />
+        {switch twitterHandle {
+        | Some(content) => <meta name="twitter:site" content />
+        | None => React.null
+        }}
         <meta name="twitter:card" content="summary" />
+        <meta
+          property="og:image"
+          content={src->Webapi.Url.makeWith(~base=siteUrl)->Webapi.Url.href}
+        />
+        <meta
+          name="twitter:image:alt"
+          property="og:image:alt"
+          content={siteTitle ++ " logo"}
+        />
       </Helmet>
       {switch children {
       | Default({route}) =>
@@ -113,6 +138,11 @@ let make = (~children) => {
           | None => React.null
           }}
           {switch image {
+          | Some(_) =>
+            <meta name="twitter:card" content="summary_large_image" />
+          | None => React.null
+          }}
+          {switch image {
           | Some({alt: Some(alt), _}) =>
             <meta
               name="twitter:image:alt" property="og:image:alt" content=alt
@@ -122,7 +152,7 @@ let make = (~children) => {
         </Helmet>
       }}
     </>
-  | {site: None} => React.null
+  | _ => React.null
   }
 }
 

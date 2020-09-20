@@ -33,5 +33,10 @@ fields:
   config:
     required: true
   label: Feed url
+- name: twitter_handle
+  type: text
+  config:
+    required: false
+  label: Twitter handle, used for preview cards
 pages:
 - config.json

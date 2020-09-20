@@ -52,6 +52,7 @@ module.exports = {
         archivePerPage: Int!
         siteUrl: String!
         feedUrl: String!
+        twitterHandle: String
       }
 
       type DataYaml implements Node {
