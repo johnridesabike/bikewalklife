@@ -55,14 +55,8 @@ module.exports = {
         twitterHandle: String
       }
 
-      type DataYaml implements Node {
-        page: YamlPageId
-      }
-
-      enum YamlPageId {
-        ABOUT
-        AUTHORS
-        STRINGS
+      type Strings implements Node {
+        id: ID!
       }
     `);
   },
@@ -149,6 +143,29 @@ module.exports = {
       };
       createNode(postNode);
       createParentChildLink({ parent: node, child: postNode });
+    } else if (
+      node.internal.type === "DataYaml"
+      && getNode(node.parent).relativePath === "strings.yaml"
+    ) {
+      // delete the internal properties. IDK if this is necessary.
+      const obj = {...node};
+      delete obj.id;
+      delete obj.children;
+      delete obj.parent;
+      delete obj.fields;
+      delete obj.internal;
+      const stringsNode = {
+        ...obj,
+        id: createNodeId(node.id + " >>> Strings"),
+        children: [],
+        parent: node.id,
+        internal : {
+          contentDigest: createContentDigest(obj),
+          type: "Strings"
+        }
+      };
+      createNode(stringsNode);
+      createParentChildLink({ parent: node, child: stringsNode });
     }
   },
 };

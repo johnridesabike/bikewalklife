@@ -40,7 +40,7 @@ module PluginFeed = {
           }
         }
       }
-      strings: dataYaml(page: {eq: STRINGS}) {
+      strings {
         open_linked
       }
     }

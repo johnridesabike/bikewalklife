@@ -9,7 +9,7 @@
         feedUrl
       }
     }
-    strings: dataYaml(page: {eq: STRINGS}) {
+    strings {
       subscribe_feed_cta
       subscribe_email_cta
     }

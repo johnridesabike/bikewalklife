@@ -3,7 +3,7 @@
 %graphql(
  `
   query EntryStrings @ppxConfig(extend: "Gatsby.ExtendQuery") {
-    strings: dataYaml(page: {eq: STRINGS}) {
+    strings {
       open_linked
     }
   }

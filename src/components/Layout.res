@@ -9,7 +9,7 @@
         description
       }
     }
-    strings: dataYaml(page: {eq: STRINGS}) {
+    strings {
       footer
     }
   }

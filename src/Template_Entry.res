@@ -48,10 +48,17 @@ open QueryFragments
         siteTitle: title
       }
     }
-    about: dataYaml(page: {eq: ABOUT}) {
-      intro
+    about: file(
+      sourceInstanceName: {eq: "pages"},
+      relativePath: {eq: "about.md"}
+    ) {
+      childMarkdownRemark {
+        frontmatter {
+          intro
+        }
+      }
     }
-    strings: dataYaml(page: {eq: STRINGS}) {
+    strings {
       contact_text
     }
   }
@@ -184,7 +191,11 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       <hr className="separator" />
       <aside className="ui-font">
         {switch about {
-        | Some({intro: Some(intro)}) =>
+        | Some({
+            childMarkdownRemark: Some({
+              frontmatter: Some({intro: Some(intro)})
+            })
+          }) =>
           <About title=siteTitle description=intro strings />
         | _ => React.null
         }}

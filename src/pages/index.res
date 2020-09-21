@@ -35,7 +35,7 @@ open QueryFragments
         }
       }
     }
-    strings: dataYaml(page: {eq: STRINGS}) {
+    strings {
       archive_link
     }
   }

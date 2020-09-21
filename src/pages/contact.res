@@ -3,9 +3,8 @@
 %graphql(
   `
   query ContactPage @ppxConfig(inline: true) {
-    dataYaml(page: {eq: STRINGS}) {
+    strings {
       contact_text
-      contact_form
     }
   }
   `
@@ -14,7 +13,7 @@
 @react.component
 let default = (~data) =>
   switch data->unsafe_fromJson->parse {
-  | {dataYaml: Some({contact_text, contact_form})} =>
+  | {strings: Some({contact_text})} =>
     <Layout metadata=Title({title: "Contact", route: Contact})>
       <main>
         <h1> {"Contact"->React.string} </h1>
@@ -23,10 +22,7 @@ let default = (~data) =>
           <div className="ui-font" dangerouslySetInnerHTML={"__html": text} />
         | None => React.null
         }}
-        {switch contact_form {
-        | Some(true) => <Contact_Form />
-        | _ => React.null
-        }}
+        <Contact_Form />
       </main>
     </Layout>
   | _ => <Page_404 />

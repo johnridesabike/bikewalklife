@@ -3,10 +3,14 @@
 %graphql(
   `
   query AboutPage @ppxConfig(inline: true) {
-    dataYaml(page: {eq: ABOUT}) {
-      title
-      intro
-      body
+    file(sourceInstanceName: {eq: "pages"}, relativePath: {eq: "about.md"}) {
+      childMarkdownRemark {
+        html
+        frontmatter {
+          title
+          intro
+        }
+      }
     }
   }
   `
@@ -15,23 +19,22 @@
 @react.component
 let default = (~data) =>
   switch data->unsafe_fromJson->parse {
-  | {dataYaml: Some({title, intro, body})} =>
-    <Layout metadata=Title({title: "About", route: About})>
+  | {
+      file: Some({
+        childMarkdownRemark: Some({
+          html: Some(html),
+          frontmatter: Some({
+            title: Some(title),
+            intro: Some(intro),
+          })
+        })
+      })
+    }=>
+    <Layout metadata=Title({title, route: About})>
       <main>
-        {switch title {
-        | Some(title) => <h1> {title->React.string} </h1>
-        | None => React.null
-        }}
-        {switch intro {
-        | Some(intro) =>
-          <div className="serif" dangerouslySetInnerHTML={"__html": intro} />
-        | None => React.null
-        }}
-        {switch body {
-        | Some(body) =>
-          <div className="serif" dangerouslySetInnerHTML={"__html": body} />
-        | None => React.null
-        }}
+        <h1> {title->React.string} </h1>
+        <div className="serif" dangerouslySetInnerHTML={"__html": intro} />
+        <div className="serif" dangerouslySetInnerHTML={"__html": html} />
       </main>
       <aside>
         <Subscribe />

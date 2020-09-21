@@ -1,0 +1,21 @@
+---
+label: About Page
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: intro
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: html
+  label: Intro
+  description: Enter description here
+pages:
+- content/pages/about.md
