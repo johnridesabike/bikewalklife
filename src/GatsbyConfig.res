@@ -9,6 +9,7 @@ module PluginFeed = {
           title
           description
           siteUrl
+          feedUrl
         }
       }
     }
@@ -38,6 +39,21 @@ module PluginFeed = {
               html
             }
           }
+          # Turning this off until whatever's wrong with it gets fixed
+          #heroImage {
+          #  image {
+          #    childImageSharp {
+          #      resize(
+          #        width: 900,
+          #        height: 450,
+          #        fit: COVER,
+          #        cropFocus: ATTENTION
+          #       ) {
+          #         src
+          #      }
+          #    }
+          #  }
+          #}
         }
       }
       strings {
@@ -86,17 +102,23 @@ module PluginFeed = {
     query: Site.query,
     setup: ({query}) =>
       switch Site.parse(query).site {
-      | Some({siteMetadata: {title, description, siteUrl}}) =>
+      | Some({siteMetadata: {title, description, siteUrl, feedUrl}}) =>
         Externals.Rss.Feed.options(
           ~title,
           ~description,
           ~site_url=siteUrl,
           ~feed_url=
-            Webapi.Url.makeWith(config["feed_url"], ~base=siteUrl)
+            feedUrl
+            ->Webapi.Url.makeWith(~base=siteUrl)
             ->Webapi.Url.href,
           ~image_url=
-            Webapi.Url.makeWith("/icons/icon-96x96.png", ~base=siteUrl)
+            "/icons/icon-96x96.png"
+            ->Webapi.Url.makeWith(~base=siteUrl)
             ->Webapi.Url.href,
+          ~custom_namespaces=
+            Js.Dict.fromArray([
+              ("media", "http://search.yahoo.com/mrss/")
+            ]),
           (),
         )
       | None => failwith("PluginFeed.setup")
@@ -119,7 +141,8 @@ module PluginFeed = {
                   date,
                   externalLink,
                   parent,
-                  author
+                  author,
+                  // heroImage,
                 }
               ) => {
                 let url = Router.toStringWithBase(
@@ -135,6 +158,27 @@ module PluginFeed = {
                   Webapi.Url.setSearch(url, params)
                   Webapi.Url.href(url)
                 }
+                /*
+                let heroImageMedia = switch heroImage {
+                | Some({
+                    image: Some({
+                      childImageSharp: Some({resize: Some({src: Some(src)})})
+                    })
+                  }) => 
+                    {
+                      "media:content" : {
+                        "_attr": {
+                          "url": 
+                            src
+                            ->Webapi.Url.makeWith(~base=site_url)
+                            ->Webapi.Url.href,
+                          "medium": "image"
+                        }
+                      }
+                    }
+                | _ => Js.Obj.empty()
+                }
+                */
                 Externals.Rss.Item.options(
                   ~title,
                   ~description=switch parent {
