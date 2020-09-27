@@ -1,15 +1,8 @@
-module Clock = {
+module ArrowLeft = {
   @bs.module("react-feather") @react.component
   external make:
     (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
-    "Clock"
-}
-
-module Calendar = {
-  @bs.module("react-feather") @react.component
-  external make:
-    (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
-    "Calendar"
+    "ArrowLeft"
 }
 
 module ArrowRight = {
@@ -19,11 +12,18 @@ module ArrowRight = {
     "ArrowRight"
 }
 
-module ArrowLeft = {
+module Calendar = {
   @bs.module("react-feather") @react.component
   external make:
     (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
-    "ArrowLeft"
+    "Calendar"
+}
+
+module Clock = {
+  @bs.module("react-feather") @react.component
+  external make:
+    (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
+    "Clock"
 }
 
 module ExternalLink = {
@@ -33,16 +33,23 @@ module ExternalLink = {
     "ExternalLink"
 }
 
-module Rss = {
-  @bs.module("react-feather") @react.component
-  external make:
-    (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
-    "Rss"
-}
-
 module Mail = {
   @bs.module("react-feather") @react.component
   external make:
     (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
     "Mail"
+}
+
+module User = {
+  @bs.module("react-feather") @react.component
+  external make:
+    (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
+    "User"
+}
+
+module Rss = {
+  @bs.module("react-feather") @react.component
+  external make:
+    (~className: string=?, ~height: int=?, ~width: int=?) => React.element =
+    "Rss"
 }

@@ -471,6 +471,7 @@ dd {
   flex-basis: 100%;
 }
 
+.entry__author,
 .entry__date {
   font-size: var(--font-size-sm);
   color: var(--color-primary-dark);

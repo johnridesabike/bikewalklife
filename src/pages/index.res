@@ -29,7 +29,6 @@ open QueryFragments
         }
         parent {
           ... on MarkdownRemark {
-            __typename
             html
           }
         }
@@ -68,7 +67,7 @@ let default = (~data) => {
         <React.Fragment key=id>
           <Entry
             html={switch parent {
-            | Some(#MarkdownRemark({html: Some(html), _})) => html
+            | Some(#MarkdownRemark({html: Some(html)})) => html
             | Some(#UnspecifiedFragment(_) | #MarkdownRemark(_)) | None => ""
             }}
             route=Entry({year: year, month: month, slug: slug})

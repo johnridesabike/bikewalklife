@@ -32,11 +32,25 @@ module OriginalLink = {
 module Date = {
   @react.component
   let make = (~date, ~isoDate) =>
-    <time dateTime=isoDate className="entry__date">
+    <time dateTime=isoDate className="dt-published entry__date">
       <span ariaHidden=true> <Icons.Calendar className="icon" /> </span>
       {date->React.string}
     </time>
 }
+
+/*
+module Author = {
+  @react.component
+  let make = (~name) => 
+    <div className="entry__author">
+      <span ariaHidden=true> <Icons.User className="icon" /> </span>
+      {"by "->React.string}
+      <span className="p-author h-card">
+        {name->React.string}
+      </span>
+    </div>
+}
+*/
 
 module DraftNotice = {
   @react.component
@@ -88,9 +102,10 @@ let make = (
   ~date,
   ~draft,
   ~footer,
+  // ~author,
   ~className="",
 ) => 
-  <article className={Cn.append("entry__article", className)}>
+  <article className={Cn.append("h-entry hentry entry__article", className)}>
     {switch heroImage {
     | Image.Image(img) =>
       <figure className="full-bleed">
@@ -110,7 +125,7 @@ let make = (
     }}
     <div className="entry__body">
       <header className="entry__header">
-        <h1 className="entry__title">
+        <h1 className="p-name entry__title">
           {switch linkedHeader {
           | Linked =>
             <Router.Link route=route className="entry__header-link">
@@ -120,13 +135,14 @@ let make = (
           }}
         </h1>
         <Date date isoDate />
+        // <Author name=author />
         {if draft {
           <DraftNotice />
         } else {
           React.null
         }}
       </header>
-      <div dangerouslySetInnerHTML={"__html": html} />
+      <div className="e-content" dangerouslySetInnerHTML={"__html": html} />
       footer
     </div>
   </article>
