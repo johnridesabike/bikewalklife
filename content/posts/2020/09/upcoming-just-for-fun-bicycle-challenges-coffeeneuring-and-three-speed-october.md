@@ -1,5 +1,5 @@
 ---
-date: 2020-09-27T17:03:50-04:00
+date: 2020-09-27T17:55:50-04:00
 draft: false
 title: 'Upcoming just-for-fun bicycle challenges: Coffeeneuring and Three Speed October'
 author: John Jackson
