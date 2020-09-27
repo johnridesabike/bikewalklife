@@ -25,7 +25,7 @@ let toString = x =>
   }
 
 let toStringWithBase = (route, base) =>
-  Webapi.Url.makeWith(toString(route), ~base)->Webapi.Url.href
+  Externals.Url.makeWith(toString(route), ~base)["href"]
 
 module GatsbyLink = {
   @bs.module("gatsby") @react.component

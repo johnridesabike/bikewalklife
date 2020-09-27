@@ -64,9 +64,10 @@ module PluginFeed = {
   )
 
 
-  let renderLink = (~strings, href) =>
+  let renderHtml = (~strings, ~html, href) =>
     switch (href, strings) {
     | (Some(href), Some({FeedPosts.open_linked: Some(text)})) =>
+      html ++
       ReactDOMServer.renderToStaticMarkup(
         <p> <a href> {text->React.string} </a> </p>,
       )
@@ -107,14 +108,9 @@ module PluginFeed = {
           ~title,
           ~description,
           ~site_url=siteUrl,
-          ~feed_url=
-            feedUrl
-            ->Webapi.Url.makeWith(~base=siteUrl)
-            ->Webapi.Url.href,
+          ~feed_url=Externals.Url.makeWith(feedUrl, ~base=siteUrl)["href"],
           ~image_url=
-            "/icons/icon-96x96.png"
-            ->Webapi.Url.makeWith(~base=siteUrl)
-            ->Webapi.Url.href,
+            Externals.Url.makeWith("/icons/icon-96x96.png" ~base=siteUrl)["href"],
           ~custom_namespaces=
             Js.Dict.fromArray([
               ("media", "http://search.yahoo.com/mrss/")
@@ -151,12 +147,10 @@ module PluginFeed = {
                 )
                 let urlWithCampaign = {
                   let params =
-                    [("ref", "feed")]
-                    ->Webapi.Url.URLSearchParams.makeWithArray
-                    ->Webapi.Url.URLSearchParams.toString
-                  let url = Webapi.Url.make(url) // clone the url
-                  Webapi.Url.setSearch(url, params)
-                  Webapi.Url.href(url)
+                    Externals.URLSearchParams.makeWithArray([("ref", "feed")])["toString"]()
+                  let url = Externals.Url.make(url) // clone the url
+                  Externals.Url.setSearch(url, params)
+                  url["href"]
                 }
                 /*
                 let heroImageMedia = switch heroImage {
@@ -170,8 +164,8 @@ module PluginFeed = {
                         "_attr": {
                           "url": 
                             src
-                            ->Webapi.Url.makeWith(~base=site_url)
-                            ->Webapi.Url.href,
+                            ->Externals.Url.makeWith(~base=site_url)
+                            ->Externals.Url.href,
                           "medium": "image"
                         }
                       }
@@ -195,7 +189,7 @@ module PluginFeed = {
                   | Some(#MarkdownRemark({html: Some(html), _})) => [
                       Externals.Rss.CustomElement({
                         "content:encoded":
-                          html ++ renderLink(~strings, externalLink),
+                          renderHtml(~strings, ~html, externalLink),
                       }),
                       Externals.Rss.CustomElement({"dc:creator": author}),
                     ]
@@ -264,7 +258,10 @@ module PluginSiteMap = {
       switch SiteMap.parse(query) {
       | {site: Some({siteMetadata: {siteUrl}}), allSitePage: {nodes}} =>
         Array.map(nodes, ({path}) =>
-          Page.make(~url=Webapi.Url.makeWith(path, ~base=siteUrl)->Webapi.Url.href, ())
+          Page.make(
+            ~url=Externals.Url.makeWith(path, ~base=siteUrl)["href"],
+            ()
+          )
         )
       | _ => failwith("Error building sitemap.")
       },

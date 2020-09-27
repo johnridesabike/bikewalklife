@@ -14,6 +14,17 @@ module SkipNav = {
   }
 }
 
+module URLSearchParams = {
+  @bs.new
+  external makeWithArray: array<(string, string)> => {..} = "URLSearchParams"
+}
+
+module Url = {
+  @bs.new external make: string => {..} = "URL"
+  @bs.new external makeWith: (string, ~base: string) => {..} = "URL"
+  @bs.set external setSearch: ({..}, string) => unit = "search"
+}
+
 module Rss = {
   /**
    https://www.npmjs.com/package/rss
@@ -59,7 +70,7 @@ module Rss = {
       ~title: string,
       ~description: string,
       ~url: string,
-      ~guid: string,
+      ~guid: string=?,
       ~categories: array<string>=?,
       ~author: string=?,
       ~date: string,

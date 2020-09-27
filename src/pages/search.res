@@ -23,7 +23,7 @@ let default = (~data) =>
         </h1>
         <iframe
           src={"https://duckduckgo.com/search.html?width=256&site=" ++
-          (Webapi.Url.make(siteUrl)->Webapi.Url.hostname ++
+          (Externals.Url.make(siteUrl)["hostname"] ++
           "&prefill=Search with DuckDuckGo&focus=yes")}
           style={ReactDOMRe.Style.make(
             ~overflow="hidden",

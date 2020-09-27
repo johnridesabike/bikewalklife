@@ -65,7 +65,7 @@ let make = (~children) => {
         <meta name="twitter:card" content="summary" />
         <meta
           property="og:image"
-          content={src->Webapi.Url.makeWith(~base=siteUrl)->Webapi.Url.href}
+          content={Externals.Url.makeWith(src, ~base=siteUrl)["href"]}
         />
         <meta
           name="twitter:image:alt"
@@ -133,7 +133,7 @@ let make = (~children) => {
           | Some({url, _}) =>
             <meta
               property="og:image"
-              content={url->Webapi.Url.makeWith(~base=siteUrl)->Webapi.Url.href}
+              content={Externals.Url.makeWith(url, ~base=siteUrl)["href"]}
             />
           | None => React.null
           }}
