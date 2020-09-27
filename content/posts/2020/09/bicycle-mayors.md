@@ -1,28 +1,37 @@
 ---
 date: 2020-09-27T12:20:03-04:00
-draft: true
+draft: false
 title: Bicycle Mayors
 author: John Jackson
 hero_image:
   image: "/content/images/2020/286270-tiffany-mannion-weelz-6b5cc6-original-1532496384.jpg"
   alt: A photo of a woman on a bicycle overlooking a field.
-  caption: 'Tiffany Mannion, bicycle mayor of Keene, NH. Photo credit: BYCS'
+  caption: 'Tiffany Mannion, Bicycle Mayor of Keene, NH. Photo credit: BYCS'
 external_link: https://bycs.org/our-work/bicycle-mayor/
 tags:
 - bicycle mayor
 - programs
+- BYCS
+- Pattie Baker
+- Courtney Williams
 slug: ''
 
 ---
-Amsterdam-based BYCS has a program called Bicycle Mayors. According to their [network map](https://bycs.org/our-work/bicycle-mayor/#intr1), they have several mayors appointed in cities around the world, and a few in the United States.
+Amsterdam-based BYCS has a program called Bicycle Mayors. These mayors are, in their words:
 
-The name “bicycle mayor” felt a bit misleading to me at first. The “mayors” are not actual city mayors who happen to ride bicycles. They are private individuals who have volunteered to advocate for bicycling in their cities and to represent their fellow citizens who use bicycles.
+> \[...\] the human face and voice of cycling advocacy in a city. We connect these change-makers across a global network to create greater visibility and facilitate the sharing of knowledge, ideas, challenges, and solutions to create a truly radical shift.
 
-But these mayors are more than just lone enthusiasts. My understanding is that BYCS is serious about vetting the credentials and reliability of each mayoral applicant. [Pattie Baker is currently applying to be Bicycle Mayor of Atlanta](https://travelingatthespeedofbike.com/2020/09/23/bicycle-mayor-update/), and she needed several letters of recommendation from leaders. She also outlined her goals and and how she’ll achieve them if she earns the title.
+They have over 100 mayors now in more than 30 countries. A few are in the United States.
 
-The program looks intriguing to me, and I’m looking forward to seeing how it grows in this country. It appears to have a balanced mix of international networking and local problem-solving.
+The name “Bicycle Mayor” felt a bit misleading to me at first. The “mayors” are not actual city mayors who happen to ride bicycles. They are private individuals who have volunteered to advocate for bicycling in their cities.
 
-You can browse the current bicycle mayors on their site to see what they do in their own words. Here’s one example from [Courtney Williams of New York City](https://bycs.org/courtney-williams/): 
+Nonetheless, these jobs look like serious business. BYCS is taking care to validate the credentials and reliability of each mayoral applicant. [Pattie Baker is currently applying to be Bicycle Mayor of Atlanta](https://travelingatthespeedofbike.com/2020/09/15/announcing-1st-metro-atlanta-bike-mayor/), and she had to request several letters of endorsement from other local leaders and advocates. She also outlined her goals for Atlanta and and how she’ll achieve them if she earns the title.
+
+The program seems intriguing in how it combines international networking and local problem-solving. I’m looking forward to watching how it grows in this country.
+
+If you want to be a Bicycle Mayor, or want your city to have a Bicycle Mayor, [check out their site and the application process](https://bycs.org/our-work/bicycle-mayor/).
+
+You can also browse the current Bicycle Mayors to read about their work in their own words. Here’s one example from [Courtney Williams of New York City](https://bycs.org/courtney-williams/):
 
 > **HOW WOULD YOU DESCRIBE YOUR MISSION?**
 >
