@@ -67,11 +67,11 @@ module PluginFeed = {
   let renderHtml = (~strings, ~html, href) =>
     switch (href, strings) {
     | (Some(href), Some({FeedPosts.open_linked: Some(text)})) =>
-      html ++
-      ReactDOMServer.renderToStaticMarkup(
+      html
+      ++ ReactDOMServer.renderToStaticMarkup(
         <p> <a href> {text->React.string} </a> </p>,
       )
-    | _ => ""
+    | _ => html
     }
 
   type query<'a> = {query: 'a}
