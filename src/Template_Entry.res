@@ -43,11 +43,6 @@ open QueryFragments
         date(formatString: "MMMM Do, YYYY") @ppxCustom(module: "DateTime")
       }
     }
-    site {
-      siteMetadata {
-        siteTitle: title
-      }
-    }
     about: file(
       sourceInstanceName: {eq: "pages"},
       relativePath: {eq: "about.md"}
@@ -57,9 +52,6 @@ open QueryFragments
           intro
         }
       }
-    }
-    strings {
-      contact_text
     }
   }
   `
@@ -84,10 +76,12 @@ type pageContext = {
 
 module About = {
   @react.component
-  let make = (~title, ~description, ~strings) =>
+  let make = (~description) => {
+    let siteMetadata = QuerySiteMetadata.use()
+    let strings = QueryStrings.use()
     <section className="entry-page__about">
       <h2 className="entry-page__footer-heading">
-        {"About " ++ title |> React.string}
+        {"About " ++ siteMetadata.title |> React.string}
       </h2>
       <div
         className="entry-page__about-content"
@@ -95,12 +89,12 @@ module About = {
       />
       <p className="entry-page__about-link">
         <Router.Link route=About>
-          {"read more about " ++ title |> React.string}
+          {"read more about " ++ siteMetadata.title |> React.string}
           <span ariaHidden=true> <Icons.ArrowRight className="icon" /> </span>
         </Router.Link>
       </p>
-      {switch strings {
-      | Some({contact_text: Some(text)}) => <>
+      {switch strings.contact_text {
+      | Some(text) => <>
           <div
             className="entry-page__about-content"
             dangerouslySetInnerHTML={"__html": text} />
@@ -113,9 +107,10 @@ module About = {
             </Router.Link>
           </p>
         </>
-      | _ => React.null
+      | None => React.null
       }}
     </section>
+  }
 }
 
 @react.component
@@ -139,9 +134,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           ),
           related,
         }),
-      site: Some({siteMetadata: {siteTitle}}),
       about,
-      strings,
     } =>
     <Layout
       metadata={
@@ -196,7 +189,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
               frontmatter: Some({intro: Some(intro)})
             })
           }) =>
-          <About title=siteTitle description=intro strings />
+          <About description=intro />
         | _ => React.null
         }}
         <hr className="separator" />

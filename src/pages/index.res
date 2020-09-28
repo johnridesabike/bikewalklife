@@ -34,9 +34,6 @@ open QueryFragments
         }
       }
     }
-    strings {
-      archive_link
-    }
   }
   `
 )
@@ -44,6 +41,7 @@ open QueryFragments
 @react.component
 let default = (~data) => {
   let data = data->unsafe_fromJson->parse
+  let strings = QueryStrings.use()
   <Layout metadata=Default({route: Index})>
     <main>
       {data.allPost.nodes
@@ -115,8 +113,8 @@ let default = (~data) => {
       ->React.array}
     </main>
     <nav>
-      {switch data.strings {
-      | Some({archive_link: Some(text)}) =>
+      {switch strings.archive_link {
+      | Some(text) =>
         <div className="index-page__archive-link">
           <Router.Link route=Archive(1)>
             {text->React.string}
@@ -125,7 +123,7 @@ let default = (~data) => {
             </span>
           </Router.Link>
         </div>
-      | _ => React.null
+      | None => React.null
       }}
     </nav>
     <hr className="separator" />

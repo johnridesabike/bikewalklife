@@ -1,27 +1,12 @@
-%%raw(`import { graphql } from "gatsby"`)
-
-%graphql(
- `
-  query EntryStrings @ppxConfig(extend: "Gatsby.ExtendQuery") {
-    strings {
-      open_linked
-    }
-  }
-  `
-)
-
 module OriginalLink = {
   @react.component
   let make = (~href, ~className="") => {
-    let data =
-      EntryStrings.query
-      ->EntryStrings.useStaticQuery
-      ->EntryStrings.parse
+    let strings = QueryStrings.use()
     <div className={Cn.append("entry__link", className)}>
       <a href target="_blank" rel="noopener">
-        {switch data {
-        | {strings: Some({open_linked: Some(text)})} => text->React.string
-        | _ => React.null
+        {switch strings.open_linked {
+        | Some(text) => text->React.string
+        | None => React.null
         }}
         <span ariaHidden=true> <Icons.ExternalLink className="icon" /> </span>
       </a>

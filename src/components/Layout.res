@@ -1,21 +1,3 @@
-%%raw(`import { graphql } from "gatsby"`)
-
-%graphql(
-  `
-  query Layout @ppxConfig(inline: true, extend: "Gatsby.ExtendQuery") {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-    strings {
-      footer
-    }
-  }
-  `
-)
-
 type metadata =
   | Site
   | String(string)
@@ -53,9 +35,9 @@ module Logo = {
 }
 
 @react.component
-let make = (~metadata, ~children) =>
-  switch query->useStaticQuery->parse {
-  | {site: Some({siteMetadata: {title, description}}), strings} =>
+let make = (~metadata, ~children) => {
+  let {QuerySiteMetadata.title, description, _} = QuerySiteMetadata.use()
+  let strings = QueryStrings.use()
     <div className="page">
       <Metadata> metadata </Metadata>
       <Externals.SkipNav.Link />
@@ -112,10 +94,10 @@ let make = (~metadata, ~children) =>
       <div className="small-screen-padding content"> children </div>
       <footer className="footer__wrapper">
         <div className="small-screen-padding footer">
-          {switch strings {
-          | Some({footer: Some(text)}) =>
+          {switch strings.footer {
+          | Some(text) =>
             <div dangerouslySetInnerHTML={"__html": text} />
-          | _ => React.null
+          | None => React.null
           }}
           <p>
             <Router.Link route=Index activeClassName="">
@@ -135,5 +117,4 @@ let make = (~metadata, ~children) =>
         </div>
       </footer>
     </div>
-  | {site: None, _} => React.null
-  }
+}
