@@ -82,17 +82,7 @@ module.exports = {
       resolve: "gatsby-plugin-feed",
       options: rePlugins.PluginFeed.options,
     },
-    {
-      resolve: "gatsby-plugin-postcss",
-      options: {
-        postCssPlugins: [
-          require("postcss-custom-properties")({
-            importFrom: `${__dirname}/src/style.css`
-          }),
-          require("postcss-custom-media"),
-        ]
-      }
-    },
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
