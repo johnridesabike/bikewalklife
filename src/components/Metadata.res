@@ -8,7 +8,7 @@ module Helmet = {
 %graphql(
   `
   query Metadata @ppxConfig(extend: "Gatsby.ExtendQuery") {
-    logo: file(relativePath: {eq: "logo-large.png"}) {
+    logo: file(relativePath: {eq: "logo-large-square.png"}) {
       childImageSharp {
         fixed(width: 1200) {
           src
