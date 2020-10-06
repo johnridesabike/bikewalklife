@@ -119,7 +119,11 @@ module.exports = {
         heroImage: node.frontmatter.hero_image,
         draft: node.frontmatter.draft,
         externalLink: node.frontmatter.external_link,
-        tags: node.frontmatter.tags || [],
+        /* Tags aren't shown to users. They only fetch related posts. */
+        tags:
+          node.frontmatter.tags
+            ? node.frontmatter.tags.map(x => x.toLowerCase().trim())
+            : [],
         slug: 
           node.frontmatter.slug !== undefined && node.frontmatter.slug !== ""
             ? node.frontmatter.slug
