@@ -89,18 +89,22 @@ module About = {
       />
       <p className="entry-page__about-link">
         <Router.Link route=About>
-          {"read more about " ++ siteMetadata.title |> React.string}
+          {"Read more about " ++ siteMetadata.title |> React.string}
           <span ariaHidden=true> <Icons.ArrowRight className="icon" /> </span>
         </Router.Link>
       </p>
       {switch strings.contact_text {
-      | Some(text) => <>
+      | Some(text) =>
+        <>
+          <h2 className="entry-page__footer-heading">
+            {"Leave a comment"->React.string}
+          </h2>
           <div
             className="entry-page__about-content"
             dangerouslySetInnerHTML={"__html": text} />
           <p className="entry-page__about-link">
             <Router.Link route=Contact>
-              {"Contact"->React.string}
+              {"Contact me"->React.string}
               <span ariaHidden=true>
                 <Icons.ArrowRight className="icon" />
               </span>
