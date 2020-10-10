@@ -32,6 +32,7 @@
   --letter-spacing-allcaps: 0.06em;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+  --font-weight-heading: 300;
 
   /**
    * Layout
@@ -137,7 +138,7 @@ h5,
 h6 {
   margin-top: 1em;
   margin-bottom: 1em;
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-heading);
   hyphens: none;
 }
 
@@ -546,6 +547,17 @@ dd {
   align-items: center;
 }
 
+.entry-page__avatar-wrapper {
+  text-align: center;
+}
+
+.entry-page__avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--color-primary-dark);
+  box-shadow: 0 0 2px var(--color-primary-dark);
+}
+
 @media screen and (--tablet-portrait-up) {
 
   .entry-page__recent-list {
@@ -563,6 +575,14 @@ dd {
 
   .entry-page__arrow {
     flex-shrink: 0;
+  }
+
+  .entry-page__about-wrapper {
+    display: flex;
+  }
+  
+  .entry-page__avatar-wrapper {
+    margin-right: 1em;
   }
 }
 
@@ -618,6 +638,10 @@ dd {
   justify-content: space-between;
 }
 
+.archive__entry .entry__link {
+  font-size: var(--font-size-sm);
+}
+
 /*******************************************************************************
  * Subscribe component
  ******************************************************************************/
@@ -638,5 +662,33 @@ dd {
     justify-content: center;
     width: var(--width-content);
     margin: auto;
+  }
+}
+
+/*******************************************************************************
+ * About page
+ ******************************************************************************/
+
+.about__intro {
+  font-size: var(--font-size-lg);
+}
+
+.about__photo-wrapper {
+  margin: 0;
+  padding: 0 1em;
+  margin: auto;
+  text-align: center;
+}
+
+.about__photo {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--color-primary-dark);
+  box-shadow: 0 0 4px var(--color-primary-dark);
+}
+
+@media screen and (--tablet-portrait-up) {
+  .about__photo {
+    float: right;
   }
 }

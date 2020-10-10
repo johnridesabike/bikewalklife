@@ -21,6 +21,22 @@ let imageFixed = ImageFixed.query
 
 %graphql(
   `
+  fragment ImageFixed_withWebp on ImageSharpFixed {
+    base64
+    width
+    height
+    src
+    srcSet
+    srcWebp
+    srcSetWebp
+  }
+  `
+)
+
+let imageFixedWithWebP = ImageFixed_withWebp.query;
+
+%graphql(
+  `
   fragment ImageFluid on ImageSharpFluid {
     base64
     aspectRatio

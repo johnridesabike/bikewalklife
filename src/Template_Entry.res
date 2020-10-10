@@ -53,6 +53,13 @@ open QueryFragments
         }
       }
     }
+    avatar: file(name: {eq: "john-2020-closeup"}, sourceInstanceName: {eq: "images"}) {
+      childImageSharp {
+        fixed(width: 120, height: 120, cropFocus: CENTER) {
+          ...ImageFixed_withWebp
+        }
+      }
+    }
   }
   `
 )
@@ -76,17 +83,30 @@ type pageContext = {
 
 module About = {
   @react.component
-  let make = (~description) => {
+  let make = (~description, ~avatar) => {
     let siteMetadata = QuerySiteMetadata.use()
     let strings = QueryStrings.use()
     <section className="entry-page__about">
       <h2 className="entry-page__footer-heading">
         {"About " ++ siteMetadata.title |> React.string}
       </h2>
-      <div
-        className="entry-page__about-content"
-        dangerouslySetInnerHTML={"__html": description}
-      />
+      <div className="entry-page__about-wrapper">
+        {switch avatar {
+        | Some({childImageSharp: Some({fixed})}) =>
+          <div className="entry-page__avatar-wrapper">
+            <Gatsby.Img
+              fixed
+              alt="A photograph of John."
+              className="entry-page__avatar"
+            />
+          </div>
+        | _ => React.null
+        }}
+        <div
+          className="entry-page__about-content"
+          dangerouslySetInnerHTML={"__html": description}
+        />
+      </div>
       <p className="entry-page__about-link">
         <Router.Link route=About>
           {"Read more about " ++ siteMetadata.title |> React.string}
@@ -139,6 +159,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           related,
         }),
       about,
+      avatar,
     } =>
     <Layout
       metadata={
@@ -193,7 +214,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
               frontmatter: Some({intro: Some(intro)})
             })
           }) =>
-          <About description=intro />
+          <About description=intro avatar />
         | _ => React.null
         }}
         <hr className="separator" />

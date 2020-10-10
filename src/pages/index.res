@@ -7,7 +7,7 @@ open QueryFragments
   query IndexEntries @ppxConfig(inline: true) {
     allPost(
       sort: {order: [DESC], fields: [date]},
-      limit: 24,
+      limit: 12,
       filter: {published: {eq: true}}
     ) {
       nodes {

@@ -9,14 +9,14 @@ hero_image:
   caption: ''
 external_link: https://www.connectsavannah.com/savannah/the-news-cycle-is-complete/Content?oid=15254469
 tags:
-- John Bennet
+- John Bennett
 - lessons
 - Savannah
 - writing
 slug: ''
 
 ---
-John Bennet, a long-time mobility advocate in Savannah, [published a reflection on writing about transportation](https://www.connectsavannah.com/savannah/the-news-cycle-is-complete/Content?oid=15254469). His lessons are partially about writing and advocacy, and partially about the causes themselves. For example, he notes that he faced criticism from people who see bicycles as a special interest that's misaligned with the public good, and he explains how that’s  untrue:
+John Bennett, a long-time mobility advocate in Savannah, [published a reflection on writing about transportation](https://www.connectsavannah.com/savannah/the-news-cycle-is-complete/Content?oid=15254469). His lessons are partially about writing and advocacy, and partially about the causes themselves. For example, he notes that he faced criticism from people who see bicycles as a special interest that's misaligned with the public good, and he explains how that’s  untrue:
 
 > Over the years I’ve received emails and letters accusing me of being a lobbyist for a special interest group and that I care only about people who ride bikes.
 >
