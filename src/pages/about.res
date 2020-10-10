@@ -48,6 +48,7 @@ let default = (~data) =>
           <figure className="about__photo-wrapper">
             <Gatsby.Img
               fixed
+              fadeIn=false
               alt="A photograph of John."
               className="about__photo"
             />
