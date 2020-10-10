@@ -6183,10 +6183,10 @@ follow-redirects@^1.0.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.12.1.tgz#de54a6205311b93d60398ebc01cf7015682312b6"
   integrity sha512-tmRv0AVuR7ZyouUHLeNSiO6pqulF7dYa3s19c6t+wz9LD69/uSzdMxJ2S91nTI9U3rt/IldxpzMOFejp6f0hjg==
 
-fontsource-cooper-hewitt@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/fontsource-cooper-hewitt/-/fontsource-cooper-hewitt-3.0.1.tgz#d5ffa6933e6750c754f2e3695333e8476c9465bb"
-  integrity sha512-K2EnlfjGHKhN1uS92Mj4JbAFwtgZFoXs//fHgKeaut1E//H/6XN4ext9hdCRq1Xe9/2Q6NDDy+FeSK/xmTS3Vw==
+fontsource-cooper-hewitt@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/fontsource-cooper-hewitt/-/fontsource-cooper-hewitt-3.0.2.tgz#c0308bf26cfcd622201188b57e43a7e63d205e30"
+  integrity sha512-BE/A9r2TzNYLtv6ywpS5w7+uE4ht//Rk2UTtpR67jDHH8ZVDOpXBufj3frxs0gih7mM8xtWL3bOnxB09VE7bgA==
 
 for-in@^1.0.2:
   version "1.0.2"

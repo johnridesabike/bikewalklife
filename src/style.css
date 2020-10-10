@@ -32,7 +32,6 @@
   --letter-spacing-allcaps: 0.06em;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
-  --font-weight-heading: 300;
 
   /**
    * Layout
@@ -138,7 +137,7 @@ h5,
 h6 {
   margin-top: 1em;
   margin-bottom: 1em;
-  font-weight: var(--font-weight-heading);
+  font-weight: var(--font-weight-normal);
   hyphens: none;
 }
 
@@ -580,7 +579,7 @@ dd {
   .entry-page__about-wrapper {
     display: flex;
   }
-  
+
   .entry-page__avatar-wrapper {
     margin-right: 1em;
   }
@@ -674,7 +673,6 @@ dd {
 }
 
 .about__photo-wrapper {
-  margin: 0;
   padding: 0 1em;
   margin: auto;
   text-align: center;
@@ -688,6 +686,7 @@ dd {
 }
 
 @media screen and (--tablet-portrait-up) {
+
   .about__photo {
     float: right;
   }
