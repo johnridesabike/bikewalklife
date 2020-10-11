@@ -1,4 +1,4 @@
-const config = require("./config.json")
+const config = require("./config.json");
 const rePlugins = require("./lib/js/src/GatsbyConfig.bs.js");
 
 module.exports = {
@@ -20,8 +20,8 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/posts`
-      }
+        path: `${__dirname}/content/posts`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -52,17 +52,16 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-sharp", 
+      resolve: "gatsby-plugin-sharp",
       options: {
-        defaultQuality: 75
-      }
+        defaultQuality: 75,
+      },
     },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          
           "gatsby-remark-normalize-paths",
           "gatsby-remark-copy-linked-files",
           {
@@ -105,12 +104,12 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: config.site_url,
-        policy: []
-      }
+        policy: [],
+      },
     },
     {
       resolve: "gatsby-plugin-sitemap",
-      options: rePlugins.PluginSiteMap.options
+      options: rePlugins.PluginSiteMap.options,
     },
     {
       resolve: "gatsby-plugin-webpack-bundle-analyzer",
@@ -119,7 +118,7 @@ module.exports = {
         disable: !process.env.ANALYZE_BUNDLE_SIZE,
         generateStatsFile: true,
         analyzerMode: "static",
-      }
+      },
     },
     {
       resolve: "gatsby-plugin-nprogress",
@@ -182,4 +181,4 @@ module.exports = {
       },
     },
   ],
-}
+};

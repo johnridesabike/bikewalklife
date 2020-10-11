@@ -1,7 +1,0 @@
-{
-  "extends": "stylelint-config-wordpress",
-  "rules": {
-    "indentation": 2,
-    "selector-class-pattern": ".*"
-  }
-}

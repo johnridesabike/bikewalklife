@@ -3,10 +3,7 @@
   "reason": {
     "react-jsx": 3
   },
-  "bsc-flags": [
-    "-bs-super-errors",
-    "-open Belt"
-  ],
+  "bsc-flags": ["-bs-super-errors", "-open Belt"],
   "sources": [
     {
       "dir": "src",
@@ -33,10 +30,7 @@
     "re-formality",
     "bs-fetch"
   ],
-  "ppx-flags": [
-    "@reasonml-community/graphql-ppx/ppx",
-    "re-formality/ppx"
-  ],
+  "ppx-flags": ["@reasonml-community/graphql-ppx/ppx", "re-formality/ppx"],
   "refmt": 3,
   "warnings": {
     "number": "+A-48-103",

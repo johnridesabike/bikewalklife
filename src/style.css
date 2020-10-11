@@ -1,25 +1,11 @@
 :root {
-
   /**
    * Typography
    */
-  --font-sans-serif:
-    "cooper hewitt",
-    "helvetica neue",
-    sans-serif;
-  --font-serif:
-    "charter",
-    serif;
-  --font-ui:
-    -apple-system,
-    blinkmacsystemfont,
-    "segoe UI",
-    roboto,
-    oxygen-sans,
-    ubuntu,
-    cantarell,
-    "helvetica neue",
-    sans-serif;
+  --font-sans-serif: "cooper hewitt", "helvetica neue", sans-serif;
+  --font-serif: "charter", serif;
+  --font-ui: -apple-system, blinkmacsystemfont, "segoe UI", roboto, oxygen-sans,
+    ubuntu, cantarell, "helvetica neue", sans-serif;
   --font-pre: "courier 10 pitch", courier, monospace;
   --font-base-size: 18px;
   --font-size-base-mobile: 16px;
@@ -54,17 +40,15 @@
 }
 
 @media (prefers-color-scheme: dark) {
-
   :root {
-
     /**
      * https://coolors.co/65a5cd-1d3557-d4eded-f76470-f1faee
      */
     --color-background: #282a36;
     --color-text: #f8f8f2;
     --color-primary: #65a5cd;
-    --color-primary-light: #1d3557;  /* actually darker */
-    --color-primary-dark: #d4eded;/* actually lighter */
+    --color-primary-light: #1d3557; /* actually darker */
+    --color-primary-dark: #d4eded; /* actually lighter */
     --color-secondary: #f76470;
     --color-secondary-light: #f1faee;
   }
@@ -90,7 +74,6 @@ html {
 }
 
 @media screen and (--phone-only) {
-
   html {
     font-size: var(--font-base-size-mobile);
     line-height: 1.58566;
@@ -175,7 +158,6 @@ dd {
 }
 
 @media screen and (--tablet-portrait-up) {
-
   .small-screen-padding,
   .full-bleed {
     margin: 0;
@@ -188,11 +170,9 @@ dd {
 }
 
 @media screen and (--tablet-landscape-up) {
-
   .full-bleed {
     width: 900px;
     margin-left: -150px;
-
   }
 }
 
@@ -265,7 +245,6 @@ dd {
 }
 
 .header__wrapper {
-
   /* To go behind the border on the menu links */
   padding-bottom: 2px;
   box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.25);
@@ -324,10 +303,9 @@ dd {
   font-family: var(--font-ui);
   background-color: var(--color-primary-dark);
   margin-top: 1em;
-  box-shadow:
-    0 -4px 4px 0 rgba(0, 0, 0, 0.25),
-    /* Make the footer extend off the screen with this one weird trick. */
-    0 50vh 0 50vh var(--color-primary-dark);
+  box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.25),
+    /* Make the footer extend off the screen with this one weird trick. */ 0
+      50vh 0 50vh var(--color-primary-dark);
 }
 
 .footer {
@@ -366,17 +344,15 @@ dd {
 }
 
 @media (prefers-color-scheme: dark) {
-
   .header__wrapper {
     box-shadow: 0 8px 4px -4px rgba(255, 255, 255, 0.125);
   }
 
   .footer__wrapper {
     background-color: var(--color-primary-light);
-    box-shadow:
-      0 -4px 4px 0 rgba(255, 255, 255, 0.125),
-      /* Make the footer extend off the screen with this one weird trick. */
-      0 50vh 0 50vh var(--color-primary-light);
+    box-shadow: 0 -4px 4px 0 rgba(255, 255, 255, 0.125),
+      /* Make the footer extend off the screen with this one weird trick. */ 0
+        50vh 0 50vh var(--color-primary-light);
   }
 
   .footer {
@@ -389,7 +365,6 @@ dd {
 }
 
 @media screen and (--tablet-portrait-up) {
-
   .header__wrapper {
     max-width: var(--width-site);
     margin: auto;
@@ -558,7 +533,6 @@ dd {
 }
 
 @media screen and (--tablet-portrait-up) {
-
   .entry-page__recent-list {
     display: flex;
     justify-content: space-between;
@@ -655,7 +629,6 @@ dd {
 }
 
 @media screen and (--tablet-portrait-up) {
-
   .subscribe__list {
     display: flex;
     justify-content: center;
@@ -686,7 +659,6 @@ dd {
 }
 
 @media screen and (--tablet-portrait-up) {
-
   .about__photo {
     float: right;
   }

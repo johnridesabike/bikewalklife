@@ -2,7 +2,7 @@ const path = require("path");
 const process = require("process");
 const {
   createPages,
-  onCreatePage
+  onCreatePage,
 } = require("./lib/js/src/GatsbyNode_CreatePages.bs.js");
 
 module.exports = {
@@ -70,8 +70,8 @@ module.exports = {
           // E.g.: Due to how Gatsby caches query results, it may be more
           // performant to filter the result rather than in the query.
           resolve: (source, args, context, _info) =>
-            context.nodeModel.runQuery(
-              {
+            context.nodeModel
+              .runQuery({
                 type: "Post",
                 firstOnly: false,
                 query: {
@@ -85,9 +85,8 @@ module.exports = {
                     published: {eq: true},
                   },
                 },
-              },
-            ).then(
-              result => {
+              })
+              .then((result) => {
                 if (!result) {
                   return [];
                 } else if (args.limit) {
@@ -95,8 +94,7 @@ module.exports = {
                 } else {
                   return result;
                 }
-              }
-            )
+              }),
         },
       },
     }),
@@ -108,8 +106,8 @@ module.exports = {
     createContentDigest,
   }) => {
     if (
-      node.internal.type === "MarkdownRemark"
-      && getNode(node.parent).sourceInstanceName === "posts"
+      node.internal.type === "MarkdownRemark" &&
+      getNode(node.parent).sourceInstanceName === "posts"
     ) {
       const date = new Date(node.frontmatter.date);
       const obj = {
@@ -120,17 +118,16 @@ module.exports = {
         draft: node.frontmatter.draft,
         externalLink: node.frontmatter.external_link,
         /* Tags aren't shown to users. They only fetch related posts. */
-        tags:
-          node.frontmatter.tags
-            ? node.frontmatter.tags.map(x => x.toLowerCase().trim())
-            : [],
-        slug: 
+        tags: node.frontmatter.tags
+          ? node.frontmatter.tags.map((x) => x.toLowerCase().trim())
+          : [],
+        slug:
           node.frontmatter.slug !== undefined && node.frontmatter.slug !== ""
             ? node.frontmatter.slug
             : path.basename(node.fileAbsolutePath, ".md"),
         published:
-          process.env.NODE_ENV === "development" 
-            ? true 
+          process.env.NODE_ENV === "development"
+            ? true
             : !node.frontmatter.draft,
         year: date.getFullYear(),
         month: date.getMonth() + 1,
@@ -146,10 +143,10 @@ module.exports = {
         },
       };
       createNode(postNode);
-      createParentChildLink({ parent: node, child: postNode });
+      createParentChildLink({parent: node, child: postNode});
     } else if (
-      node.internal.type === "DataYaml"
-      && getNode(node.parent).relativePath === "strings.yaml"
+      node.internal.type === "DataYaml" &&
+      getNode(node.parent).relativePath === "strings.yaml"
     ) {
       // delete the internal properties. IDK if this is necessary.
       const obj = {...node};
@@ -163,13 +160,13 @@ module.exports = {
         id: createNodeId(node.id + " >>> Strings"),
         children: [],
         parent: node.id,
-        internal : {
+        internal: {
           contentDigest: createContentDigest(obj),
-          type: "Strings"
-        }
+          type: "Strings",
+        },
       };
       createNode(stringsNode);
-      createParentChildLink({ parent: node, child: stringsNode });
+      createParentChildLink({parent: node, child: stringsNode});
     }
   },
 };

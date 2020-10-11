@@ -18,8 +18,6 @@ module.exports = {
   rules: {
     "default-case": 0,
     "no-unreachable": 0,
-    quotes: ["error", "double"],
-    indent: ["error", 2],
     "no-unused-vars": [
       "error",
       {
