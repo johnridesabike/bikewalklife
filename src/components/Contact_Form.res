@@ -3,8 +3,7 @@ module Form = %form(
     name: string,
     email: string,
     message: string,
-    @bs.as("form-name")
-    formName: string,
+    \"form-name": string,
   }
 
   type output = input
@@ -34,9 +33,9 @@ module Form = %form(
         | message => Ok(message)
         },
     },
-    formName: {
+    \"form-name": {
       strategy: OnSubmit,
-      validate: ({formName, _}) => Ok(formName),
+      validate: ({\"form-name", _}) => Ok(\"form-name"),
     },
   }
 )
@@ -44,16 +43,16 @@ module Form = %form(
 /**
  https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
  */
-@bs.val
+@val
 external encodeURIComponent: string => string = "encodeURIComponent"
 
-let encode = ({name, email, message, formName}: Form.output) => {
+let encode = ({name, email, message, \"form-name"}: Form.output) => {
   let e = encodeURIComponent
   [
     ("name", name),
     ("email", email),
     ("message", message),
-    ("form-name", formName)
+    ("form-name", \"form-name")
   ]
   ->Array.map(((key, value)) => e(key) ++ "=" ++ e(value))
   ->Js.Array2.joinWith("&")
@@ -68,7 +67,7 @@ let initialInput: Form.input = {
   name: "",
   email: "",
   message: "",
-  formName: "contact",
+  \"form-name": "contact",
 }
 
 @react.component

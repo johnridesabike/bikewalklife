@@ -50,13 +50,16 @@ open QueryFragments
       childMarkdownRemark {
         frontmatter {
           intro
-        }
-      }
-    }
-    avatar: file(name: {eq: "john-2020-closeup"}, sourceInstanceName: {eq: "images"}) {
-      childImageSharp {
-        fixed(width: 120, height: 120, cropFocus: CENTER) {
-          ...ImageFixed_withWebp
+          avatar: image_small {
+            alt
+            image {
+              childImageSharp {
+                fixed(width: 120, height: 120, cropFocus: CENTER) {
+                  ...ImageFixed_withWebp
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -83,7 +86,10 @@ type pageContext = {
 
 module About = {
   @react.component
-  let make = (~description, ~avatar) => {
+  let make = (
+    ~description, 
+    ~avatar: option<t_about_childMarkdownRemark_frontmatter_avatar>,
+  ) => {
     let siteMetadata = QuerySiteMetadata.use()
     let strings = QueryStrings.use()
     <section className="entry-page__about">
@@ -92,11 +98,14 @@ module About = {
       </h2>
       <div className="entry-page__about-wrapper">
         {switch avatar {
-        | Some({childImageSharp: Some({fixed})}) =>
+        | Some({
+          image: Some({childImageSharp: Some({fixed})}),
+          alt: Some(alt)
+         }) =>
           <div className="entry-page__avatar-wrapper">
             <Gatsby.Img
               fixed
-              alt="A photograph of John."
+              alt
               className="entry-page__avatar"
             />
           </div>
@@ -159,7 +168,6 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           related,
         }),
       about,
-      avatar,
     } =>
     <Layout
       metadata={
@@ -211,7 +219,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         {switch about {
         | Some({
             childMarkdownRemark: Some({
-              frontmatter: Some({intro: Some(intro)})
+              frontmatter: Some({intro: Some(intro), avatar})
             })
           }) =>
           <About description=intro avatar />

@@ -1,28 +1,28 @@
 module VisuallyHidden = {
-  @bs.module("@reach/visually-hidden") @react.component
+  @module("@reach/visually-hidden") @react.component
   external make: (~children: React.element) => React.element = "default"
 }
 
 module SkipNav = {
   module Link = {
-    @bs.module("@reach/skip-nav") @react.component
+    @module("@reach/skip-nav") @react.component
     external make: unit => React.element = "SkipNavLink"
   }
   module Content = {
-    @bs.module("@reach/skip-nav") @react.component
+    @module("@reach/skip-nav") @react.component
     external make: unit => React.element = "SkipNavContent"
   }
 }
 
 module URLSearchParams = {
-  @bs.new
+  @new
   external makeWithArray: array<(string, string)> => {..} = "URLSearchParams"
 }
 
 module Url = {
-  @bs.new external make: string => {..} = "URL"
-  @bs.new external makeWith: (string, ~base: string) => {..} = "URL"
-  @bs.set external setSearch: ({..}, string) => unit = "search"
+  @new external make: string => {..} = "URL"
+  @new external makeWith: (string, ~base: string) => {..} = "URL"
+  @set external setSearch: ({..}, string) => unit = "search"
 }
 
 module Rss = {
@@ -34,13 +34,13 @@ module Rss = {
 
   type enclosure
 
-   @bs.obj
+   @obj
    external enclosureUrl:
      (~url: string, ~size: int=?, ~type_: string=?, unit) => enclosure = ""
 
   module Feed = {
     type options
-    @bs.obj
+    @obj
     external options: (
       ~title: string,
       ~description: string=?,
@@ -65,7 +65,7 @@ module Rss = {
 
   module Item = {
     type options
-    @bs.obj
+    @obj
     external options: (
       ~title: string,
       ~description: string,

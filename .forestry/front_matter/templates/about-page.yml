@@ -17,5 +17,55 @@ fields:
       format: html
   label: Intro
   description: Enter description here
+- name: image_large
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: alt
+    type: text
+    config:
+      required: false
+    label: Alternate text
+    description: Use this text to describe the image for humans and robots who can’t
+      see images.
+  - name: caption
+    type: text
+    config:
+      required: false
+    label: Caption
+    description: "This text will appear under the image. It shouldn’t be the same as
+      the <em>alternate text</em>. (This isn't being used.)"
+  label: Image
+  description: An image to appear on the page.
+- name: image_small
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: alt
+    type: text
+    config:
+      required: false
+    label: Alternate text
+    description: Use this text to describe the image for humans and robots who can’t
+      see images.
+  - name: caption
+    type: text
+    config:
+      required: false
+    label: Caption
+    description: "This text will appear under the image. It shouldn’t be the same as
+      the <em>alternate text</em>. (This isn't being used.)"
+  label: Image (small)
+  description: A small image to appear below posts.
 pages:
 - content/pages/about.md

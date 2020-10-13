@@ -28,7 +28,7 @@ let toStringWithBase = (route, base) =>
   Externals.Url.makeWith(toString(route), ~base)["href"]
 
 module GatsbyLink = {
-  @bs.module("gatsby") @react.component
+  @module("gatsby") @react.component
   external make: (
     ~_to: string,
     ~activeClassName: string=?,

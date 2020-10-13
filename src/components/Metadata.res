@@ -1,5 +1,5 @@
 module Helmet = {
-  @bs.module("react-helmet") @react.component
+  @module("react-helmet") @react.component
   external make: (~children: React.element) => React.element = "Helmet"
 }
 
@@ -37,7 +37,7 @@ type t =
 @react.component
 let make = (~children) => {
   let {
-    QuerySiteMetadata.title: siteTitle,
+    title: siteTitle,
     description: siteDescription,
     siteUrl,
     twitterHandle,

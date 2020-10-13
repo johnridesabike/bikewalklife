@@ -60,7 +60,7 @@ type t = {
 )
 
 module Path = {
-  @bs.module("path") @bs.splice
+  @module("path") @splice
   external resolve: array<string> => string = "resolve"
 }
 
@@ -124,8 +124,8 @@ let createPages = (
     }
   )
 
-@bs.val @bs.scope("Object")
-external clone: (@bs.as(json`{}`) _, page) => page = "assign"
+@val @scope("Object")
+external clone: (@as(json`{}`) _, page) => page = "assign"
 
 type pageActions = {
   deletePage: (. page) => unit,
@@ -143,13 +143,13 @@ type onCreatePage = {
 let onCreatePage = ({page, actions: {deletePage, createPage}}) => {
   let oldPage = clone(page)
   page.path =
-    Js.String2.replaceByRe(page.path, %bs.re("/(\\/index\\.bs\\/)$/"), "/")
+    Js.String2.replaceByRe(page.path, %re("/(\\/index\\.bs\\/)$/"), "/")
   if page.path != oldPage.path {
     deletePage(. oldPage)
     createPage(. page)
   } else {
     page.path =
-      Js.String2.replaceByRe(page.path, %bs.re("/(\\.bs\\/)$/"), "/")
+      Js.String2.replaceByRe(page.path, %re("/(\\.bs\\/)$/"), "/")
     if page.path != oldPage.path {
       deletePage(. oldPage)
       createPage(. page)

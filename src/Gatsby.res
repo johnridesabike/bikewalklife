@@ -11,12 +11,12 @@ module type GraphQLQuery = {
 }
 
 module ExtendQuery = (M: GraphQLQuery) => {
-  @bs.module("gatsby")
+  @module("gatsby")
   external useStaticQuery: query => M.Raw.t = "useStaticQuery"
 }
 
 module Img = {
-  @bs.module("gatsby-image") @react.component
+  @module("gatsby-image") @react.component
   external make: (
     ~fluid: 'fluid_unsafe=?,
     ~fixed: 'fixed_unsafe=?,

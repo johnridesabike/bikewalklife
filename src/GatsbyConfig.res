@@ -1,4 +1,4 @@
-@bs.module external config: {..} = "../../../config.json"
+@module external config: {..} = "../../../config.json"
 
 module PluginFeed = {
   %graphql(
@@ -110,7 +110,7 @@ module PluginFeed = {
           ~site_url=siteUrl,
           ~feed_url=Externals.Url.makeWith(feedUrl, ~base=siteUrl)["href"],
           ~image_url=
-            Externals.Url.makeWith("/icons/icon-96x96.png" ~base=siteUrl)["href"],
+            Externals.Url.makeWith("/icons/icon-96x96.png", ~base=siteUrl)["href"],
           ~custom_namespaces=
             Js.Dict.fromArray([
               ("media", "http://search.yahoo.com/mrss/")
@@ -232,7 +232,7 @@ module PluginSiteMap = {
 
   module Page = {
     type t
-    @bs.obj
+    @obj
     external make:
       (~url: string, ~changefreq: string=?, ~priority: float=?, unit) => t = ""
   }

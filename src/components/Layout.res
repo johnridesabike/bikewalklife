@@ -1,7 +1,3 @@
-type metadata =
-  | Site
-  | String(string)
-
 module Logo = {
   /* Use CSS classnames for colors so variables are processed by postcss. */
   @react.component
@@ -36,7 +32,7 @@ module Logo = {
 
 @react.component
 let make = (~metadata, ~children) => {
-  let {QuerySiteMetadata.title, description, _} = QuerySiteMetadata.use()
+  let {title, description, _} = QuerySiteMetadata.use()
   let strings = QueryStrings.use()
     <div className="page">
       <Metadata> metadata </Metadata>

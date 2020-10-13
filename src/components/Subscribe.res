@@ -1,6 +1,6 @@
 @react.component
 let make = (~className="") => {
-  let {QuerySiteMetadata.title, feedUrl, _} = QuerySiteMetadata.use()
+  let {title, feedUrl, _} = QuerySiteMetadata.use()
   let strings = QueryStrings.use()
   <section className={Cn.append("subscribe ui-font", className)}>
     <h2 className="subscribe__heading font-size-xlarge">

@@ -11,13 +11,16 @@ open QueryFragments
         frontmatter {
           title
           intro
-        }
-      }
-    }
-    johnpic: file(name: {eq: "john-2020"}, sourceInstanceName: {eq: "images"}) {
-      childImageSharp {
-        fixed(width: 240, height: 240, cropFocus: CENTER) {
-          ...ImageFixed_withWebp
+          image: image_large {
+            alt
+            image {
+              childImageSharp {
+                fixed(width: 240, height: 240, cropFocus: CENTER) {
+                  ...ImageFixed_withWebp
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -35,21 +38,24 @@ let default = (~data) =>
           frontmatter: Some({
             title: Some(title),
             intro: Some(intro),
+            image,
           })
         })
       }),
-      johnpic,
     }=>
     <Layout metadata=Title({title, route: About})>
       <main>
         <h1> {title->React.string} </h1>
-        {switch johnpic {
-        | Some({childImageSharp: Some({fixed})}) =>
+        {switch image {
+        | Some({
+          image: Some({childImageSharp: Some({fixed})}),
+          alt: Some(alt)
+         }) =>
           <figure className="about__photo-wrapper">
             <Gatsby.Img
               fixed
               fadeIn=false
-              alt="A photograph of John."
+              alt
               className="about__photo"
             />
           </figure>

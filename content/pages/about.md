@@ -3,6 +3,14 @@ title: About
 intro: "<p>Hi, this is John. I’m a bike commuter from Columbus, Georgia. I created
   this blog to raise awareness of the issues affecting the world of biking and walking.
   I especially focus on the Southeast U.S.</p>"
+image_large:
+  image: "/content/images/2020/john-2020.jpeg"
+  alt: A photograph of John.
+  caption: ""
+image_small:
+  image: "/content/images/2020/john-2020-closeup.jpeg"
+  alt: A photograph of John.
+  caption: ""
 
 ---
 I’ve been a bike enthusiast for several years now. I ride my bicycle to and from work on most days, and I’ve done this while living in one of the most car-dominated cities, in one of the most car-dominated regions, in the world. Even though bike advocates will tell you that riding bicycles is liberating, I can attest that such a counter-cultural lifestyle is not easy.
