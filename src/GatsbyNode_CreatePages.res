@@ -60,7 +60,7 @@ type t = {
 )
 
 module Path = {
-  @module("path") @splice
+  @module("path") @variadic
   external resolve: array<string> => string = "resolve"
 }
 
