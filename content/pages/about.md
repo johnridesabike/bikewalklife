@@ -21,7 +21,7 @@ _Bike Walk Life_ is about individuals and communities that reject the ideas of c
 
 ## More writing from John
 
-* [Letter to the editor: Benefits of 13th Street reimagining would seem obvious](https://www.ledger-enquirer.com/opinion/letters-to-the-editor/article197260389.html)  
-  January 30, 2018
 * [Letter to the editor: Walking and biking are the answers](https://www.ledger-enquirer.com/opinion/letters-to-the-editor/article226272120.html)  
   February 17, 2019
+* [Letter to the editor: Benefits of 13th Street reimagining would seem obvious](https://www.ledger-enquirer.com/opinion/letters-to-the-editor/article197260389.html)  
+  January 30, 2018
