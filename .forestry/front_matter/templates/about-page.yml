@@ -38,8 +38,8 @@ fields:
     config:
       required: false
     label: Caption
-    description: "This text will appear under the image. It shouldn’t be the same as
-      the <em>alternate text</em>. (This isn't being used.)"
+    description: This text will appear under the image. It shouldn’t be the same as
+      the <em>alternate text</em>. (This isn't being used.)
   label: Image
   description: An image to appear on the page.
 - name: image_small
@@ -63,8 +63,8 @@ fields:
     config:
       required: false
     label: Caption
-    description: "This text will appear under the image. It shouldn’t be the same as
-      the <em>alternate text</em>. (This isn't being used.)"
+    description: This text will appear under the image. It shouldn’t be the same as
+      the <em>alternate text</em>. (This isn't being used.)
   label: Image (small)
   description: A small image to appear below posts.
 pages:
