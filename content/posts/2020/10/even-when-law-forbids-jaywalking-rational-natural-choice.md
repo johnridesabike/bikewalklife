@@ -1,8 +1,7 @@
 ---
 date: 2020-10-28T16:37:58-04:00
 draft: true
-title: Even when laws forbid it, “jaywalking” is usually the rational and natural
-  choice
+title: Even when the law forbids it, “jaywalking” is the rational and natural choice
 author: John Jackson
 hero_image:
   image: ''
