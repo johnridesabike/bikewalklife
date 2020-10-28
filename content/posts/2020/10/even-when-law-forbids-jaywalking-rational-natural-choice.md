@@ -17,7 +17,7 @@ tags:
 slug: ''
 
 ---
-In the US, we all grow up learning that jaywalking is dangerous and illegal. Most of the time, we don’t question it. _Of course_ people shouldn’t step outside of designated walking paths, after waiting for the pedestrian signal to turn, and after looking both ways. _Of course_ streets are for vehicle, so people outside of cars shouldn’t expect to be safe. And eventually this thought process brings us to its ultimate conclusion: _of course_ that person killed by a car brought her fate upon herself, she was _jaywalking_.
+In the US, we all grow up learning that jaywalking is dangerous and illegal. Most of the time, we don’t question that. _Of course_ people shouldn’t step outside of designated walking paths after waiting for the pedestrian signal to turn and after looking both ways. _Of course_ streets are for vehicle, so people outside of cars shouldn’t expect to be safe. And eventually this thought process brings us to its ultimate conclusion: _of course_ that person killed by a car brought her fate upon herself, she was _jaywalking_.
 
 This is the logic that car-culture sells, but we don’t have to buy it. [Angie Schmitt and Charles T. Brown wrote a recent article for Bloomberg CityLab: “9 Reasons to Eliminate Jaywalking Laws Now”](https://www.bloomberg.com/news/articles/2020-10-16/jaywalking-laws-don-t-make-streets-safer). They premise it on the idea that jaywalking laws don’t even do the one thing that they’re supposed to do: make our streets safer. Pedestrians are killed just as often at crosswalks as they are on other parts of the street, and the laws are enforced unevenly. But one of their points especially stuck out to me:
 
