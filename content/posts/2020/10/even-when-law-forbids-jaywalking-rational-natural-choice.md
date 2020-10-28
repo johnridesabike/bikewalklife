@@ -14,6 +14,7 @@ tags:
 - CityLab
 - Angie Schmitt
 - Charles T. Brown
+- pedestrian
 slug: ''
 
 ---
