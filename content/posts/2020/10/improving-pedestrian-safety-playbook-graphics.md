@@ -9,10 +9,10 @@ hero_image:
   caption: ''
 external_link: https://americawalks.org/we-asked-nhtsa-to-rewrite-the-pedestrian-safety-playbook/
 tags:
-- pedestrian safety month
 - pedestrian
 - NHTSA
 - AmericaWalks
+- National Pedestrian Safety Month
 slug: ''
 
 ---
