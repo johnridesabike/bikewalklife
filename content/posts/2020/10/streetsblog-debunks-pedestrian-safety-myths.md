@@ -1,5 +1,5 @@
 ---
-date: 2020-10-01T20:30:00-04:00
+date: 2020-10-01T20:30:00.000-04:00
 draft: false
 title: Streetsblog debunks pedestrian safety myths
 author: John Jackson
@@ -14,6 +14,7 @@ tags:
 - National Pedestrian Safety Month
 - Streetsblog
 - violence
+- NHTSA
 slug: ''
 
 ---
