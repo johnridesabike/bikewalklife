@@ -16,9 +16,9 @@ tags:
 slug: ''
 
 ---
-Previously on Bike Walk Life, we took a look at the glaring shortcomings of the National Highway Traffic Safety Administration’s “Pedestrian Safety Month” campaign. I use scare-quotes because the campaign was seemingly premised on the idea that pedestrians are to blame for their own deaths. We’re at a point in history where pedestrian deaths are rising, and it’s not because the people on foot are becoming more dangerous, it’s because of our cars and streets.
+Previously on Bike Walk Life, we took a look at the glaring shortcomings of the National Highway Traffic Safety Administration’s (NHTSA) “Pedestrian Safety Month” campaign. I use scare-quotes because the campaign was seemingly premised on finding ways to blame pedestrians for their own deaths. We’re at a point in history where pedestrian deaths are rising, and it’s not because the people on foot are becoming more dangerous. It’s because of our collective failure to build safe cars and streets.
 
-[AmericaWalks recently took it upon themselves to create some alternative pedestrian safety graphics](https://americawalks.org/we-asked-nhtsa-to-rewrite-the-pedestrian-safety-playbook/):
+In response to this, [AmericaWalks recently took it upon themselves to create alternative pedestrian safety graphics](https://americawalks.org/we-asked-nhtsa-to-rewrite-the-pedestrian-safety-playbook/). They encourage sharing these images, so that’s what I’m going to do:
 
 > The truth is that we know what it takes to save lives and blaming pedestrians isn’t it. We’re going to [keep pushing USDOT](https://americawalks.org/the-federal-government-can-spur-dramatic-transformation-for-pedestrian-safety-if-it-so-chooses/) and NHTSA to use their authority to make it safe for those walking and moving on our streets. It’s time for a new pedestrian playbook with real action, not victim blaming.
 >
