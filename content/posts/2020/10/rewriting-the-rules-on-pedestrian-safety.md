@@ -1,7 +1,7 @@
 ---
 date: 2020-10-30T16:51:00-04:00
 draft: true
-title: Rewriting the rules on pedestrian safety
+title: Improving the pedestrian safety playbook graphics
 author: John Jackson
 hero_image:
   image: ''
@@ -23,3 +23,11 @@ Previously on Bike Walk Life, we took a look at the glaring shortcomings of the 
 > The truth is that we know what it takes to save lives and blaming pedestrians isn’t it. We’re going to [keep pushing USDOT](https://americawalks.org/the-federal-government-can-spur-dramatic-transformation-for-pedestrian-safety-if-it-so-chooses/) and NHTSA to use their authority to make it safe for those walking and moving on our streets. It’s time for a new pedestrian playbook with real action, not victim blaming.
 >
 > We took the liberty of rebutting some of [NHTSA’s graphics](https://www.trafficsafetymarketing.gov/get-materials/pedestrian-safety/everyone-pedestrian?_ga=2.31046269.399588737.1603861965-197810799.1600885801) from their Playbook. Feel free to use and share:
+
+![](/content/images/2020/aw-ped-safety-1.png)
+
+![](/content/images/2020/aw-ped-safety-2.png)
+
+![](/content/images/2020/aw-ped-safety-4.png)
+
+![](/content/images/2020/aw-ped-safety-5.png)
