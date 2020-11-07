@@ -1,6 +1,6 @@
 ---
 date: 2020-11-07T17:18:43-05:00
-draft: true
+draft: false
 title: Atlanta has a new bicycle mayor, Pattie Baker
 author: John Jackson
 hero_image:
@@ -16,11 +16,11 @@ tags:
 slug: ''
 
 ---
-There’s a new mayor in A-town, as Atlanta is sometimes known. Bicycle mayors, [which I wrote about previously](/2020/9/bicycle-mayors/), aren’t mayors in any traditional sense. (And this role has no relationship with any current election events, for those of you seeking an escape from that news cycle.)
+There’s a new mayor in A-town, or rather, a new _bicycle_ mayor. Pattie Baker, of [Traveling at the Speed of Bike](https://travelingatthespeedofbike.com) fame (and an inspiration for Bike Walk Life!), recently completed her application, making her the first one in the southeastern United States.
 
-“Bicycle mayors” aren’t civic mayors who ride bicycles. They’re people with a passion for bicycling and wish to commit to improving bicycling conditions in their cities. The international group BYCS vets their qualifications as leaders and activists, and then approves them as official bicycle mayors. These “mayors” (scare quotes since I feel like this term could be confusing) can use their position for networking and other advocacy purposes. 
+(And don’t worry, this role has no relationship with any current election events, for those of you seeking relief from that news cycle.)
 
-Pattie Baker, of [Traveling at the Speed of Bike](https://travelingatthespeedofbike.com) fame (and an inspiration for Bike Walk Life!), recently completed her application, making her the first one in the southeastern United States. 
+“Bicycle mayors,” [which I wrote about previously](/2020/9/bicycle-mayors/), aren’t mayors in any traditional sense. They aren’t civic mayors who ride bicycles. They’re people with a passion for bicycling and wish to commit to improving bicycling conditions in their cities. The international group [BYCS](https://bycs.org) vets their qualifications as leaders and activists and approves them as members of the bicycle mayor program. These individuals can then use their positions for networking and other advocacy purposes.
 
 [You can read about about her on her “meet the bicycle mayors” page](https://bycs.org/pattie-baker/).
 
