@@ -1,6 +1,6 @@
 ---
 date: 2020-11-11T14:04:51-05:00
-draft: true
+draft: false
 title: Bicycle related ballot measures were huge successes in the 2020 election
 author: John Jackson
 hero_image:
