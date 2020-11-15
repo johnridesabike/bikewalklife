@@ -14,7 +14,7 @@ tags:
 slug: ''
 
 ---
-This Friday, November 13, is [World Day of Remembrance for Road Traffic Victims](https://worlddayofremembrance.org/). From the official site:
+November 15, is [World Day of Remembrance for Road Traffic Victims](https://worlddayofremembrance.org/). From the official site:
 
 > The objectives of WDoR 2020 are to provide a platform for road traffic victims and their families to:
 >
