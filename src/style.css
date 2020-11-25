@@ -446,6 +446,10 @@ dd {
   flex-basis: 100%;
 }
 
+.entry__author-by {
+  font-size: var(--font-size-sm);
+}
+
 .entry__author,
 .entry__date {
   font-size: var(--font-size-sm);

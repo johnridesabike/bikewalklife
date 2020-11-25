@@ -161,6 +161,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       })}>
       <main>
         <Entry
+          author
           html
           route=Entry({year: year, month: month, slug: slug})
           heroImage={switch heroImage {

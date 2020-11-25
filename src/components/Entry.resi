@@ -36,6 +36,6 @@ let make: (
   ~date: string,
   ~draft: bool,
   ~footer: React.element,
-  ~className: // ~author: string,
-  string=?,
+  ~author: string,
+  ~className: string=?,
 ) => React.element

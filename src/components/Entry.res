@@ -22,19 +22,15 @@ module Date = {
     </time>
 }
 
-/*
 module Author = {
   @react.component
-  let make = (~name) => 
+  let make = (~name) =>
     <div className="entry__author">
       <span ariaHidden=true> <Icons.User className="icon" /> </span>
-      {"by "->React.string}
-      <span className="p-author h-card">
-        {name->React.string}
-      </span>
+      <span className="entry__author-by"> {"by "->React.string} </span>
+      <span className="p-author h-card"> {name->React.string} </span>
     </div>
 }
-*/
 
 module DraftNotice = {
   @react.component
@@ -84,7 +80,7 @@ let make = (
   ~date,
   ~draft,
   ~footer,
-  // ~author,
+  ~author,
   ~className="",
 ) =>
   <article className={Cn.append("h-entry hentry entry__article", className)}>
@@ -112,8 +108,8 @@ let make = (
           }}
         </h1>
         <Date date isoDate />
-        {// <Author name=author />
-        if draft {
+        <Author name=author />
+        {if draft {
           <DraftNotice />
         } else {
           React.null

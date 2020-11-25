@@ -20,6 +20,7 @@ open QueryFragments
         title
         externalLink
         draft
+        author
         heroImage {
           alt
           caption
@@ -55,9 +56,11 @@ let default = (~data) => {
         draft,
         externalLink,
         parent,
+        author,
       }) =>
         <React.Fragment key=id>
           <Entry
+            author
             html={switch parent {
             | Some(#MarkdownRemark({html: Some(html)})) => html
             | Some(#UnspecifiedFragment(_) | #MarkdownRemark(_)) | None => ""
