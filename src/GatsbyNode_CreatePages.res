@@ -68,40 +68,29 @@ let blogTemplate = Path.resolve(["src", "Template_Entry.bs.js"])
 
 let archiveTemplate = Path.resolve(["src", "Template_Archive.bs.js"])
 
-let createPages = (
-    {
-      graphql,
-      actions: {createPage, _},
-      reporter: {panicOnBuild},
-      _
-    }
-  ) =>
+let createPages = ({graphql, actions: {createPage, _}, reporter: {panicOnBuild}, _}) =>
   graphql(. CreatePages.query)->Promise.Js.fromBsPromise->Promise.Js.tap(x =>
     switch x {
     | {errors: Some(error), _} => panicOnBuild(. "Error creating pages", error)
     | {data, errors: None} =>
       switch data->CreatePages.unsafe_fromJson->CreatePages.parse {
       | {allPost: {edges}, site: Some({siteMetadata: {archivePerPage}})} =>
-        Array.forEach(
-          edges,
-          ({CreatePages.node: {slug, year, month}, next, previous}) =>
-            createPage(.{
-              component: blogTemplate,
-              path: Router.toString(Entry({year, month, slug})),
-              context: Context({
-                Template_Entry.slug: slug,
-                year,
-                month,
-                next,
-                previous,
-              }),
-            })
+        Array.forEach(edges, ({CreatePages.node: {slug, year, month}, next, previous}) =>
+          createPage(.{
+            component: blogTemplate,
+            path: Router.toString(Entry({year: year, month: month, slug: slug})),
+            context: Context({
+              Template_Entry.slug: slug,
+              year: year,
+              month: month,
+              next: next,
+              previous: previous,
+            }),
+          })
         )
 
         let numPages =
-          Float.fromInt(Array.size(edges))
-          /. Float.fromInt(archivePerPage)
-          |> Js.Math.ceil_int
+          Float.fromInt(Array.size(edges)) /. Float.fromInt(archivePerPage) |> Js.Math.ceil_int
 
         Range.forEach(0, numPages - 1, i =>
           createPage(.{
@@ -115,11 +104,7 @@ let createPages = (
             }),
           })
         )
-      | _ =>
-        panicOnBuild(.
-          "Error creating archive",
-          Js.Exn.raiseError("createPages")
-        )
+      | _ => panicOnBuild(. "Error creating archive", Js.Exn.raiseError("createPages"))
       }
     }
   )
@@ -133,7 +118,7 @@ type pageActions = {
 }
 
 type onCreatePage = {
-  page,
+  page: page,
   actions: pageActions,
 }
 
@@ -142,14 +127,12 @@ type onCreatePage = {
  */
 let onCreatePage = ({page, actions: {deletePage, createPage}}) => {
   let oldPage = clone(page)
-  page.path =
-    Js.String2.replaceByRe(page.path, %re("/(\\/index\\.bs\\/)$/"), "/")
+  page.path = Js.String2.replaceByRe(page.path, %re("/(\\/index\\.bs\\/)$/"), "/")
   if page.path != oldPage.path {
     deletePage(. oldPage)
     createPage(. page)
   } else {
-    page.path =
-      Js.String2.replaceByRe(page.path, %re("/(\\.bs\\/)$/"), "/")
+    page.path = Js.String2.replaceByRe(page.path, %re("/(\\.bs\\/)$/"), "/")
     if page.path != oldPage.path {
       deletePage(. oldPage)
       createPage(. page)

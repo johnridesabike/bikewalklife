@@ -86,10 +86,7 @@ type pageContext = {
 
 module About = {
   @react.component
-  let make = (
-    ~description, 
-    ~avatar: option<t_about_childMarkdownRemark_frontmatter_avatar>,
-  ) => {
+  let make = (~description, ~avatar: option<t_about_childMarkdownRemark_frontmatter_avatar>) => {
     let siteMetadata = QuerySiteMetadata.use()
     let strings = QueryStrings.use()
     <section className="entry-page__about">
@@ -98,22 +95,14 @@ module About = {
       </h2>
       <div className="entry-page__about-wrapper">
         {switch avatar {
-        | Some({
-          image: Some({childImageSharp: Some({fixed})}),
-          alt: Some(alt)
-         }) =>
+        | Some({image: Some({childImageSharp: Some({fixed})}), alt: Some(alt)}) =>
           <div className="entry-page__avatar-wrapper">
-            <Gatsby.Img
-              fixed
-              alt
-              className="entry-page__avatar"
-            />
+            <Gatsby.Img fixed alt className="entry-page__avatar" />
           </div>
         | _ => React.null
         }}
         <div
-          className="entry-page__about-content"
-          dangerouslySetInnerHTML={"__html": description}
+          className="entry-page__about-content" dangerouslySetInnerHTML={"__html": description}
         />
       </div>
       <p className="entry-page__about-link">
@@ -123,20 +112,13 @@ module About = {
         </Router.Link>
       </p>
       {switch strings.contact_text {
-      | Some(text) =>
-        <>
-          <h2 className="entry-page__footer-heading">
-            {"Leave a comment"->React.string}
-          </h2>
-          <div
-            className="entry-page__about-content"
-            dangerouslySetInnerHTML={"__html": text} />
+      | Some(text) => <>
+          <h2 className="entry-page__footer-heading"> {"Leave a comment"->React.string} </h2>
+          <div className="entry-page__about-content" dangerouslySetInnerHTML={"__html": text} />
           <p className="entry-page__about-link">
             <Router.Link route=Contact>
               {"Contact me"->React.string}
-              <span ariaHidden=true>
-                <Icons.ArrowRight className="icon" />
-              </span>
+              <span ariaHidden=true> <Icons.ArrowRight className="icon" /> </span>
             </Router.Link>
           </p>
         </>
@@ -159,39 +141,28 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           draft,
           author,
           externalLink,
-          parent: Some(
-            #MarkdownRemark({
-              html: Some(html),
-              excerpt: Some(excerpt)
-            })
-          ),
+          parent: Some(#MarkdownRemark({html: Some(html), excerpt: Some(excerpt)})),
           related,
         }),
       about,
     } =>
     <Layout
-      metadata={
-        Article({
-          title,
-          description: excerpt,
-          author,
-          date: isoDate,
-          route: Entry({year, month, slug}),
-          image: switch heroImage {
-            | Some({
-                alt,
-                image: Some({sharp: Some({fluid: Some({src, _}), _})}),
-                _
-              }) =>
-              Some({url: src, alt})
-            | _ => None
-          },
-        })
-      }>
+      metadata={Article({
+        title: title,
+        description: excerpt,
+        author: author,
+        date: isoDate,
+        route: Entry({year: year, month: month, slug: slug}),
+        image: switch heroImage {
+        | Some({alt, image: Some({sharp: Some({fluid: Some({src, _}), _})}), _}) =>
+          Some({url: src, alt: alt})
+        | _ => None
+        },
+      })}>
       <main>
         <Entry
           html
-          route=Entry({year, month, slug})
+          route=Entry({year: year, month: month, slug: slug})
           heroImage={switch heroImage {
           | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>
             Entry.Image.make(~alt?, fluid, AboveFold)
@@ -217,11 +188,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       <hr className="separator" />
       <aside className="ui-font">
         {switch about {
-        | Some({
-            childMarkdownRemark: Some({
-              frontmatter: Some({intro: Some(intro), avatar})
-            })
-          }) =>
+        | Some({childMarkdownRemark: Some({frontmatter: Some({intro: Some(intro), avatar})})}) =>
           <About description=intro avatar />
         | _ => React.null
         }}
@@ -233,15 +200,13 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         {switch related {
         | [] => React.null
         | related => <>
-            <h2 className="entry-page__footer-header">
-              {"Related posts"->React.string}
-            </h2>
+            <h2 className="entry-page__footer-header"> {"Related posts"->React.string} </h2>
             <ul className="entry-page__related-list">
               {related
               ->Array.map(({id, title, year, month, slug, date, isoDate}) =>
                 <li className="entry-page__related-item" key=id>
                   <div>
-                    <Router.Link route=Entry({year, month, slug})>
+                    <Router.Link route=Entry({year: year, month: month, slug: slug})>
                       {title->React.string}
                     </Router.Link>
                   </div>
@@ -253,16 +218,14 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
             <hr className="separator" />
           </>
         }}
-        <h2 className="entry-page__footer-heading">
-          {"Other recent posts"->React.string}
-        </h2>
+        <h2 className="entry-page__footer-heading"> {"Other recent posts"->React.string} </h2>
         <ul className="entry-page__recent-list">
           {switch previous {
           | None => React.null
           | Some({year, month, slug, title}) =>
             <li className="entry-page__recent-item">
               <Router.Link
-                route=Entry({year, month, slug})
+                route=Entry({year: year, month: month, slug: slug})
                 className="entry-page__recent-link">
                 <span ariaHidden=true>
                   <Icons.ArrowLeft className="icon entry-page__arrow" />
@@ -281,7 +244,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           | Some({year, month, slug, title}) =>
             <li className="entry-page__recent-item">
               <Router.Link
-                route=Entry({year, month, slug})
+                route=Entry({year: year, month: month, slug: slug})
                 className="entry-page__recent-link"
                 style={ReactDOMRe.Style.make(~justifyContent="flex-end", ())}>
                 <span>
@@ -300,11 +263,7 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
       </nav>
     </Layout>
   | {
-      post:
-        Some({
-          parent: Some(#MarkdownRemark(_) | #UnspecifiedFragment(_)) | None,
-          _
-        }) | None,
+      post: Some({parent: Some(#MarkdownRemark(_) | #UnspecifiedFragment(_)) | None, _}) | None,
       _,
     } =>
     <Page_404 />

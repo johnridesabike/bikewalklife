@@ -11,21 +11,14 @@ let toString = x =>
   | Index => "/"
   | About => "/about/"
   | Entry({year, month, slug}) =>
-    "/"
-    ++ Int.toString(year)
-    ++ "/"
-    ++ Int.toString(month)
-    ++ "/"
-    ++ slug
-    ++ "/"
+    "/" ++ Int.toString(year) ++ "/" ++ Int.toString(month) ++ "/" ++ slug ++ "/"
   | Archive(1) => "/archive/"
   | Archive(page) => "/archive/" ++ Int.toString(page) ++ "/"
   | Search => "/search/"
   | Contact => "/contact/"
   }
 
-let toStringWithBase = (route, base) =>
-  Externals.Url.makeWith(toString(route), ~base)["href"]
+let toStringWithBase = (route, base) => Externals.Url.makeWith(toString(route), ~base)["href"]
 
 module GatsbyLink = {
   @module("gatsby") @react.component
@@ -51,13 +44,7 @@ module Link = {
     ~style=?,
     ~children,
   ) =>
-    <GatsbyLink
-      _to={toString(route)}
-      activeClassName
-      partiallyActive
-      ?className
-      ?style
-      ?tabIndex>
+    <GatsbyLink _to={toString(route)} activeClassName partiallyActive ?className ?style ?tabIndex>
       children
     </GatsbyLink>
 }

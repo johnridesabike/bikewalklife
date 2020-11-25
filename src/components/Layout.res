@@ -2,11 +2,7 @@ module Logo = {
   /* Use CSS classnames for colors so variables are processed by postcss. */
   @react.component
   let make = (~width) =>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 128 48"
-      ariaHidden=true
-      width>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 48" ariaHidden=true width>
       <title id="logo-title"> {"Bike Walk Life"->React.string} </title>
       <desc> {"Bike Walk Life site logo."->React.string} </desc>
       <g
@@ -34,83 +30,61 @@ module Logo = {
 let make = (~metadata, ~children) => {
   let {title, description, _} = QuerySiteMetadata.use()
   let strings = QueryStrings.use()
-    <div className="page">
-      <Metadata> metadata </Metadata>
-      <Externals.SkipNav.Link />
-      <header className="ui-font header__wrapper">
-        <div className="small-screen-padding header">
-          <h1 className="header__title reading-font">
-            <Router.Link
-              className="header__title-link"
-              route=Index
-              activeClassName=""
-              tabIndex={-1}>
-              <Logo width="192" />
-              <Externals.VisuallyHidden>
-                {title->React.string}
-              </Externals.VisuallyHidden>
-            </Router.Link>
-          </h1>
-          <p className="header__description"> {description->React.string} </p>
-          <nav role="navigation" ariaLabel="main navigation">
-            <ul className="menu__list">
-              <li className="menu__item">
-                <Router.Link route=Index className="menu__link">
-                  {"Home"->React.string}
-                </Router.Link>
-              </li>
-              <li className="menu__item">
-                <Router.Link route=About className="menu__link">
-                  {"About"->React.string}
-                </Router.Link>
-              </li>
-              <li className="menu__item">
-                <Router.Link route=Contact className="menu__link">
-                  {"Contact"->React.string}
-                </Router.Link>
-              </li>
-              <li className="menu__item">
-                <Router.Link
-                  route=Archive(1)
-                  partiallyActive=true
-                  className="menu__link">
-                  {"Archive"->React.string}
-                </Router.Link>
-              </li>
-              <li className="menu__item">
-                <Router.Link route=Search className="menu__link">
-                  {"Search"->React.string}
-                </Router.Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <Externals.SkipNav.Content />
-      <div className="small-screen-padding content"> children </div>
-      <footer className="footer__wrapper">
-        <div className="small-screen-padding footer">
-          {switch strings.footer {
-          | Some(text) =>
-            <div dangerouslySetInnerHTML={"__html": text} />
-          | None => React.null
-          }}
-          <p>
-            <Router.Link route=Index activeClassName="">
-              {"Home"->React.string}
-            </Router.Link>
-          </p>
-          <p>
-            <Router.Link route=About activeClassName="">
-              {"About"->React.string}
-            </Router.Link>
-          </p>
-          <p>
-            <Router.Link route=Contact activeClassName="">
-              {"Contact"->React.string}
-            </Router.Link>
-          </p>
-        </div>
-      </footer>
-    </div>
+  <div className="page">
+    <Metadata> metadata </Metadata>
+    <Externals.SkipNav.Link />
+    <header className="ui-font header__wrapper">
+      <div className="small-screen-padding header">
+        <h1 className="header__title reading-font">
+          <Router.Link className="header__title-link" route=Index activeClassName="" tabIndex={-1}>
+            <Logo width="192" />
+            <Externals.VisuallyHidden> {title->React.string} </Externals.VisuallyHidden>
+          </Router.Link>
+        </h1>
+        <p className="header__description"> {description->React.string} </p>
+        <nav role="navigation" ariaLabel="main navigation">
+          <ul className="menu__list">
+            <li className="menu__item">
+              <Router.Link route=Index className="menu__link"> {"Home"->React.string} </Router.Link>
+            </li>
+            <li className="menu__item">
+              <Router.Link route=About className="menu__link">
+                {"About"->React.string}
+              </Router.Link>
+            </li>
+            <li className="menu__item">
+              <Router.Link route=Contact className="menu__link">
+                {"Contact"->React.string}
+              </Router.Link>
+            </li>
+            <li className="menu__item">
+              <Router.Link route=Archive(1) partiallyActive=true className="menu__link">
+                {"Archive"->React.string}
+              </Router.Link>
+            </li>
+            <li className="menu__item">
+              <Router.Link route=Search className="menu__link">
+                {"Search"->React.string}
+              </Router.Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <Externals.SkipNav.Content />
+    <div className="small-screen-padding content"> children </div>
+    <footer className="footer__wrapper">
+      <div className="small-screen-padding footer">
+        {switch strings.footer {
+        | Some(text) => <div dangerouslySetInnerHTML={"__html": text} />
+        | None => React.null
+        }}
+        <p> <Router.Link route=Index activeClassName=""> {"Home"->React.string} </Router.Link> </p>
+        <p> <Router.Link route=About activeClassName=""> {"About"->React.string} </Router.Link> </p>
+        <p>
+          <Router.Link route=Contact activeClassName=""> {"Contact"->React.string} </Router.Link>
+        </p>
+      </div>
+    </footer>
+  </div>
 }

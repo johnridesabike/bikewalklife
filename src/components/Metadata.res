@@ -41,14 +41,11 @@ let make = (~children) => {
     description: siteDescription,
     siteUrl,
     twitterHandle,
-    _
+    _,
   } = QuerySiteMetadata.use()
   <>
     <Helmet>
-      <html
-        lang="en-US"
-        prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#"
-      />
+      <html lang="en-US" prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#" />
       <meta property="og:site_name" content=siteTitle />
       {switch twitterHandle {
       | Some(content) => <meta name="twitter:site" content />
@@ -57,96 +54,62 @@ let make = (~children) => {
       <meta name="twitter:card" content="summary" />
       {switch Metadata.query->Metadata.useStaticQuery->Metadata.parse {
       | {logo: Some({childImageSharp: Some({fixed: Some({src})})})} =>
-        <meta
-          property="og:image"
-          content={Externals.Url.makeWith(src, ~base=siteUrl)["href"]}
-        />
+        <meta property="og:image" content={Externals.Url.makeWith(src, ~base=siteUrl)["href"]} />
       | _ => React.null
       }}
-      <meta
-        name="twitter:image:alt"
-        property="og:image:alt"
-        content={siteTitle ++ " logo"}
-      />
+      <meta name="twitter:image:alt" property="og:image:alt" content={siteTitle ++ " logo"} />
     </Helmet>
     {switch children {
     | Default({route}) =>
       <Helmet>
         <title> {siteTitle->React.string} </title>
-        <link
-          rel="canonical" href={Router.toStringWithBase(route, siteUrl)}
-        />
-        <meta
-          property="og:url" content={Router.toStringWithBase(route, siteUrl)}
-        />
+        <link rel="canonical" href={Router.toStringWithBase(route, siteUrl)} />
+        <meta property="og:url" content={Router.toStringWithBase(route, siteUrl)} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content=siteTitle />
-        <meta
-          name="description" property="og:description" content=siteDescription
-        />
+        <meta name="description" property="og:description" content=siteDescription />
       </Helmet>
     | Title({title, route}) =>
       <Helmet>
-        <title> {`${title} | ${siteTitle}`->React.string} </title>
-        <link
-          rel="canonical" href={Router.toStringWithBase(route, siteUrl)}
-        />
-        <meta
-          property="og:url" content={Router.toStringWithBase(route, siteUrl)}
-        />
+        <title> {(`${title} | ${siteTitle}`)->React.string} </title>
+        <link rel="canonical" href={Router.toStringWithBase(route, siteUrl)} />
+        <meta property="og:url" content={Router.toStringWithBase(route, siteUrl)} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content=siteTitle />
-        <meta
-          name="description" property="og:description" content=siteDescription
-        />
+        <meta name="description" property="og:description" content=siteDescription />
       </Helmet>
     | TitleNoRoute({title}) =>
       <Helmet>
-        <title> {`${title} | ${siteTitle}`->React.string} </title>
+        <title> {(`${title} | ${siteTitle}`)->React.string} </title>
         <meta property="og:type" content="website" />
         <meta property="og:title" content=siteTitle />
-        <meta
-          name="description" property="og:description" content=siteDescription
-        />
+        <meta name="description" property="og:description" content=siteDescription />
       </Helmet>
     | Article({title, description, author, date, route, image}) =>
       <Helmet>
-        <title> {`${title} | ${siteTitle}`->React.string} </title>
-        <link
-          rel="canonical" href={Router.toStringWithBase(route, siteUrl)}
-        />
-        <meta
-          property="og:url" content={Router.toStringWithBase(route, siteUrl)}
-        />
+        <title> {(`${title} | ${siteTitle}`)->React.string} </title>
+        <link rel="canonical" href={Router.toStringWithBase(route, siteUrl)} />
+        <meta property="og:url" content={Router.toStringWithBase(route, siteUrl)} />
         <meta property="og:title" content=title />
-        <meta
-          name="description" property="og:description" content=description
-        />
+        <meta name="description" property="og:description" content=description />
         <meta name="author" content=author />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content=date />
         {switch image {
         | Some({url, _}) =>
-          <meta
-            property="og:image"
-            content={Externals.Url.makeWith(url, ~base=siteUrl)["href"]}
-          />
+          <meta property="og:image" content={Externals.Url.makeWith(url, ~base=siteUrl)["href"]} />
         | None => React.null
         }}
         {switch image {
-        | Some(_) =>
-          <meta name="twitter:card" content="summary_large_image" />
+        | Some(_) => <meta name="twitter:card" content="summary_large_image" />
         | None => React.null
         }}
         {switch image {
         | Some({alt: Some(alt), _}) =>
-          <meta
-            name="twitter:image:alt" property="og:image:alt" content=alt
-          />
+          <meta name="twitter:image:alt" property="og:image:alt" content=alt />
         | _ => React.null
         }}
       </Helmet>
     }}
   </>
 }
-

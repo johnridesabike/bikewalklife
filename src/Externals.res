@@ -28,15 +28,14 @@ module Url = {
 module Rss = {
   /**
    https://www.npmjs.com/package/rss
-   */
+ */
   @unboxed
   type rec customElement = CustomElement({..}): customElement
 
   type enclosure
 
-   @obj
-   external enclosureUrl:
-     (~url: string, ~size: int=?, ~type_: string=?, unit) => enclosure = ""
+  @obj
+  external enclosureUrl: (~url: string, ~size: int=?, ~type_: string=?, unit) => enclosure = ""
 
   module Feed = {
     type options

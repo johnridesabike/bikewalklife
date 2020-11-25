@@ -18,8 +18,7 @@ module Date = {
   @react.component
   let make = (~date, ~isoDate) =>
     <time dateTime=isoDate className="dt-published entry__date">
-      <span ariaHidden=true> <Icons.Calendar className="icon" /> </span>
-      {date->React.string}
+      <span ariaHidden=true> <Icons.Calendar className="icon" /> </span> {date->React.string}
     </time>
 }
 
@@ -41,8 +40,7 @@ module DraftNotice = {
   @react.component
   let make = () =>
     <div className="entry__draft">
-      {"This is a draft. It will not appear in the published site."
-      ->React.string}
+      {"This is a draft. It will not appear in the published site."->React.string}
     </div>
 }
 
@@ -50,7 +48,6 @@ module Image = {
   type position =
     | AboveFold
     | BelowFold
-
 
   type t =
     | NoImage
@@ -89,20 +86,17 @@ let make = (
   ~footer,
   // ~author,
   ~className="",
-) => 
+) =>
   <article className={Cn.append("h-entry hentry entry__article", className)}>
     {switch heroImage {
     | Image.Image(img) =>
       <figure className="full-bleed">
         {switch linkedHeader {
-        | Linked => <Router.Link route=route tabIndex={-1}> img </Router.Link>
+        | Linked => <Router.Link route tabIndex={-1}> img </Router.Link>
         | Unlinked => img
         }}
         {switch imageCaption {
-        | Some(text) =>
-          <figcaption className="entry__caption">
-            {text->React.string}
-          </figcaption>
+        | Some(text) => <figcaption className="entry__caption"> {text->React.string} </figcaption>
         | None => React.null
         }}
       </figure>
@@ -113,15 +107,13 @@ let make = (
         <h1 className="p-name entry__title">
           {switch linkedHeader {
           | Linked =>
-            <Router.Link route=route className="entry__header-link">
-              {title->React.string}
-            </Router.Link>
+            <Router.Link route className="entry__header-link"> {title->React.string} </Router.Link>
           | Unlinked => title->React.string
           }}
         </h1>
         <Date date isoDate />
-        // <Author name=author />
-        {if draft {
+        {// <Author name=author />
+        if draft {
           <DraftNotice />
         } else {
           React.null
@@ -131,4 +123,3 @@ let make = (
       footer
     </div>
   </article>
-

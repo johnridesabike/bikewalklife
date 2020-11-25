@@ -33,7 +33,7 @@ let imageFixed = ImageFixed.query
   `
 )
 
-let imageFixedWithWebP = ImageFixed_withWebp.query;
+let imageFixedWithWebP = ImageFixed_withWebp.query
 
 %graphql(
   `

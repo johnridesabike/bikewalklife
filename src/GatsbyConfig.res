@@ -63,14 +63,10 @@ module PluginFeed = {
     `
   )
 
-
   let renderHtml = (~strings, ~html, href) =>
     switch (href, strings) {
     | (Some(href), Some({FeedPosts.open_linked: Some(text)})) =>
-      html
-      ++ ReactDOMServer.renderToStaticMarkup(
-        <p> <a href> {text->React.string} </a> </p>,
-      )
+      html ++ ReactDOMServer.renderToStaticMarkup(<p> <a href> {text->React.string} </a> </p>)
     | _ => html
     }
 
@@ -81,8 +77,7 @@ module PluginFeed = {
       /* This is the two queries merged together */
       type t
     }
-    let unsafeParse = query =>
-      (query->Obj.magic->Site.parse, query->Obj.magic->FeedPosts.parse)
+    let unsafeParse = query => (query->Obj.magic->Site.parse, query->Obj.magic->FeedPosts.parse)
   }
 
   module Feed = {
@@ -109,12 +104,8 @@ module PluginFeed = {
           ~description,
           ~site_url=siteUrl,
           ~feed_url=Externals.Url.makeWith(feedUrl, ~base=siteUrl)["href"],
-          ~image_url=
-            Externals.Url.makeWith("/icons/icon-96x96.png", ~base=siteUrl)["href"],
-          ~custom_namespaces=
-            Js.Dict.fromArray([
-              ("media", "http://search.yahoo.com/mrss/")
-            ]),
+          ~image_url=Externals.Url.makeWith("/icons/icon-96x96.png", ~base=siteUrl)["href"],
+          ~custom_namespaces=Js.Dict.fromArray([("media", "http://search.yahoo.com/mrss/")]),
           (),
         )
       | None => failwith("PluginFeed.setup")
@@ -122,37 +113,34 @@ module PluginFeed = {
     feeds: [
       {
         serialize: ({query}) => {
-          let ({Site.site: site}, {FeedPosts.allPost: {nodes}, strings}) =
-            Serialize.unsafeParse(query)
+          let ({Site.site: site}, {FeedPosts.allPost: {nodes}, strings}) = Serialize.unsafeParse(
+            query,
+          )
           switch site {
-          | Some({siteMetadata: {siteUrl: site_url, _}}) =>
-            Array.map(
-              nodes,
-              (
-                {
-                  slug,
-                  year,
-                  month,
-                  title,
-                  date,
-                  externalLink,
-                  parent,
-                  author,
-                  // heroImage,
-                }
-              ) => {
-                let url = Router.toStringWithBase(
-                  Entry({year: year, month: month, slug: slug}),
-                  site_url,
-                )
-                let urlWithCampaign = {
-                  let params =
-                    Externals.URLSearchParams.makeWithArray([("ref", "feed")])["toString"]()
-                  let url = Externals.Url.make(url) // clone the url
-                  Externals.Url.setSearch(url, params)
-                  url["href"]
-                }
-                /*
+          | Some({siteMetadata: {siteUrl: site_url, _}}) => Array.map(nodes, ({
+              slug,
+              year,
+              month,
+              title,
+              date,
+              externalLink,
+              parent,
+              author,
+              // heroImage,
+            }) => {
+              let url = Router.toStringWithBase(
+                Entry({year: year, month: month, slug: slug}),
+                site_url,
+              )
+              let urlWithCampaign = {
+                let params = Externals.URLSearchParams.makeWithArray([
+                  ("ref", "feed"),
+                ])["toString"]()
+                let url = Externals.Url.make(url) // clone the url
+                Externals.Url.setSearch(url, params)
+                url["href"]
+              }
+              /*
                 let heroImageMedia = switch heroImage {
                 | Some({
                     image: Some({
@@ -172,35 +160,28 @@ module PluginFeed = {
                     }
                 | _ => Js.Obj.empty()
                 }
-                */
-                Externals.Rss.Item.options(
-                  ~title,
-                  ~description=switch parent {
-                  | Some(#MarkdownRemark({excerpt: Some(excerpt), _})) =>
-                    excerpt
-                  | Some(#UnspecifiedFragment(_))
-                  | Some(#MarkdownRemark(_))
-                  | None => ""
-                  },
-                  ~date,
-                  ~url=urlWithCampaign,
-                  ~guid=url,
-                  ~custom_elements=switch parent {
-                  | Some(#MarkdownRemark({html: Some(html), _})) => [
-                      Externals.Rss.CustomElement({
-                        "content:encoded":
-                          renderHtml(~strings, ~html, externalLink),
-                      }),
-                      Externals.Rss.CustomElement({"dc:creator": author}),
-                    ]
-                  | Some(#UnspecifiedFragment(_))
-                  | Some(#MarkdownRemark(_))
-                  | None => []
-                  },
-                  (),
-                )
-              }
-            )
+ */
+              Externals.Rss.Item.options(
+                ~title,
+                ~description=switch parent {
+                | Some(#MarkdownRemark({excerpt: Some(excerpt), _})) => excerpt
+                | Some(#UnspecifiedFragment(_)) | Some(#MarkdownRemark(_)) | None => ""
+                },
+                ~date,
+                ~url=urlWithCampaign,
+                ~guid=url,
+                ~custom_elements=switch parent {
+                | Some(#MarkdownRemark({html: Some(html), _})) => [
+                    Externals.Rss.CustomElement({
+                      "content:encoded": renderHtml(~strings, ~html, externalLink),
+                    }),
+                    Externals.Rss.CustomElement({"dc:creator": author}),
+                  ]
+                | Some(#UnspecifiedFragment(_)) | Some(#MarkdownRemark(_)) | None => []
+                },
+                (),
+              )
+            })
           | None => failwith("PluginFeed.serialize")
           }
         },
@@ -233,8 +214,7 @@ module PluginSiteMap = {
   module Page = {
     type t
     @obj
-    external make:
-      (~url: string, ~changefreq: string=?, ~priority: float=?, unit) => t = ""
+    external make: (~url: string, ~changefreq: string=?, ~priority: float=?, unit) => t = ""
   }
 
   type t = {
@@ -258,10 +238,7 @@ module PluginSiteMap = {
       switch SiteMap.parse(query) {
       | {site: Some({siteMetadata: {siteUrl}}), allSitePage: {nodes}} =>
         Array.map(nodes, ({path}) =>
-          Page.make(
-            ~url=Externals.Url.makeWith(path, ~base=siteUrl)["href"],
-            ()
-          )
+          Page.make(~url=Externals.Url.makeWith(path, ~base=siteUrl)["href"], ())
         )
       | _ => failwith("Error building sitemap.")
       },

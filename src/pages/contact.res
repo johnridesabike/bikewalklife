@@ -1,4 +1,3 @@
-
 @react.component
 let default = () => {
   let strings = QueryStrings.use()
@@ -6,8 +5,7 @@ let default = () => {
     <main>
       <h1> {"Contact"->React.string} </h1>
       {switch strings.contact_text {
-      | Some(text) =>
-        <div className="ui-font" dangerouslySetInnerHTML={"__html": text} />
+      | Some(text) => <div className="ui-font" dangerouslySetInnerHTML={"__html": text} />
       | None => React.null
       }}
       <Contact_Form />

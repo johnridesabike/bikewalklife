@@ -12,7 +12,7 @@ module Form = %form(
     name: {
       strategy: OnFirstBlur,
       validate: ({name, _}) =>
-        switch (name) {
+        switch name {
         | "" => Error("Name is required.")
         | name => Ok(name)
         },
@@ -20,7 +20,7 @@ module Form = %form(
     email: {
       strategy: OnFirstBlur,
       validate: ({email, _}) =>
-        switch (email) {
+        switch email {
         | "" => Error("Email is required.")
         | email => Ok(email)
         },
@@ -28,7 +28,7 @@ module Form = %form(
     message: {
       strategy: OnFirstBlur,
       validate: ({message, _}) =>
-        switch (message) {
+        switch message {
         | "" => Error("Message is required.")
         | message => Ok(message)
         },
@@ -48,12 +48,7 @@ external encodeURIComponent: string => string = "encodeURIComponent"
 
 let encode = ({name, email, message, \"form-name"}: Form.output) => {
   let e = encodeURIComponent
-  [
-    ("name", name),
-    ("email", email),
-    ("message", message),
-    ("form-name", \"form-name")
-  ]
+  [("name", name), ("email", email), ("message", message), ("form-name", \"form-name")]
   ->Array.map(((key, value)) => e(key) ++ "=" ++ e(value))
   ->Js.Array2.joinWith("&")
 }

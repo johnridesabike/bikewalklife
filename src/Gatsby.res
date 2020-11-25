@@ -24,7 +24,6 @@ module Img = {
     ~className: string=?,
     ~style: ReactDOMRe.Style.t=?,
     ~fadeIn: bool=?,
-    ~loading: [#\"lazy" | #eager ]=?,
-  ) => 
-  React.element = "default"
+    ~loading: [#\"lazy" | #eager]=?,
+  ) => React.element = "default"
 }

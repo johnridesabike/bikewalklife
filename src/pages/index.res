@@ -43,25 +43,19 @@ let default = (~data) => {
   let data = data->unsafe_fromJson->parse
   let strings = QueryStrings.use()
   <Layout metadata=Default({route: Index})>
-    <main>
-      {data.allPost.nodes
-      ->Array.mapWithIndex(
-        (
-          index,
-          {
-            id,
-            slug,
-            year,
-            month,
-            title,
-            heroImage,
-            isoDate,
-            date,
-            draft,
-            externalLink,
-            parent,
-          }
-        ) =>
+    <main> {data.allPost.nodes->Array.mapWithIndex((index, {
+        id,
+        slug,
+        year,
+        month,
+        title,
+        heroImage,
+        isoDate,
+        date,
+        draft,
+        externalLink,
+        parent,
+      }) =>
         <React.Fragment key=id>
           <Entry
             html={switch parent {
@@ -90,17 +84,15 @@ let default = (~data) => {
             isoDate
             date
             draft
-            footer={
-              <footer>
-                {switch externalLink {
-                | Some(href) => <Entry.OriginalLink href />
-                | None => React.null
-                }}
-              </footer>
-            }
+            footer={<footer>
+              {switch externalLink {
+              | Some(href) => <Entry.OriginalLink href />
+              | None => React.null
+              }}
+            </footer>}
           />
           {switch index {
-          | 0 => 
+          | 0 =>
             <div className="full-bleed">
               <hr className="separator" />
               <Subscribe className="small-screen-padding" />
@@ -109,26 +101,20 @@ let default = (~data) => {
           | _ => <hr className="separator" />
           }}
         </React.Fragment>
-      )
-      ->React.array}
-    </main>
+      )->React.array} </main>
     <nav>
       {switch strings.archive_link {
       | Some(text) =>
         <div className="index-page__archive-link">
           <Router.Link route=Archive(1)>
             {text->React.string}
-            <span ariaHidden=true>
-              <Icons.ArrowRight className="icon" />
-            </span>
+            <span ariaHidden=true> <Icons.ArrowRight className="icon" /> </span>
           </Router.Link>
         </div>
       | None => React.null
       }}
     </nav>
     <hr className="separator" />
-    <aside>
-      <Subscribe />
-    </aside>
+    <aside> <Subscribe /> </aside>
   </Layout>
 }
