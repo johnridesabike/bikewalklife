@@ -1,7 +1,7 @@
 ---
 date: 2020-12-01T07:13:30-05:00
 draft: false
-title: What is a bicycle street? The answer is multi-faceted.
+title: What is a bicycle street? The answer is multifaceted.
 author: John Jackson
 hero_image:
   image: ''
