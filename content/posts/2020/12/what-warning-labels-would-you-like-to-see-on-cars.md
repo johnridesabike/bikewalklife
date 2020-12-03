@@ -19,9 +19,9 @@ The city of Cambridge, Massachusetts will [soon be the first US city to put warn
 
 Kea Wilson at Streetsblog asks, why stop there? [Why not put warning labels on the cars themselves](https://usa.streetsblog.org/2020/11/30/surgeon-general-warning-this-car-is-dangerous/)? Here are a couple of their concepts:
 
-![](/content/images/2020/cadillac-grill.jpg.webp)
+![](/content/images/2020/cadillac-grill.jpg)
 
-![](/content/images/2020/Bull-Bar.jpg.webp)
+![](/content/images/2020/Bull-Bar.jpg)
 
 (Image credit: Streetsblog.)
 
