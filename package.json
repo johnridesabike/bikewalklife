@@ -72,7 +72,6 @@
     "dotenv": "^8.2.0",
     "gatsby-plugin-goatcounter": "^0.4.0",
     "gatsby-source-cloudinary": "^0.1.14",
-    "gatsby-transformer-cloudinary": "^2.1.0",
     "get-graphql-schema": "^2.1.2",
     "json-sort-cli": "^1.16.4",
     "postcss": "^8.1.1",
