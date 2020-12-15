@@ -1,8 +1,7 @@
 ---
 date: 2020-12-15T13:01:25-05:00
 draft: false
-title: An interview with Becca Zajac, executive director of Dragonfly Trails Network
-  in Columbus GA
+title: Becca Zajac and the Dragonfly Trails Network in Columbus GA
 author: John Jackson
 hero_image:
   image: "/content/images/2020/721616ec-be6d-4d2b-aa67-84f169fb90d9.jpeg"
