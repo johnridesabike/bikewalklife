@@ -1,9 +1,6 @@
 %%raw(`import { graphql } from "gatsby"`)
 
-open QueryFragments
-
-%graphql(
-  `
+%graphql(`
   query IndexEntries @ppxConfig(inline: true) {
     allPost(
       sort: {order: [DESC], fields: [date]},
@@ -25,7 +22,7 @@ open QueryFragments
           alt
           caption
           image {
-            ...HeroImage
+            relativePath
           }
         }
         parent {
@@ -36,28 +33,32 @@ open QueryFragments
       }
     }
   }
-  `
-)
+  `)
 
 @react.component
 let default = (~data) => {
   let data = data->unsafe_fromJson->parse
   let strings = QueryStrings.use()
   <Layout metadata=Default({route: Index})>
-    <main> {data.allPost.nodes->Array.mapWithIndex((index, {
-        id,
-        slug,
-        year,
-        month,
-        title,
-        heroImage,
-        isoDate,
-        date,
-        draft,
-        externalLink,
-        parent,
-        author,
-      }) =>
+    <main>
+      {data.allPost.nodes
+      ->Array.mapWithIndex((
+        index,
+        {
+          id,
+          slug,
+          year,
+          month,
+          title,
+          heroImage,
+          isoDate,
+          date,
+          draft,
+          externalLink,
+          parent,
+          author,
+        },
+      ) =>
         <React.Fragment key=id>
           <Entry
             author
@@ -68,15 +69,22 @@ let default = (~data) => {
             route=Entry({year: year, month: month, slug: slug})
             title
             heroImage={switch heroImage {
-            | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>
-              Entry.Image.make(
-                ~alt?,
-                fluid,
-                switch index {
-                | 0 => AboveFold
-                | _ => BelowFold
-                },
+            | Some({alt, image: Some({relativePath, _}), _}) =>
+              Entry.Image.Image(
+                <img
+                  src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_auto,h_450,w_900/v1608060004/gatsby-cloudinary/" ++
+                  relativePath}
+                  srcSet={`
+                https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_auto%2Ch_207%2Cw_404/v1608060004/gatsby-cloudinary/${relativePath} 414w,
+                https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_auto%2Ch_300%2Cw_600/v1608060004/gatsby-cloudinary/${relativePath} 600w,
+                https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_auto%2Ch_450%2Cw_900/v1608060004/gatsby-cloudinary/${relativePath} 900w,
+                https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_auto%2Ch_900%2Cw_1800/v1608060004/gatsby-cloudinary/${relativePath} 1800w
+                `}
+                  sizes="(max-width: 900px) 100vw, 900px"
+                  ?alt
+                />,
               )
+
             | _ => Entry.Image.empty
             }}
             imageCaption={switch heroImage {
@@ -104,7 +112,9 @@ let default = (~data) => {
           | _ => <hr className="separator" />
           }}
         </React.Fragment>
-      )->React.array} </main>
+      )
+      ->React.array}
+    </main>
     <nav>
       {switch strings.archive_link {
       | Some(text) =>

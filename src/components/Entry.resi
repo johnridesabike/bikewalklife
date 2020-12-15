@@ -13,7 +13,7 @@ module Image: {
     | AboveFold
     | BelowFold
 
-  type t
+  type t = NoImage | Image(React.element)
 
   let empty: t
 

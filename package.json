@@ -24,9 +24,10 @@
     "re:build": "bsb -make-world",
     "re:clean": "bsb -clean-world",
     "re:cleanbuild": "bsb -make-world -clean-world",
-    "re:watch": "bsb -w",
+    "start:res": "bsb -w",
+    "start:gatsby": "gatsby develop",
     "serve": "gatsby serve",
-    "start": "concurrently \"bsb -w\" \"gatsby develop\""
+    "start": "concurrently yarn:start:*"
   },
   "dependencies": {
     "@reach/skip-nav": "^0.11.2",
@@ -66,9 +67,12 @@
   },
   "devDependencies": {
     "@reasonml-community/graphql-ppx": "^1.0.0",
-    "bs-platform": "^8.3.1",
+    "bs-platform": "^8.4.2",
     "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
     "gatsby-plugin-goatcounter": "^0.4.0",
+    "gatsby-source-cloudinary": "^0.1.14",
+    "gatsby-transformer-cloudinary": "^2.1.0",
     "get-graphql-schema": "^2.1.2",
     "json-sort-cli": "^1.16.4",
     "postcss": "^8.1.1",

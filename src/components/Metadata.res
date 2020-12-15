@@ -3,22 +3,6 @@ module Helmet = {
   external make: (~children: React.element) => React.element = "Helmet"
 }
 
-%%raw(`import { graphql } from "gatsby"`)
-
-%graphql(
-  `
-  query Metadata @ppxConfig(extend: "Gatsby.ExtendQuery") {
-    logo: file(relativePath: {eq: "logo-large-square.png"}) {
-      childImageSharp {
-        fixed(width: 1200) {
-          src
-        }
-      }
-    }
-  }
-  `
-)
-
 type image = {url: string, alt: option<string>}
 
 type t =
@@ -52,11 +36,10 @@ let make = (~children) => {
       | None => React.null
       }}
       <meta name="twitter:card" content="summary" />
-      {switch Metadata.query->Metadata.useStaticQuery->Metadata.parse {
-      | {logo: Some({childImageSharp: Some({fixed: Some({src})})})} =>
-        <meta property="og:image" content={Externals.Url.makeWith(src, ~base=siteUrl)["href"]} />
-      | _ => React.null
-      }}
+      <meta
+        property="og:image"
+        content={"https://res.cloudinary.com/bike-walk-life/image/upload/v1608060004/gatsby-cloudinary/logo-large-square.png"}
+      />
       <meta name="twitter:image:alt" property="og:image:alt" content={siteTitle ++ " logo"} />
     </Helmet>
     {switch children {
@@ -71,7 +54,7 @@ let make = (~children) => {
       </Helmet>
     | Title({title, route}) =>
       <Helmet>
-        <title> {(`${title} | ${siteTitle}`)->React.string} </title>
+        <title> {`${title} | ${siteTitle}`->React.string} </title>
         <link rel="canonical" href={Router.toStringWithBase(route, siteUrl)} />
         <meta property="og:url" content={Router.toStringWithBase(route, siteUrl)} />
         <meta property="og:type" content="website" />
@@ -80,14 +63,14 @@ let make = (~children) => {
       </Helmet>
     | TitleNoRoute({title}) =>
       <Helmet>
-        <title> {(`${title} | ${siteTitle}`)->React.string} </title>
+        <title> {`${title} | ${siteTitle}`->React.string} </title>
         <meta property="og:type" content="website" />
         <meta property="og:title" content=siteTitle />
         <meta name="description" property="og:description" content=siteDescription />
       </Helmet>
     | Article({title, description, author, date, route, image}) =>
       <Helmet>
-        <title> {(`${title} | ${siteTitle}`)->React.string} </title>
+        <title> {`${title} | ${siteTitle}`->React.string} </title>
         <link rel="canonical" href={Router.toStringWithBase(route, siteUrl)} />
         <meta property="og:url" content={Router.toStringWithBase(route, siteUrl)} />
         <meta property="og:title" content=title />

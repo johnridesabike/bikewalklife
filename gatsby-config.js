@@ -1,5 +1,6 @@
 const config = require("./config.json");
 const rePlugins = require("./lib/js/src/GatsbyConfig.bs.js");
+require("dotenv").config();
 
 module.exports = {
   //this makes the site config available to forestry cms
@@ -178,6 +179,15 @@ module.exports = {
         // This is to prevent ref tracking ending up in your users bookmarks.
         // All parameters other than `ref` and all `utm_` will stay intact
         //urlCleanup: false,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-cloudinary",
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        uploadFolder: "gatsby-cloudinary",
       },
     },
   ],

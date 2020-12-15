@@ -4,8 +4,7 @@
  * https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-sharp/src/fragments.js
  */
 
-%graphql(
-  `
+%graphql(`
   fragment ImageFixed on ImageSharpFixed {
     base64
     width
@@ -13,14 +12,12 @@
     src
     srcSet
   }
-  `
-)
+  `)
 
 /* Export the query in a way Gatsby can read it. */
 let imageFixed = ImageFixed.query
 
-%graphql(
-  `
+%graphql(`
   fragment ImageFixed_withWebp on ImageSharpFixed {
     base64
     width
@@ -30,13 +27,11 @@ let imageFixed = ImageFixed.query
     srcWebp
     srcSetWebp
   }
-  `
-)
+  `)
 
 let imageFixedWithWebP = ImageFixed_withWebp.query
 
-%graphql(
-  `
+%graphql(`
   fragment ImageFluid on ImageSharpFluid {
     base64
     aspectRatio
@@ -44,14 +39,12 @@ let imageFixedWithWebP = ImageFixed_withWebp.query
     srcSet
     sizes
   }
-  `
-)
+  `)
 
 /* Export the query in a way Gatsby can read it. */
 let imageFluid = ImageFluid.query
 
-%graphql(
-  `
+%graphql(`
   fragment ImageFluid_tracedSVG on ImageSharpFluid {
     tracedSVG
     aspectRatio
@@ -59,14 +52,12 @@ let imageFluid = ImageFluid.query
     srcSet
     sizes
   }
-  `
-)
+  `)
 
 /* Export the query in a way Gatsby can read it. */
 let imageFluidSVG = ImageFluid_tracedSVG.query
 
-%graphql(
-  `
+%graphql(`
   fragment ImageFluid_withWebp_tracedSVG on ImageSharpFluid {
     tracedSVG
     aspectRatio
@@ -76,12 +67,12 @@ let imageFluidSVG = ImageFluid_tracedSVG.query
     srcSetWebp
     sizes
   }
-  `
-)
+  `)
 
 /* Export the query in a way Gatsby can read it. */
 let imageFluidSVGWebp = ImageFluid_withWebp_tracedSVG.query
 
+/*
 %graphql(
   `
   fragment HeroImage on File {
@@ -103,3 +94,4 @@ let imageFluidSVGWebp = ImageFluid_withWebp_tracedSVG.query
 
 /* Export the query in a way Gatsby can read it. */
 let heroImage = HeroImage.query
+*/
