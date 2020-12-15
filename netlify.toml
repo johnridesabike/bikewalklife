@@ -3,5 +3,4 @@
   command = "yarn build"
 
   [build.environment]
-    GIT_LFS_ENABLED = "true"
     NODE_VERSION = "14"
