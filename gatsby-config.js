@@ -52,26 +52,14 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-sharp",
-      options: {
-        defaultQuality: 75,
-      },
-    },
-    "gatsby-transformer-sharp",
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           "gatsby-remark-normalize-paths",
-          "gatsby-remark-copy-linked-files",
           {
-            resolve: "gatsby-remark-images",
+            resolve: `gatsby-remark-copy-linked-files`,
             options: {
-              maxWidth: 600,
-              linkImagesToOriginal: false,
-              // 414 = width of large iPhone in portrait
-              srcSetBreakpoints: [414, 600],
-              withWebp: true,
+              ignoreFileExtensions: [],
             },
           },
         ],

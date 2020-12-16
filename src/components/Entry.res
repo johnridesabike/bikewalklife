@@ -51,6 +51,7 @@ module Image = {
 
   let empty = NoImage
 
+  /*
   let make = (~alt="Cover image.", fluid, position) => {
     let fadeIn = switch position {
     | AboveFold => false
@@ -62,6 +63,7 @@ module Image = {
     }
     Image(<Gatsby.Img fluid alt fadeIn loading />)
   }
+ */
 }
 
 type linked =
