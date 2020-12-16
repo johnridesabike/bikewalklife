@@ -77,6 +77,3 @@ lib/
 *.bs.js
 
 content/posts/__testdata__/
-
-# Local Netlify folder
-.netlify
