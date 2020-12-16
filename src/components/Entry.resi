@@ -13,11 +13,11 @@ module Image: {
     | AboveFold
     | BelowFold
 
-  type t
+  type t = NoImage | Image(React.element)
 
   let empty: t
 
-  let make: (~alt: string=?, 'fluid, position) => t
+  //let make: (~alt: string=?, 'fluid, position) => t
 }
 
 type linked =

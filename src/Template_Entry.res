@@ -1,9 +1,6 @@
 %%raw(`import { graphql } from "gatsby"`)
 
-open QueryFragments
-
-%graphql(
-  `
+%graphql(`
   query EntryQuery(
     $slug: String!,
     $year: Int!,
@@ -24,7 +21,7 @@ open QueryFragments
         alt
         caption
         image {
-          ...HeroImage
+          relativePath
         }
       }
       parent {
@@ -53,19 +50,14 @@ open QueryFragments
           avatar: image_small {
             alt
             image {
-              childImageSharp {
-                fixed(width: 120, height: 120, cropFocus: CENTER) {
-                  ...ImageFixed_withWebp
-                }
-              }
+              relativePath
             }
           }
         }
       }
     }
   }
-  `
-)
+  `)
 
 module Neighbor = {
   type t = {
@@ -95,9 +87,24 @@ module About = {
       </h2>
       <div className="entry-page__about-wrapper">
         {switch avatar {
-        | Some({image: Some({childImageSharp: Some({fixed})}), alt: Some(alt)}) =>
+        | Some({image: Some({relativePath}), alt}) =>
           <div className="entry-page__avatar-wrapper">
-            <Gatsby.Img fixed alt className="entry-page__avatar" />
+            <div
+              className="entry-page__avatar"
+              style={ReactDOMStyle.make(~width="120px", ~height="120px", ())}>
+              <img
+                src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_center,h_120,w_120/v1608060004/" ++
+                relativePath}
+                srcSet={`
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_120%2Cw_120/v1608060004/${relativePath} 1x,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_180%2Cw_180/v1608060004/${relativePath} 1x,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_240%2Cw_240/v1608060004/${relativePath} 2x
+                 `}
+                ?alt
+                height="120"
+                width="120"
+              />
+            </div>
           </div>
         | _ => React.null
         }}
@@ -132,18 +139,17 @@ module About = {
 let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
   switch data->unsafe_fromJson->parse {
   | {
-      post:
-        Some({
-          heroImage,
-          title,
-          date,
-          isoDate,
-          draft,
-          author,
-          externalLink,
-          parent: Some(#MarkdownRemark({html: Some(html), excerpt: Some(excerpt)})),
-          related,
-        }),
+      post: Some({
+        heroImage,
+        title,
+        date,
+        isoDate,
+        draft,
+        author,
+        externalLink,
+        parent: Some(#MarkdownRemark({html: Some(html), excerpt: Some(excerpt)})),
+        related,
+      }),
       about,
     } =>
     <Layout
@@ -154,8 +160,14 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         date: isoDate,
         route: Entry({year: year, month: month, slug: slug}),
         image: switch heroImage {
-        | Some({alt, image: Some({sharp: Some({fluid: Some({src, _}), _})}), _}) =>
-          Some({url: src, alt: alt})
+        | Some({alt, image: Some({relativePath, _}), _}) =>
+          Some({
+            url: {
+              "https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_auto,h_450,w_900/v1608060004/" ++
+              relativePath
+            },
+            alt: alt,
+          })
         | _ => None
         },
       })}>
@@ -165,8 +177,21 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           html
           route=Entry({year: year, month: month, slug: slug})
           heroImage={switch heroImage {
-          | Some({alt, image: Some({sharp: Some({fluid: Some(fluid)})}), _}) =>
-            Entry.Image.make(~alt?, fluid, AboveFold)
+          | Some({alt, image: Some({relativePath, _}), _}) =>
+            Entry.Image.Image(
+              <img
+                src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_auto,h_450,w_900/v1608060004/" ++
+                relativePath}
+                srcSet={`
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_207%2Cw_404/v1608060004/${relativePath} 414w,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_300%2Cw_600/v1608060004/${relativePath} 600w,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_450%2Cw_900/v1608060004/${relativePath} 900w,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_900%2Cw_1800/v1608060004/${relativePath} 1800w
+                 `}
+                sizes="(max-width: 900px) 100vw, 900px"
+                ?alt
+              />,
+            )
           | _ => Entry.Image.empty
           }}
           imageCaption={switch heroImage {
