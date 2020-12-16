@@ -28,10 +28,10 @@ sections:
 - type: document
   path: content/data/strings.yaml
   label: UI Strings
-upload_dir: content/images
-public_path: "/content/images"
+upload_dir: ''
+public_path: ''
 front_matter_path: ''
-use_front_matter_path: false
+use_front_matter_path: 
 file_template: ":year:/:filename:"
 build:
   preview_output_directory: public
