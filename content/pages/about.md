@@ -4,11 +4,11 @@ intro: "<p>Hi, this is John. I’m a bike commuter from Columbus, Georgia. I cre
   this blog to raise awareness of the issues affecting the world of biking and walking.
   I especially focus on the Southeast U.S.</p>"
 image_large:
-  image: "/content/images/2020/john-2020.jpeg"
+  image: "/v1608060004/2020/john-2020.jpeg"
   alt: A photograph of John.
   caption: ''
 image_small:
-  image: "/content/images/2020/john-2020-closeup.jpeg"
+  image: "/v1608060004/2020/john-2020-closeup.jpeg"
   alt: A photograph of John.
   caption: ''
 

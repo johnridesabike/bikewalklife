@@ -55,7 +55,6 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          "gatsby-remark-normalize-paths",
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {

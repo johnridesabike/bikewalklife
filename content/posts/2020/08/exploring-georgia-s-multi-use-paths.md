@@ -4,7 +4,7 @@ draft: false
 title: Exploring Georgia's multi-use paths
 author: John Jackson
 hero_image:
-  image: "/content/images/2020/chatahoochee-rv-1024x768.jpg"
+  image: "/v1608060004/2020/chatahoochee-rv-1024x768.jpg"
   alt: Photograph of the Chattahoochee Riverwalk.
   caption: 'Image credit: Maria Borowik and Georgia Bikes.'
 external_link: https://georgiabikes.org/tour-de-georgia-2020-exploring-multi-use-paths-in-the-peach-state/

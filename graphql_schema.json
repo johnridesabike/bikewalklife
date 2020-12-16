@@ -1362,46 +1362,6 @@
               {
                 "defaultValue": null,
                 "description": "",
-                "name": "id",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "StringQueryOperatorInput",
-                  "ofType": null
-                }
-              },
-              {
-                "defaultValue": null,
-                "description": "",
-                "name": "parent",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "NodeFilterInput",
-                  "ofType": null
-                }
-              },
-              {
-                "defaultValue": null,
-                "description": "",
-                "name": "children",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "NodeFilterListInput",
-                  "ofType": null
-                }
-              },
-              {
-                "defaultValue": null,
-                "description": "",
-                "name": "internal",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "InternalFilterInput",
-                  "ofType": null
-                }
-              },
-              {
-                "defaultValue": null,
-                "description": "",
                 "name": "isCreatedByStatefulCreatePages",
                 "type": {
                   "kind": "INPUT_OBJECT",
@@ -1446,6 +1406,46 @@
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "StringQueryOperatorInput",
+                  "ofType": null
+                }
+              },
+              {
+                "defaultValue": null,
+                "description": "",
+                "name": "id",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "StringQueryOperatorInput",
+                  "ofType": null
+                }
+              },
+              {
+                "defaultValue": null,
+                "description": "",
+                "name": "parent",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "NodeFilterInput",
+                  "ofType": null
+                }
+              },
+              {
+                "defaultValue": null,
+                "description": "",
+                "name": "children",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "NodeFilterListInput",
+                  "ofType": null
+                }
+              },
+              {
+                "defaultValue": null,
+                "description": "",
+                "name": "internal",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "InternalFilterInput",
                   "ofType": null
                 }
               }
@@ -2372,6 +2372,16 @@
               {
                 "defaultValue": null,
                 "description": "",
+                "name": "authors",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "StringQueryOperatorInput",
+                  "ofType": null
+                }
+              },
+              {
+                "defaultValue": null,
+                "description": "",
                 "name": "open_linked",
                 "type": {
                   "kind": "INPUT_OBJECT",
@@ -2433,16 +2443,6 @@
                 "defaultValue": null,
                 "description": "",
                 "name": "subscribe_email_cta",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "StringQueryOperatorInput",
-                  "ofType": null
-                }
-              },
-              {
-                "defaultValue": null,
-                "description": "",
-                "name": "authors",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "StringQueryOperatorInput",
@@ -4294,6 +4294,16 @@
           {
             "defaultValue": null,
             "description": "",
+            "name": "authors",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            }
+          },
+          {
+            "defaultValue": null,
+            "description": "",
             "name": "open_linked",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -4355,16 +4365,6 @@
             "defaultValue": null,
             "description": "",
             "name": "subscribe_email_cta",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            }
-          },
-          {
-            "defaultValue": null,
-            "description": "",
-            "name": "authors",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringQueryOperatorInput",
@@ -4519,7 +4519,7 @@
             "name": "image",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "FileFilterInput",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             }
           },
@@ -4527,6 +4527,16 @@
             "defaultValue": null,
             "description": "",
             "name": "alt",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            }
+          },
+          {
+            "defaultValue": null,
+            "description": "",
+            "name": "caption",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringQueryOperatorInput",
@@ -4550,7 +4560,7 @@
             "name": "image",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "FileFilterInput",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             }
           },
@@ -4558,6 +4568,16 @@
             "defaultValue": null,
             "description": "",
             "name": "alt",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            }
+          },
+          {
+            "defaultValue": null,
+            "description": "",
+            "name": "caption",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringQueryOperatorInput",
@@ -4944,7 +4964,7 @@
             "name": "image",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "FileFilterInput",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             }
           },
@@ -6761,8 +6781,8 @@
             "isDeprecated": false,
             "name": "image",
             "type": {
-              "kind": "OBJECT",
-              "name": "File",
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             }
           },
@@ -6772,6 +6792,18 @@
             "description": null,
             "isDeprecated": false,
             "name": "alt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          {
+            "args": [],
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "caption",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -6796,8 +6828,8 @@
             "isDeprecated": false,
             "name": "image",
             "type": {
-              "kind": "OBJECT",
-              "name": "File",
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             }
           },
@@ -6807,6 +6839,18 @@
             "description": null,
             "isDeprecated": false,
             "name": "alt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          {
+            "args": [],
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "caption",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -7338,8 +7382,8 @@
             "isDeprecated": false,
             "name": "image",
             "type": {
-              "kind": "OBJECT",
-              "name": "File",
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             }
           },
@@ -7451,6 +7495,22 @@
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
+            "name": "authors",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "args": [],
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
             "name": "open_linked",
             "type": {
               "kind": "SCALAR",
@@ -7528,22 +7588,6 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
-            }
-          },
-          {
-            "args": [],
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "authors",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
             }
           },
           {
@@ -8572,13 +8616,37 @@
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
+            "name": "childMarkdownRemark___frontmatter___image_large___image"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
             "name": "childMarkdownRemark___frontmatter___image_large___alt"
           },
           {
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
+            "name": "childMarkdownRemark___frontmatter___image_large___caption"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "childMarkdownRemark___frontmatter___image_small___image"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
             "name": "childMarkdownRemark___frontmatter___image_small___alt"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "childMarkdownRemark___frontmatter___image_small___caption"
           },
           {
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
@@ -8909,6 +8977,12 @@
             "description": null,
             "isDeprecated": true,
             "name": "childMarkdownRemark___childPost___author"
+          },
+          {
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
+            "description": null,
+            "isDeprecated": true,
+            "name": "childMarkdownRemark___childPost___heroImage___image"
           },
           {
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
@@ -9364,6 +9438,12 @@
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
+            "name": "childDataYaml___authors"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
             "name": "childDataYaml___open_linked"
           },
           {
@@ -9401,12 +9481,6 @@
             "description": null,
             "isDeprecated": false,
             "name": "childDataYaml___subscribe_email_cta"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "childDataYaml___authors"
           },
           {
             "deprecationReason": null,
@@ -13603,6 +13677,66 @@
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
+            "name": "isCreatedByStatefulCreatePages",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            }
+          },
+          {
+            "args": [],
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "context",
+            "type": {
+              "kind": "OBJECT",
+              "name": "SitePageContext",
+              "ofType": null
+            }
+          },
+          {
+            "args": [],
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "pluginCreator",
+            "type": {
+              "kind": "OBJECT",
+              "name": "SitePlugin",
+              "ofType": null
+            }
+          },
+          {
+            "args": [],
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "pluginCreatorId",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          {
+            "args": [],
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "componentPath",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          {
+            "args": [],
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
             "name": "id",
             "type": {
               "kind": "NON_NULL",
@@ -13664,66 +13798,6 @@
                 "name": "Internal",
                 "ofType": null
               }
-            }
-          },
-          {
-            "args": [],
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "isCreatedByStatefulCreatePages",
-            "type": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            }
-          },
-          {
-            "args": [],
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "context",
-            "type": {
-              "kind": "OBJECT",
-              "name": "SitePageContext",
-              "ofType": null
-            }
-          },
-          {
-            "args": [],
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "pluginCreator",
-            "type": {
-              "kind": "OBJECT",
-              "name": "SitePlugin",
-              "ofType": null
-            }
-          },
-          {
-            "args": [],
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "pluginCreatorId",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            }
-          },
-          {
-            "args": [],
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "componentPath",
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
             }
           }
         ],
@@ -15015,46 +15089,6 @@
           {
             "defaultValue": null,
             "description": "",
-            "name": "id",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            }
-          },
-          {
-            "defaultValue": null,
-            "description": "",
-            "name": "parent",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "NodeFilterInput",
-              "ofType": null
-            }
-          },
-          {
-            "defaultValue": null,
-            "description": "",
-            "name": "children",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "NodeFilterListInput",
-              "ofType": null
-            }
-          },
-          {
-            "defaultValue": null,
-            "description": "",
-            "name": "internal",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "InternalFilterInput",
-              "ofType": null
-            }
-          },
-          {
-            "defaultValue": null,
-            "description": "",
             "name": "isCreatedByStatefulCreatePages",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -15099,6 +15133,46 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringQueryOperatorInput",
+              "ofType": null
+            }
+          },
+          {
+            "defaultValue": null,
+            "description": "",
+            "name": "id",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            }
+          },
+          {
+            "defaultValue": null,
+            "description": "",
+            "name": "parent",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "NodeFilterInput",
+              "ofType": null
+            }
+          },
+          {
+            "defaultValue": null,
+            "description": "",
+            "name": "children",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "NodeFilterListInput",
+              "ofType": null
+            }
+          },
+          {
+            "defaultValue": null,
+            "description": "",
+            "name": "internal",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "InternalFilterInput",
               "ofType": null
             }
           }
@@ -15179,522 +15253,6 @@
             "description": null,
             "isDeprecated": false,
             "name": "matchPath"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___parent___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___parent___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___children___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___children___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___internal___content"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___internal___contentDigest"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___internal___description"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___internal___fieldOwners"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___internal___ignoreType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___internal___mediaType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___internal___owner"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___parent___internal___type"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___parent___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___parent___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___children___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___children___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___internal___content"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___internal___contentDigest"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___internal___description"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___internal___fieldOwners"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___internal___ignoreType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___internal___mediaType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___internal___owner"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___children___internal___type"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___internal___content"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___internal___contentDigest"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___internal___description"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___internal___fieldOwners"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___internal___ignoreType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___internal___mediaType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___internal___owner"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "parent___internal___type"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___parent___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___parent___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___children___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___children___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___internal___content"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___internal___contentDigest"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___internal___description"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___internal___fieldOwners"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___internal___ignoreType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___internal___mediaType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___internal___owner"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___parent___internal___type"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___parent___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___parent___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___children___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___children___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___internal___content"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___internal___contentDigest"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___internal___description"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___internal___fieldOwners"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___internal___ignoreType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___internal___mediaType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___internal___owner"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___children___internal___type"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___internal___content"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___internal___contentDigest"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___internal___description"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___internal___fieldOwners"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___internal___ignoreType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___internal___mediaType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___internal___owner"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "children___internal___type"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "internal___content"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "internal___contentDigest"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "internal___description"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "internal___fieldOwners"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "internal___ignoreType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "internal___mediaType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "internal___owner"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "internal___type"
           },
           {
             "deprecationReason": null,
@@ -16397,6 +15955,522 @@
             "description": null,
             "isDeprecated": false,
             "name": "componentPath"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___parent___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___parent___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___children___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___children___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___internal___content"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___internal___contentDigest"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___internal___description"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___internal___fieldOwners"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___internal___ignoreType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___internal___mediaType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___internal___owner"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___parent___internal___type"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___parent___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___parent___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___children___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___children___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___internal___content"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___internal___contentDigest"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___internal___description"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___internal___fieldOwners"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___internal___ignoreType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___internal___mediaType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___internal___owner"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___children___internal___type"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___internal___content"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___internal___contentDigest"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___internal___description"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___internal___fieldOwners"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___internal___ignoreType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___internal___mediaType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___internal___owner"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "parent___internal___type"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___parent___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___parent___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___children___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___children___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___internal___content"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___internal___contentDigest"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___internal___description"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___internal___fieldOwners"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___internal___ignoreType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___internal___mediaType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___internal___owner"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___parent___internal___type"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___parent___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___parent___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___children___id"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___children___children"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___internal___content"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___internal___contentDigest"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___internal___description"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___internal___fieldOwners"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___internal___ignoreType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___internal___mediaType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___internal___owner"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___children___internal___type"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___internal___content"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___internal___contentDigest"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___internal___description"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___internal___fieldOwners"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___internal___ignoreType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___internal___mediaType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___internal___owner"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "children___internal___type"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "internal___content"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "internal___contentDigest"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "internal___description"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "internal___fieldOwners"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "internal___ignoreType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "internal___mediaType"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "internal___owner"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "internal___type"
           }
         ],
         "fields": null,
@@ -18571,217 +18645,7 @@
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
-            "name": "frontmatter___image_large___image___sourceInstanceName"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___absolutePath"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___relativePath"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___extension"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___size"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___prettySize"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___modifiedTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___accessTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___changeTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___birthTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___root"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___dir"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___base"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___ext"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___name"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___relativeDirectory"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___dev"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___mode"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___nlink"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___uid"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___gid"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___rdev"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___ino"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___atimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___mtimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___ctimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___atime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___mtime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___ctime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___birthtime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___birthtimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___blksize"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___blocks"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___publicURL"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_large___image___children"
+            "name": "frontmatter___image_large___image"
           },
           {
             "deprecationReason": null,
@@ -18793,223 +18657,25 @@
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
-            "name": "frontmatter___image_small___image___sourceInstanceName"
+            "name": "frontmatter___image_large___caption"
           },
           {
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
-            "name": "frontmatter___image_small___image___absolutePath"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___relativePath"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___extension"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___size"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___prettySize"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___modifiedTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___accessTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___changeTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___birthTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___root"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___dir"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___base"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___ext"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___name"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___relativeDirectory"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___dev"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___mode"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___nlink"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___uid"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___gid"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___rdev"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___ino"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___atimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___mtimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___ctimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___atime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___mtime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___ctime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___birthtime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___birthtimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___blksize"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___blocks"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___publicURL"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "frontmatter___image_small___image___children"
+            "name": "frontmatter___image_small___image"
           },
           {
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
             "name": "frontmatter___image_small___alt"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "frontmatter___image_small___caption"
           },
           {
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
@@ -19633,217 +19299,7 @@
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
             "description": null,
             "isDeprecated": true,
-            "name": "childPost___heroImage___image___sourceInstanceName"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___absolutePath"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___relativePath"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___extension"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___size"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___prettySize"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___modifiedTime"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___accessTime"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___changeTime"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___birthTime"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___root"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___dir"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___base"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___ext"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___name"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___relativeDirectory"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___dev"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___mode"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___nlink"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___uid"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___gid"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___rdev"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___ino"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___atimeMs"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___mtimeMs"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___ctimeMs"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___atime"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___mtime"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___ctime"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___birthtime"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___birthtimeMs"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___blksize"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___blocks"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___publicURL"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___id"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "childPost___heroImage___image___children"
+            "name": "childPost___heroImage___image"
           },
           {
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
@@ -19922,6 +19378,12 @@
             "description": null,
             "isDeprecated": true,
             "name": "childPost___related___author"
+          },
+          {
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
+            "description": null,
+            "isDeprecated": true,
+            "name": "childPost___related___heroImage___image"
           },
           {
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
@@ -20804,415 +20266,7 @@
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
-            "name": "heroImage___image___sourceInstanceName"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___absolutePath"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___relativePath"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___extension"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___size"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___prettySize"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___modifiedTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___accessTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___changeTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___birthTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___root"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___dir"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___base"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___ext"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___name"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___relativeDirectory"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___dev"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___mode"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___nlink"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___uid"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___gid"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___rdev"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___ino"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___atimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___mtimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___ctimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___atime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___mtime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___ctime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___birthtime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___birthtimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___blksize"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___blocks"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___publicURL"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___parent___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___parent___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___children___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___children___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___internal___content"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___internal___contentDigest"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___internal___description"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___internal___fieldOwners"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___internal___ignoreType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___internal___mediaType"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___internal___owner"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___internal___type"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childMarkdownRemark___id"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___excerpt"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___rawMarkdownBody"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___fileAbsolutePath"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___html"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___htmlAst"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___excerptAst"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___headings"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___timeToRead"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___tableOfContents"
-          },
-          {
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated.",
-            "description": null,
-            "isDeprecated": true,
-            "name": "heroImage___image___childMarkdownRemark___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___children"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___open_linked"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___archive_link"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___footer"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___contact_text"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___email"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___subscribe_feed_cta"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___subscribe_email_cta"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "heroImage___image___childDataYaml___authors"
+            "name": "heroImage___image"
           },
           {
             "deprecationReason": null,
@@ -21296,217 +20350,7 @@
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
-            "name": "related___heroImage___image___sourceInstanceName"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___absolutePath"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___relativePath"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___extension"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___size"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___prettySize"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___modifiedTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___accessTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___changeTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___birthTime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___root"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___dir"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___base"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___ext"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___name"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___relativeDirectory"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___dev"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___mode"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___nlink"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___uid"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___gid"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___rdev"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___ino"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___atimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___mtimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___ctimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___atime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___mtime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___ctime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___birthtime"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___birthtimeMs"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___blksize"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___blocks"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___publicURL"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___id"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "related___heroImage___image___children"
+            "name": "related___heroImage___image"
           },
           {
             "deprecationReason": null,
@@ -21585,6 +20429,12 @@
             "description": null,
             "isDeprecated": false,
             "name": "related___related___author"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
+            "name": "related___related___heroImage___image"
           },
           {
             "deprecationReason": null,
@@ -24448,6 +23298,12 @@
             "deprecationReason": null,
             "description": null,
             "isDeprecated": false,
+            "name": "authors"
+          },
+          {
+            "deprecationReason": null,
+            "description": null,
+            "isDeprecated": false,
             "name": "open_linked"
           },
           {
@@ -24485,12 +23341,6 @@
             "description": null,
             "isDeprecated": false,
             "name": "subscribe_email_cta"
-          },
-          {
-            "deprecationReason": null,
-            "description": null,
-            "isDeprecated": false,
-            "name": "authors"
           },
           {
             "deprecationReason": null,

@@ -4,7 +4,7 @@ draft: false
 title: 'Just-for-fun challenge for the winter: Midnite Bicycle League 2020-21 '
 author: John Jackson
 hero_image:
-  image: "/content/images/2020/50587596948_258c396519_b.jpg"
+  image: "/v1608060004/2020/50587596948_258c396519_b.jpg"
   alt: The Midnite Bicycle League Challenge journal
   caption: 'Image credit: Urban Adventure League'
 external_link: https://urbanadventureleague.wordpress.com/2020/11/11/announcing-the-midnite-bicycle-league-2020-21-challenge-1-dec-2020-28-feb-2021/

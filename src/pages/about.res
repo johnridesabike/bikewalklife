@@ -10,9 +10,7 @@
           intro
           image: image_large {
             alt
-            image {
-              relativePath
-            }
+            image 
           }
         }
       }
@@ -35,18 +33,18 @@ let default = (~data) =>
       <main>
         <h1> {title->React.string} </h1>
         {switch image {
-        | Some({image: Some({relativePath, _}), alt}) =>
+        | Some({image: Some(image), alt}) =>
           <figure className="about__photo-wrapper">
             <div
               className="about__photo"
               style={ReactDOMStyle.make(~height="240px", ~width="240px", ())}>
               <img
-                src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_center,h_240,w_240/v1608060004/" ++
-                relativePath}
+                src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_center,h_240,w_240/" ++
+                image}
                 srcSet={`
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_240%2Cw_240/v1608060004/${relativePath} 1x,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_360%2Cw_360/v1608060004/${relativePath} 1x,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_480%2Cw_480/v1608060004/${relativePath} 2x
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_240%2Cw_240/${image} 1x,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_360%2Cw_360/${image} 1x,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_480%2Cw_480/${image} 2x
                  `}
                 ?alt
                 height="240"

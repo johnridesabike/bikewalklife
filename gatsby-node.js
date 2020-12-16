@@ -37,7 +37,7 @@ module.exports = {
       }
 
       type HeroImage @dontinfer {
-        image: File @fileByRelativePath
+        image: String
         alt: String
         caption: String
       }

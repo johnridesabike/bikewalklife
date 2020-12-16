@@ -45,7 +45,6 @@
     "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-remark-copy-linked-files": "^2.3.15",
-    "gatsby-remark-normalize-paths": "^1.1.0",
     "gatsby-source-filesystem": "^2.3.23",
     "gatsby-transformer-remark": "^2.8.27",
     "gatsby-transformer-yaml": "^2.4.10",

@@ -38,7 +38,7 @@ let make = (~children) => {
       <meta name="twitter:card" content="summary" />
       <meta
         property="og:image"
-        content={"https://res.cloudinary.com/bike-walk-life/image/upload/v1608060004/logo-large-square.png"}
+        content={"https://res.cloudinary.com/bike-walk-life/image/upload/logo-large-square.png"}
       />
       <meta name="twitter:image:alt" property="og:image:alt" content={siteTitle ++ " logo"} />
     </Helmet>

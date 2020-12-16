@@ -21,9 +21,7 @@
         heroImage {
           alt
           caption
-          image {
-            relativePath
-          }
+          image 
         }
         parent {
           ... on MarkdownRemark {
@@ -69,16 +67,16 @@ let default = (~data) => {
             route=Entry({year: year, month: month, slug: slug})
             title
             heroImage={switch heroImage {
-            | Some({alt, image: Some({relativePath, _}), _}) =>
+            | Some({alt, image: Some(image), _}) =>
               Entry.Image.Image(
                 <img
-                  src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_auto,h_450,w_900/v1608060004/" ++
-                  relativePath}
+                  src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_auto,h_450,w_900/" ++
+                  image}
                   srcSet={`
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_207%2Cw_404/v1608060004/${relativePath} 414w,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_300%2Cw_600/v1608060004/${relativePath} 600w,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_450%2Cw_900/v1608060004/${relativePath} 900w,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_900%2Cw_1800/v1608060004/${relativePath} 1800w
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_207%2Cw_404/${image} 414w,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_300%2Cw_600/${image} 600w,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_450%2Cw_900/${image} 900w,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_900%2Cw_1800/${image} 1800w
                  `}
                   sizes="(max-width: 900px) 100vw, 900px"
                   ?alt

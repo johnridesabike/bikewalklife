@@ -20,9 +20,7 @@
       heroImage {
         alt
         caption
-        image {
-          relativePath
-        }
+        image 
       }
       parent {
         ... on MarkdownRemark {
@@ -49,9 +47,7 @@
           intro
           avatar: image_small {
             alt
-            image {
-              relativePath
-            }
+            image 
           }
         }
       }
@@ -87,18 +83,18 @@ module About = {
       </h2>
       <div className="entry-page__about-wrapper">
         {switch avatar {
-        | Some({image: Some({relativePath}), alt}) =>
+        | Some({image: Some(image), alt}) =>
           <div className="entry-page__avatar-wrapper">
             <div
               className="entry-page__avatar"
               style={ReactDOMStyle.make(~width="120px", ~height="120px", ())}>
               <img
-                src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_center,h_120,w_120/v1608060004/" ++
-                relativePath}
+                src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_center,h_120,w_120/" ++
+                image}
                 srcSet={`
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_120%2Cw_120/v1608060004/${relativePath} 1x,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_180%2Cw_180/v1608060004/${relativePath} 1x,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_240%2Cw_240/v1608060004/${relativePath} 2x
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_120%2Cw_120/${image} 1x,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_180%2Cw_180/${image} 1x,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cg_center%2Ch_240%2Cw_240/${image} 2x
                  `}
                 ?alt
                 height="120"
@@ -160,11 +156,11 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
         date: isoDate,
         route: Entry({year: year, month: month, slug: slug}),
         image: switch heroImage {
-        | Some({alt, image: Some({relativePath, _}), _}) =>
+        | Some({alt, image: Some(image), _}) =>
           Some({
             url: {
-              "https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_auto,h_450,w_900/v1608060004/" ++
-              relativePath
+              "https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_auto,h_450,w_900/" ++
+              image
             },
             alt: alt,
           })
@@ -177,16 +173,16 @@ let default = (~data, ~pageContext as {slug, year, month, previous, next}) =>
           html
           route=Entry({year: year, month: month, slug: slug})
           heroImage={switch heroImage {
-          | Some({alt, image: Some({relativePath, _}), _}) =>
+          | Some({alt, image: Some(image), _}) =>
             Entry.Image.Image(
               <img
-                src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_auto,h_450,w_900/v1608060004/" ++
-                relativePath}
+                src={"https://res.cloudinary.com/bike-walk-life/image/upload/c_fill,g_auto,h_450,w_900/" ++
+                image}
                 srcSet={`
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_207%2Cw_404/v1608060004/${relativePath} 414w,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_300%2Cw_600/v1608060004/${relativePath} 600w,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_450%2Cw_900/v1608060004/${relativePath} 900w,
-                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_900%2Cw_1800/v1608060004/${relativePath} 1800w
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_207%2Cw_404/${image} 414w,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_300%2Cw_600/${image} 600w,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_450%2Cw_900/${image} 900w,
+                 https://res.cloudinary.com/bike-walk-life/image/upload/c_fill%2Cf_auto%2Cg_auto%2Ch_900%2Cw_1800/${image} 1800w
                  `}
                 sizes="(max-width: 900px) 100vw, 900px"
                 ?alt

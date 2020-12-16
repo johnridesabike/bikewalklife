@@ -24,10 +24,10 @@ In response to this, [AmericaWalks recently took it upon themselves to create al
 >
 > We took the liberty of rebutting some of [NHTSA’s graphics](https://www.trafficsafetymarketing.gov/get-materials/pedestrian-safety/everyone-pedestrian?_ga=2.31046269.399588737.1603861965-197810799.1600885801) from their Playbook. Feel free to use and share:
 
-![](/content/images/2020/aw-ped-safety-1.png)
+![](https://res.cloudinary.com/bike-walk-life/image/upload/v1608060006/2020/aw-ped-safety-1.png)
 
-![](/content/images/2020/aw-ped-safety-2.png)
+![](https://res.cloudinary.com/bike-walk-life/image/upload/v1608060006/2020/aw-ped-safety-2.png)
 
-![](/content/images/2020/aw-ped-safety-4.png)
+![](https://res.cloudinary.com/bike-walk-life/image/upload/v1608060006/2020/aw-ped-safety-4.png)
 
-![](/content/images/2020/aw-ped-safety-5.png)
+![](https://res.cloudinary.com/bike-walk-life/image/upload/v1608060006/2020/aw-ped-safety-5.png)

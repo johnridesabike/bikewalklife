@@ -4,7 +4,7 @@ draft: false
 title: Atlanta has a new bicycle mayor, Pattie Baker
 author: John Jackson
 hero_image:
-  image: "/content/images/2020/img_4984-1-scaled.jpg"
+  image: "/v1608060004/2020/img_4984-1-scaled.jpg"
   alt: 'A photograph of Pattie Baker holding her bicycle in front of a mural. '
   caption: 'Photo credit: Pattie Baker and BYCS.'
 external_link: https://bycs.org/pattie-baker/

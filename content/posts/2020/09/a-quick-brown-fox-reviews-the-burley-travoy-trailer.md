@@ -4,7 +4,7 @@ draft: false
 title: A Quick Brown Fox reviews the Burley Travoy trailer
 author: John Jackson
 hero_image:
-  image: "/content/images/2020/travoy-trailer.jpeg"
+  image: "/v1608060004/2020/travoy-trailer.jpeg"
   alt: Photo of the Burley Travoy trailer on a bike.
   caption: 'Photo credit: aquickbrownfox.com'
 external_link: https://www.aquickbrownfox.com/blog/2020/9/4/product-review-burley-travoy-trailer

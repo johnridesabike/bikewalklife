@@ -5,7 +5,7 @@ author: John Jackson
 external_link: https://travelingatthespeedofbike.com/2020/07/13/i-was-the-victim-of-a-hit-and-run-today-i-am-lucky-to-be-alive/
 draft: false
 hero_image:
-  image: "/content/images/fullsizeoutput_354b.jpeg"
+  image: "/v1608060004/fullsizeoutput_354b.jpeg"
   alt: Pattie Baker's bike noodle.
   caption: 'Image credit: travelingatthespeedofbike.com'
 tags:
