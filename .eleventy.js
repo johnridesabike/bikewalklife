@@ -9,12 +9,15 @@ const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy({
+    "assets/images/nps-bicycle-trail.svg": "favicon.svg",
+  });
   eleventyConfig.addDataExtension("yaml", yaml.safeLoad);
   eleventyConfig.addCollection("posts", (collectionApi) => {
     const coll = collectionApi
       .getFilteredByGlob("posts/**/*.md")
       .reverse()
-      .filter((x) => x.url !== false);
+      .filter((x) => x.data.visible);
     for (let i = 0; i < coll.length; i++) {
       const previous = coll[i - 1] || null;
       const next = coll[i + 1] || null;
@@ -27,7 +30,7 @@ module.exports = (eleventyConfig) => {
     collectionApi
       .getFilteredByGlob("posts/**/*.md")
       .reverse()
-      .filter((x) => x.url !== false)
+      .filter((x) => x.data.visible)
       .slice(0, 12)
   );
   eleventyConfig.setFrontMatterParsingOptions({

@@ -12,7 +12,7 @@
     ubuntu, cantarell, "helvetica neue", sans-serif;
   --font-pre: "courier 10 pitch", courier, monospace;
   --font-base-size: 18px;
-  --font-size-base-mobile: 16px;
+  --font-base-size-mobile: 16px;
   --font-size-xs: calc(1em / 1.25); /* 16 */
   --font-size-sm: calc(1em / 1.125); /* 17.78 */
   --font-size-md: calc(1em * 1); /* 20 */

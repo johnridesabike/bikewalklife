@@ -18,7 +18,8 @@ tags:
             external_link,
             dateString,
             isoDate,
-            draft
+            draft,
+            visible: true
           }
         }
       %}
@@ -42,6 +43,7 @@ tags:
         {% Entry_OriginalLink href="{{ href }}" class="" strings /%}
       {% /match %}
     </div>
+  {% with {data: {visible: false}} %} {* Don't show invisible posts. *}
   {% /map %}
   </main>
   <nav class="archive__nav">

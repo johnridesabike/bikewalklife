@@ -16,7 +16,8 @@ tags:
           isoDate,
           dateString,
           draft,
-          external_link
+          external_link,
+          visible: true
         }
       },
       index
@@ -51,8 +52,9 @@ tags:
         <hr class="separator" />
       </div>
     {% with _ %} <hr class="separator" />
-    {% /match
-  /map /match %}
+    {% /match %}
+  {% with {data: {visible: false}} %} {* Don't show invisible posts. *}
+  {% /map /match %}
 </main>
 <nav>
   {% match strings, collections with {archive_link}, {page_archive: [{url}]} %} 

@@ -120,7 +120,11 @@ const Related = (render, props, children) => {
   const set = new Set();
   for (tag of props.tags) {
     for (item of props.collections[tag]) {
-      if (!set.has(item) && item.data.permalink !== props.self) {
+      if (
+        !set.has(item) &&
+        item.data.permalink !== props.self &&
+        item.data.visible
+      ) {
         set.add(item);
       }
     }

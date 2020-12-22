@@ -7,7 +7,7 @@
   "sources": [
     {
       "dir": "assets",
-      "subdirs": true
+      "subdirs": false
     }
   ],
   "package-specs": [

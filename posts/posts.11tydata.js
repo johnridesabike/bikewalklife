@@ -1,4 +1,14 @@
-const path = require("path");
+const isVisible = (data, { yes, no }) => {
+  if (process.env.ELEVENTY_ENV !== "production") {
+    return yes();
+  } else {
+    if (data.draft) {
+      return no();
+    } else {
+      return yes();
+    }
+  }
+};
 
 module.exports = {
   layout: "Layout_Entry.acutis",
@@ -18,21 +28,13 @@ module.exports = {
         return null;
       }
     },
-    permalink: (data) => {
-      const dir = path
-        .dirname(data.page.filePathStem)
-        .replace(/^(\/posts)/, "");
-      const slug = data.page.fileSlug;
-      const permalink = data.permalink || dir + "/" + slug + "/";
-      if (process.env.ELEVENTY_ENV !== "production") {
-        return permalink;
-      } else {
-        if (data.draft) {
-          return false;
-        } else {
-          return permalink;
-        }
-      }
-    },
+    permalink: (data) =>
+      isVisible(data, {
+        yes: () =>
+          data.permalink ||
+          data.page.filePathStem.replace(/^(\/posts)/, "") + "/",
+        no: () => false,
+      }),
+    visible: (data) => isVisible(data, { yes: () => true, no: () => false }),
   },
 };
