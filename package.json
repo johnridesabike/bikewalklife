@@ -17,7 +17,7 @@
     "analyze:js": "source-map-explorer _site/**/*.js _site/**/*.js.map",
     "build": "npm-run-all -l build:rescript build:assets build:html",
     "build:assets": "NODE_ENV=production webpack",
-    "build:html": "ELEVENTY_EXPERIMENTAL=true ELEVENTY_ENV=production eleventy",
+    "build:html": "ELEVENTY_EXPERIMENTAL=true ELEVENTY_ENV=production eleventy --quiet",
     "build:rescript": "bsb -make-world",
     "clean": "npm-run-all -l --parallel clean:*",
     "clean:rescript": "bsb -clean-world -make-world",
