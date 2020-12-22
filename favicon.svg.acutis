@@ -1,0 +1,5 @@
+---
+permalink: favicon.svg
+eleventyExcludeFromCollections: true
+---
+{% Logo width=192 /%}

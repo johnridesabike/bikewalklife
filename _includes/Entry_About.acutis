@@ -1,0 +1,56 @@
+<!-- Entry_About -->
+{% match config with {title: siteTitle} %}
+<section class="entry-page__about">
+  <h2 class="entry-page__footer-heading">
+    About {{ siteTitle }}
+  </h2>
+  <div class="entry-page__about-wrapper">
+    {% match avatar with {image, alt} %}
+      <div class="entry-page__avatar-wrapper">
+        <div
+          class="entry-page__avatar"
+          style="width: 120px; height: 120px">
+          <img
+            src='{% ImgSrc gravity="center" height=120 width=120 image /%}'
+            srcset='
+              {% ImgSrc gravity="center" height=120 width=120 image /%} 1x,
+              {% ImgSrc gravity="center" height=180 width=180 image /%} 1.5x,
+              {% ImgSrc gravity="center" height=240 width=250 image /%} 2x,
+              '
+            alt="{{ alt }}"
+            height="120"
+            width="120"
+          />
+        </div>
+      </div>
+    {% /match %}
+    <div class="entry-page__about-content">{% raw description %}</div>
+  </div>
+  <p class="entry-page__about-link">
+    {% match collections with {page_about: [{url}]} %}
+      {% Link current=page href=url %}
+        Read more about {{ siteTitle }}
+        <span aria-hidden="true">
+          {% Icon name="arrow-right" class="icon" /%}
+        </span>
+      {% /Link %}
+    {% /match %}
+  </p>
+  {% match strings with {contact_text} %}
+      <h2 class="entry-page__footer-heading"> Leave a comment </h2>
+      <div class="entry-page__about-content">{%raw contact_text %}</div>
+      <p class="entry-page__about-link">
+        {% match collections with {page_contact: [{url}]} %}
+          {% Link current=page href=url %}
+            Contact me
+            <span aria-hidden="true">
+              {% Icon name="arrow-right" class="icon" /%}
+            </span>
+          {% /Link %}
+        {% /match %}
+      </p>
+    </>
+  {% /match %}
+</section>
+{% /match %}
+<!-- /Entry_About -->

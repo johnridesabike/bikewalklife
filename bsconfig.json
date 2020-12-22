@@ -3,20 +3,20 @@
   "reason": {
     "react-jsx": 3
   },
-  "bsc-flags": ["-bs-super-errors", "-open Belt"],
+  "bsc-flags": ["-bs-super-errors"],
   "sources": [
     {
-      "dir": "src",
+      "dir": "assets",
       "subdirs": true
     }
   ],
   "package-specs": [
     {
-      "module": "es6",
-      "in-source": true
+      "module": "commonjs",
+      "in-source": false
     },
     {
-      "module": "commonjs",
+      "module": "es6",
       "in-source": false
     }
   ],
@@ -24,21 +24,14 @@
   "namespace": true,
   "bs-dependencies": [
     "reason-react",
-    "re-classnames",
     "reason-promise",
-    "@reasonml-community/graphql-ppx",
     "re-formality",
     "bs-fetch"
   ],
-  "ppx-flags": ["@reasonml-community/graphql-ppx/ppx", "re-formality/ppx"],
+  "ppx-flags": ["re-formality/ppx"],
   "refmt": 3,
   "warnings": {
     "number": "+A-48-103",
     "error": "+A-3-44-102"
-  },
-  "graphql": {
-    "template-tag": "graphql",
-    "fragment-in-query": "exclude",
-    "templateTagReturnType": "Gatsby.query"
   }
 }

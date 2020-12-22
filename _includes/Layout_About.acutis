@@ -1,0 +1,27 @@
+{% Layout data={title} config strings build page collections %}
+  <main>
+    <h1> {{ title }} </h1>
+    {% match image_large with {image, alt} %}
+      <figure class="about__photo-wrapper">
+        <div
+          class="about__photo"
+          style="height: 240px; width: 240px;">
+          <img
+            src='{% ImgSrc gravity="center" height=240 width=240 image /%}'
+            srcset='
+              {% ImgSrc gravity="center" height=240 width=240 image /%} 1x,
+              {% ImgSrc gravity="center" height=360 width=360 image /%} 1.5x,
+              {% ImgSrc gravity="center" height=480 width=480 image /%} 2x
+            '
+            alt="{{ alt }}"
+            height="240"
+            width="240"
+          />
+        </div>
+      </figure>
+    {% /match %}
+    <div class="serif about__intro"> {% raw intro %} </div>
+    <div class="serif"> {% raw content %} </div>
+  </main>
+  <aside> {% Subscribe config strings class="" / %} </aside>
+{% /Layout %}

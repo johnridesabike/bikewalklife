@@ -1,0 +1,15 @@
+---
+title: Contact
+tags:
+- page_contact
+---
+{% Layout config strings build collections data={title} page %}
+  <main>
+    <h1> Contact </h1>
+    {% match strings with {contact_text} %}
+      <div class="ui-font">{% raw contact_text %}</div>
+    {% /match %}
+    <div id="react-form-root">{% ReactFormHtml /%}</div>
+  </main>
+  <script src="{% Webpack asset="main.js" /%}"></script>
+{% /Layout %}

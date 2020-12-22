@@ -1,0 +1,33 @@
+---
+#permalink: "{% match config with {feed_url} %} {{feed_url}} {% /match %}"
+permalink: feed.xml
+eleventyExcludeFromCollections: true
+---
+{%~ match config, page with {title, description, site_url, author_name}, {url} ~%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ title }}</title>
+  <subtitle>{{ description }}</subtitle>
+  <link href="{% AbsoluteUrl url base=site_url /%}" rel="self"/>
+  <link href='{% AbsoluteUrl url="/" base=site_url /%}'/>
+  <updated>
+    {%~ match collections with {posts: [{data: {isoDate}}]} ~%} 
+      {{ isoDate }}
+    {%~ /match ~%}
+  </updated>
+  <id>{% AbsoluteUrl url="/" base=site_url /%}</id>
+  <author>
+    <name>{{ author_name }}</name>
+  </author>
+  {% match collections with {posts}
+      map posts with {url, templateContent, data: {title, isoDate}} ~%}
+  <entry>
+    <title>{{ title }}</title>
+    <link href="{% AbsoluteUrl url base=site_url /%}"/>
+    <updated>{{ isoDate }}</updated>
+    <id>{% AbsoluteUrl url base=site_url / %}</id>
+    <content type="html">{{ templateContent }}</content>
+  </entry>
+  {%~ /map /match %}
+</feed>
+{%~ /match ~%}

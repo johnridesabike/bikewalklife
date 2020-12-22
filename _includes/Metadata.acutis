@@ -1,0 +1,81 @@
+<!-- Metadata -->
+{% match config with
+    {
+      title: siteTitle,
+      description: siteDescription,
+      site_url,
+      twitter_handle
+    }
+  match data, page with
+  {title, description, author, isoDate, hero_image}, {url}
+~%}
+  <title> {{ title }} | {{ siteTitle }} </title>
+  <link rel="canonical" href="{% AbsoluteUrl url base=site_url /%}" />
+  <meta property="og:url" content="{% AbsoluteUrl url base=site_url /%}" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta
+    name="description"
+    property="og:description"
+    content="{{ description }}"
+  />
+  <meta name="author" content="{{ author }}" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="{{ isoDate }}" />
+  {% match hero_image 
+    with null %}
+    {* Nothing! *}
+  {% with {image, alt} %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="og:image"
+      content='{% ImgSrc gravity="auto" height=450 width=900 image /%}'
+    />
+    <meta property="og:image:width" content="900" />
+    <meta property="og:image:height" content="450" />
+    {% match alt with null %}
+      {* Nothing! *}
+    {% with alt %}
+      <meta
+        name="twitter:image:alt"
+        property="og:image:alt"
+        content="{{ alt }}"
+      />
+    {% /match
+  /match %}
+{% with {title}, {url} ~%}
+  <title> {{ title }} | {{ siteTitle }} </title>
+  <link rel="canonical" href="{% AbsoluteUrl url base=site_url /%}" />
+  <meta property="og:url" content="{% AbsoluteUrl url base=site_url /%}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ title }} | {{ siteTitle }}" />
+  <meta
+    name="description"
+    property="og:description"
+    content="{{ siteDescription }}"
+  />
+{%~ with _, {url} %}
+  <title> {{ siteTitle }} </title>
+  <link rel="canonical" href="{% AbsoluteUrl url base=site_url /%}" />
+  <meta property="og:url" content="{% AbsoluteUrl url base=site_url /%}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ siteTitle }}" />
+  <meta
+    name="description"
+    property="og:description"
+    content="{{ siteDescription }}"
+  />
+{%~ /match %}
+  <meta property="og:site_name" content="{{ siteTitle }}" />
+  <meta name="twitter:site" content="{{ twitter_handle }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta
+    property="og:image"
+    content="https://res.cloudinary.com/bike-walk-life/image/upload/logo-large-square.png"
+  />
+  <meta
+    name="twitter:image:alt"
+    property="og:image:alt"
+    content="{{ siteTitle }} logo"
+  />
+{% /match ~%}
+<!-- /Metadata -->

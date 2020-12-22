@@ -1,0 +1,99 @@
+{% match page with {excerpt, url} %}
+{% Layout
+   config
+   strings
+   build
+   page
+   collections
+   data={
+    title,
+    description: excerpt,
+    author,
+    isoDate,
+    hero_image
+    }
+%}
+<main>
+  {% Entry
+     page
+     author
+     content
+     url
+     hero_image
+     title
+     linkedHeader=false
+     isoDate
+     dateString
+     draft
+     class=""
+     Footer=#%}
+      <footer class="entry-page__footer">
+        {% match external_link with null %} {* nothing! *}
+        {% with href %} {% Entry_OriginalLink href class="" strings / %}
+        {% /match %}
+      </footer>
+    {%/#
+  / %}
+</main>
+<hr class="separator" />
+<aside class="ui-font">
+  {% match collections with {page_about: [{data: {intro, image_small}}]} %}
+    {% Entry_About description=intro avatar=image_small config strings page collections / %}
+  {% /match %}
+  <hr class="separator" />
+  {% Subscribe config strings class="" /%}
+</aside>
+<hr class="separator" />
+<nav class="entry-page__nav">
+  {% match tags with null %} {* Nothing! *}
+  {% with tags %} {% Related tags collections self=permalink limit=8 /%}
+  {% /match %}
+  <h2 class="entry-page__footer-heading"> Other recent posts </h2>
+  <ul class="entry-page__recent-list">
+    {% match previous
+       with null %}
+      {* Nothing! *}
+    {% with {url, data: {title}} %}
+      <li class="entry-page__recent-item">
+        {% Link
+          href=url
+          class="entry-page__recent-link"
+        %}
+          <span aria-hidden="true">
+            {% Icon name="arrow-left" class="icon entry-page__arrow" / %}
+          </span>
+          <span>
+            {% VisuallyHidden %}
+              Previous post:
+            {% /VisuallyHidden %}
+            {{ title }}
+          </span>
+        {% /Link %}
+      </li>
+    {% /match %}
+    {% match next 
+       with null %}
+       {* Nothing! *}
+    {% with {url, data: {title}} %}
+      <li class="entry-page__recent-item">
+        {% Link
+          href=url
+          class="entry-page__recent-link"
+          style="justify-content: flex-end;"
+        %}
+          <span>
+            {% VisuallyHidden %}
+              Next post:
+            {% /VisuallyHidden %}
+            {{ title }}
+          </span>
+          <span aria-hidden=true>
+            {% Icon name="arrow-right" class="icon entry-page__arrow" /%}
+          </span>
+        {% /Link %}
+      </li>
+    {% /match %}
+  </ul>
+</nav>
+{% /Layout %}
+{% /match %}

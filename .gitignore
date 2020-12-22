@@ -77,3 +77,4 @@ lib/
 *.bs.js
 
 content/posts/__testdata__/
+_site

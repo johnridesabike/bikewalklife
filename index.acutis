@@ -1,0 +1,71 @@
+---
+tags:
+- page_index
+---
+{% Layout config strings build collections data=null page %}
+<main>
+  {% match collections with {frontPage}
+     map frontPage with
+      {
+        templateContent: content,
+        url,
+        data: {
+          author,
+          title,
+          hero_image,
+          isoDate,
+          dateString,
+          draft,
+          external_link
+        }
+      },
+      index
+  %}
+    {% Entry
+        page
+        author
+        content
+        url
+        title
+        hero_image
+        linkedHeader=true
+        isoDate
+        dateString
+        draft
+        class=""
+        Footer=#%}
+          <footer>
+            {% match external_link
+              with null %}
+              {* Nothing! *}
+            {% with href %}
+              {% Entry_OriginalLink href class="" style="" strings /%}
+            {% /match %}
+          </footer>
+        {%/#
+    /%}
+    {% match index with 0 %}
+      <div class="full-bleed">
+        <hr class="separator" />
+        {% Subscribe class="small-screen-padding" config strings /%}
+        <hr class="separator" />
+      </div>
+    {% with _ %} <hr class="separator" />
+    {% /match
+  /map /match %}
+</main>
+<nav>
+  {% match strings, collections with {archive_link}, {page_archive: [{url}]} %} 
+    <div class="index-page__archive-link">
+      {% Link current=page href=url %}
+        {{ archive_link }}
+        <span aria-hidden="true">
+          {% Icon name="arrow-right" class="icon" /%}
+        </span>
+      {% /Link %}
+    </div>
+  {% /match %}
+</nav>
+<hr class="separator" />
+<aside> {% Subscribe config strings class="" /%} </aside>
+{% /Layout %}

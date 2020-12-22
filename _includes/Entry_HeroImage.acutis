@@ -1,0 +1,16 @@
+<!-- Entry_HeroImage -->
+<img
+  src='{% ImgSrc height=450 width=900 gravity="auto" image /%}'
+  srcset='
+    {% ImgSrc gravity="auto" height=207 width=404 image /%} 414w,
+    {% ImgSrc gravity="auto" height=300 width=600 image /%} 600w,
+    {% ImgSrc gravity="auto" height=450 width=900 image /%} 900w,
+    {% ImgSrc gravity="auto" height=900 width=1800 image /%} 1800w,
+  '
+  sizes="(max-width: 900px) 100vw, 900px"
+  alt="{{ alt }}"
+  class="entry__hero-image"
+  height="450"
+  width="900"
+/>
+<!-- /Entry_HeroImage -->

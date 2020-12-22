@@ -1,0 +1,10 @@
+<!-- Entry_OriginalLink -->
+<div class="entry__link {{ class }}">
+  <a href="{{ href }}" target="_blank" rel="noopener">
+    {%~ match strings with {open_linked} %} {{ open_linked }} {% /match ~%}
+    <span aria-hidden="true">
+      {%~ Icon name="external-link" class="icon" / ~%}
+    </span>
+  </a>
+</div>
+<!-- /Entry_OriginalLink -->
