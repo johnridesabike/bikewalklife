@@ -11,7 +11,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addDataExtension("yaml", yaml.safeLoad);
   eleventyConfig.addCollection("posts", (collectionApi) => {
-    const coll = collectionApi.getFilteredByGlob("posts/**/*.md").reverse();
+    const coll = collectionApi
+      .getFilteredByGlob("posts/**/*.md")
+      .reverse()
+      .filter((x) => x.url !== false);
     for (let i = 0; i < coll.length; i++) {
       const previous = coll[i - 1] || null;
       const next = coll[i + 1] || null;
@@ -21,7 +24,11 @@ module.exports = (eleventyConfig) => {
     return coll;
   });
   eleventyConfig.addCollection("frontPage", (collectionApi) =>
-    collectionApi.getFilteredByGlob("posts/**/*.md").reverse().slice(0, 12)
+    collectionApi
+      .getFilteredByGlob("posts/**/*.md")
+      .reverse()
+      .filter((x) => x.url !== false)
+      .slice(0, 12)
   );
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: (file, _options) => {

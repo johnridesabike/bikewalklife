@@ -9,17 +9,17 @@ tags:
 ---
 {% Layout config strings build page collections data={title} %}
   <main>
-    <h1 class="archive__page-title"> Archive </h1>
+    <h1 class="archive__page-title"> {{ title }} </h1>
     {% map posts with
         {
+          url,
           data: {
             title,
             external_link,
             dateString,
             isoDate,
             draft
-          },
-          url
+          }
         }
       %}
         <div class="archive__entry">
