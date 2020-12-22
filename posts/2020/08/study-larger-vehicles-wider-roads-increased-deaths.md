@@ -12,7 +12,6 @@ external_link: https://www.ssti.us/2020/08/whats-driving-pedestrian-deaths-darkn
 tags:
 - violence
 - SUV
-slug: study-larger-vehicles-wider-roads-increased-deaths
 
 ---
 A 2020 study “United States Pedestrian Fatality Trends, 1977 to 2016” by Robert J. Schneider ([accessible here behind a paywall](https://doi.org/10.1177%2F0361198120933636)) has data to explain why the death toll on roads keeps going up.

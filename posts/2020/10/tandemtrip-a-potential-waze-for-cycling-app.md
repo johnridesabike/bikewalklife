@@ -12,7 +12,6 @@ tags:
 - TandemTrip
 - apps
 - Google Maps
-slug: ''
 
 ---
 If you ever wished your phone could give you real-time updates about cycling or walking conditions, that’s what [TandemTrip](https://www.tandemtripapp.com) wants to do.

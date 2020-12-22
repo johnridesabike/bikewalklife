@@ -14,7 +14,6 @@ tags:
 - tech
 - New York Times
 - John Quain
-slug: ''
 
 ---
 It’s no secret that our cities and towns are dangerous for people on bicycles. But most public discussion of that topic avoids the elephant in the room, that car culture is the direct cause of the danger. The way we build our cars, the way we design our streets, and the way we enforce our laws is all enabling cars to kill people. Unless we can make cars smaller, slower, and in fewer numbers, then peace just isn’t possible.

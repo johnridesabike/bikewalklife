@@ -8,7 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.forbes.com/sites/prakashdolsak/2020/08/14/urban-heatwaves-are-worse-for-low-income-neighborhoods/#7677f88c19d5
-slug: ''
 tags:
   - heat
 

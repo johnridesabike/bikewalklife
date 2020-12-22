@@ -15,7 +15,6 @@ tags:
 - stroad
 - pedestrian
 - least among us
-slug: ''
 
 ---
 This tiny trail has existed since before I moved here, five years ago. It's a “demand trail.” Those are formed when people regularly need to cross an area with no paved path.

@@ -13,7 +13,6 @@ tags:
 - NHTSA
 - AmericaWalks
 - National Pedestrian Safety Month
-slug: ''
 
 ---
 [Previously on Bike Walk Life](https://bikewalk.life/2020/10/streetsblog-debunks-pedestrian-safety-myths/), we took a look at the glaring shortcomings of the National Highway Traffic Safety Administration’s (NHTSA) “Pedestrian Safety Month” campaign. I use scare-quotes because the campaign was seemingly premised on finding ways to blame pedestrians for their own deaths. We’re at a point in history where pedestrian deaths are rising, and it’s not because the people on foot are becoming more dangerous. It’s because of our collective failure to build safe cars and streets.

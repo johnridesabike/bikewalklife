@@ -10,7 +10,6 @@ hero_image:
 external_link: https://www.jta.org/quick-reads/jewish-woman-celebrates-111th-birthday-under-lockdown-in-south-africa
 tags:
 - profiles
-slug: ''
 
 ---
 Rosalie Wolpe celebrated her 111th birthday this week. Her secret to longevity, [according to a 2017 interview](https://www.sajr.co.za/news-and-articles/2017/08/31/turning-108-just-another-birthday-for-rosalie-wolpe), is:

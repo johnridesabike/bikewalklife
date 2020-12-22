@@ -8,7 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.citizen-times.com/story/opinion/2020/08/09/asheville-should-proud-charlotte-street-innovation-opinion/3313771001/
-slug: ''
 tags:
   - local projects
 

@@ -8,7 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.9news.com/article/news/local/next/denver-future-street-design-bicyclist-pedestrian-friendly/73-a79e1b56-b2b4-4696-9c00-462217b1141b
-slug: denver-future-streets-pedestrians-bicycles
 tags:
   - local projects
 

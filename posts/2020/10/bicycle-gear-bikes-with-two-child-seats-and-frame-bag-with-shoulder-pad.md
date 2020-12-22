@@ -15,7 +15,6 @@ tags:
 - child seats
 - This Mom Bikes
 - Lindsay Bliek
-slug: ''
 
 ---
 I love the gear aspect of bicycle culture. Riders have endless options for customizing their bicycles to match any taste or lifestyle. I’m always delighted to discover new gear, even if I personally have no need for it. And who knows? Maybe someone I meet on the trail will be glad to know these are out there.

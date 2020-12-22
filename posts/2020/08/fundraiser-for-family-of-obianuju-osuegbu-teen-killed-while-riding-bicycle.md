@@ -12,7 +12,6 @@ tags:
 - fundraiser
 - teen
 - violence
-slug: ''
 
 ---
 From the GoFundMe page:

@@ -13,7 +13,6 @@ tags:
 - bike commuting
 - holidays
 - Columbus GA
-slug: ''
 
 ---
 ![Poster for “Bike to Work or There.”](/content/images/2020/795945ad-1126-4ed5-9a46-53e90492d9f5.jpg)

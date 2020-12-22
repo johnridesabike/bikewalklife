@@ -11,7 +11,6 @@ external_link: https://cityobservatory.org/the-only-reason-some-people-drive-is-
 tags:
 - City Observatory
 - Joe Cortright
-slug: ''
 
 ---
 It’s no secret that we subsidize driving to a degree that’s vastly disproportionate to other kinds of transportation. [Joe Cortright has a great piece in City Observatory that discusses this](https://cityobservatory.org/the-only-reason-some-people-drive-is-because-we-pay-them-to/).

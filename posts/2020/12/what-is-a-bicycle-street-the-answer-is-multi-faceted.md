@@ -12,7 +12,6 @@ tags:
 - Beyond the Automobile
 - Matt Pinder
 - bicycle street
-slug: ''
 
 ---
 Matt Pinder, in his blog [Beyond the Automobile](https://beyondtheautomobile.com/), has a series of posts which explore what makes a street a “bicycle street.”

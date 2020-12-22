@@ -12,7 +12,6 @@ tags:
 - bus
 - atlanta
 - marta
-slug: ''
 
 ---
 David Wickert, writing for AJC, published a few of the comments they received from MARTA riders regarding the current bus cuts. Here’s one example:

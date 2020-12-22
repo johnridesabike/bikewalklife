@@ -12,7 +12,6 @@ tags:
 - reviews
 - products
 - bike trailer
-slug: ''
 
 ---
 [Ayesha writes](https://www.aquickbrownfox.com/blog/2020/9/4/product-review-burley-travoy-trailer):

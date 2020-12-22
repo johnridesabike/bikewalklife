@@ -14,7 +14,6 @@ tags:
 - amendment
 - law
 - legal
-slug: ''
 
 ---
 [Darío Hidalgo reports for The City Fix](https://thecityfix.com/blog/mexicos-right-to-mobility-amendment-could-shift-road-safety-discourse-and-save-thousands-of-lives/):

@@ -12,7 +12,6 @@ tags:
 - cars
 - Streetsblog
 - Kea Wilson
-slug: ''
 
 ---
 The city of Cambridge, Massachusetts will [soon be the first US city to put warning labels on gas pumps](https://thehill.com/changing-america/sustainability/climate-change/527183-first-climate-warnings-on-gas-pumps-to-appear). The goal is to help drivers understand that the gas they’re purchasing is contributing to the climate crisis, the same way that cigarette labels educate consumers on the dangers of smoking.

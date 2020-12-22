@@ -22,8 +22,7 @@ module.exports = {
       const dir = path
         .dirname(data.page.filePathStem)
         .replace(/^(\/posts)/, "");
-      const slug =
-        data.slug && data.slug !== "" ? data.slug : data.page.fileSlug;
+      const slug = data.page.fileSlug;
       const permalink = data.permalink || dir + "/" + slug + "/";
       if (process.env.ELEVENTY_ENV !== "production") {
         return permalink;
