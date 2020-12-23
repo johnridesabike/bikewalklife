@@ -74,3 +74,5 @@ fields:
   hidden: true
   label: Layout
   default: Layout_About.acutis
+pages:
+- about.md
