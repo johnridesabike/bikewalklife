@@ -2,7 +2,7 @@
 {% match
     config, collections
   with
-    {description, title},
+    {description, title, feed_url},
     {
       page_index: [{url: url_index}],
       page_about: [{url: url_about, data: {title: title_about}}],
@@ -29,8 +29,19 @@
      />
   {% /map /match ~%}
   {% Metadata config data page / %}
-  <link rel="stylesheet" href="{% Webpack asset="main.css" /%}" />
+  <link rel="stylesheet" href='{% Webpack asset="main.css" /%}' />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link
+    rel="icon"
+    type="image/png"
+    href='{% Favicon file="assets/images/nps-bicycle-trail.svg" /%}'
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Bike Walk Life"
+    href="{{ feed_url }}"
+  />
   </head>
   <body>
     <div class="page">
@@ -50,7 +61,7 @@
             {%~ /Link %}
           </h1>
           <p class="header__description"> {{ description }} </p>
-          <nav role="navigation" aria-label="main navigation">
+          <nav aria-label="main navigation">
             <ul class="menu__list">
               <li class="menu__item">
                 {%~ Link current=page href=url_index class="menu__link" ~%}

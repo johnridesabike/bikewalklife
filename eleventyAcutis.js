@@ -5,47 +5,49 @@ const { loadTemplate, filenameToComponent } = require("acutis-lang/node-utils");
 const fastGlob = require("fast-glob");
 const { icons } = require("feather-icons");
 const { cloudinary_url } = require("./_data/config.json");
+const Image = require("@11ty/eleventy-img");
 
-const Icon = (render, props, children) =>
-  render(
-    makeAst("{% raw x %}", "Icon"),
-    { x: icons[props.name].toSvg({ class: props.class || "" }) },
-    children
-  );
+module.exports = (eleventyConfig) => {
+  const Icon = (render, props, children) =>
+    render(
+      makeAst("{% raw x %}", "Icon"),
+      { x: icons[props.name].toSvg({ class: props.class || "" }) },
+      children
+    );
 
-const SitemapDateFormat = (render, { date }, children) =>
-  render(
-    makeAst("{{ x }}", "SitemapDateFormat"),
-    { x: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}` },
-    children
-  );
+  const SitemapDateFormat = (render, { date }, children) =>
+    render(
+      makeAst("{{ x }}", "SitemapDateFormat"),
+      { x: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}` },
+      children
+    );
 
-const Log = (render, props, children) => {
-  console.log(props);
-  return render(makeAst("", "Log"), props, children);
-};
+  const Log = (render, props, children) => {
+    console.log(props);
+    return render(makeAst("", "Log"), props, children);
+  };
 
-const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
+  const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
 
-const Webpack = (render, props, children) =>
-  fs.readFile(manifestPath, { encoding: "utf8" }).then((data) => {
-    const x = JSON.parse(data)[props.asset];
-    if (x) {
-      return render(makeAst(`{{ x }}`, "Webpack"), { x: x }, children);
-    } else {
-      throw new Error(`${props.name} doesn't exist in the manifest.`);
-    }
-  });
+  const Webpack = (render, props, children) =>
+    fs.readFile(manifestPath, { encoding: "utf8" }).then((data) => {
+      const x = JSON.parse(data)[props.asset];
+      if (x) {
+        return render(makeAst(`{{ x }}`, "Webpack"), { x: x }, children);
+      } else {
+        throw new Error(`${props.name} doesn't exist in the manifest.`);
+      }
+    });
 
-const AbsoluteUrl = (render, { url, base }, children) =>
-  render(
-    makeAst("{{ x }}", "AbsoluteUrl"),
-    { x: new URL(url, base).href },
-    children
-  );
+  const AbsoluteUrl = (render, { url, base }, children) =>
+    render(
+      makeAst("{{ x }}", "AbsoluteUrl"),
+      { x: new URL(url, base).href },
+      children
+    );
 
-const linkAst = makeAst(
-  `<a
+  const linkAst = makeAst(
+    `<a
   href={{ href }}
   class="{{ class }} {{ activeClassName}} "
   {% match current with null %} {* Nothing! *}
@@ -62,37 +64,37 @@ const linkAst = makeAst(
 >
   {{ Children }}
 </a>`,
-  "Link"
-);
-
-const Link = (render, props, children) => {
-  const current = props.current && props.current.url === props.href;
-  let activeClassName;
-  if (current) {
-    if (props.activeClassName === undefined) {
-      activeClassName = "active-page";
-    } else {
-      activeClassName = props.activeClassName;
-    }
-  } else {
-    activeClassName = "";
-  }
-  return render(
-    linkAst,
-    {
-      href: props.href || null,
-      class: props.class || "",
-      style: props.style || null,
-      tabIndex: props.tabIndex || null,
-      activeClassName: activeClassName,
-      current: current ? "page" : null,
-    },
-    children
+    "Link"
   );
-};
 
-const relatedAst = makeAst(
-  `
+  const Link = (render, props, children) => {
+    const current = props.current && props.current.url === props.href;
+    let activeClassName;
+    if (current) {
+      if (props.activeClassName === undefined) {
+        activeClassName = "active-page";
+      } else {
+        activeClassName = props.activeClassName;
+      }
+    } else {
+      activeClassName = "";
+    }
+    return render(
+      linkAst,
+      {
+        href: props.href || null,
+        class: props.class || "",
+        style: props.style || null,
+        tabIndex: props.tabIndex || null,
+        activeClassName: activeClassName,
+        current: current ? "page" : null,
+      },
+      children
+    );
+  };
+
+  const relatedAst = makeAst(
+    `
 {% match related
   with [] %}
   {* Nothing! *}
@@ -113,59 +115,75 @@ const relatedAst = makeAst(
   <hr class="separator" />
 {% /match %}
 `,
-  "Related"
-);
+    "Related"
+  );
 
-const Related = (render, props, children) => {
-  const set = new Set();
-  for (tag of props.tags) {
-    for (item of props.collections[tag]) {
-      if (
-        !set.has(item) &&
-        item.data.permalink !== props.self &&
-        item.data.visible
-      ) {
-        set.add(item);
+  const Related = (render, props, children) => {
+    const set = new Set();
+    for (tag of props.tags) {
+      for (item of props.collections[tag]) {
+        if (
+          !set.has(item) &&
+          item.data.permalink !== props.self &&
+          item.data.visible
+        ) {
+          set.add(item);
+        }
       }
     }
-  }
-  return render(
-    relatedAst,
-    {
-      related: Array.from(set)
-        .sort((a, b) => b.date - a.date)
-        .slice(0, props.limit),
-    },
-    children
-  );
-};
-
-const contactForm = require("./assets/contact-form-server");
-
-const ReactFormHtml = (render, _props, children) =>
-  render(
-    makeAst("{% raw x %}", "ReactFormHtml"),
-    { x: contactForm.render() },
-    children
-  );
-
-const imgSrcAst = makeAst("{{ cloudinary_url }}{{ opts }}{{image }}", "ImgSrc");
-
-const ImgSrc = (render, { height, width, image, gravity }, children) => {
-  const opts =
-    "/" +
-    encodeURIComponent(
-      "f_auto," +
-        "q_auto," +
-        "c_fill," +
-        `g_${gravity},` +
-        `h_${height},` +
-        `w_${width}`
+    return render(
+      relatedAst,
+      {
+        related: Array.from(set)
+          .sort((a, b) => b.date - a.date)
+          .slice(0, props.limit),
+      },
+      children
     );
-  return render(imgSrcAst, { opts, image, cloudinary_url }, children);
-};
+  };
 
-module.exports = (eleventyConfig) => {
+  const contactForm = require("./assets/contact-form-server");
+
+  const ReactFormHtml = (render, _props, children) =>
+    render(
+      makeAst("{% raw x %}", "ReactFormHtml"),
+      { x: contactForm.render() },
+      children
+    );
+
+  const imgSrcAst = makeAst(
+    "{{ cloudinary_url }}{{ opts }}{{image }}",
+    "ImgSrc"
+  );
+
+  const ImgSrc = (render, { height, width, image, gravity }, children) => {
+    const opts =
+      "/" +
+      encodeURIComponent(
+        "f_auto," +
+          "q_auto," +
+          "c_fill," +
+          `g_${gravity},` +
+          `h_${height},` +
+          `w_${width}`
+      );
+    return render(imgSrcAst, { opts, image, cloudinary_url }, children);
+  };
+
+  const faviconAst = makeAst("{{ x }}", "Favicon");
+
+  const Favicon = (render, { file }, children) =>
+    Image(path.join(__dirname, file), {
+      widths: [32],
+      formats: ["png"],
+      urlPath: "/",
+      outputDir: path.join(__dirname, "_site"),
+      filenameFormat: (_id, _src, width, format, _options) =>
+        `favicon-${width}.${format}`,
+    }).then((metadata) =>
+      render(faviconAst, { x: metadata.png[0].url }, children)
+    );
+
   const templates = {
     Icon,
     SitemapDateFormat,
@@ -176,6 +194,7 @@ module.exports = (eleventyConfig) => {
     ReactFormHtml,
     ImgSrc,
     AbsoluteUrl,
+    Favicon,
   };
   // Remove stale cache.
   eleventyConfig.on("beforeWatch", (files) =>
