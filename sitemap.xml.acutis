@@ -1,0 +1,18 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%~ match config, collections with {site_url}, {all} 
+    map all with {url, date} %}
+  <url>
+    <loc>{% AbsoluteUrl url base=site_url /%}</loc>
+    <lastmod>{% SitemapDateFormat date /%}</lastmod>
+  </url>
+{%~ with {url} %}
+  <url>
+    <loc>{% AbsoluteUrl url base=site_url /%}</loc>
+  </url>
+{%~ /map /match %}
+</urlset>

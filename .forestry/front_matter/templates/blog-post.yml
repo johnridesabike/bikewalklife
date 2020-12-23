@@ -3,118 +3,130 @@ label: Blog Post
 hide_body: false
 display_field: title
 fields:
-- type: text
-  name: title
-  label: Title
-  config:
-    required: true
-- name: author
-  type: select
-  default: ''
-  config:
-    required: true
-    options: []
-    source:
-      type: documents
-      section: author-list
-      file: content/data/authors.yaml
-      path: authors
-  label: Author
-  description: Enter author of post
-- name: date
-  type: datetime
-  label: Date
-  config:
-    required: true
-    date_format: 
-    time_format: 
-    display_utc: false
-  default: now
-- name: hero_image
-  type: field_group
-  config: {}
-  fields:
-  - name: image
-    type: file
+  - type: text
+    name: title
+    label: Title
     config:
-      maxSize: 64
-    label: Image
-  - name: alt
+      required: true
+  - name: author
+    type: select
+    default: ""
+    config:
+      required: true
+      options: []
+      source:
+        type: documents
+        section: author-list
+        file: content/data/authors.yaml
+        path: authors
+    label: Author
+    description: Enter author of post
+  - name: date
+    type: datetime
+    label: Date
+    config:
+      required: true
+      date_format:
+      time_format:
+      display_utc: false
+    default: now
+  - name: hero_image
+    type: field_group
+    config: {}
+    fields:
+      - name: image
+        type: file
+        config:
+          maxSize: 64
+        label: Image
+      - name: alt
+        type: text
+        config:
+          required: false
+        label: Alternate text
+        description:
+          Use this text to describe the image for humans and robots who can’t
+          see images.
+      - name: caption
+        type: text
+        config:
+          required: false
+        label: Caption
+        description:
+          This text will appear under the image. It shouldn’t be the same as
+          the <em>alternate text</em>.
+    label: Hero image
+    description: This will appear in the header of the post.
+  - name: external_link
     type: text
     config:
       required: false
-    label: Alternate text
-    description: Use this text to describe the image for humans and robots who can’t
-      see images.
-  - name: caption
-    type: text
-    config:
-      required: false
-    label: Caption
-    description: This text will appear under the image. It shouldn’t be the same as
-      the <em>alternate text</em>.
-  label: Hero image
-  description: This will appear in the header of the post.
-- name: external_link
-  type: text
-  config:
-    required: false
-  label: External link
-  description: The URL to the external page this post is about, if applicable.
-- name: tags
-  type: tag_list
-  label: Tags
-  description: Tags are used to display posts related to this post.
-  hidden: false
-- name: draft
-  type: boolean
-  label: Draft
-  default: true
-  description: Turn this off to publish the post on the public site. Keep it on to
-    preview the post.
-- name: slug
-  type: text
-  config:
-    required: false
-  label: Slug
-  description: Optional custom slug for the post's URL. If blank, the URL will be
-    generated automatically.
+    label: External link
+    description: The URL to the external page this post is about, if applicable.
+  - name: tags
+    type: tag_list
+    label: Tags
+    description: Tags are used to display posts related to this post.
+    hidden: false
+  - name: draft
+    type: boolean
+    label: Draft
+    default: true
+    description:
+      Turn this off to publish the post on the public site. Keep it on to
+      preview the post.
 pages:
-- content/posts/2020/08/pattie-baker-s-you-go-girl-blog-series.md
-- content/posts/2020/09/a-demand-trail-meets-a-stroad.md
-- content/posts/2020/09/a-quick-brown-fox-reviews-the-burley-travoy-trailer.md
-- content/posts/2020/09/atlanta-riders-speak-up-bus-cuts-hurt-them.md
-- content/posts/2020/09/bicycle-mayors.md
-- content/posts/2020/09/georgia-commute-options-tips-for-first-time-and-experienced-riders.md
-- content/posts/2020/09/how-to-not-get-hit-by-cars.md
-- content/posts/2020/09/myths-and-realities-of-pedestrian-infrastructure.md
-- content/posts/2020/09/on-pushing-back-against-suvs.md
-- content/posts/2020/09/one-hundred-eleven-year-old-woman-s-secret-walking-a-lot.md
-- content/posts/2020/09/strong-towns-on-the-difference-between-the-suburban-experiment-and-traditional-development.md
-- content/posts/2020/09/time-travel-to-a-city-street-in-1906.md
-- content/posts/2020/09/upcoming-just-for-fun-bicycle-challenges-coffeeneuring-and-three-speed-october.md
-- content/posts/2020/10/bicycle-gear-bikes-with-two-child-seats-and-frame-bag-with-shoulder-pad.md
-- content/posts/2020/10/bike-to-work-or-there-day-in-columbus-ga-is-oct-9.md
-- content/posts/2020/10/designing-our-streets-for-children.md
-- content/posts/2020/10/even-when-law-forbids-jaywalking-rational-natural-choice.md
-- content/posts/2020/10/i-m-feeling-these-lessons-from-writing-about-transportation.md
-- content/posts/2020/10/improving-pedestrian-safety-playbook-graphics.md
-- content/posts/2020/10/it-s-time-to-do-something-about-car-advertising.md
-- content/posts/2020/10/no-we-don-t-need-new-tech-to-stop-bicycle-riders-from-being-killed-by-cars.md
-- content/posts/2020/10/streetsblog-debunks-pedestrian-safety-myths.md
-- content/posts/2020/10/tandemtrip-a-potential-waze-for-cycling-app.md
-- content/posts/2020/10/the-pandemic-era-traffic-death-paradox.md
-- content/posts/2020/10/us-bike-route-1-in-georgia.md
-- content/posts/2020/11/atlanta-has-a-new-bicycle-mayor-pattie-baker.md
-- content/posts/2020/11/bicycle-related-ballot-measures-were-a-huge-success-in-this-election.md
-- content/posts/2020/11/blackfridayparking-becomes-iwishthisparkingwas.md
-- content/posts/2020/11/do-you-live-in-a-15-minute-neighborhood-here-is-how-to-find-out.md
-- content/posts/2020/11/just-for-fun-challenge-for-the-winter-midnite-bicycle-league-2020-21.md
-- content/posts/2020/11/mexico-s-new-right-to-mobility-amendment.md
-- content/posts/2020/11/world-day-of-remembrance-for-road-traffic-victims.md
-- content/posts/2020/12/becca-zajac-dragonfly-trails-network-in-columbus-ga.md
-- content/posts/2020/12/nobody-wants-sharrows.why-do-they-exist.md
-- content/posts/2020/12/outside-online-this-is-our-chance-to-reclaim-cities-from-cars.md
-- content/posts/2020/12/what-is-a-bicycle-street-the-answer-is-multi-faceted.md
-- content/posts/2020/12/what-warning-labels-would-you-like-to-see-on-cars.md
-- content/posts/2020/12/why-do-people-drive-so-much-because-we-pay-them-to-drive.md
+  - posts/2020/07/pattie-baker-victim-hit-run.md
+  - posts/2020/07/people-for-bikes-2020-survey.md
+  - posts/2020/08/a-timely-simple-plan-to-reduce-traffic-fatalities.md
+  - posts/2020/08/atlanta-and-25-mph-speed-limits.md
+  - posts/2020/08/bike-lanes-and-accessibility.md
+  - posts/2020/08/denver-future-streets-pedestrians-bicycles.md
+  - posts/2020/08/exploring-georgia-s-multi-use-paths.md
+  - posts/2020/08/forbes-takes-an-interest-in-low-income-urban-heatwaves.md
+  - posts/2020/08/fundraiser-for-family-of-obianuju-osuegbu-teen-killed-while-riding-bicycle.md
+  - posts/2020/08/miss-manners-advises-pedestrians-bike-lanes.md
+  - posts/2020/08/on-advocating-for-bike-lanes.md
+  - posts/2020/08/on-the-success-of-asheville-s-road-diet-project.md
+  - posts/2020/08/pattie-baker-s-you-go-girl-blog-series.md
+  - posts/2020/08/research-examines-cities-mini-heat-islands-and-their-ties-to-racism.md
+  - posts/2020/08/study-larger-vehicles-wider-roads-increased-deaths.md
+  - posts/2020/08/tight-connection-policing-car-culture.md
+  - posts/2020/08/traffic-fatality-surge-reckless-driving.md
+  - posts/2020/09/a-demand-trail-meets-a-stroad.md
+  - posts/2020/09/a-quick-brown-fox-reviews-the-burley-travoy-trailer.md
+  - posts/2020/09/atlanta-riders-speak-up-bus-cuts-hurt-them.md
+  - posts/2020/09/bicycle-mayors.md
+  - posts/2020/09/differences-between-suburban-experiment-traditional-development.md
+  - posts/2020/09/georgia-commute-options-tips-for-first-time-and-experienced-riders.md
+  - posts/2020/09/how-to-not-get-hit-by-cars.md
+  - posts/2020/09/myths-and-realities-of-pedestrian-infrastructure.md
+  - posts/2020/09/on-pushing-back-against-suvs.md
+  - posts/2020/09/one-hundred-eleven-year-old-woman-s-secret-walking-a-lot.md
+  - posts/2020/09/time-travel-to-a-city-street-in-1906.md
+  - posts/2020/09/upcoming-just-for-fun-bicycle-challenges-coffeeneuring-and-three-speed-october.md
+  - posts/2020/10/bicycle-gear-bikes-with-two-child-seats-and-frame-bag-with-shoulder-pad.md
+  - posts/2020/10/bike-to-work-or-there-day-in-columbus-ga-is-oct-9.md
+  - posts/2020/10/designing-our-streets-for-children.md
+  - posts/2020/10/even-when-law-forbids-jaywalking-rational-natural-choice.md
+  - posts/2020/10/i-m-feeling-these-lessons-from-writing-about-transportation.md
+  - posts/2020/10/improving-pedestrian-safety-playbook-graphics.md
+  - posts/2020/10/it-s-time-to-do-something-about-car-advertising.md
+  - posts/2020/10/no-we-don-t-need-new-tech-to-stop-bicycle-riders-from-being-killed-by-cars.md
+  - posts/2020/10/streetsblog-debunks-pedestrian-safety-myths.md
+  - posts/2020/10/tandemtrip-a-potential-waze-for-cycling-app.md
+  - posts/2020/10/the-pandemic-era-traffic-death-paradox.md
+  - posts/2020/10/us-bike-route-1-in-georgia.md
+  - posts/2020/11/atlanta-has-a-new-bicycle-mayor-pattie-baker.md
+  - posts/2020/11/bicycle-related-ballot-measures-were-a-huge-success-in-this-election.md
+  - posts/2020/11/blackfridayparking-becomes-iwishthisparkingwas.md
+  - posts/2020/11/do-you-live-in-a-15-minute-neighborhood-here-is-how-to-find-out.md
+  - posts/2020/11/just-for-fun-challenge-for-the-winter-midnite-bicycle-league-2020-21.md
+  - posts/2020/11/mexico-s-new-right-to-mobility-amendment.md
+  - posts/2020/11/world-day-of-remembrance-for-road-traffic-victims.md
+  - posts/2020/12/becca-zajac-dragonfly-trails-network-in-columbus-ga.md
+  - posts/2020/12/nobody-wants-sharrows.why-do-they-exist.md
+  - posts/2020/12/outside-online-this-is-our-chance-to-reclaim-cities-from-cars.md
+  - posts/2020/12/what-is-a-bicycle-street-the-answer-is-multi-faceted.md
+  - posts/2020/12/what-warning-labels-would-you-like-to-see-on-cars.md
+  - posts/2020/12/why-do-people-drive-so-much-because-we-pay-them-to-drive.md

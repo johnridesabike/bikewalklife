@@ -1,0 +1,6 @@
+<!-- Entry_Date -->
+<time datetime="{{ isoDate }}" class="dt-published entry__date">
+  <span aria-hidden="true"> {% Icon name="calendar" class="icon" / %} </span>
+  {{ date }}
+</time>
+<!-- /Entry_Date -->

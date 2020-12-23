@@ -1,0 +1,41 @@
+<!-- Entry -->
+<article class="h-entry hentry entry__article {{ class }}">
+  {% match hero_image
+    with null %}
+    {* nothing! *}
+  {% with {image, alt, caption} %}
+    <figure class="full-bleed">
+      {% match linkedHeader
+         with true %}
+         {% Link href=url tabIndex=-1 %} {% Entry_HeroImage image alt /%} {% /Link %}
+      {% with false %} {% Entry_HeroImage image alt /%}
+      {% /match %}
+      {% match caption
+         with null %}
+         {* nothing! *}
+      {% with caption %}
+        <figcaption class="entry__caption"> {{ caption }} </figcaption>
+      {% /match %}
+    </figure>
+  {% /match %}
+  <div class="entry__body">
+    <header class="entry__header">
+      <{{ h }} class="p-name entry__title">
+        {% match linkedHeader
+           with true %}
+           {% Link href=url class="entry__header-link" %} {{ title }} {% /Link %}
+        {% with false %}
+          {{ title }}
+        {% /match %}
+      </{{ h }}>
+      {% Entry_Date date=dateString isoDate / %}
+      {% Entry_Author name=author / %}
+      {% match draft with true %} {% Entry_DraftNotice /%}
+      {% with false %} {* nothing! *}
+      {% /match %}
+    </header>
+    <div class="e-content">{% raw content %}</div>
+    {{ Footer }}
+  </div>
+</article>
+<!-- /Entry -->

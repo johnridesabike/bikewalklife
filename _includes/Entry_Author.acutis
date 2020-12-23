@@ -1,0 +1,7 @@
+<!-- Entry_Author -->
+<div class="entry__author">
+  <span aria-hidden="true"> {% Icon name="user" class="icon" /%} </span>
+  <span class="entry__author-by"> by </span>
+  <span class="p-author h-card"> {{ name }} </span>
+</div>
+<!-- /Entry_Author -->

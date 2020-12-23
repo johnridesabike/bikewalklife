@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% match
+    config, collections
+  with
+    {description, title: title_site, feed_url},
+    {
+      page_index: [{url: url_index}],
+      page_about: [{url: url_about, data: {title: title_about}}],
+      page_contact: [{url: url_contact, data: {title: title_contact}}],
+      page_archive: [{url: url_archive, data: {title: title_archive}}],
+      page_search: [{url: url_search, data: {title: title_search}}]
+    }
+~%}
+<html
+  lang="en-US"
+  prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+  <head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  {% match build with {assets}
+     map assets with asset
+  ~%}
+    <link
+      rel="preload"
+      as="font"
+      crossorigin
+      href="{% Webpack asset /%}"
+     />
+  {% /map /match ~%}
+  {%~ match metadata with null %}
+    {% Metadata config title metadata=null page / %}
+  {%~ with metadata ~%}
+    {% Metadata config title metadata page / %}
+  {% /match ~%}
+  <link rel="stylesheet" href='{% Webpack asset="main.css" /%}' />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link
+    rel="icon"
+    type="image/png"
+    href='{% Favicon file="assets/images/nps-bicycle-trail.svg" width=32 /%}'
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Bike Walk Life"
+    href="{{ feed_url }}"
+  />
+  </head>
+  <body>
+    <div class="page">
+      <a class="skip-nav" href="#content"> Skip to content. </a>
+      <header class="ui-font header__wrapper">
+        <div class="small-screen-padding header">
+          {% match tags with ["page_index"] %}
+            <h1 class="header__title reading-font">
+              {% Logo url_index page title_site /%}
+            </h1>
+          {% with _ %}
+            <p class="header__title reading-font">
+              {% Logo url_index page title_site /%}
+            </p>
+          {% /match %}
+          <p class="header__description"> {{ description }} </p>
+          <nav aria-label="main navigation">
+            <ul class="menu__list">
+              <li class="menu__item">
+                {%~ Link current=page href=url_index class="menu__link" ~%}
+                  Home
+                {%~ /Link ~%}
+              </li>
+              <li class="menu__item">
+                {%~ Link current=page href=url_about class="menu__link" ~%}
+                  {{ title_about }}
+                {%~ /Link ~%}
+              </li>
+              <li class="menu__item">
+                {%~ Link current=page href=url_contact class="menu__link" ~%}
+                  {{ title_contact }}
+                {%~ /Link ~%}
+              </li>
+              <li class="menu__item">
+                {%~ Link current=page href=url_archive class="menu__link" ~%}
+                  {{ title_archive }}
+                {%~ /Link ~%}
+              </li>
+              <li class="menu__item">
+                {%~ Link current=page href=url_search class="menu__link" ~%}
+                  {{ title_search }}
+                {%~ /Link ~%}
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="small-screen-padding content" id="content">
+        {%~ match content with null ~%}
+          {{ Children }}
+        {%~ with content ~%}
+          {%~ raw content ~%}
+        {%~ /match ~%}
+      </div>
+      <footer class="footer__wrapper">
+        <div class="small-screen-padding footer">
+          {% match strings with {footer} ~%}
+            <div> {% raw footer %} </div>
+          {% /match ~%}
+          <p>
+            {%~ Link current=page href=url_index activeClassName="" ~%}
+              Home
+            {%~ /Link ~%}
+          </p>
+          <p>
+            {%~ Link current=page href=url_about activeClassName="" ~%}
+              {{ title_about }}
+            {%~ /Link ~%}
+          </p>
+          <p>
+            {%~ Link current=page href=url_contact activeClassName="" ~%}
+              {{ title_contact }}
+            {%~ /Link ~%}
+          </p>
+        </div>
+      </footer>
+    </div>
+    {% match build with {environment: "production"} ~%}
+      <script
+        data-goatcounter="https://jbpjackson.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"></script>
+    {% with _ ~%}
+      <script
+        data-goatcounter="https://jbpjackson-dev.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"></script>
+    {% /match ~%}
+  </body>
+</html>
+{%~ /match ~%}

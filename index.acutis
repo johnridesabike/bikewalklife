@@ -1,0 +1,75 @@
+---
+title: ''
+tags:
+- page_index
+metadata: null
+layout: Layout.acutis
+---
+<main>
+  {% match collections with {frontPage}
+     map frontPage with
+      {
+        templateContent: content,
+        url,
+        data: {
+          author,
+          title,
+          hero_image,
+          isoDate,
+          dateString,
+          draft,
+          external_link,
+          visible: true
+        }
+      },
+      index
+  %}
+    {% Entry
+        page
+        author
+        content
+        url
+        title
+        hero_image
+        linkedHeader=true
+        isoDate
+        dateString
+        draft
+        class=""
+        h="h2"
+        Footer=#%}
+          <footer>
+            {% match external_link
+              with null %}
+              {* Nothing! *}
+            {% with href %}
+              {% Entry_OriginalLink href class="" style="" strings /%}
+            {% /match %}
+          </footer>
+        {%/#
+    /%}
+    {% match index with 0 %}
+      <div class="full-bleed">
+        <hr class="separator" />
+        {% Subscribe class="small-screen-padding" config strings /%}
+        <hr class="separator" />
+      </div>
+    {% with _ %} <hr class="separator" />
+    {% /match %}
+  {% with {data: {visible: false}} %} {* Don't show invisible posts. *}
+  {% /map /match %}
+</main>
+<nav>
+  {% match strings, collections with {archive_link}, {page_archive: [{url}]} %} 
+    <div class="index-page__archive-link">
+      {% Link current=page href=url %}
+        {{ archive_link }}
+        <span aria-hidden="true">
+          {% Icon name="arrow-right" class="icon" /%}
+        </span>
+      {% /Link %}
+    </div>
+  {% /match %}
+</nav>
+<hr class="separator" />
+<aside> {% Subscribe config strings class="" /%} </aside>

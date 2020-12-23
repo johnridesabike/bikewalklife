@@ -1,0 +1,2 @@
+Sitemap: https://bikewalk.life/sitemap.xml
+Host: https://bikewalk.life

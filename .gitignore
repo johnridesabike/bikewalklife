@@ -76,4 +76,5 @@ lib/
 .graphql_ppx_cache/
 *.bs.js
 
-content/posts/__testdata__/
+posts/__testdata__/
+_site
