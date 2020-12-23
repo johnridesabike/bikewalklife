@@ -29,7 +29,7 @@ sections:
     path: _data/strings.yaml
     label: UI Strings
 upload_dir: ""
-public_path: https://res.cloudinary.com/bike-walk-life/image/upload
+public_path: https://res.cloudinary.com/bike-walk-life/image/upload/if_w_gt_600,c_scale,w_600/f_auto
 front_matter_path: ""
 use_front_matter_path: true
 file_template: ":year:/:filename:"

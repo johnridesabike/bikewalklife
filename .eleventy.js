@@ -1,11 +1,18 @@
 const path = require("path");
 const yaml = require("js-yaml");
 const markdownIt = require("markdown-it");
-const mdItImplicitFigures = require("markdown-it-implicit-figures");
 const acutis = require("./eleventyAcutis");
 const htmlmin = require("html-minifier");
 
 const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
+
+function mdImages(md, _ops) {
+  const defaultRender = md.renderer.rules.image;
+  md.renderer.rules.image = (tokens, idx, options, env, self) => {
+    tokens[idx].attrPush(["loading", "lazy"]);
+    return defaultRender(tokens, idx, options, env, self);
+  };
+}
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("admin");
@@ -46,7 +53,7 @@ module.exports = (eleventyConfig) => {
       html: true,
       breaks: false,
       linkify: true,
-    }).use(mdItImplicitFigures, { figcaption: true })
+    }).use(mdImages)
   );
   if (process.env.ELEVENTY_ENV === "production") {
     eleventyConfig.addTransform("htmlmin", (content, outputPath) => {

@@ -16,6 +16,7 @@
             alt="{{ alt }}"
             height="240"
             width="240"
+            loading="lazy"
           />
         </div>
       </figure>

@@ -12,5 +12,6 @@
   class="entry__hero-image"
   height="450"
   width="900"
+  loading="lazy"
 />
 <!-- /Entry_HeroImage -->
