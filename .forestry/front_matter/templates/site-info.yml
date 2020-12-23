@@ -43,3 +43,9 @@ fields:
   config:
     required: true
   label: Cloudinary URL
+- name: author_name
+  type: text
+  config:
+    required: false
+  label: Author name
+  description: The name of the site’s primary author.
