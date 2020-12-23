@@ -1,8 +1,10 @@
 ---
+title: ''
 tags:
 - page_index
+metadata: null
+layout: Layout.acutis
 ---
-{% Layout config strings build collections data=null page %}
 <main>
   {% match collections with {frontPage}
      map frontPage with
@@ -70,4 +72,3 @@ tags:
 </nav>
 <hr class="separator" />
 <aside> {% Subscribe config strings class="" /%} </aside>
-{% /Layout %}

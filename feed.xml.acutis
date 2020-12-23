@@ -1,6 +1,5 @@
 ---
-#permalink: "{% match config with {feed_url} %} {{feed_url}} {% /match %}"
-permalink: feed.xml
+permalink: "{% match config with {feed_url} %}{%raw feed_url %}{% /match %}"
 eleventyExcludeFromCollections: true
 ---
 {%~ match config, page with {title, description, site_url, author_name}, {url} ~%}
@@ -11,7 +10,7 @@ eleventyExcludeFromCollections: true
   <link href="{% AbsoluteUrl url base=site_url /%}" rel="self"/>
   <link href='{% AbsoluteUrl url="/" base=site_url /%}'/>
   <updated>
-    {%~ match collections with {posts: [{data: {isoDate}}]} ~%} 
+    {%~ match collections with {frontPage: [{data: {isoDate}}]} ~%} 
       {{ isoDate }}
     {%~ /match ~%}
   </updated>
@@ -19,15 +18,18 @@ eleventyExcludeFromCollections: true
   <author>
     <name>{{ author_name }}</name>
   </author>
-  {% match collections with {posts}
-      map posts with {url, templateContent, data: {title, isoDate}} ~%}
-  <entry>
-    <title>{{ title }}</title>
-    <link href="{% AbsoluteUrl url base=site_url /%}"/>
-    <updated>{{ isoDate }}</updated>
-    <id>{% AbsoluteUrl url base=site_url / %}</id>
-    <content type="html">{{ templateContent }}</content>
-  </entry>
+  <icon>
+    {%~ Favicon file="assets/images/nps-bicycle-trail.svg" width=128 / ~%}
+  </icon>
+  {% match collections with {frontPage}
+      map frontPage with {url, templateContent, data: {title, isoDate}} ~%}
+    <entry>
+      <title>{{ title }}</title>
+      <link href="{% AbsoluteUrl url base=site_url /%}" />
+      <updated>{{ isoDate }}</updated>
+      <id>{% AbsoluteUrl url base=site_url / %}</id>
+      <content type="html">{{ templateContent }}</content>
+    </entry>
   {%~ /map /match %}
 </feed>
 {%~ /match ~%}

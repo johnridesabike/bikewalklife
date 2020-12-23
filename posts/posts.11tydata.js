@@ -1,3 +1,4 @@
+// Drafts are not visible in production. They are visible in development.
 const isVisible = (data, { yes, no }) => {
   if (process.env.ELEVENTY_ENV !== "production") {
     return yes();

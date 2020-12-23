@@ -172,9 +172,9 @@ module.exports = (eleventyConfig) => {
 
   const faviconAst = makeAst("{{ x }}", "Favicon");
 
-  const Favicon = (render, { file }, children) =>
+  const Favicon = (render, { file, width }, children) =>
     Image(path.join(__dirname, file), {
-      widths: [32],
+      widths: [width],
       formats: ["png"],
       urlPath: "/",
       outputDir: path.join(__dirname, "_site"),

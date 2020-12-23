@@ -15,18 +15,18 @@ sections:
     templates:
       - blog-post
   - type: document
-    path: data/authors.yaml
+    path: _data/authors.yaml
     label: Author List
   - type: document
-    path: pages/about.md
+    path: about.md
     label: About Page
   - type: heading
     label: General Config
   - type: document
-    path: config.json
+    path: _data/config.json
     label: Site Info
   - type: document
-    path: data/strings.yaml
+    path: _data/strings.yaml
     label: UI Strings
 upload_dir: ""
 public_path: https://res.cloudinary.com/bike-walk-life/image/upload

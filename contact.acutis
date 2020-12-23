@@ -2,8 +2,9 @@
 title: Contact
 tags:
 - page_contact
+metdata: null
+layout: Layout.acutis
 ---
-{% Layout config strings build collections data={title} page %}
   <main>
     <h1> Contact </h1>
     {% match strings with {contact_text} %}
@@ -12,4 +13,3 @@ tags:
     <div id="react-form-root">{% ReactFormHtml /%}</div>
   </main>
   <script src="{% Webpack asset="main.js" /%}"></script>
-{% /Layout %}

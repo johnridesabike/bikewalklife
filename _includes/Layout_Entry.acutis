@@ -5,8 +5,8 @@
    build
    page
    collections
-   data={
-    title,
+   title
+   metadata={
     description: excerpt,
     author,
     isoDate,

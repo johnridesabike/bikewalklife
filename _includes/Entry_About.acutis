@@ -37,19 +37,18 @@
     {% /match %}
   </p>
   {% match strings with {contact_text} %}
-      <h2 class="entry-page__footer-heading"> Leave a comment </h2>
-      <div class="entry-page__about-content">{%raw contact_text %}</div>
-      <p class="entry-page__about-link">
-        {% match collections with {page_contact: [{url}]} %}
-          {% Link current=page href=url %}
-            Contact me
-            <span aria-hidden="true">
-              {% Icon name="arrow-right" class="icon" /%}
-            </span>
-          {% /Link %}
-        {% /match %}
-      </p>
-    </>
+    <h2 class="entry-page__footer-heading"> Leave a comment </h2>
+    <div class="entry-page__about-content">{%raw contact_text %}</div>
+    <p class="entry-page__about-link">
+      {% match collections with {page_contact: [{url}]} %}
+        {% Link current=page href=url %}
+          Contact me
+          <span aria-hidden="true">
+            {% Icon name="arrow-right" class="icon" /%}
+          </span>
+        {% /Link %}
+      {% /match %}
+    </p>
   {% /match %}
 </section>
 {% /match %}

@@ -2,7 +2,7 @@
 {% match
     config, collections
   with
-    {description, title, feed_url},
+    {description, title: title_site, feed_url},
     {
       page_index: [{url: url_index}],
       page_about: [{url: url_about, data: {title: title_about}}],
@@ -28,13 +28,17 @@
       href="{% Webpack asset /%}"
      />
   {% /map /match ~%}
-  {% Metadata config data page / %}
+  {%~ match metadata with null %}
+    {% Metadata config title metadata=null page / %}
+  {%~ with metadata ~%}
+    {% Metadata config title metadata page / %}
+  {% /match ~%}
   <link rel="stylesheet" href='{% Webpack asset="main.css" /%}' />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link
     rel="icon"
     type="image/png"
-    href='{% Favicon file="assets/images/nps-bicycle-trail.svg" /%}'
+    href='{% Favicon file="assets/images/nps-bicycle-trail.svg" width=32 /%}'
   />
   <link
     rel="alternate"
@@ -57,7 +61,7 @@
                 current=page
             ~%}
               {% Logo width=192 /%}
-              {% VisuallyHidden %} {{ title }} {% /VisuallyHidden ~%}
+              {% VisuallyHidden %} {{ title_site }} {% /VisuallyHidden ~%}
             {%~ /Link %}
           </h1>
           <p class="header__description"> {{ description }} </p>

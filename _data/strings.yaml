@@ -1,12 +1,12 @@
 ---
 open_linked: Open linked page
 archive_link: View the archive
-footer: "<p>Copyright © 2020</p>"
+footer: "<p>Copyright © 2020 John Jackson</p>"
 contact_text: "<p>This blog doesn’t have comments, but I would still be
   delighted to hear your thoughts. You can email me tips, questions,
   concerns, or just say “hi.”</p>"
 email: info@forestry.io
-subscribe_feed_cta: "Use this link to subscribe in your favorite newsreader.
-  (<a href=\"https://aboutfeeds.com/\">What's this?</a>)"
+subscribe_feed_cta: 'Use this link to subscribe in your favorite newsreader.
+  (<a href="https://aboutfeeds.com/">What''s this?</a>)'
 subscribe_email_cta: "Subscribe to receive updates in your email inbox. You will
   get a summary of new posts once per week."

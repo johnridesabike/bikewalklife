@@ -3,6 +3,7 @@ const yaml = require("js-yaml");
 const markdownIt = require("markdown-it");
 const mdItImplicitFigures = require("markdown-it-implicit-figures");
 const acutis = require("./eleventyAcutis");
+const htmlmin = require("html-minifier");
 
 const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
 
@@ -47,7 +48,22 @@ module.exports = (eleventyConfig) => {
       linkify: true,
     }).use(mdItImplicitFigures, { figcaption: true })
   );
-
+  if (process.env.ELEVENTY_ENV === "production") {
+    eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+      // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+      if (outputPath.endsWith(".html")) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true,
+          minifyCSS: true,
+        });
+        return minified;
+      } else {
+        return content;
+      }
+    });
+  }
   eleventyConfig.setBrowserSyncConfig({
     ...eleventyConfig.browserSyncConfig,
     // Reload when manifest file changes

@@ -1,4 +1,4 @@
-{% Layout data={title} config strings build page collections %}
+{% Layout title config strings build page collections %}
   <main>
     <h1> {{ title }} </h1>
     {% match image_large with {image, alt} %}
