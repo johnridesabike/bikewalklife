@@ -52,18 +52,15 @@
       <a class="skip-nav" href="#content"> Skip to content. </a>
       <header class="ui-font header__wrapper">
         <div class="small-screen-padding header">
-          <h1 class="header__title reading-font">
-            {% Link
-                class="header__title-link"
-                href=url_index
-                activeClassName=""
-                tabIndex=-1
-                current=page
-            ~%}
-              {% Logo width=192 /%}
-              {% VisuallyHidden %} {{ title_site }} {% /VisuallyHidden ~%}
-            {%~ /Link %}
-          </h1>
+          {% match tags with ["page_index"] %}
+            <h1 class="header__title reading-font">
+              {% Logo url_index page title_site /%}
+            </h1>
+          {% with _ %}
+            <p class="header__title reading-font">
+              {% Logo url_index page title_site /%}
+            </p>
+          {% /match %}
           <p class="header__description"> {{ description }} </p>
           <nav aria-label="main navigation">
             <ul class="menu__list">

@@ -20,14 +20,14 @@
   {% /match %}
   <div class="entry__body">
     <header class="entry__header">
-      <h1 class="p-name entry__title">
+      <{{ h }} class="p-name entry__title">
         {% match linkedHeader
            with true %}
            {% Link href=url class="entry__header-link" %} {{ title }} {% /Link %}
         {% with false %}
           {{ title }}
         {% /match %}
-      </h1>
+      </{{ h }}>
       {% Entry_Date date=dateString isoDate / %}
       {% Entry_Author name=author / %}
       {% match draft with true %} {% Entry_DraftNotice /%}

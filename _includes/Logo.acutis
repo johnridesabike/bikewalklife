@@ -1,26 +1,35 @@
-<!-- Logo --> {* Use CSS classnames for colors so variables are processed by postcss. *}
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 128 48"
-  aria-hidden="true"
-  width="{{ width }}"
->
-  <title id="logo-title">Bike Walk Life</title>
-  <desc>Bike Walk Life site logo.</desc>
-  <g class="sans-serif" style="font-size: 24px; font-weight: 400">
-    <text x="6" y="24" class="color-primary-dark" fill="currentColor">
-      Bike
-    </text>
-    <text x="26" y="45" class="color-primary" fill="currentColor">Walk</text>
-    <text
-      x="78"
-      y="45"
-      class="color-secondary"
-      fill="currentColor"
-      style="font-style: italic"
-    >
-      Life
-    </text>
-  </g>
-</svg>
-<!-- /Logo -->
+{% Link
+  class="header__title-link"
+  href=url_index
+  activeClassName=""
+  tabIndex=-1
+  current=page
+~%}
+  <!-- Logo --> {* Use CSS classnames for colors so variables are processed by postcss. *}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 128 48"
+    aria-hidden="true"
+    width="192"
+  >
+    <title id="logo-title">Bike Walk Life</title>
+    <desc>Bike Walk Life site logo.</desc>
+    <g class="sans-serif" style="font-size: 24px; font-weight: 400">
+      <text x="6" y="24" class="color-primary-dark" fill="currentColor">
+        Bike
+      </text>
+      <text x="26" y="45" class="color-primary" fill="currentColor">Walk</text>
+      <text
+        x="78"
+        y="45"
+        class="color-secondary"
+        fill="currentColor"
+        style="font-style: italic"
+      >
+        Life
+      </text>
+    </g>
+  </svg>
+  <!-- /Logo -->
+  {% VisuallyHidden %} {{ title_site }} {% /VisuallyHidden ~%}
+{%~ /Link %}

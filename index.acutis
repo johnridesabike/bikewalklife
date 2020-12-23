@@ -36,6 +36,7 @@ layout: Layout.acutis
         dateString
         draft
         class=""
+        h="h2"
         Footer=#%}
           <footer>
             {% match external_link

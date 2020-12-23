@@ -26,6 +26,7 @@
      dateString
      draft
      class=""
+     h="h1"
      Footer=#%}
       <footer class="entry-page__footer">
         {% match external_link with null %} {* nothing! *}
