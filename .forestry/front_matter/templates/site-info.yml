@@ -49,3 +49,5 @@ fields:
     required: false
   label: Author name
   description: The name of the site’s primary author.
+pages:
+- _data/config.json
