@@ -67,5 +67,12 @@ fields:
       the <em>alternate text</em>. (This isn't being used.)
   label: Image (small)
   description: A small image to appear below posts.
+- name: layout
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: Layout
+  default: Layout_About.acutis
 pages:
-- content/pages/about.md
+- about.md

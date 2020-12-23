@@ -57,5 +57,3 @@ fields:
     wysiwyg: true
     schema:
       format: html
-pages:
-- content/data/strings.yaml

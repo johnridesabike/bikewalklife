@@ -38,5 +38,16 @@ fields:
   config:
     required: false
   label: Twitter handle, used for preview cards
+- name: cloudinary_url
+  type: text
+  config:
+    required: true
+  label: Cloudinary URL
+- name: author_name
+  type: text
+  config:
+    required: false
+  label: Author name
+  description: The name of the site’s primary author.
 pages:
-- config.json
+- _data/config.json
