@@ -9,3 +9,5 @@ fields:
     min: 
     max: 
   label: Authors
+pages:
+- _data/authors.yaml
