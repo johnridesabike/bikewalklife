@@ -67,5 +67,3 @@ fields:
       the <em>alternate text</em>. (This isn't being used.)
   label: Image (small)
   description: A small image to appear below posts.
-pages:
-- content/pages/about.md

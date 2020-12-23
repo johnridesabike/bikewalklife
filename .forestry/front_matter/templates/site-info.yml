@@ -38,5 +38,3 @@ fields:
   config:
     required: false
   label: Twitter handle, used for preview cards
-pages:
-- config.json
