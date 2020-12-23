@@ -15,10 +15,10 @@ fields:
     required: true
     options: []
     source:
-      type: documents
-      section: author-list
+      type: pages
+      section: author-list-23c89be9-09df-4637-a733-0b725ac47ad4
       file: content/data/authors.yaml
-      path: authors
+      path: ''
   label: Author
   description: Enter author of post
 - name: date
