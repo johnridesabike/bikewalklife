@@ -10,10 +10,10 @@ module Spread = {
 
 module Netlify = {
   @react.component
-  let make = (~name, ~honeypot, ~className="", ~onSubmit, ~children) =>
+  let make = (~formName, ~honeypot, ~className, ~onSubmit, ~children) =>
     <Spread props={"data-netlify": true, "data-netlify-honeypot": honeypot}>
-      <form className onSubmit name>
-        <input type_="hidden" name="form-name" value=name />
+      <form className onSubmit name=formName>
+        <input type_="hidden" name="form-name" value=formName />
         <div ariaHidden=true>
           <VisuallyHidden>
             <label>
@@ -31,7 +31,6 @@ module Form = %form(
     name: string,
     email: string,
     message: string,
-    \"form-name": string,
   }
 
   type output = input
@@ -39,31 +38,27 @@ module Form = %form(
   let validators = {
     name: {
       strategy: OnFirstBlur,
-      validate: ({name, _}) =>
-        switch name {
+      validate: x =>
+        switch x.name {
         | "" => Error("Name is required.")
         | name => Ok(name)
         },
     },
     email: {
       strategy: OnFirstBlur,
-      validate: ({email, _}) =>
-        switch email {
+      validate: x =>
+        switch x.email {
         | "" => Error("Email is required.")
         | email => Ok(email)
         },
     },
     message: {
       strategy: OnFirstBlur,
-      validate: ({message, _}) =>
-        switch message {
+      validate: x =>
+        switch x.message {
         | "" => Error("Message is required.")
         | message => Ok(message)
         },
-    },
-    \"form-name": {
-      strategy: OnSubmit,
-      validate: ({\"form-name", _}) => Ok(\"form-name"),
     },
   }
 )
@@ -74,19 +69,18 @@ module Form = %form(
 @val
 external encodeURIComponent: string => string = "encodeURIComponent"
 
-let encode = ({name, email, message, \"form-name"}: Form.output) => {
-  let e = encodeURIComponent
-  [("name", name), ("email", email), ("message", message), ("form-name", \"form-name")]
-  ->Belt.Array.map(((key, value)) => e(key) ++ "=" ++ e(value))
+let encode = ({name, email, message}: Form.output, ~formName) =>
+  [("name", name), ("email", email), ("message", message), ("form-name", formName)]
+  ->Belt.Array.mapU((. (key, value)) => encodeURIComponent(key) ++ "=" ++ encodeURIComponent(value))
   ->Js.Array2.joinWith("&")
-}
 
 let initialInput: Form.input = {
   name: "",
   email: "",
   message: "",
-  \"form-name": "contact",
 }
+
+let formName = "contact"
 
 @react.component
 let make = () => {
@@ -98,21 +92,23 @@ let make = () => {
         ~headers=Fetch.HeadersInit.make({
           "Content-Type": "application/x-www-form-urlencoded",
         }),
-        ~body=Fetch.BodyInit.make(encode(output)),
+        ~body=Fetch.BodyInit.make(encode(output, ~formName)),
         (),
       ),
     )
-    ->Promise.Js.fromBsPromise
-    ->Promise.Js.toResult
-    ->Promise.tapOk(_ => callback.notifyOnSuccess(Some(initialInput)))
-    ->Promise.tapError(x => {
+    |> Js.Promise.then_(x => {
+      callback.notifyOnSuccess(Some(initialInput))
+      Js.Promise.resolve(x)
+    })
+    |> Js.Promise.catch(x => {
       callback.notifyOnFailure()
       Js.Console.error(x)
+      Js.Promise.reject(Failure(Js.String.make(x)))
     })
-    ->ignore
+    |> ignore
   )
   <Netlify
-    name="contact"
+    formName
     honeypot="honeypot"
     className="contact-form"
     onSubmit={event => {

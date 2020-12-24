@@ -22,12 +22,7 @@
   ],
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": [
-    "reason-react",
-    "reason-promise",
-    "re-formality",
-    "bs-fetch"
-  ],
+  "bs-dependencies": ["reason-react", "re-formality", "bs-fetch"],
   "ppx-flags": ["re-formality/ppx"],
   "refmt": 3,
   "warnings": {
