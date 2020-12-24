@@ -1,5 +1,6 @@
 @import "normalize.css";
-@import "fontsource-cooper-hewitt/all-400.css";
+@import "@fontsource/cooper-hewitt/400.css";
+@import "@fontsource/cooper-hewitt/400-italic.css";
 @import "charter-webfont";
 
 :root {
@@ -99,6 +100,8 @@ input[type="email"] {
   border: 1px solid var(--color-primary);
 }
 
+input[type="text"],
+input[type="email"],
 input {
   font-family: var(--font-ui);
 }
