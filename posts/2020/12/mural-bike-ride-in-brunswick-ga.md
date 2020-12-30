@@ -24,6 +24,6 @@ On January 17, local riders in Brunswick, GA will host a ride around town to see
 
 I don't have any affiliation with this event, but I love the idea of it. It seems like a great way to build a community around the joy of riding bicycles.
 
-An unfortunate side-effect of our pandemic era is that many community and cultural activities have been restricted to car drivers. From drive-throughs to curbside services, bicycle riders and pedestrians have been sidelined. But this isn't because picking up your food in a car is safer than on foot, it's an accident of our car-centric infrastructure. It's time we offered activities for non-drivers too.
+An unfortunate side-effect of our pandemic era is that many community and cultural activities have been restricted to car drivers. From drive-throughs to curbside services, we've sidelined bicycle riders and pedestrians. But this isn't because picking up your food in a car is necessarily safer than on foot. This is an accident of our car-centric infrastructure. It's about time we offered activities for non-drivers too.
 
 Many people (including myself) go out and ride bicycles together for the sake of riding bicycles. That's great, but I think it's also important to have events with a bigger purpose beyond just the riding.
