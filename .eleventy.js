@@ -58,7 +58,7 @@ module.exports = (eleventyConfig) => {
   if (process.env.ELEVENTY_ENV === "production") {
     eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
       // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-      if (outputPath.endsWith(".html")) {
+      if (outputPath && outputPath.endsWith(".html")) {
         let minified = htmlmin.minify(content, {
           useShortDoctype: true,
           removeComments: true,
