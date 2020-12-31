@@ -53,6 +53,7 @@ module.exports = (eleventyConfig) => {
       html: true,
       breaks: false,
       linkify: true,
+      typographer: true,
     }).use(mdImages)
   );
   if (process.env.ELEVENTY_ENV === "production") {
