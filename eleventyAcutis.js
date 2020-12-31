@@ -1,6 +1,6 @@
 const fs = require("fs/promises");
 const path = require("path");
-const { compile, renderContextAsync, makeAst } = require("acutis-lang");
+const { Compile, Environment } = require("acutis-lang");
 const { loadTemplate, filenameToComponent } = require("acutis-lang/node-utils");
 const fastGlob = require("fast-glob");
 const { icons } = require("feather-icons");
@@ -8,45 +8,50 @@ const { cloudinary_url } = require("./_data/config.json");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = (eleventyConfig) => {
-  const Icon = (render, props, children) =>
-    render(
-      makeAst("{% raw x %}", "Icon"),
-      { x: icons[props.name].toSvg({ class: props.class || "" }) },
-      children
+  const Icon = (env, props, _children) =>
+    env.return(icons[props.name].toSvg({ class: props.class || "" }));
+
+  const SitemapDateFormat = (env, props, _children) =>
+    env.return(
+      props.date.toLocaleString("en-US", {
+        year: "numeric",
+        timeZone: "America/New_York",
+      }) +
+        "-" +
+        props.date.toLocaleString("en-US", {
+          month: "2-digit",
+          timeZone: "America/New_York",
+        }) +
+        "-" +
+        String(
+          props.date.toLocaleString("en-US", {
+            day: "2-digit",
+            timeZone: "America/New_York",
+          })
+        )
     );
 
-  const SitemapDateFormat = (render, { date }, children) =>
-    render(
-      makeAst("{{ x }}", "SitemapDateFormat"),
-      { x: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}` },
-      children
-    );
-
-  const Log = (render, props, children) => {
+  const Log = (env, props, _children) => {
     console.log(props);
-    return render(makeAst("", "Log"), props, children);
+    return env.return("");
   };
 
   const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
 
-  const Webpack = (render, props, children) =>
+  const Webpack = (env, props, _children) =>
     fs.readFile(manifestPath, { encoding: "utf8" }).then((data) => {
       const x = JSON.parse(data)[props.asset];
       if (x) {
-        return render(makeAst(`{{ x }}`, "Webpack"), { x: x }, children);
+        return env.return(x);
       } else {
-        throw new Error(`${props.name} doesn't exist in the manifest.`);
+        return env.error(`${props.asset} doesn't exist in the manifest.`);
       }
     });
 
-  const AbsoluteUrl = (render, { url, base }, children) =>
-    render(
-      makeAst("{{ x }}", "AbsoluteUrl"),
-      { x: new URL(url, base).href },
-      children
-    );
+  const AbsoluteUrl = (env, props, _children) =>
+    env.return(new URL(props.url, props.base).href);
 
-  const linkAst = makeAst(
+  const linkAst = Compile.makeAst(
     `<a
   href={{ href }}
   class="{{ class }} {{ activeClassName}} "
@@ -67,7 +72,7 @@ module.exports = (eleventyConfig) => {
     "Link"
   );
 
-  const Link = (render, props, children) => {
+  const Link = (env, props, children) => {
     const current = props.current && props.current.url === props.href;
     let activeClassName;
     if (current) {
@@ -79,7 +84,7 @@ module.exports = (eleventyConfig) => {
     } else {
       activeClassName = "";
     }
-    return render(
+    return env.render(
       linkAst,
       {
         href: props.href || null,
@@ -93,7 +98,7 @@ module.exports = (eleventyConfig) => {
     );
   };
 
-  const relatedAst = makeAst(
+  const relatedAst = Compile.makeAst(
     `
 {% match related
   with [] %}
@@ -118,7 +123,7 @@ module.exports = (eleventyConfig) => {
     "Related"
   );
 
-  const Related = (render, props, children) => {
+  const Related = (env, props, children) => {
     const set = new Set();
     for (tag of props.tags) {
       for (item of props.collections[tag]) {
@@ -131,7 +136,7 @@ module.exports = (eleventyConfig) => {
         }
       }
     }
-    return render(
+    return env.render(
       relatedAst,
       {
         related: Array.from(set)
@@ -144,19 +149,11 @@ module.exports = (eleventyConfig) => {
 
   const contactForm = require("./assets/contact-form-server");
 
-  const ReactFormHtml = (render, _props, children) =>
-    render(
-      makeAst("{% raw x %}", "ReactFormHtml"),
-      { x: contactForm.render() },
-      children
-    );
+  const ReactFormHtml = (env, _props, _children) =>
+    env.return(contactForm.render());
 
-  const imgSrcAst = makeAst(
-    "{{ cloudinary_url }}{{ opts }}{{image }}",
-    "ImgSrc"
-  );
-
-  const ImgSrc = (render, { height, width, image, gravity }, children) => {
+  const ImgSrc = (env, props, _children) => {
+    const { height, width, gravity, image } = props;
     const opts =
       "/" +
       encodeURIComponent(
@@ -167,22 +164,18 @@ module.exports = (eleventyConfig) => {
           `h_${height},` +
           `w_${width}`
       );
-    return render(imgSrcAst, { opts, image, cloudinary_url }, children);
+    return env.return(cloudinary_url + opts + image);
   };
 
-  const faviconAst = makeAst("{{ x }}", "Favicon");
-
-  const Favicon = (render, { file, width }, children) =>
-    Image(path.join(__dirname, file), {
-      widths: [width],
+  const Favicon = (env, props, _children) =>
+    Image(path.join(__dirname, props.file), {
+      widths: [props.width],
       formats: ["png"],
       urlPath: "/",
       outputDir: path.join(__dirname, "_site"),
       filenameFormat: (_id, _src, width, format, _options) =>
         `favicon-${width}.${format}`,
-    }).then((metadata) =>
-      render(faviconAst, { x: metadata.png[0].url }, children)
-    );
+    }).then((metadata) => env.return(metadata.png[0].url));
 
   const templates = {
     Icon,
@@ -204,7 +197,7 @@ module.exports = (eleventyConfig) => {
       }
     })
   );
-  let render = renderContextAsync(templates);
+  let env = Environment.Async.make(templates);
   eleventyConfig.addTemplateFormats("acutis");
   eleventyConfig.addExtension("acutis", {
     read: true,
@@ -222,14 +215,14 @@ module.exports = (eleventyConfig) => {
               .catch((e) => console.warn(e.message))
           )
         ).then(() => {
-          render = renderContextAsync(templates);
+          env = Environment.Async.make(templates);
         })
       ),
     compile: (src, inputPath) => (props) => {
-      const template = compile(src, inputPath);
-      return template(render, props, {}).then(({ NAME, VAL }) => {
+      const template = Compile.make(src, inputPath);
+      return template(env, props, {}).then(({ NAME, VAL }) => {
         if (NAME === "errors") {
-          console.table(VAL);
+          console.error(VAL);
           throw new Error(`Error with ${props.permalink}`);
         } else {
           return VAL;
