@@ -4,8 +4,8 @@ const { Compile, Environment } = require("acutis-lang");
 const { loadTemplate, filenameToComponent } = require("acutis-lang/node-utils");
 const fastGlob = require("fast-glob");
 const { icons } = require("feather-icons");
-const { cloudinary_url } = require("./_data/config.json");
 const Image = require("@11ty/eleventy-img");
+const { cloudinary_url } = require("./_data/config.json");
 
 module.exports = (eleventyConfig) => {
   const Icon = (env, props, _children) =>
@@ -23,12 +23,10 @@ module.exports = (eleventyConfig) => {
           timeZone: "America/New_York",
         }) +
         "-" +
-        String(
-          props.date.toLocaleString("en-US", {
-            day: "2-digit",
-            timeZone: "America/New_York",
-          })
-        )
+        props.date.toLocaleString("en-US", {
+          day: "2-digit",
+          timeZone: "America/New_York",
+        })
     );
 
   const Log = (env, props, _children) => {
@@ -198,13 +196,14 @@ module.exports = (eleventyConfig) => {
     })
   );
   let env = Environment.Async.make(templates);
+  let cache = {};
   eleventyConfig.addTemplateFormats("acutis");
   eleventyConfig.addExtension("acutis", {
     read: true,
     data: true,
     init: () =>
-      fastGlob("./_includes/**/*.acutis").then((files) =>
-        Promise.all(
+      fastGlob("./_includes/**/*.acutis")
+        .then((files) =>
           files.map((fileName) =>
             loadTemplate(fileName)
               .then((file) => {
@@ -214,12 +213,19 @@ module.exports = (eleventyConfig) => {
               })
               .catch((e) => console.warn(e.message))
           )
-        ).then(() => {
+        )
+        .then((files) => Promise.all(files))
+        .then(() => {
           env = Environment.Async.make(templates);
-        })
-      ),
+          cache = {};
+        }),
     compile: (src, inputPath) => (props) => {
-      const template = Compile.make(src, inputPath);
+      // I hope caching this doesn't break anything! This isn't a performance
+      // bottleneck but *seems* like it can't hurt.
+      if (!(inputPath in cache)) {
+        cache[inputPath] = Compile.make(src, inputPath);
+      }
+      const template = cache[inputPath];
       return template(env, props, {}).then(({ NAME, VAL }) => {
         if (NAME === "errors") {
           console.error(VAL);
