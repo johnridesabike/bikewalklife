@@ -11,26 +11,37 @@ const isVisible = (data, { yes, no }) => {
   }
 };
 
+/*
+ For some reason the live preview on Forestry messes up Eleventy's dates.
+ This does some checks to "fix" it.
+*/
+
 module.exports = {
   layout: "Layout_Entry.acutis",
   eleventyComputed: {
     isoDate: (data) => {
-      try {
+      if (typeof data.date === "string") {
+        console.warn("DATE WASN'T PARSED CORRECTLY", data.date);
+        return new Date(data.date).toISOString();
+      } else {
         return data.date.toISOString();
-      } catch (e) {
-        console.error("ERROR WITH DATE");
-        console.error(data.date);
-        console.error(e);
-        return "ERROR";
       }
     },
-    dateString: (data) =>
-      data.date.toLocaleString("en-US", {
+    dateString: (data) => {
+      let date;
+      if (typeof data.date === "string") {
+        console.warn("DATE WASN'T PARSED CORRECTLY", data.date);
+        date = new Date(data.date);
+      } else {
+        date = data.date;
+      }
+      return date.toLocaleString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
         timeZone: "America/New_York",
-      }),
+      });
+    },
     hero_image: (data) => {
       if (data.hero_image && data.hero_image.image !== "") {
         return data.hero_image;
