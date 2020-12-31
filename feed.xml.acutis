@@ -1,7 +1,3 @@
----
-permalink: "{% match config with {feed_url} %}{%raw feed_url %}{% /match %}"
-eleventyExcludeFromCollections: true
----
 {%~ match config, page with {title, description, site_url, author_name}, {url} ~%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">

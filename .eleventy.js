@@ -60,13 +60,12 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
       // Eleventy 1.0+: use this.inputPath and this.outputPath instead
       if (outputPath && outputPath.endsWith(".html")) {
-        let minified = htmlmin.minify(content, {
+        return htmlmin.minify(content, {
           useShortDoctype: true,
           removeComments: true,
           collapseWhitespace: true,
           minifyCSS: true,
         });
-        return minified;
       } else {
         return content;
       }
@@ -93,9 +92,9 @@ module.exports = (eleventyConfig) => {
     // You can also pass this in on the command line using `--pathprefix`
     // pathPrefix: "/",
 
-    markdownTemplateEngine: "acutis",
-    htmlTemplateEngine: "acutis",
-    dataTemplateEngine: "acutis",
+    markdownTemplateEngine: false,
+    htmlTemplateEngine: false,
+    dataTemplateEngine: false,
 
     // These are all optional, defaults are shown:
     dir: {
