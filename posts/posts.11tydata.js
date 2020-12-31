@@ -14,7 +14,16 @@ const isVisible = (data, { yes, no }) => {
 module.exports = {
   layout: "Layout_Entry.acutis",
   eleventyComputed: {
-    isoDate: (data) => data.date.toJSON(),
+    isoDate: (data) => {
+      try {
+        return data.date.toISOString();
+      } catch (e) {
+        console.error("ERROR WITH DATE");
+        console.error(data.date);
+        console.error(e);
+        return "ERROR";
+      }
+    },
     dateString: (data) =>
       data.date.toLocaleString("en-US", {
         year: "numeric",
