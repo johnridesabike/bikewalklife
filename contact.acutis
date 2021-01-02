@@ -36,12 +36,10 @@ metdata: null
         color: var(--color-secondary);
       }
 
-      .contact-form__input {
-        font-family: var(--font-ui);
-      }
-
+      .contact-form__input,
       .contact-form__message {
         font-family: var(--font-ui);
+        font-size: var(--font-size-md);
       }
     {%~ /Css ~%}
     </style>
