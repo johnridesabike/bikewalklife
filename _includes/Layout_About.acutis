@@ -1,4 +1,39 @@
-{% Layout title config strings build page collections %}
+{% Layout
+    title
+    config
+    strings
+    build
+    page
+    collections
+    Head=#%}
+      <style>
+      {%~ Css %}
+        .about__intro {
+          font-size: var(--font-size-lg);
+        }
+
+        .about__photo-wrapper {
+          padding: 0 1em;
+          margin: auto;
+          text-align: center;
+        }
+
+        .about__photo {
+          border-radius: 50%;
+          overflow: hidden;
+          border: 1px solid var(--color-primary-dark);
+          box-shadow: 0 0 4px var(--color-primary-dark);
+        }
+
+        @media screen and (--tablet-portrait-up) {
+          .about__photo {
+            float: right;
+          }
+        };
+      {% /Css ~%}
+      </style>
+    {%/#
+%}
   <main>
     <h1> {{ title }} </h1>
     {% match image_large with {image, alt} %}

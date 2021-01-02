@@ -3,8 +3,16 @@ title: Search
 tags:
 - page_search
 metadata: null
-layout: Layout.acutis
 ---
+{% Layout
+  title
+  config
+  strings
+  build
+  page
+  collections
+  Head=#/#
+%}
 <main style="margin: 3em 0;">
   <h1 style="text-align: center;"> Search </h1>
   <iframe
@@ -23,3 +31,4 @@ layout: Layout.acutis
     "
   ></iframe>
 </main>
+{% /Layout %}

@@ -33,7 +33,7 @@
   {%~ with metadata ~%}
     {% Metadata config title metadata page / %}
   {% /match ~%}
-  <link rel="stylesheet" href='{% Webpack asset="main.css" /%}' />
+  <link rel="stylesheet" href='{% Webpack asset="style.css" /%}' />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link
     rel="icon"
@@ -46,6 +46,7 @@
     title="Bike Walk Life"
     href="{{ feed_url }}"
   />
+  {{ Head }}
   </head>
   <body>
     <div class="page">

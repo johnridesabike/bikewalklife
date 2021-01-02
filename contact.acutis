@@ -3,8 +3,50 @@ title: Contact
 tags:
 - page_contact
 metdata: null
-layout: Layout.acutis
 ---
+{% Layout
+  title
+  config
+  strings
+  build
+  page
+  collections
+  Head=#%}
+    <style>
+    {%~ Css ~%}
+      .contact-form {
+        font-family: var(--font-ui);
+      }
+
+      .contact-form__input-wrapper {
+        margin-bottom: 1em;
+      }
+
+      .contact-form__label-wrapper {
+        display: flex;
+        font-size: var(--font-size-sm);
+        opacity: 0.9;
+      }
+
+      .contact-form__label {
+        margin-right: 1em;
+      }
+
+      .contact-form__error {
+        color: var(--color-secondary);
+      }
+
+      .contact-form__input {
+        font-family: var(--font-ui);
+      }
+
+      .contact-form__message {
+        font-family: var(--font-ui);
+      }
+    {%~ /Css ~%}
+    </style>
+  {%/#
+%}
   <main>
     <h1> Contact </h1>
     {% match strings with {contact_text} %}
@@ -12,4 +54,5 @@ layout: Layout.acutis
     {% /match %}
     <div id="react-form-root">{% ReactFormHtml /%}</div>
   </main>
-  <script src="{% Webpack asset="main.js" /%}"></script>
+  <script src="{% Webpack asset="contact.js" /%}"></script>
+{% /Layout %}

@@ -5,9 +5,29 @@ const { loadTemplate, filenameToComponent } = require("acutis-lang/node-utils");
 const fastGlob = require("fast-glob");
 const { icons } = require("feather-icons");
 const Image = require("@11ty/eleventy-img");
+const postcss = require("postcss");
+const postcssPresetEnv = require("postcss-preset-env");
+const postcssCustomMedia = require("postcss-custom-media");
 const { cloudinary_url } = require("./_data/config.json");
 
 module.exports = (eleventyConfig) => {
+  const cssVariables = path.resolve(__dirname, "assets", "variables.css");
+  const cssMedia = path.resolve(__dirname, "assets", "custom-media.css");
+  const postcssWithOptions = postcss([
+    postcssPresetEnv({ importFrom: cssVariables }),
+    postcssCustomMedia({ importFrom: cssMedia }),
+  ]);
+
+  const Css = (env, _props, { Children }) => {
+    if (Children) {
+      return env.flatMapChild(Children, (content) =>
+        postcssWithOptions.process(content).then(env.return)
+      );
+    } else {
+      return env.error("Css requires a stylesheet as children.");
+    }
+  };
+
   const Icon = (env, props, _children) =>
     env.return(icons[props.name].toSvg({ class: props.class || "" }));
 
@@ -186,6 +206,7 @@ module.exports = (eleventyConfig) => {
     ImgSrc,
     AbsoluteUrl,
     Favicon,
+    Css,
   };
   // Remove stale cache.
   eleventyConfig.on("beforeWatch", (files) =>

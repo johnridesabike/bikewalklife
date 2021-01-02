@@ -2,9 +2,27 @@
 title: ''
 tags:
 - page_index
-metadata: null
-layout: Layout.acutis
 ---
+{% Layout
+  config
+  strings
+  build
+  page
+  collections
+  title
+  metadata=null
+  Head=#%}
+    <style>
+    {%~ Css ~%}
+      .index-page__archive-link {
+        font-family: var(--font-ui);
+        font-size: var(--font-size-lg);
+        text-align: center;
+      }
+    {%~ /Css ~%}
+    </style>
+  {%/#
+%}
 <main>
   {% match collections with {frontPage}
      map frontPage with
@@ -73,3 +91,4 @@ layout: Layout.acutis
 </nav>
 <hr class="separator" />
 <aside> {% Subscribe config strings class="" /%} </aside>
+{% /Layout %}

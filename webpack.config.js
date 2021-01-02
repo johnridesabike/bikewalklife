@@ -5,6 +5,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
 const isDev = process.env.NODE_ENV !== "production";
+const cssVariables = path.resolve(__dirname, "assets", "variables.css");
+const cssMedia = path.resolve(__dirname, "assets", "custom-media.css");
 
 module.exports = {
   mode: isDev ? "development" : "production",
@@ -17,13 +19,13 @@ module.exports = {
   // `All values enable source map generation except eval and false value.`
   // https://github.com/webpack-contrib/css-loader
   devtool: isDev ? "cheap-module-source-map" : "source-map",
-  entry: [
-    path.resolve(__dirname, "assets/contact-form-client.mjs"),
-    path.resolve(__dirname, "assets/style.css"),
-  ],
+  entry: {
+    contact: path.resolve(__dirname, "assets", "contact-form-client.mjs"),
+    style: path.resolve(__dirname, "assets", "style.css"),
+  },
   output: {
     filename: isDev ? "[name].js" : "[name].[contenthash].js",
-    path: path.resolve(__dirname, "_site/assets"),
+    path: path.resolve(__dirname, "_site", "assets"),
     publicPath: "/assets/",
   },
   plugins: [
@@ -53,7 +55,23 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: ["postcss-preset-env", "postcss-custom-media"],
+                plugins: [
+                  [
+                    "postcss-preset-env",
+                    {
+                      importFrom: cssVariables,
+                    },
+                  ],
+                  /* The postcss-custom-media built in with postcss-preset-env
+                     doesn't work. */
+                  [
+                    "postcss-custom-media",
+                    {
+                      importFrom: cssMedia,
+                    },
+                  ],
+                  "postcss-normalize",
+                ],
               },
             },
           },

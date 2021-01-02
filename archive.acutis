@@ -6,9 +6,56 @@ pagination:
   alias: posts
 tags:
 - page_archive
-metadata: null
-layout: Layout.acutis
 ---
+{% Layout
+  title
+  config
+  strings
+  build
+  page
+  collections
+  Head=#%}
+    <style>
+    {%~ Css ~%}
+      .archive__page-title {
+        text-align: center;
+      }
+
+      .archive__entry {
+        margin: 1em 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-family: var(--font-ui);
+        margin-bottom: 1.5em;
+      }
+
+      .archive__entry-title {
+        font-size: var(--font-size-lg);
+        line-height: 1.25;
+        font-family: var(--font-sans-serif);
+        flex-basis: 100%;
+        margin-bottom: 0.5em;
+      }
+
+      .archive__nav-title {
+        text-align: center;
+        font-family: var(--font-ui);
+        color: var(--color-secondary);
+      }
+
+      .archive__nav {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .archive__entry .entry__link {
+        font-size: var(--font-size-sm);
+      }
+    {%~ /Css ~%}
+    </style>
+  {%/#
+%}
 <main>
   <h1 class="archive__page-title"> {{ title }} </h1>
   {% map posts with
@@ -71,3 +118,4 @@ layout: Layout.acutis
     {% /match %}
   </div>
 </nav>
+{% /Layout %}

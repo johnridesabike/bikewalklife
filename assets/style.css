@@ -1,88 +1,15 @@
-@import "normalize.css";
+@import-normalize;
 @import "@fontsource/cooper-hewitt/400.css";
 @import "@fontsource/cooper-hewitt/400-italic.css";
 @import "charter-webfont";
-
-:root {
-  /**
-   * Typography
-   */
-  --font-sans-serif: "cooper hewitt", "helvetica neue", sans-serif;
-  --font-serif: "charter", serif;
-  --font-ui: -apple-system, blinkmacsystemfont, "segoe UI", roboto, oxygen-sans,
-    ubuntu, cantarell, "helvetica neue", sans-serif;
-  --font-pre: "courier 10 pitch", courier, monospace;
-  --font-base-size: 18px;
-  --font-base-size-mobile: 16px;
-  --font-size-xs: calc(1em / 1.25); /* 16 */
-  --font-size-sm: calc(1em / 1.125); /* 17.78 */
-  --font-size-md: calc(1em * 1); /* 20 */
-  --font-size-lg: calc(1em * 1.25); /* 25 */
-  --font-size-xl: calc(1em * 1.5); /* 30 */
-  --font-size-xxl: calc(1em * 1.75); /* 35 */
-  --letter-spacing-allcaps: 0.06em;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-
-  /**
-   * Layout
-   */
-  --width-site: 900px;
-  --width-content: 600px;
-  --column-margin: 3.8%;
-
-  /**
-   * Colors
-   * https://coolors.co/457b9d-7cc8cb-1d3557-da1b2b-f1faee
-   */
-  --color-background: #fff;
-  --color-text: #000;
-  --color-primary: #457b9d;
-  --color-primary-light: #7cc8cb;
-  --color-primary-dark: #1d3557;
-  --color-secondary: #da1b2b;
-  --color-secondary-light: #f1faee;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /**
-     * https://coolors.co/65a5cd-1d3557-d4eded-f76470-f1faee
-     */
-    --color-background: #282a36;
-    --color-text: #f8f8f2;
-    --color-primary: #65a5cd;
-    --color-primary-light: #1d3557; /* actually darker */
-    --color-primary-dark: #d4eded; /* actually lighter */
-    --color-secondary: #f76470;
-    --color-secondary-light: #f1faee;
-  }
-}
-
-/**
- * https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
- */
-
-@custom-media --phone-only (max-width: 600px);
-@custom-media --tablet-portrait-up (min-width: 600px);
-@custom-media --tablet-landscape-up (min-width: 900px);
-@custom-media --desktop-up (min-width: 1200px);
-@custom-media --desktop-big-up (min-width: 1800px);
+@import "./variables.css";
 
 /*******************************************************************************
  * Global Elements
  ******************************************************************************/
-
 html {
   font-size: var(--font-base-size);
   line-height: 1.50967;
-}
-
-@media screen and (--phone-only) {
-  html {
-    font-size: var(--font-base-size-mobile);
-    line-height: 1.58566;
-  }
 }
 
 body,
@@ -168,25 +95,6 @@ img {
   width: 100vw;
 }
 
-@media screen and (--tablet-portrait-up) {
-  .small-screen-padding,
-  .full-bleed {
-    margin: 0;
-  }
-
-  .full-bleed {
-    margin-left: calc(-100vw / 2 + 600px / 2);
-    margin-right: calc(-100vw / 2 + 600px / 2);
-  }
-}
-
-@media screen and (--tablet-landscape-up) {
-  .full-bleed {
-    width: 900px;
-    margin-left: -150px;
-  }
-}
-
 /*******************************************************************************
  * Typography
  ******************************************************************************/
@@ -213,16 +121,8 @@ img {
   font-size: var(--font-size-xl);
 }
 
-.font-size-large {
-  font-size: var(--font-size-lg);
-}
-
 .font-size-small {
   font-size: var(--font-size-sm);
-}
-
-.font-size-xsmall {
-  font-size: var(--font-size-xs);
 }
 
 /*******************************************************************************
@@ -377,75 +277,6 @@ img {
   clip: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  .header__wrapper {
-    box-shadow: 0 8px 4px -4px rgba(255, 255, 255, 0.125);
-  }
-
-  .footer__wrapper {
-    background-color: var(--color-primary-light);
-    box-shadow: 0 -4px 4px 0 rgba(255, 255, 255, 0.125),
-      /* Make the footer extend off the screen with this one weird trick. */ 0
-        50vh 0 50vh var(--color-primary-light);
-  }
-
-  .footer {
-    color: var(--color-primary-dark);
-  }
-
-  .footer a {
-    color: var(--color-primary-dark);
-  }
-}
-
-@media screen and (--tablet-portrait-up) {
-  .header__wrapper {
-    max-width: var(--width-site);
-    margin: auto;
-  }
-
-  .content,
-  .footer,
-  .header {
-    width: var(--width-content);
-    margin: auto;
-  }
-}
-
-/*******************************************************************************
- * Contact form
- ******************************************************************************/
-
-.contact-form {
-  font-family: var(--font-ui);
-}
-
-.contact-form__input-wrapper {
-  margin-bottom: 1em;
-}
-
-.contact-form__label-wrapper {
-  display: flex;
-  font-size: var(--font-size-sm);
-  opacity: 0.9;
-}
-
-.contact-form__label {
-  margin-right: 1em;
-}
-
-.contact-form__error {
-  color: var(--color-secondary);
-}
-
-.conatct-form__input {
-  font-family: var(--font-ui);
-}
-
-.contact-form__message {
-  font-family: var(--font-ui);
-}
-
 /*******************************************************************************
  * Entry
  ******************************************************************************/
@@ -515,154 +346,6 @@ img {
   color: var(--color-secondary);
 }
 
-@media screen and (--tablet-portrait-up) {
-  .entry__hero-image {
-    height: 450px;
-  }
-}
-
-/*******************************************************************************
- * Entry Page
- ******************************************************************************/
-
-.entry-page__footer,
-.entry-page__nav {
-  font-family: var(--font-ui);
-}
-
-.entry-page__about {
-  color: var(--color-primary-dark);
-  margin: 2em auto 0 auto;
-  padding: 0 1em;
-}
-
-.entry-page__about-content {
-  font-size: var(--font-size-sm);
-}
-
-.entry-page__about-link {
-  display: flex;
-  justify-content: flex-end;
-  font-size: var(--font-size-sm);
-}
-
-.entry-page__footer-heading {
-  text-align: center;
-  font-size: var(--font-size-lg);
-  color: var(--color-primary-dark);
-}
-
-.entry-page__recent-list,
-.entry-page__related-list {
-  padding: 0;
-  list-style: none;
-  font-size: var(--font-size-md);
-}
-
-.entry-page__recent-item,
-.entry-page__related-item {
-  margin-bottom: 0.5em;
-}
-
-.entry-page__recent-link {
-  display: flex;
-  align-items: center;
-}
-
-.entry-page__avatar-wrapper {
-  text-align: center;
-}
-
-.entry-page__avatar {
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--color-primary-dark);
-  box-shadow: 0 0 2px var(--color-primary-dark);
-}
-
-@media screen and (--tablet-portrait-up) {
-  .entry-page__recent-list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .entry-page__recent-item {
-    flex-basis: 47.5%;
-  }
-
-  .entry-page__recent-item:only-child {
-    flex-basis: 100%;
-  }
-
-  .entry-page__arrow {
-    flex-shrink: 0;
-  }
-
-  .entry-page__about-wrapper {
-    display: flex;
-  }
-
-  .entry-page__avatar-wrapper {
-    margin-right: 1em;
-  }
-}
-
-/*******************************************************************************
- * Index page
- ******************************************************************************/
-
-.index-page__keep-reading {
-  text-align: right;
-  font-size: var(--font-size-md);
-  font-family: var(--font-ui);
-}
-
-.index-page__archive-link {
-  font-family: var(--font-ui);
-  font-size: var(--font-size-lg);
-  text-align: center;
-}
-
-/*******************************************************************************
- * Archive
- ******************************************************************************/
-
-.archive__page-title {
-  text-align: center;
-}
-
-.archive__entry {
-  margin: 1em 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-family: var(--font-ui);
-  margin-bottom: 1.5em;
-}
-
-.archive__entry-title {
-  font-size: var(--font-size-lg);
-  line-height: 1.25;
-  font-family: var(--font-sans-serif);
-  flex-basis: 100%;
-  margin-bottom: 0.5em;
-}
-
-.archive__nav-title {
-  text-align: center;
-  font-family: var(--font-ui);
-  color: var(--color-secondary);
-}
-
-.archive__nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.archive__entry .entry__link {
-  font-size: var(--font-size-sm);
-}
-
 /*******************************************************************************
  * Subscribe component
  ******************************************************************************/
@@ -676,7 +359,65 @@ img {
   color: var(--color-primary-dark);
 }
 
+/*******************************************************************************
+ * Media queries
+ ******************************************************************************/
+
+@media (prefers-color-scheme: dark) {
+  .header__wrapper {
+    box-shadow: 0 8px 4px -4px rgba(255, 255, 255, 0.125);
+  }
+
+  .footer__wrapper {
+    background-color: var(--color-primary-light);
+    box-shadow: 0 -4px 4px 0 rgba(255, 255, 255, 0.125),
+      /* Make the footer extend off the screen with this one weird trick. */ 0
+        50vh 0 50vh var(--color-primary-light);
+  }
+
+  .footer {
+    color: var(--color-primary-dark);
+  }
+
+  .footer a {
+    color: var(--color-primary-dark);
+  }
+}
+
+@media screen and (--phone-only) {
+  html {
+    font-size: var(--font-base-size-mobile);
+    line-height: 1.58566;
+  }
+}
+
 @media screen and (--tablet-portrait-up) {
+  .small-screen-padding,
+  .full-bleed {
+    margin: 0;
+  }
+
+  .full-bleed {
+    margin-left: calc(-100vw / 2 + 600px / 2);
+    margin-right: calc(-100vw / 2 + 600px / 2);
+  }
+
+  .header__wrapper {
+    max-width: var(--width-site);
+    margin: auto;
+  }
+
+  .content,
+  .footer,
+  .header {
+    width: var(--width-content);
+    margin: auto;
+  }
+
+  .entry__hero-image {
+    height: 450px;
+  }
+
   .subscribe__list {
     display: flex;
     justify-content: center;
@@ -685,29 +426,9 @@ img {
   }
 }
 
-/*******************************************************************************
- * About page
- ******************************************************************************/
-
-.about__intro {
-  font-size: var(--font-size-lg);
-}
-
-.about__photo-wrapper {
-  padding: 0 1em;
-  margin: auto;
-  text-align: center;
-}
-
-.about__photo {
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--color-primary-dark);
-  box-shadow: 0 0 4px var(--color-primary-dark);
-}
-
-@media screen and (--tablet-portrait-up) {
-  .about__photo {
-    float: right;
+@media screen and (--tablet-landscape-up) {
+  .full-bleed {
+    width: 900px;
+    margin-left: -150px;
   }
 }
