@@ -49,6 +49,8 @@ module.exports = {
         return null;
       }
     },
+    external_link: (data) =>
+      data.external_link !== "" ? data.external_link : null,
     permalink: (data) =>
       isVisible(data, {
         yes: () =>

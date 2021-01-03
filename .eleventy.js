@@ -9,7 +9,27 @@ const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
 function mdImages(md, _ops) {
   const defaultRender = md.renderer.rules.image;
   md.renderer.rules.image = (tokens, idx, options, env, self) => {
-    tokens[idx].attrPush(["loading", "lazy"]);
+    const token = tokens[idx];
+    // Add lazy loading
+    token.attrPush(["loading", "lazy"]);
+    // Add srcset
+    // This is very hacky! It should be replaced with something better!
+    const src = token.attrs[token.attrIndex("src")][1];
+    const [head, tail] = src.split("if_w_gt_600,c_scale,w_600"); // from forestry config
+    if (head && tail) {
+      // If you don't upscale small images on a 2x display, then they'll get
+      // displayed smaller than they should. Ideally we would check to see how
+      // big they are and omit the 1.5x and 2x options if they aren't necessary,
+      // but until we can do that then upscaling is a necessary evil.
+      token.attrPush([
+        "srcset",
+        `
+        ${head}${encodeURIComponent("if_w_gt_600,c_scale,w_600")}${tail} 1x,
+        ${head}${encodeURIComponent("c_scale,w_900")}${tail} 1.5x,
+        ${head}${encodeURIComponent("c_scale,w_1200")}${tail} 2x
+        `,
+      ]);
+    }
     return defaultRender(tokens, idx, options, env, self);
   };
 }
