@@ -26,7 +26,8 @@ function mdImages(md, _ops) {
         `
         ${head}${encodeURIComponent("if_w_gt_400,c_scale,w_400")}${tail} 400w,
         ${head}${encodeURIComponent("if_w_gt_600,c_scale,w_600")}${tail} 600w,
-        ${head}${encodeURIComponent("c_scale,w_900")}${tail} 900w,
+        ${head}${encodeURIComponent("c_scale,w_800")}${tail} 800w,
+        ${head}${encodeURIComponent("c_scale,w_1000")}${tail} 1000w,
         ${head}${encodeURIComponent("c_scale,w_1200")}${tail} 1200w
         `,
       ]);
