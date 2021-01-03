@@ -24,11 +24,13 @@ function mdImages(md, _ops) {
       token.attrPush([
         "srcset",
         `
-        ${head}${encodeURIComponent("if_w_gt_600,c_scale,w_600")}${tail} 1x,
-        ${head}${encodeURIComponent("c_scale,w_900")}${tail} 1.5x,
-        ${head}${encodeURIComponent("c_scale,w_1200")}${tail} 2x
+        ${head}${encodeURIComponent("if_w_gt_400,c_scale,w_400")}${tail} 400w,
+        ${head}${encodeURIComponent("if_w_gt_600,c_scale,w_600")}${tail} 600w,
+        ${head}${encodeURIComponent("c_scale,w_900")}${tail} 900w,
+        ${head}${encodeURIComponent("c_scale,w_1200")}${tail} 1200w
         `,
       ]);
+      token.attrPush(["sizes", "(max-width: 600px) 100vw, 600px"]);
     }
     return defaultRender(tokens, idx, options, env, self);
   };
