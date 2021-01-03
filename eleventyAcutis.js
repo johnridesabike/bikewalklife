@@ -21,7 +21,9 @@ module.exports = (eleventyConfig) => {
   const Css = (env, _props, { Children }) => {
     if (Children) {
       return env.flatMapChild(Children, (content) =>
-        postcssWithOptions.process(content).then(env.return)
+        postcssWithOptions
+          .process(content, { from: undefined })
+          .then(env.return)
       );
     } else {
       return env.error("Css requires a stylesheet as children.");
@@ -217,7 +219,7 @@ module.exports = (eleventyConfig) => {
     })
   );
   let env = Environment.Async.make(templates);
-  let cache = {};
+  const cache = new Map();
   eleventyConfig.addTemplateFormats("acutis");
   eleventyConfig.addExtension("acutis", {
     read: true,
@@ -238,15 +240,15 @@ module.exports = (eleventyConfig) => {
         .then((files) => Promise.all(files))
         .then(() => {
           env = Environment.Async.make(templates);
-          cache = {};
+          cache.clear();
         }),
     compile: (src, inputPath) => (props) => {
       // I hope caching this doesn't break anything! This isn't a performance
       // bottleneck but *seems* like it can't hurt.
-      if (!(inputPath in cache)) {
-        cache[inputPath] = Compile.make(src, inputPath);
+      if (!cache.has(src)) {
+        cache.set(src, Compile.make(src, inputPath));
       }
-      const template = cache[inputPath];
+      const template = cache.get(src);
       return template(env, props, {}).then(({ NAME, VAL }) => {
         if (NAME === "errors") {
           console.error(VAL);
