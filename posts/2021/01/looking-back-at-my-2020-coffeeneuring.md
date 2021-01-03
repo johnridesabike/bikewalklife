@@ -5,8 +5,8 @@ title: Looking back at my 2020 Coffeeneuring Challenge
 author: John Jackson
 hero_image:
   image: "/v1609701826/2021/IMG_6065_vv6kgb.jpg"
-  alt: ''
-  caption: A photograph of my bicycle on a bridge over the Chattahoochee river.
+  alt: A photograph of my bicycle on a bridge over the Chattahoochee river.
+  caption: ''
 external_link: ''
 tags:
 - Coffeeneuring

@@ -11,7 +11,8 @@
       {% with false %} {% Entry_HeroImage image alt /%}
       {% /match %}
       {% match caption
-         with null %}
+         with null
+         with "" %}
          {* nothing! *}
       {% with caption %}
         <figcaption class="entry__caption"> {{ caption }} </figcaption>
