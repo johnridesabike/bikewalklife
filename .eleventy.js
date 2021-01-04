@@ -17,19 +17,22 @@ function mdImages(md, _ops) {
     const src = token.attrs[token.attrIndex("src")][1];
     const [head, tail] = src.split("if_w_gt_600,c_scale,w_600"); // from forestry config
     if (head && tail) {
-      // If you don't upscale small images on a 2x display, then they'll get
-      // displayed smaller than they should. Ideally we would check to see how
-      // big they are and omit the 1.5x and 2x options if they aren't necessary,
-      // but until we can do that then upscaling is a necessary evil.
+      // This will upscale images.
+      const min = 360;
+      const max = 1200;
+      const steps = 15;
+      const stepsize = (max - min) / steps;
+      const sizes = [];
+      for (let i = 0; i <= steps; i++) {
+        sizes.push(Math.ceil(stepsize * i + min));
+      }
       token.attrPush([
         "srcset",
-        `
-        ${head}${encodeURIComponent("if_w_gt_400,c_scale,w_400")}${tail} 400w,
-        ${head}${encodeURIComponent("if_w_gt_600,c_scale,w_600")}${tail} 600w,
-        ${head}${encodeURIComponent("c_scale,w_800")}${tail} 800w,
-        ${head}${encodeURIComponent("c_scale,w_1000")}${tail} 1000w,
-        ${head}${encodeURIComponent("c_scale,w_1200")}${tail} 1200w
-        `,
+        sizes
+          .map(
+            (x) => `${head}${encodeURIComponent(`c_scale,w_${x}`)}${tail} ${x}w`
+          )
+          .join(", "),
       ]);
       token.attrPush(["sizes", "(max-width: 600px) 100vw, 600px"]);
     }
