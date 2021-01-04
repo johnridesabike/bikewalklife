@@ -18,14 +18,22 @@ function mdImages(md, _ops) {
     const [head, tail] = src.split("if_w_gt_600,c_scale,w_600"); // from forestry config
     if (head && tail) {
       // This will upscale images.
-      const min = 360;
-      const max = 1200;
-      const steps = 15;
-      const stepsize = (max - min) / steps;
-      const sizes = [];
-      for (let i = 0; i <= steps; i++) {
-        sizes.push(Math.ceil(stepsize * i + min));
-      }
+      // Are these the best breakpoints? I have no idea!
+      const sizes = [
+        320, // minimum mobile size
+        460,
+        600, // actual size
+        675,
+        750,
+        825,
+        900, // 1.5x actual size
+        950,
+        1000,
+        1050,
+        1100,
+        1150,
+        1200, // 2x actual size
+      ];
       token.attrPush([
         "srcset",
         sizes
