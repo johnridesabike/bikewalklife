@@ -7,8 +7,10 @@
     <figure class="full-bleed">
       {% match linkedHeader
          with true %}
-         {% Link href=url tabIndex=-1 %} {% Entry_HeroImage image alt /%} {% /Link %}
-      {% with false %} {% Entry_HeroImage image alt /%}
+         {% Link href=url tabIndex=-1 %}
+          {% Entry_HeroImage image alt build /%}
+        {% /Link %}
+      {% with false %} {% Entry_HeroImage image alt build /%}
       {% /match %}
       {% match caption
          with null

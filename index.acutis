@@ -55,6 +55,7 @@ tags:
         draft
         class=""
         h="h2"
+        build
         Footer=#%}
           <footer>
             {% match external_link

@@ -16,4 +16,19 @@ module.exports = {
     "node_modules/@fontsource/cooper-hewitt/files/cooper-hewitt-all-400-italic.woff2",
   ],
   environment: process.env.ELEVENTY_ENV,
+  heroImageBreakpoints: [
+    320, // mobile size
+    520,
+    720,
+    900, // actual size
+    1000,
+    1200,
+    1300,
+    1350, // 1.5x size
+    1440,
+    1530,
+    1620,
+    1710,
+    1800, // 2x size
+  ].map((width) => ({ width, height: Math.ceil(width / 2) })),
 };
