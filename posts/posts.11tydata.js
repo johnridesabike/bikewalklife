@@ -16,12 +16,12 @@ const isVisible = (data, { yes, no }) => {
 /*
   For some reason the live preview on Forestry messes up Eleventy's dates?
 */
-const checkDate = (date) => {
-  if (typeof date === "string") {
+const getDate = (data) => {
+  if (typeof data.date === "string") {
     console.warn("DATE WASN'T PARSED CORRECTLY for ", data.title);
-    return new Date(date);
+    return new Date(data.date);
   } else {
-    return date;
+    return data.date;
   }
 };
 
@@ -30,9 +30,9 @@ module.exports = {
   eleventyComputed: {
     // TODO: move this to a global data file
     absoluteUrl: (data) => new URL(data.page.url, config.site_url).href,
-    isoDate: (data) => checkDate(data.date).toISOString(),
+    isoDate: (data) => getDate(data).toISOString(),
     sitemapDate: (data) => {
-      const date = checkDate(data.date);
+      const date = getDate(data);
       return (
         date.toLocaleString("en-US", {
           year: "numeric",
@@ -51,7 +51,7 @@ module.exports = {
       );
     },
     dateString: (data) =>
-      checkDate(data.date).toLocaleString("en-US", {
+      getDate(data).toLocaleString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
