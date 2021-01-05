@@ -5,10 +5,10 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%~ match config, collections with {site_url}, {all} 
-    map all with {url, date} %}
+    map all with {data: {absoluteUrl, sitemapDate}} %}
   <url>
-    <loc>{% AbsoluteUrl url base=site_url /%}</loc>
-    <lastmod>{% SitemapDateFormat date /%}</lastmod>
+    <loc>{{ absoluteUrl }}</loc>
+    <lastmod>{{ sitemapDate }}</lastmod>
   </url>
 {%~ with {url} %}
   <url>

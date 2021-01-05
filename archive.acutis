@@ -16,7 +16,7 @@ tags:
   collections
   Head=#%}
     <style>
-    {%~ Css ~%}
+    {%~ PostCss ~%}
       .archive__page-title {
         text-align: center;
       }
@@ -52,7 +52,7 @@ tags:
       .archive__entry .entry__link {
         font-size: var(--font-size-sm);
       }
-    {%~ /Css ~%}
+    {%~ /PostCss ~%}
     </style>
   {%/#
 %}

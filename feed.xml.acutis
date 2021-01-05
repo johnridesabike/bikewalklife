@@ -21,16 +21,15 @@
   {% match collections with {frontPage}
      map frontPage with
      {
-       url,
        templateContent,
-       data: {title, isoDate, page: {excerpt}}
+       data: {title, isoDate, absoluteUrl, page: {excerpt}}
       }
     ~%}
     <entry>
       <title>{{ title }}</title>
-      <link href="{% AbsoluteUrl url base=site_url /%}" />
+      <link href="{{ absoluteUrl }}" />
       <updated>{{ isoDate }}</updated>
-      <id>{% AbsoluteUrl url base=site_url /%}</id>
+      <id>{{ absoluteUrl }}</id>
       <summary type="text">{{ excerpt }}</summary>
       <content type="html">{{ templateContent }}</content>
     </entry>

@@ -13,13 +13,13 @@ tags:
   metadata=null
   Head=#%}
     <style>
-    {%~ Css ~%}
+    {%~ PostCss ~%}
       .index-page__archive-link {
         font-family: var(--font-ui);
         font-size: var(--font-size-lg);
         text-align: center;
       }
-    {%~ /Css ~%}
+    {%~ /PostCss ~%}
     </style>
   {%/#
 %}

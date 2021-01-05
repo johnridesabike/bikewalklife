@@ -14,7 +14,7 @@
     }
    Head=#%}
     <style>
-    {%~ Css ~%}
+    {%~ PostCss ~%}
       .entry-page__footer,
       .entry-page__nav {
         font-family: var(--font-ui);
@@ -96,7 +96,7 @@
           margin-right: 1em;
         }
       }
-    {%~ /Css ~%}
+    {%~ /PostCss ~%}
     </style>
    {%/#
 %}

@@ -7,7 +7,7 @@
     collections
     Head=#%}
       <style>
-      {%~ Css %}
+      {%~ PostCss %}
         .about__intro {
           font-size: var(--font-size-lg);
         }
@@ -30,7 +30,7 @@
             float: right;
           }
         };
-      {% /Css ~%}
+      {% /PostCss ~%}
       </style>
     {%/#
 %}

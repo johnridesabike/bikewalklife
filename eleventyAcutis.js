@@ -18,38 +18,21 @@ module.exports = (eleventyConfig) => {
     postcssCustomMedia({ importFrom: cssMedia }),
   ]);
 
-  const Css = (env, _props, { Children }) => {
+  const PostCss = (env, _props, { Children }) => {
     if (Children) {
       return env.flatMapChild(Children, (content) =>
         postcssWithOptions
           .process(content, { from: undefined })
           .then(env.return)
+          .catch(env.error)
       );
     } else {
-      return env.error("Css requires a stylesheet as children.");
+      return env.error("PostCss requires a stylesheet as children.");
     }
   };
 
   const Icon = (env, props, _children) =>
     env.return(icons[props.name].toSvg({ class: props.class || "" }));
-
-  const SitemapDateFormat = (env, props, _children) =>
-    env.return(
-      props.date.toLocaleString("en-US", {
-        year: "numeric",
-        timeZone: "America/New_York",
-      }) +
-        "-" +
-        props.date.toLocaleString("en-US", {
-          month: "2-digit",
-          timeZone: "America/New_York",
-        }) +
-        "-" +
-        props.date.toLocaleString("en-US", {
-          day: "2-digit",
-          timeZone: "America/New_York",
-        })
-    );
 
   const Log = (env, props, _children) => {
     console.log(props);
@@ -177,8 +160,7 @@ module.exports = (eleventyConfig) => {
   const ReactFormHtml = (env, _props, _children) =>
     env.return(contactForm.render());
 
-  const ImgSrc = (env, props, _children) => {
-    const { height, width, gravity, image } = props;
+  const ImgSrc = (env, { height, width, gravity, image }, _children) => {
     const opts =
       "/" +
       encodeURIComponent(
@@ -204,7 +186,6 @@ module.exports = (eleventyConfig) => {
 
   const templates = {
     Icon,
-    SitemapDateFormat,
     Log,
     Webpack,
     Link,
@@ -213,7 +194,7 @@ module.exports = (eleventyConfig) => {
     ImgSrc,
     AbsoluteUrl,
     Favicon,
-    Css,
+    PostCss,
     Debugger,
   };
   // Remove stale cache.
