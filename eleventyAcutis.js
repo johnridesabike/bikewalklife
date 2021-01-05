@@ -56,6 +56,11 @@ module.exports = (eleventyConfig) => {
     return env.return("");
   };
 
+  const Debugger = (env, _props, _children) => {
+    debugger;
+    return env.return("");
+  };
+
   const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
 
   const Webpack = (env, props, _children) =>
@@ -73,7 +78,7 @@ module.exports = (eleventyConfig) => {
 
   const linkAst = Compile.makeAst(
     `<a
-  href={{ href }}
+  href="{{ href }}"
   class="{{ class }} {{ activeClassName}} "
   {% match current with null %} {* Nothing! *}
   {% with x %} aria-current="{{ x }}" 
@@ -209,6 +214,7 @@ module.exports = (eleventyConfig) => {
     AbsoluteUrl,
     Favicon,
     Css,
+    Debugger,
   };
   // Remove stale cache.
   eleventyConfig.on("beforeWatch", (files) =>

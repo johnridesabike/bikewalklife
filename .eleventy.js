@@ -54,7 +54,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({
     "assets/images/nps-bicycle-trail.svg": "favicon.svg",
   });
-  eleventyConfig.addDataExtension("yaml", yaml.safeLoad);
+  eleventyConfig.addDataExtension("yaml", yaml.load);
   eleventyConfig.addCollection("posts", (collectionApi) => {
     const coll = collectionApi
       .getFilteredByGlob("posts/**/*.md")
@@ -75,6 +75,7 @@ module.exports = (eleventyConfig) => {
       .filter((x) => x.data.visible)
       .slice(0, 12)
   );
+
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: (file, _options) => {
       file.excerpt = file.content.split("\n").slice(0, 1).join(" ");

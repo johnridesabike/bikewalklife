@@ -15,15 +15,23 @@
     <name>{{ author_name }}</name>
   </author>
   <icon>
+    {{~ site_url ~}}
     {%~ Favicon file="assets/images/nps-bicycle-trail.svg" width=128 / ~%}
   </icon>
   {% match collections with {frontPage}
-      map frontPage with {url, templateContent, data: {title, isoDate}} ~%}
+     map frontPage with
+     {
+       url,
+       templateContent,
+       data: {title, isoDate, page: {excerpt}}
+      }
+    ~%}
     <entry>
       <title>{{ title }}</title>
       <link href="{% AbsoluteUrl url base=site_url /%}" />
       <updated>{{ isoDate }}</updated>
-      <id>{% AbsoluteUrl url base=site_url / %}</id>
+      <id>{% AbsoluteUrl url base=site_url /%}</id>
+      <summary type="text">{{ excerpt }}</summary>
       <content type="html">{{ templateContent }}</content>
     </entry>
   {%~ /map /match %}

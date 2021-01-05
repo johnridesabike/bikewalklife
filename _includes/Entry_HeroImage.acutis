@@ -2,9 +2,11 @@
 <img
   src='{% ImgSrc height=450 width=900 gravity="auto" image /%}'
   srcset='
-    {%~ match build with {heroImageBreakpoints}
-       map heroImageBreakpoints with {height, width} %}
-      {%~ ImgSrc gravity="auto" height width image /%} {{ width }}w,
+    {%~ match build with {heroImageBreakpoints} map heroImageBreakpoints
+        with {height, width}, 0 %}
+        {%~ ImgSrc gravity="auto" height width image /%} {{ width }}w
+      {%~ with {height, width} ~%}
+      , {%~ ImgSrc gravity="auto" height width image /%} {{ width }}w
     {%~ /map /match ~%}
   '
   sizes="(max-width: 900px) 100vw, 900px"
