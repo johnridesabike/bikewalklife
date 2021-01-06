@@ -1,12 +1,10 @@
 <!-- Metadata -->
-{% match config, page with
+{% match config with
     {
       title: title_site,
       description: description_site,
-      site_url,
       twitter_handle
-    },
-    {url}
+    }
 ~%}
 
   <meta property="og:site_name" content="{{ title_site }}" />
@@ -14,8 +12,8 @@
 
   {%~ match metadata with {description, author, isoDate} %}
     <title> {{ title }} | {{ title_site }} </title>
-    <link rel="canonical" href="{% AbsoluteUrl url base=site_url /%}" />
-    <meta property="og:url" content="{% AbsoluteUrl url base=site_url /%}" />
+    <link rel="canonical" href="{{ absoluteUrl }}" />
+    <meta property="og:url" content="{{ absoluteUrl }}" />
     <meta property="og:title" content="{{ title }}" />
     <meta
       name="description"
@@ -33,8 +31,8 @@
       <title> {{ title }} | {{ title_site }} </title>
       <meta property="og:title" content="{{ title }} | {{ title_site }}" />
     {% /match %}
-    <link rel="canonical" href="{% AbsoluteUrl url base=site_url /%}" />
-    <meta property="og:url" content="{% AbsoluteUrl url base=site_url /%}" />
+    <link rel="canonical" href="{{ absoluteUrl }}" />
+    <meta property="og:url" content="{{ absoluteUrl }}" />
     <meta property="og:type" content="website" />
     <meta
       name="description"

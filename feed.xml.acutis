@@ -1,16 +1,18 @@
-{%~ match config, page with {title, description, site_url, author_name}, {url} ~%}
+{%~ match config with {title, description, site_url, author_name} ~%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ title }}</title>
   <subtitle>{{ description }}</subtitle>
-  <link href="{% AbsoluteUrl url base=site_url /%}" rel="self"/>
-  <link href='{% AbsoluteUrl url="/" base=site_url /%}'/>
+  <link href="{{ absoluteUrl }}" rel="self"/>
+  {% match collections with {page_index: [{data: {absoluteUrl}}]} ~%} 
+    <link href="{{ absoluteUrl }}" />
+    <id>{{ absoluteUrl }}</id>
+  {% /match ~%}
   <updated>
     {%~ match collections with {frontPage: [{data: {isoDate}}]} ~%} 
       {{ isoDate }}
     {%~ /match ~%}
   </updated>
-  <id>{% AbsoluteUrl url="/" base=site_url /%}</id>
   <author>
     <name>{{ author_name }}</name>
   </author>

@@ -10,6 +10,7 @@ tags:
   page
   collections
   title
+  absoluteUrl
   metadata=null
   Head=#%}
     <style>
@@ -34,7 +35,7 @@ tags:
           title,
           hero_image,
           isoDate,
-          dateString,
+          formattedDate,
           draft,
           external_link,
           visible: true
@@ -51,7 +52,7 @@ tags:
         hero_image
         linkedHeader=true
         isoDate
-        dateString
+        formattedDate
         draft
         class=""
         h="h2"

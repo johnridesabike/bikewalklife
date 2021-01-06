@@ -11,6 +11,7 @@ metdata: null
   build
   page
   collections
+  absoluteUrl
   Head=#%}
     <style>
     {%~ PostCss ~%}

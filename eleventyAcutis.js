@@ -56,9 +56,6 @@ module.exports = (eleventyConfig) => {
       }
     });
 
-  const AbsoluteUrl = (env, props, _children) =>
-    env.return(new URL(props.url, props.base).href);
-
   const linkAst = Compile.makeAst(
     `<a
   href="{{ href }}"
@@ -114,14 +111,14 @@ module.exports = (eleventyConfig) => {
 {% with related %}
   <h2 class="entry-page__footer-header"> Related posts </h2>
   <ul class="entry-page__related-list">
-    {% map related with {data: {title, dateString, isoDate}, url} %}
+    {% map related with {data: {title, formattedDate, isoDate}, url} %}
       <li class="entry-page__related-item">
         <div>
           {% Link href=url %}
             {{ title }}
           {% /Link %}
         </div>
-        {% Entry_Date date=dateString isoDate / %}
+        {% Entry_Date date=formattedDate isoDate / %}
       </li>
     {% /map %}
   </ul>
@@ -192,7 +189,6 @@ module.exports = (eleventyConfig) => {
     Related,
     ReactFormHtml,
     ImgSrc,
-    AbsoluteUrl,
     Favicon,
     PostCss,
     Debugger,

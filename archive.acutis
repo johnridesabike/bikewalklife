@@ -13,6 +13,7 @@ tags:
   strings
   build
   page
+  absoluteUrl
   collections
   Head=#%}
     <style>
@@ -64,7 +65,7 @@ tags:
         data: {
           title,
           external_link,
-          dateString,
+          formattedDate,
           isoDate,
           draft,
           visible: true
@@ -79,7 +80,7 @@ tags:
         %}
           {{ title }}
         {% /Link %}
-    {% Entry_Date date=dateString isoDate /%}
+    {% Entry_Date date=formattedDate isoDate /%}
     {% match draft with true %}
       <div class="entry__draft"> Draft </div>
     {% with false %}

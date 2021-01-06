@@ -6,6 +6,7 @@
    page
    collections
    title
+   absoluteUrl
    metadata={
     description: excerpt,
     author,
@@ -110,7 +111,7 @@
      title
      linkedHeader=false
      isoDate
-     dateString
+     formattedDate
      draft
      class=""
      h="h1"

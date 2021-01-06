@@ -31,7 +31,7 @@
           {{ title }}
         {% /match %}
       </{{ h }}>
-      {% Entry_Date date=dateString isoDate / %}
+      {% Entry_Date date=formattedDate isoDate / %}
       {% Entry_Author name=author / %}
       {% match draft with true %} {% Entry_DraftNotice /%}
       {% with false %} {* nothing! *}
