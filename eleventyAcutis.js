@@ -44,10 +44,13 @@ module.exports = (eleventyConfig) => {
     return env.return("");
   };
 
-  const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
+  const manifestFile = fs.readFile(
+    path.resolve(__dirname, "_site/assets/manifest.json"),
+    { encoding: "utf8" }
+  );
 
   const Webpack = (env, props, _children) =>
-    fs.readFile(manifestPath, { encoding: "utf8" }).then((data) => {
+    manifestFile.then((data) => {
       const x = JSON.parse(data)[props.asset];
       if (x) {
         return env.return(x);
