@@ -87,6 +87,11 @@ img {
   max-width: 100%;
 }
 
+li {
+  /* This fixes small tap target problems for links in list items. */
+  margin: 0.5em 0;
+}
+
 /*******************************************************************************
  * Global formatting
  ******************************************************************************/
@@ -209,6 +214,7 @@ img {
   padding-left: 1em;
   min-height: 48px;
   min-width: 48px;
+  margin: 0;
 }
 
 .menu__item:first-child {
