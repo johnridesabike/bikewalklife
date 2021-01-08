@@ -1,6 +1,6 @@
 ---
 date: 2021-01-08T11:58:02-05:00
-draft: true
+draft: false
 title: Urban Cycling Institute (@fietsprofessor) holds a 2020 mobility meme contest
 author: John Jackson
 hero_image:
@@ -17,7 +17,7 @@ tags:
 - images
 
 ---
-The Urban Cycling Institute recently held an election for 2020’s best mobility memes [via their Twitter page](https://twitter.com/fietsprofessor). [You can look at at all of the candidates here](https://www.urbanmobilityfutures.com/col-mobility-memes). There are quite a lot, and I think they’re all good. Here are a few of the highlights:
+The Urban Cycling Institute recently held an election for 2020’s best mobility memes on their Twitter page. There are quite a lot, and I think they’re all good. [You can view the full list here](https://www.urbanmobilityfutures.com/col-mobility-memes). Below, I’ve included a few of the highlights:
 
 **Revealing road space injustice** by Karl Jilg
 
