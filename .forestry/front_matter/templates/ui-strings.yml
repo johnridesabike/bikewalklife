@@ -40,10 +40,6 @@ fields:
       format: html-blocks
   label: Contact text
   description: Call-to-action for contact form.
-- name: contact_form
-  type: boolean
-  label: Contact form
-  default: true
 - name: email
   type: text
   label: Email
