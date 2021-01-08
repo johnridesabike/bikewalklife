@@ -1,0 +1,32 @@
+---
+date: 2021-01-08T11:58:02-05:00
+draft: true
+title: Urban Cycling Institute (@fietsprofessor) holds a 2020 mobility meme contest
+author: John Jackson
+hero_image:
+  image: "/v1610125656/2021/EqVnqgVXcAI3zPL_mmnzrr.jpg"
+  alt: A comic depicting the bike riders and transit users crammed next to a car driver
+    with comfortable space.
+  caption: 'Image credit: “The injustice mobility space” by Fabian Todorovic'
+external_link: https://www.urbanmobilityfutures.com/col-mobility-memes
+tags:
+- memes
+- Cycling Professor
+- Twitter
+- '2020'
+- images
+
+---
+The Urban Cycling Institute recently held an election for 2020’s best mobility memes [via their Twitter page](https://twitter.com/fietsprofessor). [You can look at at all of the candidates here](https://www.urbanmobilityfutures.com/col-mobility-memes). There are quite a lot, and I think they’re all good. Here are a few of the highlights:
+
+**Revealing road space injustice** by Karl Jilg
+
+![](https://res.cloudinary.com/bike-walk-life/image/upload/if_w_gt_600,c_scale,w_600/f_auto/v1610125558/2021/EqVl5mGXEAA_jnh_tdpalm.png)
+
+**The injustice mobility space** by [Fabian Todorovic](https://twitter.com/fabiantodorovic)
+
+![](https://res.cloudinary.com/bike-walk-life/image/upload/if_w_gt_600,c_scale,w_600/f_auto/v1610125656/2021/EqVnqgVXcAI3zPL_mmnzrr.jpg)
+
+**Roadkill Bill** by [Ken Avidor](https://twitter.com/Avidor)
+
+![](https://res.cloudinary.com/bike-walk-life/image/upload/if_w_gt_600,c_scale,w_600/f_auto/v1610125738/2021/EqVm0voXUAEDg-Q_dwity4.jpg)
