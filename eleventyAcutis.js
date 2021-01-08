@@ -44,14 +44,15 @@ module.exports = (eleventyConfig) => {
     return env.return("");
   };
 
-  const manifestFile = fs.readFile(
-    path.resolve(__dirname, "_site/assets/manifest.json"),
-    { encoding: "utf8" }
-  );
+  const manifestFile = fs
+    .readFile(path.resolve(__dirname, "_site/assets/manifest.json"), {
+      encoding: "utf8",
+    })
+    .then((x) => JSON.parse(x));
 
   const Webpack = (env, props, _children) =>
     manifestFile.then((data) => {
-      const x = JSON.parse(data)[props.asset];
+      const x = data[props.asset];
       if (x) {
         return env.return(x);
       } else {
@@ -174,6 +175,17 @@ module.exports = (eleventyConfig) => {
     return env.return(cloudinary_url + opts + image);
   };
 
+  const ImgSrcStatic = (env, { transforms, image }, _children) => {
+    if (!image) {
+      return env.error("ImgSrcStatic must have a `image` prop.");
+    }
+    if (!Array.isArray(transforms)) {
+      return env.error("ImgSrcStatic must have a `transforms` array.");
+    }
+    const opts = transforms.map(encodeURIComponent).join("/");
+    return env.return(cloudinary_url + "/" + opts + "/" + image);
+  };
+
   const Favicon = (env, props, _children) =>
     Image(path.join(__dirname, props.file), {
       widths: [props.width],
@@ -192,6 +204,7 @@ module.exports = (eleventyConfig) => {
     Related,
     ReactFormHtml,
     ImgSrc,
+    ImgSrcStatic,
     Favicon,
     PostCss,
     Debugger,

@@ -27,4 +27,4 @@ Even with safety education, crashes are still possible due to our dangerous-by-d
 
 I also quite like the banner Bluejay made for anyone linking to BicycleSafe.com:
 
-[![“How to Not Get Hit By Cars” banner.](https://res.cloudinary.com/bike-walk-life/image/upload/v1609801488/2020/bikesafe-banner_c1gamh.gif)](https://bicyclesafe.com)
+[![“How to Not Get Hit By Cars” banner.](https://res.cloudinary.com/bike-walk-life/image/upload/v1609801488/2020/bikesafe-banner.gif)](https://bicyclesafe.com)

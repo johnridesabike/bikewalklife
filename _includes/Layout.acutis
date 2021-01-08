@@ -42,7 +42,7 @@
   />
   <link
     rel="alternate"
-    type="application/rss+xml"
+    type="application/atom+xml"
     title="Bike Walk Life"
     href="{{ feed_url }}"
   />
@@ -103,20 +103,20 @@
       </div>
       <footer class="footer__wrapper">
         <div class="small-screen-padding footer">
-          {% match strings with {footer} ~%}
-            <div> {% raw footer %} </div>
+          {% match strings with {copyright} ~%}
+            <p class="footer__item footer__copyright">{% raw copyright %}</p>
           {% /match ~%}
-          <p>
+          <p class="footer__item">
             {%~ Link current=page href=url_index activeClassName="" ~%}
               Home
             {%~ /Link ~%}
           </p>
-          <p>
+          <p class="footer__item">
             {%~ Link current=page href=url_about activeClassName="" ~%}
               {{ title_about }}
             {%~ /Link ~%}
           </p>
-          <p>
+          <p class="footer__item">
             {%~ Link current=page href=url_contact activeClassName="" ~%}
               {{ title_contact }}
             {%~ /Link ~%}

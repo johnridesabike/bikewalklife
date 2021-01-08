@@ -1,4 +1,8 @@
-{%~ match config with {title, description, site_url, author_name} ~%}
+{%~ match
+    config, strings
+  with
+    {title, description, site_url, author_name}, {copyright}
+~%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ title }}</title>
@@ -20,6 +24,7 @@
     {{~ site_url ~}}
     {%~ Favicon file="assets/images/nps-bicycle-trail.svg" width=128 / ~%}
   </icon>
+  <rights type="html">{{ copyright }}</rights>
   {% match collections with {frontPage}
      map frontPage with
      {

@@ -2,58 +2,64 @@
 label: UI Strings
 hide_body: true
 fields:
-- name: open_linked
-  type: text
-  config:
-    required: true
-  label: Open Linked
-  description: Text to display on external linked pages.
-- name: archive_link
-  type: text
-  config:
-    required: true
-  label: Archive Link
-  description: Text to display on the link to the archive.
-- name: footer
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: html-blocks
-  label: Footer
-  description: Footer content.
-- name: contact_text
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: html-blocks
-  label: Contact text
-  description: Call-to-action for contact form.
-- name: contact_form
-  type: boolean
-  label: Contact form
-  default: true
-- name: email
-  type: text
-  label: Email
-- name: subscribe_feed_cta
-  label: 'Subscribe call-to-action: feed'
-  type: textarea
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: html
-- name: subscribe_email_cta
-  label: 'Subscribe call-to-action: email'
-  type: textarea
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: html
+  - name: open_linked
+    type: text
+    config:
+      required: true
+    label: Open Linked
+    description: Text to display on external linked pages.
+  - name: archive_link
+    type: text
+    config:
+      required: true
+    label: Archive Link
+    description: Text to display on the link to the archive.
+  - name: copyright
+    type: textarea
+    default: ""
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: html
+    label: Footer
+    description: Footer content.
+  - name: contact_title
+    type: text
+    config:
+      required: true
+    label: Contact title
+    description: Title above the contact text.
+  - name: contact_text
+    type: textarea
+    default: ""
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Contact text
+    description: Call-to-action for contact form.
+  - name: contact_form
+    type: boolean
+    label: Contact form
+    default: true
+  - name: email
+    type: text
+    label: Email
+  - name: subscribe_feed_cta
+    label: "Subscribe call-to-action: feed"
+    type: textarea
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: html
+  - name: subscribe_email_cta
+    label: "Subscribe call-to-action: email"
+    type: textarea
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: html

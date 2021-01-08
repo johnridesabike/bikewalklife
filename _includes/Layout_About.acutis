@@ -43,16 +43,15 @@
           class="about__photo"
           style="height: 240px; width: 240px;">
           <img
-            src='{% ImgSrc gravity="center" height=240 width=240 image /%}'
+            src='{% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%}'
             srcset='
-              {% ImgSrc gravity="center" height=240 width=240 image /%} 1x,
-              {% ImgSrc gravity="center" height=360 width=360 image /%} 1.5x,
-              {% ImgSrc gravity="center" height=480 width=480 image /%} 2x
-            '
+              {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1x,
+              {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_360,w_360", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1.5x,
+              {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_480,w_480", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 2x
+              '
             alt="{{ alt }}"
             height="240"
             width="240"
-            loading="lazy"
           />
         </div>
       </figure>

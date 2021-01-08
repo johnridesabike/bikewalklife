@@ -11,11 +11,11 @@
           class="entry-page__avatar"
           style="width: 120px; height: 120px; margin: auto;">
           <img
-            src='{% ImgSrc gravity="center" height=120 width=120 image /%}'
+            src='{% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%}'
             srcset='
-              {% ImgSrc gravity="center" height=120 width=120 image /%} 1x,
-              {% ImgSrc gravity="center" height=180 width=180 image /%} 1.5x,
-              {% ImgSrc gravity="center" height=240 width=250 image /%} 2x
+              {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1x,
+              {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_180,w_180", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1.5x,
+              {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 2x
               '
             alt="{{ alt }}"
             height="120"
@@ -37,8 +37,8 @@
       {% /Link %}
     {% /match %}
   </p>
-  {% match strings with {contact_text} %}
-    <h2 class="entry-page__footer-heading"> Leave a comment </h2>
+  {% match strings with {contact_text, contact_title} %}
+    <h2 class="entry-page__footer-heading"> {{ contact_title}} </h2>
     <div class="entry-page__about-content">{%raw contact_text %}</div>
     <p class="entry-page__about-link">
       {% match collections with {page_contact: [{url}]} %}
