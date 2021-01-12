@@ -121,6 +121,9 @@
               {{ title_contact }}
             {%~ /Link ~%}
           </p>
+          <p class="footer__item">
+            <a href="https://twitter.com/BikeWalkLife" rel="me">Twitter</a>
+          </p>
         </div>
       </footer>
     </div>
