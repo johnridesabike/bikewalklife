@@ -59,7 +59,7 @@ module.exports = {
                   [
                     "postcss-preset-env",
                     {
-                      importFrom: cssVariables,
+                      importFrom: [cssVariables, cssMedia],
                     },
                   ],
                   /* The postcss-custom-media built in with postcss-preset-env
