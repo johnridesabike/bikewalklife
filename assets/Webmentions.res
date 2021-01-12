@@ -11,13 +11,18 @@ module Mention = {
     let url = Js.Dict.get(data, "url")->Option.flatMap(Json.decodeString)
     let author = Js.Dict.get(data, "author")->Option.flatMap(Json.decodeObject)
     let name =
-      author->Option.flatMap(x => Js.Dict.get(x, "name"))->Option.flatMap(Json.decodeString)
+      author
+      ->Option.flatMap(x => Js.Dict.get(x, "name"))
+      ->Option.flatMap(Json.decodeString)
+      ->Option.getWithDefault("Anonymous")
     let photo =
       author->Option.flatMap(x => Js.Dict.get(x, "photo"))->Option.flatMap(Json.decodeString)
-    switch (url, name, photo) {
-    | (Some(url), Some(name), Some(photo)) =>
+    switch (url, photo) {
+    | (Some(url), Some(photo)) =>
       <div className="entry-page__webmentions-photo">
-        <a href={url}> <img src={photo} alt={name} height="48" width="48" /> </a>
+        <a href={url} className="h-card u-url">
+          <img src={photo} alt={name} height="48" width="48" />
+        </a>
       </div>
     | _ => React.null
     }
@@ -65,7 +70,7 @@ let make = (~url) => {
           | _ => None
           }
         )
-      )->Array.slice(~offset=0, ~len=12)
+      )->Array.slice(~offset=0, ~len=24)
       setReposts(_ => reposts)
       let likes = Array.keepMap(mentions, dict =>
         Js.Dict.get(dict, "wm-property")
@@ -76,7 +81,7 @@ let make = (~url) => {
           | _ => None
           }
         )
-      )->Array.slice(~offset=0, ~len=12)
+      )->Array.slice(~offset=0, ~len=24)
       setLikes(_ => likes)
       Js.Promise.resolve()
     })
