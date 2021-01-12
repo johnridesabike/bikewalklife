@@ -64,11 +64,35 @@
         text-align: center;
       }
 
-      .entry-page__avatar {
+      .entry-page__avatar,
+      .entry-page__webmentions-photo {
         border-radius: 50%;
         overflow: hidden;
         border: 1px solid var(--color-primary-dark);
         box-shadow: 0 0 2px var(--color-primary-dark);
+      }
+
+      .entry-page__webmentions-header {
+        margin-bottom: 0;
+      }
+
+      .entry-page__webmentions-reposts,
+      .entry-page__webmentions-likes {
+        margin-top: 0;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .entry-page__webmentions-item {
+        margin-right: 0.5em;
+      }
+
+      .entry-page__webmentions-photo {
+        width: 48px;
+        height: 48px;
       }
 
       @media screen and (--tablet-portrait-up) {
@@ -125,6 +149,7 @@
     {%/#
   / %}
 </main>
+<div id="react-webmentions-root"></div>
 <hr class="separator" />
 <aside class="ui-font">
   {% match collections with {page_about: [{data: {intro, image_small}}]} %}
@@ -185,5 +210,10 @@
     {% /match %}
   </ul>
 </nav>
+<script>
+var page_url = "{% raw absoluteUrl %}";
+</script>
+<script src="{% Webpack asset="shared.js" /%}"></script>
+<script src="{% Webpack asset="webmentions.js" /%}"></script>
 {% /Layout %}
 {% /match %}

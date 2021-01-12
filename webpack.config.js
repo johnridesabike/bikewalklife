@@ -20,7 +20,23 @@ module.exports = {
   // https://github.com/webpack-contrib/css-loader
   devtool: isDev ? "cheap-module-source-map" : "source-map",
   entry: {
-    contact: path.resolve(__dirname, "assets", "contact-form-client.mjs"),
+    contact: {
+      import: path.resolve(__dirname, "assets", "contact-form-client.mjs"),
+      dependOn: "shared",
+    },
+    webmentions: {
+      import: path.resolve(__dirname, "assets", "webmentions-client.mjs"),
+      dependOn: "shared",
+    },
+    // This is a little awkward to maintain
+    shared: [
+      "react",
+      "react-dom",
+      "bs-platform/lib/es6/curry.js",
+      "bs-platform/lib/es6/belt_Array.js",
+      "bs-platform/lib/es6/caml_option.js",
+      "bs-fetch/lib/es6/src/Fetch.bs.js",
+    ],
     style: path.resolve(__dirname, "assets", "style.css"),
   },
   output: {

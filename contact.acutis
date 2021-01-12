@@ -53,5 +53,6 @@ metdata: null
     {% /match %}
     <div id="react-form-root">{% ReactFormHtml /%}</div>
   </main>
+  <script src="{% Webpack asset="shared.js" /%}"></script>
   <script src="{% Webpack asset="contact.js" /%}"></script>
 {% /Layout %}
