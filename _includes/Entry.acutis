@@ -37,7 +37,11 @@
       {% with false %} {* nothing! *}
       {% /match %}
     </header>
-    <div class="e-content">{% raw content %}</div>
+    <div class="e-content">
+      {% raw content %}
+      <a href="https://brid.gy/publish/twitter"></a>
+      <data class="p-bridgy-omit-link" value="false"></data>
+    </div>
     {{ Footer }}
   </div>
 </article>
