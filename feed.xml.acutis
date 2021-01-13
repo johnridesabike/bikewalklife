@@ -37,7 +37,7 @@
       <link href="{{ absoluteUrl }}" />
       <updated>{{ isoDate }}</updated>
       <id>{{ absoluteUrl }}</id>
-      <summary type="text">{{ excerpt }}</summary>
+      <summary type="html">{{ excerpt }}</summary>
       <content type="html">{{ templateContent }}</content>
     </entry>
   {%~ /map /match %}

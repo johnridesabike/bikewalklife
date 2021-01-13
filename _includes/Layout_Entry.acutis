@@ -16,7 +16,6 @@
    Head=#%}
     <style>
     {%~ PostCss ~%}
-      .entry-page__footer,
       .entry-page__nav {
         font-family: var(--font-ui);
       }
@@ -131,6 +130,7 @@
      author
      content
      url
+     absoluteUrl
      hero_image
      title
      linkedHeader=false
@@ -139,14 +139,9 @@
      draft
      class=""
      h="h1"
+     external_link
      build
-     Footer=#%}
-      <footer class="entry-page__footer">
-        {% match external_link with null %} {* nothing! *}
-        {% with href %} {% Entry_OriginalLink href class="" strings / %}
-        {% /match %}
-      </footer>
-    {%/#
+     strings
   / %}
 </main>
 <div id="react-webmentions-root"></div>

@@ -335,10 +335,16 @@ li {
   opacity: 0.8;
 }
 
-.entry__link {
-  text-align: right;
+.entry__footer {
   font-family: var(--font-ui);
   font-size: var(--font-size-md);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.entry__link {
+  text-align: right;
   text-transform: uppercase;
 }
 

@@ -42,7 +42,19 @@
       <a href="https://brid.gy/publish/twitter"></a>
       <data class="p-bridgy-omit-link" value="false"></data>
     </div>
-    {{ Footer }}
+    <footer class="entry__footer">
+      <div class="entry__permalink">
+        <a href="{{ absoluteUrl }}" class="u-url u-uid">
+          permalink
+          <span aria-hidden="true">
+            {% Icon name="link" class="icon" / %}
+          </span>
+        </a>
+      </div>
+      {% match external_link with null %} {* nothing! *}
+      {% with href %} {% Entry_OriginalLink href strings / %}
+      {% /match %}
+    </footer>
   </div>
 </article>
 <!-- /Entry -->

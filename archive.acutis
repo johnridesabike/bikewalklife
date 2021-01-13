@@ -24,19 +24,42 @@ tags:
 
       .archive__entry {
         margin: 1em 0;
+        font-family: var(--font-ui);
+        margin-bottom: 1.5em;
+      }
+
+      .archive__hero-figure {
+        margin: 0 -1em;
+        width: 100vw;
+      }
+
+      .archive__hero-image {
+        height: 50vw;
+      }
+
+      .archive__entry-footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        font-family: var(--font-ui);
-        margin-bottom: 1.5em;
       }
 
       .archive__entry-title {
         font-size: var(--font-size-lg);
         line-height: 1.25;
-        font-family: var(--font-sans-serif);
+        font-family: var(--font-ui);
         flex-basis: 100%;
         margin-bottom: 0.5em;
+      }
+
+      .archive__entry-summary{
+        font-family: var(--font-serif);
+      }
+
+      .archive__entry-readmore {
+        font-family: var(--font-ui);
+        font-size: var(--font-size-md);
+        text-transform: uppercase;
+        display: inline-block;
       }
 
       .archive__nav-title {
@@ -53,12 +76,25 @@ tags:
       .archive__entry .entry__link {
         font-size: var(--font-size-sm);
       }
+
+      @media screen and (--tablet-portrait-up) {
+        .archive__hero-figure {
+          margin: 0;
+          width: 600px;
+        }
+
+        .archive__hero-image {
+          height: 300px;
+        } 
+      }
     {%~ /PostCss ~%}
     </style>
   {%/#
 %}
-<main>
-  <h1 class="archive__page-title"> {{ title }} </h1>
+<main class="h-feed">
+  {% match config with {title: site_title} %}
+    <h1 class="archive__page-title p-name"> {{ site_title }}: {{ title }} </h1>
+  {% /match %}
   {% map posts with
       {
         url,
@@ -68,32 +104,70 @@ tags:
           formattedDate,
           isoDate,
           draft,
-          visible: true
+          author,
+          absoluteUrl,
+          hero_image,
+          visible: true,
+          page: {
+            excerpt
+          }
         }
       }
-    %}
-      <div class="archive__entry">
+  %}
+    <article class="archive__entry h-entry">
+      {% match hero_image
+        with null %}
+        {* nothing! *}
+      {% with {image, alt, caption} %}
+        <figure class="archive__hero-figure">
+          {% Link href=url tabIndex=-1 %}
+            {% Archive_HeroImage image alt build /%}
+          {% /Link %}
+          {% match caption
+             with null
+             with "" %}
+             {* nothing! *}
+          {% with caption %}
+            <figcaption class="entry__caption"> {{ caption }} </figcaption>
+          {% /match %}
+        </figure>
+      {% /match %}
+      {% Link
+          current=page
+          href=absoluteUrl
+          class="archive__entry-title u-url u-uid"
+      %}
+        {{ title }}
+      {% /Link %}
+      <p class="font-size-small p-summary archive__entry-summary">
+        {% raw excerpt %}
         {% Link
-            current=page
-            href=url
-            class="archive__entry-title"
+          current=page
+          href=url
+          class="archive__entry-readmore u-url"
         %}
-          {{ title }}
+          keep reading →
         {% /Link %}
-    {% Entry_Date date=formattedDate isoDate /%}
-    {% match draft with true %}
-      <div class="entry__draft"> Draft </div>
-    {% with false %}
-      {* Nothing! *}
-    {% /match %}
-    {% match external_link with null %}
-      {* Nothing! *}
-    {% with href %}
-      {% Entry_OriginalLink href="{{ href }}" class="" strings /%}
-    {% /match %}
-  </div>
-{% with {data: {visible: false}} %} {* Don't show invisible posts. *}
-{% /map %}
+      </p>
+      <footer class="archive__entry-footer">
+        {% Entry_Date date=formattedDate isoDate /%}
+        {% Entry_Author name=author /%}
+        {% match draft with true %}
+          <div class="entry__draft"> Draft </div>
+        {% with false %}
+          {* Nothing! *}
+        {% /match %}
+        {% match external_link with null %}
+          {* Nothing! *}
+        {% with href %}
+          {% Entry_OriginalLink href strings /%}
+        {% /match %}
+      </footer>
+    </article>
+    <hr class="separator" />
+  {% with {data: {visible: false}} %}
+    {* Don't show invisible posts. *}
+  {% /map %}
 </main>
 <nav class="archive__nav">
   <div>

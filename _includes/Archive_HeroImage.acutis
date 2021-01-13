@@ -1,0 +1,20 @@
+<!-- Archive_HeroImage -->
+<img
+  src='{% ImgSrc height=300 width=600 gravity="auto" image /%}'
+  srcset='
+    {%~ match build with {heroImageBreakpoints_small}
+        map heroImageBreakpoints_small with {height, width}, 0
+    %}
+        {%~ ImgSrc gravity="auto" height width image /%} {{ width }}w
+      {%~ with {height, width} ~%}
+      , {%~ ImgSrc gravity="auto" height width image /%} {{ width }}w
+    {%~ /map /match ~%}
+  '
+  sizes="(max-width: 600px) 100vw, 600px"
+  alt="{{ alt }}"
+  class="archive__hero-image"
+  height="300"
+  width="600"
+  loading="lazy"
+/>
+<!-- /Archive_HeroImage -->

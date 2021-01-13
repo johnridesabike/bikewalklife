@@ -4,7 +4,12 @@ const markdownIt = require("markdown-it");
 const acutis = require("./eleventyAcutis");
 const htmlmin = require("html-minifier");
 
-const manifestPath = path.resolve(__dirname, "_site/assets/manifest.json");
+const manifestPath = path.resolve(
+  __dirname,
+  "_site",
+  "assets",
+  "manifest.json"
+);
 
 function mdImages(md, _ops) {
   const defaultRender = md.renderer.rules.image;
@@ -76,21 +81,25 @@ module.exports = (eleventyConfig) => {
       .slice(0, 12)
   );
 
+  const mdConfig = {
+    html: true,
+    breaks: false,
+    linkify: true,
+    typographer: true,
+  };
+  const md = markdownIt(mdConfig).use(mdImages);
+  const mdExcerpt = markdownIt(mdConfig).disable(["image"]);
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: (file, _options) => {
-      file.excerpt = file.content.split("\n").slice(0, 1).join(" ");
+      file.excerpt = mdExcerpt.renderInline(
+        file.content.split("\n").slice(0, 1).join(" ")
+      );
     },
   });
+  eleventyConfig.setLibrary("md", md);
+
   eleventyConfig.addPlugin(acutis);
-  eleventyConfig.setLibrary(
-    "md",
-    markdownIt({
-      html: true,
-      breaks: false,
-      linkify: true,
-      typographer: true,
-    }).use(mdImages)
-  );
+
   if (process.env.ELEVENTY_ENV === "production") {
     eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
       // Eleventy 1.0+: use this.inputPath and this.outputPath instead

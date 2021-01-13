@@ -31,4 +31,20 @@ module.exports = {
     1710,
     1800, // 2x size
   ].map((width) => ({ width, height: Math.ceil(width / 2) })),
+  // these are the same as markdown images
+  heroImageBreakpoints_small: [
+    320, // minimum mobile size
+    460,
+    600, // actual size
+    675,
+    750,
+    825,
+    900, // 1.5x actual size
+    950,
+    1000,
+    1050,
+    1100,
+    1150,
+    1200, // 2x actual size
+  ].map((width) => ({ width, height: Math.ceil(width / 2) })),
 };

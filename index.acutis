@@ -38,6 +38,7 @@ tags:
           formattedDate,
           draft,
           external_link,
+          absoluteUrl,
           visible: true
         }
       },
@@ -57,16 +58,9 @@ tags:
         class=""
         h="h2"
         build
-        Footer=#%}
-          <footer>
-            {% match external_link
-              with null %}
-              {* Nothing! *}
-            {% with href %}
-              {% Entry_OriginalLink href class="" style="" strings /%}
-            {% /match %}
-          </footer>
-        {%/#
+        absoluteUrl
+        external_link
+        strings
     /%}
     {% match index with 0 %}
       <div class="full-bleed">
