@@ -115,30 +115,34 @@ tags:
       }
   %}
     <article class="archive__entry h-entry">
-      {% match hero_image
-        with null %}
-        {* nothing! *}
-      {% with {image, alt, caption} %}
-        <figure class="archive__hero-figure">
-          {% Link href=url tabIndex=-1 %}
-            {% Archive_HeroImage image alt build /%}
+      <header>
+        {% match hero_image
+          with null %}
+          {* nothing! *}
+        {% with {image, alt, caption} %}
+          <figure class="archive__hero-figure">
+            {% Link href=url tabIndex=-1 %}
+              {% Archive_HeroImage image alt build /%}
+            {% /Link %}
+            {% match caption
+              with null
+              with "" %}
+              {* nothing! *}
+            {% with caption %}
+              <figcaption class="entry__caption"> {{ caption }} </figcaption>
+            {% /match %}
+          </figure>
+        {% /match %}
+        <h2 class="archive__entry-title p-name">
+          {% Link
+              current=page
+              href=absoluteUrl
+              class="u-url u-uid"
+          %}
+            {{ title }}
           {% /Link %}
-          {% match caption
-             with null
-             with "" %}
-             {* nothing! *}
-          {% with caption %}
-            <figcaption class="entry__caption"> {{ caption }} </figcaption>
-          {% /match %}
-        </figure>
-      {% /match %}
-      {% Link
-          current=page
-          href=absoluteUrl
-          class="archive__entry-title u-url u-uid"
-      %}
-        {{ title }}
-      {% /Link %}
+        </h2>
+      </header>
       <p class="font-size-small p-summary archive__entry-summary">
         {% raw excerpt %}
         {% Link
