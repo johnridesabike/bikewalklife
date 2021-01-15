@@ -1,8 +1,9 @@
 const path = require("path");
 const yaml = require("js-yaml");
 const markdownIt = require("markdown-it");
-const acutis = require("./eleventyAcutis");
 const htmlmin = require("html-minifier");
+const acutis = require("./eleventyAcutis");
+const acutisComponents = require("./_11ty/acutisComponents");
 
 const manifestPath = path.resolve(
   __dirname,
@@ -98,7 +99,9 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.setLibrary("md", md);
 
-  eleventyConfig.addPlugin(acutis);
+  eleventyConfig.addPlugin(acutis, {
+    components: acutisComponents,
+  });
 
   if (process.env.ELEVENTY_ENV === "production") {
     eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
