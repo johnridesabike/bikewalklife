@@ -4,7 +4,13 @@ const lang = "en-US";
 const timeZone = "America/New_York";
 
 module.exports = {
-  absoluteUrl: (data) => new URL(data.page.url, config.site_url).href,
+  absoluteUrl: (data) => {
+    if (data.page.url) {
+      return new URL(data.page.url, config.site_url).href;
+    } else {
+      return null;
+    }
+  },
   isoDate: (data) => data.page.date.toISOString(),
   sitemapDate: (data) =>
     data.page.date.toLocaleString(lang, { year: "numeric", timeZone }) +
