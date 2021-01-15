@@ -1,4 +1,8 @@
 {% match page with {excerpt, url} %}
+{% match absoluteUrl with null %}
+  {* Don't try to process pages without urls.
+     They won't render anyway but 11ty will still try to process them. *}
+{% with absoluteUrl %}
 {% Layout
    config
    strings
@@ -211,4 +215,4 @@ var page_url = "{% raw absoluteUrl %}";
 <script src="{% Webpack asset="shared.js" /%}"></script>
 <script src="{% Webpack asset="webmentions.js" /%}"></script>
 {% /Layout %}
-{% /match %}
+{% /match /match %}
