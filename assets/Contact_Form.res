@@ -225,17 +225,13 @@ let make = () => {
         />
       </Spread>
     </div>
-    <button disabled={form.submitting || !form.valid()} className="ui-font">
+    <button disabled={form.submitting} className="ui-font font-size-medium">
       {"Submit"->React.string}
     </button>
     {switch form.status {
     | Editing => React.null
     | Submitting(_) => <p> {"Submitting..."->React.string} </p>
-    | Submitted =>
-      <p>
-        <strong> {"Message submitted. "->React.string} </strong>
-        <span ariaHidden=true> {j`🎉`->React.string} </span>
-      </p>
+    | Submitted => <p> <strong> {"Message submitted!"->React.string} </strong> </p>
     | SubmissionFailed(_) =>
       <p className="contact-form__error">
         {"Something went wrong. Try again later."->React.string}
