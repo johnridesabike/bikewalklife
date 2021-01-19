@@ -98,11 +98,7 @@
         </div>
       </header>
       <div class="small-screen-padding content" id="content">
-        {%~ match content with null ~%}
-          {{ Children }}
-        {%~ with content ~%}
-          {%~ raw content ~%}
-        {%~ /match ~%}
+        {%~ raw content ? Children ~%}
       </div>
       <footer class="footer__wrapper">
         <div class="small-screen-padding footer">

@@ -141,7 +141,6 @@
      isoDate
      formattedDate
      draft
-     class=""
      h="h1"
      external_link
      build
@@ -155,7 +154,7 @@
     {% Entry_About description=intro avatar=image_small config strings page collections / %}
   {% /match %}
   <hr class="separator" />
-  {% Subscribe config strings class="" /%}
+  {% Subscribe config strings /%}
 </aside>
 <hr class="separator" />
 <nav class="entry-page__nav">

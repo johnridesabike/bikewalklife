@@ -1,6 +1,6 @@
 <!-- Subscribe -->
 {% match config with {title, feed_url} %}
-<section class="subscribe ui-font {{ class }}">
+<section class='subscribe ui-font {{ class ? "" }}'>
   <h2 class="subscribe__heading font-size-xlarge">
     Subscribe to {{ title }}
     <span aria-hidden="true"> 📡 </span>

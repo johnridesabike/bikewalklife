@@ -55,7 +55,6 @@ tags:
         isoDate
         formattedDate
         draft
-        class=""
         h="h2"
         build
         absoluteUrl
@@ -86,5 +85,5 @@ tags:
   {% /match %}
 </nav>
 <hr class="separator" />
-<aside> {% Subscribe config strings class="" /%} </aside>
+<aside> {% Subscribe config strings /%} </aside>
 {% /Layout %}
