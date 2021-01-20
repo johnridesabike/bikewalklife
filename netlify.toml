@@ -7,6 +7,10 @@
 
 # Fix changes from how dates were once written.
 [[redirects]]
+  from = "/2020/7/traffic-fatality-surge-reckless-driving/"
+  to = "/2020/08/traffic-fatality-surge-reckless-driving/"
+
+[[redirects]]
   from = "/2020/7/*"
   to = "/2020/07/:splat"
 
