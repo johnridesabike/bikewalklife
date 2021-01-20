@@ -5,27 +5,107 @@ module Json = Js.Json
 @val
 external encodeURIComponent: string => string = "encodeURIComponent"
 
+module Data = {
+  module Author = {
+    type t = {
+      name: string,
+      photo: string,
+    }
+
+    let fromJson = json =>
+      switch Json.decodeObject(json) {
+      | Some(dict) =>
+        let name =
+          dict
+          ->Js.Dict.get("name")
+          ->Option.flatMap(Json.decodeString)
+          ->Option.getWithDefault("Anonymous")
+        let photo = dict->Js.Dict.get("photo")->Option.flatMap(Json.decodeString)
+        switch photo {
+        | Some(photo) => Some({name: name, photo: photo})
+        | None => None
+        }
+      | None => None
+      }
+  }
+
+  type t = {
+    wmId: string,
+    wmProperty: [#like | #repost],
+    wmReceived: Js.Date.t,
+    published: option<Js.Date.t>,
+    url: string,
+    author: Author.t,
+  }
+
+  let fromJson = json =>
+    switch Json.decodeObject(json) {
+    | Some(dict) =>
+      let url = dict->Js.Dict.get("url")->Option.flatMap(Json.decodeString)
+      let author = dict->Js.Dict.get("author")->Option.flatMap(Author.fromJson)
+      let published =
+        dict
+        ->Js.Dict.get("published")
+        ->Option.flatMap(Json.decodeString)
+        ->Option.map(Js.Date.fromString)
+      let wmReceived =
+        dict
+        ->Js.Dict.get("wm-received")
+        ->Option.flatMap(Json.decodeString)
+        ->Option.map(Js.Date.fromString)
+      let wmProperty = dict
+      ->Js.Dict.get("wm-property")
+      ->Option.flatMap(Json.decodeString)
+      ->Option.flatMap(x =>
+        switch x {
+        | "like-of" => Some(#like)
+        | "repost-of" => Some(#repost)
+        | _ => None
+        }
+      )
+      let wmId =
+        dict
+        ->Js.Dict.get("wm-id")
+        ->Option.flatMap(Json.decodeNumber)
+        ->Option.map(Belt.Float.toString)
+      switch (url, author, wmReceived, wmProperty, wmId) {
+      | (Some(url), Some(author), Some(wmReceived), Some(wmProperty), Some(wmId)) =>
+        Some({
+          url: url,
+          author: author,
+          published: published,
+          wmReceived: wmReceived,
+          wmProperty: wmProperty,
+          wmId: wmId,
+        })
+      | _ => None
+      }
+    | None => None
+    }
+}
+
+module Response = {
+  type t = {children: array<Data.t>}
+  let fromJson = json => {
+    let dict = Json.decodeObject(json)
+    let children =
+      dict
+      ->Option.flatMap(x => Js.Dict.get(x, "children"))
+      ->Option.flatMap(Json.decodeArray)
+      ->Option.getWithDefault([])
+      ->Array.keepMap(Data.fromJson)
+    {children: children}
+  }
+}
+
 module Mention = {
   @react.component
-  let make = (~data) => {
-    let url = Js.Dict.get(data, "url")->Option.flatMap(Json.decodeString)
-    let author = Js.Dict.get(data, "author")->Option.flatMap(Json.decodeObject)
-    let name =
-      author
-      ->Option.flatMap(x => Js.Dict.get(x, "name"))
-      ->Option.flatMap(Json.decodeString)
-      ->Option.getWithDefault("Anonymous")
-    let photo =
-      author->Option.flatMap(x => Js.Dict.get(x, "photo"))->Option.flatMap(Json.decodeString)
-    switch (url, photo) {
-    | (Some(url), Some(photo)) =>
-      <div className="entry-page__webmentions-photo">
-        <a href={url} className="h-card u-url">
-          <img src={photo} alt={name} height="48" width="48" />
-        </a>
-      </div>
-    | _ => React.null
-    }
+  let make = (~data: Data.t) => {
+    <div className="entry-page__webmentions-photo">
+      <a href={data.url} className="h-card u-url">
+        <img src={data.author.photo} alt={data.author.name} height="48" width="48" />
+      </a>
+    </div>
   }
 }
 
@@ -37,51 +117,17 @@ let make = (~url) => {
     Fetch.fetch("https://webmention.io/api/mentions.jf2?target=" ++ encodeURIComponent(url))
     |> Js.Promise.then_(Fetch.Response.json)
     |> Js.Promise.then_(json => {
-      let mentions =
-        json
-        ->Json.decodeObject
-        ->Option.flatMap(x => Js.Dict.get(x, "children"))
-        ->Option.flatMap(Json.decodeArray)
-        ->Option.map(x => Array.keepMap(x, Json.decodeObject))
-        ->Option.getWithDefault([])
-        ->Belt.SortArray.stableSortBy((a, b) => {
-          // "published" time can be null
-          let a =
-            a
-            ->Js.Dict.get("wm-received")
-            ->Option.flatMap(Json.decodeString)
-            ->Option.map(Js.Date.parseAsFloat)
-          let b =
-            b
-            ->Js.Dict.get("wm-received")
-            ->Option.flatMap(Json.decodeString)
-            ->Option.map(Js.Date.parseAsFloat)
-          switch (a, b) {
-          | (Some(a), Some(b)) => compare(b, a)
-          | _ => 0
-          }
-        })
-      let reposts = Array.keepMap(mentions, dict =>
-        Js.Dict.get(dict, "wm-property")
-        ->Option.flatMap(Json.decodeString)
-        ->Option.flatMap(x =>
-          switch x {
-          | "repost-of" => Some(dict)
-          | _ => None
-          }
-        )
-      )->Array.slice(~offset=0, ~len=24)
+      let {children} = Response.fromJson(json)
+      let mentions = children->Belt.SortArray.stableSortBy((a, b) => {
+        // "published" time can be null
+        let a = Option.getWithDefault(a.published, a.wmReceived)->Js.Date.getTime
+        let b = Option.getWithDefault(b.published, b.wmReceived)->Js.Date.getTime
+        compare(b, a)
+      })
+      let reposts =
+        mentions->Array.keep(x => x.wmProperty == #repost)->Array.slice(~offset=0, ~len=24)
       setReposts(_ => reposts)
-      let likes = Array.keepMap(mentions, dict =>
-        Js.Dict.get(dict, "wm-property")
-        ->Option.flatMap(Json.decodeString)
-        ->Option.flatMap(x =>
-          switch x {
-          | "like-of" => Some(dict)
-          | _ => None
-          }
-        )
-      )->Array.slice(~offset=0, ~len=24)
+      let likes = mentions->Array.keep(x => x.wmProperty == #like)->Array.slice(~offset=0, ~len=24)
       setLikes(_ => likes)
       Js.Promise.resolve()
     })
@@ -94,14 +140,9 @@ let make = (~url) => {
     | reposts => <>
         <h2 className="entry-page__webmentions-header"> {"Retweeted by"->React.string} </h2>
         <ul className="entry-page__webmentions-reposts">
-          {Array.map(reposts, data => {
-            let id =
-              Js.Dict.get(data, "wm-id")
-              ->Option.flatMap(Json.decodeNumber)
-              ->Option.map(Belt.Float.toString)
-              ->Option.getWithDefault("BADBADFAIL")
-            <li key={id} className="entry-page__webmentions-item"> <Mention data /> </li>
-          })->React.array}
+          {Array.map(reposts, data =>
+            <li key={data.wmId} className="entry-page__webmentions-item"> <Mention data /> </li>
+          )->React.array}
         </ul>
       </>
     }}
@@ -110,14 +151,9 @@ let make = (~url) => {
     | likes => <>
         <h2 className="entry-page__webmentions-header"> {"Liked by"->React.string} </h2>
         <ul className="entry-page__webmentions-likes">
-          {Array.map(likes, data => {
-            let id =
-              Js.Dict.get(data, "wm-id")
-              ->Option.flatMap(Json.decodeNumber)
-              ->Option.map(Belt.Float.toString)
-              ->Option.getWithDefault("BADBADFAIL")
-            <li key={id} className="entry-page__webmentions-item"> <Mention data /> </li>
-          })->React.array}
+          {Array.map(likes, data =>
+            <li key={data.wmId} className="entry-page__webmentions-item"> <Mention data /> </li>
+          )->React.array}
         </ul>
       </>
     }}
