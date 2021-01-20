@@ -4,3 +4,16 @@
 
   [build.environment]
     NODE_VERSION = "14"
+
+# Fix changes from how dates were once written.
+[[redirects]]
+  from = "/2020/7/*"
+  to = "/2020/07/:splat"
+
+[[redirects]]
+  from = "/2020/8/*"
+  to = "/2020/08/:splat"
+
+[[redirects]]
+  from = "/2020/9/*"
+  to = "/2020/09/:splat"
