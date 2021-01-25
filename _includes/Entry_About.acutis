@@ -25,7 +25,7 @@
         </div>
       </div>
     {% /match %}
-    <div class="entry-page__about-content">{% raw description %}</div>
+    <div class="entry-page__about-content">{{ &description }}</div>
   </div>
   <p class="entry-page__about-link">
     {% match collections with {page_about: [{url}]} %}
@@ -39,7 +39,7 @@
   </p>
   {% match strings with {contact_text, contact_title} %}
     <h2 class="entry-page__footer-heading"> {{ contact_title}} </h2>
-    <div class="entry-page__about-content">{%raw contact_text %}</div>
+    <div class="entry-page__about-content">{{ &contact_text }}</div>
     <p class="entry-page__about-link">
       {% match collections with {page_contact: [{url}]} %}
         {% Link current=page href=url %}

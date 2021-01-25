@@ -15,7 +15,7 @@
         </a>
       </dd>
       {% match strings with {subscribe_feed_cta} %}
-        <dd> {% raw subscribe_feed_cta %} </dd>
+        <dd> {{ &subscribe_feed_cta }} </dd>
       {% /match %}
     </div>
     <div>
@@ -27,7 +27,7 @@
         </a>
       </dd>
       {% match strings with {subscribe_email_cta} %}
-        <dd> {% raw subscribe_email_cta %} </dd>
+        <dd> {{ &subscribe_email_cta }} </dd>
       {% /match %}
     </div>
   </dl>

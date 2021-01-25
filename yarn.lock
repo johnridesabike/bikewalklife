@@ -555,10 +555,10 @@ acorn@^8.0.4:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.0.4.tgz#7a3ae4191466a6984eee0fe3407a4f3aa9db8354"
   integrity sha512-XNP0PqF1XD19ZlLKvB7cMmnZswW4C/03pRHgirB30uSJTaS3A3V1/P4sS3HPvFmjoriPCJQs+JDSbm4bL1TxGQ==
 
-acutis-lang@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/acutis-lang/-/acutis-lang-0.6.0.tgz#ccca1eec86774bdb1128dcc72160e6f79cb3e63d"
-  integrity sha512-Z8miA4fM2GNaXkt+rmmxGJWF3xDSdoU388vu02+RUb0tizTFrQto11fwhXm9EXFuWMtSC2zo98Phbb8Z9zBRwg==
+acutis-lang@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/acutis-lang/-/acutis-lang-0.7.0.tgz#a840f3d3046d6ead79c5c33c88839c2dd02f04de"
+  integrity sha512-zRIQYXSf9knbkMNtY5IJlnG/wYPBXE2LtLGQ0p6r5KB5t85ery7frKmZ6SSC+E9F2cX4wbiAZlV4sMsp6ZXQ9Q==
   dependencies:
     minimist "^1.2.5"
 

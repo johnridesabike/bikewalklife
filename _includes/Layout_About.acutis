@@ -56,8 +56,8 @@
         </div>
       </figure>
     {% /match %}
-    <div class="serif about__intro"> {% raw intro %} </div>
-    <div class="serif"> {% raw content %} </div>
+    <div class="serif about__intro"> {{ &intro }} </div>
+    <div class="serif"> {{ &content }} </div>
   </main>
   <aside> {% Subscribe config strings /%} </aside>
 {% /Layout %}

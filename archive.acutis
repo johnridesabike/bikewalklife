@@ -144,7 +144,7 @@ tags:
         </h2>
       </header>
       <p class="font-size-small p-summary archive__entry-summary">
-        {% raw excerpt %}
+        {{ &excerpt }}
         {% Link
           current=page
           href=url

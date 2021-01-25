@@ -98,12 +98,12 @@
         </div>
       </header>
       <div class="small-screen-padding content" id="content">
-        {%~ raw content ? Children ~%}
+        {{~ &content ? Children ~}}
       </div>
       <footer class="footer__wrapper">
         <div class="small-screen-padding footer">
           {% match strings with {copyright} ~%}
-            <p class="footer__item footer__copyright">{% raw copyright %}</p>
+            <p class="footer__item footer__copyright">{{ &copyright }}</p>
           {% /match ~%}
           <p class="footer__item">
             {%~ Link current=page href=url_index activeClassName="" ~%}

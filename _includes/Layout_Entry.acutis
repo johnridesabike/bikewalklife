@@ -209,7 +209,7 @@
   </ul>
 </nav>
 <script>
-var page_url = "{% raw absoluteUrl %}";
+var page_url = "{{ &absoluteUrl }}";
 </script>
 <script src="{% Webpack asset="shared.js" /%}"></script>
 <script src="{% Webpack asset="webmentions.js" /%}"></script>

@@ -37,7 +37,7 @@
       {% with false %} {* nothing! *}
       {% /match %}
     </header>
-    <div class="e-content">{% raw content %}</div>
+    <div class="e-content">{{ &content }}</div>
     <footer class="entry__footer">
       <div class="entry__permalink">
         <a href="{{ absoluteUrl }}" class="u-url u-uid">
