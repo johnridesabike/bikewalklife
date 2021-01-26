@@ -96,16 +96,14 @@ let make = () => {
         (),
       ),
     )
-    |> Js.Promise.then_(x => {
+    ->Promise.map(_ => {
       callback.notifyOnSuccess(Some(initialInput))
-      Js.Promise.resolve(x)
     })
-    |> Js.Promise.catch(x => {
+    ->Promise.catch(x => {
       callback.notifyOnFailure()
       Js.Console.error(x)
-      Js.Promise.reject(Failure(Js.String.make(x)))
     })
-    |> ignore
+    ->ignore
   )
   <Netlify
     formName

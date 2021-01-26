@@ -299,6 +299,11 @@
   dependencies:
     tslib "^2.0.0"
 
+"@ryyppy/rescript-promise@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@ryyppy/rescript-promise/-/rescript-promise-0.0.2.tgz#9b9dccd724b40b7836e52158bc34deed8a75dddf"
+  integrity sha512-kKW7rWbtW63CM25JodnCIbBPP8sIiqxLgY2EGLFc9yj9nJTuPMLq08k8QY2v+ZMCiiOGD0AmY2lE7T3NRJqySA==
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.9.tgz#01d7b86949f455402a94c788883fe4ba574cad41"

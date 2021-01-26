@@ -115,8 +115,8 @@ let make = (~url) => {
   let (likes, setLikes) = React.useState(() => [])
   React.useEffect0(() => {
     Fetch.fetch("https://webmention.io/api/mentions.jf2?target=" ++ encodeURIComponent(url))
-    |> Js.Promise.then_(Fetch.Response.json)
-    |> Js.Promise.then_(json => {
+    ->Promise.then(Fetch.Response.json)
+    ->Promise.map(json => {
       let {children} = Response.fromJson(json)
       let mentions = children->Belt.SortArray.stableSortBy((a, b) => {
         // "published" time can be null
@@ -129,9 +129,8 @@ let make = (~url) => {
       setReposts(_ => reposts)
       let likes = mentions->Array.keep(x => x.wmProperty == #like)->Array.slice(~offset=0, ~len=24)
       setLikes(_ => likes)
-      Js.Promise.resolve()
     })
-    |> ignore
+    ->ignore
     None
   })
   <div className="entry-page__webmentions">
