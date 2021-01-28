@@ -60,7 +60,7 @@ module.exports.Webpack = (env, props, _children) =>
 const linkAst = Compile.makeAst(
   `<a
   href="{{ href }}"
-  class="{{ class }} {{ activeClassName }} "
+  class='{{ class ? "" }} {{ activeClassName ? "" }}'
   {% match current with null %} {* Nothing! *}
   {% with x %} aria-current="{{ x }}" 
   {% /match %}
@@ -69,7 +69,7 @@ const linkAst = Compile.makeAst(
   {%~ with x %} style="{{ x }}"
   {%~ /match ~%}
 
-  {%~ match tabindex with null ~%} {* Nothing! *}
+  {%~ match tabIndex with null ~%} {* Nothing! *}
   {%~ with x %} tabindex="{{ x }}"
   {%~ /match ~%}
 >
@@ -88,13 +88,13 @@ module.exports.Link = (env, props, children) => {
       activeClassName = props.activeClassName;
     }
   } else {
-    activeClassName = "";
+    activeClassName = null;
   }
   return env.render(
     linkAst,
     {
       href: props.href || null,
-      class: props.class || "",
+      class: props.class || null,
       style: props.style || null,
       tabIndex: props.tabIndex || null,
       activeClassName: activeClassName,
