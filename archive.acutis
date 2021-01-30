@@ -2,7 +2,7 @@
 title: Archive
 pagination:
   data: collections.posts
-  size: 100
+  size: 24
   alias: posts
 tags:
 - page_archive
@@ -71,6 +71,8 @@ tags:
       .archive__nav {
         display: flex;
         justify-content: space-between;
+        font-size: var(--font-size-lg);
+        text-transform: uppercase;
       }
 
       .archive__entry .entry__link {
@@ -172,29 +174,29 @@ tags:
   {% with {data: {visible: false}} %}
     {* Don't show invisible posts. *}
   {% /map %}
+  <nav class="archive__nav">
+    <div>
+      {% match pagination with {href: {previous: null}} %} {* Nothing! *}
+      {% with {href: {previous}} %}
+        <a href="{{ previous }}" rel="prev">
+          <span aria-hidden="true">
+            {% Icon name="arrow-left" class="icon" /%}
+          </span>
+          previous
+        </a>
+      {% /match %}
+    </div>
+    <div>
+      {% match pagination with {href: {next: null}} %} {* Nothing! *}
+      {% with {href: {next}} %}
+        <a href="{{ next }}" rel="next">
+          next
+          <span aria-hidden="true">
+            {% Icon name="arrow-right" class="icon" /%}
+          </span>
+        </a>
+      {% /match %}
+    </div>
+  </nav>
 </main>
-<nav class="archive__nav">
-  <div>
-    {% match pagination with {href: {previous: null}} %} {* Nothing! *}
-    {% with {href: {previous}} %}
-      <a href="{{ previous }}">
-        <span aria-hidden="true">
-          {% Icon name="arrow-left" class="icon" /%}
-        </span>
-        previous
-      </a>
-    {% /match %}
-  </div>
-  <div>
-    {% match pagination with {href: {next: null}} %} {* Nothing! *}
-    {% with {href: {next}} %}
-      <a href="{{ next }}">
-        next
-        <span aria-hidden="true">
-          {% Icon name="arrow-right" class="icon" /%}
-        </span>
-      </a>
-    {% /match %}
-  </div>
-</nav>
 {% /Layout %}

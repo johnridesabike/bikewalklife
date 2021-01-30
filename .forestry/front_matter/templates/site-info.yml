@@ -17,17 +17,6 @@ fields:
   label: Site URL
   config:
     required: true
-- name: archive_per_page
-  type: number
-  label: Items per archive page
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
-    required: true
 - name: feed_url
   type: text
   config:
