@@ -263,6 +263,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/cooper-hewitt/-/cooper-hewitt-4.1.0.tgz#01ef628fcf30456bd11285e4e2667e509cc86668"
   integrity sha512-QhkxwAMPB0PqESDCMJTxTtr1h+IPdVK2UqQO1O4DraaO2iJVozLQqQbvMCKKURYvRIRsjBk4/3hrMSrliwJxWw==
 
+"@fontsource/source-serif-pro@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/source-serif-pro/-/source-serif-pro-4.1.0.tgz#d2962b9577ed263fc603d7353569efb08f294b6c"
+  integrity sha512-5BUCOS6qCH/jycOarIzwbKuUt4cKslwGtM11Bf8U3TCSZt3Uggr0MjJXRyBXRGH4psAdhctMKySp1ywbmHfhsw==
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
@@ -1203,11 +1208,6 @@ character-parser@^2.1.1:
   integrity sha1-x84o821LzZdE5f/CxfzeHHMmH8A=
   dependencies:
     is-regex "^1.0.3"
-
-charter-webfont@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/charter-webfont/-/charter-webfont-3.0.2.tgz#8002e1640f986089b7aa499c6c6b974325b20252"
-  integrity sha512-8B70LYAkbDLN52xcIsCacntXohx0HKPXdecZZ8SfngTg///HcdAio75d0ZsMz9zwHgo5D7Dk4do498PvMG5KAA==
 
 chokidar@^3.3.0, chokidar@^3.4.0, chokidar@^3.5.1:
   version "3.5.1"
