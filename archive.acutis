@@ -95,7 +95,15 @@ tags:
 %}
 <main class="h-feed">
   {% match config with {title: site_title} %}
-    <h1 class="archive__page-title p-name"> {{ site_title }}: {{ title }} </h1>
+    <h1 class="archive__page-title p-name">
+      {{ site_title }} {{ title }}
+      {% match pagination
+        with {pageNumber: 0} %} 
+          {* Nothing! *}
+      {% with {pageNumber} %}
+        - page {% PageNumber pageNumber /%}
+      {% /match %}
+    </h1>
   {% /match %}
   {% map posts with
       {

@@ -224,3 +224,6 @@ module.exports.Favicon = (env, { file, width }, _children) => {
     return result;
   }
 };
+
+module.exports.PageNumber = (env, { pageNumber }, _children) =>
+  env.return(String(pageNumber + 1));
