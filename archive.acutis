@@ -44,9 +44,9 @@ tags:
       }
 
       .archive__entry-title {
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-xl);
         line-height: 1.25;
-        font-family: var(--font-ui);
+        font-family: var(--font-sans-serif);
         flex-basis: 100%;
         margin-bottom: 0.5em;
       }
@@ -72,6 +72,7 @@ tags:
         display: flex;
         justify-content: space-between;
         font-size: var(--font-size-lg);
+        font-family: var(--font-ui);
         text-transform: uppercase;
       }
 
