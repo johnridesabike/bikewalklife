@@ -15,14 +15,22 @@ const postcssWithOptions = postcss([
   postcssCustomMedia({ importFrom: cssMedia }),
 ]);
 
+const postcssCache = new Map();
+
 module.exports.PostCss = (env, _props, { Children }) => {
   if (Children) {
-    return env.flatMapChild(Children, (content) =>
-      postcssWithOptions
-        .process(content, { from: undefined })
-        .then(env.return)
-        .catch(env.error)
-    );
+    return env.flatMapChild(Children, (content) => {
+      if (postcssCache.has(content)) {
+        return postcssCache.get(content);
+      } else {
+        const result = postcssWithOptions
+          .process(content, { from: undefined })
+          .then(env.return)
+          .catch(env.error);
+        postcssCache.set(content, result);
+        return result;
+      }
+    });
   } else {
     return env.error("PostCss requires a stylesheet as children.");
   }
@@ -197,12 +205,22 @@ module.exports.ImgSrcStatic = (env, { transforms, image }, _children) => {
   return env.return(cloudinary_url + "/" + opts + "/" + image);
 };
 
-module.exports.Favicon = (env, props, _children) =>
-  Image(path.join(__dirname, "..", props.file), {
-    widths: [props.width],
-    formats: ["png"],
-    urlPath: "/",
-    outputDir: path.join(__dirname, "..", "_site"),
-    filenameFormat: (_id, _src, width, format, _options) =>
-      `favicon-${width}.${format}`,
-  }).then((metadata) => env.return(metadata.png[0].url));
+const faviconCache = new Map();
+
+module.exports.Favicon = (env, { file, width }, _children) => {
+  const key = `${file}-${width}`;
+  if (faviconCache.has(key)) {
+    return faviconCache.get(key);
+  } else {
+    const result = Image(path.join(__dirname, "..", file), {
+      widths: [width],
+      formats: ["png"],
+      urlPath: "/",
+      outputDir: path.join(__dirname, "..", "_site"),
+      filenameFormat: (_id, _src, width, format, _options) =>
+        `favicon-${width}.${format}`,
+    }).then((metadata) => env.return(metadata.png[0].url));
+    faviconCache.set(key, result);
+    return result;
+  }
+};
