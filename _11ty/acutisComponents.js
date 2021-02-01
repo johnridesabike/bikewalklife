@@ -42,7 +42,7 @@ module.exports.Debugger = (env, _props, _children) => {
 };
 
 const manifestFile = fs
-  .readFile(path.resolve(__dirname, "..", "_site/assets/manifest.json"), {
+  .readFile(path.resolve(__dirname, "..", "_site", "assets", "manifest.json"), {
     encoding: "utf8",
   })
   .then((x) => JSON.parse(x));
@@ -52,6 +52,20 @@ module.exports.Webpack = (env, props, _children) =>
     const x = data[props.asset];
     if (x) {
       return env.return(x);
+    } else {
+      return env.error(`${props.asset} doesn't exist in the manifest.`);
+    }
+  });
+
+module.exports.WebpackInline = (env, props, _children) =>
+  manifestFile.then((data) => {
+    const assetPath = data[props.asset];
+    if (assetPath) {
+      return fs
+        .readFile(path.resolve(__dirname, "..", "_site", "." + assetPath), {
+          encoding: "utf8",
+        })
+        .then((data) => env.return(data));
     } else {
       return env.error(`${props.asset} doesn't exist in the manifest.`);
     }
