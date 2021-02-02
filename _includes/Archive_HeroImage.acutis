@@ -1,14 +1,29 @@
 <!-- Archive_HeroImage -->
+{* 320: mobile size. 600: actual size. *}
 <img
-  src='{% ImgSrc height=300 width=600 gravity="auto" image /%}'
+  src='{% ImgSrc width=600 aspect=0.5 gravity="auto" image /%}'
   srcset='
-    {%~ match build with {heroImageBreakpoints_small}
-        map heroImageBreakpoints_small with {height, width}, 0
+    {%~ map [
+          320, 
+          460,
+          600, 
+          675,
+          750,
+          825,
+          900, 
+          950,
+          1000,
+          1050,
+          1100,
+          1150,
+          1200
+        ]
+        with width, 0
     %}
-        {%~ ImgSrc gravity="auto" height width image /%} {{ width }}w
-      {%~ with {height, width} ~%}
-      , {%~ ImgSrc gravity="auto" height width image /%} {{ width }}w
-    {%~ /map /match ~%}
+      {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ width }}w
+    {%~ with width ~%}
+      , {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ width }}w
+    {%~ /map ~%}
   '
   sizes="(max-width: 600px) 100vw, 600px"
   alt="{{ alt }}"

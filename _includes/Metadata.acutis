@@ -47,7 +47,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       property="og:image"
-      content='{% ImgSrc gravity="auto" height=450 width=900 image /%}'
+      content='{% ImgSrc gravity="auto" width=900 aspect=0.5 image /%}'
     />
     <meta property="og:image:width" content="900" />
     <meta property="og:image:height" content="450" />

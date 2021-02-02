@@ -18,9 +18,9 @@ The city of Cambridge, Massachusetts will [soon be the first US city to put warn
 
 Kea Wilson at Streetsblog asks, why stop there? [Why not put warning labels on the cars themselves](https://usa.streetsblog.org/2020/11/30/surgeon-general-warning-this-car-is-dangerous/)? Here are a couple of their concepts:
 
-![Car with a warning: "This massive vehicle is six times more likely to kill or injure a small child."](https://res.cloudinary.com/bike-walk-life/image/upload/if_w_gt_600,c_scale,w_600/f_auto/v1608060006/2020/cadillac-grill.jpg)
+![Car with a warning: "This massive vehicle is six times more likely to kill or injure a small child."](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto/v1608060006/2020/cadillac-grill.jpg)
 
-![Car with a bull bar and a warning: "These things kill so many kids they are banned outside the U.S."](https://res.cloudinary.com/bike-walk-life/image/upload/if_w_gt_600,c_scale,w_600/f_auto/v1608060006/2020/Bull-Bar.jpg)
+![Car with a bull bar and a warning: "These things kill so many kids they are banned outside the U.S."](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto/v1608060006/2020/Bull-Bar.jpg)
 
 (Image credit: Streetsblog.)
 

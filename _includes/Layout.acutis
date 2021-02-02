@@ -18,8 +18,15 @@
   <meta charset="utf-8"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  {% match build with {preloadAssets}
-     map preloadAssets with asset
+  {% map [
+      "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-italic.woff2",
+      "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-normal.woff2",
+      "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-italic.woff2",
+      "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-normal.woff2",
+      "node_modules/@fontsource/cooper-hewitt/files/cooper-hewitt-all-400-normal.woff2",
+      "node_modules/@fontsource/cooper-hewitt/files/cooper-hewitt-all-400-italic.woff2"
+    ]
+    with asset
   ~%}
     <link
       rel="preload"
@@ -27,7 +34,7 @@
       crossorigin
       href="{% Webpack asset /%}"
      />
-  {% /map /match ~%}
+  {% /map ~%}
   {%~ match metadata with null %}
     {% Metadata config title metadata=null absoluteUrl / %}
   {%~ with metadata ~%}

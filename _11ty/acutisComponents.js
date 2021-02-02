@@ -180,7 +180,8 @@ const contactForm = require("../assets/contact-form-server");
 module.exports.ReactFormHtml = (env, _props, _children) =>
   env.return(contactForm.render());
 
-module.exports.ImgSrc = (env, { height, width, gravity, image }, _children) => {
+module.exports.ImgSrc = (env, { width, aspect, gravity, image }, _children) => {
+  const height = Math.ceil(width * aspect);
   const opts =
     "/" +
     encodeURIComponent(

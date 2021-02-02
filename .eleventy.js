@@ -21,7 +21,7 @@ function mdImages(md, _ops) {
     // Add srcset
     // This is very hacky! It should be replaced with something better!
     const src = token.attrs[token.attrIndex("src")][1];
-    const [head, tail] = src.split("if_w_gt_600,c_scale,w_600"); // from forestry config
+    const [head, tail] = src.split("t_md_body_retina"); // from forestry config
     if (head && tail) {
       // This will upscale images.
       // Are these the best breakpoints? I have no idea!

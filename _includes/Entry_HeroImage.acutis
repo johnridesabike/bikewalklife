@@ -1,13 +1,29 @@
 <!-- Entry_HeroImage -->
+{* 320: mobile size. 900: actual size. *}
 <img
-  src='{% ImgSrc height=450 width=900 gravity="auto" image /%}'
+  src='{% ImgSrc width=900 aspect=0.5 gravity="auto" image /%}'
   srcset='
-    {%~ match build with {heroImageBreakpoints} map heroImageBreakpoints
-        with {height, width}, 0 %}
-        {%~ ImgSrc gravity="auto" height width image /%} {{ width }}w
-      {%~ with {height, width} ~%}
-      , {%~ ImgSrc gravity="auto" height width image /%} {{ width }}w
-    {%~ /map /match ~%}
+    {%~ map [
+          320,
+          520,
+          720,
+          900,
+          1000,
+          1200,
+          1300,
+          1350,
+          1440,
+          1530,
+          1620,
+          1710,
+          1800
+        ]
+        with width, 0
+      %}
+        {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ width }}w
+      {%~ with width ~%}
+      , {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ width }}w
+    {%~ /map ~%}
   '
   sizes="(max-width: 900px) 100vw, 900px"
   alt="{{ alt }}"
