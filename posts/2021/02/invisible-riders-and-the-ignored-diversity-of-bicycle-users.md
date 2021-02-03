@@ -1,5 +1,5 @@
 ---
-date: 2021-02-01T16:14:26-05:00
+date: 2021-02-01T16:14:26.000-05:00
 draft: false
 title: It’s time to stop ignoring invisible bicycle riders
 author: John Jackson
@@ -32,14 +32,14 @@ This topic echoes an article published by Bicycling Magazine way back in 2006: [
 >
 > For the Invisible Riders, two-wheeled transit has nothing to do with style or making a political statement. The Invisible Riders are overtly saying nothing. But their actions? Nothing could be more political, or politically charged, than the way they live.
 
-I’m as guilty as anyone else for ignoring these “invisible riders.” I didn’t notice them until after I began commuting myself. As I spent time riding around neighborhoods, downtowns, and trails, I saw that most other riders are not the lycra-clad men racing for Strava records. Most riders I saw had box-store bicycles with saddles held together with duct-tape, and DIY panniers built with scrap and an impressive amount of ingenuity. The riders are also very diverse, people from all ages and ethnicities (although still mostly men).
+I’m as guilty as anyone else for ignoring these “invisible riders.” I didn’t first notice them until after I began commuting myself. As I spent time riding around neighborhoods, downtowns, and trails, I saw that most other riders are not the lycra-clad men racing for Strava records. Most riders I saw had box-store bicycles with saddles held together with duct-tape, and DIY panniers built with scrap and an impressive amount of ingenuity. The riders are also very diverse, people from all ages and ethnicities (although still mostly men).
 
-Most striking of all is that these riders are ubiquitous. Once you notice them, you can’t stop noticing them everywhere.
+Most striking of all is that these riders are ubiquitous. Once you notice them once, you can’t stop noticing them everywhere.
 
 These minority bicycle riders are rarely seen “taking the lane” and competing with cars for space on the street. Even though they don’t keep a pocket bike law guide with them, they know the de-facto rules of the road better than anyone else. (Which often differ from the _legal_ rules of the road.) Cycling may not be their passion, but it is their life.
 
 Columbus, GA has expanded its trail network over recent years. It’s marketed as something for relatable, hip, middle-class people. That’s just how marketing works, I suppose, and there’s nothing intrinsically wrong with it. But I see far more low-income bicycle riders on those trails than other kinds of riders, and they’re a much more diverse population than the photogenic people who we may publicly associate with trail users.
 
-This goes back to Taylor’s question: why do we ignore these riders? By most accounts, they should be the face of bicycling. Sure, they don’t participate in clubs or group-rides, but they probably ride more than anyone else.
+This goes back to Taylor’s question: why do we ignore minority riders? By most accounts, they should be the face of bicycling. Sure, they don’t participate in clubs or group-rides, but they ride more than anyone else.
 
 And it raises another question for me: if we already invest in local programs to assist marginalized people, why not make that an official mission of bicycle infrastructure as well? Our wealthy population is excited to fund institutions like libraries and homelessness programs as a way to help the underprivileged. Why aren’t we honest about who benefits the most from bicycle infrastructure? Why do we mainly invest in it for the sake of making the privileged more comfortable?
