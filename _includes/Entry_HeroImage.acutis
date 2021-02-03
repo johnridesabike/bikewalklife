@@ -27,7 +27,7 @@
   '
   sizes="(max-width: 900px) 100vw, 900px"
   alt="{{ alt }}"
-  class="entry__hero-image"
+  class="entry__hero-image u-featured"
   height="450"
   width="900"
   loading="lazy"
