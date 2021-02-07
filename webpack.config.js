@@ -1,8 +1,8 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
+const { ESBuildPlugin, ESBuildMinifyPlugin } = require("esbuild-loader");
 
 const isDev = process.env.NODE_ENV !== "production";
 const cssVariables = path.resolve(__dirname, "assets", "variables.css");
@@ -46,6 +46,7 @@ module.exports = {
   },
   plugins: [
     new WebpackManifestPlugin(),
+    new ESBuildPlugin(),
     new MiniCssExtractPlugin({
       filename: isDev ? "[name].css" : "[name].[contenthash].css",
     }),
@@ -53,14 +54,23 @@ module.exports = {
   optimization: isDev
     ? {}
     : {
-        minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
+        minimize: true,
+        minimizer: [
+          new ESBuildMinifyPlugin({
+            target: "es2015",
+          }),
+          new CssMinimizerPlugin(),
+        ],
       },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: "esbuild-loader",
+        options: {
+          target: "es2015",
+        },
       },
       {
         test: /\.s?css/i,
