@@ -15,6 +15,7 @@
   "scripts": {
     "analyze": "npm-run-all build analyze:*",
     "analyze:js": "source-map-explorer _site/**/*.js _site/**/*.js.map",
+    "benchmark:html": "DEBUG=Eleventy:Benchmark* yarn build:html",
     "build": "npm-run-all -l build:rescript build:assets build:html",
     "build:assets": "NODE_ENV=production webpack",
     "build:html": "ELEVENTY_EXPERIMENTAL=true ELEVENTY_ENV=production eleventy --quiet",
