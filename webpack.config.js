@@ -32,9 +32,9 @@ module.exports = {
     shared: [
       "react",
       "react-dom",
-      "bs-platform/lib/es6/curry.js",
-      "bs-platform/lib/es6/belt_Array.js",
-      "bs-platform/lib/es6/caml_option.js",
+      "bs-platform/lib/es6/curry.mjs",
+      "bs-platform/lib/es6/belt_Array.mjs",
+      "bs-platform/lib/es6/caml_option.mjs",
       "bs-fetch/lib/es6/src/Fetch.bs.js",
     ],
     style: path.resolve(__dirname, "assets", "style.css"),
