@@ -2,7 +2,7 @@
 date: 2021-02-10T13:31:10-05:00
 draft: false
 title: Living near car traffic is linked to dementia, Parkinson’s, Alzheimer’s, and
-  MS according to a study.
+  MS according to a study
 author: John Jackson
 hero_image:
   image: ''
