@@ -1,5 +1,6 @@
 const { Compile, Environment } = require("acutis-lang");
 const { loadTemplate, filenameToComponent } = require("acutis-lang/node-utils");
+const path = require("path");
 const fastGlob = require("fast-glob");
 
 module.exports = (eleventyConfig, config) => {
@@ -18,8 +19,13 @@ module.exports = (eleventyConfig, config) => {
   eleventyConfig.addExtension("acutis", {
     read: true,
     data: true,
-    init: () =>
-      fastGlob("./_includes/**/*.acutis")
+    init: function () {
+      const filesGlob = path.join(
+        this.config.inputDir,
+        this.config.dir.includes,
+        "**/*.acutis"
+      );
+      return fastGlob(filesGlob)
         .then((files) =>
           files.map((fileName) =>
             loadTemplate(fileName)
@@ -35,7 +41,8 @@ module.exports = (eleventyConfig, config) => {
         .then(() => {
           env = Environment.Async.make(components);
           cache.clear();
-        }),
+        });
+    },
     compile: (src, inputPath) => (props) => {
       // I hope caching this doesn't break anything! This isn't a performance
       // bottleneck but *seems* like it can't hurt.
