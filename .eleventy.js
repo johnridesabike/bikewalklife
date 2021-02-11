@@ -2,7 +2,7 @@ const path = require("path");
 const yaml = require("js-yaml");
 const markdownIt = require("markdown-it");
 const htmlmin = require("html-minifier");
-const acutis = require("./eleventyAcutis");
+const acutis = require("./_11ty/eleventyAcutis");
 const acutisComponents = require("./_11ty/acutisComponents");
 
 const manifestPath = path.resolve(
