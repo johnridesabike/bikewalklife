@@ -1,20 +1,13 @@
 const { Compile, Environment } = require("acutis-lang");
-const { loadTemplate, filenameToComponent } = require("acutis-lang/node-utils");
+const { filenameToComponent } = require("acutis-lang/node-utils");
 const path = require("path");
 const fastGlob = require("fast-glob");
+const fs = require("fs/promises");
+
+const cache = new Map();
 
 module.exports = (eleventyConfig, config) => {
-  const components = { ...config.components };
-  // Remove stale cache.
-  eleventyConfig.on("beforeWatch", (files) =>
-    files.forEach((file) => {
-      if (file.endsWith(".js")) {
-        delete require.cache[require.resolve(file)];
-      }
-    })
-  );
-  let env = Environment.Async.make(components);
-  const cache = new Map();
+  let env = Environment.Async.make({});
   eleventyConfig.addTemplateFormats("acutis");
   eleventyConfig.addExtension("acutis", {
     read: true,
@@ -25,22 +18,25 @@ module.exports = (eleventyConfig, config) => {
         this.config.dir.includes,
         "**/*.acutis"
       );
+      const components = {};
       return fastGlob(filesGlob)
         .then((files) =>
-          files.map((fileName) =>
-            loadTemplate(fileName)
-              .then((file) => {
-                if (file) {
-                  components[filenameToComponent(fileName)] = file;
-                }
-              })
-              .catch((e) => console.warn(e.message))
+          Promise.all(
+            files.map((fileName) =>
+              fs
+                .readFile(fileName, "utf-8")
+                .then((src) => {
+                  if (!cache.has(src)) {
+                    cache.set(src, Compile.make(src, fileName));
+                  }
+                  components[filenameToComponent(fileName)] = cache.get(src);
+                })
+                .catch((e) => console.error(e.message))
+            )
           )
         )
-        .then((files) => Promise.all(files))
         .then(() => {
-          env = Environment.Async.make(components);
-          cache.clear();
+          env = Environment.Async.make({ ...components, ...config.components });
         });
     },
     compile: (src, inputPath) => (props) => {
@@ -49,15 +45,16 @@ module.exports = (eleventyConfig, config) => {
       if (!cache.has(src)) {
         cache.set(src, Compile.make(src, inputPath));
       }
-      const template = cache.get(src);
-      return template(env, props, {}).then(({ NAME, VAL }) => {
-        if (NAME === "errors") {
-          console.error(VAL);
-          throw new Error(`Error with ${props.permalink}`);
-        } else {
-          return VAL;
-        }
-      });
+      return cache
+        .get(src)(env, props, {})
+        .then(({ NAME, VAL }) => {
+          if (NAME === "errors") {
+            console.error(VAL);
+            throw new Error(`Error with ${props.permalink}`);
+          } else {
+            return VAL;
+          }
+        });
     },
   });
 };
