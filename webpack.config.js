@@ -35,7 +35,7 @@ module.exports = {
       "bs-platform/lib/es6/curry.mjs",
       "bs-platform/lib/es6/belt_Array.mjs",
       "bs-platform/lib/es6/caml_option.mjs",
-      "bs-fetch/lib/es6/src/Fetch.bs.js",
+      "bs-fetch/lib/es6/src/Fetch.mjs",
     ],
     style: path.resolve(__dirname, "assets", "style.css"),
   },
