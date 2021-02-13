@@ -13,14 +13,15 @@
   "package-specs": [
     {
       "module": "commonjs",
-      "in-source": false
+      "in-source": false,
+      "suffix": ".js"
     },
     {
       "module": "es6",
-      "in-source": false
+      "in-source": false,
+      "suffix": ".mjs"
     }
   ],
-  "suffix": ".bs.js",
   "namespace": true,
   "bs-dependencies": [
     "reason-react",

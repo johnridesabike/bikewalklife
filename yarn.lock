@@ -309,10 +309,10 @@
   resolved "https://registry.yarnpkg.com/@rescript/std/-/std-9.0.0.tgz#df53f3fa5911cb4e85bd66b92e9e58ddf3e4a7e1"
   integrity sha512-zGzFsgtZ44mgL4Xef2gOy1hrRVdrs9mcxCOOKZrIPsmbZW14yTkaF591GXxpQvjXiHtgZ/iA9qLyWH6oSReIxQ==
 
-"@ryyppy/rescript-promise@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@ryyppy/rescript-promise/-/rescript-promise-0.0.2.tgz#9b9dccd724b40b7836e52158bc34deed8a75dddf"
-  integrity sha512-kKW7rWbtW63CM25JodnCIbBPP8sIiqxLgY2EGLFc9yj9nJTuPMLq08k8QY2v+ZMCiiOGD0AmY2lE7T3NRJqySA==
+"@ryyppy/rescript-promise@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ryyppy/rescript-promise/-/rescript-promise-1.0.0.tgz#cf47768d8bde149078b64cb1acd512086f9531ea"
+  integrity sha512-9CPUy2ZQ6qG8746Fo2OfR/WO9MoDrAWcg1rHixtif/7zkPqzoZobn3qxu3DpvTQg63ZVIbz45BNJpI8ECE38UA==
 
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.9"

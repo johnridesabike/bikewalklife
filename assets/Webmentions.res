@@ -53,16 +53,17 @@ module Data = {
         ->Js.Dict.get("wm-received")
         ->Option.flatMap(Json.decodeString)
         ->Option.map(Js.Date.fromString)
-      let wmProperty = dict
-      ->Js.Dict.get("wm-property")
-      ->Option.flatMap(Json.decodeString)
-      ->Option.flatMap(x =>
-        switch x {
-        | "like-of" => Some(#like)
-        | "repost-of" => Some(#repost)
-        | _ => None
-        }
-      )
+      let wmProperty =
+        dict
+        ->Js.Dict.get("wm-property")
+        ->Option.flatMap(Json.decodeString)
+        ->Option.flatMap(x =>
+          switch x {
+          | "like-of" => Some(#like)
+          | "repost-of" => Some(#repost)
+          | _ => None
+          }
+        )
       let wmId =
         dict
         ->Js.Dict.get("wm-id")
@@ -116,7 +117,7 @@ let make = (~url) => {
   React.useEffect0(() => {
     Fetch.fetch("https://webmention.io/api/mentions.jf2?target=" ++ encodeURIComponent(url))
     ->Promise.then(Fetch.Response.json)
-    ->Promise.map(json => {
+    ->Promise.then(json => {
       let {children} = Response.fromJson(json)
       let mentions = children->Belt.SortArray.stableSortBy((a, b) => {
         // "published" time can be null
@@ -128,7 +129,7 @@ let make = (~url) => {
         mentions->Array.keep(x => x.wmProperty == #repost)->Array.slice(~offset=0, ~len=24)
       setReposts(_ => reposts)
       let likes = mentions->Array.keep(x => x.wmProperty == #like)->Array.slice(~offset=0, ~len=24)
-      setLikes(_ => likes)
+      setLikes(_ => likes)->Promise.resolve
     })
     ->ignore
     None

@@ -96,8 +96,8 @@ let make = () => {
         (),
       ),
     )
-    ->Promise.map(_ => {
-      callback.notifyOnSuccess(Some(initialInput))
+    ->Promise.then(_ => {
+      callback.notifyOnSuccess(Some(initialInput))->Promise.resolve
     })
     ->Promise.catch(x => {
       callback.notifyOnFailure()
