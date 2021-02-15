@@ -1,12 +1,12 @@
 ---
-date: 2021-02-03T15:56:19-05:00
+date: 2021-02-03T15:56:19.000-05:00
 draft: false
 title: A wild demand trail appears
 author: John Jackson
 hero_image:
   image: "/v1612385912/2021/IMG_7533_a2dedo.jpg"
-  alt: ''
-  caption: A black-and-white photograph of a “demand trail.”
+  alt: A black-and-white photograph of a “demand trail.”
+  caption: ''
 external_link: ''
 tags:
 - originals
