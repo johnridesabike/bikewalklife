@@ -18,7 +18,7 @@ tags:
 - science
 
 ---
-Recent studies show that women drivers are more likely than men drivers to die in car crashes. The reason behind it is straightforward: trucks and SUVs are significantly more deadly than smaller cars, and men are more likely to drive those larger vehicles. This also reveals how our vehicles, and our streets themselves, are deadly-by-design.
+Recent studies show that women drivers are more likely than men to die in car crashes. The reason behind it is straightforward: trucks and SUVs are significantly more deadly than smaller cars, and men are more likely to drive those larger vehicles. This also reveals how our vehicles, and our streets themselves, are deadly-by-design.
 
 [Kea Wilson at Streetsblog USA has a great article exploring these studies,](https://usa.streetsblog.org/2021/02/16/the-reason-more-women-drivers-die-in-car-crashes/ "The Reason More Women Drivers Die in Car Crashes – Streetsblog USA") if you want a deeper dive:
 
