@@ -15,7 +15,7 @@ tags:
 ---
 When you’ve always lived in a car-dominated society, it may be hard to imagine how life could exist any other way. But contrary to popular perception, modern car-culture is an aberration in the natural order of things. We even have video to help prove it.
 
-[![Watch video: “\[4k, 60 fps\] San Francisco, a Trip down Market Street, April 14, 1906” ](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto/v1610553036/2020/4k-60-fps-san-francisco-a-trip-down-market-street-april-14-1906-vo_1adyrgw8_4.jpg)](https://youtu.be/VO_1AdYRGW8)
+[![Watch video: “\[4k, 60 fps\] San Francisco, a Trip down Market Street, April 14, 1906” ](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1610553036/2020/4k-60-fps-san-francisco-a-trip-down-market-street-april-14-1906-vo_1adyrgw8_4.jpg)](https://youtu.be/VO_1AdYRGW8)
 
 Denis Shiryaev took the 1906 film “A Trip Down Market Street” and restored it by upscaling the resolution to 4K, dubbing sound effects, colorizing it, and more. [You can watch it here: “\[4k, 60 fps\] San Francisco, a Trip down Market Street, April 14, 1906”](https://youtu.be/VO_1AdYRGW8). This version is not only technically impressive, it reveals with new clarity just how different our streets once were.
 

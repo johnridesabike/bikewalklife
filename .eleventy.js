@@ -43,8 +43,11 @@ function mdImages(md, _ops) {
       token.attrPush([
         "srcset",
         sizes
-          .map(
-            (x) => `${head}${encodeURIComponent(`c_scale,w_${x}`)}${tail} ${x}w`
+          .map((w) =>
+            `${head}c_scale,w_${w}${tail} ${w}w`.replace(
+              /,/g,
+              encodeURIComponent
+            )
           )
           .join(", "),
       ]);

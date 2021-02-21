@@ -22,7 +22,7 @@ Many people have speculated on the long-term effects that companies like Uber an
 
 [The paper is titled “The impact of Uber and Lyft on vehicle ownership, fuel economy, and transit across U.S. cities.” It’s published here, open access, by the journal iScience.](https://doi.org/10.1016/j.isci.2020.101933)
 
-![“The impact of Uber and Lyft on vehicle ownership, fuel economy, and transit across U.S. cities” graphical abstract.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto/v1610389898/2021/fx1_lrg_zvzytj.jpg)
+![“The impact of Uber and Lyft on vehicle ownership, fuel economy, and transit across U.S. cities” graphical abstract.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1610389898/2021/fx1_lrg_zvzytj.jpg)
 
 (Image credit: Ward, Michalek, Samaras, Azevedo, Henao, Rames, & Wenzel. “The impact of Uber and Lyft on vehicle ownership, fuel economy, and transit across U.S. cities.”)
 

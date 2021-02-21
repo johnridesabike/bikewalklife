@@ -21,12 +21,12 @@ The Urban Cycling Institute recently held an election for 2020’s best mobility
 
 **Revealing road space injustice** by Karl Jilg
 
-![A comic of people crossing and walking along a street that has been replaced with a bottomless pit.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto/v1610125558/2021/EqVl5mGXEAA_jnh_tdpalm.png)
+![A comic of people crossing and walking along a street that has been replaced with a bottomless pit.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1610125558/2021/EqVl5mGXEAA_jnh_tdpalm.png)
 
 **The injustice mobility space** by [Fabian Todorovic](https://twitter.com/fabiantodorovic)
 
-![A comic depicting the bike riders and transit users crammed next to a car driver with comfortable space.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto/v1610125656/2021/EqVnqgVXcAI3zPL_mmnzrr.jpg)
+![A comic depicting the bike riders and transit users crammed next to a car driver with comfortable space.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1610125656/2021/EqVnqgVXcAI3zPL_mmnzrr.jpg)
 
 **Roadkill Bill** by [Ken Avidor](https://twitter.com/Avidor)
 
-![A comic comparing modern traffic deaths to ancient human sacrifice.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto/v1610125738/2021/EqVm0voXUAEDg-Q_dwity4.jpg)
+![A comic comparing modern traffic deaths to ancient human sacrifice.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1610125738/2021/EqVm0voXUAEDg-Q_dwity4.jpg)
