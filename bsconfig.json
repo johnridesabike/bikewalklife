@@ -24,7 +24,7 @@
   ],
   "namespace": true,
   "bs-dependencies": [
-    "@rescript/react",
+    "reason-react",
     "re-formality",
     "bs-fetch",
     "@ryyppy/rescript-promise"

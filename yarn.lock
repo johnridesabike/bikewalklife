@@ -304,11 +304,6 @@
   dependencies:
     tslib "^2.0.0"
 
-"@rescript/react@^0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@rescript/react/-/react-0.10.1.tgz#ddce66ba664a104354d559c350ca4ebf17ab5a26"
-  integrity sha512-5eIfGnV1yhjv03ktK6fQ6iEfsZKXKXXrq5hx4+ngEY4R/RU8o/oH9ne375m9RJMugV/jsE8hMoEeSSg2YQy3Ag==
-
 "@rescript/std@^9.0.1":
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/@rescript/std/-/std-9.0.1.tgz#4597be595256f79f4c2f3eaeb56981340e18e700"
@@ -4980,10 +4975,10 @@ re-debouncer@2.1.0:
   resolved "https://registry.yarnpkg.com/re-debouncer/-/re-debouncer-2.1.0.tgz#2eaf7994ba41590f4f80d4a363ae8905156b7dc1"
   integrity sha512-Iy9BecWF9X4V6zXfL3ROZpKGkCnpzYdjG/j6NIBxQn7gEwO2DzED5BsbfRUiPeqr7C0tAD0HPHF6tYIcQFEnyA==
 
-re-formality@^4.0.0-beta.11:
-  version "4.0.0-beta.11"
-  resolved "https://registry.yarnpkg.com/re-formality/-/re-formality-4.0.0-beta.11.tgz#5cdad35ceeb3e053ce4467a6cf01b6c50315c61d"
-  integrity sha512-gWXr7oI8NljXEGbu9yj7u0SBXDvkjVkHQJHwLgHboIuK0S00F32ttifqPNcJXtvKMZDEoVpzzloSz0hBX+LuKg==
+re-formality@4.0.0-beta.10:
+  version "4.0.0-beta.10"
+  resolved "https://registry.yarnpkg.com/re-formality/-/re-formality-4.0.0-beta.10.tgz#0df9343db2f5c05ca7e3e9efbc47253b1f34da54"
+  integrity sha512-QG0V4R6ytuJtupGETtioBAh7i3OJK5ApnzetmXoxgWz4YtyUvOwzIwumCN0bjlXtchVYO6KZp5FE0pUZhNjBBA==
   dependencies:
     re-debouncer "2.1.0"
 
@@ -5048,6 +5043,11 @@ readdirp@~3.5.0:
   integrity sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==
   dependencies:
     picomatch "^2.2.1"
+
+reason-react@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/reason-react/-/reason-react-0.9.1.tgz#30a887158200b659aa03e2d75ff4cc54dc462bb0"
+  integrity sha512-nlH0O2TDy9KzOLOW+vlEQk4ExHOeciyzFdoLcsmmiit6hx6H5+CVDrwJ+8aiaLT/kqK5xFOjy4PS7PftWz4plA==
 
 rechoir@^0.7.0:
   version "0.7.0"
