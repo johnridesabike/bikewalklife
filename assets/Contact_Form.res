@@ -214,7 +214,7 @@ let make = () => {
           value=form.input.message
           cols=34
           rows=10
-          style={ReactDOMRe.Style.make(~width="100%", ())}
+          style={ReactDOM.Style.make(~width="100%", ())}
           onChange={event =>
             form.updateMessage(
               (input, message) => {...input, message: message},
