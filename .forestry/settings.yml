@@ -2,35 +2,35 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: "/admin/"
-webhook_url:
+webhook_url: 
 sections:
-  - type: heading
-    label: Content
-  - type: directory
-    path: posts
-    label: Blog Posts
-    create: all
-    match: "**/*"
-    new_doc_ext: md
-    templates:
-      - blog-post
-  - type: document
-    path: _data/authors.yaml
-    label: Author List
-  - type: document
-    path: about.md
-    label: About Page
-  - type: heading
-    label: General Config
-  - type: document
-    path: _data/config.json
-    label: Site Info
-  - type: document
-    path: _data/strings.yaml
-    label: UI Strings
-upload_dir: ""
+- type: heading
+  label: Content
+- type: directory
+  path: posts
+  label: Blog Posts
+  create: all
+  match: "**/*"
+  new_doc_ext: md
+  templates:
+  - blog-post
+- type: document
+  path: _data/authors.yaml
+  label: Author List
+- type: document
+  path: about.md
+  label: About Page
+- type: heading
+  label: General Config
+- type: document
+  path: _data/config.json
+  label: Site Info
+- type: document
+  path: _data/strings.yaml
+  label: UI Strings
+upload_dir: ''
 public_path: https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto
-front_matter_path: ""
+front_matter_path: ''
 use_front_matter_path: true
 file_template: ":year:/:filename:"
 build:

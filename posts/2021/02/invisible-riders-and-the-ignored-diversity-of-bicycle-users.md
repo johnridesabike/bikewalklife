@@ -10,21 +10,21 @@ hero_image:
 external_link: https://www.velonews.com/culture/major-taylor-journal-there-are-already-many-black-cyclists-we-just-overlook-them/
 tags:
 - VeloNews
-- Major Taylor
 - Bicycling Magazine
 - Dan Koeppel
 - diversity
 - least among us
 - Dragonfly Trails Network
+- Aliya Barnwell
 
 ---
-Last month, VeloNews published an article by Major Taylor: [There are already many Black cyclists — we just overlook them](https://www.velonews.com/culture/major-taylor-journal-there-are-already-many-black-cyclists-we-just-overlook-them/). He argues that the lack of diversity in the cycling community is really a problem with companies, teams, and other cycling organizations. When we look at bicycle riders outside of those cliques and institutions, we see a much more diverse group of people. Below is an excerpt.
+Last month, VeloNews published an article by Aliya Barnwell: [There are already many Black cyclists — we just overlook them](https://www.velonews.com/culture/major-taylor-journal-there-are-already-many-black-cyclists-we-just-overlook-them/). She argues that the lack of diversity in the cycling community is really a problem with companies, teams, and other cycling organizations. When we look at bicycle riders outside of those cliques and institutions, we see a much more diverse group of people. Below is an excerpt.
 
 > I see lots of Black people riding bikes every single day. They are working cyclists, participants in Critical Mass-style urban rides, and BMX riders who zip through urban environments doing crazy stunts that riders like you and I would never ever attempt.
 >
 > The question I keep coming back to is: Why do bike companies, organized teams, the national federation, and other traditional cycling organizations largely ignore these riders?
 
-It’s a good question, and he explores it in more detail throughout his article. Taylor is mostly interested in cycling as a sport, but his assessment applies to other parts of bicycle culture as well, including commuting.
+It’s a good question, and she explores it in more detail throughout his article. Barnwell is mostly interested in cycling as a sport, but his assessment applies to other parts of bicycle culture as well, including commuting.
 
 This topic echoes an article published by Bicycling Magazine way back in 2006: [How Low-Income Cyclists Go Unnoticed](https://www.bicycling.com/news/a20049826/how-low-income-cyclists-go-unnoticed/) by Dan Koeppel. Fifteen years later, it’s become a classic, not only for how well it describes the lives of “hidden cyclists,” but also how it seems like it could have been written today.
 
@@ -40,6 +40,6 @@ These minority bicycle riders are rarely seen “taking the lane” and competin
 
 Columbus, GA has expanded its trail network over recent years. It’s marketed as something for relatable, hip, middle-class people. That’s just how marketing works, I suppose, and there’s nothing intrinsically wrong with it. But I see far more low-income bicycle riders on those trails than other kinds of riders, and they’re a much more diverse population than the photogenic people who we may publicly associate with trail users.
 
-This goes back to Taylor’s question: why do we ignore minority riders? By most accounts, they should be the face of bicycling. Sure, they don’t participate in clubs or group-rides, but they ride more than anyone else.
+This goes back to Barnwell's question: why do we ignore minority riders? By most accounts, they should be the face of bicycling. Sure, they don’t participate in clubs or group-rides, but they ride more than anyone else.
 
 And it raises another question for me: if we already invest in local programs to assist marginalized people, why not make that an official mission of bicycle infrastructure as well? Our wealthy population is excited to fund institutions like libraries and homelessness programs as a way to help the underprivileged. Why aren’t we honest about who benefits the most from bicycle infrastructure? Why do we mainly invest in it for the sake of making the privileged more comfortable?
