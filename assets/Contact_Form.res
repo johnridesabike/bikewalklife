@@ -101,7 +101,7 @@ let make = () => {
     })
     ->Promise.catch(x => {
       callback.notifyOnFailure()
-      Js.Console.error(x)
+      Js.Console.error(x)->Promise.resolve
     })
     ->ignore
   )
