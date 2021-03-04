@@ -1,5 +1,5 @@
 ---
-date: 2020-08-14T08:20:10-04:00
+date: 2020-08-14T08:20:10.000-04:00
 draft: false
 title: Denver’s future street design prioritizes pedestrians and cyclists over cars
 author: John Jackson
@@ -9,7 +9,8 @@ hero_image:
   caption: ''
 external_link: https://www.9news.com/article/news/local/next/denver-future-street-design-bicyclist-pedestrian-friendly/73-a79e1b56-b2b4-4696-9c00-462217b1141b
 tags:
-  - local projects
+- local projects
+- mobility pyramid
 
 ---
 Marshall Zelinger writes:
