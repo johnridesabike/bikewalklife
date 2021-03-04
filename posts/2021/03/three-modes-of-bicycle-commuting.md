@@ -1,6 +1,6 @@
 ---
 date: 2021-03-04T15:08:52-05:00
-draft: true
+draft: false
 title: Three modes of bicycle commuting
 author: John Jackson
 hero_image:
