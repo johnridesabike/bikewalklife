@@ -1,5 +1,5 @@
 ---
-date: 2021-03-04T15:08:52-05:00
+date: 2021-03-04T15:08:52.000-05:00
 draft: false
 title: Three modes of bicycle commuting
 author: John Jackson
@@ -13,6 +13,7 @@ tags:
 - commuting
 - bicycle street
 - mobility pyramid
+- three modes
 
 ---
 We all recognize the main bicycle categories, such as mountain biking, BMX, touring, and commuting to name a few. But when we zoom-in to commuting, then the landscape seems less neatly categorized. Even though commuters may collectively use diverse styles of bicycles and equipment, they all seem to do basically the same thing with them. Despite this, I’d argue that commuting works in three basic modes. These modes aren’t based on what kind of gear you use, but in your _mindset_ and _behavior_.
