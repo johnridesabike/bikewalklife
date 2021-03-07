@@ -15,7 +15,7 @@ function onComponentsError(e) {
 }
 
 module.exports = function (eleventyConfig, config) {
-  let env = Environment.Async.make(Compile.emptyMap);
+  let components = Compile.Components.empty();
   eleventyConfig.addTemplateFormats("acutis");
   eleventyConfig.addExtension("acutis", {
     read: true,
@@ -34,12 +34,11 @@ module.exports = function (eleventyConfig, config) {
           return Source.string(name, str);
         })
       );
-      const componentsResult = Compile.fromArray([
+      const componentsResult = Compile.Components.make([
         ...queue,
         ...config.components,
       ]);
-      const components = Result.getOrElse(componentsResult, onComponentsError);
-      env = Environment.Async.make(components);
+      components = Result.getOrElse(componentsResult, onComponentsError);
     },
     compile: function (str, inputPath) {
       function onError(e) {
@@ -50,8 +49,11 @@ module.exports = function (eleventyConfig, config) {
       }
       return async function (data) {
         const src = Source.string(inputPath, str);
-        const template = Result.getOrElse(Compile.make(src), onError);
-        const result = await template(env, data, {});
+        const template = Result.getOrElse(
+          Compile.make(src, components),
+          onError
+        );
+        const result = await template(Environment.async, data, {});
         return Result.getOrElse(result, onError);
       };
     },

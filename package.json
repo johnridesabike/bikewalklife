@@ -39,7 +39,7 @@
     "@fontsource/source-serif-pro": "^4.2.0",
     "@reach/visually-hidden": "^0.13.0",
     "@ryyppy/rescript-promise": "^2.0.0",
-    "acutis-lang": "^0.10.0",
+    "acutis-lang": "^0.11.0",
     "browserslist": "^4.16.3",
     "bs-fetch": "^0.6.2",
     "bs-platform": "^9.0.1",
