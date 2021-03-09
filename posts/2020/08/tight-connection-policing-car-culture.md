@@ -1,5 +1,5 @@
 ---
-date: 2020-08-07T17:17:43-04:00
+date: 2020-08-07T17:17:43.000-04:00
 title: The tight connection between policing and car culture
 author: John Jackson
 hero_image:
@@ -8,6 +8,12 @@ hero_image:
   caption: ''
 external_link: https://nextcity.org/daily/entry/can-we-abolish-the-police-without-challenging-the-status-quo-of-car-culture
 draft: false
+tags:
+- police
+- car culture
+- Next City
+- Nick DeMarsh
+- Rick Banks
 
 ---
 [Nick DeMarsh and Rick Banks write for Next City:](https://nextcity.org/daily/entry/can-we-abolish-the-police-without-challenging-the-status-quo-of-car-culture)
