@@ -16,7 +16,7 @@ tags:
 ---
 Another just-for-fun bicycle challenge is coming up: Three Speed April, hosted by Society of Three Speeds.
 
-[Announcement](https://societyofthreespeeds.wordpress.com/2021/03/08/three-speed-april-2021-registration-now-open/) | [Full details](https://societyofthreespeeds.wordpress.com/3-spd-apr/).
+[Announcement](https://societyofthreespeeds.wordpress.com/2021/03/08/three-speed-april-2021-registration-now-open/) | [Full details](https://societyofthreespeeds.wordpress.com/3-spd-apr/)
 
 > The overall challenge consists of five different sub-challenges:
 >
@@ -33,6 +33,6 @@ Another just-for-fun bicycle challenge is coming up: Three Speed April, hosted b
 > * Do the Overnight as a **_camping_** adventure, you’ll get the “Three Speed Camping” sticker in addition to other prizes!
 > * Do all five of the challenges, get an extra sticker!
 
-I’m a big fan of these kinds of challenges. They mix athleticism, adventure, creativity, and just having fun on a bicycle. 
+I’m a big fan of these kinds of challenges. They mix athleticism, adventure, creativity, and just having fun on a bicycle. The world could use more events like this. And although these aren’t new, they’re a great fit for our socially-distant era.
 
-Alas, I ride with a derailleurs, so I won’t qualify for this year. Maybe I’ll go to the dark side by 2022.
+Alas, I ride with a derailleurs, so I won’t qualify for this year. Perhaps I’ll go to the dark side by 2022.
