@@ -1,6 +1,6 @@
 ---
 date: 2021-03-09T14:31:32-05:00
-draft: true
+draft: false
 title: 'Just-for-fun challenge: Three Speed April 2021'
 author: John Jackson
 hero_image:
