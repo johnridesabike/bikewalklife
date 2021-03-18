@@ -1,0 +1,49 @@
+---
+title: Tags
+eleventyExcludeFromCollections: true
+tags:
+  - page_tags
+---
+{% Layout
+  config
+  strings
+  build
+  page
+  collections
+  title
+  absoluteUrl
+  metadata=null
+  Head=#%}
+    <meta name="robots" content="noindex" />
+  {%/#
+%}
+{*
+<main>
+  <h1>{{ title }}</h1>
+  <ul class="ui-font" style="list-style: none; padding: 0;">
+    {% map collections
+       with _, "all"
+       with _, "page_index"
+       with _, "page_search"
+       with _, "page_contact"
+       with _, "page_about"
+       with _, "page_archive"
+       with _, "frontPage"
+       with _, "posts" %} 
+       {* Don't render these *}
+    {% with pages, tag %}
+      <li>
+        <details>
+        <summary>{{ tag }}</summary>
+          <ul>
+            {% map pages with {url, data: {title}} %}
+              <li><a href="{{ url }}">{{ title }}</a></li>
+            {% /map %}
+          </ul>
+        </details>
+      </li>
+    {% /map %}
+  </ul>
+</main>
+*}
+{% /Layout %}
