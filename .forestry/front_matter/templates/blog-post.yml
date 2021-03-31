@@ -66,6 +66,8 @@ fields:
   label: Tags
   description: Tags are used to display posts related to this post.
   hidden: false
+  default:
+  - untagged
 - name: draft
   type: boolean
   label: Draft

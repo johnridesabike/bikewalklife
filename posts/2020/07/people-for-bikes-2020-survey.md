@@ -8,6 +8,8 @@ hero_image:
   alt: ''
   caption: ''
 draft: false
+tags:
+  - People for Bikes
 
 ---
 The annual People for Bikes Community Survey is here until October 15th.

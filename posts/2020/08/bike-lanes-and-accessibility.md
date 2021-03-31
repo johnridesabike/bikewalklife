@@ -8,6 +8,9 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.bloomberg.com/news/articles/2020-08-13/do-bike-lanes-have-an-accessibility-problem
+tags:
+  - accessibility
+  - Manchester
 
 ---
 John Surico writes for CityLab:

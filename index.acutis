@@ -39,7 +39,8 @@ tags:
           draft,
           external_link,
           absoluteUrl,
-          visible: true
+          visible: true,
+          tags
         }
       },
       index
@@ -60,6 +61,7 @@ tags:
         absoluteUrl
         external_link
         strings
+        tags
     /%}
     {% match index with 0 %}
       <div class="full-bleed">

@@ -8,6 +8,8 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.bicycling.com/culture/a33521338/advocate-for-bike-lanes-in-your-city/
+tags:
+  - Bicycling Magazine
 
 ---
 Robert Annis, writing for Bicycling:
