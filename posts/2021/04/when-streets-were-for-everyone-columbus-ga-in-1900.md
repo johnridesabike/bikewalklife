@@ -1,5 +1,5 @@
 ---
-date: 2021-04-10T14:12:07-04:00
+date: 2021-04-10T14:12:07.000-04:00
 tags:
 - history
 - Columbus GA
@@ -34,7 +34,7 @@ According to the DLG's metadata, this was taken between 1895 and 1900. It depict
 
 Although the photographer may have focused on the Springer, I'm more interested in the streets around it. We can see people on foot, horses, trolleys and even a bicycle just like in the Market Street video. We can tell that they're all moving at about equal speeds. It's far safer, slower, and more diverse than our car-dominated version of the same street.
 
-[![Google Street view of Springer Opera House today.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1618082091/2021/Screen_Shot_2021-04-11_at_15.14.30_j5tjsi.png)](https://goo.gl/maps/9G3NTcnKevZaAxcy6)
+[![Google Street view of Springer Opera House today.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1618149220/2021/Screen_Shot_2021-04-11_at_15.14.30_j5tjsi_gzxsr5.jpg)](https://goo.gl/maps/9G3NTcnKevZaAxcy6)
 
 The modern version of that corner is sterile in comparison. The diverse mobility styles have all been replaced by cars. It is too dangerous, not to mention illegal, for people to walk in this street now.
 
