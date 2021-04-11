@@ -22,9 +22,7 @@
       "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-italic.woff2",
       "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-normal.woff2",
       "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-italic.woff2",
-      "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-normal.woff2",
-      "node_modules/@fontsource/cooper-hewitt/files/cooper-hewitt-all-400-normal.woff2",
-      "node_modules/@fontsource/cooper-hewitt/files/cooper-hewitt-all-400-italic.woff2"
+      "node_modules/@fontsource/fira-sans/files/fira-sans-latin-400-normal.woff2"
     ]
     with asset
   ~%}

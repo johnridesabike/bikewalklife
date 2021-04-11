@@ -2,10 +2,10 @@
   /**
    * Typography
    */
-  --font-sans-serif: "cooper hewitt", "helvetica neue", sans-serif;
+  --font-sans-serif: "fira sans", "helvetica neue", sans-serif;
   --font-serif: "source serif pro", "charter", serif;
-  --font-ui: -apple-system, blinkmacsystemfont, "segoe UI", roboto, oxygen-sans,
-    ubuntu, cantarell, "helvetica neue", sans-serif;
+  --font-ui: "fira sans", -apple-system, blinkmacsystemfont, "segoe UI", roboto,
+    oxygen-sans, ubuntu, cantarell, "helvetica neue", sans-serif;
   --font-pre: "courier 10 pitch", courier, monospace;
   --font-base-size: 18px;
   --font-base-size-mobile: 16px;

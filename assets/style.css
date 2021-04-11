@@ -1,6 +1,5 @@
 @import-normalize;
-@import "@fontsource/cooper-hewitt/400.css";
-@import "@fontsource/cooper-hewitt/400-italic.css";
+@import "@fontsource/fira-sans/400.css";
 @import "@fontsource/source-serif-pro/400.css";
 @import "@fontsource/source-serif-pro/400-italic.css";
 @import "@fontsource/source-serif-pro/700.css";
@@ -194,7 +193,6 @@ li {
   font-family: var(--font-sans-serif);
   font-size: var(--font-size-sm);
   color: var(--color-primary-dark);
-  font-style: italic;
   margin: 0.25em 0;
 }
 
