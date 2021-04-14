@@ -560,10 +560,10 @@ acorn@^8.0.4:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.0.5.tgz#a3bfb872a74a6a7f661bc81b9849d9cac12601b7"
   integrity sha512-v+DieK/HJkJOpFBETDJioequtc3PfxsWMaxIdIwujtF7FEV/MAyDQLlm6/zPvr7Mix07mLh6ccVwIsloceodlg==
 
-acutis-lang@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/acutis-lang/-/acutis-lang-0.12.0.tgz#21566d098e65fc37bf49931bfde3e780172a8545"
-  integrity sha512-6J66Nd/h4lZAwVazbj+m5EAE+DD+ma5gQegrsBwMx9pdMJZquCbbiE4rtIQfrLArg0eIZHbjQpAApGim05VJVg==
+acutis-lang@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/acutis-lang/-/acutis-lang-0.13.0.tgz#e1ad648b2f500e7d0dfdf976e15d6bf8653ec326"
+  integrity sha512-aq1OXbzxud3lmouBW56TCQSNLwMIRjrnpywoS9wEApbLGaONCTWFUB+2Bjn1VWQHZPmJNIt9TwRg8Mj5mwmm8A==
   dependencies:
     "@rescript/std" "^9.0.1"
     minimist "^1.2.5"
