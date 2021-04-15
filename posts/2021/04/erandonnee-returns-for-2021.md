@@ -6,7 +6,7 @@ tags:
 - challenges
 - Chasing Mailboxes
 draft: false
-title: Erandonnee returns for 2021 in its “Hyperlocal Edition”
+title: Erandonnee returns for 2021 in “Hyperlocal Edition”
 author: John Jackson
 hero_image:
   image: "/v1618505265/2021/818A8410-3B5C-4D93-ADCC-9DF55A2A0EE8_1_105_c_xmdkl8.jpg"
