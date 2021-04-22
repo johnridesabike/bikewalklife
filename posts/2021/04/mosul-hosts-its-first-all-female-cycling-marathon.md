@@ -6,7 +6,8 @@ tags:
 - international
 - Yahoo
 - Reuters
-draft: true
+- Afghanistan
+draft: false
 title: Mosul hosts its first all-female cycling marathon
 author: John Jackson
 hero_image:
@@ -16,7 +17,7 @@ hero_image:
 external_link: https://news.yahoo.com/iraqi-girls-part-female-cycle-151350593.html?guccounter=1
 
 ---
-In international news, Reuters reports that an all-female cycling marathon took place in Mosul, Iraq for the first time. Participants were motivated to encourage more women to ride bicycles.
+In international news, an all-female cycling marathon took place in Mosul, Iraq for the first time. Participants and organizers are advocating for more women to ride bicycles.
 
 [Watch the video or full story here](https://news.yahoo.com/iraqi-girls-part-female-cycle-151350593.html?guccounter=1).
 
