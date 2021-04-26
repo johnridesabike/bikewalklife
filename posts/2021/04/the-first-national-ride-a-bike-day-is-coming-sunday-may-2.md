@@ -5,17 +5,17 @@ tags:
 - Ride a Bike Day
 - '2021'
 - League of American Bicyclists
-draft: true
+draft: false
 title: The first National Ride A Bike Day is coming Sunday, May 2
 author: John Jackson
 hero_image:
-  image: "/v1619467999/2021/Fb_National_Ride_a_Bike_Day-2_qfzvrb.png"
+  image: "/v1619468101/2021/Fb_National_Ride_a_Bike_Day-2_xkzo18.png"
   alt: '"National Ride a Bike Day" promo graphic.'
-  caption: ''
+  caption: 'Image credit: League of American Bicyclists.'
 external_link: https://bikeleague.org/content/take-part-first-ever-national-ride-bike-day
 
 ---
-May is bike month, and this year it gets kicked off with an inaugural Ride a Bike Day.
+May is Bike Month, and this year we're kicking it off with an inaugural Ride a Bike Day.
 
 [The League of American Bicyclists has the details here](https://bikeleague.org/content/take-part-first-ever-national-ride-bike-day).
 
@@ -23,4 +23,4 @@ May is bike month, and this year it gets kicked off with an inaugural Ride a Bik
 >
 > We hope you’ll join us on **Sunday, May 2**, for National Ride A Bike Day and then keep the celebration of biking going throughout Bike Month in May.
 
-I'm never opposed to excuses for riding a bicycle. Between Ride a Bike Day, 30 Days of Biking in April, and a whole calendar of bicycle activities through the rest of May, we have plenty of national events and holidays to choose from.
+I never oppose an excuse to riding a bicycle. Between this Ride a Bike Day, the finale of [30 Days of Biking in April](https://bikewalk.life/2021/03/30-days-of-biking-begins-on-the-first-of-april/), and a whole calendar of bicycle activities through the rest of May, we have plenty of national events and holidays to choose from.
