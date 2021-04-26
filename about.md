@@ -1,8 +1,8 @@
 ---
 title: About
-intro: Hi, this is John. I’m a bike commuter from Columbus, Georgia. I created this
-  blog to raise awareness of the issues affecting the world of biking and walking.
-  I especially focus on the Southeast U.S.
+intro: Hi, this is John. I’m a bike commuter from Columbus, Georgia. I use this blog
+  to promote and discuss issues affecting the world of biking and walking. I especially
+  focus on the Southeast U.S.
 image_large:
   image: "/v1608060004/john-bike-to-work-day-2020.jpeg"
   alt: A photograph of John.
