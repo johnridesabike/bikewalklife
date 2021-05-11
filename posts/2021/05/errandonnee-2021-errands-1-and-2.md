@@ -2,32 +2,46 @@
 date: 2021-05-11T08:01:27-04:00
 tags:
 - Errandonnee 2021
-draft: true
-title: 'Errandonnee 2021: errands 1 and 2'
+draft: false
+title: 'Errandonnee 2021: Errands 1 & 2'
 author: John Jackson
 hero_image:
-  image: ''
-  alt: ''
+  image: "/v1620735207/2021/C685EC5D-6B0F-41B2-935A-BFE06F688644_1_105_c_r8afjs.jpg"
+  alt: A photo of my bicycle in front of a church.
   caption: ''
 external_link: ''
 
 ---
+Errandonnee is a challenge where you have 12 days to complete 12 errands by bicycle or on foot. This page is part of a series of my entries for the 2021 challenge.
+
+[You can read more about Errandonnee here](https://chasingmailboxes.com/2021/04/11/errandonnee-2021-hyperlocal-edition/).
+
 ## Errand 1: church
 
-My first "errand" was a bike ride down to my regular church in downtown Columbus, GA. Thanks to the Dragonfly Trail Network that connects my neighborhood to the downtown area, this is always a pleasant ride. And the car traffic is always less scary on Sunday too, which always helps.
+![A photo of my bicycle in front of a church.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1620735207/2021/C685EC5D-6B0F-41B2-935A-BFE06F688644_1_105_c_r8afjs.jpg)
 
-Date: May 9, 2021.
+My first "errand" was a bike ride down to my regular church in downtown Columbus, GA. Thanks to the Dragonfly Trail Network that connects my neighborhood to downtown, this is a very pleasant ride. Car traffic is less dangerous on Sunday too, which is nice.
 
-Category: personal care.
-
-Total mileage: 5.17.
+<dl>
+<dt>Date</dt>
+<dd>May 9, 2021</dd>
+<dt>Category</dt>
+<dd>Personal care</dd>
+<dt>Total mileage</dt>
+<dd>5.17</dd>
+</dl>
 
 ## Errand 2: grocery shopping
 
-I had only planned one ride for this day, but some of our staples were low and the weather was beautiful, so I took my bike down to the Piggly Wiggly. Even though there are few bike lanes or trails, I'm able to ride here on low-traffic, residential streets surrounded by trees. There are only a couple of hills that can make this ride a chore sometimes.
+![A photo of my bicycle in front of a Piggly Wiggly.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1620735223/2021/514EEEB7-AC54-46EE-A927-80D730209A02_1_105_c_gjexrm.jpg)
 
-Date: May 9, 2021.
+I had only planned one ride for this day, but some of our staples were low and the weather was beautiful, so I took my bike down to our neighborhood's Piggly Wiggly. Even though there are almost no bike lanes here, it's still a nice ride. I'm able to stay on low-traffic, residential streets surrounded by trees for most of the trip.
 
-Category: personal business.
-
-Total mileage: 9.21.
+<dl>
+<dt>Date</dt>
+<dd>May 9, 2021</dd>
+<dt>Category</dt>
+<dd>Personal business</dd>
+<dt>Total mileage</dt>
+<dd>9.21</dd>
+</dl>
