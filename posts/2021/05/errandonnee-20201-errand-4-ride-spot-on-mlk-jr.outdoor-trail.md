@@ -3,7 +3,7 @@ date: 2021-05-13T15:03:11-04:00
 tags:
 - Errandonnee 2021
 draft: false
-title: 'Errandonnee 20201: Errand 4 & Ride Spot for MLK Jr. Outdoor Learning Trail'
+title: 'Errandonnee 2021: Errand 4 & Ride Spot for MLK Jr. Outdoor Learning Trail'
 author: John Jackson
 hero_image:
   image: "/v1620934255/2021/IMG_8359_hfia4w.jpg"
