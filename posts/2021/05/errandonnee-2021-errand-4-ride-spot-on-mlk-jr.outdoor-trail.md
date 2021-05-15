@@ -37,4 +37,4 @@ Finally, to make this a real _errand_, opposed to a recreational ride, I charted
 <dd>Discovery</dd>
 <dt>Total mileage</dt>
 <dd>19.71</dd>
-<dl>
+</dl>
