@@ -4986,9 +4986,9 @@ re-debouncer@2.1.0:
   integrity sha512-Iy9BecWF9X4V6zXfL3ROZpKGkCnpzYdjG/j6NIBxQn7gEwO2DzED5BsbfRUiPeqr7C0tAD0HPHF6tYIcQFEnyA==
 
 re-formality@^4.0.0-beta.12:
-  version "4.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/re-formality/-/re-formality-4.0.0-beta.12.tgz#856788fbab59b405cba7ece690792746b190f9a0"
-  integrity sha512-CMj+vMwelz1JzGlgD8ji6e1QkgiHzQ/WQEW7B/MOPpkbvzc1Wvx7NtL/1Noks37fCDVVSzPzcZJyi5tbDyMlxQ==
+  version "4.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/re-formality/-/re-formality-4.0.0-beta.15.tgz#15c0633d86582e9e9278072d43a26fa3f3914916"
+  integrity sha512-quSXNqNTR0x04bWUcGcNqIMXAUcKyem4Tf0dzp/HNI9ONmMfdaurm+p11AbJFogM4Z+Fjz4NnIlEhKbx5iTI8Q==
   dependencies:
     re-debouncer "2.1.0"
 
