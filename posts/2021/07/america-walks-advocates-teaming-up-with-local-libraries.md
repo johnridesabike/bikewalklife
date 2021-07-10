@@ -4,7 +4,7 @@ tags:
 - America walks
 - libraries
 - Noah Lenstra
-draft: true
+draft: false
 title: America Walks advocates teaming up with local libraries
 author: John Jackson
 hero_image:
@@ -14,12 +14,12 @@ hero_image:
 external_link: https://americawalks.org/how-and-why-to-team-up-with-your-local-librarian/
 
 ---
-America Walks, the walking advocacy group, has a new guest post from Noah Lenstra on how to team up with your local library and improve walking in your community. 
+Advocacy group America Walks has a new post on how to team up with your local library to improve the walkability of your community.
 
-You can read the whole post here: [How and Why to Team up with your local librarian](https://americawalks.org/how-and-why-to-team-up-with-your-local-librarian/).
+You can read it here: [_How and Why to Team up with your local librarian_ by  Noah Lenstra](https://americawalks.org/how-and-why-to-team-up-with-your-local-librarian/).
 
 > Who is working with public librarians, and what are they doing with them? By understanding [public librarians as partners](https://www.shareable.net/rules-of-the-road-partnering-with-public-libraries-for-collective-impact/), you too unlock their potential for your community’s walking movement.
 
-He then lists ten different walking projects that libraries worked with. Not only is the list diverse, with libraries from Toronto to Florida, it is also quite timely. They all occurred between June 21 and June 30 of this year.
+He describes ten walking projects sponsored by libraries from across the continent, from Toronto to Florida. They are also quite timely--the projects are all from between June 21 and June 30 of this year.
 
-If you're looking for a partner to help with a walking project, or if you're a library staffer looking for inspiration, then this guide looks like a handy resource.
+If you're looking for a partner to help with a walking project, or if you're a library staffer looking for inspiration, then this guide looks like a handy resource. As the example projects indicate, walking advocacy is not a stranger to local libraries.
