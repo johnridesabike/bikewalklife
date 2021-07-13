@@ -14,17 +14,17 @@ hero_image:
 external_link: ''
 
 ---
-You may have seen that Georgia recently passed a new "3-foot passing law." This is good news for bicycle riders, some of us may not understand what it means exactly.
+You may have seen that Georgia recently passed a new "3-foot passing law." This is good news for bicycle riders, but let's look at what it means exactly.
 
 ## What is a "3-foot passing law?"
 
-This is a law that requires car drivers to give at least three feet of space to bicycles when they pass them. Several states have their own variations of this "3-foot passing law." Although their legal wording may differ, they are all based on the same concept.
+This is a law that requires car drivers to give at least three feet of space to bicycles when they pass. Several states have their own variations of this "3-foot passing law." Although their legal wording may differ, they are all based on the same concept.
 
 ## But wait, wasn't there already a 3-foot passing law in Georgia?
 
-Yes, Georgia passed a similar 3-foot passing law in 2011. This was itself a huge step forward for street safety in the state. But, ten years later, it was due for an update. 
+Yes, Georgia passed a similar 3-foot passing law in 2011. This was itself a huge step forward for street safety in the state. But, ten years later, it was due for an update.
 
-One specific problem with the 2011 law was that it required drivers to leave safe space between themselves and bicycles "when feasible." As you can imagine, allowing drivers to only consider the life-and-death safety of others "when feasible" was insufficient and legally ambiguous.
+One specific problem with the 2011 law was that it required drivers to leave safe space between themselves and bicycles "when feasible." As you can imagine, allowing drivers to only consider the life-and-death safety of others "when feasible" was not just inadequate but also legally ambiguous.
 
 ## What's in the new law?
 
