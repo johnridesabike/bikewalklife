@@ -3,7 +3,7 @@ date: 2021-07-22T07:12:17-04:00
 tags:
 - untagged
 draft: true
-title: The economic benefits of bicycles, both visible and invisible
+title: The economic benefits of bicycles
 author: John Jackson
 hero_image:
   image: ''
