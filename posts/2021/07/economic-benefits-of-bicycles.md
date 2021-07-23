@@ -22,14 +22,14 @@ Planetizien has a new article about this: [Biking's Billion-Dollar Value, Right 
 >
 > Not only are bikes significantly lighter and thus less damaging to roads, they also do not come with the constant drip of fluids from cars in traffic, which breaks up asphalt quicker over the long-term.
 
-These are "invisible" costs. Most people aren't aware of them, and indeed it would be difficult for most people to even accurately guess them. In an era where calls to cut government spending is fashionable, perhaps this is why transportation spending is largely exempt from mainstream criticism. For most people, anything less than the status quo seems unthinkable.
+These are "invisible" costs. Most people aren't aware of them, and indeed it would be difficult for most people to even accurately guess them. Perhaps this is why transportation spending is largely exempt from mainstream criticism, even in an era where calls to cut government spending is fashionable. For most people, anything less than the status quo seems unthinkable.
 
-Yet these invisible dollar amounts are only part of the problem. We can see the the external costs as well: wider roads, giant parking lots, personal costs of car upkeep, noise, exhaust, crashes (including deaths), to name a few. Even if we can rationalize justifications for these, no one can deny they're a problem.
+Yet these invisible dollar amounts are only part of the problem. We can see the the other costs as well: wider roads, more construction, giant parking lots, personal costs of car upkeep, noise, exhaust, crashes (including deaths), and so on. Even if we can rationalize justifications for these, no one can deny they're a problem.
 
 Dion concludes his article with the proposition that we need marketing to tackle the issue:
 
 > It would bring no greater value to the United States than having a core of America's best marketers to communicate the billion-dollar advantage of biking.
 
-This may seem like a naïve solution to some people, but I think it's a great starting point. Marketing alone can't re-engineer our streets, but it's a tool to build public trust. When was the last time you saw anything promoting the fiscal benefits of bicycle transportation on anywhere that wasn't a blog like this? 
+This may seem like a naïve solution to some people, but I think it's a great starting point. Marketing alone can't re-engineer our streets, but it's a tool to build public trust. When was the last time you saw anything promoting the communal benefits of bicycle transportation on anywhere that wasn't a blog like this?
 
-All of this is part of why I've said that [we need to regularly show our appreciation to people who bike commute](https://bikewalk.life/2021/05/bike-to-work-appreciation-day/). Whether they realize it or not, they're doing the rest of us a great favor. Some people will never bike commute, for good reasons, but we need their support as well. I don't believe it's enough for us bike-enthusiasts to cheer each other on. A broader cultural shift is necessary.
+All of this is part of why I've said that [we need to regularly show our appreciation to people who bike commute](https://bikewalk.life/2021/05/bike-to-work-appreciation-day/). Whether they realize it or not, they're doing the rest of us a great favor. Some people will never bike commute, for good reasons, but we need their support as well. I don't believe it's sufficient for only us bike-enthusiasts to cheer each other on. A broader cultural movement is necessary.
