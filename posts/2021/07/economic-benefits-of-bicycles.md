@@ -27,7 +27,7 @@ Planetizien has a new article that breaks down the math for this: [Biking's Bill
 
 These are "invisible" costs. Most people aren't aware of them, and it would indeed be difficult for us to even accurately guess them. Perhaps this is why transportation spending is largely exempt from mainstream criticism, even when calls to cut government budgets are fashionable.
 
-Yet these invisible dollar amounts are only part of the problem. We can see the the other costs as well: more land use, more construction, giant parking lots, personal costs of car upkeep, noise, exhaust, [hotter neighborhoods](https://bikewalk.life/2020/08/research-examines-cities-mini-heat-islands-and-their-ties-to-racism/), crashes (not to mention deaths), and so on. Even if we can rationalize justifications for these, no one can deny they're a problem.
+Yet these invisible dollar amounts are only part of the problem. We can see the other costs as well: more land use, more construction, giant parking lots, personal costs of car upkeep, noise, exhaust, [hotter neighborhoods](https://bikewalk.life/2020/08/research-examines-cities-mini-heat-islands-and-their-ties-to-racism/), crashes (not to mention deaths), and so on. Even if we can rationalize justifications for these, no one can deny they're a problem.
 
 Dion concludes his article by proposing that we should tackle the issue through marketing:
 
