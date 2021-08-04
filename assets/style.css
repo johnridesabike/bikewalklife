@@ -86,7 +86,8 @@ dd {
   margin-left: 1em;
 }
 
-img {
+img,
+iframe {
   max-width: 100%;
 }
 
