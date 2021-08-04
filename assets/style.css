@@ -422,7 +422,7 @@ li {
   }
 
   .entry__body p > img:only-child,
-  .entry__body p > iframe:only-child {
+  .entry__body > iframe {
     /* full bleed */
     margin: 0 -1em;
     width: 100vw;
