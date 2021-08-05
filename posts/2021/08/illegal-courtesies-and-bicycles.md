@@ -8,7 +8,7 @@ tags:
 - tips
 - guides
 draft: false
-title: Illegal courtesies and bicycles
+title: 'Illegal courtesies: what they are and how to handle them while biking'
 author: John Jackson
 hero_image:
   image: "/v1628076834/2021/Alphonsegaston_l4belp.jpg"
