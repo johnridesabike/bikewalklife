@@ -3,7 +3,7 @@ date: 2021-09-11T09:46:05-04:00
 tags:
 - science
 - No Tech Magazine
-draft: true
+draft: false
 title: Technological utopias and mobility
 author: John Jackson
 hero_image:
