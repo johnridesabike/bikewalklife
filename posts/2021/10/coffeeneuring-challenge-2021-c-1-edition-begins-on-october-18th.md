@@ -4,7 +4,8 @@ tags:
 - Coffeeneuring
 - challenges
 - Chasing Mailboxes
-draft: true
+- just-for-fun
+draft: false
 title: Coffeeneuring Challenge 2021, "c+1" edition, begins on October 18th
 author: John Jackson
 hero_image:
@@ -14,7 +15,7 @@ hero_image:
 external_link: https://chasingmailboxes.com/2021/10/05/coffeeneuring-challenge-2021-the-c1-edition/
 
 ---
-Coffeeneuring is back for 2021. It's the just-for-fun challenge where you ride your bike to get coffee a couple of times a week for six weeks. As far as these kinds of challenges go, it's one of the most low-key and accessible. 
+Coffeeneuring is back for 2021. That's the just-for-fun challenge where you play by riding your bike to get coffee a couple of times a week for six weeks. As far as these kinds of challenges go, it's one of the most low-key and accessible.
 
 [You can the whole rules and guidelines on Chasing Mailboxes here](https://chasingmailboxes.com/2021/10/05/coffeeneuring-challenge-2021-the-c1-edition/).
 
@@ -30,4 +31,4 @@ Coffeeneuring is back for 2021. It's the just-for-fun challenge where you ride y
 > * drink 7 cups of coffee (or similar), and
 > * collect some proof of your coffeeneuring (either photos, Strava tracks, journal entries, etc.).
 
-I plan to participate again this year, and, honestly, there's little reason for _not_ to since the challenge is so simple and fun. Thank you, Chasing Mailboxes people, for organizing this year after year.
+I look forward to participating again this year. Honestly, there's little reason for me _not_ to since the challenge is so simple and fun. Thank you, Chasing Mailboxes, for organizing this year after year.
