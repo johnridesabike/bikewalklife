@@ -3,8 +3,8 @@ date: 2021-10-16T13:20:04-04:00
 tags:
 - parking
 - Strong Towns
-- Columbus Georgia
 - Ledger-Enquirer
+- Columbus GA
 draft: true
 title: 'Parking versus everything else: our nationwide double standard'
 author: John Jackson
