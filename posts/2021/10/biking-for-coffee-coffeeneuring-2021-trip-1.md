@@ -1,12 +1,12 @@
 ---
 date: 2021-10-27T06:22:48-04:00
 tags:
-- video
 - originals
 - biking for coffee
 - Coffeeneuring
 - Coffeeneuring 2021
-draft: true
+- videos
+draft: false
 title: 'Biking for Coffee: Coffeeneuring 2021, trip #1'
 author: John Jackson
 hero_image:
@@ -18,6 +18,8 @@ external_link: ''
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7yrDA-Ip1BE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-I'm experimenting with a new project for my Coffeeneuring Challenge this year. I'll document each of my rides with a GoPro camera. The idea is to show the good, the bad, and the ugly of bike commuting, or at least of biking for coffee. People who don't bike commute often have difficulty imagining what biking is even like, which gets reflected in our haphazard infrastructure. Hopefully, videos like this can demystify some of the bike commute experience.
+I'm experimenting with a new project for the Coffeeneuring Challenge this year. I'll document each of my rides with a GoPro camera. The idea is to show the good, the bad, and the ugly of bike commuting, or at least of biking for coffee. People who don't bike commute often have difficulty imagining what biking is even like, which then gets reflected in our haphazard infrastructure. Hopefully, videos like this can demystify some of the bike commute experience.
 
-Now for the details to get this certified for the [Coffeeneuring Challenge](https://chasingmailboxes.com/2021/10/05/coffeeneuring-challenge-2021-the-c1-edition/): I took this on Thursday, October 21. The round-trip distance was about 2 miles (according to Google Maps; I didn't record a Strava trip).
+Now for the details to get this certified for the Coffeeneuring Challenge: I took this on Thursday, October 21. The round-trip distance was about 2 miles.
+
+[Read more about Coffeeneuring here](https://chasingmailboxes.com/2021/10/05/coffeeneuring-challenge-2021-the-c1-edition/).
