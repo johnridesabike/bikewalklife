@@ -1,8 +1,12 @@
 ---
 date: 2021-10-28T06:41:49-04:00
 tags:
-- untagged
-draft: true
+- " originals"
+- " biking for coffee"
+- " Coffeeneuring"
+- " Coffeeneuring 2021"
+- " videos "
+draft: false
 title: 'Biking for Coffee: Coffeeneuring 2021, trip #2'
 author: John Jackson
 hero_image:
@@ -12,6 +16,12 @@ hero_image:
 external_link: ''
 
 ---
-Here is my second video in my Biking for Coffee series. For this year's Coffeeneuring Challenge, I'm documenting each of my rides on video to show what a typical bike ride looks like in my community.
+This is the second video in my Biking for Coffee series. For this year's Coffeeneuring Challenge, I'm documenting each of my rides on video to show what a typical bike ride looks like in my community.
+
+This ride was another relatively easy one, although the steep hill adds a bit of danger. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iH-7YXDo8bo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Qualifying coffeeneuring details: This ride was on Saturday, October 23. The total distance was about 2.4 miles.
+
+[Read more about Coffeeneuring here](https://chasingmailboxes.com/2021/10/05/coffeeneuring-challenge-2021-the-c1-edition/).
