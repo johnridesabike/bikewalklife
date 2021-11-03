@@ -20,6 +20,6 @@ This is my third video in my Biking for Coffee series. As part of this year's Co
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JlzxLWlGjOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This ride was one of the more scenic and "touristy" of my coffeeneuring rides, but it's still a practical route for commuting. I regularly take my bike on routes similar to this. The trail system does an an excellent job at connecting our downtown area to the sprawling suburbs.
+This was one of the more scenic and "touristy" of my coffeeneuring rides, but it's still a practical route for commuting. I regularly take my bike on routes similar to this. The trail system does an an excellent job at connecting our downtown area to the sprawling suburbs.
 
 Qualifying coffeeneuring details: This ride took place on Sunday, October 24. The total distance was about 7.2 miles.
