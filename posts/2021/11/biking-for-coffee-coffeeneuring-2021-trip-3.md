@@ -23,3 +23,5 @@ This is my third video in my Biking for Coffee series. As part of this year's Co
 This was one of the more scenic and "touristy" of my coffeeneuring rides, but it's still a practical route for commuting. I regularly take my bike on routes similar to this. The trail system does an an excellent job at connecting our downtown area to the sprawling suburbs.
 
 Qualifying coffeeneuring details: This ride took place on Sunday, October 24. The total distance was about 7.2 miles.
+
+[Read more about Coffeeneuring here](https://chasingmailboxes.com/2021/10/05/coffeeneuring-challenge-2021-the-c1-edition/).
