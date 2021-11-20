@@ -29,4 +29,4 @@ For this year's Coffeeneuring Challenge, I experimented with documenting my ride
 
 I've toyed with the idea of documenting my bike commutes for a while, and this challenge served as a good excuse to test it out. Anecdotally, I've observed that most people have no idea what bike commuting is like. Unless you actually get on two wheels and ride through your community, then it's hard to even be aware of issues like how poorly designed intersections. It's my hope that videos like these can raise awareness for these.
 
-I had fun filming these, so I'm going to aim to produce more in the future. The seven coffeenuring trips only covered a small piece of the whole bike commute experience.
+I had fun filming these, so I'm going to aim to produce more in the future. The seven coffeeneuring trips only covered a small piece of the whole bike commute experience.
