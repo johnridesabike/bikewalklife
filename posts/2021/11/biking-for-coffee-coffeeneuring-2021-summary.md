@@ -17,9 +17,9 @@ external_link: ''
 ---
 For this year's Coffeeneuring Challenge, I experimented with documenting my rides by video. You can watch the results here.
 
-* [Trip one: a ride through a neighborhood](https://bikewalk.life/2021/10/biking-for-coffee-coffeeneuring-2021-trip-1/).
+* [Trip one: a neighborhood ride](https://bikewalk.life/2021/10/biking-for-coffee-coffeeneuring-2021-trip-1/).
 * [Trip two: another neighborhood ride](https://bikewalk.life/2021/10/biking-for-coffee-coffeeneuring-2021-trip-2/).
-* [Trip three: a scenic ride through the riverwalk trail](https://bikewalk.life/2021/11/biking-for-coffee-coffeeneuring-2021-trip-3/).
+* [Trip three: a scenic ride down the riverwalk trail](https://bikewalk.life/2021/11/biking-for-coffee-coffeeneuring-2021-trip-3/).
 * [Trip four: part of my regular bike commute](https://bikewalk.life/2021/11/biking-for-coffee-coffeeneuring-2021-trip-4/).
 * [Trip five: a predawn ride in the darkness](https://bikewalk.life/2021/11/biking-for-coffee-coffeeneuring-2021-trip-5/).
 * [Trip six: a ride to downtown](https://bikewalk.life/2021/11/biking-for-coffee-coffeeneuring-2021-trip-6/).
