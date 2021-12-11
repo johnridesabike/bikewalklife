@@ -3,7 +3,7 @@ date: 2021-12-11T12:17:09-05:00
 tags:
 - philosophy
 - musings
-draft: true
+draft: false
 title: Mobility as a Hobson’s choice
 author: John Jackson
 hero_image:
@@ -23,6 +23,6 @@ I wonder if this is what happens when people move to new neighborhoods. When som
 
 But when the actually move in, they still just drive everywhere. They have no other choice. Getting from their house to work, to school, or to any of the (big-box) stores requires a car. The “walkability” and other features are merely an aesthetic.
 
-Maybe an aesthetic is what some people really want, quaint scenery for when they commute by car. Maybe most people just don’t know what _real_ walkable communities look like, since they’ve never lived in one. Or maybe mobility choices just aren’t that high of a priority for most people.
+Maybe an aesthetic is what some people really want, quaint scenery for when they commute by car. Maybe some people just don’t know what real walkable communities look like, since they’ve never lived in one. Or maybe mobility choices just aren’t that high of a priority for some people.
 
 Either way, no one has any option but to keep driving. That’s the deal, take it or leave it. And whether you like that deal or not, building half-baked mobility choices that aren’t really choices at all is a disservice to everyone in our communities.
