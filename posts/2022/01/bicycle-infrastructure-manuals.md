@@ -4,7 +4,7 @@ tags:
 - websites
 - policy
 - manuals
-draft: true
+draft: false
 title: Bicycle Infrastructure Manuals
 author: John Jackson
 hero_image:
@@ -14,7 +14,7 @@ hero_image:
 external_link: https://bicycleinfrastructuremanuals.com/
 
 ---
-Bicycle Infrastructure Manuals is a website that hosts documents about (as you may guess) bicycle infrastructure from around the world. 
+Bicycle Infrastructure Manuals is a website that hosts documents about (as you may guess) bicycle infrastructure from around the world.
 
 > Here you will find cycling infrastructure design manuals, strategy guides and more all curated from all over the world and organized into one easy-to-use database. Missing anything? Let us know!
 
