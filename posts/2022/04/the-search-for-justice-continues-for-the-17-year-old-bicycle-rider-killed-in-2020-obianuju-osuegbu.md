@@ -3,7 +3,7 @@ date: 2022-04-09T16:51:56-04:00
 tags:
 - teen
 - violence
-draft: true
+draft: false
 title: The search for justice continues for Obianuju Osuegbu, the 17-year-old bicycle
   rider killed in 2020
 author: John Jackson
@@ -30,10 +30,10 @@ When a teenager gets blamed for her own homicide when she did nothing illegal, a
 
 The driver didn't get away completely scot-free, though. She was charged with child endangerment. But that wasn't because she killed a teenager. It was for the children in the car with her.
 
-As ridiculous as this case is, we would be remiss to only consider this as a failure of law enforcement. Here is what the site of the crash looks like (on the right, you can see the ghost-bike memorializing Obianuju's death):
+As ridiculous as this case is, we would be remiss to merely consider this as a failure of law enforcement. Here's what the site of the crash looks like (on the right, you can see the ghost-bike memorializing Obianuju's death):
 
 ![A photo of a rural highway as seen from a car.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1649541387/2022/ga_hwy_11_afcex6.png)
 
 This does not look like a safe route for bicycles at all. Yet, we had a teenage girl rely on it to get home from work. Even without the drugs and the neglectful law enforcement, our underlying transportation system enables disasters like this to happen all the time.
 
-If there's any consolation, it's that the Osuegbu family has lawyers working for them, and that the media has picked up the story. No matter the outcome of this case, it can serve as another example of how much bicycle riders need justice on their side.
+If there's any consolation, it's that the Osuegbu family has lawyers working for them, and that the media has picked up the story. No matter the outcome of this case, it can serve as yet-another example of how much bicycle riders need justice on their side.
