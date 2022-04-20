@@ -2,11 +2,9 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
-const { ESBuildPlugin, ESBuildMinifyPlugin } = require("esbuild-loader");
+const { ESBuildMinifyPlugin } = require("esbuild-loader");
 
 const isDev = process.env.NODE_ENV !== "production";
-const cssVariables = path.resolve(__dirname, "assets", "variables.css");
-const cssMedia = path.resolve(__dirname, "assets", "custom-media.css");
 
 module.exports = {
   mode: isDev ? "development" : "production",
@@ -46,7 +44,6 @@ module.exports = {
   },
   plugins: [
     new WebpackManifestPlugin(),
-    new ESBuildPlugin(),
     new MiniCssExtractPlugin({
       filename: isDev ? "[name].css" : "[name].[contenthash].css",
     }),
@@ -81,23 +78,7 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: [
-                  [
-                    "postcss-preset-env",
-                    {
-                      importFrom: [cssVariables, cssMedia],
-                    },
-                  ],
-                  /* The postcss-custom-media built in with postcss-preset-env
-                     doesn't work. */
-                  [
-                    "postcss-custom-media",
-                    {
-                      importFrom: cssMedia,
-                    },
-                  ],
-                  "postcss-normalize",
-                ],
+                plugins: ["postcss-preset-env", "postcss-normalize"],
               },
             },
           },

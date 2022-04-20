@@ -1,17 +1,16 @@
-{% match page with {excerpt, url} %}
-{% match absoluteUrl with null %}
-  {* Don't try to process pages without urls.
-     They won't render anyway but 11ty will still try to process them. *}
-{% with absoluteUrl %}
+{% match pub with {@pub: false} %} {* Don't process unpublished pages. *}
+{% with {@pub: true, url, absoluteUrl, excerpt} %}
 {% Layout
    config
    strings
    build
    page
+   url
    collections
    title
    absoluteUrl
-   metadata={
+   tags
+   metadata=!{
     description: excerpt,
     author,
     isoDate,
@@ -151,30 +150,28 @@
 <div id="react-webmentions-root"></div>
 <hr class="separator" />
 <aside class="ui-font">
-  {% match collections with {page_about: [{data: {intro, image_small}}]} %}
-    {% Entry_About description=intro avatar=image_small config strings page collections / %}
-  {% /match %}
+  {% match collections with {pages: <about: {intro: !intro, image_small}>} %}
+    {% Entry_About description=intro avatar=image_small config strings url collections / %}
+  {% with _ %} {% /match %}
   <hr class="separator" />
   {% Subscribe config strings /%}
 </aside>
 <hr class="separator" />
 <nav class="entry-page__nav">
-  {% match tags with null %} {* Nothing! *}
-  {% with tags %} {% Related tags collections self=permalink limit=8 /%}
-  {% /match %}
+  {* {% Related tags collections self=permalink limit=8 /%} *}
   <h2 class="entry-page__footer-heading"> Other recent posts </h2>
   <ul class="entry-page__recent-list">
     {% match previous
        with null %}
       {* Nothing! *}
-    {% with {url, data: {title}} %}
+    {% with !{url, data: {title}} %}
       <li class="entry-page__recent-item">
         {% Link
           href=url
-          class="entry-page__recent-link"
+          class=!"entry-page__recent-link"
         %}
           <span aria-hidden="true">
-            {% Icon name="arrow-left" class="icon entry-page__arrow" / %}
+            {% Icon name="arrow-left" class=!"icon entry-page__arrow" / %}
           </span>
           <span>
             {% VisuallyHidden %}
@@ -188,12 +185,12 @@
     {% match next 
        with null %}
        {* Nothing! *}
-    {% with {url, data: {title}} %}
+    {% with !{url, data: {title}} %}
       <li class="entry-page__recent-item">
         {% Link
           href=url
-          class="entry-page__recent-link"
-          style="justify-content: flex-end;"
+          class=!"entry-page__recent-link"
+          style=!"justify-content: flex-end;"
         %}
           <span>
             {% VisuallyHidden %}
@@ -202,7 +199,7 @@
             {{ title }}
           </span>
           <span aria-hidden=true>
-            {% Icon name="arrow-right" class="icon entry-page__arrow" /%}
+            {% Icon name="arrow-right" class=!"icon entry-page__arrow" /%}
           </span>
         {% /Link %}
       </li>
@@ -215,4 +212,4 @@ var page_url = "{{ &absoluteUrl }}";
 {% WebpackInline asset="webmentions.js" /%}
 </script>
 {% /Layout %}
-{% /match /match %}
+{% /match %}

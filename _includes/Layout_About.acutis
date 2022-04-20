@@ -1,11 +1,15 @@
+{% match pub with {@pub: false} %} {* Don't render unpublished pages *}
+{% with {@pub: true, url, absoluteUrl} %}
 {% Layout
     title
     config
     strings
     build
     page
+    url
     collections
     absoluteUrl
+    tags=[]
     Head=#%}
       <style>
       {%~ PostCss %}
@@ -61,3 +65,4 @@
   </main>
   <aside> {% Subscribe config strings /%} </aside>
 {% /Layout %}
+{% /match %}

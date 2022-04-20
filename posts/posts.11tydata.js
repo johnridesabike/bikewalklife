@@ -18,7 +18,6 @@ module.exports = {
   layout: "Layout_Entry.acutis",
   eleventyComputed: {
     // A workaround for this bug: https://github.com/11ty/eleventy/issues/1303
-    absoluteUrl: globalComputed.absoluteUrl,
     isoDate: globalComputed.isoDate,
     sitemapDate: globalComputed.sitemapDate,
     formattedDate: globalComputed.formattedDate,
@@ -40,5 +39,20 @@ module.exports = {
       }),
     visible: (data) =>
       isVisible(data.draft, { yes: () => true, no: () => false }),
+    pub: (data) => {
+      if (data.draft) {
+        return { pub: false };
+      } else {
+        return {
+          pub: true,
+          url: data.page.url,
+          excerpt: data.page.excerpt,
+          absoluteUrl: new URL(data.page.url, config.site_url).href,
+          permalink:
+            data.permalink ||
+            data.page.filePathStem.replace(/^(\/posts)/, "") + "/",
+        };
+      }
+    },
   },
 };

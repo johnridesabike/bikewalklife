@@ -7,6 +7,8 @@ pagination:
 tags:
 - page_archive
 ---
+{% match pub with {@pub: false} %} {* Don't render unpublished pages *}
+{% with {@pub: true, url, absoluteUrl} %}
 {% Layout
   title
   config
@@ -15,6 +17,8 @@ tags:
   page
   absoluteUrl
   collections
+  tags
+  url
   Head=#%}
     <style>
     {%~ PostCss ~%}
@@ -108,15 +112,18 @@ tags:
   {% /match %}
   {% map posts with
       {
-        url,
         data: {
+          pub: {
+            @pub: true,
+            url: href,
+            absoluteUrl
+          },
           title,
           external_link,
           formattedDate,
           isoDate,
           draft,
           author,
-          absoluteUrl,
           hero_image,
           visible: true,
           page: {
@@ -130,25 +137,24 @@ tags:
         {% match hero_image
           with null %}
           {* nothing! *}
-        {% with {image, alt, caption} %}
+        {% with !{image, alt, caption} %}
           <figure class="archive__hero-figure">
-            {% Link href=url tabIndex=-1 %}
+            {% Link href tabIndex=!-1 %}
               {% Archive_HeroImage image alt build /%}
             {% /Link %}
             {% match caption
               with null
-              with "" %}
+              with !"" %}
               {* nothing! *}
-            {% with caption %}
+            {% with !caption %}
               <figcaption class="entry__caption"> {{ caption }} </figcaption>
             {% /match %}
           </figure>
         {% /match %}
         <h2 class="archive__entry-title p-name">
           {% Link
-              current=page
               href=absoluteUrl
-              class="u-url u-uid"
+              class=!"u-url u-uid"
           %}
             {{ title }}
           {% /Link %}
@@ -156,11 +162,7 @@ tags:
       </header>
       <p class="font-size-small p-summary archive__entry-summary">
         {{ &excerpt }}
-        {% Link
-          current=page
-          href=url
-          class="archive__entry-readmore u-url"
-        %}
+        {% Link href class=!"archive__entry-readmore u-url" %}
           keep reading →
         {% /Link %}
       </p>
@@ -174,7 +176,7 @@ tags:
         {% /match %}
         {% match external_link with null %}
           {* Nothing! *}
-        {% with href %}
+        {% with !href %}
           {% Entry_OriginalLink href strings /%}
         {% /match %}
       </footer>
@@ -182,14 +184,16 @@ tags:
     <hr class="separator" />
   {% with {data: {visible: false}} %}
     {* Don't show invisible posts. *}
+  {% with {data: {pub: {@pub: false}}} %}
+    {* Don't show invisible posts. *}
   {% /map %}
   <nav class="archive__nav">
     <div>
       {% match pagination with {href: {previous: null}} %} {* Nothing! *}
-      {% with {href: {previous}} %}
+      {% with {href: {previous: !previous}} %}
         <a href="{{ previous }}" rel="prev">
           <span aria-hidden="true">
-            {% Icon name="arrow-left" class="icon" /%}
+            {% Icon name="arrow-left" class=!"icon" /%}
           </span>
           previous
         </a>
@@ -197,11 +201,11 @@ tags:
     </div>
     <div>
       {% match pagination with {href: {next: null}} %} {* Nothing! *}
-      {% with {href: {next}} %}
+      {% with {href: {next: !next}} %}
         <a href="{{ next }}" rel="next">
           next
           <span aria-hidden="true">
-            {% Icon name="arrow-right" class="icon" /%}
+            {% Icon name="arrow-right" class=!"icon" /%}
           </span>
         </a>
       {% /match %}
@@ -209,3 +213,4 @@ tags:
   </nav>
 </main>
 {% /Layout %}
+{% /match %}

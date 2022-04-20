@@ -7,10 +7,10 @@ eleventyExcludeFromCollections: true
 {%~
   match collections with {all}
   map all
-  with {data: {absoluteUrl: null}}
+  with {data: {pub: {@pub: false }}}
 ~%}
   {* Nothing! *}
-{%~ with {data: {absoluteUrl, sitemapDate}} %}
+{%~ with {data: {sitemapDate, pub: {@pub: true, absoluteUrl}}} %}
   <url>
     <loc>{{ absoluteUrl }}</loc>
     <lastmod>{{ sitemapDate }}</lastmod>

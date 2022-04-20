@@ -5,7 +5,7 @@
     About {{ siteTitle }}
   </h2>
   <div class="entry-page__about-wrapper">
-    {% match avatar with {image, alt} %}
+    {% match avatar with !{image, alt} %}
       <div class="entry-page__avatar-wrapper">
         <div
           class="entry-page__avatar"
@@ -24,31 +24,34 @@
           />
         </div>
       </div>
+    {% with null %} {* No avatar *}
     {% /match %}
     <div class="entry-page__about-content">{{ &description }}</div>
   </div>
   <p class="entry-page__about-link">
-    {% match collections with {page_about: [{url}]} %}
-      {% Link current=page href=url %}
+    {% match collections
+      with {pages: <about: {url: href}>} %}
+      {% Link href %}
         Read more about {{ siteTitle }}
         <span aria-hidden="true">
-          {% Icon name="arrow-right" class="icon" /%}
+          {% Icon name="arrow-right" class=!"icon" /%}
         </span>
       {% /Link %}
-    {% /match %}
+    {% with _ %} {* Nothing *} {% /match %}
   </p>
   {% match strings with {contact_text, contact_title} %}
     <h2 class="entry-page__footer-heading"> {{ contact_title}} </h2>
     <div class="entry-page__about-content">{{ &contact_text }}</div>
     <p class="entry-page__about-link">
-      {% match collections with {page_contact: [{url}]} %}
-        {% Link current=page href=url %}
+      {% match collections
+        with {pages: <contact: {url: href}>} %}
+        {% Link href %}
           Contact me
           <span aria-hidden="true">
-            {% Icon name="arrow-right" class="icon" /%}
+            {% Icon name="arrow-right" class=!"icon" /%}
           </span>
         {% /Link %}
-      {% /match %}
+      {% with _ %} {* Nothing *} {% /match %}
     </p>
   {% /match %}
 </section>

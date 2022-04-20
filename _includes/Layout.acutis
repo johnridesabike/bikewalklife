@@ -4,11 +4,13 @@
   with
     {description, title: title_site, feed_url},
     {
-      page_index: [{url: url_index}],
-      page_about: [{url: url_about, data: {title: title_about}}],
-      page_contact: [{url: url_contact, data: {title: title_contact}}],
-      page_archive: [{url: url_archive, data: {title: title_archive}}],
-      page_search: [{url: url_search, data: {title: title_search}}]
+      pages: <
+        index: {data: {pub: {@pub: true, url: url_index}}},
+        about: {data: {title: title_about, pub: {@pub: true, url: url_about}}},
+        contact: {data: {title: title_contact, pub: {@pub: true, url: url_contact}}},
+        archive: {data: {title: title_archive, pub: {@pub: true, url: url_archive}}},
+        search: {data: {title: title_search, pub: {@pub: true, url: url_search}}}
+      >
     }
 ~%}
 <html
@@ -19,11 +21,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   {% map [
-      "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-italic.woff2",
-      "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-normal.woff2",
-      "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-italic.woff2",
-      "node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-normal.woff2",
-      "node_modules/@fontsource/fira-sans/files/fira-sans-latin-400-normal.woff2"
+      "fonts/source-serif-pro-latin-700-italic.woff2",
+      "fonts/source-serif-pro-latin-700-normal.woff2",
+      "fonts/source-serif-pro-latin-400-italic.woff2",
+      "fonts/source-serif-pro-latin-400-normal.woff2",
+      "fonts/fira-sans-latin-400-normal.woff2"
     ]
     with asset
   ~%}
@@ -35,7 +37,7 @@
      />
   {% /map ~%}
   {%~ match metadata with null %}
-    {% Metadata config title metadata=null absoluteUrl / %}
+    {% Metadata config title absoluteUrl / %}
   {%~ with metadata ~%}
     {% Metadata config title metadata absoluteUrl /%}
   {% /match ~%}
@@ -64,38 +66,38 @@
         <div class="small-screen-padding header">
           {% match tags with ["page_index"] %}
             <h1 class="header__title reading-font p-name">
-              {% Logo url_index page title_site /%}
+              {% Logo url_index current=url title_site /%}
             </h1>
           {% with _ %}
             <p class="header__title reading-font">
-              {% Logo url_index page title_site /%}
+              {% Logo url_index current=url title_site /%}
             </p>
           {% /match %}
           <p class="header__description"> {{ description }} </p>
           <nav aria-label="main navigation">
             <ul class="menu__list">
               <li class="menu__item">
-                {%~ Link current=page href=url_index class="menu__link" ~%}
+                {%~ Link href=url_index current=!url class=!"menu__link" ~%}
                   Home
                 {%~ /Link ~%}
               </li>
               <li class="menu__item">
-                {%~ Link current=page href=url_about class="menu__link" ~%}
+                {%~ Link href=url_about current=!url class=!"menu__link" ~%}
                   {{ title_about }}
                 {%~ /Link ~%}
               </li>
               <li class="menu__item">
-                {%~ Link current=page href=url_contact class="menu__link" ~%}
+                {%~ Link href=url_contact current=!url class=!"menu__link" ~%}
                   {{ title_contact }}
                 {%~ /Link ~%}
               </li>
               <li class="menu__item">
-                {%~ Link current=page href=url_archive class="menu__link" ~%}
+                {%~ Link href=url_archive current=!url class=!"menu__link" ~%}
                   {{ title_archive }}
                 {%~ /Link ~%}
               </li>
               <li class="menu__item">
-                {%~ Link current=page href=url_search class="menu__link" ~%}
+                {%~ Link href=url_search current=!url class=!"menu__link" ~%}
                   {{ title_search }}
                 {%~ /Link ~%}
               </li>
@@ -112,17 +114,17 @@
             <p class="footer__item footer__copyright">{{ &copyright }}</p>
           {% /match ~%}
           <p class="footer__item">
-            {%~ Link current=page href=url_index activeClassName="" ~%}
+            {%~ Link href=url_index current=!url ~%}
               Home
             {%~ /Link ~%}
           </p>
           <p class="footer__item">
-            {%~ Link current=page href=url_about activeClassName="" ~%}
+            {%~ Link href=url_about current=!url ~%}
               {{ title_about }}
             {%~ /Link ~%}
           </p>
           <p class="footer__item">
-            {%~ Link current=page href=url_contact activeClassName="" ~%}
+            {%~ Link href=url_contact current=!url ~%}
               {{ title_contact }}
             {%~ /Link ~%}
           </p>
@@ -145,4 +147,5 @@
     {% /match ~%}
   </body>
 </html>
+{% with _, _%} Collections are missing.
 {%~ /match ~%}

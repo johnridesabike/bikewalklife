@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="{{ title_site }}" />
   <meta name="twitter:site" content="{{ twitter_handle }}" />
 
-  {%~ match metadata with {description, author, isoDate} %}
+  {%~ match metadata with !{description, author, isoDate} %}
     <title> {{ title }} | {{ title_site }} </title>
     <link rel="canonical" href="{{ absoluteUrl }}" />
     <meta property="og:url" content="{{ absoluteUrl }}" />
@@ -43,7 +43,7 @@
 
   {* OG images *}
   {% match metadata
-     with {hero_image: {image, alt}} %}
+     with !{hero_image: !{image, alt}} %}
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       property="og:image"
@@ -53,7 +53,7 @@
     <meta property="og:image:height" content="450" />
     {% match alt with null %}
       {* Nothing! *}
-    {% with alt %}
+    {% with !alt %}
       <meta
         name="twitter:image:alt"
         property="og:image:alt"

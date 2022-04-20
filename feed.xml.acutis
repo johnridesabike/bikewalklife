@@ -1,22 +1,27 @@
-{%~ match
-    config, strings
-  with
-    {title, description, site_url, author_name}, {copyright}
-~%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
+{%~ match
+    config, strings, collections, pub
+  with
+    {title, description, site_url, author_name},
+    {copyright},
+    {pages, frontPage},
+    {@pub: true, absoluteUrl}
+~%}
   <title>{{ title }}</title>
   <subtitle>{{ description }}</subtitle>
   <link href="{{ absoluteUrl }}" rel="self"/>
-  {% match collections with {page_index: [{data: {absoluteUrl}}]} ~%} 
+  {% match pages with <index: {data: {pub: {@pub: true, absoluteUrl}}}> ~%} 
     <link href="{{ absoluteUrl }}" />
     <id>{{ absoluteUrl }}</id>
-  {% /match ~%}
-  <updated>
-    {%~ match collections with {frontPage: [{data: {isoDate}}]} ~%} 
+  {% with _ %} {* Nothing! *}
+  {%~ /match ~%}
+  {%~ match frontPage with [{data: {isoDate}}, ..._] ~%}
+    <updated>
       {{ isoDate }}
-    {%~ /match ~%}
-  </updated>
+    </updated>
+  {%~ with _ %} {* Nothing! *}
+  {%~ /match ~%}
   <author>
     <name>{{ author_name }}</name>
   </author>
@@ -25,11 +30,10 @@
     {%~ Favicon file="assets/images/nps-bicycle-trail.svg" width=128 / ~%}
   </icon>
   <rights type="html">{{ copyright }}</rights>
-  {% match collections with {frontPage}
-     map frontPage with
+  {% map frontPage with
      {
        templateContent,
-       data: {title, isoDate, absoluteUrl, page: {excerpt}}
+       data: {title, isoDate, page: {excerpt}, pub: {@pub: true, absoluteUrl}}
       }
     ~%}
     <entry>
@@ -40,6 +44,8 @@
       <summary type="html">{{ excerpt }}</summary>
       <content type="html">{{ templateContent }}</content>
     </entry>
-  {%~ /map /match %}
-</feed>
+  {% with {data: {pub: {@pub: false}} } %} {* Nothing! *}
+  {%~ /map %}
+{% with _, _, _, _ %} {* Nothing! *}
 {%~ /match ~%}
+</feed>
