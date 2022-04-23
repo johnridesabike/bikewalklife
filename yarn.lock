@@ -676,9 +676,10 @@ acorn@^8.4.1, acorn@^8.5.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.7.0.tgz#90951fde0f8f09df93549481e5fc141445b791cf"
   integrity sha512-V/LGr1APy+PXIwKebEWrkZPwoeoF+w1jiOBUmuxuiUIaOHtob8Qc9BTrYo7VuI5fR8tqsy+buA2WFooR5olqvQ==
 
-"acutis-lang@https://github.com/johnridesabike/acutis.git#release":
-  version "0.13.0"
-  resolved "https://github.com/johnridesabike/acutis.git#18384a04c439a487e61b1760e090e75812dc8b69"
+acutis-lang@0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/acutis-lang/-/acutis-lang-0.14.0.tgz#57b6fa96079ac42f38714aeb7f5a02d8018f6033"
+  integrity sha512-G4TlWXp2+yzvwnOilYh5S/zHMkWTsT523IM5226Nm87WQEl++CQi7k8tEShn8QlL0s35e1+muE0rJZeTCSk09g==
   dependencies:
     "@rescript/std" "^9.1.3"
     minimist "^1.2.5"
