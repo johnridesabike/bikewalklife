@@ -150,7 +150,7 @@
 <div id="react-webmentions-root"></div>
 <hr class="separator" />
 <aside class="ui-font">
-  {% match collections with {pages: <about: {intro: !intro, image_small}>} %}
+  {% match collections with {pages: <about: {data: {intro: !intro, image_small}}>} %}
     {% Entry_About description=intro avatar=image_small config strings url collections / %}
   {% with _ %} {% /match %}
   <hr class="separator" />
