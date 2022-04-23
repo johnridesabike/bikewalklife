@@ -10,7 +10,7 @@
       <dt> Feed </dt>
       <dd>
         <a href="{{ feed_url }}">
-          <span aria-hidden="true"> {% Icon name="rss" class="icon" /%} </span>
+          <span aria-hidden="true"> {% Icon name="rss" class=!"icon" /%} </span>
           Subscribe to web feed
         </a>
       </dd>
@@ -22,7 +22,7 @@
       <dt> Email </dt>
       <dd>
         <a href="https://mailchi.mp/8215c6ef46cd/bike-walk-life-digest">
-          <span aria-hidden="true"> {% Icon name="mail" class="icon" /%} </span>
+          <span aria-hidden="true"> {% Icon name="mail" class=!"icon" /%} </span>
           Subscribe to newsletter
         </a>
       </dd>

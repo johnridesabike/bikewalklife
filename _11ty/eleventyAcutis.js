@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const util = require("util");
 const fastGlob = require("fast-glob");
-const { Compile, Environment, Result, Source } = require("acutis-lang");
+const { Compile, Render, Result, Source, Typescheme } = require("acutis-lang");
 const { filenameToComponent } = require("acutis-lang/node-utils");
 
 const readFile = util.promisify(fs.readFile);
@@ -20,25 +20,29 @@ module.exports = function (eleventyConfig, config) {
   eleventyConfig.addExtension("acutis", {
     read: true,
     data: true,
-    init: async function () {
+    init: function () {
       const glob = path.join(
         this.config.inputDir,
         this.config.dir.includes,
         "**/*.acutis"
       );
-      const files = await fastGlob(glob);
-      const queue = await Promise.all(
-        files.map(async (fileName) => {
-          const str = await readFile(fileName, "utf-8");
-          const name = filenameToComponent(fileName);
-          return Source.string(name, str);
-        })
-      );
-      const componentsResult = Compile.Components.make([
-        ...queue,
-        ...config.components,
-      ]);
-      components = Result.getOrElse(componentsResult, onComponentsError);
+      return fastGlob(glob)
+        .then((files) =>
+          Promise.all(
+            files.map((fileName) =>
+              readFile(fileName, "utf-8").then((str) =>
+                Source.src(filenameToComponent(fileName), str)
+              )
+            )
+          )
+        )
+        .then((queue) => {
+          const componentsResult = Compile.Components.make([
+            ...queue,
+            ...config.components,
+          ]);
+          components = Result.getOrElse(componentsResult, onComponentsError);
+        });
     },
     compile: function (str, inputPath) {
       function onError(e) {
@@ -47,14 +51,14 @@ module.exports = function (eleventyConfig, config) {
           `I couldn't render ${inputPath} due to the previous errors.`
         );
       }
-      return async function (data) {
-        const src = Source.string(inputPath, str);
-        const template = Result.getOrElse(
-          Compile.make(src, components),
-          onError
+      const template = Result.getOrElse(
+        Compile.make(inputPath, str, components),
+        onError
+      );
+      return function (data) {
+        return Render.async(template, data).then((result) =>
+          Result.getOrElse(result, onError)
         );
-        const result = await template(Environment.async, data, {});
-        return Result.getOrElse(result, onError);
       };
     },
   });

@@ -78,3 +78,5 @@ lib/
 
 posts/__testdata__/
 _site
+*.swp
+_tmp/

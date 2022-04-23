@@ -4,6 +4,8 @@ tags:
 - page_contact
 metdata: null
 ---
+{% match pub with {@pub: false} %} {* Don't render unpublished pages *}
+{% with {@pub: true, url, absoluteUrl} %}
 {% Layout
   title
   config
@@ -11,6 +13,8 @@ metdata: null
   build
   page
   collections
+  url
+  tags
   absoluteUrl
   Head=#%}
     <style>
@@ -56,3 +60,4 @@ metdata: null
   <script src="{% Webpack asset="shared.js" /%}"></script>
   <script>{% WebpackInline asset="contact.js" /%}</script>
 {% /Layout %}
+{% /match %}

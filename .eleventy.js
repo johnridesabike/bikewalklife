@@ -84,6 +84,15 @@ module.exports = (eleventyConfig) => {
       .filter((x) => x.data.visible)
       .slice(0, 12)
   );
+  eleventyConfig.addCollection("pages", (collectionApi) =>
+    Object.fromEntries([
+      ["about", collectionApi.getFilteredByTag("page_about")[0]],
+      ["archive", collectionApi.getFilteredByTag("page_archive")[0]],
+      ["contact", collectionApi.getFilteredByTag("page_contact")[0]],
+      ["index", collectionApi.getFilteredByTag("page_index")[0]],
+      ["search", collectionApi.getFilteredByTag("page_search")[0]],
+    ])
+  );
 
   const mdConfig = {
     html: true,

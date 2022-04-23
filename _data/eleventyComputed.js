@@ -4,11 +4,15 @@ const lang = "en-US";
 const timeZone = "America/New_York";
 
 module.exports = {
-  absoluteUrl: (data) => {
+  pub: (data) => {
     if (data.page.url) {
-      return new URL(data.page.url, config.site_url).href;
+      return {
+        pub: true,
+        url: data.page.url,
+        absoluteUrl: new URL(data.page.url, config.site_url).href,
+      };
     } else {
-      return null;
+      return { pub: false };
     }
   },
   isoDate: (data) => data.page.date.toISOString(),

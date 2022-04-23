@@ -1,8 +1,13 @@
 ---
 title: ''
+author: "Bike Walk Life"
+draft: false
+visible: true
 tags:
 - page_index
 ---
+{% match pub with {@pub: false} %} {* Don't render unpublished pages. *}
+{% with {@pub: true, url, absoluteUrl} %}
 {% Layout
   config
   strings
@@ -11,7 +16,8 @@ tags:
   collections
   title
   absoluteUrl
-  metadata=null
+  tags
+  url
   Head=#%}
     <style>
     {%~ PostCss ~%}
@@ -29,7 +35,6 @@ tags:
      map frontPage with
       {
         templateContent: content,
-        url,
         data: {
           author,
           title,
@@ -38,9 +43,13 @@ tags:
           formattedDate,
           draft,
           external_link,
-          absoluteUrl,
           visible: true,
-          tags
+          tags,
+          pub: {
+            @pub: true,
+            url,
+            absoluteUrl
+          }
         }
       },
       index
@@ -66,26 +75,32 @@ tags:
     {% match index with 0 %}
       <div class="full-bleed">
         <hr class="separator" />
-        {% Subscribe class="small-screen-padding" config strings /%}
+        {% Subscribe class=!"small-screen-padding" config strings /%}
         <hr class="separator" />
       </div>
     {% with _ %} <hr class="separator" />
     {% /match %}
   {% with {data: {visible: false}} %} {* Don't show invisible posts. *}
-  {% /map /match %}
+  {% with {data: {pub: {@pub: false}}} %} {* Don't show invisible posts. *}
+  {% /map %}
+  {% with _ %} <!-- no frontPage -->
+  {% /match %}
 </main>
 <nav>
-  {% match strings, collections with {archive_link}, {page_archive: [{url}]} %} 
+  {% match strings, collections
+    with {archive_link}, {pages: <archive: {url: href}>} %}
     <div class="index-page__archive-link">
-      {% Link current=page href=url %}
+      {% Link current=!url href %}
         {{ archive_link }}
         <span aria-hidden="true">
-          {% Icon name="arrow-right" class="icon" /%}
+          {% Icon name="arrow-right" class=!"icon" /%}
         </span>
       {% /Link %}
     </div>
+  {% with _, _ %} <!-- no archive page -->
   {% /match %}
 </nav>
 <hr class="separator" />
 <aside> {% Subscribe config strings /%} </aside>
 {% /Layout %}
+{% /match %}

@@ -4,7 +4,70 @@
 @import "@fontsource/source-serif-pro/400-italic.css";
 @import "@fontsource/source-serif-pro/700.css";
 @import "@fontsource/source-serif-pro/700-italic.css";
-@import "./variables.css";
+
+:root {
+  /**
+   * Typography
+   */
+  --font-sans-serif: "fira sans", "helvetica neue", sans-serif;
+  --font-serif: "source serif pro", "charter", serif;
+  --font-ui: "fira sans", -apple-system, blinkmacsystemfont, "segoe UI", roboto,
+    oxygen-sans, ubuntu, cantarell, "helvetica neue", sans-serif;
+  --font-pre: "courier 10 pitch", courier, monospace;
+  --font-base-size: 18px;
+  --font-base-size-mobile: 16px;
+  --font-size-xs: calc(1em / 1.25); /* 16 */
+  --font-size-sm: calc(1em / 1.125); /* 17.78 */
+  --font-size-md: calc(1em * 1); /* 20 */
+  --font-size-lg: calc(1em * 1.25); /* 25 */
+  --font-size-xl: calc(1em * 1.5); /* 30 */
+  --font-size-xxl: calc(1em * 1.75); /* 35 */
+  --letter-spacing-allcaps: 0.06em;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /**
+   * Layout
+   */
+  --width-site: 900px;
+  --width-content: 600px;
+
+  /**
+   * Colors
+   * https://coolors.co/457b9d-7cc8cb-1d3557-da1b2b-f1faee
+   */
+  --color-background: #fff;
+  --color-text: #000;
+  --color-primary: #457b9d;
+  --color-primary-light: #7cc8cb;
+  --color-primary-dark: #1d3557;
+  --color-secondary: #da1b2b;
+  --color-secondary-light: #f1faee;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /**
+     * https://coolors.co/65a5cd-1d3557-d4eded-f76470-f1faee
+     */
+    --color-background: #282a36;
+    --color-text: #f8f8f2;
+    --color-primary: #65a5cd;
+    --color-primary-light: #1d3557; /* actually darker */
+    --color-primary-dark: #d4eded; /* actually lighter */
+    --color-secondary: #f76470;
+    --color-secondary-light: #f1faee;
+  }
+}
+
+/**
+ * https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+ */
+@custom-media --phone-only (max-width: 600px);
+@custom-media --tablet-portrait-up (min-width: 600px);
+@custom-media --tablet-landscape-up (min-width: 900px);
+@custom-media --desktop-up (min-width: 1200px);
+@custom-media --desktop-big-up (min-width: 1800px);
 
 /*******************************************************************************
  * Global Elements

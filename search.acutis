@@ -4,6 +4,8 @@ tags:
 - page_search
 metadata: null
 ---
+{% match pub with {@pub: false} %} {* Don't render unpublished pages *}
+{% with {@pub: true, url, absoluteUrl} %}
 {% Layout
   title
   config
@@ -12,6 +14,8 @@ metadata: null
   page
   collections
   absoluteUrl
+  tags
+  url
   Head=#/#
 %}
 <main style="margin: 3em 0;">
@@ -33,3 +37,4 @@ metadata: null
   ></iframe>
 </main>
 {% /Layout %}
+{% /match %}
