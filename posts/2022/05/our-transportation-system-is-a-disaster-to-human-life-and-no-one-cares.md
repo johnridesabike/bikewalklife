@@ -12,7 +12,7 @@ hero_image:
 external_link: ''
 
 ---
-I have believed that one powerful argument in support of transportation reform is to simply show how deadly our car-centric system is. Millions of people have died, and will continue to die, in part from the volume of cars on our roads and how the roads themselves are engineered. But, as damning as that evidence sounds, even die-hard car drivers don’t dispute it. Everyone is well aware that roads are deadly, but they just don’t care.
+I have believed that one powerful argument in support of transportation reform is to simply show how deadly our car-centric system is. Millions of people have died, and will continue to die, in part from the volume of cars on our roads and how the roads themselves are engineered. But, as damning as that evidence sounds, even die-hard car drivers don’t dispute it. Everyone is aware that our roads are deadly. They just don’t care.
 
 Imagine if the US federal government instituted a giant project that impacted every single neighborhood in every single town in the entire nation. Then, decades later, a whistleblower exposed that this Big Government project had been directly responsible for millions of deaths. It’s not hard to imagine what would follow: protests, campaigns for defunding, and investigations into the project’s officials.
 
