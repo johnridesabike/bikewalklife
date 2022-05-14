@@ -39,11 +39,10 @@ module.exports = {
       }),
     visible: (data) =>
       isVisible(data.draft, { yes: () => true, no: () => false }),
-    pub: (data) => {
-      if (data.draft) {
-        return { pub: false };
-      } else {
-        return {
+    pub: (data) =>
+      isVisible(data.draft, {
+        no: () => ({ pub: false }),
+        yes: () => ({
           pub: true,
           url: data.page.url,
           excerpt: data.page.excerpt,
@@ -51,8 +50,7 @@ module.exports = {
           permalink:
             data.permalink ||
             data.page.filePathStem.replace(/^(\/posts)/, "") + "/",
-        };
-      }
-    },
+        }),
+      }),
   },
 };
