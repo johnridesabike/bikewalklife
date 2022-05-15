@@ -105,7 +105,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: (file, _options) => {
       file.excerpt = mdExcerpt.renderInline(
-        file.content.split("\n").slice(0, 1).join(" ")
+        file.content.split("\n\n").slice(0, 1).join(" ")
       );
     },
   });

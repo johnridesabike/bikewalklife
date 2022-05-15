@@ -67,4 +67,3 @@ goes” or is it an unconscionable scandal? Is each death the victim’s fault, 
 it just an accident, or is it all of our faults for allowing this deadly system?
 I don’t know any easy way to change the public’s perspective, but we can start
 by treating the situation with the severity that it deserves.
-
