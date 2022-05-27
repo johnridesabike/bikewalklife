@@ -2,8 +2,8 @@
 date: 2022-05-27T07:47:09-04:00
 tags:
 - untagged
-draft: true
-title: Traffic fatalities spike over 10%, reaching 16 year high
+draft: false
+title: Traffic fatalities spike over 10% in 2021, reaching 16 year high
 author: John Jackson
 hero_image:
   image: ''
@@ -23,4 +23,4 @@ The statistics are troubling on their own, but look even more unsettling when we
 
 This isn’t the only apparent contradiction we’ve seen recently. In 2020, there was the [pandemic traffic death paradox](https://bikewalk.life/2020/10/the-pandemic-era-traffic-death-paradox/), where the number of cars on the road dropped, but the number of traffic deaths rose dramatically.
 
-Our problem is not just that our existing safety programs haven’t gone far enough. Our transportation system, in particular our car-centric streets, are fundamentally hostile to human life. As long as our national and local governments keep prioritizing faster, bigger cars at the expense of every other option, then individual safety efforts simply don’t stand a chance. We need to re-prioritize humans by making people on foot central to our mobility infrastructure.
+Our problem is not just that our existing safety programs haven’t gone far enough. Our car-centric streets are fundamentally hostile to human life. As long as our national and local governments keep prioritizing faster, bigger cars at the expense of every other option, then individual safety efforts simply don’t stand a chance. We need to re-prioritize humans by making people on foot central to our mobility infrastructure.
