@@ -2,7 +2,7 @@
 date: 2022-06-04T16:28:26-04:00
 tags:
 - untagged
-draft: true
+draft: false
 title: My video of a truck’s dangerous pass went viral
 author: John Jackson
 hero_image:
@@ -20,7 +20,7 @@ If you aren’t familiar with TikTok, it’s less follower-oriented compared to 
 
 ## Background for this video
 
-Ever since I got a GoPro camera, I almost always keep it recording when I ride my bicycle. This past January, I began posting these on TikTok. I recorded this particular video in February one evening while I rode home from work. After I recorded it, I forgot all about it. The truck’s pass was dangerous and [illegal according to Georgia’s 3-foot passing law](https://bikewalk.life/2021/07/what-to-know-about-georgia-s-new-3-foot-passing-law/), but not especially memorable afterwards.
+Ever since I got a GoPro camera, I almost always keep it recording when I ride my bicycle. This past January, I began posting these on TikTok. I recorded this particular video in February while I rode home from work one evening. After I recorded it, I forgot all about it. The truck’s pass was dangerous and [illegal according to Georgia’s 3-foot passing law](https://bikewalk.life/2021/07/what-to-know-about-georgia-s-new-3-foot-passing-law/), but not especially memorable afterwards.
 
 A week ago, I was scrolling through my old video files. The “everyone underestimates me” sound was currently popular on TikTok, and when I saw this footage it gave me an idea. I synced the sound with the video, added a caption, and shared it.
 
@@ -48,7 +48,7 @@ It’s a video of me biking home from work. Even TikTok knows that our transport
 
 ## What does “viral” mean? Here’s some context.
 
-Viral for me is not necessarily viral for everyone. In the TikTok world, popular videos get millions of views, not thousands. Most of my videos get a few hundred views. Occasionally, one gets lucky and reaches a few thousand. Here’s a chart from my video view statistics:
+Viral for me is not necessarily viral for everyone. In the TikTok world, the most popular videos get millions of views. Most of my videos get a few hundred. Occasionally, one gets lucky and reaches a few thousand. Here’s a chart from my video view statistics:
 
 ![A bar chart depicting video views over time. A few small bars are on the left and large bars are on the right, showing peak views at 30K in one day.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1654374600/2022/Screen_Shot_2022-06-04_at_2.05.02_PM_fjlkm2.png)
 
@@ -56,7 +56,7 @@ The bumps on the left used to look like giant spikes, but then Memorial Day week
 
 TikTok also provides numbers that tell me how my performance compares to “creators like you.” I don’t know how they classify creators, but this video is higher than 100% of the creators who are supposedly like me.
 
-Most of my recent videos also score high when using that same measurement. Here’s one that has just over 300 views, apparently more than 82% of creators like me.
+Most of my recent videos also score highly by that same measurement. Here’s one that has just over 300 views, apparently more than 82% of creators like me.
 
 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@johnridesabike/video/7103859524183870762" data-video-id="7103859524183870762" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@johnridesabike" href="https://www.tiktok.com/@johnridesabike">@johnridesabike</a> A great day to ride across this bridge. <a title="bicycle" target="_blank" href="https://www.tiktok.com/tag/bicycle">#bicycle</a> <a title="biketok" target="_blank" href="https://www.tiktok.com/tag/biketok">#biketok</a> <a target="_blank" title="♬ Disturbia - mbappegoals" href="https://www.tiktok.com/music/Disturbia-7074316711545473798">♬ Disturbia - mbappegoals</a> </section> </blockquote>
 
