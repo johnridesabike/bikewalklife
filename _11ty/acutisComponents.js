@@ -1,6 +1,6 @@
 const fs = require("fs/promises");
 const path = require("path");
-const { Source, Typescheme } = require("acutis-lang");
+const { Compile, Typescheme, TypeschemeChildren } = require("acutis-lang");
 const { icons } = require("feather-icons");
 const Image = require("@11ty/eleventy-img");
 const postcss = require("postcss");
@@ -24,93 +24,96 @@ const manifestFile = fs
   .then((x) => JSON.parse(x));
 
 const Ty = Typescheme;
+const TyChild = TypeschemeChildren;
 
 module.exports = [
-  Source.fn(
+  Compile.fromFunAsync(
     "PostCss",
     Ty.make([]),
-    Ty.Child.make([Ty.Child.child("Children")]),
-    (Env, _props, { Children }) =>
-      Env.flatmap(Children, (content) => {
+    TyChild.make([TyChild.child("Children")]),
+    (_props, { Children }) =>
+      Children.then((content) => {
         if (postcssCache.has(content)) {
           return postcssCache.get(content);
         } else {
           const result = postcssWithOptions
-            .process(content, { from: undefined })
-            .then(Env.return_)
-            .catch(Env.error);
+            .process(content, {
+              from: undefined,
+            })
+            .then((result) => result.css);
           postcssCache.set(content, result);
           return result;
         }
       })
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "Icon",
     Ty.make([
       ["name", Ty.string()],
       ["class", Ty.nullable(Ty.string())],
     ]),
-    Ty.Child.make([]),
-    (Env, props, _children) =>
-      Env.return_(icons[props.name].toSvg({ class: props.class || "" }))
+    TyChild.make([]),
+    (props, _children) =>
+      Promise.resolve(icons[props.name].toSvg({ class: props.class || "" }))
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "Log",
     Ty.make([["val", Ty.unknown()]]),
-    Ty.Child.make([]),
-    (Env, props, _children) => {
+    TyChild.make([]),
+    (props, _children) => {
       console.log(props.val);
-      return Env.return_("");
+      return Promise.resolve("");
     }
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "Debugger",
     Ty.make([["val", Ty.unknown()]]),
-    Ty.Child.make([]),
-    (Env, _props, _children) => {
+    TyChild.make([]),
+    (_props, _children) => {
       debugger;
-      return Env.return_("");
+      return Promise.resolve("");
     }
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "Webpack",
     Ty.make([["asset", Ty.string()]]),
-    Ty.Child.make([]),
-    (Env, props, _children) =>
+    TyChild.make([]),
+    (props, _children) =>
       manifestFile.then((data) => {
         const x = data[props.asset];
         if (x) {
-          return Env.return_(x);
+          return x;
         } else {
-          return Env.error(`${props.asset} doesn't exist in the manifest.`);
+          throw new Error(`${props.asset} doesn't exist in the manifest.`);
         }
       })
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "WebpackInline",
     Ty.make([["asset", Ty.string()]]),
-    Ty.Child.make([]),
-    (Env, props, _children) =>
+    TyChild.make([]),
+    (props, _children) =>
       manifestFile.then((data) => {
         const assetPath = data[props.asset];
         if (assetPath) {
-          return fs
-            .readFile(path.resolve(__dirname, "..", "_site", "." + assetPath), {
+          return fs.readFile(
+            path.resolve(__dirname, "..", "_site", "." + assetPath),
+            {
               encoding: "utf8",
-            })
-            .then((data) => Env.return_(data));
+            }
+          );
         } else {
-          return Env.error(`${props.asset} doesn't exist in the manifest.`);
+          throw new Error(`${props.asset} doesn't exist in the manifest.`);
         }
       })
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "Link",
     Ty.make([
       ["current", Ty.nullable(Ty.string())],
@@ -118,10 +121,10 @@ module.exports = [
       ["activeClassName", Ty.nullable(Ty.string())],
       ["class", Ty.nullable(Ty.string())],
       ["style", Ty.nullable(Ty.string())],
-      ["tabIndex", Ty.nullable(Ty.int_())],
+      ["tabIndex", Ty.nullable(Ty.int())],
     ]),
-    Ty.Child.make([Ty.Child.child("Children")]),
-    (Env, props, { Children }) => {
+    TyChild.make([TyChild.child("Children")]),
+    (props, { Children }) => {
       const current =
         props.current && props.current === props.href ? "page" : null;
       let activeClassName;
@@ -134,8 +137,7 @@ module.exports = [
       } else {
         activeClassName = null;
       }
-      return Env.map(
-        Children,
+      return Children.then(
         (Children) => `<a
           href="${props.href}"
           class='${props.class || ""} ${activeClassName || ""}'
@@ -148,23 +150,23 @@ module.exports = [
     }
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "ReactFormHtml",
     Ty.make([]),
-    Ty.Child.make([]),
-    (Env, _props, _children) => Env.return_(contactForm.render())
+    TyChild.make([]),
+    (_props, _children) => Promise.resolve(contactForm.render())
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "ImgSrc",
     Ty.make([
-      ["width", Ty.int_()],
-      ["aspect", Ty.float_()],
+      ["width", Ty.int()],
+      ["aspect", Ty.float()],
       ["gravity", Ty.string()],
       ["image", Ty.string()],
     ]),
-    Ty.Child.make([]),
-    (Env, { width, aspect, gravity, image }, _children) => {
+    TyChild.make([]),
+    ({ width, aspect, gravity, image }, _children) => {
       const height = Math.ceil(width * aspect);
       const opts =
         "/" +
@@ -176,31 +178,31 @@ module.exports = [
             `h_${height},` +
             `w_${width}`
         );
-      return Env.return_(cloudinary_url + opts + image);
+      return Promise.resolve(cloudinary_url + opts + image);
     }
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "ImgSrcStatic",
     Ty.make([
       ["transforms", Ty.list(Ty.string())],
       ["image", Ty.string()],
     ]),
-    Ty.Child.make([]),
-    (Env, { transforms, image }, _children) => {
+    TyChild.make([]),
+    ({ transforms, image }, _children) => {
       const opts = transforms.map(encodeURIComponent).join("/");
-      return Env.return_(cloudinary_url + "/" + opts + "/" + image);
+      return Promise.resolve(cloudinary_url + "/" + opts + "/" + image);
     }
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "Favicon",
     Ty.make([
       ["file", Ty.string()],
-      ["width", Ty.int_()],
+      ["width", Ty.int()],
     ]),
-    Ty.Child.make([]),
-    (Env, { file, width }, _children) => {
+    TyChild.make([]),
+    ({ file, width }, _children) => {
       const key = `${file}-${width}`;
       if (faviconCache.has(key)) {
         return faviconCache.get(key);
@@ -212,17 +214,17 @@ module.exports = [
           outputDir: path.join(__dirname, "..", "_site"),
           filenameFormat: (_id, _src, width, format, _options) =>
             `favicon-${width}.${format}`,
-        }).then((metadata) => Env.return_(metadata.png[0].url));
+        }).then((metadata) => metadata.png[0].url);
         faviconCache.set(key, result);
         return result;
       }
     }
   ),
 
-  Source.fn(
+  Compile.fromFunAsync(
     "PageNumber",
-    Ty.make([["pageNumber", Ty.int_()]]),
-    Ty.Child.make([]),
-    (Env, { pageNumber }, _children) => Env.return_(String(pageNumber + 1))
+    Ty.make([["pageNumber", Ty.int()]]),
+    TyChild.make([]),
+    ({ pageNumber }, _children) => Promise.resolve(String(pageNumber + 1))
   ),
 ];

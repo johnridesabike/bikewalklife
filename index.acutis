@@ -31,8 +31,8 @@ tags:
   {%/#
 %}
 <main>
-  {% match collections with {frontPage}
-     map frontPage with
+  {% match collections with {frontPage} ~%}
+  {% map frontPage with
       {
         templateContent: content,
         data: {
