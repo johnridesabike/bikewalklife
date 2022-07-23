@@ -20,4 +20,4 @@ NPR's Bill Chappell published a short reflection on bicycling. "Just like life,"
 >
 > It's one of the rare things in life that lets you escape from the world, while also connecting you to it. I love to spin my way through forests, around lakes, and into little communities I never knew existed.
 
-One thing about bicycling is that everyone has their own connection to it. Even though there are some common reasons why most people ride, each person's exact relationship with bicycles is unique. I think that personal stories like Bill's are a good way to show how riding isn't a cookie-cutter experience.
+One thing about bicycling is that everyone has their own connection to it. Even though there are some common reasons why most people ride, each person's exact relationship with bicycles is unique. I think that personal stories like Bill's are a good way to show how riding a bike isn't a cookie-cutter experience.
