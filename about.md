@@ -1,7 +1,7 @@
 ---
 title: About
 intro: Hi, this is John. I’m a bike commuter from Columbus, Georgia. I use this blog
-  to promote and discuss issues affecting the world of biking and walking. I especially
+  to discuss stories and issues from the world of biking and walking. I especially
   focus on the Southeast U.S.
 image_large:
   image: "/v1608060004/john-bike-to-work-day-2020.jpeg"
@@ -15,11 +15,11 @@ tags: page_about
 layout: Layout_About.acutis
 
 ---
-I’ve been a bike enthusiast for several years now. I ride my bicycle to and from work on most days, and I’ve done this while living in one of the most car-dominated cities, in one of the most car-dominated regions, in the world. Even though bike advocates will tell you that riding bicycles is liberating, I can attest that such a counter-cultural lifestyle is not easy.
+I’ve been a bike enthusiast for several years. I ride my bicycle to and from work most days, even though I live in one of the most car-dominated regions in the world. Riding bicycles can feel liberating sometimes, but living car-free (or car-lite) is not always easy.
 
-The name _Bike Walk Life_ comes from the idea that an ideal life is full of plenty of both. Our culture's dominant, backwards philosophy says that a “normal” person’s life revolves around vehicles, and that walking and biking (outside of designated parks) is even dangerous and should be discouraged.
+The name _Bike Walk Life_ comes from my belief that an ideal life puts walking and biking at the foundation of the transportation "food pyramid." When that pyramid gets inverted, as it does in a car-centric society, then it comes at the cost of happiness, health, and human life itself.
 
-_Bike Walk Life_ is about individuals and communities that reject the ideas of car-culture and celebrate lives on foot or on pedals. I hope you get something out of this blog, and please feel free to fill out the contact form if you have any comments or feedback.
+I hope you enjoy this blog. Please feel free to fill out the [contact form](https://bikewalk.life/contact/) if you have any comments or feedback.
 
 ## More writing from John
 
