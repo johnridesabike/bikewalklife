@@ -20,6 +20,6 @@ You can read the whole blog post here: [Can Portland style bike fun culture take
 >
 > But the idea of a mass of DIY bike events is pretty uncommon. Portland is one of the few places where this happens regularly.
 
-He goes on to describe the multi-decade history of how Portland got to where it is now. One of the takeaways is how much hard work and persistence it takes from volunteers year after year. It's one thing to have an organization host an annual event, but it's another thing to have a critical mass (pun intended) of regular people who are willing to keep the ball rolling organically.
+He goes on to describe the multi-decade history of how Portland got to where it is now, and how other cities have tried but haven't achieved it yet. One of the takeaways is how much hard work and persistence it takes from volunteers year after year. It's one thing to have an organization host an event, but it's another thing to build up a critical mass (pun intended) of regular people who are willing to keep the ball rolling organically.
 
 His exact experiences in Portland and Vancouver won't be directly applicable everywhere, but I think his story of successes and failures contains good lessons for everyone.
