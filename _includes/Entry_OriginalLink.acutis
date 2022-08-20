@@ -1,3 +1,7 @@
+{% interface
+  href = string
+  strings = {open_linked: string}
+/interface %}
 <!-- Entry_OriginalLink -->
 <a href="{{ href }}" target="_blank" rel="noopener" class="u-in-reply-to">
   {%~ match strings with {open_linked} %} {{ open_linked }} {% /match ~%}

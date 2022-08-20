@@ -1,3 +1,10 @@
+{% interface
+  config = {title: string}
+  avatar = ?{image: string, alt: string}
+  collections = {pages: <{url: string}>}
+  description = string
+  strings = {contact_text: string, contact_title: string}
+/interface %}
 <!-- Entry_About -->
 {% match config with {title: siteTitle} %}
 <section class="entry-page__about">

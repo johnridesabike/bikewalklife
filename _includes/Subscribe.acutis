@@ -1,3 +1,8 @@
+{% interface
+  config = {title: string, feed_url: string}
+  class = ?string
+  strings = {subscribe_email_cta: string, subscribe_feed_cta: string}
+/interface %}
 <!-- Subscribe -->
 {% match config with {title, feed_url} %}
 <section class='subscribe ui-font {{ class ? "" }}'>

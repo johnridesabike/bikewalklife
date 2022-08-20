@@ -1,3 +1,52 @@
+{% interface
+  pub =
+      {@pub: false}
+    | {@pub: true, url: string, absoluteUrl: string, excerpt: string}
+  author = string
+  content = string
+  title = string
+  draft = false | true
+  external_link = ?string
+  formattedDate = string
+  isoDate = string
+  hero_image = ?{alt: ?string, caption: ?string, image: string}
+  build = {environment: string}
+  next = ?{data: {title: string}, url: string}
+  previous = ?{data: {title: string}, url: string}
+  tags = [string]
+  collections =
+    {
+       pages:
+         <
+            {
+               data:
+                 {
+                    image_small: ?{alt: string, image: string},
+                    intro: ?string,
+                    pub: {@pub: false} | {@pub: true, url: string},
+                    title: string
+                 },
+               url: string
+            }
+         >
+    }
+  config =
+    {
+       description: string,
+       feed_url: string,
+       title: string,
+       twitter_handle: string
+    }
+  strings =
+    {
+       contact_text: string,
+       contact_title: string,
+       copyright: string,
+       open_linked: string,
+       subscribe_email_cta: string,
+       subscribe_feed_cta: string
+    }
+/interface %}
 {% match pub with {@pub: false} %} {* Don't process unpublished pages. *}
 {% with {@pub: true, url, absoluteUrl, excerpt} %}
 {% Layout

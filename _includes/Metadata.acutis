@@ -1,3 +1,16 @@
+{% interface
+  absoluteUrl = string
+  title = string
+  metadata =
+    ?
+      {
+         author: string,
+         description: string,
+         hero_image: ?{alt: ?string, image: string},
+         isoDate: string
+      }
+  config = {title: string, description: string, twitter_handle: string}
+/interface %}
 <!-- Metadata -->
 {% match config with
     {

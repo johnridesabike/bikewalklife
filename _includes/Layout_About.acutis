@@ -1,3 +1,37 @@
+{% interface
+  pub = {@pub: false} | {@pub: true, url: string, absoluteUrl: string}
+  build = {environment: string}
+  collections =
+    {
+      pages:
+        <
+          {
+            data:
+              {
+                title: string,
+                pub: {@pub: false} | {@pub: true, url: string}
+              }
+          }
+        >
+    }
+  config =
+    {
+      description: string,
+      title: string,
+      feed_url: string,
+      twitter_handle: string
+  }
+  content = string
+  title = string
+  image_large = {alt: string, image: string}
+  intro = string
+  strings =
+    {
+       copyright: string,
+       subscribe_email_cta: string,
+       subscribe_feed_cta: string
+    }
+/interface %}
 {% match pub with {@pub: false} %} {* Don't render unpublished pages *}
 {% with {@pub: true, url, absoluteUrl} %}
 {% Layout

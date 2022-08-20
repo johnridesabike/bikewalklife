@@ -1,3 +1,21 @@
+{% interface
+  hero_image = ?{image: string, alt: ?string, caption: ?string}
+  absoluteUrl = string
+  author = string
+  build = {environment: string}
+  class = ?string
+  content = string
+  draft = false | true
+  external_link = ?string
+  formattedDate = string
+  h = string
+  isoDate = string
+  linkedHeader = false | true
+  strings = {open_linked: string}
+  tags = [string]
+  title = string
+  url = string
+/interface %}
 <!-- Entry -->
 <article class='h-entry hentry entry__article {{ class ? "" }}'>
   {% match hero_image
