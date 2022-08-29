@@ -10,7 +10,7 @@
          isoDate: string
       }
   config = {title: string, description: string, twitter_handle: string}
-/interface %}
+/ %}
 <!-- Metadata -->
 {% match config with
     {

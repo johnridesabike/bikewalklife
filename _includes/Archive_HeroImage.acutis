@@ -1,7 +1,7 @@
 {% interface
   image = string
   alt = string
-/interface %}
+/ %}
 <!-- Archive_HeroImage -->
 {* 320: mobile size. 600: actual size. *}
 <img

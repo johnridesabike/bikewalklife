@@ -1,7 +1,7 @@
 {% interface
   image = string
   alt = ?string
-/interface %}
+/ %}
 <!-- Entry_HeroImage -->
 {* 320: mobile size. 900: actual size. *}
 <img

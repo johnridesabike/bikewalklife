@@ -40,7 +40,7 @@
     "@reach/visually-hidden": "^0.13.0",
     "@rescript/react": "^0.10.1",
     "@ryyppy/rescript-promise": "^2.0.0",
-    "acutis-lang": "^0.16.0",
+    "acutis-lang": "^0.17.1",
     "browserslist": "^4.16.5",
     "bs-fetch": "^0.6.2",
     "bs-platform": "^9.0.2",

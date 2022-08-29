@@ -701,10 +701,10 @@ acorn@^8.4.1, acorn@^8.5.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.7.1.tgz#0197122c843d1bf6d0a5e83220a788f278f63c30"
   integrity sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==
 
-acutis-lang@^0.16.0:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/acutis-lang/-/acutis-lang-0.16.0.tgz#2c3274810147ef81335408c730a704466168210c"
-  integrity sha512-6Ik/j+p/WxwppDhy+u+myiNIEBmLSHM/W5QDelUwWEZoTfq8v82P+KlKxQjyB7vWwsd94DNUmA8WN8G7IKuGCw==
+acutis-lang@^0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/acutis-lang/-/acutis-lang-0.17.1.tgz#254bfefb3fee51c75b3428b017e886717c97951c"
+  integrity sha512-J3GlouK4huglDA2/c60Jf7+/6hMMmapO3zDe552KAYi0RuQ4Q2GJIUKSqRJw1ZgLxuL3Ri8c2M5dH3dMvDD49A==
 
 ajv-formats@^2.1.1:
   version "2.1.1"

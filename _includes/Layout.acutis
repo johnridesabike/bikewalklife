@@ -37,7 +37,7 @@
 
   Children
   Head = ?
-/interface %}
+/ %}
 <!DOCTYPE html>
 {% match
     config, collections

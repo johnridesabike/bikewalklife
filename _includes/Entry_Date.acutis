@@ -1,7 +1,7 @@
 {% interface
   isoDate = string
   date = string
-/interface %}
+/ %}
 <!-- Entry_Date -->
 <time datetime="{{ isoDate }}" class="dt-published entry__date">
   <span aria-hidden="true"> {% Icon name="calendar" class=!"icon" / %} </span>

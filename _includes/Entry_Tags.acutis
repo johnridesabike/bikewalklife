@@ -1,7 +1,7 @@
 {% interface
   build = {environment: string}
   tags = [string]
-/interface %}
+/ %}
 {% match build with {environment: "development"} %}
 <!-- Entry_Draft -->
   <div

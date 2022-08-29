@@ -15,7 +15,7 @@
   tags = [string]
   title = string
   url = string
-/interface %}
+/ %}
 <!-- Entry -->
 <article class='h-entry hentry entry__article {{ class ? "" }}'>
   {% match hero_image
