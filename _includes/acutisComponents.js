@@ -1,6 +1,6 @@
 const fs = require("fs/promises");
 const path = require("path");
-const { Compile, Typescheme, TypeschemeChildren } = require("acutis-lang");
+const { Component, Typescheme, TypeschemeChildren } = require("acutis-lang");
 const { icons } = require("feather-icons");
 const Image = require("@11ty/eleventy-img");
 const postcss = require("postcss");
@@ -27,7 +27,7 @@ const Ty = Typescheme;
 const TyChild = TypeschemeChildren;
 
 module.exports = [
-  Compile.fromFunAsync(
+  Component.funAsync(
     "PostCss",
     Ty.make([]),
     TyChild.make([TyChild.child("Children")]),
@@ -47,7 +47,7 @@ module.exports = [
       })
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "Icon",
     Ty.make([
       ["name", Ty.string()],
@@ -58,7 +58,7 @@ module.exports = [
       Promise.resolve(icons[props.name].toSvg({ class: props.class || "" }))
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "Log",
     Ty.make([["val", Ty.unknown()]]),
     TyChild.make([]),
@@ -68,7 +68,7 @@ module.exports = [
     }
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "Debugger",
     Ty.make([["val", Ty.unknown()]]),
     TyChild.make([]),
@@ -78,7 +78,7 @@ module.exports = [
     }
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "Webpack",
     Ty.make([["asset", Ty.string()]]),
     TyChild.make([]),
@@ -93,7 +93,7 @@ module.exports = [
       })
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "WebpackInline",
     Ty.make([["asset", Ty.string()]]),
     TyChild.make([]),
@@ -113,7 +113,7 @@ module.exports = [
       })
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "Link",
     Ty.make([
       ["current", Ty.nullable(Ty.string())],
@@ -150,14 +150,14 @@ module.exports = [
     }
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "ReactFormHtml",
     Ty.make([]),
     TyChild.make([]),
     (_props, _children) => Promise.resolve(contactForm.render())
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "ImgSrc",
     Ty.make([
       ["width", Ty.int()],
@@ -182,7 +182,7 @@ module.exports = [
     }
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "ImgSrcStatic",
     Ty.make([
       ["transforms", Ty.list(Ty.string())],
@@ -195,7 +195,7 @@ module.exports = [
     }
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "Favicon",
     Ty.make([
       ["file", Ty.string()],
@@ -221,7 +221,7 @@ module.exports = [
     }
   ),
 
-  Compile.fromFunAsync(
+  Component.funAsync(
     "PageNumber",
     Ty.make([["pageNumber", Ty.int()]]),
     TyChild.make([]),

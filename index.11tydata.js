@@ -1,0 +1,7 @@
+module.exports = {
+  title: "",
+  author: "Bike Walk Life",
+  draft: false,
+  visible: true,
+  tags: ["page_index"],
+};

@@ -1,9 +1,3 @@
----
-title: Contact
-tags:
-- page_contact
-metdata: null
----
 {% match pub with {@pub: false} %} {* Don't render unpublished pages *}
 {% with {@pub: true, url, absoluteUrl} %}
 {% Layout

@@ -1,9 +1,3 @@
----
-title: Search
-tags:
-- page_search
-metadata: null
----
 {% match pub with {@pub: false} %} {* Don't render unpublished pages *}
 {% with {@pub: true, url, absoluteUrl} %}
 {% Layout

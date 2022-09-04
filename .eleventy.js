@@ -2,8 +2,8 @@ const path = require("path");
 const yaml = require("js-yaml");
 const markdownIt = require("markdown-it");
 const htmlmin = require("html-minifier");
-const acutis = require("./_11ty/eleventyAcutis");
-const acutisComponents = require("./_11ty/acutisComponents");
+const acutis = require("acutis-lang/eleventy");
+const acutisComponents = require("./_includes/acutisComponents");
 
 const manifestPath = path.resolve(
   __dirname,
@@ -153,8 +153,6 @@ module.exports = (eleventyConfig) => {
 
     markdownTemplateEngine: false,
     htmlTemplateEngine: false,
-    dataTemplateEngine: false,
-
     // These are all optional, defaults are shown:
     dir: {
       input: ".",
