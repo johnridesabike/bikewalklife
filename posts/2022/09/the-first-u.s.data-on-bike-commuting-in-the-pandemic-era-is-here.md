@@ -3,7 +3,7 @@ date: 2022-09-17T15:46:11-04:00
 tags:
 - untagged
 draft: true
-title: The first U.S. data on bike commuting in the pandemic era is here
+title: The first data on U.S. pandemic-era bike commuting is here
 author: John Jackson
 hero_image:
   image: ''
@@ -12,9 +12,9 @@ hero_image:
 external_link: 'https://data.bikeleague.org/first-federal-data-on-pandemic-era-bike-commuting/ '
 
 ---
-The League of American Bicyclists has reports based on new data for how Americans are commuting without cars, available on data.bikeleague.org.
+The League of American Bicyclists has new reports based on federal data for how Americans are commuting without cars, available on data.bikeleague.org.
 
-[You can read their announcement about these reports here.](https://data.bikeleague.org/first-federal-data-on-pandemic-era-bike-commuting/ )
+[You can read their announcement about the new data here.](https://data.bikeleague.org/first-federal-data-on-pandemic-era-bike-commuting/ )
 
 These reports are especially notable:
 
@@ -28,6 +28,6 @@ These reports are especially notable:
 * 3.1.4 – [Workers Commuting by Bicycling over Time](https://data.bikeleague.org/show-your-data/city-data/topic-ii-rates-of-active-commuting/#workers-commuting-by-bicycling-over-time)
 * 3.1.5 – [Chart: 10 Cities with the Most Bike Commuters](https://data.bikeleague.org/show-your-data/city-data/topic-ii-rates-of-active-commuting/#10-cities-with-the-most-bike-commuters)
 
-The data portrays a mixed bag of news. The pandemic era, 2020 and onward, disrupted the status-quo of how people commuted to work. More specifically, many people stopped commuting entirely. With that context, it may not be surprising to see that bicycle and walking commutes also dropped over the last couple of years. 
+The data portrays a mixed bag of news. The pandemic disrupted our status-quo of how people commuted to work. More specifically, many people stopped commuting entirely. With that context, it may not be surprising to see that bicycle and walking commutes also dropped. Almost everywhere in the nation has fewer people biking and walking to work compared to two years ago.
 
-In many areas, the reduced car traffic and need to get outdoors created a new "bike boom" during the pandemic, where people were riding more than ever. That effect does not seem to spread to commute patterns, at least not that are visible in this data. The announcement notes that this data only represents about 10% of all biking and walking trips.
+What the data does not capture is that many areas have experienced a "bike boom" during the pandemic, attributed to reduced car traffic and people's need to get outdoors. We can see that the boom has not spread to commute patterns, at least not that are visible in this data. The announcement notes that this data only represents about 10% of all biking and walking trips.
