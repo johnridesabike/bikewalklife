@@ -22,7 +22,7 @@ module Data = {
           ->Option.getWithDefault("Anonymous")
         let photo = dict->Js.Dict.get("photo")->Option.flatMap(Json.decodeString)
         switch photo {
-        | Some(photo) => Some({name: name, photo: photo})
+        | Some(photo) => Some({name, photo})
         | None => None
         }
       | None => None
@@ -71,14 +71,7 @@ module Data = {
         ->Option.map(Belt.Float.toString)
       switch (url, author, wmReceived, wmProperty, wmId) {
       | (Some(url), Some(author), Some(wmReceived), Some(wmProperty), Some(wmId)) =>
-        Some({
-          url: url,
-          author: author,
-          published: published,
-          wmReceived: wmReceived,
-          wmProperty: wmProperty,
-          wmId: wmId,
-        })
+        Some({url, author, published, wmReceived, wmProperty, wmId})
       | _ => None
       }
     | None => None
@@ -119,12 +112,14 @@ let make = (~url) => {
     ->Promise.then(Fetch.Response.json)
     ->Promise.then(json => {
       let {children} = Response.fromJson(json)
-      let mentions = children->Belt.SortArray.stableSortBy((a, b) => {
-        // "published" time can be null
-        let a = Option.getWithDefault(a.published, a.wmReceived)->Js.Date.getTime
-        let b = Option.getWithDefault(b.published, b.wmReceived)->Js.Date.getTime
-        compare(b, a)
-      })
+      let mentions = children->Belt.SortArray.stableSortBy(
+        (a, b) => {
+          // "published" time can be null
+          let a = Option.getWithDefault(a.published, a.wmReceived)->Js.Date.getTime
+          let b = Option.getWithDefault(b.published, b.wmReceived)->Js.Date.getTime
+          compare(b, a)
+        },
+      )
       let reposts =
         mentions->Array.keep(x => x.wmProperty == #repost)->Array.slice(~offset=0, ~len=24)
       setReposts(_ => reposts)
@@ -137,22 +132,28 @@ let make = (~url) => {
   <div className="entry-page__webmentions">
     {switch reposts {
     | [] => React.null
-    | reposts => <>
+    | reposts =>
+      <>
         <h2 className="entry-page__webmentions-header"> {"Retweeted by"->React.string} </h2>
         <ul className="entry-page__webmentions-reposts">
           {Array.map(reposts, data =>
-            <li key={data.wmId} className="entry-page__webmentions-item"> <Mention data /> </li>
+            <li key={data.wmId} className="entry-page__webmentions-item">
+              <Mention data />
+            </li>
           )->React.array}
         </ul>
       </>
     }}
     {switch likes {
     | [] => React.null
-    | likes => <>
+    | likes =>
+      <>
         <h2 className="entry-page__webmentions-header"> {"Liked by"->React.string} </h2>
         <ul className="entry-page__webmentions-likes">
           {Array.map(likes, data =>
-            <li key={data.wmId} className="entry-page__webmentions-item"> <Mention data /> </li>
+            <li key={data.wmId} className="entry-page__webmentions-item">
+              <Mention data />
+            </li>
           )->React.array}
         </ul>
       </>
