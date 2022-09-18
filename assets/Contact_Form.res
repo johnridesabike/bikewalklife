@@ -17,7 +17,8 @@ module Netlify = {
         <div ariaHidden=true>
           <VisuallyHidden>
             <label>
-              {"Don't fill this out"->React.string} <input name=honeypot tabIndex={-1} />
+              {"Don't fill this out"->React.string}
+              <input name=honeypot tabIndex={-1} />
             </label>
           </VisuallyHidden>
         </div>
@@ -143,7 +144,7 @@ let make = () => {
           ariaDescribedby="contact-form-name-error"
           onChange={event =>
             form.updateName(
-              (input, name) => {...input, name: name},
+              (input, name) => {...input, name},
               ReactEvent.Form.target(event)["value"],
             )}
         />
@@ -179,7 +180,7 @@ let make = () => {
           value=form.input.email
           onChange={event =>
             form.updateEmail(
-              (input, email) => {...input, email: email},
+              (input, email) => {...input, email},
               ReactEvent.Form.target(event)["value"],
             )}
         />
@@ -217,7 +218,7 @@ let make = () => {
           style={ReactDOM.Style.make(~width="100%", ())}
           onChange={event =>
             form.updateMessage(
-              (input, message) => {...input, message: message},
+              (input, message) => {...input, message},
               ReactEvent.Form.target(event)["value"],
             )}
         />
@@ -229,7 +230,10 @@ let make = () => {
     {switch form.status {
     | Editing => React.null
     | Submitting(_) => <p> {"Submitting..."->React.string} </p>
-    | Submitted => <p> <strong> {"Message submitted!"->React.string} </strong> </p>
+    | Submitted =>
+      <p>
+        <strong> {"Message submitted!"->React.string} </strong>
+      </p>
     | SubmissionFailed(_) =>
       <p className="contact-form__error">
         {"Something went wrong. Try again later."->React.string}
