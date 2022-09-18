@@ -67,6 +67,5 @@
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0",
     "webpack-manifest-plugin": "^5.0.0"
-  },
-  "devDependencies": {}
+  }
 }
