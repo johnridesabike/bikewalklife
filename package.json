@@ -23,7 +23,7 @@
     "clean": "npm-run-all -l --parallel clean:*",
     "clean:rescript": "rescript -clean-world -make-world",
     "clean:site": "rm -r _site",
-    "postinstall": "rescript -make-world",
+    "postinstall": "rescript",
     "prestart": "NODE_ENV=development webpack",
     "serve": "serve _site",
     "start": "npm-run-all -l --parallel start:*",
