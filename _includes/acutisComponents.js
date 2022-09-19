@@ -6,7 +6,6 @@ const Image = require("@11ty/eleventy-img");
 const postcss = require("postcss");
 const postcssPresetEnv = require("postcss-preset-env");
 const { cloudinary_url } = require("../_data/config.json");
-const contactForm = require("../assets/contact-form-server");
 
 const postcssWithOptions = postcss([
   postcssPresetEnv({
@@ -148,13 +147,6 @@ module.exports = [
         </a>`
       );
     }
-  ),
-
-  Component.funAsync(
-    "ReactFormHtml",
-    Ty.make([]),
-    TyChild.make([]),
-    (_props, _children) => Promise.resolve(contactForm.render())
   ),
 
   Component.funAsync(

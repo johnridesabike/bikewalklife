@@ -3,30 +3,15 @@
   "reason": {
     "react-jsx": 3
   },
-  "bsc-flags": ["-bs-super-errors"],
-  "sources": [
-    {
-      "dir": "assets",
-      "subdirs": false
-    }
-  ],
+  "sources": [{ "dir": "assets", "subdirs": false }],
   "package-specs": [
-    {
-      "module": "commonjs",
-      "in-source": false,
-      "suffix": ".js"
-    },
-    {
-      "module": "es6",
-      "in-source": false,
-      "suffix": ".mjs"
-    }
+    { "module": "commonjs", "in-source": false, "suffix": ".js" },
+    { "module": "es6", "in-source": false, "suffix": ".mjs" }
   ],
   "namespace": true,
   "bs-dependencies": [
     "@rescript/react",
     "re-formality",
-    "bs-fetch",
     "@ryyppy/rescript-promise"
   ],
   "ppx-flags": ["re-formality/ppx"],

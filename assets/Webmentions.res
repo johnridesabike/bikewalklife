@@ -2,6 +2,15 @@ module Option = Belt.Option
 module Array = Belt.Array
 module Json = Js.Json
 
+module Fetch = {
+  module Response = {
+    type t
+    @send external json: t => Promise.t<Js.Json.t> = "json"
+  }
+
+  @val external get: string => Promise.t<Response.t> = "fetch"
+}
+
 @val
 external encodeURIComponent: string => string = "encodeURIComponent"
 
@@ -108,7 +117,7 @@ let make = (~url) => {
   let (reposts, setReposts) = React.useState(() => [])
   let (likes, setLikes) = React.useState(() => [])
   React.useEffect0(() => {
-    Fetch.fetch("https://webmention.io/api/mentions.jf2?target=" ++ encodeURIComponent(url))
+    Fetch.get("https://webmention.io/api/mentions.jf2?target=" ++ encodeURIComponent(url))
     ->Promise.then(Fetch.Response.json)
     ->Promise.then(json => {
       let {children} = Response.fromJson(json)
