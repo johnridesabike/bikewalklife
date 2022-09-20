@@ -255,9 +255,6 @@
     {% /match %}
   </ul>
 </nav>
-<script src="/webmentions.js"></script>
-<script>
-  mentions("webmentions-root", "{{ &absoluteUrl }}");
-</script>
+<script async src="/webmentions.js"></script>
 {% /Layout %}
 {% /match %}

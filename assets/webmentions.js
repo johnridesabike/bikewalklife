@@ -1,3 +1,5 @@
+"use strict";
+
 function photo(data) {
   const div = document.createElement("div");
   div.className = "entry-page__webmentions-photo";
@@ -33,24 +35,21 @@ function appendMentions(root, arr, title, className) {
   }
 }
 
-function mentions(rootId, url) {
-  fetch(
-    "https://webmention.io/api/mentions.jf2?target=" + encodeURIComponent(url)
-  )
-    .then((response) => response.json())
-    .then(({ children }) => {
-      const reposts = children.filter((x) => x["wm-property"] === "repost-of");
-      const likes = children.filter((x) => x["wm-property"] === "like-of");
-      const root = document.getElementById(rootId);
-      const div = document.createElement("div");
-      root.appendChild(div);
-      div.className = "entry-page__webmentions";
-      appendMentions(
-        div,
-        reposts,
-        "Retweeted by",
-        "entry-page__webmentions-reposts"
-      );
-      appendMentions(div, likes, "Liked by", "entry-page__webmentions-likes");
-    });
-}
+const url = encodeURIComponent(document.getElementById("canonical-url").href);
+fetch("https://webmention.io/api/mentions.jf2?target=" + url)
+  .then((response) => response.json())
+  .then(({ children }) => {
+    const reposts = children.filter((x) => x["wm-property"] === "repost-of");
+    const likes = children.filter((x) => x["wm-property"] === "like-of");
+    const root = document.getElementById("webmentions-root");
+    const div = document.createElement("div");
+    root.appendChild(div);
+    div.className = "entry-page__webmentions";
+    appendMentions(
+      div,
+      reposts,
+      "Retweeted by",
+      "entry-page__webmentions-reposts"
+    );
+    appendMentions(div, likes, "Liked by", "entry-page__webmentions-likes");
+  });
