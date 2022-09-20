@@ -255,6 +255,6 @@
     {% /match %}
   </ul>
 </nav>
-<script async src="/webmentions.js"></script>
+<script async src="/assets/webmentions.js"></script>
 {% /Layout %}
 {% /match %}

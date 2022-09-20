@@ -1,4 +1,3 @@
-const fs = require("fs/promises");
 const path = require("path");
 const { Component, Typescheme, TypeschemeChildren } = require("acutis-lang");
 const { icons } = require("feather-icons");
@@ -15,12 +14,6 @@ const postcssWithOptions = postcss([
 
 const postcssCache = new Map();
 const faviconCache = new Map();
-
-const manifestFile = fs
-  .readFile(path.resolve(__dirname, "..", "_site", "assets", "manifest.json"), {
-    encoding: "utf8",
-  })
-  .then((x) => JSON.parse(x));
 
 const Ty = Typescheme;
 const TyChild = TypeschemeChildren;
@@ -65,51 +58,6 @@ module.exports = [
       console.log(props.val);
       return Promise.resolve("");
     }
-  ),
-
-  Component.funAsync(
-    "Debugger",
-    Ty.make([["val", Ty.unknown()]]),
-    TyChild.make([]),
-    (_props, _children) => {
-      debugger;
-      return Promise.resolve("");
-    }
-  ),
-
-  Component.funAsync(
-    "Webpack",
-    Ty.make([["asset", Ty.string()]]),
-    TyChild.make([]),
-    (props, _children) =>
-      manifestFile.then((data) => {
-        const x = data[props.asset];
-        if (x) {
-          return x;
-        } else {
-          throw new Error(`${props.asset} doesn't exist in the manifest.`);
-        }
-      })
-  ),
-
-  Component.funAsync(
-    "WebpackInline",
-    Ty.make([["asset", Ty.string()]]),
-    TyChild.make([]),
-    (props, _children) =>
-      manifestFile.then((data) => {
-        const assetPath = data[props.asset];
-        if (assetPath) {
-          return fs.readFile(
-            path.resolve(__dirname, "..", "_site", "." + assetPath),
-            {
-              encoding: "utf8",
-            }
-          );
-        } else {
-          throw new Error(`${props.asset} doesn't exist in the manifest.`);
-        }
-      })
   ),
 
   Component.funAsync(

@@ -6,10 +6,6 @@ node_modules/
 .npm
 .env
 .DS_Store
-lib/
-.bsb.lock
-.merlin
-*.bs.js
 posts/__testdata__/
 _site
 _tmp/

@@ -5,13 +5,6 @@ const htmlmin = require("html-minifier");
 const acutis = require("acutis-lang/eleventy");
 const acutisComponents = require("./_includes/acutisComponents");
 
-const manifestPath = path.resolve(
-  __dirname,
-  "_site",
-  "assets",
-  "manifest.json"
-);
-
 function mdImages(md, _ops) {
   const defaultRender = md.renderer.rules.image;
   md.renderer.rules.image = (tokens, idx, options, env, self) => {
@@ -60,9 +53,9 @@ function mdImages(md, _ops) {
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("assets/webmentions.js");
   eleventyConfig.addPassthroughCopy({
     "assets/images/nps-bicycle-trail.svg": "favicon.svg",
-    "assets/webmentions.js": "webmentions.js",
   });
   eleventyConfig.addDataExtension("yaml", yaml.load);
   eleventyConfig.addCollection("posts", (collectionApi) => {
@@ -133,14 +126,12 @@ module.exports = (eleventyConfig) => {
   }
   eleventyConfig.setBrowserSyncConfig({
     ...eleventyConfig.browserSyncConfig,
-    // Reload when manifest file changes
-    files: [manifestPath],
     // Speed/clean up build time
     ui: false,
     ghostMode: false,
   });
   return {
-    templateFormats: ["md", "acutis", "html"],
+    templateFormats: ["md", "acutis", "html", "11ty.js"],
 
     // If your site lives in a different subdirectory, change this.
     // Leading or trailing slashes are all normalized away, so don’t worry about those.
