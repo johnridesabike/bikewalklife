@@ -4,10 +4,7 @@ const postcss = require("postcss");
 
 const postcssWithOptions = postcss([
   require("postcss-import"),
-  require("postcss-url")({
-    url: "copy",
-    assetsPath: "assets",
-  }),
+  require("postcss-url")({ url: "copy" }),
   require("postcss-preset-env")(),
   require("cssnano"),
 ]);
