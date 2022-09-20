@@ -62,6 +62,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy({
     "assets/images/nps-bicycle-trail.svg": "favicon.svg",
+    "assets/webmentions.js": "webmentions.js",
   });
   eleventyConfig.addDataExtension("yaml", yaml.load);
   eleventyConfig.addCollection("posts", (collectionApi) => {

@@ -18,9 +18,6 @@ module.exports = {
   // https://github.com/webpack-contrib/css-loader
   devtool: isDev ? "cheap-module-source-map" : "source-map",
   entry: {
-    webmentions: {
-      import: path.resolve(__dirname, "assets", "webmentions-client.mjs"),
-    },
     style: path.resolve(__dirname, "assets", "style.css"),
   },
   output: {

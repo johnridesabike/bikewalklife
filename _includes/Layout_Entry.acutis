@@ -196,7 +196,7 @@
      tags
   / %}
 </main>
-<div id="react-webmentions-root"></div>
+<div id="webmentions-root"></div>
 <hr class="separator" />
 <aside class="ui-font">
   {% match collections with {pages: <about: {data: {intro: !intro, image_small}}>} %}
@@ -255,9 +255,9 @@
     {% /match %}
   </ul>
 </nav>
+<script src="/webmentions.js"></script>
 <script>
-var page_url = "{{ &absoluteUrl }}";
-{% WebpackInline asset="webmentions.js" /%}
+  mentions("webmentions-root", "{{ &absoluteUrl }}");
 </script>
 {% /Layout %}
 {% /match %}
