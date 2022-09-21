@@ -1,6 +1,6 @@
 "use strict";
 
-function photo(data) {
+function createPhoto(data) {
   const div = document.createElement("div");
   div.className = "entry-page__webmentions-photo";
   const a = document.createElement("a");
@@ -11,33 +11,35 @@ function photo(data) {
   a.appendChild(img);
   img.src = data.author.photo;
   img.alt = data.author.name;
-  img.height = "48";
-  img.width = "48";
+  img.height = 48;
+  img.width = 48;
   return div;
 }
 
-function appendMentions(root, arr, title, className) {
+function createMentions(arr, title, className) {
+  const frag = document.createDocumentFragment();
   if (arr.length !== 0) {
     const h2 = document.createElement("h2");
-    root.appendChild(h2);
+    frag.appendChild(h2);
     h2.className = "entry-page__webmentions-header";
     const text = document.createTextNode(title);
     h2.appendChild(text);
     const ul = document.createElement("ul");
-    root.appendChild(ul);
+    frag.appendChild(ul);
     ul.className = className;
     arr.forEach((data) => {
       const li = document.createElement("li");
       ul.appendChild(li);
       li.className = "entry-page__webmentions-item";
-      li.appendChild(photo(data));
+      li.appendChild(createPhoto(data));
     });
   }
+  return frag;
 }
 
 const canonicalUrl = document.getElementById("canonical-url");
 
-if (canonicalUrl) {
+if (canonicalUrl instanceof HTMLLinkElement) {
   const encodedUrl = encodeURIComponent(canonicalUrl.href);
   fetch("https://webmention.io/api/mentions.jf2?target=" + encodedUrl)
     .then((response) => response.json())
@@ -46,14 +48,17 @@ if (canonicalUrl) {
       const likes = children.filter((x) => x["wm-property"] === "like-of");
       const root = document.getElementById("webmentions-root");
       const div = document.createElement("div");
-      root.appendChild(div);
       div.className = "entry-page__webmentions";
-      appendMentions(
-        div,
-        reposts,
-        "Retweeted by",
-        "entry-page__webmentions-reposts"
+      div.appendChild(
+        createMentions(
+          reposts,
+          "Retweeted by",
+          "entry-page__webmentions-reposts"
+        )
       );
-      appendMentions(div, likes, "Liked by", "entry-page__webmentions-likes");
+      div.appendChild(
+        createMentions(likes, "Liked by", "entry-page__webmentions-likes")
+      );
+      root.appendChild(div);
     });
 }
