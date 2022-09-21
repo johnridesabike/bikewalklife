@@ -1,4 +1,4 @@
-@import-normalize;
+@import "normalize.css";
 @import "@fontsource/fira-sans/400.css";
 @import "@fontsource/source-serif-pro/400.css";
 @import "@fontsource/source-serif-pro/400-italic.css";

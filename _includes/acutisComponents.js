@@ -1,4 +1,3 @@
-const fs = require("fs/promises");
 const path = require("path");
 const { Component, Typescheme, TypeschemeChildren } = require("acutis-lang");
 const { icons } = require("feather-icons");
@@ -6,7 +5,6 @@ const Image = require("@11ty/eleventy-img");
 const postcss = require("postcss");
 const postcssPresetEnv = require("postcss-preset-env");
 const { cloudinary_url } = require("../_data/config.json");
-const contactForm = require("../assets/contact-form-server");
 
 const postcssWithOptions = postcss([
   postcssPresetEnv({
@@ -16,12 +14,6 @@ const postcssWithOptions = postcss([
 
 const postcssCache = new Map();
 const faviconCache = new Map();
-
-const manifestFile = fs
-  .readFile(path.resolve(__dirname, "..", "_site", "assets", "manifest.json"), {
-    encoding: "utf8",
-  })
-  .then((x) => JSON.parse(x));
 
 const Ty = Typescheme;
 const TyChild = TypeschemeChildren;
@@ -69,51 +61,6 @@ module.exports = [
   ),
 
   Component.funAsync(
-    "Debugger",
-    Ty.make([["val", Ty.unknown()]]),
-    TyChild.make([]),
-    (_props, _children) => {
-      debugger;
-      return Promise.resolve("");
-    }
-  ),
-
-  Component.funAsync(
-    "Webpack",
-    Ty.make([["asset", Ty.string()]]),
-    TyChild.make([]),
-    (props, _children) =>
-      manifestFile.then((data) => {
-        const x = data[props.asset];
-        if (x) {
-          return x;
-        } else {
-          throw new Error(`${props.asset} doesn't exist in the manifest.`);
-        }
-      })
-  ),
-
-  Component.funAsync(
-    "WebpackInline",
-    Ty.make([["asset", Ty.string()]]),
-    TyChild.make([]),
-    (props, _children) =>
-      manifestFile.then((data) => {
-        const assetPath = data[props.asset];
-        if (assetPath) {
-          return fs.readFile(
-            path.resolve(__dirname, "..", "_site", "." + assetPath),
-            {
-              encoding: "utf8",
-            }
-          );
-        } else {
-          throw new Error(`${props.asset} doesn't exist in the manifest.`);
-        }
-      })
-  ),
-
-  Component.funAsync(
     "Link",
     Ty.make([
       ["current", Ty.nullable(Ty.string())],
@@ -148,13 +95,6 @@ module.exports = [
         </a>`
       );
     }
-  ),
-
-  Component.funAsync(
-    "ReactFormHtml",
-    Ty.make([]),
-    TyChild.make([]),
-    (_props, _children) => Promise.resolve(contactForm.render())
   ),
 
   Component.funAsync(

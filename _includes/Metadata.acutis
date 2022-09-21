@@ -19,13 +19,8 @@
       twitter_handle
     }
 ~%}
-
-  <meta property="og:site_name" content="{{ title_site }}" />
-  <meta name="twitter:site" content="{{ twitter_handle }}" />
-
   {%~ match metadata with !{description, author, isoDate} %}
     <title> {{ title }} | {{ title_site }} </title>
-    <link rel="canonical" href="{{ absoluteUrl }}" />
     <meta property="og:url" content="{{ absoluteUrl }}" />
     <meta property="og:title" content="{{ title }}" />
     <meta
@@ -44,7 +39,6 @@
       <title> {{ title }} | {{ title_site }} </title>
       <meta property="og:title" content="{{ title }} | {{ title_site }}" />
     {% /match %}
-    <link rel="canonical" href="{{ absoluteUrl }}" />
     <meta property="og:url" content="{{ absoluteUrl }}" />
     <meta property="og:type" content="website" />
     <meta
@@ -53,6 +47,10 @@
       content="{{ description_site }}"
     />
   {%~ /match ~%}
+
+  <meta property="og:site_name" content="{{ title_site }}" />
+  <meta name="twitter:site" content="{{ twitter_handle }}" />
+  <link rel="canonical" href="{{ absoluteUrl }}" id="canonical-url" />
 
   {* OG images *}
   {% match metadata
