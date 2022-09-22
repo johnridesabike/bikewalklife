@@ -4,12 +4,12 @@ date: 2020-07-31T22:42:09.000+00:00
 author: John Jackson
 external_link: https://www.surveygizmo.com/s3/5649932/pfbcommsvy20
 hero_image:
-  image: ""
-  alt: ""
-  caption: ""
+  image: ''
+  alt: ''
+  caption: ''
 draft: false
 tags:
-  - People for Bikes
+- People for Bikes
 excerpt: >
   The annual People for Bikes Community Survey is here until October 15th.
   Completing it helps them rank the bikeability of cities across the US.
