@@ -16,6 +16,10 @@ hero_image:
     my dear Gaston!" "After you, my dear Alphonse!"'
   caption: 'Source: Alphonse and Gaston on Wikipedia.'
 external_link: https://youtu.be/-PShk0zHMAU
+excerpt: >
+  Illegal courtesies are when car drivers try to do something nice to bike
+  riders, such as stopping to let them pass, but in doing so they are actually
+  behaving illegally and dangerously.
 
 ---
 Illegal courtesies are when car drivers try to do something nice to bike riders, such as stopping to let them pass, but in doing so they are actually behaving illegally and dangerously.

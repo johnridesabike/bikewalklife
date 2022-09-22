@@ -16,6 +16,11 @@ tags:
 - ridesharing
 - science
 - research
+excerpt: >
+  Many people have speculated on the long-term effects that companies like Uber
+  and Lyft have on cities. A new paper aims to provide some scientific insights.
+  Its data shows, among other things, that car ownership increases slightly when
+  a ridesharing company enters a market.
 
 ---
 Many people have speculated on the long-term effects that companies like Uber and Lyft have on cities. A new paper aims to provide some scientific insights. Its data shows, among other things, that car ownership increases slightly when a ridesharing company enters a market.

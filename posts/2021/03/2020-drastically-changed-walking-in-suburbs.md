@@ -14,6 +14,10 @@ tags:
 - '2020'
 - pandemic
 - suburbs
+excerpt: >
+  The pandemic brought about a lot of changes in the way we use our streets, but
+  a recent report shows that it changed walking in suburbs more than in city
+  centers.
 
 ---
 The pandemic brought about a lot of changes in the way we use our streets, but a recent report shows that it changed walking in suburbs more than in city centers.

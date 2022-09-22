@@ -45,7 +45,7 @@ module.exports = {
         yes: () => ({
           pub: true,
           url: data.page.url,
-          excerpt: data.page.excerpt,
+          excerpt: data.excerpt,
           absoluteUrl: new URL(data.page.url, config.site_url).href,
           permalink:
             data.permalink ||

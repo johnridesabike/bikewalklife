@@ -12,6 +12,11 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
+excerpt: >
+  One big rule of bicycle etiquette is to warn other people when you approach to
+  pass them. Most cyclists around here shout "on your left." I use a bell, since
+  I don't like shouting at people, but either one works. This past week, I
+  encountered another technique in the wild.
 
 ---
 One big rule of bicycle etiquette is to warn other people when you approach to pass them. Most cyclists around here shout "on your left." I use a bell, since I don't like shouting at people, but either one works. This past week, I encountered another technique in the wild.

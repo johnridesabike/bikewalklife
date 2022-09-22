@@ -13,6 +13,11 @@ hero_image:
   alt: A satellite map showing parking lots.
   caption: ''
 external_link: ''
+excerpt: >
+  The average American is suspicious of, if not hostile to, public
+  transportation spending. Sometimes these feelings are practical concerns based
+  on past failures, and sometimes they're ideological. But that opposition all
+  goes out the window once we discuss parking lots.
 
 ---
 The average American is suspicious of, if not hostile to, public transportation spending. Sometimes these feelings are practical concerns based on past failures, and sometimes they're ideological. But that opposition all goes out the window once we discuss parking lots.

@@ -16,6 +16,12 @@ tags:
 - Uber
 - Lyft
 - ridesharing
+excerpt: >
+  There has been a lot of optimism over how how rideshare companies could help
+  save our congested streets. The very name, ride share, suggests that they
+  create more communal, fair, and efficient relationships with car travel. But
+  that hasn’t been the case. In fact, traffic and fuel efficiency has gotten
+  worse according to a new study.
 
 ---
 There has been a lot of optimism over how how rideshare companies could help save our congested streets. The very name, ride _share_, suggests that they create more communal, fair, and efficient relationships with car travel. But that hasn’t been the case. In fact, traffic and fuel efficiency has gotten worse according to a new study.

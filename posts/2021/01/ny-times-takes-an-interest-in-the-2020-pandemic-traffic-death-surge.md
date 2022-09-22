@@ -15,6 +15,11 @@ tags:
 - '2020'
 - COVID-19
 - traffic
+excerpt: >
+  The 2020 pandemic emptied many of America’s streets while people stayed home.
+  Paradoxically, that caused a sharp spike in traffic deaths. This unexpected
+  phenomenon has started new conversations about how and why our roads are so
+  dangerous.
 
 ---
 The 2020 pandemic emptied many of America’s streets while people stayed home. Paradoxically, that caused a sharp spike in traffic deaths. This unexpected phenomenon has started new conversations about how and why our roads are so dangerous.

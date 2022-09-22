@@ -10,6 +10,7 @@ hero_image:
 draft: false
 tags:
   - violence
+excerpt: Current events reveal how our roads are dangerous by design.
 
 ---
 Current events reveal how our roads are dangerous by design:

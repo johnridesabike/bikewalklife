@@ -14,6 +14,7 @@ tags:
 - BYCS
 - Pattie Baker
 - Courtney Williams
+excerpt: Amsterdam-based BYCS has a program called Bicycle Mayors.
 
 ---
 Amsterdam-based BYCS has a program called Bicycle Mayors. These mayors are, in their words:

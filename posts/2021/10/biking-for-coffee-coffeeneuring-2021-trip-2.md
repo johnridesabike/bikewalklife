@@ -14,6 +14,10 @@ hero_image:
   alt: 'Biking for Coffee #2'
   caption: ''
 external_link: ''
+excerpt: >
+  This is the second video in my Biking for Coffee series. For this year's
+  Coffeeneuring Challenge, I'm documenting each of my rides on video to show
+  what a typical bike ride looks like in my community.
 
 ---
 This is the second video in my Biking for Coffee series. For this year's Coffeeneuring Challenge, I'm documenting each of my rides on video to show what a typical bike ride looks like in my community.

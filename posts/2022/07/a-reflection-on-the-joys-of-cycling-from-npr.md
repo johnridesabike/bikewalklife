@@ -10,6 +10,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.npr.org/2022/07/18/1089654169/bill-chappell-cycling
+excerpt: >
+  NPR's Bill Chappell published a short reflection on bicycling. "Just like
+  life," he says, "riding my bike doesn't always make sense. But that's why I
+  love it." It's part of their I'm Really Into series.
 
 ---
 NPR's Bill Chappell published a short reflection on bicycling. "Just like life," he says, "riding my bike doesn't always make sense. But that's why I love it." It's part of their I'm Really Into series.

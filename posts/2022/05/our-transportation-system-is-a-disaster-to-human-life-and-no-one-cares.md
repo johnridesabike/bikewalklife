@@ -12,6 +12,14 @@ hero_image:
     ALERT."'
   caption: ""
 external_link: ""
+excerpt: > 
+  I have believed that one powerful argument in support of transportation reform
+  is to simply show how deadly our car-centric system is. Millions of people
+  have died, and will continue to die, in part from the volume of cars on our
+  roads and how the roads themselves are engineered. But, as damning as that
+  sounds, even die-hard car drivers don’t dispute it. Everyone is aware that our
+  roads are deadly. They just don’t care.
+
 ---
 
 I have believed that one powerful argument in support of transportation reform

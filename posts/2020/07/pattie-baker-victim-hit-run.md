@@ -7,14 +7,19 @@ draft: false
 hero_image:
   image: "/v1608060004/2020/fullsizeoutput_354b.jpeg"
   alt: Pattie Baker's bike noodle.
-  caption: 'Image credit: travelingatthespeedofbike.com'
+  caption: "Image credit: travelingatthespeedofbike.com"
 tags:
-- violence
-- Pattie Baker
-- SUV
+  - violence
+  - Pattie Baker
+  - SUV
+excerpt: >
+  Pattie Baker has been an influential and inspirational figure in bike advocacy.
+  If there's any silver lining to this story, it's at least that it is drawing
+  attention to the seriousness of bicycle safety.
 
 ---
-Pattie Baker has been an influencial and inspirational figure in bike advocacy.
+
+Pattie Baker has been an influential and inspirational figure in bike advocacy.
 If there's any silver lining to this story, it's at least that it is drawing
 attention to the seriousness of bicycle safety.
 

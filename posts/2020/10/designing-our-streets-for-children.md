@@ -13,6 +13,9 @@ tags:
 - Lindsay Bliek
 - This Mom Bikes
 - least among us
+excerpt: >
+  Lindsay Bliek of This Mom Bikes has a new post that cuts right to the chase:
+  “Kids Don’t Drive”.
 
 ---
 Lindsay Bliek of [This Mom Bikes](https://thismombikes.net) has a [new post that cuts right to the chase: “Kids Don’t Drive”](https://thismombikes.net/kids-dont-drive/).

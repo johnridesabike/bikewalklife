@@ -10,6 +10,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.bikelaw.com/2022/08/is-it-illegal-to-ride-bike-on-sidewalk/
+excerpt: >
+  Riding bicycles on sidewalks can be confusing topic, and this is exasperated
+  by the fact that many states have vastly different rules about it. Bike Law's
+  website can help with their page which lists the local laws for every state.
 
 ---
 Riding bicycles on sidewalks can be confusing topic, and this is exasperated by the fact that many states have vastly different rules about it. Bike Law's website can help with their page which lists the local laws for every state.

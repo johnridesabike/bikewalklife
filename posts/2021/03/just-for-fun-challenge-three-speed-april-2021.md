@@ -12,6 +12,9 @@ tags:
 - Society of Three Speeds
 - just for fun
 - challenges
+excerpt: >
+  Another just-for-fun bicycle challenge is coming up: Three Speed April, hosted
+  by Society of Three Speeds.
 
 ---
 Another just-for-fun bicycle challenge is coming up: Three Speed April, hosted by Society of Three Speeds.

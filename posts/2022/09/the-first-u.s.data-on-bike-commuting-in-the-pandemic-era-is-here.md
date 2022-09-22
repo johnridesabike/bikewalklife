@@ -10,6 +10,9 @@ hero_image:
   alt: ''
   caption: ''
 external_link: 'https://data.bikeleague.org/first-federal-data-on-pandemic-era-bike-commuting/ '
+excerpt: >
+  The League of American Bicyclists has new reports based on federal data for
+  how Americans are commuting without cars, available on data.bikeleague.org.
 
 ---
 The League of American Bicyclists has new reports based on federal data for how Americans are commuting without cars, available on data.bikeleague.org.

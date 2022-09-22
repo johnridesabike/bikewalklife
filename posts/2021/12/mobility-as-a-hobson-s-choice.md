@@ -11,6 +11,12 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
+excerpt: >
+  As more people want to live somewhere with better transportation choices, many
+  communities are promoting their walkability and similar features. But every
+  time a person moves to a “walkable” or “bikeable” neighborhood, they end up
+  driving everywhere anyway. I think our towns are presenting us a Hobson’s
+  choice.
 
 ---
 As more people want to live somewhere with better transportation choices, many communities are promoting their walkability and similar features. But every time a person moves to a “walkable” or “bikeable” neighborhood, they end up driving everywhere anyway. I think our towns are presenting us a Hobson’s choice.

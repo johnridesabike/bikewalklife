@@ -13,6 +13,9 @@ hero_image:
   alt: A photo of a bicycle with a helmet, gloves, and a coffee thermos.
   caption: ''
 external_link: ''
+excerpt: >
+  For this year's Coffeeneuring Challenge, I experimented with documenting my
+  rides on video. Here are the results.
 
 ---
 For this year's Coffeeneuring Challenge, I experimented with documenting my rides on video. Here are the results.

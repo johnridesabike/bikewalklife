@@ -11,6 +11,10 @@ external_link: ''
 tags:
 - Pattie Baker
 - profiles
+excerpt: >
+  During the month of August, Pattie Baker of Traveling at the Speed of Bike ran
+  a series called “You Go, Girl!” It showcases thirty-one women who are helping
+  make our streets more welcoming for bicycles.
 
 ---
 During the month of August, Pattie Baker of [_Traveling at the Speed of Bike_](https://travelingatthespeedofbike.com/) ran a series called “You Go, Girl!” It showcases thirty-one women who are helping make our streets more welcoming for bicycles.

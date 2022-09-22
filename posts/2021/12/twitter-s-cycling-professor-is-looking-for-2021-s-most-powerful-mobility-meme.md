@@ -13,6 +13,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://twitter.com/fietsprofessor/status/1470070056847564803
+excerpt: >
+  The "Cycling Professor" (@fietsprofessor on Twitter) is one of social media's
+  most active evangelists for bicycling. The professor's annual mobility meme
+  contest has opened for its 2021 round of submissions.
 
 ---
 The "Cycling Professor" ([@fietsprofessor](https://twitter.com/fietsprofessor)) is one of social media's most active evangelists for bicycling. The professor's annual mobility meme contest has opened for its 2021 round of submissions.

@@ -13,6 +13,13 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://doi.org/10.1080/01441647.2021.1912849
+excerpt: >
+  Reallocating street space to accommodate bicycles and pedestrians is usually
+  contentious, and a common concern is in how it will impact local businesses.
+  The usual fear is that removing lanes or parking will reduce the number of
+  car-driving customers, and that biking and walking customers won't pick up the
+  slack. A new paper examines the data and finds little evidence to suggest that
+  these fears are founded.
 
 ---
 Reallocating street space to accommodate bicycles and pedestrians is usually contentious, and a common concern is in how it will impact local businesses. The usual fear is that removing lanes or parking will reduce the number of car-driving customers, and that biking and walking customers won't pick up the slack. A new paper examines the data and finds little evidence to suggest that these fears are founded.

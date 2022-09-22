@@ -13,6 +13,11 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://doi.org/10.1080/23800127.2021.1912947
+excerpt: >
+  We tend to think of the time we spend commuting as time wasted. The more we
+  spend going to or from work is time we could have spent on something more
+  economic and useful. But a new paper challenges this notion with a concept
+  called flow theory.
 
 ---
 We tend to think of the time we spend commuting as time wasted. The more we spend going to or from work is time we could have spent on something more economic and useful. But a new paper challenges this notion with a concept called _flow theory_.

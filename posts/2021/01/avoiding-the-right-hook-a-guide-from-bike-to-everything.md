@@ -12,6 +12,11 @@ tags:
 - Bike to Everything
 - guides
 - safety
+excerpt: >
+  Even if you haven’t heard of the “right hook,” you probably know what it is if
+  you’ve ridden a bicycle in car traffic. When a car makes a right turn in front
+  of you, it can cause a scary situation where you’re in danger of a crash. The
+  blog Bike to Everything] has an excellent guide on how to avoid it.
 
 ---
 Even if you haven’t heard of the “right hook,” you probably know what it is if you’ve ridden a bicycle in car traffic. When a car makes a right turn in front of you, it can cause a scary situation where you’re in danger of a crash. The blog [Bike to Everything](https://biketoeverything.com/2021/01/19/avoid-the-right-hook/) has an excellent guide on how to avoid it.

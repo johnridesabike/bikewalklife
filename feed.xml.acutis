@@ -33,7 +33,7 @@
   {% map frontPage with
      {
        templateContent,
-       data: {title, isoDate, page: {excerpt}, pub: {@pub: true, absoluteUrl}}
+       data: {title, isoDate, pub: {@pub: true, absoluteUrl, excerpt}}
       }
     ~%}
     <entry>

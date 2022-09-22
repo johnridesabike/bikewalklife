@@ -16,6 +16,10 @@ tags:
 - Jeff Speck
 - mobility
 - originals
+excerpt: >
+  To drive a car is to be free, at least so-says our culture. I don’t need a
+  citation for that. You can see it for yourself in every car commercial or by
+  querying any member of the public. But it’s also an illusion.
 
 ---
 To drive a car is to be free, at least so-says our culture. I don’t need a citation for that. You can see it for yourself in every car commercial or by querying any member of the public. But it’s also an illusion.

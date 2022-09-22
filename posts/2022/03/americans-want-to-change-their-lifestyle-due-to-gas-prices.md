@@ -13,6 +13,9 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://newsroom.aaa.com/2022/03/aaa-4-gas-the-tipping-point-for-most-americans/
+excerpt: >
+  AAA revealed some new survey data on how Americans are reacting to rising gas
+  prices, and it shows that we've possibly crossed a threshold.
 
 ---
 AAA revealed some new survey data on how Americans are reacting to rising gas prices, and it shows that we've possibly crossed a threshold.

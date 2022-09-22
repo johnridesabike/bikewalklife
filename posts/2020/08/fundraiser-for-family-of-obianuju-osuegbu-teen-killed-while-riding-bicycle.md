@@ -1,17 +1,22 @@
 ---
 date: 2020-08-27T09:28:16-04:00
 draft: false
-title: Fundraiser for family of Obianuju Osuegbu, teen killed while riding bicycle
+title:
+  Fundraiser for family of Obianuju Osuegbu, teen killed while riding bicycle
 author: John Jackson
 hero_image:
-  image: ''
-  alt: ''
-  caption: ''
+  image: ""
+  alt: ""
+  caption: ""
 external_link: https://gf.me/u/yt282z
 tags:
-- fundraiser
-- teen
-- violence
+  - fundraiser
+  - teen
+  - violence
+excerpt: >
+  Obianuju Faith Osuegbu, 17, of Winder Ga, died August 23rd, 2020, when she
+  was struck by a suspected DUI driver. Uju was riding her bicycle home from
+  work at Ingles Supermarket when she was killed.
 
 ---
 From the GoFundMe page:

@@ -13,6 +13,12 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://nextcity.org/daily/entry/urban-areas-feel-the-heat-its-time-for-national-cool-communities-standards
+excerpt: >
+  Everyone has to deal with summertime heat, but some people have it worse than
+  others. An under-appreciated problem in our towns is that different districts
+  can have drastically higher temperatures than their neighbors, a phenomenon
+  called “heat islands.” According to V. Kelly Turner and NextCity, it’s time
+  for a “National Cool Communities Standards” to correct this.
 
 ---
 Everyone has to deal with summertime heat, but some people have it worse than others. An under-appreciated problem in our towns is that different districts can have drastically higher temperatures than their neighbors, a phenomenon called “heat islands.” According to V. Kelly Turner and NextCity, it’s time for a “National Cool Communities Standards” to correct this.

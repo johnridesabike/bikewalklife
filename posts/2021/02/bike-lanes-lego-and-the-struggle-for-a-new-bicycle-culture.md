@@ -13,6 +13,12 @@ tags:
 - The Verge
 - Lego
 - culture
+excerpt: >
+  The campaign for mobility equity has found an unlikely battlefield in recent
+  years: the Lego world. Since 2019, a person named Marcel Steeman has been
+  pushing for the inclusion of bicycle lanes in its toy cities. At last, the
+  company is beginning to relent, but this episode raises an interesting
+  question: do we need to focus more on pushing for bicycle “culture?”
 
 ---
 The campaign for mobility equity has found an unlikely battlefield in recent years: the Lego world. Since 2019, a person named Marcel Steeman has been pushing for the inclusion of bicycle lanes in its toy cities. At last, the company is beginning to relent, but this episode raises an interesting question: do we need to focus more on pushing for bicycle “culture?”

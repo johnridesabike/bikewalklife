@@ -14,6 +14,14 @@ hero_image:
   alt: 'Biking for Coffee #1'
   caption: ''
 external_link: ''
+excerpt: >
+  I'm experimenting with a new project for the Coffeeneuring Challenge this
+  year. I'll document each of my rides with a GoPro camera. The idea is to show
+  the good, the bad, and the ugly of bike commuting, or at least of biking for
+  coffee. People who don't bike commute often have difficulty imagining what
+  biking is even like, which then gets reflected in our haphazard
+  infrastructure. Hopefully, videos like this can demystify some of the bike
+  commute experience.
 
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7yrDA-Ip1BE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -11,6 +11,11 @@ external_link: https://www.strongtowns.org/journal/2020/9/4/seven-key-difference
 tags:
 - suburban experiment
 - traditional development
+excerpt: >
+  When we think of “the suburbs,” we often imagine specific structures:
+  cul-de-sacs, lawns, single-family houses, cars, garages, and big-box stores to
+  name a few. John Pattison at Strong Towns recently wrote about how those are
+  accidental to the real substance of suburbia.
 
 ---
 When we think of “the suburbs,” we often imagine specific structures: cul-de-sacs, lawns, single-family houses, cars, garages, and big-box stores to name a few. [John Pattison at Strong Towns recently wrote about how those are accidental to the real substance of suburbia](https://www.strongtowns.org/journal/2020/9/4/seven-key-differences):

@@ -12,6 +12,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.lovetoride.net/atlanta
+excerpt: >
+  Biketober is an annual month-long event held in the Atlanta area every October
+  (in case its name didn't make that clear). It's a just-for-fun competition
+  where participants earn points for riding their bicycles.
 
 ---
 Biketober is an annual month-long event held in the Atlanta area every October (in case its name didn't make that clear). It's a just-for-fun competition where participants earn points for riding their bicycles.

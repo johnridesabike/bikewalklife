@@ -12,6 +12,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
+excerpt: >
+  If the Bicycle Commuter Act of 2021 passes, it will provide bike commuters a
+  benefit worth up to $81 per month. I think this is positive, yet far from what
+  we really need.
 
 ---
 If the Bicycle Commuter Act of 2021 passes, it will provide bike commuters a benefit worth up to $81 per month. I think this is positive, yet far from what we really need.

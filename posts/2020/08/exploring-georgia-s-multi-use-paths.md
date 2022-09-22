@@ -10,6 +10,7 @@ hero_image:
 external_link: https://georgiabikes.org/tour-de-georgia-2020-exploring-multi-use-paths-in-the-peach-state/
 tags:
 - trails
+excerpt: Maria Borowik writes for Georgia Bikes...
 
 ---
 Maria Borowik writes for Georgia Bikes:

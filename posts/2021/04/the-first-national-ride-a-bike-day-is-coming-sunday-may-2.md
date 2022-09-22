@@ -13,6 +13,9 @@ hero_image:
   alt: '"National Ride a Bike Day" promo graphic.'
   caption: 'Image credit: League of American Bicyclists.'
 external_link: https://bikeleague.org/content/take-part-first-ever-national-ride-bike-day
+excerpt: >
+  May is Bike Month, and this year we're kicking it off with an inaugural Ride a
+  Bike Day.
 
 ---
 May is Bike Month, and this year we're kicking it off with an inaugural Ride a Bike Day.

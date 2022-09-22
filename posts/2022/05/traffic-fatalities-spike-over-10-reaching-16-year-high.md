@@ -10,6 +10,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.smartcitiesdive.com/news/motor-vehicle-deaths-2020-data-nsc/596240/
+excerpt: >
+  2020 saw an unprecedented spike in traffic violence, and 2021 got even worse.
+  Deaths among drivers, pedestrians, and bicycle riders all went up. Smart
+  Cities Dive has a summary of the latest report.
 
 ---
 2020 saw an unprecedented spike in traffic violence, and 2021 got even worse. Deaths among drivers, pedestrians, and bicycle riders all went up. Smart Cities Dive has a summary of the latest report.

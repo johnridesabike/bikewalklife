@@ -13,6 +13,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.theatlantic.com/ideas/archive/2021/12/suvs-trucks-killing-pedestrians-cyclists/621102/
+excerpt: >
+  The Atlantic recently published an article by Angie Schmitt which gets right
+  to the point. Our cars are getting bigger and bigger, and traffic deaths are
+  going up as a result.
 
 ---
 The Atlantic recently published an article by Angie Schmitt which gets right to the point. Our cars are getting bigger and bigger, and traffic deaths are going up as a result.

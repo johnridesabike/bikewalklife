@@ -13,6 +13,13 @@ tags:
 - demand trail
 - Columbus GA
 - Dragonfly Trail Network
+excerpt: >
+  Despite all of the reverence given to free market ideology, our transportation
+  has never fit in with it. People continuously wish for alternative
+  transportation options, yet we remain dependent on our technocratic overlords
+  and their car-centric master-plan. Nonetheless, there are occasional times
+  when individuals empower themselves to take mobility into their own hands. The
+  laws of supply and demand relent, and a “demand trail” appears.
 
 ---
 Despite all of the reverence given to free market ideology, our transportation has never fit in with it. People continuously wish for alternative transportation options, yet we remain dependent on our technocratic overlords and their car-centric master-plan. Nonetheless, there are occasional times when individuals empower themselves to take mobility into their own hands. The laws of supply and demand relent, and a “demand trail” appears.

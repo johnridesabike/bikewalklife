@@ -16,6 +16,10 @@ tags:
 - Nathan Grayson
 - traffic
 - viral
+excerpt: >
+  Bored internet users have a knack for creating niche communities, and
+  "stopsigncam" is one of the latest. It's a Twitch stream of a stop sign. The
+  twist is that, according to its description, "98.73% of vehicles don't stop."
 
 ---
 Bored internet users have a knack for creating niche communities, and "stopsigncam" is one of the latest. It's a Twitch stream of a stop sign. The twist is that, according to its description, "98.73% of vehicles don't stop."

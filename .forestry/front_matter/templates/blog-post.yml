@@ -55,6 +55,16 @@ fields:
       the <em>alternate text</em>.
   label: Hero image
   description: This will appear in the header of the post.
+- name: excerpt
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Excerpt
+  description: This can appear as a preview summary of the post.
 - name: external_link
   type: text
   config:

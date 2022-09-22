@@ -16,6 +16,12 @@ tags:
 - car culture
 - violence
 - science
+excerpt: >
+  Recent studies show that women drivers are more likely than men to die in car
+  crashes. The reason behind it is straightforward: trucks and SUVs are
+  significantly more deadly than smaller cars, and men are more likely to drive
+  those larger vehicles. This also reveals how our vehicles, and our streets
+  themselves, are deadly-by-design.
 
 ---
 Recent studies show that women drivers are more likely than men to die in car crashes. The reason behind it is straightforward: trucks and SUVs are significantly more deadly than smaller cars, and men are more likely to drive those larger vehicles. This also reveals how our vehicles, and our streets themselves, are deadly-by-design.

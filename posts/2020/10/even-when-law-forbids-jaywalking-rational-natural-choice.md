@@ -15,6 +15,14 @@ tags:
 - Angie Schmitt
 - Charles T. Brown
 - pedestrian
+excerpt: >
+  In the US, we all grow up learning that jaywalking is dangerous and illegal.
+  Most of the time, we don’t question that. Of course people shouldn’t step
+  outside of designated walking paths after waiting for the pedestrian signal to
+  turn and after looking both ways. Of course streets are for cars, so people
+  outside of cars shouldn’t expect to be safe. Eventually this thought process
+  brings us to its ultimate conclusion: of course that person killed by a car
+  brought her fate upon herself, she was jaywalking.
 
 ---
 In the US, we all grow up learning that jaywalking is dangerous and illegal. Most of the time, we don’t question that. _Of course_ people shouldn’t step outside of designated walking paths after waiting for the pedestrian signal to turn and after looking both ways. _Of course_ streets are for cars, so people outside of cars shouldn’t expect to be safe. Eventually this thought process brings us to its ultimate conclusion: _of course_ that person killed by a car brought her fate upon herself, she was _jaywalking_.

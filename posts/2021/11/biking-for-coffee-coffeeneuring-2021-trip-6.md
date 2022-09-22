@@ -14,6 +14,10 @@ hero_image:
   alt: 'Biking for Coffee #6'
   caption: ''
 external_link: ''
+excerpt: >
+  This is my sixth video in my Biking for Coffee series. As part of this year’s
+  Coffeeneuring Challenge, I’m documenting each of my rides on video to show
+  what a typical bike commute can look like in my community.
 
 ---
 This is my sixth video in my Biking for Coffee series. As part of this year’s Coffeeneuring Challenge, I’m documenting each of my rides on video to show what a typical bike commute can look like in my community.

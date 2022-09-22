@@ -15,6 +15,13 @@ tags:
 - Chasing Mailboxes
 - challenges
 - Biketober
+excerpt: >
+  I’m always game for an old-fashioned, just-for-fun, bicycle challenge. Sure
+  the Bike League’s big National Bike Challenge and city events like Atlanta’s
+  Biketober are great, but there’s something special about the low-stakes,
+  high-fun challenges that are run by ordinary people on the blogosphere and
+  social media. Two of these are coming up for October: Coffeeneuring and Three
+  Speed October.
 
 ---
 I’m always game for an old-fashioned, just-for-fun, bicycle challenge. Sure the Bike League’s big National Bike Challenge and city events like [Atlanta’s Biketober](https://www.lovetoride.net/atlanta?locale=en-US) are great, but there’s something special about the low-stakes, high-fun challenges that are run by ordinary people on the blogosphere and social media. Two of these are coming up for October: Coffeeneuring and Three Speed October.

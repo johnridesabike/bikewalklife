@@ -15,6 +15,12 @@ tags:
 - COVID-19
 - The American Conservative
 - urbanism
+excerpt: >
+  When the pandemic stopped cars around the world, there was a lot of buzz about
+  cities repurposing their empty streets. From California to Florida to France,
+  you could see streets transformed into car-free parks or dining areas. It
+  seemed like a silver lining to a terrible year. But the rest of the story
+  wasn’t so simple.
 
 ---
 When the pandemic stopped cars around the world, there was a lot of buzz about cities repurposing their empty streets. From California to Florida to France, you could see streets transformed into car-free parks or dining areas. It seemed like a silver lining to a terrible year. But the rest of the story wasn’t so simple.

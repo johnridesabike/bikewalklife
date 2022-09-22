@@ -15,6 +15,11 @@ tags:
 - electric cars
 - greenwashing
 - SUV
+excerpt: >
+  The New York Times published an opinion article by Farhad Manjoo, There’s One
+  Big Problem With Electric Cars, and He cuts right to the chase on the first
+  line: “They’re still cars. Technology can’t cure America of its addiction to
+  the automobile.”
 
 ---
 The New York Times published an opinion article by Farhad Manjoo, [There’s One Big Problem With Electric Cars](https://www.nytimes.com/2021/02/18/opinion/electric-cars-SUV.html?smid=tw-share), and He cuts right to the chase on the first line: “They’re still cars. Technology can’t cure America of its addiction to the automobile.”

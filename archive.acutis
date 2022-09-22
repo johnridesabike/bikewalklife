@@ -107,7 +107,8 @@
           pub: {
             @pub: true,
             url: href,
-            absoluteUrl
+            absoluteUrl,
+            excerpt
           },
           title,
           external_link,
@@ -116,10 +117,7 @@
           draft,
           author,
           hero_image,
-          visible: true,
-          page: {
-            excerpt
-          }
+          visible: true
         }
       }
   %}

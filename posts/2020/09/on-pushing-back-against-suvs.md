@@ -12,6 +12,9 @@ tags:
 - SUV
 - policy
 - safety
+excerpt: >
+  David Zipper, writing for Bloomberg CityLab, has a piece on “How Cities Could
+  Push Back on Pickups and SUVs.”
 
 ---
 David Zipper, writing for Bloomberg CityLab, has a piece on “[How Cities Could Push Back on Pickups and SUVs](https://www.bloomberg.com/news/articles/2020-09-17/how-cities-could-push-back-on-pickups-and-suvs).”

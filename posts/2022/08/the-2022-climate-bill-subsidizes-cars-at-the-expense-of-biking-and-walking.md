@@ -10,6 +10,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.washingtonpost.com/climate-environment/2022/08/02/electric-bikes-incentives-cyclists-climate-deal/
+excerpt: >
+  The Inflation Reduction Act of 2022, AKA the Climate Bill, is moving forward.
+  However, its latest iteration has dropped a lot of the provisions for biking
+  and walking and instead focuses on electric cars.
 
 ---
 The Inflation Reduction Act of 2022, AKA the Climate Bill, is moving forward. However, its latest iteration has dropped a lot of the provisions for biking and walking and instead focuses on electric cars.

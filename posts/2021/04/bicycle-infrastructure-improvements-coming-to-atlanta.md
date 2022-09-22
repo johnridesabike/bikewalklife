@@ -14,6 +14,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.atlantamagazine.com/news-culture-articles/where-are-we-pedaling-next-the-new-bicycling-projects-coming-soon-to-metro-altanta/
+excerpt: >
+  Atlanta, Georgia is planning some big upgrades for its bicycling
+  infrastructure for the upcoming year. Atlanta Magazine has a summary of what's
+  happening.
 
 ---
 Atlanta, Georgia is planning some big upgrades for its bicycling infrastructure for the upcoming year. [Atlanta Magazine has a summary of what's happening](https://www.atlantamagazine.com/news-culture-articles/where-are-we-pedaling-next-the-new-bicycling-projects-coming-soon-to-metro-altanta/).

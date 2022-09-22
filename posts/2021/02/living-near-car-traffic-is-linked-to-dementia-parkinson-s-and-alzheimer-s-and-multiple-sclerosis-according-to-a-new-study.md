@@ -18,6 +18,13 @@ tags:
 - Parkinson's
 - Alzheimer's
 - multiple sclerosis
+excerpt: >
+  We all know that living near a busy arterial road is generally less pleasant
+  than living near a verdant park. Most of us would prefer to stay away from the
+  noise and the ugly asphalt. But according to a study in Environmental Health
+  journal, there’s another reason to avoid roads. The air pollution can be
+  linked to dementia, Parkinson’s disease, Alzheimer’s disease, and multiple
+  sclerosis.
 
 ---
 We all know that living near a busy arterial road is generally less pleasant than living near a verdant park. Most of us would prefer to stay away from the noise and the ugly asphalt. But according to a study in _Environmental Health_ journal, there’s another reason to avoid roads. The air pollution can be linked to dementia, Parkinson’s disease, Alzheimer’s disease, and multiple sclerosis.

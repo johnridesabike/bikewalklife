@@ -11,6 +11,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.notechmagazine.com/2021/07/technologically-utopian-solutions-rest-on-narrowly-defined-system-boundaries.html
+excerpt: >
+  I recently found a research paper signal-boosted by No Tech Magazine. One of
+  its messages is that technology-based utopias can only succeed within narrowly
+  defined systems.
 
 ---
 I recently found a research paper signal-boosted by [No Tech Magazine](https://www.notechmagazine.com/2021/07/technologically-utopian-solutions-rest-on-narrowly-defined-system-boundaries.html). One of its messages is that technology-based utopias can only succeed within narrowly defined systems. This quote struck me:

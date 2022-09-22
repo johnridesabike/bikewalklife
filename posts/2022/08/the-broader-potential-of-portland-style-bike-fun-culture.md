@@ -10,6 +10,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://urbanadventureleague.wordpress.com/2022/07/21/can-portland-style-bike-fun-culture-take-hold-elsewhere/
+excerpt: >
+  Shawn Granton of Urban Adventure League wrote a blog post titled "can Portland
+  style bike fun culture take hold elsewhere?" It reflects on "DIY" bicycle
+  events hosted by individuals rather than organizations.
 
 ---
 Shawn Granton of Urban Adventure League wrote a blog post titled "can Portland style bike fun culture take hold elsewhere?" It reflects on "DIY" bicycle events hosted by individuals rather than organizations.

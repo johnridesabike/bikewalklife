@@ -13,6 +13,12 @@ tags:
 - Virginia
 - Virginia Mercury
 - Wyatt Gordon
+excerpt: >
+  Regular Bike Walk Life readers know that I'm no fan of "jaywalking." I even
+  choose to write it in scare-quotes because the word itself carries derogatory
+  connotations. Fortunately, though, one state is working to decriminalize it.
+  Wyatt Gordon reports for Virginia Mercury that a police-reform bill includes a
+  provision that decriminalizes pedestrians crossing the street.
 
 ---
 Regular Bike Walk Life readers know that I'm no fan of "jaywalking." I even choose to write it in scare-quotes because the word itself carries derogatory connotations. Fortunately, though, one state is working to decriminalize it. [Wyatt Gordon reports for Virginia Mercury](https://www.virginiamercury.com/2020/12/21/jaywalking-decriminalization-is-coming-to-virginia-100-years-after-the-auto-industry-helped-make-it-a-crime/) that a police-reform bill includes a provision that decriminalizes pedestrians crossing the street.

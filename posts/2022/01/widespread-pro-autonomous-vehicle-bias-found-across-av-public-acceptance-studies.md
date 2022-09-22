@@ -12,6 +12,11 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://doi.org/10.1016/j.trf.2021.12.005
+excerpt: >
+  Researchers analyzed 91 peer-reviewed scientific studies on the public
+  acceptance of AVs (autonomous vehicles, or self-driving cars). They found that
+  a majority of these studies have a pro-AV bias in either their methodology or
+  their sentiment.
 
 ---
 Researchers analyzed 91 peer-reviewed scientific studies on the public acceptance of AVs (autonomous vehicles, or self-driving cars). They found that a majority of these studies have a pro-AV bias in either their methodology or their sentiment.
