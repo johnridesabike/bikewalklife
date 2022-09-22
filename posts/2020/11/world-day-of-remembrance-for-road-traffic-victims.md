@@ -11,6 +11,7 @@ external_link: https://worlddayofremembrance.org
 tags:
 - violence
 - WDoR
+excerpt: November 15 is World Day of Remembrance for Road Traffic Victims.
 
 ---
 November 15 is [World Day of Remembrance for Road Traffic Victims](https://worlddayofremembrance.org/). From the official site:

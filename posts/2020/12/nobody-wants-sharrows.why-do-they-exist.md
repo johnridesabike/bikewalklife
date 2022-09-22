@@ -12,6 +12,11 @@ tags:
 - sharrows
 - Tom MacWright
 - infrastructure
+excerpt: >
+  “Sharrows” are those painted arrows with bicycle symbols we see on some
+  streets. Many bicyclists dislike sharrows and ignore them. Most drivers have
+  no idea what sharrows are and ignore them. Why are they so misunderstood? And
+  what are they really for?
 
 ---
 “Sharrows” are those painted arrows with bicycle symbols we see on some streets. Many bicyclists dislike sharrows and ignore them. Most drivers have no idea what sharrows are and ignore them. Why are they so misunderstood? And what are they really for?

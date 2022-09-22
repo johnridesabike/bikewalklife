@@ -11,6 +11,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://bycs.org/the-inherent-resistance-of-cycling/
+excerpt: >
+  BYCS posted an article about "the inherent resistance of cycling" by James
+  Crossley. It summarizes how riding a bicycle goes against the grain of
+  mainstream society, and so is an act of "resistance."
 
 ---
 BYCS posted an article about "[the inherent resistance of cycling](https://bycs.org/the-inherent-resistance-of-cycling/)" by James Crossley. It summarizes how riding a bicycle goes against the grain of mainstream society, and so is an act of "resistance."

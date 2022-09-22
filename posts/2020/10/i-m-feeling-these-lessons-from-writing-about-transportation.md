@@ -13,6 +13,13 @@ tags:
 - lessons
 - Savannah
 - writing
+excerpt: >
+  John Bennett, a long-time mobility advocate in Savannah, published a
+  reflection on writing about transportation. His lessons are partially about
+  writing and advocacy, and partially about the causes themselves. For example,
+  he notes that he faced criticism from people who see bicycles as a special
+  interest that's misaligned with the public good, and he explains how that’s
+  untrue.
 
 ---
 John Bennett, a long-time mobility advocate in Savannah, [published a reflection on writing about transportation](https://www.connectsavannah.com/savannah/the-news-cycle-is-complete/Content?oid=15254469). His lessons are partially about writing and advocacy, and partially about the causes themselves. For example, he notes that he faced criticism from people who see bicycles as a special interest that's misaligned with the public good, and he explains how that’s  untrue:

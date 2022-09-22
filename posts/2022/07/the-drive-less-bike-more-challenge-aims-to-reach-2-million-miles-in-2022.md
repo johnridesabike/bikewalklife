@@ -11,6 +11,10 @@ hero_image:
     bicycle.
   caption: ''
 external_link: https://www.lovetoride.net/drivelessbikemore
+excerpt: >
+  The League of American Bicyclists has launched their "Drive Less, Bike More"
+  challenge for 2022, and their goal is for Americans to collectively bike at
+  least 2 million miles this year.
 
 ---
 The League of American Bicyclists has launched their "Drive Less, Bike More" challenge for 2022, and their goal is for Americans to collectively bike at least 2 million miles this year.

@@ -13,6 +13,9 @@ tags:
 - pedestrian
 - Merriam-Webster
 - culture
+excerpt: >
+  The term pedestrian is awkward and has too many negative connotations, so I
+  wonder if it’s due for a replacement.
 
 ---
 The term _pedestrian_ is awkward and has too many negative connotations, so I wonder if it’s due for a replacement. 

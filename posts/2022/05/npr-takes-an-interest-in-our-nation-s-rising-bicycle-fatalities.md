@@ -10,6 +10,11 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.npr.org/2022/05/25/1099566472/more-cyclists-are-being-killed-by-cars-advocates-say-u-s-streets-are-the-problem
+excerpt: >
+  Bicycle and pedestrian fatalities keep rising, and it’s clearer than ever that
+  our transportation system is deadly by design. Although there’s no popular
+  consensus on how to reverse this trend yet, many activists are working on it
+  anyway. NPR just published a report on some of those efforts.
 
 ---
 Bicycle and pedestrian fatalities keep rising, and it’s clearer than ever that our transportation system is deadly by design. Although there’s no popular consensus on how to reverse this trend yet, many activists are working on it anyway. NPR just published a report on some of those efforts.

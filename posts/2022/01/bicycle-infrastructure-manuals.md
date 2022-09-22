@@ -12,6 +12,9 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://bicycleinfrastructuremanuals.com/
+excerpt: >
+  Bicycle Infrastructure Manuals is a website that hosts documents about (as you
+  may guess) bicycle infrastructure from around the world.
 
 ---
 Bicycle Infrastructure Manuals is a website that hosts documents about (as you may guess) bicycle infrastructure from around the world.

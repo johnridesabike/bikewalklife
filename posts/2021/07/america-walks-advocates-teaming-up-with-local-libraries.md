@@ -12,6 +12,9 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://americawalks.org/how-and-why-to-team-up-with-your-local-librarian/
+excerpt: >
+  Advocacy group America Walks has a new post on how to team up with your local
+  library to improve the walkability of your community.
 
 ---
 Advocacy group America Walks has a new post on how to team up with your local library to improve the walkability of your community.

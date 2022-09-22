@@ -10,6 +10,10 @@ hero_image:
   alt: ""
   caption: ""
 external_link: https://granola.substack.com/p/our-year-without-a-car-with-kids
+excerpt: >
+  Gracy Olmstead is a writer and a Strong Towns board member. For her July
+  newsletter, she published a reflection of what it was like to live for a year
+  without a car and with three children.
 
 ---
 

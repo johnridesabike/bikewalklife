@@ -13,6 +13,11 @@ hero_image:
   alt: A photograph of three homes, chicopee.
   caption: 'Photo credit: Chris Arnade, from his "Walking America, part 1."'
 external_link: https://intellectualinting.substack.com/
+excerpt: >
+  Chris Arnade has been writing about America's poor communities for a while
+  now. His book, Dignity, is was one of my favorite books in recent years. Now
+  he's started a new blog on Substack called Intellectual Inting, where he is
+  publishing a series of posts called "Walking America."
 
 ---
 Chris Arnade has been writing about America's poor communities for a while now. His book, _Dignity_, is was one of my favorite books in recent years. Now he's started a new blog on Substack called [Intellectual Inting](https://intellectualinting.substack.com/), where he is publishing a series of posts called "Walking America."

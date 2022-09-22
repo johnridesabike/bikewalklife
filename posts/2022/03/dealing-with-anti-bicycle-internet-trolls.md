@@ -14,6 +14,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.theguardian.com/environment/bike-blog/2022/mar/03/anti-cycling-trolls-andrew-tierney-online-abuse
+excerpt: >
+  The Guardian posted a profile of Andrew Tierney, a UK man who has begun
+  fighting anti-bicycle trolls. It delves into the kinds of online abuse he sees
+  and his strategies for addressing it.
 
 ---
 The Guardian posted a profile of Andrew Tierney, a UK man who has begun fighting anti-bicycle trolls. It delves into the kinds of online abuse he sees and his strategies for addressing it.

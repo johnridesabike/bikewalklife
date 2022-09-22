@@ -16,6 +16,11 @@ hero_image:
   alt: Historic photo of Springer Opera House.
   caption: 'Image credit: Georgia Archives & Digital Library of Georgia.'
 external_link: https://dlg.usg.edu/record/dlg_vang_mus125
+excerpt: >
+  Bike lanes, mixed-use trails, and public transportation aren't just modern
+  fads. For most of history, our streets hosted a diverse mixture of mobility
+  methods. What if we could see exactly how our streets would look without cars
+  dominating them? Thanks to historical archives, we can!
 
 ---
 Bike lanes, mixed-use trails, and public transportation aren't just modern fads. For most of history, our streets hosted a diverse mixture of mobility methods. What if we could see exactly how our streets would look without cars dominating them? Thanks to historical archives, we can!

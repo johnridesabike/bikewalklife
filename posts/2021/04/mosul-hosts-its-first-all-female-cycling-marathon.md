@@ -15,6 +15,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://news.yahoo.com/iraqi-girls-part-female-cycle-151350593.html?guccounter=1
+excerpt: >
+  In international news, an all-female cycling marathon took place in Mosul,
+  Iraq for the first time. Participants and organizers are advocating for more
+  women to ride bicycles.
 
 ---
 In international news, an all-female cycling marathon took place in Mosul, Iraq for the first time. Participants and organizers are advocating for more women to ride bicycles.

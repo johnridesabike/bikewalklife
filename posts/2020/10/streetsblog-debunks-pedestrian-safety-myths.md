@@ -15,6 +15,10 @@ tags:
 - Streetsblog
 - violence
 - NHTSA
+excerpt: >
+  The United States’ first federal “National Pedestrian Safety Month” is already
+  under criticism from pedestrian safety advocates. Kea Wilson has an article on
+  Streetsblog USA that doesn’t mince words.
 
 ---
 The United States’ first federal “National Pedestrian Safety Month” is already under criticism from pedestrian safety advocates. [Kea Wilson has an article on Streetsblog USA](https://usa.streetsblog.org/2020/09/30/national-pedestrian-safety-month-campaign-is-an-offensive-parade-of-dangerous-traffic-violence-myths/) that doesn’t mince words:

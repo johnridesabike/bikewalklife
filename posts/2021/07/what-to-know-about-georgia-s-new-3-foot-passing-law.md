@@ -12,6 +12,9 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
+excerpt: >
+  You may have seen that Georgia recently passed a new "3-foot passing law."
+  This is good news for bicycle riders, so let's look at what it means exactly.
 
 ---
 You may have seen that Georgia recently passed a new "3-foot passing law." This is good news for bicycle riders, so let's look at what it means exactly.

@@ -11,6 +11,10 @@ hero_image:
   alt: Dangerous by Design 2022 cover image.
   caption: 'Image credit: Smart Growth America.'
 external_link: https://smartgrowthamerica.org/dangerous-by-design/
+excerpt: >
+  Smart Growth America released their annual "Dangerous by Design" report for
+  2022. The results show that traffic deaths continue to rise nationwide, but
+  some places are worse than others.
 
 ---
 Smart Growth America released their annual "Dangerous by Design" report for 2022. The results show that traffic deaths continue to rise nationwide, but some places are worse than others.

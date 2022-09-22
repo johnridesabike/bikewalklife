@@ -13,6 +13,9 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
+excerpt: >
+  The Cycling Professor on Twitter often says, regarding bicycle infrastructure,
+  “we have no lack of space, just a lack of imagination.”
 
 ---
 The Cycling Professor on Twitter often says, regarding bicycle infrastructure, “we have no lack of space, just a lack of imagination.”

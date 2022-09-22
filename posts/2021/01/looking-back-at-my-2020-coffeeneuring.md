@@ -14,6 +14,11 @@ tags:
 - '2020'
 - photography
 - originals
+excerpt: >
+  The 2020 Coffeeneuring Challenge was subtitled “One Good Thing” in recognition
+  that it could be at least one silver lining in a wild year. This annual
+  challenge has always been fun for me, and thankfully the 2020 version was no
+  different.
 
 ---
 [The 2020 Coffeeneuring Challenge](https://chasingmailboxes.com/2020/09/27/coffeeneuring-challenge-2020-one-good-thing/) was subtitled “One Good Thing” in recognition that it could be at least _one_ silver lining in a wild year. This annual challenge has always been fun for me, and thankfully the 2020 version was no different.

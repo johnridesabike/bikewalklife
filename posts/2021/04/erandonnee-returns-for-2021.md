@@ -14,6 +14,9 @@ hero_image:
   alt: A photo of a parked bicycle with baskets full of groceries.
   caption: A grocery run from Errandonnee 2017.
 external_link: https://chasingmailboxes.com/2021/04/11/errandonnee-2021-hyperlocal-edition/
+excerpt: >
+  Errandonnee is an annual challenge for running errands by bike or on foot.
+  After a pandemic-induced hiatus last year, it's back for 2021.
 
 ---
 Errandonnee is an annual challenge for running errands by bike or on foot. After a pandemic-induced hiatus last year, it's back for 2021.

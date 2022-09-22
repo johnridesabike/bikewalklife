@@ -14,6 +14,11 @@ tags:
 - Patrick Stephenson
 - challenges
 - '2021'
+excerpt: >
+  In one week, the 30 Days of Biking challenge will begin on April 1st and run
+  through the end of the month. The challenge is simple: ride a bicycle every
+  day for 30 days. And there’s no pressure, since pretty much anything counts as
+  a ride. Their motto is "a community of joyful cyclists."
 
 ---
 In one week, the 30 Days of Biking challenge will begin on April 1st and run through the end of the month. The challenge is simple: ride a bicycle every day for 30 days. And there’s no pressure, since pretty much anything counts as a ride. Their motto is "a community of joyful cyclists."

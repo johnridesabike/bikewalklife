@@ -16,6 +16,13 @@ tags:
 - least among us
 - Dragonfly Trails Network
 - Aliya Barnwell
+excerpt: >
+  Last month, VeloNews published an article by Aliya Barnwell: There are already
+  many Black cyclists — we just overlook them. She argues that the lack of
+  diversity in the cycling community is really a problem with companies, teams,
+  and other cycling organizations. When we look at bicycle riders outside of
+  those cliques and institutions, we see a much more diverse group of people.
+  Below is an excerpt.
 
 ---
 Last month, VeloNews published an article by Aliya Barnwell: [There are already many Black cyclists — we just overlook them](https://www.velonews.com/culture/major-taylor-journal-there-are-already-many-black-cyclists-we-just-overlook-them/). She argues that the lack of diversity in the cycling community is really a problem with companies, teams, and other cycling organizations. When we look at bicycle riders outside of those cliques and institutions, we see a much more diverse group of people. Below is an excerpt.

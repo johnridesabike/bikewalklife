@@ -14,6 +14,10 @@ tags:
 - tips
 - group rides
 - Life on Two Wheels
+excerpt: >
+  Marley Blonsky recently blogged her five tips for making your group ride more
+  inclusive. Having been through a variety of group rides myself, I think each
+  one of these seems like great advice.
 
 ---
 Marley Blonsky recently blogged her five tips for making your group ride more inclusive. Having been through a variety of group rides myself, I think each one of these seems like great advice.

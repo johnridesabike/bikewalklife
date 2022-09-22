@@ -15,6 +15,11 @@ tags:
 - Columbus GA
 - trails
 - interview
+excerpt: >
+  Dragonfly Trails is the growing network of biking and walking trails around
+  Columbus, GA. I myself use them daily and I can attest that these are the real
+  deal. The trails are accessible, well maintained, and cover a vast portion of
+  the city.
 
 ---
 Dragonfly Trails is the growing network of biking and walking trails around Columbus, GA. I myself use them daily and I can attest that these are the real deal. The trails are accessible, well maintained, and cover a vast portion of the city.

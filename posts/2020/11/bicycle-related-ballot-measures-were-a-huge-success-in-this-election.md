@@ -11,6 +11,9 @@ external_link: https://peopleforbikes.org/2020ballottracker/
 tags:
 - People for Bikes
 - elections
+excerpt: >
+  People for Bikes tracked bicycle-related ballot measures for 2020. Now, as the
+  election wraps up, they have the results.
 
 ---
 [People for Bikes](https://peopleforbikes.org/) tracked bicycle-related ballot measures for 2020. [Now, as the election wraps up, they have the results.](https://peopleforbikes.org/2020ballottracker/)

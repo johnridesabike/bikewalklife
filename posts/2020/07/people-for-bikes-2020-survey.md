@@ -9,9 +9,13 @@ hero_image:
   caption: ''
 draft: false
 tags:
-  - People for Bikes
+- People for Bikes
+excerpt: >
+  The annual People for Bikes Community Survey is here until October 15th.
+  Completing it helps them rank the bikeability of cities across the US.
 
 ---
+
 The annual People for Bikes Community Survey is here until October 15th.
 Completing it helps them rank the bikeability of cities across the US.
 

@@ -14,6 +14,10 @@ hero_image:
   alt: 'Biking for Coffee #7.'
   caption: ''
 external_link: ''
+excerpt: >
+  This is the seventh, and final, entry in my 2021 Biking for Coffee series. As
+  part of this year’s Coffeeneuring Challenge, I’m documenting each of my rides
+  on video to show what a typical bike commute can look like in my community.
 
 ---
 This is the seventh, and final, entry in my 2021 Biking for Coffee series. As part of this year’s Coffeeneuring Challenge, I’m documenting each of my rides on video to show what a typical bike commute can look like in my community.

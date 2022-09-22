@@ -12,6 +12,11 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.wsbtv.com/news/report-blames-17-year-old-girl-accident-that-killed-her-driver-has-never-been-charged/3QKHQEKHEVFJVMURLAD6ZCQ4TU/
+excerpt: >
+  In 2020, Obianuju Osuegbu was riding her bicycle on her way home from work
+  when a car driver, who was high on drugs, struck her and ended her life. Law
+  enforcement placed the blame on her and have yet to prosecute the driver. Now
+  her family is doing what they can to make sure justice takes place.
 
 ---
 In 2020, Obianuju Osuegbu was riding her bicycle on her way home from work when a car driver, who was high on drugs, struck her and ended her life. Law enforcement placed the blame on her and have yet to prosecute the driver. Now her family is doing what they can to make sure justice takes place.

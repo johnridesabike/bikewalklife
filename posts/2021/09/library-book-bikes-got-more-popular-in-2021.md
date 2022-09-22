@@ -16,6 +16,11 @@ hero_image:
   alt: ''
   caption: ''
 external_link: http://publiclibrariesonline.org/2021/08/library-book-bikes-gaining-in-popularity/
+excerpt: >
+  Book bikes are a growing trend for public libraries. They allow library staff
+  to perform bookmobile-style outreach on two, or usually three, wheels. This
+  past August had the second annual "Book Bike Week," and interest doubled since
+  last year.
 
 ---
 Book bikes are a growing trend for public libraries. They allow library staff to perform bookmobile-style outreach on two, or usually three, wheels. This past August had the second annual "Book Bike Week," and interest doubled since last year.

@@ -11,6 +11,7 @@ external_link: https://www.bloomberg.com/news/articles/2020-08-13/do-bike-lanes-
 tags:
   - accessibility
   - Manchester
+excerpt: John Surico writes for CityLab
 
 ---
 John Surico writes for CityLab:

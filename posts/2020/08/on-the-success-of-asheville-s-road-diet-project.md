@@ -10,6 +10,7 @@ hero_image:
 external_link: https://www.citizen-times.com/story/opinion/2020/08/09/asheville-should-proud-charlotte-street-innovation-opinion/3313771001/
 tags:
   - local projects
+excerpt: PJ Jackson writes for Citizen Times...
 
 ---
 PJ Jackson writes for Citizen Times:

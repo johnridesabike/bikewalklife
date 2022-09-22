@@ -13,6 +13,11 @@ tags:
 - Pattie Baker
 - BYCS
 - Atlanta
+excerpt: >
+  There’s a new mayor in A-town, or rather, a new bicycle mayor. Pattie Baker,
+  of Traveling at the Speed of Bike fame (and an inspiration for Bike Walk
+  Life!), recently completed her application, making her the first one in the
+  southeastern United States.
 
 ---
 There’s a new mayor in A-town, or rather, a new _bicycle_ mayor. Pattie Baker, of [Traveling at the Speed of Bike](https://travelingatthespeedofbike.com) fame (and an inspiration for Bike Walk Life!), recently completed her application, making her the first one in the southeastern United States.

@@ -16,6 +16,11 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://anchor.fm/citiesdownsouth
+excerpt: >
+  Cities Down South is a new podcast about "the places we live and how we get
+  around them." It's hosted by Scott Berson from the Coastal Regional Commission
+  of Georgia. He interviews Georgia locals about the issues affecting their
+  communities.
 
 ---
 Cities Down South is a new podcast about "the places we live and how we get around them." It's hosted by Scott Berson from the Coastal Regional Commission of Georgia. He interviews Georgia locals about the issues affecting their communities.

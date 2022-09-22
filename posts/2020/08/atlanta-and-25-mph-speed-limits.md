@@ -10,6 +10,7 @@ hero_image:
 external_link: https://www.reporternewspapers.net/2020/08/15/atlanta-transportation-chief-defends-25-mph-speed-limit-rejects-pandemic-street-closures/
 tags:
   - local projects
+excerpt: John Ruch reports on a recent neighborhood planning meeting.
 
 ---
 John Ruch reports on a recent neighborhood planning meeting:

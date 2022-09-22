@@ -13,6 +13,11 @@ tags:
 - police
 - deadly by design
 - US House
+excerpt: >
+  Marginalized communities always have a couple of things in common, unsafe
+  streets and oversized law enforcement. These aren’t together by coincidence;
+  unsafe street design necessitates extra policing. Recently, the US House
+  transportation committee had a hearing on this topic.
 
 ---
 Marginalized communities always have a couple of things in common, unsafe streets and oversized law enforcement. These aren’t together by coincidence; unsafe street design necessitates extra policing. Recently, the US House transportation committee had a hearing on this topic.

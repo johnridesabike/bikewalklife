@@ -14,6 +14,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://nextcity.org/daily/entry/in-baltimore-disability-advocates-are-suing-over-sidewalk-conditions
+excerpt: >
+  Disability advocates have pushed Baltimore officials to improve the conditions
+  of their sidewalks for a while. Since city hasn't been responsive, the people
+  are now suing.
 
 ---
 Disability advocates have pushed Baltimore officials to improve the conditions of their sidewalks for a while. Since city hasn't been responsive, the people are now suing.

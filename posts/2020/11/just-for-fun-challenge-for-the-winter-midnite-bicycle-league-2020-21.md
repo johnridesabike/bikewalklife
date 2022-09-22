@@ -13,6 +13,11 @@ tags:
 - challenges
 - just-for-fun
 - Urban Adventure League
+excerpt: >
+  I love just-for-fun bicycle challenges. They embody what bicycles are really
+  about for me: having fun, building relationships, and just going outside to
+  live life. Here’s one coming up soon: Midnite Bicycle League Challenge hosted
+  by Urban Adventure League.
 
 ---
 I love just-for-fun bicycle challenges. They embody what bicycles are really about for me: having fun, building relationships, and just going outside to live life. Here’s one coming up soon: [Midnite Bicycle League Challenge](https://urbanadventureleague.wordpress.com/2020/11/11/announcing-the-midnite-bicycle-league-2020-21-challenge-1-dec-2020-28-feb-2021/) hosted by Urban Adventure League.

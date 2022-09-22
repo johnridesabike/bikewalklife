@@ -13,7 +13,12 @@ tags:
 - apps
 - HERE
 - maps
-
+excerpt: >
+  I frequently hear my town described as a “15 minute city,” or a “20 minute
+  city,” by people who advocate living here. That's a shorthand way of saying
+  “you can get anywhere you need within 15 minutes.” But the unspoken caveat is
+  that they mean 15 minutes by car. The thought of walking somewhere, unless
+  it’s from a parking spot, doesn’t even dawn on most people.
 
 ---
 I frequently hear my town described as a “15 minute city,” or a “20 minute city,” by people who advocate living here. That's a shorthand way of saying “you can get anywhere you need within 15 minutes.” But the unspoken caveat is that they mean 15 minutes _by car_. The thought of walking somewhere, unless it’s from a parking spot, doesn’t even dawn on most people.

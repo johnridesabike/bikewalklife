@@ -12,6 +12,12 @@ tags:
 - safety
 - violence
 - guides
+excerpt: >
+  I recently found out about BicycleSafe.com by Michael Bluejay, which consists
+  of a convenient guide for “Ten Ways to Not Get Hit.” I think it may be one of
+  the more useful bicycle safety resources I’ve seen online. Each of the “ten
+  ways” describes a common collision scenario and how to avoid it, complete with
+  graphics.
 
 ---
 I recently found out about [BicycleSafe.com](https://bicyclesafe.com) by Michael Bluejay, which consists of a convenient guide for “Ten Ways to Not Get Hit.” I think it may be one of the more useful bicycle safety resources I’ve seen online. Each of the “ten ways” describes a common collision scenario and how to avoid it, complete with graphics.

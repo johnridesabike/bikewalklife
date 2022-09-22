@@ -11,6 +11,11 @@ external_link: https://youtu.be/VO_1AdYRGW8
 tags:
 - video
 - history
+excerpt: >
+  When you’ve always lived in a car-dominated society, it may be hard to imagine
+  how life could exist any other way. But contrary to popular perception, modern
+  car-culture is an aberration in the natural order of things. We even have
+  video to help prove it.
 
 ---
 When you’ve always lived in a car-dominated society, it may be hard to imagine how life could exist any other way. But contrary to popular perception, modern car-culture is an aberration in the natural order of things. We even have video to help prove it.

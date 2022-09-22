@@ -12,6 +12,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://pedalpower.substack.com/p/coming-soon
+excerpt: >
+  Pattie Baker, of Traveling at the Speed of Bike fame, is starting a newsletter
+  series in September called Pedal Power with Pattie. It's designed to align
+  with her bike classes.
 
 ---
 Pattie Baker, of Traveling at the Speed of Bike fame, is starting a newsletter series in September called Pedal Power with Pattie. It's designed to align with her bike classes.

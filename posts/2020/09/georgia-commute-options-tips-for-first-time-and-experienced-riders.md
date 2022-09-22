@@ -14,6 +14,10 @@ tags:
 - tips
 - beginners
 - guides
+excerpt: >
+  Georgia Commute Options is promoting the Atlanta Biketober challenge, and
+  they’ve posted a couple of articles with tips for both first-time and
+  experienced bike commuters.
 
 ---
 Georgia Commute Options is promoting the [Atlanta Biketober challenge](https://www.lovetoride.net/atlanta), and they’ve posted a couple of articles with tips for both first-time and experienced bike commuters. Each one highlights a new commuter as their example.

@@ -13,6 +13,9 @@ tags:
 - Black Friday parking
 - parking
 - hashtags
+excerpt: >
+  For several years, Strong Towns has led a social media campaign called
+  #BlackFridayParking. If you aren’t familiar with it, here’s the basic logic...
 
 ---
 For several years, Strong Towns has led a social media campaign called #BlackFridayParking. If you aren’t familiar with it, here’s the basic logic:

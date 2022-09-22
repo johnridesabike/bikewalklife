@@ -16,6 +16,9 @@ hero_image:
   alt: A mockup design for a trail under a bridge.
   caption: 'Image credit: Dragonfly Trail Network.'
 external_link: https://www.wrbl.com/news/local-news/2-million-project-connects-columbus-dragonfly-trail-with-mlk-jr-trail-upgrades-riverwalk-ramps/
+excerpt: >
+  The trail system in Columbus, GA has seen some big upgrades over the past
+  several years. Soon, it will receive another expansion.
 
 ---
 The trail system in Columbus, GA has seen some big upgrades over the past several years. Soon, it will receive another expansion.

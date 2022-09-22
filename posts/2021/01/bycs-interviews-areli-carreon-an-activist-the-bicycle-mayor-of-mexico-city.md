@@ -13,6 +13,12 @@ tags:
 - bicycle mayor
 - Areli Carreón
 - Bicitekas
+excerpt: >
+  Areli Carreón is a co-founder of Bicitekas, a bicycle nonprofit based in
+  Mexico City. She is also a member of the BYCS Bicycle Mayor program. BYCS
+  recently interviewed her and discussed Mexico City’s history, the work that
+  Bicitekas does, and Mexico’s recent “right to mobility” amendment, which she
+  helped push.
 
 ---
 Areli Carreón is a co-founder of Bicitekas, a bicycle nonprofit based in Mexico City. She is also a member of the BYCS Bicycle Mayor program. BYCS recently interviewed her and discussed Mexico City’s history, the work that Bicitekas does, and Mexico’s recent “right to mobility” amendment, which she helped push.

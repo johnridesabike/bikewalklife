@@ -13,6 +13,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.planetizen.com/features/113986-bikings-billion-dollar-value-right-under-our-wheels
+excerpt: >
+  Our 21st century roads are far too expensive. But when we use bicycles for
+  transportation, we save ourselves and our neighbors an enormous amount of
+  money in road maintenance.
 
 ---
 Our 21st century roads are far too expensive. But when we use bicycles for transportation, we save ourselves and our neighbors an enormous amount of money in road maintenance.

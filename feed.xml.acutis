@@ -33,7 +33,7 @@
   {% map frontPage with
      {
        templateContent,
-       data: {title, isoDate, page: {excerpt}, pub: {@pub: true, absoluteUrl}}
+       data: {title, isoDate, pub: {@pub: true, absoluteUrl, excerpt}}
       }
     ~%}
     <entry>
@@ -41,7 +41,7 @@
       <link href="{{ absoluteUrl }}" />
       <updated>{{ isoDate }}</updated>
       <id>{{ absoluteUrl }}</id>
-      <summary type="html">{{ excerpt }}</summary>
+      <summary>{{ excerpt }}</summary>
       <content type="html">{{ templateContent }}</content>
     </entry>
   {% with {data: {pub: {@pub: false}} } %} {* Nothing! *}

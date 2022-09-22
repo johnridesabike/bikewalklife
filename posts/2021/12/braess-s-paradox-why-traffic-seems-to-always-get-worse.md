@@ -12,6 +12,12 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
+excerpt: >
+  If you’ve ever wondered why our overall traffic congestion never improves, no
+  matter how many new roads we build, then the answer is Braess’s paradox. It
+  states that adding more roads to a network can actually slow down traffic.
+  That may seem counter-intuitive, but we can plainly see it happen in all of
+  our modern towns.
 
 ---
 If you’ve ever wondered why our overall traffic congestion never improves, no matter how many new roads we build, then the answer is Braess’s paradox. It states that adding more roads to a network can actually slow down traffic. That may seem counter-intuitive, but we can plainly see it happen in all of our modern towns.

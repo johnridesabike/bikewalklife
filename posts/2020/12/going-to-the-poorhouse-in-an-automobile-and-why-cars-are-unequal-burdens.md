@@ -13,6 +13,9 @@ tags:
 - Todd Litman
 - poverty
 - car culture
+excerpt: >
+  There is a great blog post by Todd Litman on Planetizen about why car
+  dependency is a major factor in fueling poverty.
 
 ---
 There is a [great blog post by Todd Litman on Planetizen](https://www.planetizen.com/blogs/111535-automobile-dependency-unequal-burden) about why car dependency is a major factor in fueling poverty:

@@ -17,6 +17,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://econ.gatech.edu/news/item/649834/first-ever-study-bicycling-georgia-shows-million-economic-impact
+excerpt: >
+  Georgia Tech partnered with Georgia Department of Transportation to create the
+  state's first-ever report of bicycling's economic impact. It shows that
+  bicycles create close to $500 million in value.
 
 ---
 Georgia Tech partnered with Georgia Department of Transportation to create the state's first-ever report of bicycling's economic impact. It shows that bicycles create close to $500 million in value.

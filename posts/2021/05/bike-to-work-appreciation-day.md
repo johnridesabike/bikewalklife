@@ -13,6 +13,12 @@ hero_image:
   alt: A photo of a bicycle beside a sign saying "BIKE TO WORK DAY."
   caption: ''
 external_link: ''
+excerpt: >
+  Today is Bike to Work Day where I live. This is a special day where we ask
+  each other to leave our cars at home and commute by bicycle instead. But I
+  believe that it’s equally important to show that we appreciate the people who
+  always bike commute every day, so I also consider today Bike to Work
+  Appreciation Day.
 
 ---
 Today is Bike to Work Day where I live. This is a special day where we ask each other to leave our cars at home and commute by bicycle instead. But I believe that it’s equally important to show that we appreciate the people who always bike commute every day, so I also consider today _Bike to Work Appreciation Day_.

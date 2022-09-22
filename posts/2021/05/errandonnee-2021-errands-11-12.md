@@ -10,6 +10,10 @@ hero_image:
   alt: A group photo of bicycle riders.
   caption: ''
 external_link: ''
+excerpt: >
+  Errandonnee is a challenge where you have 12 days to complete 12 errands by
+  bicycle or on foot. This page is part of a series of my entries for the 2021
+  challenge.
 
 ---
 Errandonnee is a challenge where you have 12 days to complete 12 errands by bicycle or on foot. This page is part of a series of my entries for the 2021 challenge.

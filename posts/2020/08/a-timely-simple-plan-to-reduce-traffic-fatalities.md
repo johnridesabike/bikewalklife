@@ -12,8 +12,13 @@ tags:
 - plans
 - traffic
 - Charles Marohn
+excerpt: >
+  Charles Marohn of Strong Towns has long been an advocate of transportation
+  reform. In his new piece, he argues that our present moment may be the perfect
+  time to enact the changes we need.
 
 ---
+
 Charles Marohn of [Strong Towns](https://www.strongtowns.org/journal/2020/8/21/time-to-end-traffic-fatalities) has long been an advocate of transportation reform. In his new piece, he argues that our present moment may be the perfect time to enact the changes we need:
 
 > Those who experience traffic deaths as a chronic killer base their acquiescence largely on what they perceive as the prohibitive cost of change. They perceive that they will be forced to sacrifice some enjoyable aspects of modernity—such as convenience of daily travel—in order to experience a reduction in fatalities that may not even happen. They also perceive that any changes will be excessively expensive, a real cost they will share.

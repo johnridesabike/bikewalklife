@@ -10,6 +10,10 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.tiktok.com/@johnridesabike/video/7102934982250761515?is_from_webapp=1&sender_device=pc&web_id=7057855543898359302
+excerpt: >
+  On May 28, I uploaded a six-second video to TikTok showing a truck pass me
+  dangerously and illegally. Within a week, it received over 129 thousand views
+  and over 700 comments.
 
 ---
 On May 28, I uploaded a six-second video to TikTok showing a truck pass me dangerously and illegally. Within a week, it received over 129 thousand views and over 700 comments.

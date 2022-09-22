@@ -11,6 +11,11 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://doi.org/10.1289/EHP9073
+excerpt: >
+  A new study aims to quantify the lives we could save by bicycling instead of
+  driving cars in the future. Its "ambitious high bike use" scenario predicts
+  that 205,424 early deaths would be prevented globally by 2050. Of those,
+  15,309 would be in the United States.
 
 ---
 A new study aims to quantify the lives we could save by bicycling instead of driving cars in the future. Its "ambitious high bike use" scenario predicts that 205,424 early deaths would be prevented globally by 2050. Of those, 15,309 would be in the United States.

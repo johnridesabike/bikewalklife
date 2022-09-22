@@ -13,6 +13,11 @@ hero_image:
   alt: '"Coffeeneuring Challenge: C+1" graphic.'
   caption: 'Image credit: Chasing Mailboxes.'
 external_link: https://chasingmailboxes.com/2021/10/05/coffeeneuring-challenge-2021-the-c1-edition/
+excerpt: >
+  Coffeeneuring is back for 2021. That's the just-for-fun challenge where you
+  play by riding your bike to get coffee a couple of times a week for six weeks.
+  As far as these kinds of challenges go, it's one of the most low-key and
+  accessible.
 
 ---
 Coffeeneuring is back for 2021. That's the just-for-fun challenge where you play by riding your bike to get coffee a couple of times a week for six weeks. As far as these kinds of challenges go, it's one of the most low-key and accessible.

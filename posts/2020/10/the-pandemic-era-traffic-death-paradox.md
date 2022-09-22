@@ -13,6 +13,14 @@ tags:
 - Alissa Walker
 - COVID-19
 - violence
+excerpt: >
+  One of this blog’s refrains is that we need to lower the number of cars on our
+  streets to stop people from dying in crashes. Cars are inherently dangerous
+  and, as they get larger and faster, they grow more deadly every year. However,
+  our “new abnormal” has presented a paradox: Americans drove far less this
+  year, but traffic deaths went up. How is that possible? Of course, true
+  paradoxes don’t exist, only apparent paradoxes. Alissa Walker, writing for
+  Curbed, has a report on the topic.
 
 ---
 One of this blog’s refrains is that we need to lower the number of cars on our streets to stop people from dying in crashes. Cars are inherently dangerous and, as they get larger and faster, they grow more deadly every year. However, our “new abnormal” has presented a paradox: Americans drove far less this year, but traffic deaths went up. How is that possible? Of course, true paradoxes don’t exist, only _apparent_ paradoxes. [Alissa Walker, writing for Curbed, has a report on the topic](https://www.curbed.com/2020/10/covid-traffic-deaths-up-speeding.html):

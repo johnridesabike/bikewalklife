@@ -1,4 +1,3 @@
-const path = require("path");
 const yaml = require("js-yaml");
 const markdownIt = require("markdown-it");
 const htmlmin = require("html-minifier");
@@ -95,14 +94,6 @@ module.exports = (eleventyConfig) => {
     typographer: true,
   };
   const md = markdownIt(mdConfig).use(mdImages);
-  const mdExcerpt = markdownIt(mdConfig).disable(["image"]);
-  eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: (file, _options) => {
-      file.excerpt = mdExcerpt.renderInline(
-        file.content.split("\n\n").slice(0, 1).join(" ")
-      );
-    },
-  });
   eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addPlugin(acutis, {

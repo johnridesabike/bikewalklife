@@ -11,6 +11,7 @@ external_link: https://www.9news.com/article/news/local/next/denver-future-stree
 tags:
 - local projects
 - mobility pyramid
+excerpt: Marshall Zelinger writes...
 
 ---
 Marshall Zelinger writes:
