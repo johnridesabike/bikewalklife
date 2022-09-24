@@ -3,7 +3,7 @@ date: 2022-09-24T11:28:03-04:00
 tags:
 - untagged
 draft: true
-title: Over 200 cities hosted the 2022 Fancy Women Bike Ride
+title: Over 200 cities participated in the 2022 Fancy Women Bike Ride
 author: John Jackson
 hero_image:
   image: "/v1664036316/2022/Milano_Fancy_Women_Bike_Ride__photocredit_Gegi_zmvwex.jpg"
@@ -16,7 +16,7 @@ excerpt: The Fancy Women Bike Ride is an international event where women dress u
 external_link: https://www.suslukadinlarbisikletturu.com/en/
 
 ---
-The Fancy Women Bike Ride is an international event where women dress up in fancy clothes and ride bicycles as a group. The event celebrates World Car Free Day and pushes cities to create welcoming spaces for women to cycle. This year, on September 18, over 200 cities around the world hosted it.
+The Fancy Women Bike Ride is an international event where women dress up in fancy clothes and ride bicycles in a group. The event celebrates World Car Free Day and pushes cities to create welcoming spaces for women to cycle. This year, on September 18, over 200 cities around the world hosted it.
 
 [You can learn more about the program on their official website](https://www.suslukadinlarbisikletturu.com/en/). Here's an excerpt from their manifesto:
 
