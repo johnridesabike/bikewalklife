@@ -2,8 +2,9 @@
   "title": "Bike Walk Life",
   "description": "News and commentary from the world of biking and walking.",
   "site_url": "https://bikewalk.life",
-  "feed_url": "/feed.xml",
   "twitter_handle": "@BikeWalkLife",
   "author_name": "John Jackson",
-  "cloudinary_url": "https://res.cloudinary.com/bike-walk-life/image/upload"
+  "cloudinary_url": "https://res.cloudinary.com/bike-walk-life/image/upload",
+  "lang": "en-US",
+  "timeZone": "America/New_York"
 }

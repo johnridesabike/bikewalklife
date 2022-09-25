@@ -1,4 +1,3 @@
-const yaml = require("js-yaml");
 const markdownIt = require("markdown-it");
 const htmlmin = require("html-minifier");
 const acutis = require("acutis-lang/eleventy");
@@ -56,7 +55,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({
     "assets/images/nps-bicycle-trail.svg": "favicon.svg",
   });
-  eleventyConfig.addDataExtension("yaml", yaml.load);
   eleventyConfig.addCollection("posts", (collectionApi) => {
     const coll = collectionApi
       .getFilteredByGlob("posts/**/*.md")

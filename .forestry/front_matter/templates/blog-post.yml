@@ -17,7 +17,7 @@ fields:
     source:
       type: documents
       section: author-list-23c89be9-09df-4637-a733-0b725ac47ad4
-      file: _data/authors.yaml
+      file: _data/authors.json
       path: authors
   label: Author
   description: Enter author of post

@@ -15,7 +15,7 @@ sections:
   templates:
   - blog-post
 - type: document
-  path: _data/authors.yaml
+  path: _data/authors.json
   label: Author List
 - type: document
   path: about.md
@@ -26,7 +26,7 @@ sections:
   path: _data/config.json
   label: Site Info
 - type: document
-  path: _data/strings.yaml
+  path: _data/strings.json
   label: UI Strings
 upload_dir: ''
 public_path: https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto

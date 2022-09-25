@@ -33,7 +33,6 @@
   config =
     {
        description: string,
-       feed_url: string,
        title: string,
        twitter_handle: string
     }

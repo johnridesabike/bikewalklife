@@ -10,4 +10,4 @@ fields:
     max: 
   label: Authors
 pages:
-- _data/authors.yaml
+- _data/authors.json

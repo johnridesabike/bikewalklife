@@ -18,7 +18,6 @@
     {
       description: string,
       title: string,
-      feed_url: string,
       twitter_handle: string
   }
   content = string

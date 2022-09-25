@@ -60,4 +60,4 @@ fields:
     schema:
       format: html
 pages:
-- _data/strings.yaml
+- _data/strings.json

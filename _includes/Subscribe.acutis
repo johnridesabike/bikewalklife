@@ -1,10 +1,10 @@
 {% interface
-  config = {title: string, feed_url: string}
+  config = {title: string}
   class = ?string
   strings = {subscribe_email_cta: string, subscribe_feed_cta: string}
 / %}
 <!-- Subscribe -->
-{% match config with {title, feed_url} %}
+{% match config with {title} %}
 <section class='subscribe ui-font {{ class ? "" }}'>
   <h2 class="subscribe__heading font-size-xlarge">
     Subscribe to {{ title }}
@@ -14,7 +14,7 @@
     <div>
       <dt> Feed </dt>
       <dd>
-        <a href="{{ feed_url }}">
+        <a href="/feed.xml">
           <span aria-hidden="true"> {% Icon name="rss" class=!"icon" /%} </span>
           Subscribe to web feed
         </a>

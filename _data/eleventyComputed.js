@@ -1,7 +1,4 @@
-const config = require("./config.json");
-
-const lang = "en-US";
-const timeZone = "America/New_York";
+const { site_url, lang, timeZone } = require("./config.json");
 
 module.exports = {
   pub: (data) => {
@@ -9,7 +6,7 @@ module.exports = {
       return {
         pub: true,
         url: data.page.url,
-        absoluteUrl: new URL(data.page.url, config.site_url).href,
+        absoluteUrl: new URL(data.page.url, site_url).href,
       };
     } else {
       return { pub: false };

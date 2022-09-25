@@ -27,7 +27,6 @@
     "cssnano": "^5.1.13",
     "feather-icons": "^4.28.0",
     "html-minifier": "^4.0.0",
-    "js-yaml": "^4.1.0",
     "markdown-it": "^12.3.2",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.16",

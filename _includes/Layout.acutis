@@ -3,7 +3,6 @@
     {
       description: string,
       title: string,
-      feed_url: string,
       twitter_handle: string
   }
   collections =
@@ -42,7 +41,7 @@
 {% match
     config, collections
   with
-    {description, title: title_site, feed_url},
+    {description, title: title_site},
     {
       pages: <
         index: {data: {pub: {@pub: true, url: url_index}}},
@@ -87,7 +86,7 @@
     rel="alternate"
     type="application/atom+xml"
     title="Bike Walk Life"
-    href="{{ feed_url }}"
+    href="/feed.xml"
   />
   <link rel="feed" type="text/html" href="{{ url_archive }}" />
   <link rel="webmention" href="https://webmention.io/bikewalk.life/webmention" />
