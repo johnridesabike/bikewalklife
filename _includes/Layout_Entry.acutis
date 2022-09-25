@@ -42,6 +42,7 @@
        contact_title: string,
        copyright: string,
        open_linked: string,
+       subscribe_intro: string,
        subscribe_email_cta: string,
        subscribe_feed_cta: string
     }

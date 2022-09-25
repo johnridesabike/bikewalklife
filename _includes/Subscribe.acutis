@@ -1,15 +1,22 @@
 {% interface
   config = {title: string}
   class = ?string
-  strings = {subscribe_email_cta: string, subscribe_feed_cta: string}
+  strings =
+    {
+      subscribe_intro: string,
+      subscribe_email_cta: string,
+      subscribe_feed_cta: string
+    }
 / %}
 <!-- Subscribe -->
-{% match config with {title} %}
+{% match config, strings with
+  {title}, {subscribe_intro, subscribe_feed_cta, subscribe_email_cta} %}
 <section class='subscribe ui-font {{ class ? "" }}'>
   <h2 class="subscribe__heading font-size-xlarge">
     Subscribe to {{ title }}
     <span aria-hidden="true"> 📡 </span>
   </h2>
+  <div class="content"> {{ &subscribe_intro }} </div>
   <dl class="font-size-small subscribe__list">
     <div>
       <dt> Feed </dt>
@@ -19,9 +26,7 @@
           Subscribe to web feed
         </a>
       </dd>
-      {% match strings with {subscribe_feed_cta} %}
-        <dd> {{ &subscribe_feed_cta }} </dd>
-      {% /match %}
+      <dd> {{ &subscribe_feed_cta }} </dd>
     </div>
     <div>
       <dt> Email </dt>
@@ -31,9 +36,7 @@
           Subscribe to newsletter
         </a>
       </dd>
-      {% match strings with {subscribe_email_cta} %}
-        <dd> {{ &subscribe_email_cta }} </dd>
-      {% /match %}
+      <dd> {{ &subscribe_email_cta }} </dd>
     </div>
   </dl>
 </section>
