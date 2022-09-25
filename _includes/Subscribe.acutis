@@ -16,7 +16,7 @@
     Subscribe to {{ title }}
     <span aria-hidden="true"> 📡 </span>
   </h2>
-  <div class="content"> {{ &subscribe_intro }} </div>
+  <div class="font-size-small content"> {{ &subscribe_intro }} </div>
   <dl class="font-size-small subscribe__list">
     <div>
       <dt> Feed </dt>
