@@ -75,15 +75,13 @@ module.exports = (eleventyConfig) => {
       .filter((x) => x.data.visible)
       .slice(0, 12)
   );
-  eleventyConfig.addCollection("pages", (collectionApi) =>
-    Object.fromEntries([
-      ["about", collectionApi.getFilteredByTag("page_about")[0]],
-      ["archive", collectionApi.getFilteredByTag("page_archive")[0]],
-      ["contact", collectionApi.getFilteredByTag("page_contact")[0]],
-      ["index", collectionApi.getFilteredByTag("page_index")[0]],
-      ["search", collectionApi.getFilteredByTag("page_search")[0]],
-    ])
-  );
+  eleventyConfig.addCollection("pages", (collectionApi) => ({
+    about: collectionApi.getFilteredByTag("page_about")[0],
+    archive: collectionApi.getFilteredByTag("page_archive")[0],
+    contact: collectionApi.getFilteredByTag("page_contact")[0],
+    index: collectionApi.getFilteredByTag("page_index")[0],
+    search: collectionApi.getFilteredByTag("page_search")[0],
+  }));
 
   const mdConfig = {
     html: true,
@@ -99,9 +97,8 @@ module.exports = (eleventyConfig) => {
   });
 
   if (process.env.ELEVENTY_ENV === "production") {
-    eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
-      // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-      if (outputPath && outputPath.endsWith(".html")) {
+    eleventyConfig.addTransform("htmlmin", function (content) {
+      if (this.outputPath && this.outputPath.endsWith(".html")) {
         return htmlmin.minify(content, {
           useShortDoctype: true,
           removeComments: true,
@@ -121,25 +118,7 @@ module.exports = (eleventyConfig) => {
   });
   return {
     templateFormats: ["md", "acutis", "html", "11ty.js"],
-
-    // If your site lives in a different subdirectory, change this.
-    // Leading or trailing slashes are all normalized away, so don’t worry about those.
-
-    // If you don’t have a subdirectory, use "" or "/" (they do the same thing)
-    // This is only used for link URLs (it does not affect your file structure)
-    // Best paired with the `url` filter: https://www.11ty.dev/docs/filters/url/
-
-    // You can also pass this in on the command line using `--pathprefix`
-    // pathPrefix: "/",
-
     markdownTemplateEngine: false,
     htmlTemplateEngine: false,
-    // These are all optional, defaults are shown:
-    dir: {
-      input: ".",
-      includes: "_includes",
-      data: "_data",
-      output: "_site",
-    },
   };
 };
