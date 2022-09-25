@@ -9,6 +9,7 @@
   external_link = ?string
   formattedDate = string
   h = string
+  index = int
   isoDate = string
   linkedHeader = false | true
   strings = {open_linked: string}
@@ -25,10 +26,10 @@
     <figure class="full-bleed">
       {% match linkedHeader
          with true %}
-         {% Link href=url tabIndex=!-1 %}
-          {% Entry_HeroImage image alt build /%}
+        {% Link href=url tabIndex=!-1 %}
+          {% Entry_HeroImage image alt build index /%}
         {% /Link %}
-      {% with false %} {% Entry_HeroImage image alt build /%}
+      {% with false %} {% Entry_HeroImage image alt build index /%}
       {% /match %}
       {% match caption
          with null

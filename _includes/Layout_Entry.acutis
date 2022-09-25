@@ -194,6 +194,7 @@
      build
      strings
      tags
+     index=0
   / %}
 </main>
 <div id="webmentions-root"></div>

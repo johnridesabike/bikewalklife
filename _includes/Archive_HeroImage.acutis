@@ -1,6 +1,7 @@
 {% interface
   image = string
-  alt = string
+  alt = ?string
+  index = int
 / %}
 <!-- Archive_HeroImage -->
 {* 320: mobile size. 600: actual size. *}
@@ -30,10 +31,12 @@
     {%~ /map ~%}
   '
   sizes="(max-width: 600px) 100vw, 600px"
-  alt="{{ alt }}"
+  alt="{{ alt ? "" }}"
   class="archive__hero-image u-featured"
   height="300"
   width="600"
-  loading="lazy"
+  {% match index with 0 %}{% with _ %}loading="lazy"{% /match %}
 />
+{* index is the entry's position on the page. If it's not at the top, then load
+  lazily.*}
 <!-- /Archive_HeroImage -->

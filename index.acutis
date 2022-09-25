@@ -63,6 +63,7 @@
         external_link
         strings
         tags
+        index
     /%}
     {% match index with 0 %}
       <div class="full-bleed">

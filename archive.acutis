@@ -119,7 +119,8 @@
           hero_image,
           visible: true
         }
-      }
+      },
+      index
   %}
     <article class="archive__entry h-entry">
       <header>
@@ -129,7 +130,7 @@
         {% with !{image, alt, caption} %}
           <figure class="archive__hero-figure">
             {% Link href tabIndex=!-1 %}
-              {% Archive_HeroImage image alt build /%}
+              {% Archive_HeroImage image alt build index /%}
             {% /Link %}
             {% match caption
               with null

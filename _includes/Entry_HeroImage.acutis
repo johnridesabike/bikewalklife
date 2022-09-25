@@ -1,6 +1,7 @@
 {% interface
   image = string
   alt = ?string
+  index = int
 / %}
 <!-- Entry_HeroImage -->
 {* 320: mobile size. 900: actual size. *}
@@ -34,6 +35,8 @@
   class="entry__hero-image u-featured"
   height="450"
   width="900"
-  loading="lazy"
+  {% match index with 0 %}{% with _ %}loading="lazy"{% /match %}
 />
+{* index is the entry's position on the page. If it's not at the top, then load
+  lazily.*}
 <!-- /Entry_HeroImage -->
