@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/johnridesabike/bikewalklife.git"
   },
-  "license": "GPL-3.0-or-later",
+  "license": "MPL-2.0",
   "author": "John Jackson",
   "scripts": {
     "analyze": "DEBUG=Eleventy:Benchmark* npm run build",

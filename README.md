@@ -1,25 +1,21 @@
 This is the source code for <https://bikewalk.life/>.
 
-This used to be built in Gatsby but now it uses [Eleventy].
+It is mostly powered by [Eleventy].
 
-[Eleventy]: https://www.11ty.dev
+[eleventy]: https://www.11ty.dev
 
-It uses [Forestry] CMS.
+It uses the [Forestry] CMS.
 
-[Forestry]: https://forestry.io
+[forestry]: https://forestry.io
 
 Its templates are compiled with [Acutis], a language that I invented.
 
-[Acutis]: https://johnridesa.bike/acutis/
-
-The client-side JavaScript is compiled with [ReScript].
-
-[Rescript]: https://rescript-lang.org
+[acutis]: https://johnridesa.bike/acutis/
 
 Images are hosted on [Cloundinary].
 
-[Cloundinary]: https://cloudinary.com
+[cloundinary]: https://cloudinary.com
 
 The rest of the site is hosted on [Netlify].
 
-[Netlify]: https://www.netlify.com
+[netlify]: https://www.netlify.com
