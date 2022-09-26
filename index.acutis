@@ -94,6 +94,5 @@
   {% /match %}
 </nav>
 <hr class="separator" />
-<aside> {% Subscribe config strings /%} </aside>
 {% /Layout %}
 {% /match %}

@@ -13,8 +13,7 @@
   {title}, {subscribe_intro, subscribe_feed_cta, subscribe_email_cta} %}
 <section class='subscribe ui-font {{ class ? "" }}'>
   <h2 class="subscribe__heading font-size-xlarge">
-    Subscribe to {{ title }}
-    <span aria-hidden="true"> 📡 </span>
+    Subscribe to {{ title }} <span aria-hidden="true"> 📬 </span>
   </h2>
   <div class="font-size-small content"> {{ &subscribe_intro }} </div>
   <dl class="font-size-small subscribe__list">

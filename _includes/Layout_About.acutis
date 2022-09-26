@@ -97,6 +97,7 @@
     <div class="serif about__intro"> {{ &intro }} </div>
     <div class="serif"> {{ &content }} </div>
   </main>
-  <aside> {% Subscribe config strings /%} </aside>
+  <hr class="separator" />
+  {% Subscribe config strings /%}
 {% /Layout %}
 {% /match %}
