@@ -17,11 +17,9 @@
   {% with _ %} {* Nothing! *}
   {%~ /match ~%}
   {%~ match frontPage with [{data: {isoDate}}, ..._] ~%}
-    <updated>
-      {{ isoDate }}
-    </updated>
+    <updated>{{ isoDate }}</updated>
   {%~ with _ %} {* Nothing! *}
-  {%~ /match ~%}
+  {%~ /match %}
   <author>
     <name>{{ author_name }}</name>
   </author>
