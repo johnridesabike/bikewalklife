@@ -10,6 +10,7 @@
   absoluteUrl
   tags
   url
+  eleventy
 %}
 <main style="margin: 3em 0;">
   <h1 style="text-align: center;"> Search </h1>

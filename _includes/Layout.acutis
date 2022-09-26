@@ -19,6 +19,7 @@
         >
     }
   content = ?string
+  eleventy = {generator: string}
   title = string
   url = string
   absoluteUrl = string
@@ -36,7 +37,7 @@
 
   Children
   Head = ?
-/ %}
+/ ~%}
 <!DOCTYPE html>
 {% match
     config, collections
@@ -59,6 +60,9 @@
   <meta charset="utf-8"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  {% match eleventy with {generator} ~%} 
+    <meta name="generator" content="{{ generator }}" />
+  {%~ /match %}
   {% map [
       "/assets/node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-italic.woff2",
       "/assets/node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-normal.woff2",

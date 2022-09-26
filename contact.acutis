@@ -10,6 +10,7 @@
   url
   tags
   absoluteUrl
+  eleventy
   Head=#%}
     <style>
     {%~ PostCss ~%}

@@ -21,6 +21,7 @@
       twitter_handle: string
   }
   content = string
+  eleventy = {generator: string}
   title = string
   image_large = {alt: string, image: string}
   intro = string
@@ -44,6 +45,7 @@
     collections
     absoluteUrl
     tags=[]
+    eleventy
     Head=#%}
       <style>
       {%~ PostCss %}

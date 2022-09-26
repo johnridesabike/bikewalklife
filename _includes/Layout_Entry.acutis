@@ -14,6 +14,7 @@
   next = ?{data: {title: string}, url: string}
   previous = ?{data: {title: string}, url: string}
   tags = [string]
+  eleventy = {generator: string}
   collections =
     {
        pages:
@@ -59,6 +60,7 @@
    title
    absoluteUrl
    tags
+   eleventy
    metadata=!{
     description: excerpt,
     author,
