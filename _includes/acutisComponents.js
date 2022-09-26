@@ -65,7 +65,6 @@ module.exports = [
     Ty.make([
       ["current", Ty.nullable(Ty.string())],
       ["href", Ty.string()],
-      ["activeClassName", Ty.nullable(Ty.string())],
       ["class", Ty.nullable(Ty.string())],
       ["style", Ty.nullable(Ty.string())],
       ["tabIndex", Ty.nullable(Ty.int())],
@@ -73,26 +72,17 @@ module.exports = [
     TyChild.make([TyChild.child("Children")]),
     (props, { Children }) => {
       const current =
-        props.current && props.current === props.href ? "page" : null;
-      let activeClassName;
-      if (current) {
-        if (props.activeClassName === undefined) {
-          activeClassName = "active-page";
-        } else {
-          activeClassName = props.activeClassName;
-        }
-      } else {
-        activeClassName = null;
-      }
+        props.current && props.current === props.href
+          ? `aria-current="page"`
+          : "";
+      const className = props.class ? `class="${props.class}"` : "";
+      const style = props.style ? `style="${props.style}"` : "";
+      const tabIndex = props.tabIndex ? `tabindex="${props.tabIndex}"` : "";
       return Children.then(
-        (Children) => `<a
-          href="${props.href}"
-          class='${props.class || ""} ${activeClassName || ""}'
-          ${current ? `aria-current="${current}"` : ""}
-          ${props.style ? `style="${props.style}"` : ""}
-          ${props.tabIndex ? `tabindex="${props.tabIndex}"` : ""}>
-          ${Children}
-        </a>`
+        (Children) =>
+          `<a href="${props.href}" ${className} ${current} ${style} ${tabIndex}>
+            ${Children}
+           </a>`
       );
     }
   ),
