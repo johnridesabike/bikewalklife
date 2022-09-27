@@ -6,8 +6,8 @@
 <!-- Archive_HeroImage -->
 {* 320: mobile size. 600: actual size. *}
 <img
-  src='{% ImgSrc width=600 aspect=0.5 gravity="auto" image /%}'
-  srcset='
+  src="{% ImgSrc width=600 aspect=0.5 gravity="auto" image /%}"
+  srcset="
     {%~ map [
           320, 
           460,
@@ -29,14 +29,13 @@
     {%~ with width ~%}
       , {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ width }}w
     {%~ /map ~%}
-  '
+    "
   sizes="(max-width: 600px) 100vw, 600px"
   alt="{{ alt ? "" }}"
   class="archive__hero-image u-featured"
-  height="300"
-  width="600"
-  {% match index with 0 %}{% with _ %}loading="lazy"{% /match %}
-/>
+  height=300
+  width=600
+  {% match index with 0 %}{% with _ %}loading=lazy{% /match %}>
 {* index is the entry's position on the page. If it's not at the top, then load
   lazily.*}
 <!-- /Archive_HeroImage -->

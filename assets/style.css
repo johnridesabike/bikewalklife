@@ -330,7 +330,7 @@ li {
 
 .separator {
   border: none;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
   border-bottom-style: solid;
   border-color: var(--color-secondary);
   margin: 2em auto;

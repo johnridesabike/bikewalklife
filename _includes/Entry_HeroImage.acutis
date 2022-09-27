@@ -6,8 +6,8 @@
 <!-- Entry_HeroImage -->
 {* 320: mobile size. 900: actual size. *}
 <img
-  src='{% ImgSrc width=900 aspect=0.5 gravity="auto" image /%}'
-  srcset='
+  src="{% ImgSrc width=900 aspect=0.5 gravity="auto" image /%}"
+  srcset="
     {%~ map [
           320,
           520,
@@ -29,14 +29,13 @@
       {%~ with width ~%}
       , {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ width }}w
     {%~ /map ~%}
-  '
+  "
   sizes="(max-width: 900px) 100vw, 900px"
   alt='{{ alt ? "" }}'
   class="entry__hero-image u-featured"
-  height="450"
-  width="900"
-  {% match index with 0 %}{% with _ %}loading="lazy"{% /match %}
-/>
+  height=450
+  width=900
+  {% match index with 0 %}{% with _ %}loading=lazy{% /match %}>
 {* index is the entry's position on the page. If it's not at the top, then load
   lazily.*}
 <!-- /Entry_HeroImage -->

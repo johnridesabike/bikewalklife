@@ -18,17 +18,16 @@
           class="entry-page__avatar"
           style="width: 120px; height: 120px; margin: auto;">
           <img
-            src='{% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%}'
-            srcset='
+            src="{% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%}"
+            srcset="
               {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1x,
               {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_180,w_180", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1.5x,
               {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 2x
-              '
+            "
             alt="{{ alt }}"
-            height="120"
-            width="120"
-            loading="lazy"
-          />
+            height=120
+            width=120
+            loading=lazy>
         </div>
       </div>
     {% with null %} {* No avatar *}
@@ -40,7 +39,7 @@
       with {pages: <about: {url: href}>} %}
       {% Link href %}
         Read more about {{ siteTitle }}
-        <span aria-hidden="true">
+        <span aria-hidden=true>
           {% Icon name="arrow-right" class=!"icon" /%}
         </span>
       {% /Link %}
@@ -54,7 +53,7 @@
         with {pages: <contact: {url: href}>} %}
         {% Link href %}
           Contact me
-          <span aria-hidden="true">
+          <span aria-hidden=true>
             {% Icon name="arrow-right" class=!"icon" /%}
           </span>
         {% /Link %}

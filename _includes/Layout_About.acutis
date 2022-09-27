@@ -70,7 +70,7 @@
           .about__photo {
             float: right;
           }
-        };
+        }
       {% /PostCss ~%}
       </style>
     {%/#
@@ -83,23 +83,22 @@
           class="about__photo"
           style="height: 240px; width: 240px;">
           <img
-            src='{% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%}'
-            srcset='
+            src="{% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%}"
+            srcset="
               {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1x,
               {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_360,w_360", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1.5x,
               {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_480,w_480", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 2x
-              '
+              "
             alt="{{ alt }}"
-            height="240"
-            width="240"
-          />
+            height=240
+            width=240>
         </div>
       </figure>
     {% /match %}
     <div class="serif about__intro"> {{ &intro }} </div>
     <div class="serif"> {{ &content }} </div>
   </main>
-  <hr class="separator" />
+  <hr class="separator">
   {% Subscribe config strings /%}
 {% /Layout %}
 {% /match %}

@@ -68,11 +68,11 @@
     /%}
     {% match index with 0 %}
       <div class="full-bleed">
-        <hr class="separator" />
+        <hr class="separator">
         {% Subscribe class=!"small-screen-padding" config strings /%}
-        <hr class="separator" />
+        <hr class="separator">
       </div>
-    {% with _ %} <hr class="separator" />
+    {% with _ %} <hr class="separator">
     {% /match %}
   {% with {data: {visible: false}} %} {* Don't show invisible posts. *}
   {% with {data: {pub: {@pub: false}}} %} {* Don't show invisible posts. *}
@@ -86,7 +86,7 @@
     <div class="index-page__archive-link">
       {% Link current=!url href %}
         {{ archive_link }}
-        <span aria-hidden="true">
+        <span aria-hidden=true>
           {% Icon name="arrow-right" class=!"icon" /%}
         </span>
       {% /Link %}
@@ -94,6 +94,6 @@
   {% with _, _ %} <!-- no archive page -->
   {% /match %}
 </nav>
-<hr class="separator" />
+<hr class="separator">
 {% /Layout %}
 {% /match %}

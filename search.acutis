@@ -16,7 +16,7 @@
   <h1 style="text-align: center;"> Search </h1>
   <iframe
     title="Search form"
-    src="https://duckduckgo.com/search.html?width=256&site=bikewalk.life&prefill=Search with DuckDuckGo&focus=yes"
+    src="https://duckduckgo.com/search.html?width=256&site=bikewalk.life&prefill=Search%20with%20DuckDuckGo&focus=yes"
     style="
       overflow: hidden;
       margin: 0;

@@ -13,7 +13,7 @@
   {title}, {subscribe_intro, subscribe_feed_cta, subscribe_email_cta} %}
 <section class='subscribe ui-font {{ class ? "" }}'>
   <h2 class="subscribe__heading font-size-xlarge">
-    Subscribe to {{ title }} <span aria-hidden="true"> 📬 </span>
+    Subscribe to {{ title }} <span aria-hidden=true> 📬 </span>
   </h2>
   <div class="font-size-small content"> {{ &subscribe_intro }} </div>
   <dl class="font-size-small subscribe__list">
@@ -21,7 +21,7 @@
       <dt> Feed </dt>
       <dd>
         <a href="/feed.xml">
-          <span aria-hidden="true"> {% Icon name="rss" class=!"icon" /%} </span>
+          <span aria-hidden=true> {% Icon name="rss" class=!"icon" /%} </span>
           Subscribe to web feed
         </a>
       </dd>
@@ -31,7 +31,7 @@
       <dt> Email </dt>
       <dd>
         <a href="https://mailchi.mp/8215c6ef46cd/bike-walk-life-digest">
-          <span aria-hidden="true"> {% Icon name="mail" class=!"icon" /%} </span>
+          <span aria-hidden=true> {% Icon name="mail" class=!"icon" /%} </span>
           Subscribe to newsletter
         </a>
       </dd>

@@ -172,7 +172,7 @@
         {% /match %}
       </footer>
     </article>
-    <hr class="separator" />
+    <hr class="separator">
   {% with {data: {visible: false}} %}
     {* Don't show invisible posts. *}
   {% with {data: {pub: {@pub: false}}} %}
@@ -182,8 +182,8 @@
     <div>
       {% match pagination with {href: {previous: null}} %} {* Nothing! *}
       {% with {href: {previous: !previous}} %}
-        <a href="{{ previous }}" rel="prev">
-          <span aria-hidden="true">
+        <a href="{{ previous }}" rel=prev>
+          <span aria-hidden=true>
             {% Icon name="arrow-left" class=!"icon" /%}
           </span>
           previous
@@ -193,9 +193,9 @@
     <div>
       {% match pagination with {href: {next: null}} %} {* Nothing! *}
       {% with {href: {next: !next}} %}
-        <a href="{{ next }}" rel="next">
+        <a href="{{ next }}" rel=next>
           next
-          <span aria-hidden="true">
+          <span aria-hidden=true>
             {% Icon name="arrow-right" class=!"icon" /%}
           </span>
         </a>
@@ -203,7 +203,7 @@
     </div>
   </nav>
 </main>
-<hr class="separator" />
+<hr class="separator">
 {% Subscribe config strings /%}
 {% /Layout %}
 {% /match %}

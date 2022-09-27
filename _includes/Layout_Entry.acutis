@@ -199,16 +199,16 @@
      index=0
   / %}
 </main>
-<div id="webmentions-root"></div>
-<hr class="separator" />
+<div id=webmentions-root></div>
+<hr class="separator">
 <aside class="ui-font">
   {% match collections with {pages: <about: {data: {intro: !intro, image_small}}>} %}
     {% Entry_About description=intro avatar=image_small config strings url collections / %}
   {% with _ %} {% /match %}
-  <hr class="separator" />
+  <hr class="separator">
   {% Subscribe config strings /%}
 </aside>
-<hr class="separator" />
+<hr class="separator">
 <nav class="entry-page__nav">
   {* {% Related tags collections self=permalink limit=8 /%} *}
   <h2 class="entry-page__footer-heading"> Other recent posts </h2>
@@ -222,7 +222,7 @@
           href=url
           class=!"entry-page__recent-link"
         %}
-          <span aria-hidden="true">
+          <span aria-hidden=true>
             {% Icon name="arrow-left" class=!"icon entry-page__arrow" / %}
           </span>
           <span>

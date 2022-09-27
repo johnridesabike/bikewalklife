@@ -48,64 +48,60 @@
     {% /match %}
     <form
       class="contact-form"
-      method="post"
-      name="contact"
-      data-netlify="true"
-      netlify-honeypot="honeypot"
+      method=post
+      name=contact
+      data-netlify
+      netlify-honeypot=honeypot
     >
-      <input type="hidden" name="form-name" value="contact">
-      <div aria-hidden="true">
+      <input type=hidden name=form-name value=contact>
+      <div aria-hidden=true>
         {% VisuallyHidden %}
           <label>
             Don't fill this out
-            <input tabindex="-1" name="honeypot">
+            <input tabindex=-1 name=honeypot>
           </label>
         {% /VisuallyHidden %}
       </div>
       <div class="contact-form__input-wrapper">
         <div class="contact-form__label-wrapper">
-          <label class="contact-form__label" for="contact-form-name">
+          <label class="contact-form__label" for=contact-form-name>
             Name
           </label>
         </div>
         <input
-          type="text"
+          type=text
           class="contact-form__input"
-          id="contact-form-name"
-          name="name"
-          value=""
-        />
+          id=contact-form-name
+          name=name>
       </div>
       <div class="contact-form__input-wrapper">
         <div class="contact-form__label-wrapper">
-          <label class="contact-form__label" for="contact-form-email">
+          <label class="contact-form__label" for=contact-form-email>
             Email
           </label>
         </div>
         <input
-          type="email"
+          type=email
           class="contact-form__input"
-          id="contact-form-email"
-          name="email"
-          value=""
-        />
+          id=contact-form-email
+          name=mail>
       </div>
       <div class="contact-form__input-wrapper">
         <div class="contact-form__label-wrapper">
-          <label class="contact-form__label" for="contact-form-message">
+          <label class="contact-form__label" for=contact-form-message>
             Message
           </label>
         </div>
         <textarea
           class="contact-form__message"
-          id="contact-form-message"
+          id=contact-form-message
           style="width:100%"
-          cols="34"
-          name="message"
-          rows="10"
+          cols=34
+          name=message
+          rows=10
           ></textarea>
       </div>
-      <button class="ui-font font-size-medium" type="submit">Submit</button>
+      <button class="ui-font font-size-medium" type=submit>Submit</button>
     </form>
   </main>
 {% /Layout %}

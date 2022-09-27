@@ -73,11 +73,11 @@ module.exports = [
     (props, { Children }) => {
       const current =
         props.current && props.current === props.href
-          ? `aria-current="page"`
+          ? "aria-current=page"
           : "";
       const className = props.class ? `class="${props.class}"` : "";
       const style = props.style ? `style="${props.style}"` : "";
-      const tabIndex = props.tabIndex ? `tabindex="${props.tabIndex}"` : "";
+      const tabIndex = props.tabIndex ? `tabindex=${props.tabIndex}` : "";
       return Children.then(
         (Children) =>
           `<a href="${props.href}" ${className} ${current} ${style} ${tabIndex}>
