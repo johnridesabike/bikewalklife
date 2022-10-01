@@ -14,7 +14,7 @@ excerpt: Fall is here, which means Coffeeneuring weather. Coffeeneuring is the a
 external_link: https://chasingmailboxes.com/2022/09/24/coffeeneuring-challenge-year-12/
 
 ---
-Fall is here, which means Coffeeneuring weather. Coffeeneuring is the annual challenge where we ride our bikes and drink hot, autumnal beverages. Although we call it a challenge, this is a laid-back event that anyone who rides a bike should be able to join.
+Fall is here, which means Coffeeneuring weather. Coffeeneuring is the annual challenge where we ride our bikes and drink hot, autumnal beverages. Although we call it a challenge, this is a laid-back event that anyone who rides a bike can join.
 
 [The full rules are posted on the Chasing Mailboxes website](https://chasingmailboxes.com/2022/09/24/coffeeneuring-challenge-year-12/), but here's the short version:
 
