@@ -24,6 +24,6 @@ Fall is here, which means Coffeeneuring weather. Coffeeneuring is the annual cha
 > * drink 7 cups of coffee (or another fall-type beverage), and
 > * document your coffeeneuring (either photos, Strava tracks, journal entries, control card, etc.).
 
-The official website's rules also explain how to receive your prize at the end of the challenge, so you will definitely want to check that out.
+The official website's rules also describe how to submit your rides and get a finishing prize at the end of the challenge, so you will definitely want to check that out.
 
 Readers of this blog may remember that [I video-journaled last year's challenge](https://bikewalk.life/2021/11/biking-for-coffee-coffeeneuring-2021-summary/). I might do that again this time, but the nice thing about Coffeeneuring is that you can always do it in your own style. You can ride almost anywhere you want and document it however you want. It's all about just riding your bike, enjoying hot drinks, and having fun.
