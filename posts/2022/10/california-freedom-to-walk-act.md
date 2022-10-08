@@ -2,7 +2,7 @@
 date: 2022-10-08T12:18:40-04:00
 tags:
 - untagged
-draft: true
+draft: false
 title: California enacts the Freedom to Walk Act
 author: John Jackson
 hero_image:
@@ -28,4 +28,4 @@ The state of California has enacted their Freedom to Walk Act. This is the lates
 > * Recognize the rights of pedestrians to fair and equitable use of our public roadways.
 > * End a traffic enforcement practice that places an undue financial burden on low-income residents through fines, fees, and penalties without increasing safety.
 
-This is a reminder that, until about 90 years ago, walking in the street was a completely normal and legal behavior. Even if car-dominated streets seem natural to someone born today, that status-quo only exists by government fiat. We are now seeing more and more communities working to change that.
+This is a reminder that, until about 90 years ago, walking in the street was a completely normal and legal behavior. Even if car-dominated streets seem natural to someone born today, that status-quo mainly exists by government fiat. We are now seeing more and more communities working to change that.
