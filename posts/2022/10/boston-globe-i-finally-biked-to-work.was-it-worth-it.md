@@ -3,7 +3,7 @@ date: 2022-10-08T11:56:53-04:00
 tags:
 - untagged
 draft: false
-title: 'Boston Globe: "I finally biked to work. Was it worth it?"'
+title: 'Boston Globe: “I finally biked to work. Was it worth it?”'
 author: John Jackson
 hero_image:
   image: ''
