@@ -7,16 +7,20 @@ title: The “most dangerous road for cyclists in America” gets profiled in Bi
   Magazine
 author: John Jackson
 hero_image:
-  image: ''
-  alt: ''
-  caption: ''
-excerpt: Tbd
-external_link: ''
+  image: "/v1665700133/2022/94C4262B-C56F-4A82-9F7D-F9CD4E58629E_z1if8r.jpg"
+  alt: Roadside Memorial in Levittown, New York
+  caption: 'A roadside memorial to a teenager pedestrian killed at the intersection
+    of the Hempstead Turnpike and Jerusalem Avenue in Levittown, New York. Photo credit:
+    Paultristis.'
+excerpt: Bicycling Magazine published a brutal report about what it describes as the
+  most dangerous road for bicycles in America, Hempstead Turnpike. It illustrates
+  so much of what’s wrong with our transportation system.
+external_link: https://www.bicycling.com/culture/a41119529/the-most-dangerous-road-for-cyclists-in-america/
 
 ---
 Bicycling Magazine published a brutal report about what it describes as the most dangerous road for bicycles in America, Hempstead Turnpike. It illustrates so much of what’s wrong with our transportation system.
 
-You can read the article here: “The Making of a Monster” by Dan Schwartz. [https://www.bicycling.com/culture/a41119529/the-most-dangerous-road-for-cyclists-in-america/](https://www.bicycling.com/culture/a41119529/the-most-dangerous-road-for-cyclists-in-america/ "https://www.bicycling.com/culture/a41119529/the-most-dangerous-road-for-cyclists-in-america/")
+[You can read the article here: “The Making of a Monster” by Dan Schwartz](https://www.bicycling.com/culture/a41119529/the-most-dangerous-road-for-cyclists-in-america/).
 
 The whole story is powerful, and a summary could not do it justice. It focuses on the death of Andrew, a thirteen-year-old child who was struck by a car while biking, but it uses that as an anchor to discuss our epidemic of traffic deaths. These are disturbingly common across the country to the point where they’ve become numb statistics.
 
