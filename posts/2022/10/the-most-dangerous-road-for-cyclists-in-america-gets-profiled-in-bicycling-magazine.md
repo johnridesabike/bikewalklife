@@ -2,16 +2,15 @@
 date: 2022-10-13T18:21:34-04:00
 tags:
 - untagged
-draft: true
+draft: false
 title: The “most dangerous road for cyclists in America” gets profiled in Bicycling
   Magazine
 author: John Jackson
 hero_image:
   image: "/v1665700133/2022/94C4262B-C56F-4A82-9F7D-F9CD4E58629E_z1if8r.jpg"
-  alt: Roadside Memorial in Levittown, New York
-  caption: 'A roadside memorial to a teenager pedestrian killed at the intersection
-    of the Hempstead Turnpike and Jerusalem Avenue in Levittown, New York. Photo credit:
-    Paultristis.'
+  alt: 'Photo of a roadside memorial. '
+  caption: 'A roadside memorial in Levittown, New York. Photo credit: Paultristis
+    on Wikipedia.'
 excerpt: Bicycling Magazine published a brutal report about what it describes as the
   most dangerous road for bicycles in America, Hempstead Turnpike. It illustrates
   so much of what’s wrong with our transportation system.
