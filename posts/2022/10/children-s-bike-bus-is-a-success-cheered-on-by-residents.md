@@ -2,7 +2,7 @@
 date: 2022-10-15T19:05:51-04:00
 tags:
 - untagged
-draft: true
+draft: false
 title: Children’s “bike bus” is a success, cheered on by residents
 author: John Jackson
 hero_image:
@@ -14,9 +14,9 @@ excerpt: 'It’s not really a bus, more like a caravan, but children in Portland
 external_link: https://www.washingtonpost.com/lifestyle/2022/10/11/bike-bus-school-sam-balto/
 
 ---
-It’s not really a bus, more like a caravan, but children in Portland are parading their way to school on bicycles thanks to a PE teacher’s program. 
+It’s not really a bus, more like a caravan, but children in Portland are parading their way to school on bicycles thanks to a PE teacher’s program.
 
-[The Washington Post has the full story here](https://www.washingtonpost.com/lifestyle/2022/10/11/bike-bus-school-sam-balto/ ). 
+[The Washington Post has the full story here](https://www.washingtonpost.com/lifestyle/2022/10/11/bike-bus-school-sam-balto/ ).
 
 > The bike bus has become the students’ favorite way to get to school. The community likes it because it reduces congestion and pollution caused by buses and cars — while also promoting physical activity and fostering community.
 
@@ -26,4 +26,4 @@ The idea began as a “walking bus” (walking to school, what an idea!) before 
 
 [Sam Balto, the bike bus' creator, has written a short guide here on how you can start a bike bus of your own](https://bikeportland.org/2022/10/05/sam-balto-on-how-to-start-a-bike-bus-of-your-own-364734).
 
-It’s hard to not feel hopeful when seeing this. We definitely need more heartwarming success stories like it.
+It’s hard to not feel hopeful when seeing this happen. We definitely need more heartwarming success stories like it.
