@@ -11,5 +11,5 @@
     <loc>{{ absoluteUrl }}</loc>
     <lastmod>{{ sitemapDate }}</lastmod>
   </url>
-{%~ /map /match %}
+{%~ /map %}{% /match %}
 </urlset>

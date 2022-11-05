@@ -1,4 +1,4 @@
-{% interface Children / %}
+{% interface children = string / %}
 <!-- VisuallyHidden -->
 {*
   https://github.com/reach/reach-ui/blob/main/packages/visually-hidden/src/index.tsx
@@ -17,6 +17,6 @@
     word-wrap: normal;
   "
 >
-  {{ Children }}
+  {{ &children }}
 </span>
 <!-- /VisuallyHidden -->

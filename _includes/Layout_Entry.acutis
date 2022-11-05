@@ -67,7 +67,7 @@
     isoDate,
     hero_image
     }
-   Head=#%}
+   head=!#%}
     <style>
     {%~ PostCss ~%}
       .entry-page__nav {
@@ -176,7 +176,7 @@
       }
     {%~ /PostCss ~%}
     </style>
-   {%/#
+   {%#
 %}
 <main>
   {% Entry

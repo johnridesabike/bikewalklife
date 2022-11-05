@@ -11,7 +11,7 @@
   tags
   url
   eleventy
-  Head=#%}
+  head=!#%}
     <style>
     {%~ PostCss ~%}
       .archive__page-title {
@@ -88,7 +88,7 @@
       }
     {%~ /PostCss ~%}
     </style>
-  {%/#
+  {%#
 %}
 <main class="h-feed">
   {% match config with {title: site_title} %}

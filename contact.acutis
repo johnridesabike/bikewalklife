@@ -11,7 +11,7 @@
   tags
   absoluteUrl
   eleventy
-  Head=#%}
+  head=!#%}
     <style>
     {%~ PostCss ~%}
       .contact-form {
@@ -39,7 +39,7 @@
       }
     {%~ /PostCss ~%}
     </style>
-  {%/#
+  {%#
 %}
   <main>
     <h1>Contact</h1>

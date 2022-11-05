@@ -1,5 +1,5 @@
 const path = require("path");
-const { Component, Typescheme, TypeschemeChildren } = require("acutis-lang");
+const { Component, Typescheme } = require("acutis-lang");
 const { icons } = require("feather-icons");
 const Image = require("@11ty/eleventy-img");
 const postcss = require("postcss");
@@ -16,27 +16,24 @@ const postcssCache = new Map();
 const faviconCache = new Map();
 
 const Ty = Typescheme;
-const TyChild = TypeschemeChildren;
 
 module.exports = [
   Component.funAsync(
     "PostCss",
-    Ty.make([]),
-    TyChild.make([TyChild.child("Children")]),
-    (_props, { Children }) =>
-      Children.then((content) => {
-        if (postcssCache.has(content)) {
-          return postcssCache.get(content);
-        } else {
-          const result = postcssWithOptions
-            .process(content, {
-              from: undefined,
-            })
-            .then((result) => result.css);
-          postcssCache.set(content, result);
-          return result;
-        }
-      })
+    Ty.make([["children", Ty.string()]]),
+    ({ children }) => {
+      if (postcssCache.has(children)) {
+        return postcssCache.get(children);
+      } else {
+        const result = postcssWithOptions
+          .process(children, {
+            from: undefined,
+          })
+          .then((result) => result.css);
+        postcssCache.set(children, result);
+        return result;
+      }
+    }
   ),
 
   Component.funAsync(
@@ -45,20 +42,14 @@ module.exports = [
       ["name", Ty.string()],
       ["class", Ty.nullable(Ty.string())],
     ]),
-    TyChild.make([]),
-    (props, _children) =>
+    (props) =>
       Promise.resolve(icons[props.name].toSvg({ class: props.class || "" }))
   ),
 
-  Component.funAsync(
-    "Log",
-    Ty.make([["val", Ty.unknown()]]),
-    TyChild.make([]),
-    (props, _children) => {
-      console.log(props.val);
-      return Promise.resolve("");
-    }
-  ),
+  Component.funAsync("Log", Ty.make([["val", Ty.unknown()]]), (props) => {
+    console.log(props.val);
+    return Promise.resolve("");
+  }),
 
   Component.funAsync(
     "Link",
@@ -68,9 +59,9 @@ module.exports = [
       ["class", Ty.nullable(Ty.string())],
       ["style", Ty.nullable(Ty.string())],
       ["tabIndex", Ty.nullable(Ty.int())],
+      ["children", Ty.string()],
     ]),
-    TyChild.make([TyChild.child("Children")]),
-    (props, { Children }) => {
+    (props) => {
       const current =
         props.current && props.current === props.href
           ? "aria-current=page"
@@ -78,10 +69,9 @@ module.exports = [
       const className = props.class ? `class="${props.class}"` : "";
       const style = props.style ? `style="${props.style}"` : "";
       const tabIndex = props.tabIndex ? `tabindex=${props.tabIndex}` : "";
-      return Children.then(
-        (Children) =>
-          `<a href="${props.href}" ${className} ${current} ${style} ${tabIndex}>
-            ${Children}
+      return Promise.resolve(
+        `<a href="${props.href}" ${className} ${current} ${style} ${tabIndex}>
+            ${props.children}
            </a>`
       );
     }
@@ -95,8 +85,7 @@ module.exports = [
       ["gravity", Ty.string()],
       ["image", Ty.string()],
     ]),
-    TyChild.make([]),
-    ({ width, aspect, gravity, image }, _children) => {
+    ({ width, aspect, gravity, image }) => {
       const height = Math.ceil(width * aspect);
       const opts =
         "/" +
@@ -118,8 +107,7 @@ module.exports = [
       ["transforms", Ty.list(Ty.string())],
       ["image", Ty.string()],
     ]),
-    TyChild.make([]),
-    ({ transforms, image }, _children) => {
+    ({ transforms, image }) => {
       const opts = transforms.map(encodeURIComponent).join("/");
       return Promise.resolve(cloudinary_url + "/" + opts + "/" + image);
     }
@@ -131,8 +119,7 @@ module.exports = [
       ["file", Ty.string()],
       ["width", Ty.int()],
     ]),
-    TyChild.make([]),
-    ({ file, width }, _children) => {
+    ({ file, width }) => {
       const key = `${file}-${width}`;
       if (faviconCache.has(key)) {
         return faviconCache.get(key);
@@ -154,7 +141,6 @@ module.exports = [
   Component.funAsync(
     "PageNumber",
     Ty.make([["pageNumber", Ty.int()]]),
-    TyChild.make([]),
-    ({ pageNumber }, _children) => Promise.resolve(String(pageNumber + 1))
+    ({ pageNumber }) => Promise.resolve(String(pageNumber + 1))
   ),
 ];

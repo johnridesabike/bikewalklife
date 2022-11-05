@@ -46,7 +46,7 @@
     absoluteUrl
     tags=[]
     eleventy
-    Head=#%}
+    head=!#%}
       <style>
       {%~ PostCss %}
         .about__intro {
@@ -73,7 +73,7 @@
         }
       {% /PostCss ~%}
       </style>
-    {%/#
+    {%#
 %}
   <main>
     <h1> {{ title }} </h1>
@@ -83,11 +83,11 @@
           class="about__photo"
           style="height: 240px; width: 240px;">
           <img
-            src="{% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%}"
+            src="{% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_240,w_240", "f_auto,q_auto"] image /%}"
             srcset="
-              {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1x,
-              {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_360,w_360", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1.5x,
-              {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_480,w_480", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 2x
+              {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_240,w_240", "f_auto,q_auto"] image /%} 1x,
+              {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_360,w_360", "f_auto,q_auto"] image /%} 1.5x,
+              {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_480,w_480", "f_auto,q_auto"] image /%} 2x
               "
             alt="{{ alt }}"
             height=240

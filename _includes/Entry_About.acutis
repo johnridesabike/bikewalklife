@@ -18,11 +18,11 @@
           class="entry-page__avatar"
           style="width: 120px; height: 120px; margin: auto;">
           <img
-            src="{% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%}"
+            src="{% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image /%}"
             srcset="
-              {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1x,
-              {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_180,w_180", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 1.5x,
-              {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_240,w_240", "f_auto,q_auto"] image="v1610117171/john-bike-to-work-day-2020.jpg" /%} 2x
+              {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image /%} 1x,
+              {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_180,w_180", "f_auto,q_auto"] image /%} 1.5x,
+              {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_240,w_240", "f_auto,q_auto"] image /%} 2x
             "
             alt="{{ alt }}"
             height=120

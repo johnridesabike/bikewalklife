@@ -11,7 +11,7 @@
   tags
   url
   eleventy
-  Head=#%}
+  head=!#%}
     <style>
     {%~ PostCss ~%}
       .index-page__archive-link {
@@ -21,7 +21,7 @@
       }
     {%~ /PostCss ~%}
     </style>
-  {%/#
+  {%#
 %}
 <main>
   {% match collections with {frontPage} ~%}
