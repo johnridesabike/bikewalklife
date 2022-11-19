@@ -6,8 +6,9 @@ draft: true
 title: My 2022 Coffeeneuring Challenge results
 author: John Jackson
 hero_image:
-  image: ''
-  alt: ''
+  image: "/v1668877567/2022/IMG_1557_rbrrv8.jpg"
+  alt: A photo of a sandwich, a mug of coffee, a bicycle helmet, and a GoPro camera
+    on a counter.
   caption: ''
 excerpt: These are the results of my 2022 Coffeeneuring Challenge.
 external_link: ''
@@ -34,7 +35,11 @@ I don't have any strong preferance to any platform, but so far TikTok has been t
     <tr>
       <td>October 8</td>
       <td>3.9 miles</td>
-      <td>Midtown Coffee</td>
+      <td>
+        <a href="https://www.midtowncoffeehouse.com/">
+          Midtown Coffee
+        </a>
+      </td>
       <td>
         <a href="https://www.tiktok.com/@johnridesabike/video/7152213613271502126">Watch on TikTok</a>
       </td>
@@ -42,7 +47,11 @@ I don't have any strong preferance to any platform, but so far TikTok has been t
     <tr>
       <td>October 9</td>
       <td>6 miles</td>
-      <td>Iron Bank Coffee</td>
+      <td>
+        <a href="https://ironbankcoffee.com/">
+          Iron Bank Coffee
+        </a>
+      </td>
       <td>
         <a href="https://www.tiktok.com/@johnridesabike/video/7152661633435831598">Watch on TikTok</a>
       </td>
@@ -58,7 +67,11 @@ I don't have any strong preferance to any platform, but so far TikTok has been t
     <tr>
       <td>October 22</td>
       <td>6.3 miles</td>
-      <td>Fountain City Coffee</td>
+      <td>
+        <a href="https://www.fountaincitycoffee.com/">
+          Fountain City Coffee
+        </a>
+      </td>
       <td>
         <a href="https://www.tiktok.com/@johnridesabike/video/7157844360606846250">Watch on TikTok</a>
       </td>
@@ -66,7 +79,11 @@ I don't have any strong preferance to any platform, but so far TikTok has been t
     <tr>
       <td>November 1</td>
       <td>3 miles</td>
-      <td>Parker's Pantry</td>
+      <td>
+        <a href="https://www.facebook.com/parkerspantryatthepark/">
+          Parker's Pantry
+        </a>
+      </td>
       <td>
         <a href="https://www.tiktok.com/@johnridesabike/video/7161166324205505834">Watch on TikTok</a>
       </td>
@@ -89,3 +106,5 @@ I don't have any strong preferance to any platform, but so far TikTok has been t
     </tr>
   </tbody>
 </table>
+
+I'll let the 
