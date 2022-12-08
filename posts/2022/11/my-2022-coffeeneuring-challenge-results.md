@@ -117,7 +117,7 @@ Parker's Pantry
 </tbody>
 </table>
 
-I tried to include a diverse group of locations and routes. This mostly consisted of hip, photogenic local cafés, but also some decidedly un-cool chains like Burger King. Biking and hot beverages don't exist in a bubble, after all. We should be able to bike anywhere in our communities.
+I tried to include a diverse group of locations and routes. This mostly consisted of hip, photogenic cafés, but also some decidedly un-cool chains like Burger King. Biking and hot beverages don't exist in a bubble, after all. We should be able to bike anywhere in our communities.
 
 You can see more about each individual ride in their respective videos (if you don't mind dealing with TikTok's interface). My objective was to convey what it's like to ride to each of these places. Hopefully, people who don't ride much outside of bike paths can see these trips as new possibilities.
 
