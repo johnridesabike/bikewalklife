@@ -152,7 +152,7 @@
         </h2>
       </header>
       <p class="font-size-small p-summary archive__entry-summary">
-        {{ &excerpt }}
+        {{{ excerpt }}}
         {% Link href class=!"archive__entry-readmore u-url" %}
           keep reading →
         {% /Link %}

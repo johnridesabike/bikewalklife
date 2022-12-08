@@ -25,9 +25,9 @@
         ]
         with width, 0
       %}
-        {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ width }}w
+        {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ %i width }}w
       {%~ with width ~%}
-      , {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ width }}w
+      , {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ %i width }}w
     {%~ /map ~%}
   "
   sizes="(max-width: 900px) 100vw, 900px"

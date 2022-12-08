@@ -15,7 +15,7 @@
   <h2 class="subscribe__heading font-size-xlarge">
     Subscribe to {{ title }} <span aria-hidden=true> 📬 </span>
   </h2>
-  <div class="font-size-small content"> {{ &subscribe_intro }} </div>
+  <div class="font-size-small content"> {{{ subscribe_intro }}} </div>
   <dl class="font-size-small subscribe__list">
     <div>
       <dt> Feed </dt>
@@ -25,7 +25,7 @@
           Subscribe to web feed
         </a>
       </dd>
-      <dd> {{ &subscribe_feed_cta }} </dd>
+      <dd> {{{ subscribe_feed_cta }}} </dd>
     </div>
     <div>
       <dt> Email </dt>
@@ -35,7 +35,7 @@
           Subscribe to newsletter
         </a>
       </dd>
-      <dd> {{ &subscribe_email_cta }} </dd>
+      <dd> {{{ subscribe_email_cta }}} </dd>
     </div>
   </dl>
 </section>

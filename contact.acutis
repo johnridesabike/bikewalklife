@@ -44,7 +44,7 @@
   <main>
     <h1>Contact</h1>
     {% match strings with {contact_text} %}
-      <div class="ui-font">{{ &contact_text }}</div>
+      <div class="ui-font">{{{ contact_text }}}</div>
     {% /match %}
     <form
       class="contact-form"

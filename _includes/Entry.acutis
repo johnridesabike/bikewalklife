@@ -58,7 +58,7 @@
       {% with false %} {* nothing! *}
       {% /match %}
     </header>
-    <div class="entry__content e-content">{{ &content }}</div>
+    <div class="entry__content e-content">{{{ content }}}</div>
     <footer class="entry__footer">
       <div class="entry__permalink">
         <a href="{{ absoluteUrl }}" class="u-url u-uid">

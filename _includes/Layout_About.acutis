@@ -95,8 +95,8 @@
         </div>
       </figure>
     {% /match %}
-    <div class="serif about__intro"> {{ &intro }} </div>
-    <div class="serif"> {{ &content }} </div>
+    <div class="serif about__intro"> {{{ intro }}} </div>
+    <div class="serif"> {{{ content }}} </div>
   </main>
   <hr class="separator">
   {% Subscribe config strings /%}

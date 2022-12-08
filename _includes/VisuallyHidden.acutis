@@ -17,6 +17,6 @@
     word-wrap: normal;
   "
 >
-  {{ &children }}
+  {{{ children }}}
 </span>
 <!-- /VisuallyHidden -->

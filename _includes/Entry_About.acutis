@@ -32,7 +32,7 @@
       </div>
     {% with null %} {* No avatar *}
     {% /match %}
-    <div class="entry-page__about-content">{{ &description }}</div>
+    <div class="entry-page__about-content">{{{ description }}}</div>
   </div>
   <p class="entry-page__about-link">
     {% match collections
@@ -47,7 +47,7 @@
   </p>
   {% match strings with {contact_text, contact_title} %}
     <h2 class="entry-page__footer-heading"> {{ contact_title}} </h2>
-    <div class="entry-page__about-content">{{ &contact_text }}</div>
+    <div class="entry-page__about-content">{{{ contact_text }}}</div>
     <p class="entry-page__about-link">
       {% match collections
         with {pages: <contact: {url: href}>} %}
