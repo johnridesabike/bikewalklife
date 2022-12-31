@@ -14,15 +14,17 @@
   "author": "John Jackson",
   "scripts": {
     "analyze": "DEBUG=Eleventy:Benchmark* npm run build",
-    "build": "ELEVENTY_ENV=production eleventy --quiet",
+    "build": "ELEVENTY_ENV=production tinacms build && eleventy --quiet",
     "clean": "rm -r _site",
-    "start": "ELEVENTY_ENV=development eleventy --serve --port=8080"
+    "start": "ELEVENTY_ENV=development eleventy --serve --port=8080",
+    "tina": "tinacms dev -c \"npm run start\""
   },
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-img": "^2.0.1",
     "@fontsource/fira-sans": "^4.2.3",
     "@fontsource/source-serif-pro": "^4.2.0",
+    "@tinacms/cli": "^1.0.5",
     "acutis-lang": "^0.20.0",
     "cssnano": "^5.1.13",
     "feather-icons": "^4.28.0",
@@ -32,9 +34,12 @@
     "postcss": "^8.4.16",
     "postcss-import": "^15.0.0",
     "postcss-preset-env": "^7.8.2",
-    "postcss-url": "^10.1.3"
+    "postcss-url": "^10.1.3",
+    "tinacms": "^1.1.2"
   },
   "devDependencies": {
-    "eslint": "^8.23.1"
+    "@tinacms/auth": "^1.0.2",
+    "eslint": "^8.23.1",
+    "next-tinacms-cloudinary": "^4.1.0"
   }
 }
