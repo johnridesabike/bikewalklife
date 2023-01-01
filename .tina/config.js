@@ -1,4 +1,5 @@
 import { defineConfig } from "tinacms";
+import authorData from "../_data/authors.json";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -40,7 +41,7 @@ export default defineConfig({
             name: "author",
             label: "Author",
             type: "string",
-            options: ["John Jackson"],
+            options: authorData.authors,
             required: true,
           },
           {
@@ -127,6 +128,12 @@ export default defineConfig({
         name: "about_page",
         path: "about",
         format: "md",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
         fields: [
           {
             name: "title",
@@ -216,6 +223,12 @@ export default defineConfig({
         label: "Site data",
         path: "_data",
         format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
         templates: [
           {
             name: "ui_strings",
