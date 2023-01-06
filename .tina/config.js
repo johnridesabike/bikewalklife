@@ -25,7 +25,7 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "blog_posts",
+        name: "blog_post",
         label: "Blog Posts",
         path: "posts",
         format: "md",
@@ -118,8 +118,15 @@ export default defineConfig({
           {
             name: "body",
             label: "Body",
-            type: "rich-text",
+            /* The Tina rich-text editor is broken. Use a plain-old string until
+             * it's fixed.
+             * https://github.com/tinacms/tinacms/issues/3491
+             * https://github.com/tinacms/tinacms/issues/3118 */
+            type: "string",
             isBody: true,
+            ui: {
+              component: "textarea",
+            },
           },
         ],
       },
@@ -352,7 +359,7 @@ export default defineConfig({
                 name: "timeZone",
                 type: "string",
                 required: true,
-                options: ["America/New_York"],
+                options: Intl.supportedValuesOf("timeZone"),
                 label: "Timezone",
                 description: "The timezone used for dates.",
               },
