@@ -21,3 +21,8 @@
 [[redirects]]
   from = "/2020/9/*"
   to = "/2020/09/:splat"
+
+[[redirects]]
+  from = '/api/*'
+  to = '/.netlify/functions/api/:splat'
+  status = 200
