@@ -14,7 +14,8 @@
   "author": "John Jackson",
   "scripts": {
     "analyze": "DEBUG=Eleventy:Benchmark* npm run build",
-    "build": "ELEVENTY_ENV=production tinacms build && eleventy --quiet",
+    "prebuild": "tinacms build",
+    "build": "ELEVENTY_ENV=production eleventy --quiet",
     "clean": "rm -r _site",
     "start": "ELEVENTY_ENV=development eleventy --serve --port=8080",
     "tina": "tinacms dev -c \"npm run start\""
