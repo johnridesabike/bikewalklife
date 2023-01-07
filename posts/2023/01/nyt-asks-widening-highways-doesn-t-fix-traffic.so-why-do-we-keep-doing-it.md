@@ -2,7 +2,7 @@
 date: 2023-01-07T16:39:05-05:00
 tags:
 - untagged
-draft: true
+draft: false
 title: 'NYT asks: "widening highways doesn’t fix traffic. So why do we keep doing
   it?"'
 author: John Jackson
