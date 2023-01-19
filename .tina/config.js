@@ -49,6 +49,9 @@ export default defineConfig({
             label: "Date",
             type: "datetime",
             required: true,
+            ui: {
+              timeFormat: "HH:mm",
+            },
           },
           {
             name: "hero_image",
