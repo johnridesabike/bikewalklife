@@ -115,6 +115,7 @@ export default defineConfig({
             name: "draft",
             label: "Draft",
             type: "boolean",
+            required: true,
             description:
               "Turn this off to publish the post on the public site. Keep it on to preview the post.",
           },
