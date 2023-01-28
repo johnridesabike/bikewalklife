@@ -8,7 +8,9 @@ excerpt: >-
 external_link: 'https://www.wired.com/story/how-to-start-a-bike-bus/'
 tags:
   - untagged
+draft: false
 ---
+
 
 Last year, a PE teacher in Portland made national headlines with his "bike bus." The idea was to replace the regular school buses (or car drop-offs) with bicycles. Each morning, he leads a parade of children on bikes through his neighborhood to school. Now one of WIRED's editors has gotten her own bike bus off the ground.
 
