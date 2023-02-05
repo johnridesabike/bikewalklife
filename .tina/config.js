@@ -105,6 +105,7 @@ export default defineConfig({
             name: "tags",
             type: "string",
             list: true,
+            required: true,
             label: "Tags",
             description: "Tags are used to display posts related to this post.",
             ui: {
