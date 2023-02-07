@@ -8,6 +8,14 @@ const branch =
 const clientId = process.env.TINA_CLIENT_ID || "";
 const token = process.env.TINA_TOKEN || "";
 
+function nonEmpty(value) {
+  if (!value) {
+    return "This field can not be empty.";
+  } else {
+    return null;
+  }
+}
+
 export default defineConfig({
   branch,
   clientId,
@@ -91,6 +99,7 @@ export default defineConfig({
             description: "This can appear as a preview summary of the post.",
             ui: {
               component: "textarea",
+              validate: nonEmpty,
             },
           },
           {
@@ -131,6 +140,7 @@ export default defineConfig({
             isBody: true,
             ui: {
               component: "textarea",
+              validate: nonEmpty,
             },
           },
         ],
