@@ -6,7 +6,7 @@ external_link: >-
   https://www.denverpost.com/2023/01/30/denver-city-council-decriminalize-jaywalking-vote/
 tags:
   - untagged
-draft: true
+draft: false
 ---
 
 Denver, Colorado has just become the latest area to decriminalize jaywalking. The city council recently passed the "Freedom to Walk and Roll" bill, although crossing outside of an intersection still remains illegal under Colorado state law.
