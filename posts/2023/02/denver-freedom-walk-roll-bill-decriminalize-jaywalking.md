@@ -7,6 +7,11 @@ external_link: >-
 tags:
   - untagged
 draft: false
+excerpt: >-
+  Denver, Colorado has just become the latest area to decriminalize jaywalking.
+  The city council recently passed the "Freedom to Walk and Roll" bill, although
+  crossing outside of an intersection still remains illegal under Colorado state
+  law.
 ---
 
 Denver, Colorado has just become the latest area to decriminalize jaywalking. The city council recently passed the "Freedom to Walk and Roll" bill, although crossing outside of an intersection still remains illegal under Colorado state law.
