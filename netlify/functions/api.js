@@ -9,6 +9,9 @@ const app = express();
 const router = Router();
 
 const handler = createMediaHandler({
+  cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
   authorized: async (req, _res) => {
     try {
       if (process.env.NODE_ENV == "development") {
@@ -40,4 +43,4 @@ const serverlessHandler = serverless(app);
 module.exports.handler = async (event, context) => {
   const result = await serverlessHandler(event, context);
   return result;
-}
+};
