@@ -11,7 +11,12 @@ external_link: >-
 tags:
   - untagged
 draft: false
+hero_image:
+  image: >-
+    https://res.cloudinary.com/bike-walk-life/image/upload/v1666276439/cld-sample.jpg
+  alt: alt text
 ---
+
 
 
 The Philadelphia Inquirer has published a story about the importance of bicycling for low-income people. Sarahi Franco-Morales, the author, describes how her whole family depends on bicycles to go about their daily lives.
