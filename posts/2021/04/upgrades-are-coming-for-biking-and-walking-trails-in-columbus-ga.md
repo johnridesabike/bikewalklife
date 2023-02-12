@@ -12,7 +12,7 @@ draft: false
 title: Upgrades are coming for biking and walking trails in Columbus, GA
 author: John Jackson
 hero_image:
-  image: "/v1618853035/2021/11th-Street-Underpass-3_v2qdhm.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1618853035/2021/11th-Street-Underpass-3_v2qdhm.jpg"
   alt: A mockup design for a trail under a bridge.
   caption: 'Image credit: Dragonfly Trail Network.'
 external_link: https://www.wrbl.com/news/local-news/2-million-project-connects-columbus-dragonfly-trail-with-mlk-jr-trail-upgrades-riverwalk-ramps/

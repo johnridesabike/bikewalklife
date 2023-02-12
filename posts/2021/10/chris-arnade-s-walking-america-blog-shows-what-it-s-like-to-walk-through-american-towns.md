@@ -9,7 +9,7 @@ title: Chris Arnade's "Walking America" blog shows what it's like to walk throug
   American towns.
 author: John Jackson
 hero_image:
-  image: "/v1633813826/2021/9f5fbc2d-5227-4378-a262-8a49240af7c5_1024x814_tq0oxe.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1633813826/2021/9f5fbc2d-5227-4378-a262-8a49240af7c5_1024x814_tq0oxe.jpg"
   alt: A photograph of three homes, chicopee.
   caption: 'Photo credit: Chris Arnade, from his "Walking America, part 1."'
 external_link: https://intellectualinting.substack.com/

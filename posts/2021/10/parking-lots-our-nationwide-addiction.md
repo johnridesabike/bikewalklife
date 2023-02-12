@@ -9,7 +9,7 @@ draft: false
 title: Parking lots, our nationwide addiction
 author: John Jackson
 hero_image:
-  image: "/v1634412680/2021/Parking_oct_2021_colored_yyjrxr.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1634412680/2021/Parking_oct_2021_colored_yyjrxr.jpg"
   alt: A satellite map showing parking lots.
   caption: ''
 external_link: ''

@@ -6,7 +6,7 @@ draft: false
 title: Over 200 cities participated in the 2022 Fancy Women Bike Ride
 author: John Jackson
 hero_image:
-  image: "/v1664036316/2022/Milano_Fancy_Women_Bike_Ride__photocredit_Gegi_zmvwex.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1664036316/2022/Milano_Fancy_Women_Bike_Ride__photocredit_Gegi_zmvwex.jpg"
   alt: A photo of a group of fancy women riding bicycles.
   caption: 'Photo credit: Fancy Women Bike Ride.'
 excerpt: The Fancy Women Bike Ride is an international event where women dress up

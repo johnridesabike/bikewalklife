@@ -4,7 +4,7 @@ draft: false
 title: Bicycle Mayors
 author: John Jackson
 hero_image:
-  image: "/v1608060004/2020/286270-tiffany-mannion-weelz-6b5cc6-original-1532496384.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1608060004/2020/286270-tiffany-mannion-weelz-6b5cc6-original-1532496384.jpg"
   alt: A photo of a woman on a bicycle overlooking a field.
   caption: 'Tiffany Mannion, Bicycle Mayor of Keene, NH. Photo credit: BYCS'
 external_link: https://bycs.org/our-work/bicycle-mayor/

@@ -4,7 +4,7 @@ draft: false
 title: Pattie Baker’s “You Go, Girl!” blog series
 author: John Jackson
 hero_image:
-  image: "/v1608060004/2020/you-go-girl.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1608060004/2020/you-go-girl.jpg"
   alt: "“You Go, Girl!” header image."
   caption: 'Image credit: Pattie Baker'
 external_link: ''

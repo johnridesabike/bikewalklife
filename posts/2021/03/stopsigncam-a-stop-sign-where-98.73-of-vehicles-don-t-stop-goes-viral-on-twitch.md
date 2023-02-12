@@ -5,7 +5,7 @@ title: 'Stopsigncam: a stop sign where “98.73% of vehicles don’t stop” goe
   on Twitch'
 author: John Jackson
 hero_image:
-  image: "/v1616854279/2021/vlcsnap-2021-03-27-10h05m08s112_njmbsm.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1616854279/2021/vlcsnap-2021-03-27-10h05m08s112_njmbsm.jpg"
   alt: A screenshot of the stopsigncam stream.
   caption: ''
 external_link: https://www.twitch.tv/stopsigncam

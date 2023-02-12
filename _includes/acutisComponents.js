@@ -17,6 +17,14 @@ const faviconCache = new Map();
 
 const Ty = Typescheme;
 
+function cloudinaryOptions(opts, image_src) {
+  const url = new URL(image_src);
+  const path = url.pathname.split("/");
+  path.splice(4, 0, opts);
+  url.pathname = path.join("/");
+  return url.href;
+}
+
 module.exports = [
   Component.funAsync(
     "PostCss",
@@ -87,17 +95,20 @@ module.exports = [
     ]),
     ({ width, aspect, gravity, image }) => {
       const height = Math.ceil(width * aspect);
-      const opts =
-        "/" +
-        encodeURIComponent(
-          "f_auto," +
-            "q_auto," +
-            "c_fill," +
-            `g_${gravity},` +
-            `h_${height},` +
-            `w_${width}`
-        );
-      return Promise.resolve(cloudinary_url + opts + image);
+      const opts = encodeURIComponent(
+        "f_auto," +
+          "q_auto," +
+          "c_fill," +
+          `g_${gravity},` +
+          `h_${height},` +
+          `w_${width}`
+      );
+      try {
+        return Promise.resolve(cloudinaryOptions(opts, image));
+      } catch (e) {
+        console.warn("Invalid image URL:", image);
+        return Promise.resolve(cloudinary_url + opts + image);
+      }
     }
   ),
 
@@ -109,7 +120,12 @@ module.exports = [
     ]),
     ({ transforms, image }) => {
       const opts = transforms.map(encodeURIComponent).join("/");
-      return Promise.resolve(cloudinary_url + "/" + opts + "/" + image);
+      try {
+        return Promise.resolve(cloudinaryOptions(opts, image));
+      } catch (e) {
+        console.warn("Invalid image URL:", image);
+        return Promise.resolve(cloudinary_url + "/" + opts + "/" + image);
+      }
     }
   ),
 

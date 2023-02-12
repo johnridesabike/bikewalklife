@@ -6,7 +6,7 @@ draft: false
 title: 'Errandonnee 2021: Errands 5, 6, & 7'
 author: John Jackson
 hero_image:
-  image: "/v1621026757/2021/errandonnee_2021_567_header_zd2mo8.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1621026757/2021/errandonnee_2021_567_header_zd2mo8.jpg"
   alt: A photo collage of my bicycle in several locations.
   caption: ''
 external_link: ''

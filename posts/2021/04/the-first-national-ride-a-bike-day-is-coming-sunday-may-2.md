@@ -9,7 +9,7 @@ draft: false
 title: The first National Ride A Bike Day is coming Sunday, May 2
 author: John Jackson
 hero_image:
-  image: "/v1619468101/2021/Fb_National_Ride_a_Bike_Day-2_xkzo18.png"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1619468101/2021/Fb_National_Ride_a_Bike_Day-2_xkzo18.png"
   alt: '"National Ride a Bike Day" promo graphic.'
   caption: 'Image credit: League of American Bicyclists.'
 external_link: https://bikeleague.org/content/take-part-first-ever-national-ride-bike-day

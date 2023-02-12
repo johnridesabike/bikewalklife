@@ -4,7 +4,7 @@ draft: false
 title: A wild demand trail appears
 author: John Jackson
 hero_image:
-  image: "/v1612385912/2021/IMG_7533_a2dedo.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1612385912/2021/IMG_7533_a2dedo.jpg"
   alt: A black-and-white photograph of a “demand trail.”
   caption: ''
 external_link: ''

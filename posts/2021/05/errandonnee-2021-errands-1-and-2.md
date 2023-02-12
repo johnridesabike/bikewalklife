@@ -6,7 +6,7 @@ draft: false
 title: 'Errandonnee 2021: Errands 1 & 2'
 author: John Jackson
 hero_image:
-  image: "/v1620737836/2021/IMG_8194_kwnv6u.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1620737836/2021/IMG_8194_kwnv6u.jpg"
   alt: A photo of my bicycle in front of a church.
   caption: ''
 external_link: ''

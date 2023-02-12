@@ -9,7 +9,7 @@ draft: false
 title: Biking for Coffee & Coffeeneuring 2021 Summary
 author: John Jackson
 hero_image:
-  image: "/v1637416853/2021/358B0400-54DD-4943-9BFC-F6B906A2B971_1_201_a_vzm9vd.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1637416853/2021/358B0400-54DD-4943-9BFC-F6B906A2B971_1_201_a_vzm9vd.jpg"
   alt: A photo of a bicycle with a helmet, gloves, and a coffee thermos.
   caption: ''
 external_link: ''

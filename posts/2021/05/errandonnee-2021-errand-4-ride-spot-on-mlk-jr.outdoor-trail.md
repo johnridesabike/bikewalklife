@@ -6,7 +6,7 @@ draft: false
 title: 'Errandonnee 2021: Errand 4 & Ride Spot for MLK Jr. Outdoor Learning Trail'
 author: John Jackson
 hero_image:
-  image: "/v1620934255/2021/IMG_8359_hfia4w.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1620934255/2021/IMG_8359_hfia4w.jpg"
   alt: A photo of a bicycle in front of a public mural.
   caption: ''
 external_link: ''

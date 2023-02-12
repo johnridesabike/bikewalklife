@@ -6,7 +6,7 @@ draft: false
 title: 'Errandonnee 2021: errands 11 & 12'
 author: John Jackson
 hero_image:
-  image: "/v1621602312/2021/189396022_5783694225006230_2767838860742330780_n_ut0k3j.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1621602312/2021/189396022_5783694225006230_2767838860742330780_n_ut0k3j.jpg"
   alt: A group photo of bicycle riders.
   caption: ''
 external_link: ''

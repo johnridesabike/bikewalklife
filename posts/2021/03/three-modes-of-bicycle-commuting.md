@@ -4,7 +4,7 @@ draft: false
 title: Three modes of bicycle commuting
 author: John Jackson
 hero_image:
-  image: "/v1614888958/2021/IMG_4730_f8qghf.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1614888958/2021/IMG_4730_f8qghf.jpg"
   alt: A photograph of a bicycle handlebars over a bicycle lane marking.
   caption: ''
 external_link: ''

@@ -7,7 +7,7 @@ title: 'Dangerous by Design 2022: traffic deaths are getting worse, especially i
   the Sun Belt'
 author: John Jackson
 hero_image:
-  image: "/v1658229817/2022/DBD-2022-COVER_gq2vu2.png"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1658229817/2022/DBD-2022-COVER_gq2vu2.png"
   alt: Dangerous by Design 2022 cover image.
   caption: 'Image credit: Smart Growth America.'
 external_link: https://smartgrowthamerica.org/dangerous-by-design/

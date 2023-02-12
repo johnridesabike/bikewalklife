@@ -9,7 +9,7 @@ draft: false
 title: Bike to Work Appreciation Day
 author: John Jackson
 hero_image:
-  image: "/v1621607498/2021/IMG_8520_oegila.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1621607498/2021/IMG_8520_oegila.jpg"
   alt: A photo of a bicycle beside a sign saying "BIKE TO WORK DAY."
   caption: ''
 external_link: ''

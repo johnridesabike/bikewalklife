@@ -10,7 +10,7 @@ draft: false
 title: Erandonnee returns for 2021 in “Hyperlocal Edition”
 author: John Jackson
 hero_image:
-  image: "/v1618505265/2021/818A8410-3B5C-4D93-ADCC-9DF55A2A0EE8_1_105_c_xmdkl8.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1618505265/2021/818A8410-3B5C-4D93-ADCC-9DF55A2A0EE8_1_105_c_xmdkl8.jpg"
   alt: A photo of a parked bicycle with baskets full of groceries.
   caption: A grocery run from Errandonnee 2017.
 external_link: https://chasingmailboxes.com/2021/04/11/errandonnee-2021-hyperlocal-edition/

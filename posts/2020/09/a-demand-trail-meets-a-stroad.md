@@ -4,7 +4,7 @@ draft: false
 title: When a demand trail meets a stroad
 author: John Jackson
 hero_image:
-  image: "/v1608060004/2020/img_5002-greyscale.jpeg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1608060004/2020/img_5002-greyscale.jpeg"
   alt: Cover photo showing the road under construction.
   caption: ''
 external_link: ''

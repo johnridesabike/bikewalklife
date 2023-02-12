@@ -6,7 +6,7 @@ draft: false
 title: The "Drive Less, Bike More" challenge aims to log 2 million miles in 2022
 author: John Jackson
 hero_image:
-  image: "/v1658007233/2022/FB_Twitter_5_njh0ko.png"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1658007233/2022/FB_Twitter_5_njh0ko.png"
   alt: A promotional graphic for "Drive Less, Bike More" showing a woman riding a
     bicycle.
   caption: ''
