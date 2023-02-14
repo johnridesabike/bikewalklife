@@ -12,8 +12,6 @@ tags:
   - untagged
 draft: false
 ---
-
-
 The Philadelphia Inquirer has published a story about the importance of bicycling for low-income people. Sarahi Franco-Morales, the author, describes how her whole family depends on bicycles to go about their daily lives.
 
 [You can read the story here: "For my low-income family, biking is not recreation. ‘It’s survival.’"](https://www.inquirer.com/opinion/commentary/biking-philadelphia-university-of-pennsylvania-20230202.html) ([Archived link without a paywall](https://archive.is/jjCFX).)

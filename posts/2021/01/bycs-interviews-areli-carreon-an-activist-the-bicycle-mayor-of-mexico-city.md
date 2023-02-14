@@ -4,7 +4,7 @@ draft: false
 title: BYCS interviews Areli Carreón, an activist & the bicycle mayor of Mexico City
 author: John Jackson
 hero_image:
-  image: "/v1610129688/2021/EpZGApaW8AAFOkM_vqysjn.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1610129688/2021/EpZGApaW8AAFOkM_vqysjn.jpg"
   alt: A photograph of Areli Carreón.
   caption: 'Image credit: BYCS and Areli Carreón.'
 external_link: https://bycs.org/mobility-as-a-right-with-areli-carreon/

@@ -6,7 +6,7 @@ draft: false
 title: My 2022 Coffeeneuring Challenge results
 author: John Jackson
 hero_image:
-  image: "/v1668877567/2022/IMG_1557_rbrrv8.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1668877567/2022/IMG_1557_rbrrv8.jpg"
   alt: A photo of a sandwich, a mug of coffee, a bicycle helmet, and a GoPro camera
     on a counter.
   caption: ''

@@ -6,7 +6,7 @@ draft: false
 title: The best mobility meme of 2022
 author: John Jackson
 hero_image:
-  image: "/v1673112089/2023/mobilitymeme2022winner_bocula.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1673112089/2023/mobilitymeme2022winner_bocula.jpg"
   alt: A cartoon in which two persons walk across a car parking lot full of cars and
     then spot two e-scooters parked. They say "These shit e-scooters are everywhere!".
   caption: ''

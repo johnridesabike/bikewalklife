@@ -4,7 +4,7 @@ draft: false
 title: Choice, freedom, cars, and the path to biking and walking
 author: John Jackson
 hero_image:
-  image: "/v1611188162/2021/IMG_6296_tlxa3s.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1611188162/2021/IMG_6296_tlxa3s.jpg"
   alt: A street sign depicting a bicycle with the text “wrong way.”
   caption: ''
 external_link: ''

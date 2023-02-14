@@ -6,7 +6,7 @@ draft: false
 title: 'Errandonnee 2021: Errand 3'
 author: John Jackson
 hero_image:
-  image: "/v1620738101/2021/IMG_8279_tczx4a.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1620738101/2021/IMG_8279_tczx4a.jpg"
   alt: A photo of my bicycle in front of a billboard mural with the words "SOUL SHINE"
     in stylized lettering.
   caption: ''

@@ -4,7 +4,7 @@ draft: false
 title: Bike lanes, Lego, and the struggle for a new bicycle culture
 author: John Jackson
 hero_image:
-  image: "/v1613508999/2021/native_gbkn8u.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1613508999/2021/native_gbkn8u.jpg"
   alt: A photo of Lego bicycle lanes.
   caption: 'Image credit: Lego and Marcel Steeman.'
 external_link: https://www.theverge.com/2021/1/31/22252640/lego-bike-lane-cities-cars-ideas-street

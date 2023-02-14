@@ -5,7 +5,7 @@ title: '30 Days of Biking begins on the first of April with “a community of jo
   cyclists”  '
 author: John Jackson
 hero_image:
-  image: "/v1616620323/2021/30dob-spokecard-2020-01_d7e1ne.png"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1616620323/2021/30dob-spokecard-2020-01_d7e1ne.png"
   alt: 30 Days of Biking card.
   caption: ''
 external_link: https://30daysofbiking.com/

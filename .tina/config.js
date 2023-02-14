@@ -70,7 +70,7 @@ export default defineConfig({
               {
                 name: "image",
                 label: "Image",
-                type: "string",
+                type: "image",
                 required: false,
               },
               {
@@ -179,8 +179,8 @@ export default defineConfig({
             fields: [
               {
                 name: "image",
-                type: "string",
                 label: "Image",
+                type: "image",
               },
               {
                 name: "alt",
@@ -208,8 +208,8 @@ export default defineConfig({
             fields: [
               {
                 name: "image",
-                type: "string",
                 label: "Image",
+                type: "image",
               },
               {
                 name: "alt",

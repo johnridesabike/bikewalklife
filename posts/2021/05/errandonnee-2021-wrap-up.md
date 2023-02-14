@@ -6,7 +6,7 @@ draft: false
 title: Errandonnee 2021 wrap-up
 author: John Jackson
 hero_image:
-  image: "/v1621986083/2021/errandonnee_2021_wrapup_header_ei513h.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1621986083/2021/errandonnee_2021_wrapup_header_ei513h.jpg"
   alt: A collage of photos from Errandonnee 2021.
   caption: ''
 external_link: ''

@@ -7,7 +7,7 @@ title: The “most dangerous road for cyclists in America” gets profiled in Bi
   Magazine
 author: John Jackson
 hero_image:
-  image: "/v1665700133/2022/94C4262B-C56F-4A82-9F7D-F9CD4E58629E_z1if8r.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1665700133/2022/94C4262B-C56F-4A82-9F7D-F9CD4E58629E_z1if8r.jpg"
   alt: 'Photo of a roadside memorial. '
   caption: 'A roadside memorial in Levittown, New York. Photo credit: Paultristis
     on Wikipedia.'

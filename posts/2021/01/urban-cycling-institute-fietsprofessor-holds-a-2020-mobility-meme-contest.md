@@ -4,7 +4,7 @@ draft: false
 title: Urban Cycling Institute (@fietsprofessor) holds a 2020 mobility meme contest
 author: John Jackson
 hero_image:
-  image: "/v1610125656/2021/EqVnqgVXcAI3zPL_mmnzrr.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1610125656/2021/EqVnqgVXcAI3zPL_mmnzrr.jpg"
   alt: A comic depicting the bike riders and transit users crammed next to a car driver
     with comfortable space.
   caption: 'Image credit: “The injustice mobility space” by Fabian Todorovic'

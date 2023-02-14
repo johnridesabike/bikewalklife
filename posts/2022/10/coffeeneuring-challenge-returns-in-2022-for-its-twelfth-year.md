@@ -6,7 +6,7 @@ draft: false
 title: Coffeeneuring Challenge returns in 2022 for its twelfth year
 author: John Jackson
 hero_image:
-  image: "/v1664624687/2022/coffeeneuring_20220924_103149_ucok6o.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1664624687/2022/coffeeneuring_20220924_103149_ucok6o.jpg"
   alt: Coffeeneuring Challange banner image.
   caption: 'Image credit: Chasing Mailboxes.'
 excerpt: Fall is here, which means Coffeeneuring weather. Coffeeneuring is the annual

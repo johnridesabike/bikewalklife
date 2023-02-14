@@ -12,7 +12,7 @@ draft: false
 title: 'When streets were for everyone: Columbus, GA in 1900'
 author: John Jackson
 hero_image:
-  image: "/v1618078636/2021/mus125_lstygl.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1618078636/2021/mus125_lstygl.jpg"
   alt: Historic photo of Springer Opera House.
   caption: 'Image credit: Georgia Archives & Digital Library of Georgia.'
 external_link: https://dlg.usg.edu/record/dlg_vang_mus125

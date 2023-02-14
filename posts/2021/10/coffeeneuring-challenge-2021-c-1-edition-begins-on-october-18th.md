@@ -9,7 +9,7 @@ draft: false
 title: Coffeeneuring Challenge 2021, "c+1" edition, begins on October 18th
 author: John Jackson
 hero_image:
-  image: "/v1633603958/2021/20211001_110811-01-01_rxgamp.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1633603958/2021/20211001_110811-01-01_rxgamp.jpg"
   alt: '"Coffeeneuring Challenge: C+1" graphic.'
   caption: 'Image credit: Chasing Mailboxes.'
 external_link: https://chasingmailboxes.com/2021/10/05/coffeeneuring-challenge-2021-the-c1-edition/

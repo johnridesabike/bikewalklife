@@ -6,7 +6,7 @@ draft: false
 title: Our transportation system is a disaster to human life, and no one cares
 author: John Jackson
 hero_image:
-  image: "/v1652556382/2022/Georgia_road_fatalities_this_year__1182_October_20__2016_bk8ncq.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1652556382/2022/Georgia_road_fatalities_this_year__1182_October_20__2016_bk8ncq.jpg"
   alt:
     'Traffic sign that reads: "GA ROADWAY FATALITIES THIS YEAR: 1182 / DRIVE
     ALERT."'

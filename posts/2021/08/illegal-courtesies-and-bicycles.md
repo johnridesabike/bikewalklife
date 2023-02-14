@@ -11,7 +11,7 @@ draft: false
 title: 'Illegal courtesies: what they are and how to handle them while biking'
 author: John Jackson
 hero_image:
-  image: "/v1628076834/2021/Alphonsegaston_l4belp.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1628076834/2021/Alphonsegaston_l4belp.jpg"
   alt: 'Alphonse and Gaston comic titled "You first, my dear." Dialogue: "You first,
     my dear Gaston!" "After you, my dear Alphonse!"'
   caption: 'Source: Alphonse and Gaston on Wikipedia.'

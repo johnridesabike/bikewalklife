@@ -10,7 +10,7 @@ draft: false
 title: 'Biking for Coffee: Coffeeneuring 2021, trip #6'
 author: John Jackson
 hero_image:
-  image: "/v1636668753/2021/Coffeeneuring_2021_day_6_ybyzgo.jpg"
+  image: "https://res.cloudinary.com/bike-walk-life/image/upload/v1636668753/2021/Coffeeneuring_2021_day_6_ybyzgo.jpg"
   alt: 'Biking for Coffee #6'
   caption: ''
 external_link: ''
