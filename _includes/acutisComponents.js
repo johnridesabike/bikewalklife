@@ -4,12 +4,14 @@ const { icons } = require("feather-icons");
 const Image = require("@11ty/eleventy-img");
 const postcss = require("postcss");
 const postcssPresetEnv = require("postcss-preset-env");
+const postcssGlobalData = require("@csstools/postcss-global-data");
 const { cloudinary_url } = require("../_data/config.json");
 
 const postcssWithOptions = postcss([
-  postcssPresetEnv({
-    importFrom: path.resolve(__dirname, "..", "assets", "style.css"),
+  postcssGlobalData({
+    files: [path.resolve(__dirname, "..", "assets", "style-global-data.css")],
   }),
+  postcssPresetEnv(),
 ]);
 
 const postcssCache = new Map();
