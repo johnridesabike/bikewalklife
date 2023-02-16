@@ -110,12 +110,6 @@ module.exports = (eleventyConfig) => {
       }
     });
   }
-  eleventyConfig.setBrowserSyncConfig({
-    ...eleventyConfig.browserSyncConfig,
-    // Speed/clean up build time
-    ui: false,
-    ghostMode: false,
-  });
   return {
     templateFormats: ["md", "acutis", "html", "11ty.js"],
     markdownTemplateEngine: false,
