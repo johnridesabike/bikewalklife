@@ -27,9 +27,9 @@
       {% match linkedHeader
          with true %}
         {% Link href=url tabIndex=!-1 %}
-          {% Entry_HeroImage image alt build index /%}
+          {% Entry_HeroImage image alt index /%}
         {% /Link %}
-      {% with false %} {% Entry_HeroImage image alt build index /%}
+      {% with false %} {% Entry_HeroImage image alt index /%}
       {% /match %}
       {% match caption
          with null

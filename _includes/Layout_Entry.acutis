@@ -54,7 +54,6 @@
    config
    strings
    build
-   page
    url
    collections
    title
@@ -180,7 +179,6 @@
 %}
 <main>
   {% Entry
-     page
      author
      content
      url
@@ -203,7 +201,7 @@
 <hr class="separator">
 <aside class="ui-font">
   {% match collections with {pages: <about: {data: {intro: !intro, image_small}}>} %}
-    {% Entry_About description=intro avatar=image_small config strings url collections / %}
+    {% Entry_About description=intro avatar=image_small config strings collections / %}
   {% with _ %} {% /match %}
   <hr class="separator">
   {% Subscribe config strings /%}

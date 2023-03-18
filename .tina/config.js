@@ -1,4 +1,5 @@
 import { defineConfig } from "tinacms";
+import slugify from "@sindresorhus/slugify";
 import authorData from "../_data/authors.json";
 
 // Your hosting provider likely exposes this as an environment variable
@@ -13,6 +14,15 @@ function nonEmpty(value) {
     return "This field can not be empty.";
   } else {
     return null;
+  }
+}
+
+function formatMonth(i) {
+  let month = i + 1;
+  if (month < 10) {
+    return "0" + String(month);
+  } else {
+    return String(month);
   }
 }
 
@@ -37,6 +47,21 @@ export default defineConfig({
         label: "Blog Posts",
         path: "posts",
         format: "md",
+        ui: {
+          filename: {
+            readOnly: false,
+            slugify: (values) => {
+              const date = values.date ? new Date(values.date) : null;
+              return [
+                date ? date.getFullYear() : null,
+                date ? formatMonth(date.getMonth()) : null,
+                values.title ? slugify(values.title) : "untitled",
+              ]
+                .filter(Boolean)
+                .join("/");
+            },
+          },
+        },
         fields: [
           {
             name: "title",

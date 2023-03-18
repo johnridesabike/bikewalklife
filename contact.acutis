@@ -5,7 +5,6 @@
   config
   strings
   build
-  page
   collections
   url
   tags

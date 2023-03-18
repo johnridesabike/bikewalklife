@@ -40,7 +40,6 @@
     config
     strings
     build
-    page
     url
     collections
     absoluteUrl

@@ -4,7 +4,6 @@
   config
   strings
   build
-  page
   collections
   title
   absoluteUrl
@@ -48,7 +47,6 @@
       index
   %}
     {% Entry
-        page
         author
         content
         url
