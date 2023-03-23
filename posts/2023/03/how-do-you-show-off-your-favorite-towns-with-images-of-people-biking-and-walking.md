@@ -1,6 +1,6 @@
 ---
 title: >-
-  How do you show off your favorite towns? with images of people biking and
+  How do you show off your favorite towns? With images of people biking and
   walking
 author: John Jackson
 date: '2023-03-23T23:00:00.000Z'
