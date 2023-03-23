@@ -31,7 +31,7 @@ As I read through the rest of their list, [which you can view here for yourself]
 
 ![A photo of people biking in Covington.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1679612037/2023/southern_living_covington_s8pliz.jpg)
 
-(Photo credit: Southern Living and Kevin Garrett for Louisiananorthshore.com)
+(Photo credit: Southern Living and Kevin Garrett.)
 
 About twenty-one of them depict a public street or a sidewalk. Of these, eight show people walking, three show people biking, and one shows a horse-drawn carriage. While several of them also contain a minimal number of parked cars, only three show any cars driving on the street.
 
@@ -39,7 +39,7 @@ With this unscientific analysis, I believe it's safe to say that we, or at least
 
 ![A photo of a woman with a bicycle in St. Augustine.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1679612040/2023/southern_living_st_aug_pwscc6.webp)
 
-(Photo credit: Southern Living and Robbie Caponetto)
+(Photo credit: Southern Living and Robbie Caponetto.)
 
 This couldn't be more at odds with the reality of what real-life "southern living" has become for most of us. Southern towns experienced most of their growth in the post-war era when growth was driven by increased car ownership and highway expansion. We're living in the fallout of that today. Our communities are choked full of oversized roads and parking lots that are overflowing with SUVs. Living that kind of idyllic, magazine-cover lifestyle is simply impossible for most of us now.
 
