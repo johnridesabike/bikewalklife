@@ -30,7 +30,7 @@ Illegal courtesies are when car drivers try to do something nice to bike riders,
 
 Anecdotally, I've observed illegal courtesies increase in my city as we built more bicycle infrastructure. Sometimes it feels like a "good" problem to have. After all, wouldn't the world be a better place if everyone was _too_ polite to each other?
 
-![Alphonse and Gaston comic titled "You first, my dear." Dialogue: "You first, my dear Gaston!" "After you, my dear Alphonse!"](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1628076834/2021/Alphonsegaston_l4belp.jpg)
+![Alphonse and Gaston comic titled "You first, my dear." Dialogue: "You first, my dear Gaston!" "After you, my dear Alphonse!"](https://res.cloudinary.com/bike-walk-life/image/upload/v1628076834/2021/Alphonsegaston_l4belp.jpg)
 
 (Source: [Alphonse and Gaston on Wikipedia](https://en.wikipedia.org/wiki/Alphonse_and_Gaston).)
 

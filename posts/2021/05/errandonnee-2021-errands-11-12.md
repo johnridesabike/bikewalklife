@@ -24,7 +24,7 @@ Errandonnee is a challenge where you have 12 days to complete 12 errands by bicy
 
 I already visited one coffee shop earlier during this challenge, so I mixed it up this day and rode to [Parker's Pantry](https://www.facebook.com/parkerspantryatthepark/). It's a restaurant right by one of Columbus' main public parks. In spite of the area's lack of official bike parking, it's a pleasant place to bike or walk to.
 
-![My bicycle in front of a storefront.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1621601948/2021/IMG_8478_ohogjn.jpg)
+![My bicycle in front of a storefront.](https://res.cloudinary.com/bike-walk-life/image/upload/v1621601948/2021/IMG_8478_ohogjn.jpg)
 
 <dl>
 <dt>Date</dt>
@@ -39,7 +39,7 @@ I already visited one coffee shop earlier during this challenge, so I mixed it u
 
 On the final day of my 12-day errand spree, I joined a group ride around the Midtown area. This was an official event sponsored by [Midtown, Inc.](https://midtowncolumbusga.org/) and came with a police escort. This neighborhood is already quite bikable, so the escort was more of a bonus than an necessity. Anyone comfortable on a bike could follow the same route on their own.
 
-![A group photo of bicycle riders.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1621602312/2021/189396022_5783694225006230_2767838860742330780_n_ut0k3j.jpg)
+![A group photo of bicycle riders.](https://res.cloudinary.com/bike-walk-life/image/upload/v1621602312/2021/189396022_5783694225006230_2767838860742330780_n_ut0k3j.jpg)
 
 Image credit: [Midtown, Inc. on Instagram](https://www.instagram.com/p/CPHKi90NBUZ/).
 

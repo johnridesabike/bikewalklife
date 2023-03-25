@@ -28,7 +28,7 @@ I bike to work most days already, so this almost didn't feel like a real errand 
 
 Pictured below is my bicycle on my commute route with its super-professional-business-looking Ortlieb Urban pannier.
 
-![A photo of my bicycle in front of a "no motor vehicles" sign beside a trail.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1621268619/2021/IMG_8443_njroxq.jpg)
+![A photo of my bicycle in front of a "no motor vehicles" sign beside a trail.](https://res.cloudinary.com/bike-walk-life/image/upload/v1621268619/2021/IMG_8443_njroxq.jpg)
 
 <dl>
 <dt>Date</dt>
@@ -43,7 +43,7 @@ Pictured below is my bicycle on my commute route with its super-professional-bus
 
 Sure, this seems like it's the same "errand" as [my very first one](https://bikewalk.life/2021/05/errandonnee-2021-errands-1-and-2/), but I'm pretty certain that it still counts. (It's really been a week since I began this challenge?)
 
-![A photo of my bicycle in front of the church's historic marker.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1621268749/2021/IMG_8424_wdfng3.jpg)
+![A photo of my bicycle in front of the church's historic marker.](https://res.cloudinary.com/bike-walk-life/image/upload/v1621268749/2021/IMG_8424_wdfng3.jpg)
 
 <dl>
 <dt>Date</dt>
@@ -58,7 +58,7 @@ Sure, this seems like it's the same "errand" as [my very first one](https://bike
 
 It's a crossover episode today. If you're unfamiliar with _coffeeneuring_, it's errandonneering's little sibling, an annual challenge where we ride our bikes to drink hot beverages. For this errand, I rode to one of our local coffee shops, [Midtown Coffee House](https://www.midtowncoffeehouse.com/), for breakfast.
 
-![A photo of a coffee cup on a table beside a bicycle helmet.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1621269001/2021/IMG_8457_liugux.jpg)
+![A photo of a coffee cup on a table beside a bicycle helmet.](https://res.cloudinary.com/bike-walk-life/image/upload/v1621269001/2021/IMG_8457_liugux.jpg)
 
 <dl>
 <dt>Date</dt>

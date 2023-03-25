@@ -21,7 +21,7 @@ excerpt: >
   your neighborhood.
 
 ---
-![Poster for “Bike to Work or There.”](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1610553036/2020/image_ll1p0w.jpg)
+![Poster for “Bike to Work or There.”](https://res.cloudinary.com/bike-walk-life/image/upload/v1610553036/2020/image_ll1p0w.jpg)
 
 Bike to Work (or There) Day will be held this Friday, October 9, in Columbus, Georgia. Considering that many of us aren’t commuting to work in this pandemic era, they’ve modified the holiday this year to encourage people to bike “there.” That could be the grocery store, your friends house, or just around your neighborhood.
 

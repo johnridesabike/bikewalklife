@@ -37,7 +37,7 @@ The driver didn't get away completely scot-free, though. She was charged with ch
 
 As ridiculous as this case is, we would be remiss to merely consider this as a failure of law enforcement. Here's what the site of the crash looks like (on the right, you can see the ghost-bike memorializing Obianuju's death):
 
-![A photo of a rural highway as seen from a car.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1649541387/2022/ga_hwy_11_afcex6.png)
+![A photo of a rural highway as seen from a car.](https://res.cloudinary.com/bike-walk-life/image/upload/v1649541387/2022/ga_hwy_11_afcex6.png)
 
 This does not look like a safe route for bicycles at all. Yet, we had a teenage girl rely on it to get home from work. Even without the drugs and the neglectful law enforcement, our underlying transportation system enables disasters like this to happen all the time.
 

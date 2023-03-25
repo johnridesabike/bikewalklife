@@ -38,11 +38,11 @@ I'm not especially knowledgeable about this project, and I'm sure that it must h
 
 To put this story in context, here's the area they're talking about in  Google Maps' satellite imagery:
 
-[![A satellite map of the Columbus, GA downtown.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1634412667/2021/Parking_oct_2021_labels_nlhtbm.jpg)](https://goo.gl/maps/QXzYwfMDGKq4QFf37)
+[![A satellite map of the Columbus, GA downtown.](https://res.cloudinary.com/bike-walk-life/image/upload/v1634412667/2021/Parking_oct_2021_labels_nlhtbm.jpg)](https://goo.gl/maps/QXzYwfMDGKq4QFf37)
 
 And here's what it looks like with all of the existing parking spaces highlighted. Parking lots are red, and on-street parking is orange:
 
-[![A satellite map of the Columbus, GA downtown with parking spots highlighted.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1634412680/2021/Parking_oct_2021_colored_yyjrxr.jpg)](https://goo.gl/maps/QXzYwfMDGKq4QFf37)
+[![A satellite map of the Columbus, GA downtown with parking spots highlighted.](https://res.cloudinary.com/bike-walk-life/image/upload/v1634412680/2021/Parking_oct_2021_colored_yyjrxr.jpg)](https://goo.gl/maps/QXzYwfMDGKq4QFf37)
 
 This is a quick-and-dirty, conservative depiction of the actual parking usage. One of those red rectangles is a multi-story parking garage, and at least one of the buildings has a parking deck underneath it, which I did not highlight.
 

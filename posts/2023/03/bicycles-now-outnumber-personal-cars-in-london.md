@@ -17,7 +17,7 @@ In 2022, cycles were the largest category of daytime traffic in London, accordin
 
 Bicycles don't outnumber other vehicles overall. London hosts a diverse mixture of vehicles, including bicycles, motorcycles, busses, lorries, vans, taxis, and personal cars. Of those categories, bicycles are now the largest. Walking, without a vehicle, is still the primary way most people travel.
 
-![A graph showing the proportion of vehicles at 30 locations in the city.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1679397868/2023/Appendix_6_Transport_Trends_Graphs_and_Charts_-_figure_3_xfib2u.png)
+![A graph showing the proportion of vehicles at 30 locations in the city.](https://res.cloudinary.com/bike-walk-life/image/upload/v1679397868/2023/Appendix_6_Transport_Trends_Graphs_and_Charts_-_figure_3_xfib2u.png)
 
 Image credit: [Planning and Transportation Committee agenda](https://democracy.cityoflondon.gov.uk/ieListDocuments.aspx?CId=143&MId=23426).
 

@@ -32,7 +32,7 @@ Mismatched expectations aside, the ride itself was a pleasure. I look forward to
 
 Finally, to make this a real _errand_, opposed to a recreational ride, I charted it on Ride Spot. This is my first time using that app, so I hope I did everything correctly!
 
-[![You can view this route on Ride Spot here](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1620934611/2021/route-302520_dklou8.jpg)](https://ridespot.org/rides/302520)
+[![You can view this route on Ride Spot here](https://res.cloudinary.com/bike-walk-life/image/upload/v1620934611/2021/route-302520_dklou8.jpg)](https://ridespot.org/rides/302520)
 
 <dl>
 <dt>Date</dt>

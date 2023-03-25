@@ -25,8 +25,8 @@ The "Cycling Professor" ([@fietsprofessor](https://twitter.com/fietsprofessor)) 
 
 Here are a couple of the candidates so far:
 
-[!["Things kids have sacrificed for drivers: playing on their street, safe school streets, walking to school, walking to the park, random play, crossing the street, playing at night, independence, quality street life, air quality, etc... Things drivers have sacrificed for kids: "](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1639657897/2021/FGa8y8_XwAYyHEd_vraxfw.jpg)](https://twitter.com/fietsprofessor/status/1470070056847564803?s=20)
+[!["Things kids have sacrificed for drivers: playing on their street, safe school streets, walking to school, walking to the park, random play, crossing the street, playing at night, independence, quality street life, air quality, etc... Things drivers have sacrificed for kids: "](https://res.cloudinary.com/bike-walk-life/image/upload/v1639657897/2021/FGa8y8_XwAYyHEd_vraxfw.jpg)](https://twitter.com/fietsprofessor/status/1470070056847564803?s=20)
 
-[![A cartoon that shows houses with various personal objects taking up space in front of them on the street, with text explaining that all of them are prohibited except for the car.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1639657908/2021/FGbyciJXEAkHDEl_pj3qik.png)](https://twitter.com/fietsprofessor/status/1470129179068973057?s=20)
+[![A cartoon that shows houses with various personal objects taking up space in front of them on the street, with text explaining that all of them are prohibited except for the car.](https://res.cloudinary.com/bike-walk-life/image/upload/v1639657908/2021/FGbyciJXEAkHDEl_pj3qik.png)](https://twitter.com/fietsprofessor/status/1470129179068973057?s=20)
 
 Do you have a #MostPowerfulMobilityMeme for 2021? [There are a lot of great submissions so far in the Twitter hashtag](https://twitter.com/hashtag/PowerfulMobilityMeme?src=hashtag_click).

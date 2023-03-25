@@ -24,7 +24,7 @@ The paper, published late 2021, is titled [Premature Mortality of 2050 High Bike
 
 It turns out that the health benefits outweigh everything else, and it's not even close. This chart shows how physical activity saves far more lives than the dangers combined, based on replacing a mere 8% of car trips with bikes:
 
-![A graph showing the premature deaths caused by physical activity, air pollution, and traffic fatalities in different countries.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1641472907/2022/ehp9073_f3_vwcgkz.jpg "Annual premature deaths in 2050 by country and health determinant.")
+![A graph showing the premature deaths caused by physical activity, air pollution, and traffic fatalities in different countries.](https://res.cloudinary.com/bike-walk-life/image/upload/v1641472907/2022/ehp9073_f3_vwcgkz.jpg "Annual premature deaths in 2050 by country and health determinant.")
 
 This is the first study that's analyzed bicycling's impact on global mortality, and its findings are a conservative estimate based on existing numbers. It's important to recognize that this study doesn't account for other variables, such as how many driver's lives would be saved from fewer crashes or how "vision zero" policies can protect even more people.
 

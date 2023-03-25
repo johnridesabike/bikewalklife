@@ -54,7 +54,7 @@ It’s a video of me biking home from work. Even TikTok knows that our transport
 
 Viral for me is not necessarily viral for everyone. In the TikTok world, the most popular videos get millions of views. Most of my videos get a few hundred. Occasionally, one gets lucky and reaches a few thousand. Here’s a chart from my video view statistics:
 
-![A bar chart depicting video views over time. A few small bars are on the left and large bars are on the right, showing peak views at 30K in one day.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1654374600/2022/Screen_Shot_2022-06-04_at_2.05.02_PM_fjlkm2.png)
+![A bar chart depicting video views over time. A few small bars are on the left and large bars are on the right, showing peak views at 30K in one day.](https://res.cloudinary.com/bike-walk-life/image/upload/v1654374600/2022/Screen_Shot_2022-06-04_at_2.05.02_PM_fjlkm2.png)
 
 The bumps on the left used to look like giant spikes, but then Memorial Day weekend came and flattened everything in comparison.
 

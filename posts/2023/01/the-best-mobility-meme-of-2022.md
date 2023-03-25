@@ -19,6 +19,6 @@ Twitter's Cycling Professor ([@fietsprofessor](https://twitter.com/fietsprofesso
 
 Here is the winning submission ([Twitter link](https://twitter.com/fietsprofessor/status/1609598032001081344)):
 
-![A cartoon in which two persons walk across a car parking lot full of cars and then spot two e-scooters parked. They say "These shit e-scooters are everywhere!".](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1673112089/2023/mobilitymeme2022winner_bocula.jpg)
+![A cartoon in which two persons walk across a car parking lot full of cars and then spot two e-scooters parked. They say "These shit e-scooters are everywhere!".](https://res.cloudinary.com/bike-walk-life/image/upload/v1673112089/2023/mobilitymeme2022winner_bocula.jpg)
 
 You can view the other mobility meme candidates at the Twitter link above, as well as the winners from previous years. I look forward to seeing what new memes, comics, and other creative mobility messages 2023 brings us!

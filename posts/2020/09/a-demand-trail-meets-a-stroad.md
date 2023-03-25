@@ -23,7 +23,7 @@ excerpt: >
 ---
 This tiny trail has existed since before I moved here, five years ago. It's a “demand trail.” Those are formed when people regularly need to cross an area with no paved path.
 
-![Photograph of a trail across grass and leading to a road.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1610553036/2020/img_5002.jpeg)
+![Photograph of a trail across grass and leading to a road.](https://res.cloudinary.com/bike-walk-life/image/upload/v1610553036/2020/img_5002.jpeg)
 
 Some storefronts are across the street. A neighborhood is behind me. But even if I had a wider shot, you still wouldn't be able to see any crosswalks. There aren't any in sight.
 

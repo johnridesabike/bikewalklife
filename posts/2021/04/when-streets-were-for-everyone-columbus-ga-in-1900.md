@@ -31,7 +31,7 @@ Last year, [we saw the 1906 "A Trip Down Market Street" video restored in 4K](ht
 
 This got me thinking: what if we could promote similar visuals from the rest of our cities? So I began searching the [Digital Library of Georgia](https://dlg.usg.edu/) for images in my current town of residence, Columbus, GA. The results were limited, but I found this particularly notable photo:
 
-[![Historic photo of Springer Opera House.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1618078636/2021/mus125_lstygl.jpg)](https://dlg.usg.edu/record/dlg_vang_mus125)
+[![Historic photo of Springer Opera House.](https://res.cloudinary.com/bike-walk-life/image/upload/v1618078636/2021/mus125_lstygl.jpg)](https://dlg.usg.edu/record/dlg_vang_mus125)
 
 Image credit: Georgia Archives & Digital Library of Georgia.
 
@@ -39,7 +39,7 @@ According to the DLG's metadata, this was taken between 1895 and 1900. It depict
 
 Although the photographer may have focused on the Springer, I'm more interested in the streets around it. We can see people on foot, horses, trolleys and even a bicycle just like in the Market Street video. We can tell that they're all moving at about equal speeds. It's far safer, slower, and more diverse than our car-dominated version of the same street.
 
-[![Google Street view of Springer Opera House today.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1618149220/2021/Screen_Shot_2021-04-11_at_15.14.30_j5tjsi_gzxsr5.jpg)](https://goo.gl/maps/9G3NTcnKevZaAxcy6)
+[![Google Street view of Springer Opera House today.](https://res.cloudinary.com/bike-walk-life/image/upload/v1618149220/2021/Screen_Shot_2021-04-11_at_15.14.30_j5tjsi_gzxsr5.jpg)](https://goo.gl/maps/9G3NTcnKevZaAxcy6)
 
 The modern version of that corner is sterile in comparison. The diverse mobility styles have all been replaced by cars. It is too dangerous, not to mention illegal, for people to walk in this street now.
 

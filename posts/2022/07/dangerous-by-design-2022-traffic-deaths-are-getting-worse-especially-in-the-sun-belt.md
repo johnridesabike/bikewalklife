@@ -27,7 +27,7 @@ The report goes into detail about the specific factors that brought us to where 
 
 One interesting piece of data is the twenty most dangerous states. They're almost all in the southern half of the country.
 
-![A map showing the top 20 most dangerous U.S. states.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1658531022/2022/DxD22_Graphs_Top-20-Dangerous-States_okmt1b.png)
+![A map showing the top 20 most dangerous U.S. states.](https://res.cloudinary.com/bike-walk-life/image/upload/v1658531022/2022/DxD22_Graphs_Top-20-Dangerous-States_okmt1b.png)
 
 This isn't surprising. Those are the regions that saw most of their growth happen after the 1960s, when the government aggressively poured money into high-speed highways and sprawling suburban developments. That transportation design is highly dangerous, and it now dominates the Sun Belt.
 

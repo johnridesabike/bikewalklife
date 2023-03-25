@@ -32,7 +32,7 @@ If you don't experience that feeling when you commute, you're not alone. As the 
 
 Here's a graph from the article, showing how different activities intersect with a spectrum of mental states:
 
-![A chart of different mental states for cycling, public transport, and car driving.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1619734019/2021/rapm_a_1912947_f0002_b_bb13xb.jpg)
+![A chart of different mental states for cycling, public transport, and car driving.](https://res.cloudinary.com/bike-walk-life/image/upload/v1619734019/2021/rapm_a_1912947_f0002_b_bb13xb.jpg)
 
 This doesn't mean any one mode is superior, but I can't help but notice that riding a bicycle falls squarely in the upper-right corner, with _flow_ in its center.
 

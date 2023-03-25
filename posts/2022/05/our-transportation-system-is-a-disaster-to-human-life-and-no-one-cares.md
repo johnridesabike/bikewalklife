@@ -40,7 +40,7 @@ Yet, in the real-life version of this story, the scandalous data has always been
 out in the open. People are so unfazed that the government itself even
 _advertises_ it:
 
-![Traffic sign that reads: "GA ROADWAY FATALITIES THIS YEAR: 1182 / DRIVE ALERT."](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1652556382/2022/Georgia_road_fatalities_this_year__1182_October_20__2016_bk8ncq.jpg)
+![Traffic sign that reads: "GA ROADWAY FATALITIES THIS YEAR: 1182 / DRIVE ALERT."](https://res.cloudinary.com/bike-walk-life/image/upload/v1652556382/2022/Georgia_road_fatalities_this_year__1182_October_20__2016_bk8ncq.jpg)
 
 (Photo credit:
 [B137 on Wikipedia](https://commons.wikimedia.org/w/index.php?title=File:Georgia_road_fatalities_this_year,_1182_October_20,_2016.jpg&oldid=462484002).)

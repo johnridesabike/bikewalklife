@@ -24,7 +24,7 @@ Errandonnee is a challenge where you have 12 days to complete 12 errands by bicy
 
 This one was short and simple. I stopped by [Maltitude](http://maltitude.com/), our local craft beer store, after work. One feature that makes Maltitude a pleasure to visit is that it has **indoor bicycle parking**! The owners are big bicycle supporters, so I'm happy to support them in return.
 
-![A photo of my bicycle parked inside the Maltitude store.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1621024943/2021/IMG_8336_xmkphx.jpg)
+![A photo of my bicycle parked inside the Maltitude store.](https://res.cloudinary.com/bike-walk-life/image/upload/v1621024943/2021/IMG_8336_xmkphx.jpg)
 
 <dl>
 <dt>Date</dt>
@@ -43,7 +43,7 @@ The Columbus, GA historic district is full of, well, history. There's history in
 
 Pictured below is one notable monument for the Confederate dead. Most of these kinds of monuments were built recently in rebuke to the civil rights movement, but this one was erected in 1879. Partially for that reason, it has so far survived challenges for removal. I believe its most recent challenge was in 2017, [which you can read about here](https://www.ledger-enquirer.com/latest-news/article167739002.html).
 
-![A photo of my bicycle in front of a monument.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1621025432/2021/IMG_8347_i4gzrz.jpg)
+![A photo of my bicycle in front of a monument.](https://res.cloudinary.com/bike-walk-life/image/upload/v1621025432/2021/IMG_8347_i4gzrz.jpg)
 
 <dl>
 <dt>Date</dt>
@@ -60,7 +60,7 @@ I've never gone fishing by bicycle before, so I didn't know what to expect. At f
 
 Another disappointment was that the fish weren't biting today. But I still had a great ride nonetheless.
 
-![A photo of my bicycle carrying a fishing rod.](https://res.cloudinary.com/bike-walk-life/image/upload/t_md_body_retina/f_auto,q_auto/v1621025996/2021/IMG_8380_zepixa.jpg)
+![A photo of my bicycle carrying a fishing rod.](https://res.cloudinary.com/bike-walk-life/image/upload/v1621025996/2021/IMG_8380_zepixa.jpg)
 
 <dl>
 <dt>Date</dt>
