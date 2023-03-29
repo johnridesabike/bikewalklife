@@ -4,7 +4,7 @@
 / %}
 <!-- Entry_OriginalLink -->
 <a href="{{ href }}" target=_blank rel=noopener class="u-in-reply-to">
-  {%~ match strings with {open_linked} %} {{ open_linked }} {% /match ~%}
+  {{ strings.open_linked }}
   <span aria-hidden=true>
     {%~ Icon name="external-link" class=!"icon" / ~%}
   </span>

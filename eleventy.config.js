@@ -87,8 +87,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("assets/webmentions.js");
+  eleventyConfig.addPassthroughCopy("assets/images/");
   eleventyConfig.addPassthroughCopy({
-    "assets/images/nps-bicycle-trail.svg": "favicon.svg",
+    "assets/images/2023/icon-circle-2023.svg": "favicon.svg",
   });
   eleventyConfig.addCollection("posts", (collectionApi) => {
     const coll = collectionApi
@@ -147,6 +148,7 @@ module.exports = (eleventyConfig) => {
       }
     });
   }
+  eleventyConfig.addWatchTarget("./assets/**/*");
   return {
     templateFormats: ["md", "acutis", "html", "11ty.js"],
     markdownTemplateEngine: false,

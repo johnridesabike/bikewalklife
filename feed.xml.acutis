@@ -25,7 +25,7 @@
   </author>
   <icon>
     {{~ site_url ~}}
-    {%~ Favicon file="assets/images/nps-bicycle-trail.svg" width=128 / ~%}
+    {%~ Favicon file="assets/images/2023/icon-circle-2023.svg" width=128 / ~%}
   </icon>
   <rights type="html">{{ copyright }}</rights>
   {% map frontPage with

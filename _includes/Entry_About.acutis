@@ -45,21 +45,19 @@
       {% /Link %}
     {% with _ %} {* Nothing *} {% /match %}
   </p>
-  {% match strings with {contact_text, contact_title} %}
-    <h2 class="entry-page__footer-heading"> {{ contact_title}} </h2>
-    <div class="entry-page__about-content">{{{ contact_text }}}</div>
-    <p class="entry-page__about-link">
-      {% match collections
-        with {pages: <contact: {url: href}>} %}
-        {% Link href %}
-          Contact me
-          <span aria-hidden=true>
-            {% Icon name="arrow-right" class=!"icon" /%}
-          </span>
-        {% /Link %}
-      {% with _ %} {* Nothing *} {% /match %}
-    </p>
-  {% /match %}
+  <h2 class="entry-page__footer-heading"> {{ strings.contact_title}} </h2>
+  <div class="entry-page__about-content">{{{ strings.contact_text }}}</div>
+  <p class="entry-page__about-link">
+    {% match collections
+      with {pages: <contact: {url: href}>} %}
+      {% Link href %}
+        Contact me
+        <span aria-hidden=true>
+          {% Icon name="arrow-right" class=!"icon" /%}
+        </span>
+      {% /Link %}
+    {% with _ %} {* Nothing *} {% /match %}
+  </p>
 </section>
 {% /match %}
 <!-- /Entry_About -->

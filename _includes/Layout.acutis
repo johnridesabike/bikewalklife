@@ -64,13 +64,13 @@
   {%~ /match %}
   {*
     This isn't worth preloading?
-      "/assets/node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-italic.woff2",
+      "/assets/node_modules/@fontsource/source-serif-4/files/source-serif-4-latin-700-italic.woff2",
   *}
   {% map [
-      "/assets/node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-700-normal.woff2",
-      "/assets/node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-italic.woff2",
-      "/assets/node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-normal.woff2",
-      "/assets/node_modules/@fontsource/fira-sans/files/fira-sans-latin-400-normal.woff2"
+      "/assets/node_modules/@fontsource/source-serif-4/files/source-serif-4-latin-700-normal.woff2",
+      "/assets/node_modules/@fontsource/source-serif-4/files/source-serif-4-latin-400-italic.woff2",
+      "/assets/node_modules/@fontsource/source-serif-4/files/source-serif-4-latin-400-normal.woff2",
+      "/assets/node_modules/@fontsource/source-sans-3/files/source-sans-3-latin-400-normal.woff2"
     ]
     with asset
   ~%}
@@ -86,7 +86,7 @@
   <link
     rel=icon
     type=image/png
-    href="{% Favicon file="assets/images/nps-bicycle-trail.svg" width=32 /%}">
+    href="{% Favicon file="assets/images/2023/icon-circle-2023.svg" width=32 /%}">
   <link
     rel=alternate
     type=application/atom+xml
@@ -148,9 +148,7 @@
       </div>
       <footer class="footer__wrapper">
         <div class="small-screen-padding footer">
-          {% match strings with {copyright} ~%}
-            <p class="footer__item footer__copyright">{{{ copyright }}}</p>
-          {% /match ~%}
+          <p class="footer__item footer__copyright">{{{ strings.copyright }}}</p>
           <p class="footer__item">
             {%~ Link href=url_index current=!url ~%}
               Home

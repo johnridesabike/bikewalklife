@@ -1,9 +1,9 @@
 @import "normalize.css";
-@import "@fontsource/fira-sans/400.css";
-@import "@fontsource/source-serif-pro/400.css";
-@import "@fontsource/source-serif-pro/400-italic.css";
-@import "@fontsource/source-serif-pro/700.css";
-@import "@fontsource/source-serif-pro/700-italic.css";
+@import "@fontsource/source-sans-3/400.css";
+@import "@fontsource/source-serif-4/400.css";
+@import "@fontsource/source-serif-4/400-italic.css";
+@import "@fontsource/source-serif-4/700.css";
+@import "@fontsource/source-serif-4/700-italic.css";
 @import "./assets/style-global-data.css";
 
 /*******************************************************************************
@@ -17,6 +17,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  color: var(--color-background);
 }
 
 body,
@@ -74,7 +75,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: var(--color-secondary);
+  color: var(--color-secondary-light);
   text-decoration: underline;
 }
 
@@ -148,7 +149,7 @@ li {
  ******************************************************************************/
 
 .active-page {
-  border-bottom-color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary-light);
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
@@ -162,7 +163,7 @@ li {
 }
 
 .color-secondary {
-  color: var(--color-secondary);
+  color: var(--color-secondary-light);
 }
 
 /*******************************************************************************
@@ -173,15 +174,14 @@ li {
   width: 100%;
 }
 
-.header__wrapper {
-  /* To go behind the border on the menu links */
-  padding-bottom: 2px;
-  box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.25);
-}
-
 .header__title {
   font-size: var(--font-size-xl);
   margin: 0;
+}
+
+.header__title-link {
+  display: block;
+  line-height: 0;
 }
 
 .header__title-link:hover,
@@ -197,10 +197,12 @@ li {
 }
 
 .header__description {
+  max-width: 375px;
   font-family: var(--font-sans-serif);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: var(--color-primary-dark);
-  margin: 0.25em 0;
+  margin: 0;
+  text-align: right;
 }
 
 .menu__link {
@@ -217,8 +219,10 @@ li {
   list-style: none;
   padding: 0;
   display: flex;
-  margin: 0;
+  margin: 4px 0;
   justify-content: center;
+  border-top: 1px solid var(--color-secondary-light);
+  border-bottom: 1px solid var(--color-secondary-light);
 }
 
 .menu__item {
@@ -248,7 +252,7 @@ li {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  color: var(--color-primary-light);
+  color: var(--color-background);
   font-size: var(--font-size-sm);
 }
 
@@ -263,7 +267,7 @@ li {
 .footer__item a:hover,
 .footer__item a:active,
 .footer__item a:focus {
-  color: var(--color-secondary);
+  color: var(--color-secondary-light);
 }
 
 .footer__copyright {
@@ -275,9 +279,8 @@ li {
   border: none;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-color: var(--color-secondary);
+  border-color: var(--color-secondary-light);
   margin: 2em auto;
-  opacity: 0.5;
 }
 
 .skip-nav {
@@ -296,7 +299,7 @@ li {
   position: fixed;
   top: 10px;
   left: 10px;
-  background: #fff;
+  background: var(--color-background);
   z-index: 1;
   width: auto;
   height: auto;
@@ -308,7 +311,7 @@ li {
  ******************************************************************************/
 
 .entry__article blockquote {
-  border-left: solid 4px var(--color-secondary);
+  border-left: solid 4px var(--color-secondary-light);
   margin: 1em 0;
   padding: 0 1em;
 }
@@ -345,8 +348,7 @@ li {
 .entry__author,
 .entry__date {
   font-size: var(--font-size-sm);
-  color: var(--color-primary-dark);
-  opacity: 0.8;
+  color: var(--color-gray);
 }
 
 .entry__content h2 {
@@ -374,22 +376,18 @@ li {
   font-family: var(--font-ui);
   font-size: var(--font-size-xs);
   margin-left: 0.25em;
-  opacity: 0.75;
+  color: var(--color-gray);
 }
 
 .entry__draft {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
-  color: var(--color-secondary);
+  color: var(--color-secondary-light);
 }
 
 /*******************************************************************************
  * Subscribe component
  ******************************************************************************/
-
-.subscribe {
-  color: var(--color-primary-dark);
-}
 
 .subscribe__heading {
   text-align: center;
@@ -401,10 +399,6 @@ li {
  ******************************************************************************/
 
 @media (prefers-color-scheme: dark) {
-  .header__wrapper {
-    box-shadow: 0 8px 4px -4px rgba(255, 255, 255, 0.125);
-  }
-
   .footer__wrapper {
     background-color: var(--color-primary-light);
     box-shadow: 0 -4px 4px 0 rgba(255, 255, 255, 0.125),
@@ -413,7 +407,7 @@ li {
   }
 
   .footer {
-    color: var(--color-primary-dark);
+    color: var(--color-text);
   }
 
   .footer a {
