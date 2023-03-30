@@ -205,10 +205,6 @@ li {
   text-align: right;
 }
 
-.menu__link {
-  padding-bottom: 0.25em;
-}
-
 .menu__link:hover,
 .menu__link:active,
 .menu__link:focus {
