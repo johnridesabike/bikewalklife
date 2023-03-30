@@ -129,7 +129,7 @@ li {
 .icon {
   color: currentColor;
   height: 1em;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 
 .font-size-medium {
