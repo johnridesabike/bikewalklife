@@ -52,7 +52,7 @@ if (canonicalUrl instanceof HTMLLinkElement) {
       div.appendChild(
         createMentions(
           reposts,
-          "Retweeted by",
+          "Reposted by",
           "entry-page__webmentions-reposts"
         )
       );
