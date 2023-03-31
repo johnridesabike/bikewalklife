@@ -159,7 +159,6 @@ export default defineConfig({
             label: "Body",
             /* The Tina rich-text editor is broken. Use a plain-old string until
              * it's fixed.
-             * https://github.com/tinacms/tinacms/issues/3491
              * https://github.com/tinacms/tinacms/issues/3118 */
             type: "string",
             isBody: true,
