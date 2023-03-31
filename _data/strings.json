@@ -1,13 +1,13 @@
 {
-  "_template": "ui_strings",
   "open_linked": "Open linked page",
   "archive_link": "View the archive",
-  "copyright": "Copyright © 2022 John Jackson. This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>.",
+  "copyright": "Copyright © 2023 John Jackson. This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License</a>.",
   "contact_title": "Have a comment?",
   "contact_text": "<p>This blog doesn’t use comments, but I would still be delighted to hear your thoughts. You can email me tips, questions, concerns, or just say “hi.”</p>",
   "email": "johnbicyclejackson@icloud.com",
   "subscribe_intro": "<p>This site won't interrupt you with annoying popups asking for your email address or to send you notifications, and I don't regularly post on social media. If you want to stay up-to-date, then feel free to use these options below.</p>",
   "subscribe_feed_cta": "Use this link to subscribe in your favorite newsreader. (<a href=\"https://aboutfeeds.com/\">What's this?</a>)",
   "subscribe_email_cta": "Subscribe to receive updates in your email inbox. You will get a summary of new posts once per week.",
-  "contact_form": true
+  "contact_form": true,
+  "_template": "ui_strings"
 }
