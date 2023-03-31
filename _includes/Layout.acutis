@@ -84,6 +84,9 @@
   <link rel=stylesheet href="/assets/style.css">
   <link rel=icon type=image/svg+xml href="/favicon.svg">
   <link
+    rel=apple-touch-icon
+    href="{% Favicon file="assets/images/2023/icon-circle-2023.svg" width=180 /%}">
+  <link
     rel=icon
     type=image/png
     href="{% Favicon file="assets/images/2023/icon-circle-2023.svg" width=32 /%}">
