@@ -4,9 +4,9 @@ It is mostly powered by [Eleventy].
 
 [eleventy]: https://www.11ty.dev
 
-It uses the [Forestry] CMS.
+It uses the [Tina] CMS.
 
-[forestry]: https://forestry.io
+[tina]: https://tina.io/
 
 Its templates are compiled with [Acutis], a language that I invented.
 
