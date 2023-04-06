@@ -4,7 +4,7 @@ author: John Jackson
 date: '2023-04-06T11:00:00.000Z'
 hero_image:
   image: >-
-    http://res.cloudinary.com/bike-walk-life/image/upload/v1680779588/stthbike_ommf2h.jpg
+    https://res.cloudinary.com/bike-walk-life/image/upload/v1680779652/2023/stthbike_pkaytm.jpg
   alt: A photo from a parade with a person dressed as a Jedi on a bicycle.
   caption: 'Photo credit: Strut the Hooch.'
 excerpt: >-
@@ -15,6 +15,7 @@ tags:
   - untagged
 draft: false
 ---
+
 
 The Sheldon Brown website apparently offers a new AI service. Fed up with ChatGPT giving them wrong information about bicycles, they have decided to start a business reviewing its machine-generated output.
 
