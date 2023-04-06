@@ -347,10 +347,6 @@ li {
   color: var(--color-gray);
 }
 
-.entry__content h2 {
-  text-transform: uppercase;
-}
-
 .entry__footer {
   font-family: var(--font-ui);
   font-size: var(--font-size-md);
