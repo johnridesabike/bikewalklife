@@ -11,7 +11,7 @@
  ******************************************************************************/
 html {
   font-size: var(--font-base-size);
-  line-height: 1.50967;
+  line-height: 1.35;
 }
 
 body {
@@ -333,7 +333,7 @@ li {
   font-size: var(--font-size-xl);
   text-transform: none;
   margin: 0.5em 0 0.5em 0;
-  line-height: 1.25;
+  line-height: 1.2;
   flex-basis: 100%;
 }
 
@@ -410,7 +410,6 @@ li {
 @media screen and (--phone-only) {
   html {
     font-size: var(--font-base-size-mobile);
-    line-height: 1.58566;
   }
 
   .entry__body p > img:only-child,
