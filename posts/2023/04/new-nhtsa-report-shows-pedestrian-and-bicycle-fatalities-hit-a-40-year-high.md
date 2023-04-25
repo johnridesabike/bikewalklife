@@ -22,7 +22,7 @@ After a 15 month wait, the National Highway Traffic Safety Administration (NHTSA
 
 [![A chart showing the number of annual bicyclist fatalities with a 40 year high.](https://res.cloudinary.com/bike-walk-life/image/upload/v1682462062/2023/1.4.1-number-of-annual-bicyclist-fatalities_z8qs6a.png)](https://data.bikeleague.org/show-your-data/national-data/nation-bicyclist-pedestrian-road-safety/#number-of-annual-bicyclist-fatalities)
 
-[![A chart showing the number of annual pedestrian fatalities with a 40 year high.](1https://res.cloudinary.com/bike-walk-life/image/upload/v1682462065/2023/1.4.7-number-of-annual-pedestrian-fatalities_hrm8xw.png)](https://data.bikeleague.org/show-your-data/national-data/nation-bicyclist-pedestrian-road-safety/#number-of-annual-pedestrian-fatalities)
+[![A chart showing the number of annual pedestrian fatalities with a 40 year high.](https://res.cloudinary.com/bike-walk-life/image/upload/v1682462065/2023/1.4.7-number-of-annual-pedestrian-fatalities_hrm8xw.png)](https://data.bikeleague.org/show-your-data/national-data/nation-bicyclist-pedestrian-road-safety/#number-of-annual-pedestrian-fatalities)
 
 [Smart Growth America, the organization behind the Dangerous By Design report, has a reaction to the data here](https://smartgrowthamerica.org/far-more-people-walking-were-struck-and-killed-in-2021-than-previously-predicted/). They explain how the extreme delays in the report are hurting efforts to improve safety, and they don't mince words when it comes to the severity of these numbers:
 
