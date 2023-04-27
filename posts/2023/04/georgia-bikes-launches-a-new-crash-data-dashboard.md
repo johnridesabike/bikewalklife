@@ -3,10 +3,9 @@ title: Georgia Bikes launches a new crash data dashboard
 author: John Jackson
 date: 2023-04-27T11:40:00.000Z
 hero_image:
-  image: >-
-    https://res.cloudinary.com/bike-walk-life/image/upload/v1682594571/2023/gabikecrashdashboardmap_gmjxxt.jpg
-  alt: A map showing locations of crashes throughout Georgia.
-  caption: 'Image credit: Georgia Bikes.'
+  image: ''
+  alt: ''
+  caption: ''
 excerpt: >-
   Advocacy organization Georgia Bikes has launched a dashboard to explore
   bicycle and pedestrian crash data in the Peach State. It is freely available
