@@ -104,17 +104,19 @@
     <div class="page">
       <a class="skip-nav" href="#content"> Skip to content. </a>
       <header class="ui-font header__wrapper">
-        <div class="small-screen-padding header">
-          {% match tags with ["page_index"] %}
-            <h1 class="header__title reading-font p-name">
-              {% Logo url_index current=url title_site /%}
-            </h1>
-          {% with _ %}
-            <p class="header__title reading-font">
-              {% Logo url_index current=url title_site /%}
-            </p>
-          {% /match %}
-          <p class="header__description"> {{ description }} </p>
+        <div class="header">
+          <div class="header__logo">
+            {% match tags with ["page_index"] %}
+              <h1 class="header__title reading-font p-name">
+                {% Logo url_index current=url title_site /%}
+              </h1>
+            {% with _ %}
+              <p class="header__title reading-font">
+                {% Logo url_index current=url title_site /%}
+              </p>
+            {% /match %}
+            <p class="header__description"> {{ description }} </p>
+          </div>
           <nav aria-label="main navigation">
             <ul class="menu__list">
               <li class="menu__item">
