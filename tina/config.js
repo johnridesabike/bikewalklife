@@ -136,17 +136,6 @@ export default defineConfig({
               "The URL to the external page this post is about, if applicable.",
           },
           {
-            name: "tags",
-            type: "string",
-            list: true,
-            required: true,
-            label: "Tags",
-            description: "Tags are used to display posts related to this post.",
-            ui: {
-              defaultItem: () => "untagged",
-            },
-          },
-          {
             name: "draft",
             label: "Draft",
             type: "boolean",
