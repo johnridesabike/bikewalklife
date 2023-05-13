@@ -13,7 +13,6 @@
   isoDate = string
   linkedHeader = false | true
   strings = {open_linked: string}
-  tags = [string]
   title = string
   url = string
 / %}
@@ -72,7 +71,6 @@
       {% with !href %} {% Entry_OriginalLink href strings / %}
       {% /match %}
     </footer>
-    {% Entry_Tags build tags /%}
   </div>
 </article>
 <!-- /Entry -->

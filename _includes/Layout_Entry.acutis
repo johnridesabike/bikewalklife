@@ -13,7 +13,6 @@
   build = {environment: string}
   next = ?{data: {title: string}, url: string}
   previous = ?{data: {title: string}, url: string}
-  tags = [string]
   eleventy = {generator: string}
   collections =
     {
@@ -58,7 +57,6 @@
    collections
    title
    absoluteUrl
-   tags
    eleventy
    metadata=!{
     description: excerpt,
@@ -193,7 +191,6 @@
      external_link
      build
      strings
-     tags
      index=0
   / %}
 </main>
@@ -208,7 +205,6 @@
 </aside>
 <hr class="separator">
 <nav class="entry-page__nav">
-  {* {% Related tags collections self=permalink limit=8 /%} *}
   <h2 class="entry-page__footer-heading"> Other recent posts </h2>
   <ul class="entry-page__recent-list">
     {% match previous

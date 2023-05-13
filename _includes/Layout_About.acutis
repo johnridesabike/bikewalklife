@@ -43,7 +43,6 @@
     url
     collections
     absoluteUrl
-    tags=[]
     eleventy
     head=!#%}
       <style>

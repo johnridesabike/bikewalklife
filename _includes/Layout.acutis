@@ -33,7 +33,7 @@
       }
   build = {environment: string}
   strings = {copyright: string}
-  tags = [string]
+  tags = ?[string]
   children = string
   head = ?string
 / ~%}
@@ -106,7 +106,7 @@
       <header class="ui-font header__wrapper">
         <div class="header">
           <div class="header__logo">
-            {% match tags with ["page_index"] %}
+            {% match tags with !["page_index"] %}
               <h1 class="header__title reading-font p-name">
                 {% Logo url_index current=url title_site /%}
               </h1>

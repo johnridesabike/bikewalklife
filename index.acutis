@@ -36,7 +36,6 @@
           draft,
           external_link,
           visible: true,
-          tags,
           pub: {
             @pub: true,
             url,
@@ -61,7 +60,6 @@
         absoluteUrl
         external_link
         strings
-        tags
         index
     /%}
     {% match index with 0 %}
