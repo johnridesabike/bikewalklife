@@ -15,12 +15,11 @@
   --font-pre: "courier 10 pitch", courier, monospace;
   --font-base-size: 18px;
   --font-base-size-mobile: 16px;
-  --font-size-xs: calc(1em / 1.25); /* 16 */
-  --font-size-sm: calc(1em / 1.125); /* 17.78 */
-  --font-size-md: calc(1em * 1); /* 20 */
-  --font-size-lg: calc(1em * 1.25); /* 25 */
-  --font-size-xl: calc(1em * 1.5); /* 30 */
-  --font-size-xxl: calc(1em * 1.75); /* 35 */
+  --font-size-xs: calc(1em / 1.25);
+  --font-size-sm: calc(1em / 1.125);
+  --font-size-md: calc(1em * 1);
+  --font-size-lg: calc(1em * 1.5);
+  --font-size-xl: calc(1em * 1.75);
   --letter-spacing-allcaps: 0.06em;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
