@@ -47,4 +47,4 @@ I like to think of our Bike Month events as our "greatest hits." They all enjoy 
 
 There's always room for improvement, though. I would love to see a few kinds of smaller events throughout the month to supplement our "hits." Bike-to-work Day also always feels like challenge due to how sprawling our city is. But given that Bicycle Columbus has limited bandwidth, I believe that we used our resources quite effectively with the events we hosted.
 
-It was a pleasure to organize and participate in each of these events this year, and I'm looking forward to help iterate on it for 2024!
+It was a pleasure to organize and participate in each of these events this year, and I'm looking forward to help iterate on them for 2024!
