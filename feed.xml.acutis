@@ -1,38 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-{%~ match
-    config, strings, collections, pub
-  with
-    {title, description, site_url, author_name},
-    {copyright},
-    {pages, frontPage},
-    {@pub: true, absoluteUrl}
-~%}
-  <title>{{ title }}</title>
-  <subtitle>{{ description }}</subtitle>
+{%~ match pub with {@pub: true, absoluteUrl} ~%}
+  <title>{{ config.title }}</title>
+  <subtitle>{{ config.description }}</subtitle>
   <link href="{{ absoluteUrl }}" rel="self"/>
-  {% match pages with <index: {data: {pub: {@pub: true, absoluteUrl}}}> ~%} 
+  {% match collections.pages
+      with <index: {data: {pub: {@pub: true, absoluteUrl}}}> ~%} 
     <link href="{{ absoluteUrl }}" />
     <id>{{ absoluteUrl }}</id>
-  {% with _ %} {* Nothing! *}
+  {%  with _ %} {* Nothing! *}
   {%~ /match ~%}
-  {%~ match frontPage with [{data: {isoDate}}, ..._] ~%}
+  {%~ match collections.frontPage with [{data: {isoDate}}, ..._] ~%}
     <updated>{{ isoDate }}</updated>
   {%~ with _ %} {* Nothing! *}
   {%~ /match %}
   <author>
-    <name>{{ author_name }}</name>
+    <name>{{ config.author_name }}</name>
   </author>
   <icon>
-    {{~ site_url ~}}
+    {{~ config.site_url ~}}
     {%~ Favicon file="assets/images/2023/icon-circle-2023.svg" width=128 / ~%}
   </icon>
-  <rights type="html">{{ copyright }}</rights>
-  {% map frontPage with
+  <rights type="html">{{ strings.copyright }}</rights>
+  {% map collections.frontPage with
      {
        templateContent,
-       data:
-        {title, isoDate, hero_image, pub: {@pub: true, absoluteUrl, excerpt}}
+       data: {title, isoDate, pub: {@pub: true, absoluteUrl, excerpt}}
       }
     ~%}
     <entry>
@@ -40,17 +33,11 @@
       <link rel="alternate" href="{{ absoluteUrl }}" />
       <updated>{{ isoDate }}</updated>
       <id>{{ absoluteUrl }}</id>
-      {% match hero_image with !{image} ~%}
-      <link
-        rel="enclosure"
-        href="{% ImgSrc gravity="auto" width=900 aspect=0.5 image /%}" />
-      {%~ with null ~%} {* no image *}
-      {%~ /match %}
       <summary>{{ excerpt }}</summary>
       <content type="html">{{ templateContent }}</content>
     </entry>
   {% with {data: {pub: {@pub: false}} } %} {* Nothing! *}
   {%~ /map %}
-{% with _, _, _, _ %} {* Nothing! *}
+{% with {@pub: false} %} {* Nothing! *}
 {%~ /match ~%}
 </feed>
