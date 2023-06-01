@@ -1,12 +1,12 @@
 ---
-title: >-
-  League of American Bicyclists announce their 45 latest Bicycle Friendly
-  Community awards
+title: Congratulations to the 2023 Bicycle Friendly Community awards recipients
 author: John Jackson
 date: 2023-06-01T22:00:00.000Z
 excerpt: >-
   On the final day of Bike Month, The League of American Bicyclists announced
-  2023's Bicycle Friendly Community awards.
+  2023's Bicycle Friendly Community awards. Of the 45 towns awarded this year,
+  eight received upgrades from their previous levels and one was brand new. The
+  others renewed their existing level.
 external_link: >-
   https://bikeleague.org/league-of-american-bicyclists-recognizes-45-cities-and-towns-with-new-and-renewing-bicycle-friendly-community-awards/
 draft: false
