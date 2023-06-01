@@ -1,7 +1,7 @@
 ---
-title: Congratulations to the 2023 Bicycle Friendly Community awards recipients
+title: Congratulations to the 2023 Bicycle Friendly Community award recipients
 author: John Jackson
-date: '2023-06-01T22:00:00.000Z'
+date: 2023-06-01T22:00:00.000Z
 excerpt: >-
   On the final day of Bike Month, The League of American Bicyclists announced
   2023's Bicycle Friendly Community awards. Of the 45 towns awarded this year,
@@ -11,8 +11,6 @@ external_link: >-
   https://bikeleague.org/league-of-american-bicyclists-recognizes-45-cities-and-towns-with-new-and-renewing-bicycle-friendly-community-awards/
 draft: false
 ---
-
-
 
 On the final day of Bike Month, The League of American Bicyclists announced 2023's Bicycle Friendly Community awards. The League gives these to cities and towns based on their infrastructure, policies, culture, and other factors. The awards come in several levels: platinum, gold, silver, and bronze. Of the 45 towns awarded this year, eight received upgrades from their previous levels and one was brand new. The others renewed their existing level.
 
