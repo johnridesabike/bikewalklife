@@ -8,6 +8,7 @@ const branch =
 
 const clientId = process.env.TINA_CLIENT_ID || "";
 const token = process.env.TINA_TOKEN || "";
+const indexerToken = process.env.TINA_SEARCH || "";
 
 function nonEmpty(value) {
   if (!value) {
@@ -38,6 +39,12 @@ export default defineConfig({
     loadCustomStore: async () => {
       const pack = await import("next-tinacms-cloudinary");
       return pack.TinaCloudCloudinaryMediaStore;
+    },
+  },
+  search: {
+    tina: {
+      indexerToken: indexerToken,
+      stopwordLanguages: ["eng"],
     },
   },
   schema: {
