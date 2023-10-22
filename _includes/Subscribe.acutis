@@ -7,7 +7,7 @@
       subscribe_email_cta: string,
       subscribe_feed_cta: string
     }
-/ %}
+%}
 <!-- Subscribe -->
 {% match config, strings with
   {title}, {subscribe_intro, subscribe_feed_cta, subscribe_email_cta} %}

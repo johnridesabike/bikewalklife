@@ -2,7 +2,7 @@
   image = string
   alt = ?string
   index = int
-/ %}
+%}
 <!-- Entry_HeroImage -->
 {* 320: mobile size. 900: actual size. *}
 <img

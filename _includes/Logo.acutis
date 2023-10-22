@@ -2,7 +2,7 @@
   url_index = string
   current = string
   title_site = string
-/ %}
+%}
 <!-- Logo -->
 {% Link
   class=!"header__title-link"

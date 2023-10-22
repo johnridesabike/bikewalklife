@@ -32,7 +32,7 @@
        subscribe_email_cta: string,
        subscribe_feed_cta: string
     }
-/ %}
+%}
 {% match pub with {@pub: false} %} {* Don't render unpublished pages *}
 {% with {@pub: true, url, absoluteUrl} %}
 {% Layout

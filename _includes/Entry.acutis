@@ -15,7 +15,7 @@
   strings = {open_linked: string}
   title = string
   url = string
-/ %}
+%}
 <!-- Entry -->
 <article class='h-entry hentry entry__article {{ class ? "" }}'>
   {% match hero_image

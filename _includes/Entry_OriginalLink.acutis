@@ -1,7 +1,7 @@
 {% interface
   href = string
   strings = {open_linked: string}
-/ %}
+%}
 <!-- Entry_OriginalLink -->
 <a href="{{ href }}" target=_blank rel=noopener class="u-in-reply-to">
   {{ strings.open_linked }}

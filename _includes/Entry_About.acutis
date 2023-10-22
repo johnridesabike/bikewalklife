@@ -4,7 +4,7 @@
   collections = {pages: <{url: string}>}
   description = string
   strings = {contact_text: string, contact_title: string}
-/ %}
+%}
 <!-- Entry_About -->
 {% match config with {title: siteTitle} %}
 <section class="entry-page__about">

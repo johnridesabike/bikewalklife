@@ -1,4 +1,4 @@
-{% interface children = string / %}
+{% interface children = string %}
 <!-- VisuallyHidden -->
 {*
   https://github.com/reach/reach-ui/blob/main/packages/visually-hidden/src/index.tsx

@@ -1,4 +1,4 @@
-{% interface name=string / %}
+{% interface name=string %}
 <!-- Entry_Author -->
 <div class="entry__author p-author">
   <div class="h-card">
