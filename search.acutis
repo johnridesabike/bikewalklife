@@ -10,24 +10,19 @@
   tags
   url
   eleventy
+  head=!#%}
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js"></script>
+  {%#
 %}
 <main style="margin: 3em 0;">
   <h1 style="text-align: center;"> Search </h1>
-  <iframe
-    title="Search form"
-    src="https://duckduckgo.com/search.html?width=256&site=bikewalk.life&prefill=Search%20with%20DuckDuckGo&focus=yes"
-    style="
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      width: 324px;
-      height: 40px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      border-style: none;
-    "
-  ></iframe>
+  <div id="search"></div>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+  </script>
 </main>
 {% /Layout %}
 {% /match %}
