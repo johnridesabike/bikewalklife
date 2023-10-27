@@ -17,7 +17,9 @@
   url = string
 %}
 <!-- Entry -->
-<article class='h-entry hentry entry__article {{ class ? "" }}'>
+<article
+  class='h-entry hentry entry__article {{ class ? "" }}'
+  data-pagefind-body>
   {% match hero_image
     with null %}
     {* nothing! *}
