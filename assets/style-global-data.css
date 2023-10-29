@@ -8,10 +8,11 @@
   /**
    * Typography
    */
-  --font-sans-serif: "source sans 3", "helvetica neue", sans-serif;
-  --font-serif: "source serif 4", "charter", serif;
-  --font-ui: "source sans 3", -apple-system, blinkmacsystemfont, "segoe UI",
-    roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", sans-serif;
+  --font-sans-serif: "source sans 3 variable", "helvetica neue", sans-serif;
+  --font-serif: "source serif 4 variable", "charter", serif;
+  --font-ui: "source sans 3 variable", -apple-system, blinkmacsystemfont,
+    "segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue",
+    sans-serif;
   --font-pre: "courier 10 pitch", courier, monospace;
   --font-base-size: 18px;
   --font-base-size-mobile: 16px;
