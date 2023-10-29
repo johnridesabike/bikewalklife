@@ -6,7 +6,7 @@ import { createMediaHandler } from "next-tinacms-cloudinary/dist/handlers";
 const app = express();
 const router = express.Router();
 
-const handler = createMediaHandler({
+const mediaHandler = createMediaHandler({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
@@ -26,12 +26,12 @@ const handler = createMediaHandler({
   },
 });
 
-router.get("/cloudinary/media", handler);
-router.post("/cloudinary/media", handler);
+router.get("/cloudinary/media", mediaHandler);
+router.post("/cloudinary/media", mediaHandler);
 
 router.delete("/cloudinary/:media", (req, res) => {
   req.query.media = ["media", req.params.media];
-  return handler(req, res);
+  return mediaHandler(req, res);
 });
 
 app.use("/api/", router);
