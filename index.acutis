@@ -23,8 +23,7 @@
   {%#
 %}
 <main>
-  {% match collections with {frontPage} ~%}
-  {% map frontPage with
+  {% map collections.frontPage with
       {
         templateContent: content,
         data: {
@@ -70,11 +69,9 @@
       </div>
     {% with _ %} <hr class="separator">
     {% /match %}
-  {% with {data: {visible: false}} %} {* Don't show invisible posts. *}
-  {% with {data: {pub: {@pub: false}}} %} {* Don't show invisible posts. *}
+  {% with {data: {visible: false}}
+     with {data: {pub: {@pub: false}}} %} {* Don't show invisible posts. *}
   {% /map %}
-  {% with _ %} <!-- no frontPage -->
-  {% /match %}
 </main>
 <nav>
   {% match strings, collections

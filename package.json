@@ -16,7 +16,7 @@
     "postbuild": "pagefind --site _site",
     "build": "ELEVENTY_ENV=production eleventy --quiet",
     "clean": "rm -r _site",
-    "start": "ELEVENTY_ENV=development eleventy --serve --quiet --port=8080",
+    "dev": "ELEVENTY_ENV=development eleventy --serve --quiet --port=8080",
     "tina": "tinacms dev -c \"npm run start\""
   },
   "dependencies": {

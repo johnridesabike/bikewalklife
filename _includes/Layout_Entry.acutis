@@ -197,11 +197,11 @@
 <div id=webmentions-root></div>
 <hr class="separator">
 <aside class="ui-font">
+  {% Subscribe config strings /%}
+  <hr class="separator">
   {% match collections with {pages: <about: {data: {intro: !intro, image_small}}>} %}
     {% Entry_About description=intro avatar=image_small config strings collections / %}
   {% with _ %} {% /match %}
-  <hr class="separator">
-  {% Subscribe config strings /%}
 </aside>
 <hr class="separator">
 <nav class="entry-page__nav">
