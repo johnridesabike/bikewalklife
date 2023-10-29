@@ -1,10 +1,10 @@
-import serverless from "serverless-http";
-import express from "express";
+import ServerlessHttp from "serverless-http";
+import express, { Router } from "express";
 import { isAuthorized } from "@tinacms/auth";
 import { createMediaHandler } from "next-tinacms-cloudinary/dist/handlers";
 
 const app = express();
-const router = express.Router();
+const router = Router();
 
 const mediaHandler = createMediaHandler({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
@@ -36,4 +36,4 @@ router.delete("/cloudinary/:media", (req, res) => {
 
 app.use("/api/", router);
 
-export const handler = serverless(app);
+export const handler = ServerlessHttp(app);
