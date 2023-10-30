@@ -36,7 +36,7 @@ function transformImageUrl(url) {
       console.error("Invalid Cloudinary URL: ", url.href);
       return null;
     } else {
-      function makeHref(size, quality) {
+      let makeHref = function (size, quality) {
         // Commas conflict with the HTML srcset syntax, so encode them.
         size = encodeURIComponent(size);
         quality = encodeURIComponent(quality);
@@ -44,7 +44,7 @@ function transformImageUrl(url) {
         pathnameCopy.splice(4, 0, size, quality);
         url.pathname = pathnameCopy.join("/");
         return url.href;
-      }
+      };
       const src = makeHref("t_md_body_retina", "f_auto,q_auto");
       const srcset = mdImageBreakpoints
         .map((width) => {
