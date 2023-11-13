@@ -174,15 +174,12 @@
       </footer>
     </div>
     {% match build with {environment: "production"} ~%}
-      <script
-        data-goatcounter="https://jbpjackson.goatcounter.com/count"
-        async
-        src="//gc.zgo.at/count.js"></script>
+      <script data-goatcounter="https://bikewalklife.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
     {% with _ ~%}
       <script
         data-goatcounter="https://jbpjackson-dev.goatcounter.com/count"
-        async
-        src="//gc.zgo.at/count.js"></script>
+        async src="//gc.zgo.at/count.js"></script>
     {% /match ~%}
   </body>
 </html>
