@@ -17,7 +17,7 @@
     "build": "ELEVENTY_ENV=production eleventy --quiet",
     "clean": "rm -r _site",
     "dev": "ELEVENTY_ENV=development eleventy --serve --quiet --port=8080",
-    "tina": "tinacms dev -c \"npm run start\""
+    "tina": "tinacms dev -c \"npm run dev\""
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",

@@ -404,12 +404,6 @@ export default defineConfig({
                 required: true,
                 label: "Cloudinary URL",
               },
-              {
-                name: "twitter_handle",
-                type: "string",
-                required: false,
-                label: "Twitter handle, used for preview cards",
-              },
             ],
           },
           {

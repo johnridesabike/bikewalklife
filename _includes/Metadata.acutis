@@ -9,15 +9,10 @@
          hero_image: ?{alt: ?string, image: string},
          isoDate: string
       }
-  config = {title: string, description: string, twitter_handle: string}
+  config = {title: string, description: string}
 %}
 <!-- Metadata -->
-{% match config with
-    {
-      title: title_site,
-      description: description_site,
-      twitter_handle
-    }
+{% match config with { title: title_site, description: description_site }
 ~%}
   {%~ match metadata with !{description, author, isoDate} %}
     <title> {{ title }} | {{ title_site }} </title>
@@ -47,7 +42,6 @@
   {%~ /match ~%}
 
   <meta property=og:site_name content="{{ title_site }}">
-  <meta name=twitter:site content="{{ twitter_handle }}">
   <link rel=canonical href="{{ absoluteUrl }}" id=canonical-url>
 
   {* OG images *}

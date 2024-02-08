@@ -2,8 +2,7 @@
   config =
     {
       description: string,
-      title: string,
-      twitter_handle: string
+      title: string
   }
   collections =
     {
@@ -165,10 +164,13 @@
             {%~ /Link ~%}
           </p>
           <p class="footer__item">
-            <a href="https://twitter.com/BikeWalkLife" rel=me>Twitter</a>
+            <a href="https://bsky.app/profile/bikewalk.life" rel=me>Bluesky</a>
           </p>
           <p class="footer__item">
             <a href="https://indieweb.social/@bikewalklife" rel=me>Mastodon</a>
+          </p>
+          <p class="footer__item">
+            <a href="https://twitter.com/BikeWalkLife" rel=me>Twitter</a>
           </p>
         </div>
       </footer>

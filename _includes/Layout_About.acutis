@@ -17,8 +17,7 @@
   config =
     {
       description: string,
-      title: string,
-      twitter_handle: string
+      title: string
   }
   content = string
   eleventy = {generator: string}
