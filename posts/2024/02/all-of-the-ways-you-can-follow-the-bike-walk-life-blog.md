@@ -3,12 +3,12 @@ title: All of the ways you can follow the Bike Walk Life blog
 author: John Jackson
 date: 2024-02-10T13:20:00.000Z
 excerpt: >-
-  Now that I'm back to writing for this blog, here are the ways you can stay
-  up-to-date with each new post.
+  Now that I'm back to writing for this blog, here's how you can stay up-to-date
+  with each new post.
 draft: false
 ---
 
-Now that I'm back to writing for this blog, here are the ways you can stay up-to-date with each new post.
+Now that I'm back to writing for this blog, here's how you can stay up-to-date with each new post.
 
 ## Option 1: Web feed
 
