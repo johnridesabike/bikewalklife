@@ -1,34 +1,35 @@
 "use strict";
 
-function createPhoto(data) {
-  const div = document.createElement("div");
+function createPhoto(data, alt) {
+  let div = document.createElement("div");
   div.className = "entry-page__webmentions-photo";
-  const a = document.createElement("a");
+  let a = document.createElement("a");
   div.appendChild(a);
+  a.rel = "noopener nofollow";
   a.href = data.url;
   a.className = "h-card u-url";
-  const img = document.createElement("img");
+  let img = document.createElement("img");
   a.appendChild(img);
   img.src = data.author.photo;
-  img.alt = data.author.name;
+  img.alt = alt ? alt : data.author.name;
   img.height = 48;
   img.width = 48;
   return div;
 }
 
 function createMentions(arr, title, className) {
-  const frag = document.createDocumentFragment();
+  let frag = document.createDocumentFragment();
   if (arr.length !== 0) {
-    const h2 = document.createElement("h2");
+    let h2 = document.createElement("h2");
     frag.appendChild(h2);
     h2.className = "entry-page__webmentions-header";
-    const text = document.createTextNode(title);
+    let text = document.createTextNode(title);
     h2.appendChild(text);
-    const ul = document.createElement("ul");
+    let ul = document.createElement("ul");
     frag.appendChild(ul);
     ul.className = className;
     arr.forEach((data) => {
-      const li = document.createElement("li");
+      let li = document.createElement("li");
       ul.appendChild(li);
       li.className = "entry-page__webmentions-item";
       li.appendChild(createPhoto(data));
@@ -37,17 +38,93 @@ function createMentions(arr, title, className) {
   return frag;
 }
 
-const canonicalUrl = document.getElementById("canonical-url");
+let dateFormat = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+function createReplies(arr) {
+  let frag = document.createDocumentFragment();
+  if (arr.length !== 0) {
+    let h2 = document.createElement("h2");
+    frag.appendChild(h2);
+    h2.className = "entry-page__webmentions-header";
+    let text = document.createTextNode("Replies from around the web");
+    h2.appendChild(text);
+    let comments = document.createElement("div");
+    frag.appendChild(comments);
+    comments.clasName = "entry-page__webmentions-replies";
+    arr.forEach((data) => {
+      let comment = document.createElement("article");
+      comments.appendChild(comment);
+      comment.className = "h-entry entry-page__webmentions-reply";
+      let header = document.createElement("header");
+      comment.appendChild(header);
+      header.className = "h-card p-author";
+      header.appendChild(createPhoto(data, "Author photo."));
+      let authorLink = document.createElement("a");
+      header.appendChild(authorLink);
+      header.className = "entry-page__webmentions-author entry__author";
+      authorLink.rel = "noopener nofollow";
+      authorLink.href = data.author.url;
+      authorLink.appendChild(document.createTextNode(data.author.name));
+      let content = document.createElement("p");
+      comment.appendChild(content);
+      content.className = "e-content entry-page__webmentions-reply-content";
+      content.appendChild(document.createTextNode(data.content.text));
+      let footer = document.createElement("footer");
+      comment.appendChild(footer);
+      footer.className = "entry-page__webmentions-footer";
+      let time = document.createElement("time");
+      footer.appendChild(time);
+      time.dateTime = data.published;
+      time.className = "entry-page__webmentions-date dt-published";
+      time.appendChild(
+        document.createTextNode(dateFormat.format(new Date(data.published)))
+      );
+      let link = document.createElement("a");
+      footer.appendChild(link);
+      link.rel = "nofollow";
+      link.href = data.url;
+      let url = new URL(data.url);
+      link.appendChild(
+        document.createTextNode("Posted on " + url.hostname + ".")
+      );
+    });
+  }
+  return frag;
+}
+
+let canonicalUrl = document.getElementById("canonical-url");
 
 if (canonicalUrl instanceof HTMLLinkElement) {
-  const encodedUrl = encodeURIComponent(canonicalUrl.href);
-  fetch("https://webmention.io/api/mentions.jf2?target=" + encodedUrl)
+  let encodedUrl = encodeURIComponent(canonicalUrl.href);
+  fetch(
+    "https://webmention.io/api/mentions.jf2?sort-dir=up&target=" + encodedUrl
+  )
     .then((response) => response.json())
-    .then(({ children }) => {
-      const reposts = children.filter((x) => x["wm-property"] === "repost-of");
-      const likes = children.filter((x) => x["wm-property"] === "like-of");
-      const root = document.getElementById("webmentions-root");
-      const div = document.createElement("div");
+    .then((response) => {
+      let reposts = [];
+      let likes = [];
+      let replies = [];
+      response.children.forEach((x) => {
+        switch (x["wm-property"]) {
+          case "repost-of":
+            reposts.push(x);
+            break;
+          case "like-of":
+          case "bookmark-of":
+            likes.push(x);
+            break;
+          case "mention-of":
+          case "in-reply-to":
+            replies.push(x);
+            break;
+        }
+      });
+      let root = document.getElementById("webmentions-root");
+      let div = document.createElement("div");
       div.className = "entry-page__webmentions";
       div.appendChild(
         createMentions(
@@ -59,6 +136,7 @@ if (canonicalUrl instanceof HTMLLinkElement) {
       div.appendChild(
         createMentions(likes, "Liked by", "entry-page__webmentions-likes")
       );
+      div.appendChild(createReplies(replies));
       root.appendChild(div);
     });
 }

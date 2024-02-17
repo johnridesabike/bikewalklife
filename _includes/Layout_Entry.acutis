@@ -144,6 +144,31 @@
         height: 48px;
       }
 
+      .entry-page__webmentions-author {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5em;
+      }
+
+      .entry-page__webmentions-reply {
+        margin-top: 1em;
+      }
+
+      .entry-page__webmentions-reply-content {
+        margin: 0.5em 0;
+      }
+
+      .entry-page__webmentions-footer {
+        display: flex;
+        column-gap: 0.5em;
+        font-size: var(--font-size-sm);
+      }
+
+      .entry-page__webmentions-date {
+        flex-shrink: 0;
+        color: var(--color-gray);
+      }
+
       @media screen and (--tablet-portrait-up) {
         .entry-page__recent-list {
           display: flex;
