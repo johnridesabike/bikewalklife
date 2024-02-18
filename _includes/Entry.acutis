@@ -63,7 +63,7 @@
     <footer class="entry__footer">
       <div class="entry__permalink">
         <a href="{{ absoluteUrl }}" class="u-url u-uid">
-          permalink
+          Permalink
           <span aria-hidden=true>
             {% Icon name="link" class=!"icon" / %}
           </span>

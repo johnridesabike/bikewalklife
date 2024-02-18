@@ -3,7 +3,6 @@
   avatar = ?{image: string, alt: string}
   collections = {pages: <{url: string}>}
   description = string
-  strings = {contact_text: string, contact_title: string}
 %}
 <!-- Entry_About -->
 {% match config with {title: siteTitle} %}
@@ -39,19 +38,6 @@
       with {pages: <about: {url: href}>} %}
       {% Link href %}
         Read more about {{ siteTitle }}
-        <span aria-hidden=true>
-          {% Icon name="arrow-right" class=!"icon" /%}
-        </span>
-      {% /Link %}
-    {% with _ %} {* Nothing *} {% /match %}
-  </p>
-  <h2 class="entry-page__footer-heading"> {{ strings.contact_title}} </h2>
-  <div class="entry-page__about-content">{{{ strings.contact_text }}}</div>
-  <p class="entry-page__about-link">
-    {% match collections
-      with {pages: <contact: {url: href}>} %}
-      {% Link href %}
-        Contact me
         <span aria-hidden=true>
           {% Icon name="arrow-right" class=!"icon" /%}
         </span>

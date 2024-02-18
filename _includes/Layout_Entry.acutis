@@ -37,8 +37,6 @@
     }
   strings =
     {
-       contact_text: string,
-       contact_title: string,
        copyright: string,
        open_linked: string,
        subscribe_intro: string,
@@ -217,14 +215,28 @@
      strings
      index=0
   / %}
+  <aside class="ui-font">
+    {% match collections
+      with {pages: <contact: {url: href}>} %}
+      <p>
+        {% Link href %}
+          Reply to this post by email.
+          <span aria-hidden=true>
+            {% Icon name="arrow-right" class=!"icon" /%}
+          </span>
+        {% /Link %}
+      </p>
+    {% with _ %} {* Nothing *} {% /match %}
+  </aside>
+  <hr class="separator">
+  <div id=webmentions-root></div>
 </main>
-<div id=webmentions-root></div>
 <hr class="separator">
 <aside class="ui-font">
   {% Subscribe config strings /%}
   <hr class="separator">
   {% match collections with {pages: <about: {data: {intro: !intro, image_small}}>} %}
-    {% Entry_About description=intro avatar=image_small config strings collections / %}
+    {% Entry_About description=intro avatar=image_small config collections / %}
   {% with _ %} {% /match %}
 </aside>
 <hr class="separator">

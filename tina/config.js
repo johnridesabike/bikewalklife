@@ -301,13 +301,6 @@ export default defineConfig({
                 },
               },
               {
-                name: "contact_title",
-                type: "string",
-                required: true,
-                label: "Contact title",
-                description: "Title above the contact text.",
-              },
-              {
                 name: "contact_text",
                 type: "string",
                 required: true,
