@@ -72,7 +72,12 @@ function createReplies(arr) {
       let content = document.createElement("p");
       comment.appendChild(content);
       content.className = "e-content entry-page__webmentions-reply-content";
-      content.appendChild(document.createTextNode(data.content.text));
+      let text = data.content.text.split("\n");
+      content.appendChild(document.createTextNode(text[0]));
+      for (let i = 1; i < text.length; i++) {
+        content.appendChild(document.createElement("br"));
+        content.appendChild(document.createTextNode(text[i]));
+      }
       let footer = document.createElement("footer");
       comment.appendChild(footer);
       footer.className = "entry-page__webmentions-footer";
@@ -99,44 +104,47 @@ function createReplies(arr) {
 let canonicalUrl = document.getElementById("canonical-url");
 
 if (canonicalUrl instanceof HTMLLinkElement) {
-  let encodedUrl = encodeURIComponent(canonicalUrl.href);
   fetch(
-    "https://webmention.io/api/mentions.jf2?sort-dir=up&target=" + encodedUrl
+    "https://webmention.io/api/mentions.jf2?sort-dir=up&target=" +
+      encodeURIComponent(canonicalUrl.href)
   )
     .then((response) => response.json())
     .then((response) => {
-      let reposts = [];
-      let likes = [];
-      let replies = [];
-      response.children.forEach((x) => {
-        switch (x["wm-property"]) {
-          case "repost-of":
-            reposts.push(x);
-            break;
-          case "like-of":
-          case "bookmark-of":
-            likes.push(x);
-            break;
-          case "mention-of":
-          case "in-reply-to":
-            replies.push(x);
-            break;
-        }
-      });
-      let root = document.getElementById("webmentions-root");
-      let div = document.createElement("div");
-      div.className = "entry-page__webmentions";
-      div.appendChild(
-        createMentions(
-          reposts,
-          "Reposted by",
-          "entry-page__webmentions-reposts"
-        )
-      );
-      div.appendChild(
-        createMentions(likes, "Liked by", "entry-page__webmentions-likes")
-      );
-      div.appendChild(createReplies(replies));
-      root.appendChild(div);
+      if (response.children.length > 0) {
+        let reposts = [];
+        let likes = [];
+        let replies = [];
+        response.children.forEach((x) => {
+          switch (x["wm-property"]) {
+            case "repost-of":
+              reposts.push(x);
+              break;
+            case "like-of":
+            case "bookmark-of":
+              likes.push(x);
+              break;
+            case "mention-of":
+            case "in-reply-to":
+              replies.push(x);
+              break;
+          }
+        });
+        let root = document.getElementById("webmentions-root");
+        root.className = "entry-page__webmentions";
+        let hr = document.createElement("hr");
+        hr.className = "separator";
+        root.appendChild(hr);
+        root.appendChild(
+          createMentions(
+            reposts,
+            "Reposted by",
+            "entry-page__webmentions-reposts"
+          )
+        );
+        root.appendChild(
+          createMentions(likes, "Liked by", "entry-page__webmentions-likes")
+        );
+        root.appendChild(createReplies(replies));
+      }
     });
 }

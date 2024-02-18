@@ -228,7 +228,6 @@
       </p>
     {% with _ %} {* Nothing *} {% /match %}
   </aside>
-  <hr class="separator">
   <div id=webmentions-root></div>
 </main>
 <hr class="separator">
