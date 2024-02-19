@@ -119,6 +119,10 @@
         box-shadow: 0 0 2px var(--color-primary-dark);
       }
 
+      .entry-page__actions-item {
+        margin-top: 1em;
+      }
+
       .entry-page__webmentions-header {
         margin-bottom: 0;
       }
@@ -192,6 +196,13 @@
         .entry-page__avatar-wrapper {
           margin-right: 1em;
         }
+
+        .entry-page__actions {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
       }
     {%~ /PostCss ~%}
     </style>
@@ -215,17 +226,29 @@
      strings
      index=0
   / %}
-  <aside class="ui-font">
+  <aside class="ui-font entry-page__actions">
     {% match collections
       with {pages: <contact: {url: href}>} %}
-      <p>
+      <div class="entry-page__actions-item">
         {% Link href %}
           Reply to this post by email.
           <span aria-hidden=true>
             {% Icon name="arrow-right" class=!"icon" /%}
           </span>
         {% /Link %}
-      </p>
+      </div>
+      <div class="entry-page__actions-item">
+        Want to support this blog?
+        <div>
+          <a href="https://www.buymeacoffee.com/johnridesabike">
+            <img
+              src="/assets/images/vendored/bmc-button.svg"
+              height=48
+              width=170
+              alt="Buy me a coffee.">
+          </a>
+        </div>
+      </div>
     {% with _ %} {* Nothing *} {% /match %}
   </aside>
   <div id=webmentions-root></div>
