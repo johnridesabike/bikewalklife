@@ -272,6 +272,7 @@ li {
 
 .footer .h-card {
   flex-shrink: 0;
+  text-align: center;
 }
 
 .footer__avatar {
