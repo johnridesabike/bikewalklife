@@ -150,19 +150,17 @@
           <div class="h-card footer__item">
             <!--  A "representative h-card"
                   https://fed.brid.gy/docs#web-profile -->
-            <div>
-              <a href="/" tabindex=-1>
+            <a class="u-url" rel=me href="/">
+              <div>
                 <img
-                  class="u-photo footer__avatar"
+                  class="u-photo u-logo footer__avatar"
                   width=80
                   height=80
                   src="/assets/images/2023/icon-circle-2023.svg"
                   alt="">
-              </a>
-            </div>
-            <div>
-              <a class="u-url" rel=me href="/">{{ config.title }}</a>
-            </div>
+              </div>
+              <div class="p-name"> {{ config.title }} </div>
+            </a>
           </div>
           <div class="footer__menu footer__item">
             <p>
