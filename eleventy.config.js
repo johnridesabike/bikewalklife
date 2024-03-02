@@ -96,13 +96,27 @@ module.exports = (eleventyConfig) => {
       .getFilteredByGlob("posts/**/*.md")
       .reverse()
       .filter((x) => x.data.visible);
+    // Add previous and next link.
     for (let i = 0; i < coll.length; i++) {
       const previous = coll[i - 1] || null;
       const next = coll[i + 1] || null;
       coll[i].data.previous = previous;
       coll[i].data.next = next;
     }
-    return coll;
+    let postContent = Promise.all(coll.map((x) => x.template.inputContent));
+    return Promise.all([import("./tf-idf.mjs"), postContent]).then(
+      ([tfidf, postContent]) => {
+        let col = new tfidf.DocCollection();
+        for (let i = 0; i < postContent.length; i++) {
+          col.add(postContent[i], i);
+        }
+        let similar = new tfidf.Similar(col);
+        for (let i = 0; i < coll.length; i++) {
+          coll[i].data.similarPosts = similar.get(i, 5).map((j) => coll[j]);
+        }
+        return coll;
+      }
+    );
   });
   eleventyConfig.addCollection("frontPage", (collectionApi) =>
     collectionApi

@@ -13,6 +13,7 @@
   build = {environment: string}
   next = ?{data: {title: string}, url: string}
   previous = ?{data: {title: string}, url: string}
+  similarPosts = [{data: {title: string}, url: string}]
   eleventy = {generator: string}
   collections =
     {
@@ -64,6 +65,11 @@
    head=!#%}
     <style>
     {%~ PostCss ~%}
+      .entry-page__similar {
+        list-style: none;
+        padding: 0;
+      }
+
       .entry-page__nav {
         font-family: var(--font-ui);
       }
@@ -253,6 +259,15 @@
   </aside>
   <div id=webmentions-root></div>
 </main>
+<hr class="separator">
+<div>
+  <h2 class="entry-page__footer-heading"> Read similar posts </h2>
+  <ul class="entry-page__similar">
+    {% map similarPosts with {data: {title}, url} %}
+      <li> <a href="{{ url }}">{{ title }}</a> </li>
+    {% /map %}
+  </ul>
+</div>
 <hr class="separator">
 <aside class="ui-font">
   {% Subscribe config strings /%}

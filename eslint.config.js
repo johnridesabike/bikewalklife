@@ -5,7 +5,6 @@ module.exports = [
   js.configs.recommended,
   {
     languageOptions: {
-      sourceType: "commonjs",
       globals: { ...globals.browser, ...globals.node },
     },
     rules: {
