@@ -13,7 +13,7 @@
   build = {environment: string}
   next = ?{data: {title: string}, url: string}
   previous = ?{data: {title: string}, url: string}
-  similarPosts = [{data: {title: string}, url: string}]
+  similarPosts = ?[{data: {title: string}, url: string}]
   eleventy = {generator: string}
   collections =
     {
@@ -260,15 +260,17 @@
   <div id=webmentions-root></div>
 </main>
 <hr class="separator">
-<div>
-  <h2 class="entry-page__footer-heading"> Read similar posts </h2>
-  <ul class="entry-page__similar">
-    {% map similarPosts with {data: {title}, url} %}
-      <li> <a href="{{ url }}">{{ title }}</a> </li>
-    {% /map %}
-  </ul>
-</div>
-<hr class="separator">
+{% match similarPosts with !similarPosts %}
+  <div>
+    <h2 class="entry-page__footer-heading"> Read similar posts </h2>
+    <ul class="entry-page__similar">
+      {% map similarPosts with {data: {title}, url} %}
+        <li> <a href="{{ url }}">{{ title }}</a> </li>
+      {% /map %}
+    </ul>
+  </div>
+  <hr class="separator">
+{% with null %} {% /match %}
 <aside class="ui-font">
   {% Subscribe config strings /%}
   <hr class="separator">
