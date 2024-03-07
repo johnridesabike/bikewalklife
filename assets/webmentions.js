@@ -17,7 +17,7 @@ function createPhoto(data, alt) {
   return div;
 }
 
-function createMentions(arr, title, className) {
+function createMentions(arr, count, title, className) {
   let frag = document.createDocumentFragment();
   if (arr.length !== 0) {
     let h2 = document.createElement("h2");
@@ -34,6 +34,15 @@ function createMentions(arr, title, className) {
       li.className = "entry-page__webmentions-item";
       li.appendChild(createPhoto(data));
     });
+    let diff = count - arr.length;
+    if (diff > 0) {
+      let li = document.createElement("li");
+      ul.appendChild(li);
+      li.className =
+        "entry-page__webmentions-item entry-page__webmentions-count";
+      let text = document.createTextNode("+" + diff);
+      li.appendChild(text);
+    }
   }
   return frag;
 }
@@ -101,34 +110,59 @@ function createReplies(arr) {
   return frag;
 }
 
+function fetchCount(params) {
+  return fetch("https://webmention.io/api/count?" + params.toString()).then(
+    (response) => response.json()
+  );
+}
+
+function fetchMentions(params) {
+  return fetch(
+    "https://webmention.io/api/mentions.jf2?" +
+      new URLSearchParams(params).toString()
+  ).then((response) => response.json());
+}
+
 let canonicalUrl = document.getElementById("canonical-url");
 
+let emptyMentions = Promise.resolve({ children: [] });
+
 if (canonicalUrl instanceof HTMLLinkElement) {
-  fetch(
-    "https://webmention.io/api/mentions.jf2?sort-dir=up&target=" +
-      encodeURIComponent(canonicalUrl.href)
-  )
-    .then((response) => response.json())
-    .then((response) => {
-      if (response.children.length > 0) {
-        let reposts = [];
-        let likes = [];
-        let replies = [];
-        response.children.forEach((x) => {
-          switch (x["wm-property"]) {
-            case "repost-of":
-              reposts.push(x);
-              break;
-            case "like-of":
-            case "bookmark-of":
-              likes.push(x);
-              break;
-            case "mention-of":
-            case "in-reply-to":
-              replies.push(x);
-              break;
-          }
-        });
+  let target = canonicalUrl.href;
+  fetchCount(new URLSearchParams({ target: target }))
+    .then((count) => {
+      let likes = emptyMentions;
+      let reposts = emptyMentions;
+      let replies = emptyMentions;
+      if (count.type.like !== 0) {
+        likes = fetchMentions([
+          ["wm-property", "like-of"],
+          ["per-page", "5"],
+          ["sort-dir", "down"],
+          ["target", target],
+        ]);
+      }
+      if (count.type.repost !== 0) {
+        reposts = fetchMentions([
+          ["wm-property", "repost-of"],
+          ["per-page", "5"],
+          ["sort-dir", "down"],
+          ["target", target],
+        ]);
+      }
+      if (count.type.reply !== 0) {
+        replies = fetchMentions([
+          ["wm-property[]", "in-reply-to"],
+          ["wm-property[]", "mention-of"],
+          ["per-page", "20"],
+          ["sort-dir", "up"],
+          ["target", target],
+        ]);
+      }
+      return Promise.all([count, likes, reposts, replies]);
+    })
+    .then(([count, likes, reposts, replies]) => {
+      if (count.count !== 0) {
         let root = document.getElementById("webmentions-root");
         root.className = "entry-page__webmentions";
         let hr = document.createElement("hr");
@@ -136,15 +170,22 @@ if (canonicalUrl instanceof HTMLLinkElement) {
         root.appendChild(hr);
         root.appendChild(
           createMentions(
-            reposts,
+            reposts.children,
+            count.type.repost,
             "Reposted by",
             "entry-page__webmentions-reposts"
           )
         );
         root.appendChild(
-          createMentions(likes, "Liked by", "entry-page__webmentions-likes")
+          createMentions(
+            likes.children,
+            count.type.like,
+            "Liked by",
+            "entry-page__webmentions-likes"
+          )
         );
-        root.appendChild(createReplies(replies));
+        // If I ever get enough replies I could add paging to this.
+        root.appendChild(createReplies(replies.children));
       }
     });
 }

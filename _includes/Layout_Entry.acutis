@@ -140,11 +140,13 @@
         padding: 0;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 8px;
       }
 
-      .entry-page__webmentions-item {
-        margin-right: 0.5em;
+      .entry-page__webmentions-count {
+        font-size: 36px;
+        line-height: 1;
+        color: var(--color-primary-dark);
       }
 
       .entry-page__webmentions-photo {
