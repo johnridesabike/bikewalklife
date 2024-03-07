@@ -21,6 +21,7 @@
     {%~ /PostCss ~%}
     </style>
   {%#
+  htmlClass=!"h-feed"
 %}
 <main>
   {% map collections.frontPage with

@@ -83,7 +83,7 @@
     </style>
   {%#
 %}
-<main class="h-feed">
+<main>
   {% match config with {title: site_title} %}
     <h1 class="archive__page-title p-name">
       {{ site_title }} {{ title }}
