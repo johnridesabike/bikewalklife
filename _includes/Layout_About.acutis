@@ -73,7 +73,7 @@
     {%#
 %}
   <main>
-    <h1> {{ title }} </h1>
+    <h1> {% title %} </h1>
     {% match image_large with {image, alt} %}
       <figure class="about__photo-wrapper">
         <div
@@ -86,14 +86,14 @@
               {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_360,w_360", "f_auto,q_auto"] image /%} 1.5x,
               {% ImgSrcStatic transforms=["c_crop,g_center,w_0.8", "c_fill,h_480,w_480", "f_auto,q_auto"] image /%} 2x
               "
-            alt="{{ alt }}"
+            alt="{% alt %}"
             height=240
             width=240>
         </div>
       </figure>
     {% /match %}
-    <div class="serif about__intro"> {{{ intro }}} </div>
-    <div class="serif"> {{{ content }}} </div>
+    <div class="serif about__intro"> {{% intro %}} </div>
+    <div class="serif"> {{% content %}} </div>
   </main>
   <hr class="separator">
   {% Subscribe config strings /%}

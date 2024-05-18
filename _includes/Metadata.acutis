@@ -15,34 +15,34 @@
 {% match config with { title: title_site, description: description_site }
 ~%}
   {%~ match metadata with !{description, author, isoDate} %}
-    <title> {{ title }} | {{ title_site }} </title>
-    <meta property=og:url content="{{ absoluteUrl }}">
-    <meta property=og:title content="{{ title }}">
+    <title> {% title %} | {% title_site %} </title>
+    <meta property=og:url content="{% absoluteUrl %}">
+    <meta property=og:title content="{% title %}">
     <meta
       name=description
       property=og:description
-      content="{{ description }}">
-    <meta name=author content="{{ author }}">
+      content="{% description %}">
+    <meta name=author content="{% author %}">
     <meta property=og:type content=article>
-    <meta property=article:published_time content="{{ isoDate }}">
+    <meta property=article:published_time content="{% isoDate %}">
   {%~ with null %}
     {% match title with "" %}
-      <title> {{ title_site }} </title>
-      <meta property=og:title content="{{ title_site }}">
+      <title> {% title_site %} </title>
+      <meta property=og:title content="{% title_site %}">
     {% with title %}
-      <title> {{ title }} | {{ title_site }} </title>
-      <meta property=og:title content="{{ title }} | {{ title_site }}">
+      <title> {% title %} | {% title_site %} </title>
+      <meta property=og:title content="{% title %} | {% title_site %}">
     {% /match %}
-    <meta property=og:url content="{{ absoluteUrl }}">
+    <meta property=og:url content="{% absoluteUrl %}">
     <meta property=og:type content=website>
     <meta
       name=description
       property=og:description
-      content="{{ description_site }}">
+      content="{% description_site %}">
   {%~ /match ~%}
 
-  <meta property=og:site_name content="{{ title_site }}">
-  <link rel=canonical href="{{ absoluteUrl }}" id=canonical-url>
+  <meta property=og:site_name content="{% title_site %}">
+  <link rel=canonical href="{% absoluteUrl %}" id=canonical-url>
 
   {* OG images *}
   {% match metadata

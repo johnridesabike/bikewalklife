@@ -79,7 +79,7 @@
     with {archive_link}, {pages: <archive: {url: href}>} %}
     <div class="index-page__archive-link">
       {% Link current=!url href %}
-        {{ archive_link }}
+        {% archive_link %}
         <span aria-hidden=true>
           {% Icon name="arrow-right" class=!"icon" /%}
         </span>

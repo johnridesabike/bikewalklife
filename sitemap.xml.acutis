@@ -8,8 +8,8 @@
   {* Nothing! *}
 {%~ with {data: {sitemapDate, pub: {@pub: true, absoluteUrl}}} %}
   <url>
-    <loc>{{ absoluteUrl }}</loc>
-    <lastmod>{{ sitemapDate }}</lastmod>
+    <loc>{% absoluteUrl %}</loc>
+    <lastmod>{% sitemapDate %}</lastmod>
   </url>
 {%~ /map %}{% /match %}
 </urlset>

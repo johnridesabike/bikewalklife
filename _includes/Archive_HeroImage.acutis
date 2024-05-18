@@ -25,13 +25,13 @@
         ]
         with width, 0
     %}
-      {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ %i width }}w
+      {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {% %i width %}w
     {%~ with width ~%}
-      , {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {{ %i width }}w
+      , {%~ ImgSrc gravity="auto" width aspect=0.5 image /%} {% %i width %}w
     {%~ /map ~%}
     "
   sizes="(max-width: 600px) 100vw, 600px"
-  alt="{{ alt ? "" }}"
+  alt="{% alt ? "" %}"
   class="archive__hero-image u-featured"
   height=300
   width=600

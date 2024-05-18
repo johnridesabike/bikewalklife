@@ -16,7 +16,7 @@
         list-style: none;
       ">
       {% map tags with tag %}
-        <li style="display: inline-block; margin-right: 0.75em;">{{ tag }}</li>
+        <li style="display: inline-block; margin-right: 0.75em;">{% tag %}</li>
       {% /map %}
     </ul>
     <div style="color: var(--color-secondary-light);">

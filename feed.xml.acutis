@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 {%~ match pub with {@pub: true, absoluteUrl} ~%}
-  <title>{{ config.title }}</title>
-  <subtitle>{{ config.description }}</subtitle>
-  <link href="{{ absoluteUrl }}" rel="self"/>
+  <title>{% config.title %}</title>
+  <subtitle>{% config.description %}</subtitle>
+  <link href="{% absoluteUrl %}" rel="self"/>
   {% match collections.pages
       with <index: {data: {pub: {@pub: true, absoluteUrl}}}> ~%} 
-    <link href="{{ absoluteUrl }}" />
-    <id>{{ absoluteUrl }}</id>
+    <link href="{% absoluteUrl %}" />
+    <id>{% absoluteUrl %}</id>
   {%  with _ %} {* Nothing! *}
   {%~ /match ~%}
   {%~ match collections.frontPage with [{data: {isoDate}}, ..._] ~%}
-    <updated>{{ isoDate }}</updated>
+    <updated>{% isoDate %}</updated>
   {%~ with _ %} {* Nothing! *}
   {%~ /match %}
   <author>
-    <name>{{ config.author_name }}</name>
+    <name>{% config.author_name %}</name>
   </author>
   <icon>
-    {{~ config.site_url ~}}
+    {%~ config.site_url ~%}
     {%~ Favicon file="assets/images/2023/icon-circle-2023.svg" width=128 / ~%}
   </icon>
-  <rights type="html">{{ strings.copyright }}</rights>
+  <rights type="html">{% strings.copyright %}</rights>
   {% map collections.frontPage with
      {
        templateContent,
@@ -29,12 +29,12 @@
       }
     ~%}
     <entry>
-      <title>{{ title }}</title>
-      <link rel="alternate" href="{{ absoluteUrl }}" />
-      <updated>{{ isoDate }}</updated>
-      <id>{{ absoluteUrl }}</id>
-      <summary>{{ excerpt }}</summary>
-      <content type="html">{{ templateContent }}</content>
+      <title>{% title %}</title>
+      <link rel="alternate" href="{% absoluteUrl %}" />
+      <updated>{% isoDate %}</updated>
+      <id>{% absoluteUrl %}</id>
+      <summary>{% excerpt %}</summary>
+      <content type="html">{% templateContent %}</content>
     </entry>
   {% with {data: {pub: {@pub: false}} } %} {* Nothing! *}
   {%~ /map %}

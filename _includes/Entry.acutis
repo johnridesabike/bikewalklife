@@ -18,7 +18,7 @@
 %}
 <!-- Entry -->
 <article
-  class='h-entry hentry entry__article {{ class ? "" }}'
+  class='h-entry hentry entry__article {% class ? "" %}'
   data-pagefind-body>
   {% match hero_image
     with null %}
@@ -37,32 +37,32 @@
          with !"" %}
          {* nothing! *}
       {% with !caption %}
-        <figcaption class="entry__caption"> {{ caption }} </figcaption>
+        <figcaption class="entry__caption"> {% caption %} </figcaption>
       {% /match %}
     </figure>
   {% /match %}
   <div class="entry__body">
     <header class="entry__header">
-      <{{ h }} class="p-name entry__title">
+      <{% h %} class="p-name entry__title">
         {% match linkedHeader
            with true %}
            {% Link href=url class=!"entry__header-link" %}
-              {{ title }}
+              {% title %}
            {% /Link %}
         {% with false %}
-          {{ title }}
+          {% title %}
         {% /match %}
-      </{{ h }}>
+      </{% h %}>
       {% Entry_Date date=formattedDate isoDate / %}
       {% Entry_Author name=author / %}
       {% match draft with true %} {% Entry_DraftNotice /%}
       {% with false %} {* nothing! *}
       {% /match %}
     </header>
-    <div class="entry__content e-content">{{{ content }}}</div>
+    <div class="entry__content e-content">{{% content %}}</div>
     <footer class="entry__footer">
       <div class="entry__permalink">
-        <a href="{{ absoluteUrl }}" class="u-url u-uid">
+        <a href="{% absoluteUrl %}" class="u-url u-uid">
           Permalink
           <span aria-hidden=true>
             {% Icon name="link" class=!"icon" / %}

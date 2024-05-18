@@ -3,8 +3,8 @@
   strings = {open_linked: string}
 %}
 <!-- Entry_OriginalLink -->
-<a href="{{ href }}" target=_blank rel=noopener class="u-in-reply-to">
-  {{ strings.open_linked }}
+<a href="{% href %}" target=_blank rel=noopener class="u-in-reply-to">
+  {% strings.open_linked %}
   <span aria-hidden=true>
     {%~ Icon name="external-link" class=!"icon" / ~%}
   </span>

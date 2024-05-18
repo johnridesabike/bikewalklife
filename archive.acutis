@@ -86,7 +86,7 @@
 <main>
   {% match config with {title: site_title} %}
     <h1 class="archive__page-title p-name">
-      {{ site_title }} {{ title }}
+      {% site_title %} {% title %}
       {% match pagination
         with {pageNumber: 0} %} 
           {* Nothing! *}
@@ -131,7 +131,7 @@
               with !"" %}
               {* nothing! *}
             {% with !caption %}
-              <figcaption class="entry__caption"> {{ caption }} </figcaption>
+              <figcaption class="entry__caption"> {% caption %} </figcaption>
             {% /match %}
           </figure>
         {% /match %}
@@ -140,12 +140,12 @@
               href=absoluteUrl
               class=!"u-url u-uid"
           %}
-            {{ title }}
+            {% title %}
           {% /Link %}
         </h2>
       </header>
       <p class="font-size-small p-summary archive__entry-summary">
-        {{{ excerpt }}}
+        {{% excerpt %}}
         {% Link href class=!"archive__entry-readmore u-url" %}
           keep reading →
         {% /Link %}
@@ -175,7 +175,7 @@
     <div>
       {% match pagination with {href: {previous: null}} %} {* Nothing! *}
       {% with {href: {previous: !previous}} %}
-        <a href="{{ previous }}" rel=prev>
+        <a href="{% previous %}" rel=prev>
           <span aria-hidden=true>
             {% Icon name="arrow-left" class=!"icon" /%}
           </span>
@@ -186,7 +186,7 @@
     <div>
       {% match pagination with {href: {next: null}} %} {* Nothing! *}
       {% with {href: {next: !next}} %}
-        <a href="{{ next }}" rel=next>
+        <a href="{% next %}" rel=next>
           next
           <span aria-hidden=true>
             {% Icon name="arrow-right" class=!"icon" /%}

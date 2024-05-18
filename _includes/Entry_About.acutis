@@ -8,7 +8,7 @@
 {% match config with {title: siteTitle} %}
 <section class="entry-page__about">
   <h2 class="entry-page__footer-heading">
-    About {{ siteTitle }}
+    About {% siteTitle %}
   </h2>
   <div class="entry-page__about-wrapper">
     {% match avatar with !{image, alt} %}
@@ -23,7 +23,7 @@
               {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_180,w_180", "f_auto,q_auto"] image /%} 1.5x,
               {% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_240,w_240", "f_auto,q_auto"] image /%} 2x
             "
-            alt="{{ alt }}"
+            alt="{% alt %}"
             height=120
             width=120
             loading=lazy>
@@ -31,13 +31,13 @@
       </div>
     {% with null %} {* No avatar *}
     {% /match %}
-    <div class="entry-page__about-content">{{{ description }}}</div>
+    <div class="entry-page__about-content">{{% description %}}</div>
   </div>
   <p class="entry-page__about-link">
     {% match collections
       with {pages: <about: {url: href}>} %}
       {% Link href %}
-        Read more about {{ siteTitle }}
+        Read more about {% siteTitle %}
         <span aria-hidden=true>
           {% Icon name="arrow-right" class=!"icon" /%}
         </span>

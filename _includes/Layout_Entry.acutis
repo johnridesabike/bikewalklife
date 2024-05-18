@@ -267,7 +267,7 @@
     <h2 class="entry-page__footer-heading"> Read similar posts </h2>
     <ul class="entry-page__similar">
       {% map similarPosts with {data: {title}, url} %}
-        <li> <a href="{{ url }}">{{ title }}</a> </li>
+        <li> <a href="{% url %}">{% title %}</a> </li>
       {% /map %}
     </ul>
   </div>
@@ -300,7 +300,7 @@
             {% VisuallyHidden %}
               Previous post:
             {% /VisuallyHidden %}
-            {{ title }}
+            {% title %}
           </span>
         {% /Link %}
       </li>
@@ -319,7 +319,7 @@
             {% VisuallyHidden %}
               Next post:
             {% /VisuallyHidden %}
-            {{ title }}
+            {% title %}
           </span>
           <span aria-hidden=true>
             {% Icon name="arrow-right" class=!"icon entry-page__arrow" /%}

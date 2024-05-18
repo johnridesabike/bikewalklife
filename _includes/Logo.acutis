@@ -16,7 +16,7 @@
       media="(prefers-color-scheme: dark)">
     <img
       src="/assets/images/2023/header-light-2023.svg"
-      alt="{{ title_site }}"
+      alt="{% title_site %}"
       height=80
       width=256 />
   </picture>

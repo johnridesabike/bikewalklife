@@ -42,7 +42,7 @@
 %}
   <main>
     <h1>Contact</h1>
-    <div class="ui-font">{{{ strings.contact_text }}}</div>
+    <div class="ui-font">{{% strings.contact_text %}}</div>
     <form
       class="contact-form"
       method=post
