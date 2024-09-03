@@ -35,7 +35,7 @@
     "html-minifier": "^4.0.0",
     "next-tinacms-cloudinary": "^4.3.7",
     "normalize.css": "^8.0.1",
-    "pagefind": "^1.0.3",
+    "pagefind": "^1.1.1",
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
     "postcss-preset-env": "^9.2.0",
