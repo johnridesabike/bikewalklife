@@ -1,5 +1,5 @@
-const config = require("../_data/config.json");
-const globalComputed = require("../_data/eleventyComputed");
+import config from "../_data/config.js";
+import globalComputed from "../_data/eleventyComputed.js";
 
 // Drafts are not visible in production. They are visible in development.
 const isVisible = (draft, { yes, no }) => {
@@ -14,7 +14,7 @@ const isVisible = (draft, { yes, no }) => {
   }
 };
 
-module.exports = {
+export default {
   layout: "Layout_Entry.acutis",
   eleventyComputed: {
     // A workaround for this bug: https://github.com/11ty/eleventy/issues/1303

@@ -1,6 +1,7 @@
-const { site_url, lang, timeZone } = require("./config.json");
+import config from "./config.js";
+let { site_url, lang, timeZone } = config;
 
-module.exports = {
+export default {
   pub: (data) => {
     if (data.page.url) {
       return {

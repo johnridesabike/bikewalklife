@@ -1,6 +1,6 @@
-const htmlmin = require("html-minifier");
-const acutis = require("acutis-lang/eleventy");
-const acutisComponents = require("./_includes/acutisComponents");
+import htmlmin from "html-minifier";
+import * as acutis from "acutis-lang/eleventy";
+import * as acutisComponents from "./_includes/acutisComponents.js";
 
 // TODO: this is kind of hacky and has some problems.
 // - This will upscale images.
@@ -83,7 +83,7 @@ function mdImages(md, _ops) {
   };
 }
 
-module.exports = (eleventyConfig) => {
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("assets/webmentions.js");
@@ -144,7 +144,7 @@ module.exports = (eleventyConfig) => {
       .use(mdImages)
   );
 
-  eleventyConfig.addPlugin(acutis, {
+  eleventyConfig.addPlugin(acutis.plugin, {
     components: acutisComponents,
   });
 
@@ -168,4 +168,4 @@ module.exports = (eleventyConfig) => {
     markdownTemplateEngine: false,
     htmlTemplateEngine: false,
   };
-};
+}

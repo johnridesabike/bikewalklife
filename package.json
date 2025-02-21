@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "The source code for the Bike Walk Life blog.",
+  "type": "module",
   "keywords": [],
   "repository": {
     "type": "git",
@@ -20,15 +21,15 @@
     "tina": "tinacms dev -c \"npm run dev\""
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^3.1.6",
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
     "@csstools/postcss-global-data": "^2.1.0",
     "@fontsource-variable/source-sans-3": "^5.0.18",
     "@fontsource-variable/source-serif-4": "^5.0.16",
     "@sindresorhus/slugify": "^1.1.2",
     "@tinacms/auth": "^1.0.6",
     "@tinacms/cli": "^1.6.2",
-    "acutis-lang": "^0.25.0",
+    "acutis-lang": "^0.26.0",
     "cssnano": "^6.0.1",
     "express": "^4.21.0",
     "feather-icons": "^4.29.1",
@@ -44,7 +45,7 @@
     "tinacms": "^2.2.2"
   },
   "devDependencies": {
-    "eslint": "^8.52.0",
+    "eslint": "^9.15.0",
     "globals": "^13.23.0"
   }
 }
