@@ -31,7 +31,7 @@
     "@tinacms/cli": "^1.6.9",
     "acutis-lang": "^0.26.0",
     "cssnano": "^6.0.1",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "feather-icons": "^4.29.1",
     "html-minifier": "^4.0.0",
     "next-tinacms-cloudinary": "^8.0.9",
