@@ -9,7 +9,6 @@ import postcssGlobalData from "@csstools/postcss-global-data";
 import config from "../_data/config.js";
 
 let { cloudinary_url } = config;
-let { Typescheme } = acutis;
 let { icons } = featherIcons;
 
 let dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -23,8 +22,6 @@ let postcssWithOptions = postcss([
 
 let postcssCache = new Map();
 let faviconCache = new Map();
-
-let Ty = Typescheme;
 
 function cloudinaryOptions(opts, image_src) {
   let url = new URL(image_src);
@@ -47,21 +44,21 @@ export function PostCss({ children }) {
     return result;
   }
 }
-PostCss.interface = Ty.make([["children", Ty.string()]]);
+PostCss.interface = { children: "string" };
 
 export function Icon(props) {
-  return Promise.resolve(icons[props.name].toSvg({ class: props.class || "" }));
+  return icons[props.name].toSvg({ class: props.class || "" });
 }
-Icon.interface = Ty.make([
-  ["name", Ty.string()],
-  ["class", Ty.nullable(Ty.string())],
-]);
+Icon.interface = {
+  name: "string",
+  class: ["nullable", "string"],
+};
 
 export function Log(props) {
   console.log(props.val);
-  return Promise.resolve("");
+  return "";
 }
-Log.interface = Ty.make([["val", Ty.unknown()]]);
+Log.interface = { val: "_" };
 
 export function Link(props) {
   let current =
@@ -69,20 +66,19 @@ export function Link(props) {
   let className = props.class ? `class="${props.class}"` : "";
   let style = props.style ? `style="${props.style}"` : "";
   let tabIndex = props.tabIndex ? `tabindex=${props.tabIndex}` : "";
-  return Promise.resolve(
-    `<a href="${props.href}" ${className} ${current} ${style} ${tabIndex}>
+  return `
+    <a href="${props.href}" ${className} ${current} ${style} ${tabIndex}>
       ${props.children}
-    </a>`
-  );
+    </a>`;
 }
-Link.interface = Ty.make([
-  ["current", Ty.nullable(Ty.string())],
-  ["href", Ty.string()],
-  ["class", Ty.nullable(Ty.string())],
-  ["style", Ty.nullable(Ty.string())],
-  ["tabIndex", Ty.nullable(Ty.int())],
-  ["children", Ty.string()],
-]);
+Link.interface = {
+  current: ["nullable", "string"],
+  href: "string",
+  class: ["nullable", "string"],
+  style: ["nullable", "string"],
+  tabIndex: ["nullable", "int"],
+  children: "string",
+};
 
 export function ImgSrc({ width, aspect, gravity, image }) {
   let height = Math.ceil(width * aspect);
@@ -90,32 +86,32 @@ export function ImgSrc({ width, aspect, gravity, image }) {
     `f_auto,q_auto,c_fill,g_${gravity},h_${height},w_${width}`
   );
   try {
-    return Promise.resolve(cloudinaryOptions(opts, image));
+    return cloudinaryOptions(opts, image);
   } catch (e) {
     console.warn("Invalid image URL:", image);
-    return Promise.resolve(cloudinary_url + opts + image);
+    return cloudinary_url + opts + image;
   }
 }
-ImgSrc.interface = Ty.make([
-  ["width", Ty.int()],
-  ["aspect", Ty.float()],
-  ["gravity", Ty.string()],
-  ["image", Ty.string()],
-]);
+ImgSrc.interface = {
+  width: "int",
+  aspect: "float",
+  gravity: "string",
+  image: "string",
+};
 
 export function ImgSrcStatic({ transforms, image }) {
   let opts = transforms.map(encodeURIComponent).join("/");
   try {
-    return Promise.resolve(cloudinaryOptions(opts, image));
+    return cloudinaryOptions(opts, image);
   } catch (e) {
     console.warn("Invalid image URL:", image);
-    return Promise.resolve(cloudinary_url + "/" + opts + "/" + image);
+    return cloudinary_url + "/" + opts + "/" + image;
   }
 }
-ImgSrcStatic.interface = Ty.make([
-  ["transforms", Ty.list(Ty.string())],
-  ["image", Ty.string()],
-]);
+ImgSrcStatic.interface = {
+  transforms: ["list", "string"],
+  image: "string",
+};
 
 export function Favicon({ file, width }) {
   let key = `${file}-${width}`;
@@ -134,12 +130,12 @@ export function Favicon({ file, width }) {
     return result;
   }
 }
-Favicon.interface = Ty.make([
-  ["file", Ty.string()],
-  ["width", Ty.int()],
-]);
+Favicon.interface = {
+  file: "string",
+  width: "int",
+};
 
 export function PageNumber({ pageNumber }) {
-  return Promise.resolve(String(pageNumber + 1));
+  return String(pageNumber + 1);
 }
-PageNumber.interface = Ty.make([["pageNumber", Ty.int()]]);
+PageNumber.interface = { pageNumber: "int" };
