@@ -1,6 +1,6 @@
 [build]
   publish = "_site"
-  command = "npm run build"
+  command = "npx tinacms dev --no-server && git diff && npm run build"
 
   [build.environment]
     NODE_VERSION = "lts/*"
