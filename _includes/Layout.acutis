@@ -64,9 +64,9 @@
     <meta name=generator content="{% generator %}">
   {%~ /match %}
   {% map [
-      "/assets/node_modules/@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-normal.woff2",
-      "/assets/node_modules/@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2",
-      "/assets/node_modules/@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-italic.woff2"
+      "/assets/node_modules/@fontsource/source-sans-pro/files/source-sans-pro-latin-400-normal.woff2",
+      "/assets/node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-normal.woff2",
+      "/assets/node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-italic.woff2"
     ]
     with asset
   ~%}
