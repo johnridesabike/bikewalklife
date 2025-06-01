@@ -387,7 +387,10 @@ export default defineConfig({
                 name: "timeZone",
                 type: "string",
                 required: true,
-                options: Intl.supportedValuesOf("timeZone"),
+                options: ["America/New_York"],
+                // This isn't consistent across machines, leadint to schema
+                // mismatches!
+                // options: Intl.supportedValuesOf("timeZone"),
                 label: "Timezone",
                 description: "The timezone used for dates.",
               },
