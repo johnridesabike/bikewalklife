@@ -5,11 +5,6 @@
   [build.environment]
     NODE_VERSION = "lts/*"
 
-[functions]
-  # IDK why but this became necessary after some upgrade.
-  # https://answers.netlify.com/t/cloudinary-netlify-functions-enoent-bridge-js/95918
-  external_node_modules = ["vm2"]
-
 # Fix changes from how dates were once written.
 [[redirects]]
   from = "/2020/7/traffic-fatality-surge-reckless-driving/"

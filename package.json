@@ -13,12 +13,12 @@
   "author": "John Jackson",
   "scripts": {
     "analyze": "DEBUG=Eleventy:Benchmark* npm run build",
-    "prebuild": "tinacms build",
+    "prebuild": "tinacms build --verbose",
     "postbuild": "pagefind --site _site",
     "build": "ELEVENTY_ENV=production eleventy --quiet",
     "clean": "rm -r _site",
-    "dev": "ELEVENTY_ENV=development eleventy --serve --quiet --port=8080",
-    "tina": "tinacms dev -c \"npm run dev\""
+    "11ty:serve": "ELEVENTY_ENV=development eleventy --serve --quiet --port=8080",
+    "tina:dev": "tinacms dev -c \"npm run 11ty:serve\""
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
