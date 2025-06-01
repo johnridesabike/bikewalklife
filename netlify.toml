@@ -3,7 +3,7 @@
   command = "npm run build"
 
   [build.environment]
-    NODE_VERSION = "18"
+    NODE_VERSION = "lts/*"
 
 [functions]
   # IDK why but this became necessary after some upgrade.

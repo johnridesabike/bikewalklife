@@ -1,7 +1,10 @@
 @import "normalize.css";
-@import "@fontsource-variable/source-sans-3";
-@import "@fontsource-variable/source-serif-4";
-@import "@fontsource-variable/source-serif-4/wght-italic.css";
+@import "@fontsource/source-sans-pro/400.css";
+@import "@fontsource/source-sans-pro/700.css";
+@import "@fontsource/source-serif-pro/400.css";
+@import "@fontsource/source-serif-pro/700.css";
+@import "@fontsource/source-serif-pro/400-italic.css";
+@import "@fontsource/source-serif-pro/700-italic.css";
 @import "./assets/style-global-data.css";
 
 /*******************************************************************************
@@ -253,7 +256,6 @@ li {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 
 .footer__item {
   margin-top: 0.5em;
