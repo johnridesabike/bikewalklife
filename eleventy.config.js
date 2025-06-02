@@ -1,6 +1,7 @@
 import htmlmin from "html-minifier";
 import * as acutis from "acutis-lang/eleventy";
 import * as acutisComponents from "./_includes/acutisComponents.js";
+import * as tfidf from "./tf-idf.js";
 
 // TODO: this is kind of hacky and has some problems.
 // - This will upscale images.
@@ -91,7 +92,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "assets/images/2023/icon-circle-2023.svg": "favicon.svg",
   });
-  eleventyConfig.addCollection("posts", (collectionApi) => {
+  eleventyConfig.addCollection("posts", async (collectionApi) => {
     const coll = collectionApi
       .getFilteredByGlob("posts/**/*.md")
       .reverse()
@@ -103,20 +104,18 @@ export default function (eleventyConfig) {
       coll[i].data.previous = previous;
       coll[i].data.next = next;
     }
-    let postContent = Promise.all(coll.map((x) => x.template.inputContent));
-    return Promise.all([import("./tf-idf.js"), postContent]).then(
-      ([tfidf, postContent]) => {
-        let col = new tfidf.DocCollection();
-        for (let i = 0; i < postContent.length; i++) {
-          col.add(postContent[i], i);
-        }
-        let similar = new tfidf.Similar(col);
-        for (let i = 0; i < coll.length; i++) {
-          coll[i].data.similarPosts = similar.get(i, 5).map((j) => coll[j]);
-        }
-        return coll;
-      }
+    let postContent = await Promise.all(
+      coll.map((x) => x.template.inputContent)
     );
+    let col = new tfidf.DocCollection();
+    for (let i = 0; i < postContent.length; i++) {
+      col.add(postContent[i], i);
+    }
+    let similar = new tfidf.Similar(col);
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].data.similarPosts = similar.get(i, 5).map((j) => coll[j]);
+    }
+    return coll;
   });
   eleventyConfig.addCollection("frontPage", (collectionApi) =>
     collectionApi
@@ -163,9 +162,10 @@ export default function (eleventyConfig) {
     });
   }
   eleventyConfig.addWatchTarget("./assets/**/*");
-  return {
-    templateFormats: ["md", "acutis", "html", "11ty.js"],
-    markdownTemplateEngine: false,
-    htmlTemplateEngine: false,
-  };
+  eleventyConfig.setTemplateFormats(["md", "acutis", "html", "11ty.js"]);
 }
+
+export const config = {
+  markdownTemplateEngine: false,
+  htmlTemplateEngine: false,
+};
