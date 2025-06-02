@@ -1,4 +1,6 @@
+import path from "node:path";
 import htmlmin from "html-minifier";
+import * as pagefind from "pagefind";
 import * as acutis from "acutis-lang/eleventy";
 import * as acutisComponents from "./_includes/acutisComponents.js";
 import * as tfidf from "./tf-idf.js";
@@ -163,6 +165,24 @@ export default function (eleventyConfig) {
   }
   eleventyConfig.addWatchTarget("./assets/**/*");
   eleventyConfig.setTemplateFormats(["md", "acutis", "html", "11ty.js"]);
+
+  // The Pagefind CLI is simpler but the API works with 11ty's watch mode.
+  eleventyConfig.on("eleventy.after", async ({ directories }) => {
+    let { index } = await pagefind.createIndex();
+    let directoryResult = await index.addDirectory({
+      path: directories.output,
+    });
+    for (let error in directoryResult.errors) {
+      console.error(error);
+    }
+    let writeResult = await index.writeFiles({
+      outputPath: path.join(directories.output, "pagefind"),
+    });
+    for (let error in writeResult.errors) {
+      console.error(error);
+    }
+    console.log("Indexed %i files with Pagefind.", directoryResult.page_count);
+  });
 }
 
 export const config = {

@@ -14,7 +14,6 @@
   "scripts": {
     "analyze": "DEBUG=Eleventy:Benchmark* npm run build",
     "prebuild": "tinacms build --verbose",
-    "postbuild": "pagefind --site _site",
     "build": "ELEVENTY_ENV=production eleventy --quiet",
     "clean": "rm -r _site",
     "11ty:serve": "ELEVENTY_ENV=development eleventy --serve --quiet --port=8080",
