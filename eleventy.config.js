@@ -72,7 +72,8 @@ function mdImages(md, _ops) {
     try {
       url = new URL(src);
     } catch (e) {
-      console.log("Warning:", src, "is not a valid image URL.");
+      console.warn("Warning:", src, "is not a valid image URL.");
+      console.warn(e);
     }
     if (url) {
       const urlData = transformImageUrl(url);

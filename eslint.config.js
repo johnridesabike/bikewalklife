@@ -1,7 +1,9 @@
 import globals from "globals";
 import js from "@eslint/js";
+import { defineConfig, globalIgnores } from "eslint/config";
 
-export default [
+export default defineConfig([
+  globalIgnores([".netlify/*", "_site/*"]),
   js.configs.recommended,
   {
     languageOptions: {
@@ -11,4 +13,4 @@ export default [
       "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     },
   },
-];
+]);

@@ -1,6 +1,5 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import acutis from "acutis-lang";
 import featherIcons from "feather-icons";
 import Image from "@11ty/eleventy-img";
 import postcss from "postcss";
@@ -89,6 +88,7 @@ export function ImgSrc({ width, aspect, gravity, image }) {
     return cloudinaryOptions(opts, image);
   } catch (e) {
     console.warn("Invalid image URL:", image);
+    console.warn(e);
     return cloudinary_url + opts + image;
   }
 }
@@ -105,6 +105,7 @@ export function ImgSrcStatic({ transforms, image }) {
     return cloudinaryOptions(opts, image);
   } catch (e) {
     console.warn("Invalid image URL:", image);
+    console.warn(e);
     return cloudinary_url + "/" + opts + "/" + image;
   }
 }
