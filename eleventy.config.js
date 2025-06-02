@@ -104,7 +104,7 @@ export default function (eleventyConfig) {
       coll[i].data.next = next;
     }
     let postContent = Promise.all(coll.map((x) => x.template.inputContent));
-    return Promise.all([import("./tf-idf.mjs"), postContent]).then(
+    return Promise.all([import("./tf-idf.js"), postContent]).then(
       ([tfidf, postContent]) => {
         let col = new tfidf.DocCollection();
         for (let i = 0; i < postContent.length; i++) {
