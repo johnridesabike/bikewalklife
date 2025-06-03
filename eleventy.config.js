@@ -173,16 +173,16 @@ export default function (eleventyConfig) {
     let directoryResult = await index.addDirectory({
       path: directories.output,
     });
-    for (let error in directoryResult.errors) {
+    for (let error of directoryResult.errors) {
       console.error(error);
     }
     let writeResult = await index.writeFiles({
       outputPath: path.join(directories.output, "pagefind"),
     });
-    for (let error in writeResult.errors) {
+    for (let error of writeResult.errors) {
       console.error(error);
     }
-    console.log("Indexed %i files with Pagefind.", directoryResult.page_count);
+    console.log("Pagefind indexed %i pages.", directoryResult.page_count);
   });
 }
 
