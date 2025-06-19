@@ -81,9 +81,9 @@ Link.interface = {
 
 export function ImgSrc({ width, aspect, gravity, image }) {
   let height = Math.ceil(width * aspect);
-  let opts = encodeURIComponent(
-    `f_auto,q_auto,c_fill,g_${gravity},h_${height},w_${width}`
-  );
+  let opts = [`c_fill,g_${gravity},h_${height},w_${width}`, "f_auto,q_auto"]
+    .map(encodeURIComponent)
+    .join("/");
   try {
     return cloudinaryOptions(opts, image);
   } catch (e) {
