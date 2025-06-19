@@ -11,19 +11,12 @@ import * as tfidf from "./tf-idf.js";
 // - This only works with Cloudinary URLs.
 // - Are these the best breakpoints? I have no idea!
 const mdImageBreakpoints = [
-  320, // minimum mobile size
-  460,
-  600, // actual size
-  675,
-  750,
-  825,
-  900, // 1.5x actual size
-  950,
-  1000,
-  1050,
-  1100,
-  1150,
-  1200, // 2x actual size
+  375, // Mobile small
+  750, // Mobile small x2
+  428, // Mobile big
+  856, // Mobile big x2
+  600, // Full size
+  1200, // Full size x2
 ];
 
 const mdImageSizesAttr = "(max-width: 600px) 100vw, 600px";
