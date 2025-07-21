@@ -28,7 +28,7 @@
     "@sindresorhus/slugify": "^2.2.1",
     "@tinacms/auth": "^1.0.12",
     "@tinacms/cli": "^1.9.8",
-    "acutis-lang": "^0.27.0",
+    "acutis-lang": "^0.28.0",
     "cssnano": "^7.0.7",
     "express": "^5.1.0",
     "feather-icons": "^4.29.2",
