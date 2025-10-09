@@ -1,16 +1,16 @@
 ---
-title: Bike Walk Live Summit 2025
+title: Georgia Bike-Walk-Live Summit 2025
 author: John Jackson
 date: 2025-10-09T04:00:00.000Z
 excerpt: >-
-  I had the privilege of attending and presenting at Go Georgia's Bike Walk Live
+  I had the privilege of attending and presenting at Go Georgia's Bike-Walk-Live
   Summit last week (no relation with this blog, Bike Walk Life). I joined a
   panel about bicycle outreach in southwest Georgia. We discussed what Bicycle
   Columbus does and compared it with our neighbor organization, Sumter Cycling.
 draft: false
 ---
 
-I had the privilege of attending and presenting at [Go Georgia's Bike Walk Live Summit](https://www.go-georgia.org/summit) last week (no relation with this blog, Bike Walk *Life*). I joined a panel about bicycle outreach in southwest Georgia. We discussed what Bicycle Columbus does and compared it with our neighbor organization, Sumter Cycling.
+I had the privilege of attending and presenting at [Go Georgia's Bike-Walk-Live Summit](https://www.go-georgia.org/summit) last week (no relation with this blog, Bike Walk *Life*). I joined a panel about bicycle outreach in southwest Georgia. We discussed what Bicycle Columbus does and compared it with our neighbor organization, Sumter Cycling.
 
 This was my first bike summit, and it was a great experience. It felt refreshing and reassuring to meet professionals who understand the state of transportation in Georgia today as well as talk honestly about how much more work we need to do.
 
