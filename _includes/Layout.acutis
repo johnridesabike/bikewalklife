@@ -184,6 +184,11 @@
                 Mastodon
               </a>
             </p>
+            <p>
+              <a href="mailto:john@bikewalk.life" rel=me>
+                Email
+              </a>
+            </p>
           </div>
           <div class="footer__copyright footer__item">
             <p> {{% strings.copyright %}} </p>
