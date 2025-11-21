@@ -4,7 +4,7 @@ author: John Jackson
 date: 2025-11-21T17:00:00.000Z
 hero_image:
   image: >-
-    https://res.cloudinary.com/bike-walk-life/image/upload/v1763741478/2025/bicycleplaygroundgroundbreaking_pigimc.jpg
+    https://res.cloudinary.com/bike-walk-life/image/upload/v1763743103/2025/bicycleplaygroundgroundbreaking_pigimc_c_crop_ar_16_9_u3w05x.jpg
   caption: A photo of the groundbreaking ceremony.
 excerpt: >-
   This past Wednesday was Groundbreaking Day for the MidTown Children's Bicycle
