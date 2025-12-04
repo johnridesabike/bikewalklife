@@ -18,7 +18,7 @@ Propel ATL has their latest [Human Cost of Mobility][0] report online, which com
 
 The full report is rich with information and stories of individual victims, and it is worth reading in its entirety.
 
-The [Atlanta Journal Constitution has also picked up the story][2] and focused on one notable angle: the fact that traffic fatalities outpace homicides. They share some quotes from Propel ATL's Rebecca Serna.
+The [Atlanta Journal-Constitution has also picked up the story][2] and focused on one notable angle: the fact that traffic fatalities outpace homicides. They share some quotes from Propel ATL's Rebecca Serna.
 
 > “Homicide gets so much attention and it’s so challenging to solve because every murder is so distinct,” said Rebecca Serna, executive director of Propel ATL. “Whereas traffic fatalities — people killed just trying to cross the street or due to high speeds — the resolution to those underlying circumstances is so much simpler."
 
