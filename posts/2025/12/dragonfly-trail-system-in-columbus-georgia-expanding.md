@@ -1,17 +1,17 @@
 ---
-title: Dragonfly Trail system in Columbus Georgia expanding
+title: 'Dragonfly Trail system in Columbus, Georgia expanding'
 author: John Jackson
 date: 2025-12-12T01:00:00.000Z
 excerpt: >-
   The Dragonfly Trails in Columbus, Georgia is on track to grow next year. The
-  upcoming project will add new multi-use trails that people can use use for
-  recreation and active transportation as well as improve crosswalks and parking
-  for the Midtown area.
+  upcoming project will add new multi-use trails that people can use for
+  recreation and active transportation, and it will improve crosswalks and
+  parking for the Midtown area.
 external_link: 'https://www.ledger-enquirer.com/news/politics-government/article313545946.html'
 draft: false
 ---
 
-The Dragonfly Trails in Columbus, Georgia is on track to grow next year. The upcoming project will add new multi-use trails that people can use use for recreation and active transportation as well as improve crosswalks and parking for the Midtown area.
+The Dragonfly Trails in Columbus, Georgia is on track to grow next year. The upcoming project will add new multi-use trails that people can use for recreation and active transportation, and it will improve crosswalks and parking for the Midtown area.
 
 The [Ledger-Enquirer has a report about it][0].
 
