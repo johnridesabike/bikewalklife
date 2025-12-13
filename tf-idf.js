@@ -231,7 +231,8 @@ Doc.prototype.rawCount = function (term) {
  * terms.
  */
 Doc.prototype.termFrequency = function (term) {
-  return this.rawCount(term) / this.terms.size;
+  let size = this.terms.size;
+  return size === 0 ? 0 : this.rawCount(term) / size;
 };
 
 /**
@@ -246,7 +247,8 @@ Doc.prototype.logNormalize = function (term) {
  * common word in the document. `k` is usually `0.5`.
  */
 Doc.prototype.doubleNormalize = function (term, k) {
-  return k + k * (this.rawCount(term) / this.maxCount);
+  let maxCount = this.maxCount;
+  return maxCount === 0 ? 0 : k + k * (this.rawCount(term) / maxCount);
 };
 
 /**
