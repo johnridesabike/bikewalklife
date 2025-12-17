@@ -1,5 +1,5 @@
 ---
-title: Car-dependence stands at odds with new housing
+title: Car dependence stands at odds with new housing
 author: John Jackson
 date: 2025-12-17T16:00:00.000Z
 excerpt: >-
