@@ -27,7 +27,7 @@
     "@fontsource/source-serif-pro": "^5.2.5",
     "@sindresorhus/slugify": "^3.0.0",
     "@tinacms/auth": "^1.1.0",
-    "@tinacms/cli": "^2.0.3",
+    "@tinacms/cli": "^2.0.4",
     "acutis-lang": "^0.28.1",
     "cssnano": "^7.1.2",
     "express": "^5.2.1",
