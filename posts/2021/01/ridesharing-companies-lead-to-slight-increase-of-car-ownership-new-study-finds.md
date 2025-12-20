@@ -8,14 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://doi.org/10.1016/j.isci.2020.101933
-tags:
-- iScience
-- Elsevier
-- Uber
-- Lyft
-- ridesharing
-- science
-- research
 excerpt: >
   Many people have speculated on the long-term effects that companies like Uber
   and Lyft have on cities. A new paper aims to provide some scientific insights.

@@ -1,7 +1,5 @@
 ---
 date: 2021-05-25T19:16:32-04:00
-tags:
-- Errandonnee 2021
 draft: false
 title: Errandonnee 2021 wrap-up
 author: John Jackson

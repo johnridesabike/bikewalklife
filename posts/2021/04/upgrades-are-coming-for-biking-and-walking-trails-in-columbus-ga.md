@@ -1,13 +1,5 @@
 ---
 date: 2021-04-19T13:22:37-04:00
-tags:
-- Dragonfly Trails Network
-- Columbus GA
-- trails
-- WRBL
-- Chuck Williams
-- Becca Zajac
-- Tom Ingram
 draft: false
 title: Upgrades are coming for biking and walking trails in Columbus, GA
 author: John Jackson

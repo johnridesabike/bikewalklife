@@ -9,11 +9,6 @@ hero_image:
   alt: 30 Days of Biking card.
   caption: ''
 external_link: https://30daysofbiking.com/
-tags:
-- 30 Days of Biking
-- Patrick Stephenson
-- challenges
-- '2021'
 excerpt: >
   In one week, the 30 Days of Biking challenge will begin on April 1st and run
   through the end of the month. The challenge is simple: ride a bicycle every

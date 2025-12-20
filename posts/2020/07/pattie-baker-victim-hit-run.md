@@ -8,10 +8,6 @@ hero_image:
   image: 'https://res.cloudinary.com/bike-walk-life/image/upload/v1608060004/2020/fullsizeoutput_354b.jpeg'
   alt: Pattie Baker's bike noodle.
   caption: 'Image credit: travelingatthespeedofbike.com'
-tags:
-- violence
-- Pattie Baker
-- SUV
 excerpt: >
   Pattie Baker has been an influential and inspirational figure in bike advocacy.
   If there's any silver lining to this story, it's at least that it is drawing

@@ -11,8 +11,6 @@ excerpt: >-
   bicycle and pedestrian crash data in the Peach State. It is freely available
   for the public to use on their website.
 external_link: 'https://georgiabikes.org/crash-data/'
-tags:
-  - untagged
 draft: false
 ---
 

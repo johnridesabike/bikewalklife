@@ -1,7 +1,5 @@
 ---
 date: 2022-10-01T07:42:06-04:00
-tags:
-- untagged
 draft: false
 title: Coffeeneuring Challenge returns in 2022 for its twelfth year
 author: John Jackson

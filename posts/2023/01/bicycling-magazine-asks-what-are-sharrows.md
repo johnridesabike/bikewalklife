@@ -9,8 +9,6 @@ excerpt: >-
   they are. Bicycling Magazine published a new article that tries to explain
   them.
 external_link: 'https://www.bicycling.com/news/a20044419/what-are-sharrows-used-for/'
-tags:
-  - untagged
 draft: false
 ---
 

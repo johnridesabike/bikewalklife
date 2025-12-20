@@ -9,15 +9,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://doi.org/10.1186/s12940-020-0565-4
-tags:
-- science
-- health
-- car culture
-- Vancouver
-- dementia
-- Parkinson's
-- Alzheimer's
-- multiple sclerosis
 excerpt: >
   We all know that living near a busy arterial road is generally less pleasant
   than living near a verdant park. Most of us would prefer to stay away from the

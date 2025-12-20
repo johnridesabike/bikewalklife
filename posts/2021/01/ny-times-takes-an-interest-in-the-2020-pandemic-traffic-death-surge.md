@@ -8,13 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.nytimes.com/2021/01/01/nyregion/nyc-traffic-deaths.html
-tags:
-- New York Times
-- Christina Goldbaum
-- pandemic
-- '2020'
-- COVID-19
-- traffic
 excerpt: >
   The 2020 pandemic emptied many of America’s streets while people stayed home.
   Paradoxically, that caused a sharp spike in traffic deaths. This unexpected

@@ -1,10 +1,5 @@
 ---
 date: 2022-02-18T07:16:12-05:00
-tags:
-- urbanism
-- car culture
-- originals
-- Cycling Professor
 draft: false
 title: Investing in imagination
 author: John Jackson

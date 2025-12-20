@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://cdn.flipsnack.com/widget/v2/widget.html?hash=tcl6pct4ot&p=31
-tags:
-- GADOT
-- bike routes
-- adventure cycling
-- Georgia
 excerpt: >
   US Bike Route 1, which extends from Florida to Maine, is officially part of
   costal Georgia. Jill Nagel writes for GADOT’s Milepost summer 2020 issue.

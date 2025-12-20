@@ -1,7 +1,5 @@
 ---
 date: 2021-05-11T08:40:54-04:00
-tags:
-- Errandonnee 2021
 draft: false
 title: 'Errandonnee 2021: Errand 3'
 author: John Jackson

@@ -1,7 +1,5 @@
 ---
 date: 2022-05-28T18:13:32-04:00
-tags:
-- untagged
 draft: false
 title: NPR takes an interest in our nation’s rising bicycle fatalities
 author: John Jackson

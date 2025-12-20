@@ -1,8 +1,5 @@
 ---
 date: 2021-12-11T12:17:09-05:00
-tags:
-- philosophy
-- musings
 draft: false
 title: Mobility as a Hobson’s choice
 author: John Jackson

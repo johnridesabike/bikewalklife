@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.strongtowns.org/journal/2020/11/20/show-us-what-you-wish-your-city-would-do-with-all-that-parking?utm_campaign=112320+Monday+Jab+-+General+List&utm_medium=email&utm_source=autopilot
-tags:
-- Strong Towns
-- Black Friday parking
-- parking
-- hashtags
 excerpt: >
   For several years, Strong Towns has led a social media campaign called
   #BlackFridayParking. If you aren’t familiar with it, here’s the basic logic...

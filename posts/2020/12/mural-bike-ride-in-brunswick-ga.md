@@ -8,12 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://thebrunswicknews.com/news/local_news/january-bike-ride-aims-to-bring-attention-to-downtown-murals/article_5b53ebb9-2a95-5404-9b2c-c09b860457cc.html
-tags:
-- Brunswick GA
-- murals
-- tourism
-- events
-- Terry Dickson
 excerpt: >
   On January 17, local riders in Brunswick, GA will host a ride for people to
   view their town’s murals. Terry Dickson reports for The Brunswick News.

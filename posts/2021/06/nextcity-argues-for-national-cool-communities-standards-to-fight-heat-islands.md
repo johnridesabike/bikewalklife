@@ -1,10 +1,5 @@
 ---
 date: 2021-06-20T14:18:02-04:00
-tags:
-- heat
-- heat islands
-- V Kelly Turner
-- NextCity
 draft: false
 title: NextCity argues for National Cool Communities Standards to fight “heat islands”
 author: John Jackson

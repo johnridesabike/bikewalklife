@@ -1,7 +1,5 @@
 ---
 date: 2022-07-23T17:28:30-04:00
-tags:
-- untagged
 draft: false
 title: A reflection on the joys of cycling from NPR
 author: John Jackson

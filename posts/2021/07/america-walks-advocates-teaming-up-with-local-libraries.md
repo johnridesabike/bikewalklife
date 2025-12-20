@@ -1,9 +1,5 @@
 ---
 date: 2021-07-10T17:46:00-04:00
-tags:
-- America walks
-- libraries
-- Noah Lenstra
 draft: false
 title: America Walks advocates teaming up with local libraries
 author: John Jackson

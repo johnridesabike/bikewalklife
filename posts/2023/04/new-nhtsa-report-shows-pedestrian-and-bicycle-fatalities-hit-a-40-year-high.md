@@ -9,8 +9,6 @@ excerpt: >-
   now reached a 40-year high.
 external_link: >-
   https://smartgrowthamerica.org/far-more-people-walking-were-struck-and-killed-in-2021-than-previously-predicted/
-tags:
-  - untagged
 draft: false
 ---
 

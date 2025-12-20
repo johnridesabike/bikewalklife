@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.virginiamercury.com/2020/12/21/jaywalking-decriminalization-is-coming-to-virginia-100-years-after-the-auto-industry-helped-make-it-a-crime/
-tags:
-- jaywalking
-- Virginia
-- Virginia Mercury
-- Wyatt Gordon
 excerpt: >
   Regular Bike Walk Life readers know that I'm no fan of "jaywalking." I even
   choose to write it in scare-quotes because the word itself carries derogatory

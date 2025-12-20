@@ -8,12 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
-tags:
-- bike commuting
-- Georgia Commute Options
-- tips
-- beginners
-- guides
 excerpt: >
   Georgia Commute Options is promoting the Atlanta Biketober challenge, and
   they’ve posted a couple of articles with tips for both first-time and

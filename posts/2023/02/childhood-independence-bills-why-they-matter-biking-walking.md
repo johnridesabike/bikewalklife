@@ -9,8 +9,6 @@ excerpt: >-
   considering, bills to support it. These can improve our communities not just
   for children, but for all of us.
 external_link: 'https://letgrow.org/childhood-independence-bills-update/'
-tags:
-  - untagged
 draft: false
 ---
 

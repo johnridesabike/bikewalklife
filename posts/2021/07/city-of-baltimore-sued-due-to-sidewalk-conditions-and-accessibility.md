@@ -1,11 +1,5 @@
 ---
 date: 2021-07-28T19:19:45-04:00
-tags:
-- Cinnamon Janzer
-- Next City
-- disability
-- lawsuit
-- legal
 draft: false
 title: City of Baltimore sued due to poor sidewalk accessibility conditions
 author: John Jackson

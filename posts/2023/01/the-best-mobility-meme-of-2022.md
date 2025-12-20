@@ -1,7 +1,5 @@
 ---
 date: 2023-01-07T16:35:54.000-05:00
-tags:
-- untagged
 draft: false
 title: The best mobility meme of 2022
 author: John Jackson

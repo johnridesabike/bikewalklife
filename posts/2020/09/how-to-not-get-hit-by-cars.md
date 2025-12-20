@@ -8,10 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://bicyclesafe.com
-tags:
-- safety
-- violence
-- guides
 excerpt: >
   I recently found out about BicycleSafe.com by Michael Bluejay, which consists
   of a convenient guide for “Ten Ways to Not Get Hit.” I think it may be one of

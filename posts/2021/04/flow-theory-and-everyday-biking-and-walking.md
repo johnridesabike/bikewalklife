@@ -1,10 +1,5 @@
 ---
 date: 2021-04-29T17:23:48-04:00
-tags:
-- science
-- research
-- flow theory
-- CycleCommute.CC
 draft: false
 title: Flow theory and everyday biking and walking
 author: John Jackson

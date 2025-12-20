@@ -1,7 +1,5 @@
 ---
 date: 2022-07-22T07:19:11-04:00
-tags:
-- untagged
 draft: false
 title: 'Dangerous by Design 2022: traffic deaths are getting worse, especially in
   the Sun Belt'

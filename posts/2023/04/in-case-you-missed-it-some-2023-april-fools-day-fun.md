@@ -11,8 +11,6 @@ excerpt: >-
   The Sheldon Brown website apparently offers a new AI service, and bicycles
   appeared in the Strut the Hooch parade.
 external_link: 'https://www.sheldonbrown.com/openai.html'
-tags:
-  - untagged
 draft: false
 ---
 

@@ -1,9 +1,5 @@
 ---
 date: 2021-12-04T18:04:00-05:00
-tags:
-- Braess's paradox
-- paradoxes
-- traffic
 draft: false
 title: 'Braess’s paradox: why traffic seems to always get worse'
 author: John Jackson

@@ -8,13 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
-tags:
-- Coffeeneuring
-- Society of Three Speeds
-- Three Speed October
-- Chasing Mailboxes
-- challenges
-- Biketober
 excerpt: >
   I’m always game for an old-fashioned, just-for-fun, bicycle challenge. Sure
   the Bike League’s big National Bike Challenge and city events like Atlanta’s

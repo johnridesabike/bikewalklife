@@ -1,7 +1,5 @@
 ---
 date: 2022-11-11T19:44:39-05:00
-tags:
-- untagged
 draft: false
 title: World Day of Remembrance for Road Traffic Victims 2022
 author: John Jackson

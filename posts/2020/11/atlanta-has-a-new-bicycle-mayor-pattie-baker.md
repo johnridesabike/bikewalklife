@@ -8,11 +8,6 @@ hero_image:
   alt: 'A photograph of Pattie Baker holding her bicycle in front of a mural. '
   caption: 'Photo credit: Pattie Baker and BYCS.'
 external_link: https://bycs.org/pattie-baker/
-tags:
-- bicycle mayors
-- Pattie Baker
-- BYCS
-- Atlanta
 excerpt: >
   There’s a new mayor in A-town, or rather, a new bicycle mayor. Pattie Baker,
   of Traveling at the Speed of Bike fame (and an inspiration for Bike Walk

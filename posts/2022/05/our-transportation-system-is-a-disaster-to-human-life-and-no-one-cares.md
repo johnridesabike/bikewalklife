@@ -1,7 +1,5 @@
 ---
 date: 2022-05-14T15:25:37-04:00
-tags:
-  - untagged
 draft: false
 title: Our transportation system is a disaster to human life, and no one cares
 author: John Jackson

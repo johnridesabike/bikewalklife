@@ -1,8 +1,5 @@
 ---
 date: 2021-08-26T07:30:32-04:00
-tags:
-- Pattie Baker
-- Traveling at the Speed of Bike
 draft: false
 title: Pedal Power with Pattie, a newsletter by the creator of Traveling at the Speed
   of Bike

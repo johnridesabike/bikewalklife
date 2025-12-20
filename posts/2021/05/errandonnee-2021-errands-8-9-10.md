@@ -1,7 +1,5 @@
 ---
 date: 2021-05-17T12:10:46-04:00
-tags:
-- Errandonnee 2021
 draft: false
 title: 'Errandonnee 2021: Errands 8, 9, & 10'
 author: John Jackson

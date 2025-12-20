@@ -8,8 +8,6 @@ excerpt: >-
   have been increasing since 1999, while personal vehicle use has decreased.
 external_link: >-
   https://www.forbes.com/sites/carltonreid/2023/03/01/cyclists-now-outnumber-motorists-in-city-of-london/?sh=402da5652236
-tags:
-  - untagged
 draft: false
 ---
 

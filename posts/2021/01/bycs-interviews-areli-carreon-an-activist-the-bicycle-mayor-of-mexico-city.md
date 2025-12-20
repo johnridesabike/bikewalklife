@@ -8,11 +8,6 @@ hero_image:
   alt: A photograph of Areli Carreón.
   caption: 'Image credit: BYCS and Areli Carreón.'
 external_link: https://bycs.org/mobility-as-a-right-with-areli-carreon/
-tags:
-- BYCS
-- bicycle mayor
-- Areli Carreón
-- Bicitekas
 excerpt: >
   Areli Carreón is a co-founder of Bicitekas, a bicycle nonprofit based in
   Mexico City. She is also a member of the BYCS Bicycle Mayor program. BYCS

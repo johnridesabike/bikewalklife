@@ -8,10 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://biketoeverything.com/2021/01/19/avoid-the-right-hook/
-tags:
-- Bike to Everything
-- guides
-- safety
 excerpt: >
   Even if you haven’t heard of the “right hook,” you probably know what it is if
   you’ve ridden a bicycle in car traffic. When a car makes a right turn in front

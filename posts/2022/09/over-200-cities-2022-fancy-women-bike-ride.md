@@ -1,7 +1,5 @@
 ---
 date: 2022-09-24T11:28:03-04:00
-tags:
-- untagged
 draft: false
 title: Over 200 cities participated in the 2022 Fancy Women Bike Ride
 author: John Jackson

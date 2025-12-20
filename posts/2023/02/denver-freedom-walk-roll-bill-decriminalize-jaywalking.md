@@ -4,8 +4,6 @@ author: John Jackson
 date: '2023-02-07T12:00:00.000Z'
 external_link: >-
   https://www.denverpost.com/2023/01/30/denver-city-council-decriminalize-jaywalking-vote/
-tags:
-  - untagged
 draft: false
 excerpt: >-
   Denver, Colorado has just become the latest area to decriminalize jaywalking.

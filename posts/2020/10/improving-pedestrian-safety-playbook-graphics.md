@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://americawalks.org/we-asked-nhtsa-to-rewrite-the-pedestrian-safety-playbook/
-tags:
-- pedestrian
-- NHTSA
-- AmericaWalks
-- National Pedestrian Safety Month
 excerpt: >
   Previously on Bike Walk Life, we took a look at the glaring shortcomings of
   the National Highway Traffic Safety Administration’s (NHTSA) “Pedestrian

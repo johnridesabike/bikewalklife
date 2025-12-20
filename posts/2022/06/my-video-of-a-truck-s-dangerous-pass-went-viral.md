@@ -1,7 +1,5 @@
 ---
 date: 2022-06-04T16:28:26-04:00
-tags:
-- untagged
 draft: false
 title: My video of a truck’s dangerous pass went viral
 author: John Jackson

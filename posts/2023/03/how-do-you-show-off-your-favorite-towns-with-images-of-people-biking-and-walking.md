@@ -14,8 +14,6 @@ excerpt: >-
   they often use photos of people on bicycles? I couldn't help but observe this
   when I saw the latest Southern Living magazine cover.
 external_link: 'https://www.southernliving.com/souths-best/small-towns'
-tags:
-  - untagged
 draft: false
 ---
 

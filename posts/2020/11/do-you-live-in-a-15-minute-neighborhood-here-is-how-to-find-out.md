@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://app.developer.here.com/15-min-city-map/
-tags:
-- 15-minute
-- apps
-- HERE
-- maps
 excerpt: >
   I frequently hear my town described as a “15 minute city,” or a “20 minute
   city,” by people who advocate living here. That's a shorthand way of saying

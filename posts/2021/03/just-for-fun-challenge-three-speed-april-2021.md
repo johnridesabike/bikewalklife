@@ -8,10 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://societyofthreespeeds.wordpress.com/2021/03/08/three-speed-april-2021-registration-now-open/
-tags:
-- Society of Three Speeds
-- just for fun
-- challenges
 excerpt: >
   Another just-for-fun bicycle challenge is coming up: Three Speed April, hosted
   by Society of Three Speeds.

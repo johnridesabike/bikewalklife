@@ -1,12 +1,5 @@
 ---
 date: 2021-08-04T19:23:11-04:00
-tags:
-- video
-- legal
-- BikeAthens
-- illegal courtesies
-- tips
-- guides
 draft: false
 title: 'Illegal courtesies: what they are and how to handle them while biking'
 author: John Jackson

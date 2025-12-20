@@ -8,12 +8,6 @@ hero_image:
   alt: A photograph of a bicycle handlebars over a bicycle lane marking.
   caption: ''
 external_link: ''
-tags:
-- originals
-- commuting
-- bicycle street
-- mobility pyramid
-- three modes
 excerpt: >
   We all recognize the main bicycle categories, such as mountain biking, BMX,
   touring, and commuting to name a few. But when we zoom-in to commuting, then

@@ -1,9 +1,5 @@
 ---
 date: 2021-07-31T15:40:19-04:00
-tags:
-- law
-- bicycle commuter act
-- commuting
 draft: false
 title: Thoughts on the proposed Bicycle Commuter Act of 2021
 author: John Jackson

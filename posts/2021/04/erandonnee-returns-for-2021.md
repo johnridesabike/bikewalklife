@@ -1,11 +1,5 @@
 ---
 date: 2021-04-15T12:46:08.000-04:00
-tags:
-- Errandonnee
-- just for fun
-- challenges
-- Chasing Mailboxes
-- Errandonnee 2021
 draft: false
 title: Erandonnee returns for 2021 in “Hyperlocal Edition”
 author: John Jackson

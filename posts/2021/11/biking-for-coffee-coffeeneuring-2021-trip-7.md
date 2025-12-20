@@ -1,11 +1,5 @@
 ---
 date: 2021-11-18T18:21:11-05:00
-tags:
-- originals
-- Biking for Coffee
-- Coffeeneuring
-- Coffeeneuring 2021
-- videos
 draft: false
 title: 'Biking for Coffee: Coffeeneuring 2021, trip #7'
 author: John Jackson

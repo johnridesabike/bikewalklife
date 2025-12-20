@@ -8,10 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://macwright.com/2020/12/04/sharrows.html
-tags:
-- sharrows
-- Tom MacWright
-- infrastructure
 excerpt: >
   “Sharrows” are those painted arrows with bicycle symbols we see on some
   streets. Many bicyclists dislike sharrows and ignore them. Most drivers have

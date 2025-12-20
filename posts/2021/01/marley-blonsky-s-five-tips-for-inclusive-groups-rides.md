@@ -8,12 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://lifeontwowheels.squarespace.com/blog-native/2021/1/11/5-tips-for-making-your-group-ride-more-inclusive
-tags:
-- Marley Blonsky
-- inclusivity
-- tips
-- group rides
-- Life on Two Wheels
 excerpt: >
   Marley Blonsky recently blogged her five tips for making your group ride more
   inclusive. Having been through a variety of group rides myself, I think each

@@ -8,12 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.smartcitiesdive.com/news/suburban-pedestrian-activity-2020-streetlight-data-report/596992/
-tags:
-- Cailin Crowe
-- Smart Cities Dive
-- '2020'
-- pandemic
-- suburbs
 excerpt: >
   The pandemic brought about a lot of changes in the way we use our streets, but
   a recent report shows that it changed walking in suburbs more than in city

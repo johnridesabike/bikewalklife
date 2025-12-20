@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.connectsavannah.com/savannah/the-news-cycle-is-complete/Content?oid=15254469
-tags:
-- John Bennett
-- lessons
-- Savannah
-- writing
 excerpt: >
   John Bennett, a long-time mobility advocate in Savannah, published a
   reflection on writing about transportation. His lessons are partially about

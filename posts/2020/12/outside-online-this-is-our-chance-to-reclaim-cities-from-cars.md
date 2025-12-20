@@ -8,9 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.outsideonline.com/2418853/reclaim-cities-from-cars
-tags:
-- Outside
-- COVID-19
 excerpt: >
   Last month, Outside Online published an opinion piece by Joe Lindsey about how
   the pandemic presents the opportunity to reclaim our cities from cars.

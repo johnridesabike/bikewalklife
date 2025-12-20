@@ -1,10 +1,5 @@
 ---
 date: 2021-10-16T13:20:04-04:00
-tags:
-- parking
-- Strong Towns
-- Ledger-Enquirer
-- Columbus GA
 draft: false
 title: Parking lots, our nationwide addiction
 author: John Jackson

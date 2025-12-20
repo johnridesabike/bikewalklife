@@ -8,13 +8,6 @@ hero_image:
   alt: 'A photograph of Becca Zajac. '
   caption: 'Image credit: Electric City Life and Becca Zajac.'
 external_link: http://electriccitylife.com/sunday-qa-becca-zajac/
-tags:
-- Electric City Life
-- Becca Zajac
-- Dragonfly Trails Network
-- Columbus GA
-- trails
-- interview
 excerpt: >
   Dragonfly Trails is the growing network of biking and walking trails around
   Columbus, GA. I myself use them daily and I can attest that these are the real

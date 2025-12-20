@@ -8,13 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
-tags:
-- gear
-- frame bag with shoulder pad
-- Vincita
-- child seats
-- This Mom Bikes
-- Lindsay Bliek
 excerpt: >
   I love the gear aspect of bicycle culture. Riders have endless options for
   customizing their bicycles to match any taste or lifestyle. I’m always

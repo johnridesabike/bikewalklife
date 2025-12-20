@@ -8,8 +8,6 @@ excerpt: >-
   his family decided to hold the Texas Department of Transportation responsible.
   Against all odds, they won.
 external_link: 'https://www.bikelaw.com/2023/03/one-million-dollars-for-texas-road-defect/'
-tags:
-  - untagged
 draft: false
 ---
 

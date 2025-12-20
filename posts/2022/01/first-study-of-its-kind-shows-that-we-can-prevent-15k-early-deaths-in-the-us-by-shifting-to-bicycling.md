@@ -1,7 +1,5 @@
 ---
 date: 2022-01-06T07:25:47-05:00
-tags:
-- science
 draft: false
 title: First study of its kind shows that we can prevent 15K early deaths in the US
   by shifting to bicycling

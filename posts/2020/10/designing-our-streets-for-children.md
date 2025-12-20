@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://thismombikes.net/kids-dont-drive/
-tags:
-- children
-- Lindsay Bliek
-- This Mom Bikes
-- least among us
 excerpt: >
   Lindsay Bliek of This Mom Bikes has a new post that cuts right to the chase:
   “Kids Don’t Drive”.

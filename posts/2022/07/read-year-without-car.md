@@ -1,7 +1,5 @@
 ---
 date: 2022-07-08T15:28:26-04:00
-tags:
-  - untagged
 draft: false
 title: Read this reflection on living a year without a car, and with kids.
 author: John Jackson

@@ -8,12 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://mobilitylab.org/2020/10/08/the-case-for-reigning-in-car-advertising/
-tags:
-- advertising
-- car culture
-- Mobility Lab
-- " Andy Furillo"
-- media
 excerpt: >
   Car advertisements are everywhere. Until now, there hasn’t been much public
   discussion about them. Andy Furillo, writing for Mobility Lab, argues that

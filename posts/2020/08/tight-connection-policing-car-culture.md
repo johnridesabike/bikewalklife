@@ -8,12 +8,6 @@ hero_image:
   caption: ''
 external_link: https://nextcity.org/daily/entry/can-we-abolish-the-police-without-challenging-the-status-quo-of-car-culture
 draft: false
-tags:
-- police
-- car culture
-- Next City
-- Nick DeMarsh
-- Rick Banks
 excerpt: Nick DeMarsh and Rick Banks write for Next City...
 
 ---

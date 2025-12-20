@@ -8,9 +8,6 @@ hero_image:
   alt: "“You Go, Girl!” header image."
   caption: 'Image credit: Pattie Baker'
 external_link: ''
-tags:
-- Pattie Baker
-- profiles
 excerpt: >
   During the month of August, Pattie Baker of Traveling at the Speed of Bike ran
   a series called “You Go, Girl!” It showcases thirty-one women who are helping

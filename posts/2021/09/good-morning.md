@@ -1,9 +1,5 @@
 ---
 date: 2021-09-21T19:42:22-04:00
-tags:
-- anecdotes
-- 'etiquette '
-- originals
 draft: false
 title: '"Good morning!"'
 author: John Jackson

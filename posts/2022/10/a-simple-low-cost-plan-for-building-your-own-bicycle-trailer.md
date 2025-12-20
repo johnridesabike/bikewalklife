@@ -1,7 +1,5 @@
 ---
 date: 2022-10-14T09:03:49-04:00
-tags:
-- untagged
 draft: false
 title: A simple, low-cost plan for building your own bicycle trailer
 author: John Jackson

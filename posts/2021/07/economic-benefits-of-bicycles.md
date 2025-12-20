@@ -1,10 +1,5 @@
 ---
 date: 2021-07-23T19:12:17-04:00
-tags:
-- Planetizien
-- Richard Dion
-- commuting
-- economics
 draft: false
 title: The economic benefits of bicycles
 author: John Jackson

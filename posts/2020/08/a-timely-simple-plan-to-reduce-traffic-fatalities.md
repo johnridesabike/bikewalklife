@@ -8,10 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.strongtowns.org/journal/2020/8/21/time-to-end-traffic-fatalities
-tags:
-- plans
-- traffic
-- Charles Marohn
 excerpt: >
   Charles Marohn of Strong Towns has long been an advocate of transportation
   reform. In his new piece, he argues that our present moment may be the perfect

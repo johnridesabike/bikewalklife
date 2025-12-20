@@ -1,10 +1,5 @@
 ---
 date: 2022-01-13T10:39:00-05:00
-tags:
-- Angie Schmitt
-- The Atlantic
-- safety
-- SUVs
 draft: false
 title: 'The Atlantic: "Big Cars are Killing Americans"'
 author: John Jackson

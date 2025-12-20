@@ -1,9 +1,5 @@
 ---
 date: 2021-10-09T17:04:23-04:00
-tags:
-- Chris Arnade
-- Walking America
-- least among us
 draft: false
 title: Chris Arnade's "Walking America" blog shows what it's like to walk through
   American towns.

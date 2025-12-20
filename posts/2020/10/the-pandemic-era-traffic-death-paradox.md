@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.curbed.com/2020/10/covid-traffic-deaths-up-speeding.html
-tags:
-- Curbed
-- Alissa Walker
-- COVID-19
-- violence
 excerpt: >
   One of this blog’s refrains is that we need to lower the number of cars on our
   streets to stop people from dying in crashes. Cars are inherently dangerous

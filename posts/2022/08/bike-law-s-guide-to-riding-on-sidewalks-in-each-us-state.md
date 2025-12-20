@@ -1,7 +1,5 @@
 ---
 date: 2022-08-05T07:25:59-04:00
-tags:
-- untagged
 draft: false
 title: Bike Law's guide to riding on sidewalks in each US state
 author: John Jackson

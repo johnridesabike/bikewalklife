@@ -9,13 +9,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://usa.streetsblog.org/2021/02/16/the-reason-more-women-drivers-die-in-car-crashes/
-tags:
-- Kea Wilson
-- Streetsblog
-- SUV
-- car culture
-- violence
-- science
 excerpt: >
   Recent studies show that women drivers are more likely than men to die in car
   crashes. The reason behind it is straightforward: trucks and SUVs are

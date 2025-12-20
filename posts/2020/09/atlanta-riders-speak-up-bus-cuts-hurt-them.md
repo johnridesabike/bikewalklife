@@ -8,10 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.ajc.com/news/commuting-blog/marta-riders-how-bus-cuts-hurt-us/GJPZEOKSYJHTZK3WAUT75VR3HY/
-tags:
-- bus
-- atlanta
-- marta
 excerpt: David Wickert, writing for AJC, published a few of the comments they received from MARTA riders regarding the current bus cuts.
 
 ---

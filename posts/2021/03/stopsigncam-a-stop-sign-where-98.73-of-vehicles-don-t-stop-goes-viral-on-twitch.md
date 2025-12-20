@@ -9,13 +9,6 @@ hero_image:
   alt: A screenshot of the stopsigncam stream.
   caption: ''
 external_link: https://www.twitch.tv/stopsigncam
-tags:
-- stopsigncam
-- twitch
-- Kotaku
-- Nathan Grayson
-- traffic
-- viral
 excerpt: >
   Bored internet users have a knack for creating niche communities, and
   "stopsigncam" is one of the latest. It's a Twitch stream of a stop sign. The

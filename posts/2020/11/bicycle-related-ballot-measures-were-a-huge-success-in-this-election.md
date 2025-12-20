@@ -8,9 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://peopleforbikes.org/2020ballottracker/
-tags:
-- People for Bikes
-- elections
 excerpt: >
   People for Bikes tracked bicycle-related ballot measures for 2020. Now, as the
   election wraps up, they have the results.

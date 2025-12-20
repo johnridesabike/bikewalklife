@@ -1,9 +1,5 @@
 ---
 date: 2021-12-16T07:15:00-05:00
-tags:
-- Cycling Professor
-- memes
-- mobility meme
 draft: false
 title: 'Twitter''s Cycling Professor is looking for 2021''s most powerful mobility
   meme '

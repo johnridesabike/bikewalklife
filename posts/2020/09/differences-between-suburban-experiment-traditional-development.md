@@ -8,9 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.strongtowns.org/journal/2020/9/4/seven-key-differences
-tags:
-- suburban experiment
-- traditional development
 excerpt: >
   When we think of “the suburbs,” we often imagine specific structures:
   cul-de-sacs, lawns, single-family houses, cars, garages, and big-box stores to

@@ -1,13 +1,5 @@
 ---
 date: 2021-03-31T12:57:25-04:00
-tags:
-- podcast
-- Cities Down South
-- John Bennett
-- Georgia Bikes
-- Scott Berson
-- Coastal Regional Commission of Georgia
-- language
 draft: false
 title: New podcast “Cities Down South” discusses bicycle advocacy in Georgia
 author: John Jackson

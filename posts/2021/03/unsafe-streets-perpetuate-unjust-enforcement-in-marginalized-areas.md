@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://t4america.org/2021/03/03/unsafe-streets-in-marginalized-communities-leads-to-inequitable-traffic-enforcement/
-tags:
-- Transportation for America
-- police
-- deadly by design
-- US House
 excerpt: >
   Marginalized communities always have a couple of things in common, unsafe
   streets and oversized law enforcement. These aren’t together by coincidence;

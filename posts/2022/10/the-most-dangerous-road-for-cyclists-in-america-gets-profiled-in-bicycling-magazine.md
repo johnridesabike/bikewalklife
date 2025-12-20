@@ -1,7 +1,5 @@
 ---
 date: 2022-10-13T18:21:34-04:00
-tags:
-- untagged
 draft: false
 title: The “most dangerous road for cyclists in America” gets profiled in Bicycling
   Magazine

@@ -1,8 +1,5 @@
 ---
 date: 2022-04-09T16:51:56-04:00
-tags:
-- teen
-- violence
 draft: false
 title: The search for justice continues for Obianuju Osuegbu, the 17-year-old bicycle
   rider killed in 2020

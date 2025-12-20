@@ -1,9 +1,5 @@
 ---
 date: 2021-09-25T14:51:13-04:00
-tags:
-- Biketober
-- Atlanta
-- challenges
 draft: false
 title: Biketober is coming to Atlanta again next month
 author: John Jackson

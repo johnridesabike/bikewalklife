@@ -1,7 +1,5 @@
 ---
 date: 2022-09-17T15:46:11-04:00
-tags:
-- untagged
 draft: false
 title: The first data on U.S. pandemic-era bike commuting is here
 author: John Jackson

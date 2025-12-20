@@ -1,11 +1,5 @@
 ---
 date: 2022-03-18T18:21:24-04:00
-tags:
-- The Guardian
-- Andrew Tierney
-- Carlton Reid
-- internet
-- trolling
 draft: false
 title: Dealing with anti-bicycle internet trolls
 author: John Jackson

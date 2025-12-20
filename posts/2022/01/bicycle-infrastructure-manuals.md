@@ -1,9 +1,5 @@
 ---
 date: 2022-01-11T18:06:13-05:00
-tags:
-- websites
-- policy
-- manuals
 draft: false
 title: Bicycle Infrastructure Manuals
 author: John Jackson

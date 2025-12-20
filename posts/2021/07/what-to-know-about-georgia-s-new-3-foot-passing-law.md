@@ -1,9 +1,5 @@
 ---
 date: 2021-07-13T07:26:49-04:00
-tags:
-- Georgia
-- law
-- 3-foot passing law
 draft: false
 title: What to know about Georgia's new 3-foot passing law
 author: John Jackson

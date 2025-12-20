@@ -1,10 +1,5 @@
 ---
 date: 2021-04-26T16:04:40-04:00
-tags:
-- holidays
-- Ride a Bike Day
-- '2021'
-- League of American Bicyclists
 draft: false
 title: The first National Ride A Bike Day is coming Sunday, May 2
 author: John Jackson

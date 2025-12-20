@@ -8,10 +8,6 @@ hero_image:
   alt: Photo of the Burley Travoy trailer on a bike.
   caption: 'Photo credit: aquickbrownfox.com'
 external_link: https://www.aquickbrownfox.com/blog/2020/9/4/product-review-burley-travoy-trailer
-tags:
-- reviews
-- products
-- bike trailer
 excerpt: Ayesha writes...
 
 ---

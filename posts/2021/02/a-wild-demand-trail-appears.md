@@ -8,11 +8,6 @@ hero_image:
   alt: A black-and-white photograph of a “demand trail.”
   caption: ''
 external_link: ''
-tags:
-- originals
-- demand trail
-- Columbus GA
-- Dragonfly Trail Network
 excerpt: >
   Despite all of the reverence given to free market ideology, our transportation
   has never fit in with it. People continuously wish for alternative

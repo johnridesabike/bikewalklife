@@ -1,7 +1,5 @@
 ---
 date: 2022-10-08T12:18:40-04:00
-tags:
-- untagged
 draft: false
 title: California enacts the Freedom to Walk Act
 author: John Jackson

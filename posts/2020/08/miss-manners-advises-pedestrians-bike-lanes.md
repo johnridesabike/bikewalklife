@@ -8,9 +8,6 @@ hero_image:
   caption: ''
 external_link: https://www.washingtonpost.com/lifestyle/advice/miss-manners-handling-bike-lane-infractions/2020/08/05/f3d20932-cbd2-11ea-91f1-28aca4d833a0_story.html
 draft: false
-tags:
-  - Miss Manners
-  - Washington Post
 excerpt: Miss Manners gives her advice...
 
 ---

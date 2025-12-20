@@ -8,8 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 draft: false
-tags:
-  - violence
 excerpt: Current events reveal how our roads are dangerous by design.
 
 ---

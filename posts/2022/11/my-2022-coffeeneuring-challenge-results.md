@@ -1,7 +1,5 @@
 ---
 date: 2022-11-19T11:17:47-05:00
-tags:
-- untagged
 draft: false
 title: My 2022 Coffeeneuring Challenge results
 author: John Jackson

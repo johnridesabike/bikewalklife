@@ -8,12 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://thecityfix.com/blog/mexicos-right-to-mobility-amendment-could-shift-road-safety-discourse-and-save-thousands-of-lives/
-tags:
-- Mexico
-- right to mobility
-- amendment
-- law
-- legal
 excerpt: Darío Hidalgo reports for The City Fix...
 
 ---

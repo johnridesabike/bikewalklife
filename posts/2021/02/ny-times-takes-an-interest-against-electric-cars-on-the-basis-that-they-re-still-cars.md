@@ -9,12 +9,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.nytimes.com/2021/02/18/opinion/electric-cars-SUV.html?smid=url-share
-tags:
-- New York Times
-- Farhad Manjoo
-- electric cars
-- greenwashing
-- SUV
 excerpt: >
   The New York Times published an opinion article by Farhad Manjoo, There’s One
   Big Problem With Electric Cars, and He cuts right to the chase on the first

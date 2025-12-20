@@ -1,7 +1,5 @@
 ---
 date: 2021-05-13T15:03:11-04:00
-tags:
-- Errandonnee 2021
 draft: false
 title: 'Errandonnee 2021: Errand 4 & Ride Spot for MLK Jr. Outdoor Learning Trail'
 author: John Jackson

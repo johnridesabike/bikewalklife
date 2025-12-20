@@ -8,12 +8,6 @@ hero_image:
   alt: A photo of a woman on a bicycle overlooking a field.
   caption: 'Tiffany Mannion, Bicycle Mayor of Keene, NH. Photo credit: BYCS'
 external_link: https://bycs.org/our-work/bicycle-mayor/
-tags:
-- bicycle mayor
-- programs
-- BYCS
-- Pattie Baker
-- Courtney Williams
 excerpt: Amsterdam-based BYCS has a program called Bicycle Mayors.
 
 ---

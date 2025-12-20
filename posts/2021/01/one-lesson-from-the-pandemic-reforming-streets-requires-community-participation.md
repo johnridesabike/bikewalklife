@@ -8,13 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.bloomberg.com/news/articles/2021-01-06/the-swift-disruptive-rise-of-slow-streets
-tags:
-- Bloomberg
-- CityLab
-- Laura Bliss
-- COVID-19
-- The American Conservative
-- urbanism
 excerpt: >
   When the pandemic stopped cars around the world, there was a lot of buzz about
   cities repurposing their empty streets. From California to Florida to France,

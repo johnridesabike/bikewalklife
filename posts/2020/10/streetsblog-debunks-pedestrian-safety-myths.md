@@ -8,13 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://usa.streetsblog.org/2020/09/30/national-pedestrian-safety-month-campaign-is-an-offensive-parade-of-dangerous-traffic-violence-myths/
-tags:
-- myths
-- pedestrians
-- National Pedestrian Safety Month
-- Streetsblog
-- violence
-- NHTSA
 excerpt: >
   The United States’ first federal “National Pedestrian Safety Month” is already
   under criticism from pedestrian safety advocates. Kea Wilson has an article on

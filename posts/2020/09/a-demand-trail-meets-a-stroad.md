@@ -8,13 +8,6 @@ hero_image:
   alt: Cover photo showing the road under construction.
   caption: ''
 external_link: ''
-tags:
-- originals
-- photography
-- demand trail
-- stroad
-- pedestrian
-- least among us
 excerpt: >
   This tiny trail has existed since before I moved here, five years ago. It's a
   “demand trail.” Those are formed when people regularly need to cross an area

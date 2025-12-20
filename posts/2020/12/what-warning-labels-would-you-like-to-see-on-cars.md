@@ -8,10 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://usa.streetsblog.org/2020/11/30/surgeon-general-warning-this-car-is-dangerous/
-tags:
-- cars
-- Streetsblog
-- Kea Wilson
 excerpt: >
   The city of Cambridge, Massachusetts will soon be the first US city to put
   warning labels on gas pumps. The goal is to help drivers understand that the

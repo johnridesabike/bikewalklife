@@ -1,7 +1,5 @@
 ---
 date: 2022-08-06T19:33:48-04:00
-tags:
-- untagged
 draft: false
 title: The 2022 Climate Bill subsidizes cars at the expense of biking and walking
 author: John Jackson

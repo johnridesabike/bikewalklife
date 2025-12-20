@@ -8,9 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://cityobservatory.org/the-myth-of-pedestrian-infrastructure-in-a-world-of-cars/
-tags:
-- infrastructure
-- pedestrian
 excerpt: Joe Cortright, writing for City Observatory, has a great article about how “pedestrian” infrastructure is really car infrastructure.
 
 ---

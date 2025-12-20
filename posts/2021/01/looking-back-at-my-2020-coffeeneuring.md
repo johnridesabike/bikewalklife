@@ -8,12 +8,6 @@ hero_image:
   alt: A photograph of my bicycle on a bridge over the Chattahoochee river.
   caption: ''
 external_link: ''
-tags:
-- Coffeeneuring
-- personal
-- '2020'
-- photography
-- originals
 excerpt: >
   The 2020 Coffeeneuring Challenge was subtitled “One Good Thing” in recognition
   that it could be at least one silver lining in a wild year. This annual

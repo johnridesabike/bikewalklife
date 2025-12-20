@@ -1,7 +1,5 @@
 ---
 date: 2022-05-27T07:47:09-04:00
-tags:
-- untagged
 draft: false
 title: Traffic fatalities spiked over 10% in 2021, reaching 16 year high
 author: John Jackson

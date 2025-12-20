@@ -8,14 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.velonews.com/culture/major-taylor-journal-there-are-already-many-black-cyclists-we-just-overlook-them/
-tags:
-- VeloNews
-- Bicycling Magazine
-- Dan Koeppel
-- diversity
-- least among us
-- Dragonfly Trails Network
-- Aliya Barnwell
 excerpt: >
   Last month, VeloNews published an article by Aliya Barnwell: There are already
   many Black cyclists — we just overlook them. She argues that the lack of

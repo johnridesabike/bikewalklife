@@ -8,8 +8,6 @@ excerpt: >-
   how her whole family depends on bicycles to go about their daily lives.
 external_link: >-
   https://www.inquirer.com/opinion/commentary/biking-philadelphia-university-of-pennsylvania-20230202.html
-tags:
-  - untagged
 draft: false
 ---
 The Philadelphia Inquirer has published a story about the importance of bicycling for low-income people. Sarahi Franco-Morales, the author, describes how her whole family depends on bicycles to go about their daily lives.

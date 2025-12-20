@@ -1,11 +1,5 @@
 ---
 date: 2021-04-01T10:37:15-04:00
-tags:
-- Atlanta
-- Atlanta Magazine
-- Thomas Wheatley
-- PATH Foundation
-- '2021'
 draft: false
 title: Bicycle infrastructure improvements coming to Atlanta
 author: John Jackson

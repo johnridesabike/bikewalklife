@@ -8,11 +8,6 @@ hero_image:
   alt: The Midnite Bicycle League Challenge journal
   caption: 'Image credit: Urban Adventure League'
 external_link: https://urbanadventureleague.wordpress.com/2020/11/11/announcing-the-midnite-bicycle-league-2020-21-challenge-1-dec-2020-28-feb-2021/
-tags:
-- Midnite Bicycle League
-- challenges
-- just-for-fun
-- Urban Adventure League
 excerpt: >
   I love just-for-fun bicycle challenges. They embody what bicycles are really
   about for me: having fun, building relationships, and just going outside to

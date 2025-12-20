@@ -8,8 +8,6 @@ hero_image:
   alt: Photograph of the Chattahoochee Riverwalk.
   caption: 'Image credit: Maria Borowik and Georgia Bikes.'
 external_link: https://georgiabikes.org/tour-de-georgia-2020-exploring-multi-use-paths-in-the-peach-state/
-tags:
-- trails
 excerpt: Maria Borowik writes for Georgia Bikes...
 
 ---

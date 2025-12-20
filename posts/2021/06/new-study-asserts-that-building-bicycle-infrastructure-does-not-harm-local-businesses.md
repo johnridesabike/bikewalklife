@@ -1,9 +1,5 @@
 ---
 date: 2021-06-26T12:50:38-04:00
-tags:
-- science
-- economics
-- infrastructure
 draft: false
 title: New study asserts that building bicycle infrastructure does not harm local
   businesses

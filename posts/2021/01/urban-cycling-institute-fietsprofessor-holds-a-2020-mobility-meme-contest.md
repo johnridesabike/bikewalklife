@@ -9,12 +9,6 @@ hero_image:
     with comfortable space.
   caption: 'Image credit: “The injustice mobility space” by Fabian Todorovic'
 external_link: https://www.urbanmobilityfutures.com/col-mobility-memes
-tags:
-- memes
-- Cycling Professor
-- Twitter
-- '2020'
-- images
 excerpt: >
   The Urban Cycling Institute recently held an election for 2020’s best mobility
   memes on their Twitter page. There are quite a lot, and I think they’re all

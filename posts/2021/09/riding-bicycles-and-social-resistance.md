@@ -1,8 +1,5 @@
 ---
 date: 2021-09-16T17:33:15-04:00
-tags:
-- BYCS
-- James Crossley
 draft: false
 title: Riding bicycles and social resistance
 author: John Jackson

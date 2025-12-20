@@ -8,11 +8,6 @@ hero_image:
   alt: A photo of Lego bicycle lanes.
   caption: 'Image credit: Lego and Marcel Steeman.'
 external_link: https://www.theverge.com/2021/1/31/22252640/lego-bike-lane-cities-cars-ideas-street
-tags:
-- Marcel Steeman
-- The Verge
-- Lego
-- culture
 excerpt: >
   The campaign for mobility equity has found an unlikely battlefield in recent
   years: the Lego world. Since 2019, a person named Marcel Steeman has been

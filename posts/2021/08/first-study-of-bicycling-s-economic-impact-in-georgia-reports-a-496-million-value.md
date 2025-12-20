@@ -1,13 +1,5 @@
 ---
 date: 2021-08-28T19:36:26-04:00
-tags:
-- Shatakshee Dhongde
-- Georgia Tech
-- GDOT
-- Georgia
-- economy
-- science
-- Pattie Baker
 draft: false
 title: First study of bicycling’s economic impact in Georgia reports a $496 million
   value

@@ -8,13 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.bloomberg.com/news/articles/2020-10-16/jaywalking-laws-don-t-make-streets-safer?cmpid=BBD101620_CITYLAB&utm_medium=email&utm_source=newsletter&utm_term=201016&utm_campaign=citylabdaily
-tags:
-- jaywalking
-- Bloomberg
-- CityLab
-- Angie Schmitt
-- Charles T. Brown
-- pedestrian
 excerpt: >
   In the US, we all grow up learning that jaywalking is dangerous and illegal.
   Most of the time, we don’t question that. Of course people shouldn’t step

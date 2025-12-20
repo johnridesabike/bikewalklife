@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.planetizen.com/blogs/111535-automobile-dependency-unequal-burden
-tags:
-- Planetizen
-- Todd Litman
-- poverty
-- car culture
 excerpt: >
   There is a great blog post by Todd Litman on Planetizen about why car
   dependency is a major factor in fueling poverty.

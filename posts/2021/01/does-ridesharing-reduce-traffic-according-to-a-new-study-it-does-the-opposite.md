@@ -8,14 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: http://www.schallerconsult.com/rideservices/sharingride.htm
-tags:
-- Schaller Consulting
-- Bruce Schaller
-- research
-- science
-- Uber
-- Lyft
-- ridesharing
 excerpt: >
   There has been a lot of optimism over how how rideshare companies could help
   save our congested streets. The very name, ride share, suggests that they

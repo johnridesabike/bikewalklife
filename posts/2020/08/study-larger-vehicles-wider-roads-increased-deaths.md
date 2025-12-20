@@ -9,10 +9,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.ssti.us/2020/08/whats-driving-pedestrian-deaths-darkness-speed-wider-roads-and-larger-vehicles/
-tags:
-- violence
-- SUV
-- science
 excerpt: >
   A 2020 study “United States Pedestrian Fatality Trends, 1977 to 2016” by
   Robert J. Schneider has data to explain why the death toll on roads keeps

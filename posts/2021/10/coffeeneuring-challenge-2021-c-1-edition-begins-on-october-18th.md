@@ -1,10 +1,5 @@
 ---
 date: 2021-10-07T06:51:38-04:00
-tags:
-- Coffeeneuring
-- challenges
-- Chasing Mailboxes
-- just-for-fun
 draft: false
 title: Coffeeneuring Challenge 2021, "c+1" edition, begins on October 18th
 author: John Jackson

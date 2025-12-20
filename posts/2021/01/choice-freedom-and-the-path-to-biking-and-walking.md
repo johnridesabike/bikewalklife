@@ -8,14 +8,6 @@ hero_image:
   alt: A street sign depicting a bicycle with the text “wrong way.”
   caption: ''
 external_link: ''
-tags:
-- freedom
-- choice
-- philosophy
-- AARP
-- Jeff Speck
-- mobility
-- originals
 excerpt: >
   To drive a car is to be free, at least so-says our culture. I don’t need a
   citation for that. You can see it for yourself in every car commercial or by

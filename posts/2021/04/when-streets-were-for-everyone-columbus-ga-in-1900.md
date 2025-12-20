@@ -1,13 +1,5 @@
 ---
 date: 2021-04-10T14:12:07.000-04:00
-tags:
-- history
-- Columbus GA
-- photographs
-- Georgia
-- Digital Library of Georgia
-- originals
-- complete streets
 draft: false
 title: 'When streets were for everyone: Columbus, GA in 1900'
 author: John Jackson

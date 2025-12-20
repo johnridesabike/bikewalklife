@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.americamagazine.org/arts-culture/2021/03/16/bikes-transportation-catholic-social-teaching-240216
-tags:
-- America Magazine
-- John W. Miller
-- Catholic
-- Christian
 excerpt: >
   A non-bicycle publication has a new article about the merits of bicycling:
   John Miller, writing for America, argues that bicycles may be the solution to

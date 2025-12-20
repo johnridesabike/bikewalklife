@@ -1,13 +1,5 @@
 ---
 date: 2021-09-11T17:52:08-04:00
-tags:
-- Public Libraries Online
-- ABOS
-- book bikes
-- book bike week
-- libraries
-- '2021'
-- Michelle J. Fernandez
 draft: false
 title: Library book bikes got more popular in 2021
 author: John Jackson

@@ -1,12 +1,5 @@
 ---
 date: 2021-04-22T17:08:23-04:00
-tags:
-- Mosul
-- Iraq
-- international
-- Yahoo
-- Reuters
-- Afghanistan
 draft: false
 title: Mosul hosts its first all-female cycling marathon
 author: John Jackson

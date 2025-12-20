@@ -8,11 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: ''
-tags:
-- Bike to Work Day
-- bike commuting
-- holidays
-- Columbus GA
 excerpt: >
   Bike to Work (or There) Day will be held this Friday, October 9, in Columbus,
   Georgia. Considering that many of us aren’t commuting to work in this pandemic

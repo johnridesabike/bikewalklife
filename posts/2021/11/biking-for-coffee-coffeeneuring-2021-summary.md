@@ -1,10 +1,5 @@
 ---
 date: 2021-11-20T08:54:53-05:00
-tags:
-- originals
-- Biking for Coffee
-- Coffeeneuring
-- Coffeeneuring 2021
 draft: false
 title: Biking for Coffee & Coffeeneuring 2021 Summary
 author: John Jackson

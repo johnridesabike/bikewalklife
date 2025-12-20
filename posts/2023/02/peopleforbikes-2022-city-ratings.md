@@ -7,8 +7,6 @@ excerpt: >-
   PeopleForBikes aggregates data and collects stories to rate how bikeable
   cities across the world are.
 external_link: 'https://cityratings.peopleforbikes.org/'
-tags:
-  - untagged
 draft: false
 ---
 

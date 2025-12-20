@@ -9,8 +9,6 @@ excerpt: >-
   Bloomberg article from last September that explores this.
 external_link: >-
   https://www.bloomberg.com/news/articles/2022-09-06/what-drove-japan-s-remarkable-traffic-safety-turnaround
-tags:
-  - untagged
 draft: false
 ---
 

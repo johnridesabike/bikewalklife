@@ -1,7 +1,5 @@
 ---
 date: 2022-10-15T19:05:51-04:00
-tags:
-- untagged
 draft: false
 title: Children’s “bike bus” is a success, cheered on by residents
 author: John Jackson

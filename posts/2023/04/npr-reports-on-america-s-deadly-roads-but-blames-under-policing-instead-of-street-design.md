@@ -12,8 +12,6 @@ excerpt: >-
   our streets are engineered to be deadly by design.
 external_link: >-
   https://www.npr.org/2023/04/06/1167980495/americas-roads-are-more-dangerous-as-police-pull-over-fewer-drivers
-tags:
-  - untagged
 draft: false
 ---
 

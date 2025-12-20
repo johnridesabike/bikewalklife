@@ -8,12 +8,6 @@ hero_image:
   alt: ''
   caption: ''
 external_link: https://www.nytimes.com/2020/10/09/business/bicycle-safety-cars.html
-tags:
-- safety
-- apps
-- tech
-- New York Times
-- John Quain
 excerpt: >
   It’s no secret that our cities and towns are dangerous for people on bicycles.
   But most public discussion of that topic avoids the elephant in the room, that

@@ -1,10 +1,5 @@
 ---
 date: 2022-03-12T15:05:08-05:00
-tags:
-- gas prices
-- car culture
-- AAA
-- freedom
 draft: false
 title: Americans want to change their lifestyle due to gas prices, but can they?
 author: John Jackson
