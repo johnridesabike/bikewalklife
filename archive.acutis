@@ -41,13 +41,8 @@
       .archive__entry-title {
         font-size: var(--font-size-xl);
         line-height: 1.2;
-        font-family: var(--font-sans-serif);
         flex-basis: 100%;
         margin-bottom: 0.5em;
-      }
-
-      .archive__entry-summary{
-        font-family: var(--font-serif);
       }
 
       .archive__entry-readmore {
