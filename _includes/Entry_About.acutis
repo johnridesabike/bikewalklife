@@ -14,8 +14,7 @@
     {% match avatar with !{image, alt} %}
       <div class="entry-page__avatar-wrapper">
         <div
-          class="entry-page__avatar"
-          style="width: 120px; height: 120px; margin: auto;">
+          class="entry-page__avatar">
           <img
             src="{% ImgSrcStatic transforms=["c_crop,g_face,w_0.25", "c_fill,h_120,w_120", "f_auto,q_auto"] image /%}"
             srcset="

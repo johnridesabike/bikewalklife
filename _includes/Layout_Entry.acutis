@@ -125,6 +125,12 @@
         box-shadow: 0 0 2px var(--color-primary-dark);
       }
 
+      .entry-page__avatar {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+      }
+
       .entry-page__actions-item {
         margin-top: 1em;
       }
