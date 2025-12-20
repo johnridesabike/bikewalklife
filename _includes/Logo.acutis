@@ -12,10 +12,10 @@
 ~%}
   <picture>
     <source
-      srcset="/assets/images/2023/header-dark-2023.svg"
+      srcset="/assets/images/2025/header-dark-2025.svg"
       media="(prefers-color-scheme: dark)">
     <img
-      src="/assets/images/2023/header-light-2023.svg"
+      src="/assets/images/2025/header-light-2025.svg"
       alt="{% title_site %}"
       height=80
       width=256 />
