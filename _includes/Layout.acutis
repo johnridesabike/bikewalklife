@@ -160,7 +160,7 @@
                   src="/assets/images/2023/icon-circle-2023.svg"
                   alt="">
               </div>
-              <div class="p-name"> {% config.title %} </div>
+              <div class="p-name serif"> {% config.title %} </div>
             </a>
           </div>
           <div class="footer__menu footer__item">
