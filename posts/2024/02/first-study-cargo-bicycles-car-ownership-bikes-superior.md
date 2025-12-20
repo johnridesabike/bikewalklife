@@ -9,6 +9,9 @@ excerpt: >-
   advantages are not merely theoretical.
 external_link: 'https://doi.org/10.1016/j.trf.2023.12.018'
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3km6qfvazxt2u
+  mastodon: https://indieweb.social/@bikewalklife/111988080242080381
 ---
 
 At least in Germany, where the study was held. Nonetheless, the cargo bicycle advantages are not merely theoretical. Researchers took 2,590 people who rode cargo bikes and surveyed their car ownership status along with their opinions comparing the two options. The results show not only that car ownership goes down when people ride cargo bikes, but respondents claimed that their bikes were superior by almost every metric.

@@ -11,6 +11,9 @@ excerpt: >-
   As I recovered from my car crash last year, I took up walking more. That's
   when I learned how empty my city can be.
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3kpzdt3hz4o2c
+  mastodon: https://indieweb.social/@bikewalklife/112264168516518125
 ---
 
 As I recovered from my car crash last year, I took up walking more. Each Sunday morning I would walk to church and, thanks to the calmer weekend traffic, I noticed all sorts of details around my neighborhood that I never paid attention to before. But after several weeks of this, I felt a deep awareness of how empty my city can be.

@@ -11,6 +11,9 @@ excerpt: >-
   the past decade.
 external_link: 'https://www.ghsa.org/resources/news-releases/pedestrians-preliminary24'
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3kmkmwz63pz2e
+  mastodon: https://indieweb.social/@bikewalklife/112014860397574138
 ---
 
 The Governors Highway Safety Association (GHSA) released data from the first half of 2023 which shows pedestrian fatalities dropped 4% compared to the same time period in 2022. However, deaths are still far higher than every other year in the past decade.

@@ -9,6 +9,9 @@ excerpt: >-
   parking for the Midtown area.
 external_link: 'https://www.ledger-enquirer.com/news/politics-government/article313545946.html'
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3m7qugtedkc2m
+  mastodon: https://indieweb.social/@bikewalklife/115703834858107106
 ---
 
 The Dragonfly Trails in Columbus, Georgia is on track to grow next year. The upcoming project will add new multi-use trails that people can use for recreation and active transportation, and it will improve crosswalks and parking for the Midtown area.

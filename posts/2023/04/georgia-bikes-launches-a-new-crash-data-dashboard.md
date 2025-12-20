@@ -12,6 +12,8 @@ excerpt: >-
   for the public to use on their website.
 external_link: 'https://georgiabikes.org/crash-data/'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110270616631957418
 ---
 
 Advocacy organization Georgia Bikes has launched a dashboard to explore bicycle and pedestrian crash data in the Peach State. It is freely available for the public to use on their website.

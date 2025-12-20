@@ -14,6 +14,8 @@ excerpt: >-
 external_link: >-
   https://www.strongtowns.org/journal/2023/7/13/multi-use-paths-stroads-active-transportation-infrastructure
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110780274309787202
 ---
 
 I recently saw a blog post that asks the provocative question: "[Are Multi-Use Paths the 'Stroads' of Active Transportation Infrastructure?](https://www.strongtowns.org/journal/2023/7/13/multi-use-paths-stroads-active-transportation-infrastructure)" As a longtime believer in multi-use paths, I can’t help but chime-in with my take.

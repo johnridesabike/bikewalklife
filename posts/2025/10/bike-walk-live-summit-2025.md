@@ -8,6 +8,9 @@ excerpt: >-
   panel about bicycle outreach in southwest Georgia. We discussed what Bicycle
   Columbus does and compared it with our neighbor organization, Sumter Cycling.
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3m2sas6ee322j
+  mastodon: https://indieweb.social/@bikewalklife/115346667507829867
 ---
 
 I had the privilege of attending and presenting at [Go Georgia's Bike-Walk-Live Summit](https://www.go-georgia.org/summit) last week (no relation with this blog, Bike Walk *Life*). I joined a panel about bicycle outreach in southwest Georgia. We discussed what Bicycle Columbus does and compared it with our neighbor organization, Sumter Cycling.

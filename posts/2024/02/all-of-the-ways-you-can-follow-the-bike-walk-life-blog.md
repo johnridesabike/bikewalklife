@@ -6,6 +6,9 @@ excerpt: >-
   Now that I'm back to writing for this blog, here's how you can stay up-to-date
   with each new post.
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3kl2wb5v7ie2e
+  mastodon: https://indieweb.social/@bikewalklife/111907431886239536
 ---
 
 Now that I'm back to writing for this blog, here's how you can stay up-to-date with each new post.

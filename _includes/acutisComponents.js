@@ -1,6 +1,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import featherIcons from "feather-icons";
+import * as SimpleIcons from "simple-icons";
 import Image from "@11ty/eleventy-img";
 import postcss from "postcss";
 import postcssPresetEnv from "postcss-preset-env";
@@ -140,3 +141,23 @@ export function PageNumber({ pageNumber }) {
   return String(pageNumber + 1);
 }
 PageNumber.interface = { pageNumber: "int" };
+
+export function SimpleIcon({ name, className }) {
+  let icon = SimpleIcons["si" + name];
+  return `
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      height="24"
+      width="24"
+      class="icon__svg ${className}"
+      style="fill: #${icon.hex}"
+      aria-hidden="true">
+      <path d="${icon.path}" />
+    </svg>
+  `;
+}
+SimpleIcon.interface = {
+  name: "string",
+  className: ["nullable", "string"]
+}

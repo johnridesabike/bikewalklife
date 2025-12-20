@@ -11,6 +11,8 @@ excerpt: November 20 is World Day of Remembrance for Road Traffic Victims. This 
   a global event to remember the people killed or injured in traffic, to pay tribute
   to emergency responders, and to advocate for ending traffic violence.
 external_link: https://worlddayofremembrance.org/
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109328096964310818
 
 ---
 November 20 is World Day of Remembrance for Road Traffic Victims. This is a global event to remember the people killed or injured in traffic, to pay tribute to emergency responders, and to advocate for ending traffic violence.

@@ -11,6 +11,8 @@ excerpt: We in the U.S. turned our clocks back this week, ending Daylight Saving
   until next year. For better or worse, making DST permanent has become politically
   popular now. But that may not be a bad thing, at least not for biking and walking.
 external_link: ''
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109319921384804335
 
 ---
 We in the U.S. turned our clocks back this week, ending Daylight Saving Time until next year. DST gets a lot of flak from the public. It confuses us for two days every year, and pseudoscientific myths surround it. For better or worse, making DST permanent has become politically popular now. But that may not be a bad thing, at least not for biking and walking.

@@ -10,6 +10,8 @@ excerpt: >-
 external_link: >-
   https://smartgrowthamerica.org/far-more-people-walking-were-struck-and-killed-in-2021-than-previously-predicted/
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110261945615425405
 ---
 
 After a 15 month wait, the National Highway Traffic Safety Administration (NHTSA) finally released its crash data for 2021. It shows that pedestrian and bicycle fatalities rose once again. This continues a decade-long trend and has now reached a 40-year high.

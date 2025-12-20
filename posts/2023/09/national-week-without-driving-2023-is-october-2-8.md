@@ -8,6 +8,8 @@ excerpt: >-
   through October 2-8.
 external_link: 'https://www.disabilityrightswa.org/programs/disabilitymobility/wwd'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/111092114109021897
 ---
 
 National Week Without Driving is an annual challenge by Disability Rights Washington (DRW). For 2023, they're taking it national for the first time. It runs through October 2-8.

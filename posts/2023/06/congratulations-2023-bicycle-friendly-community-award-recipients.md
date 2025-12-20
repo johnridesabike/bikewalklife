@@ -10,6 +10,8 @@ excerpt: >-
 external_link: >-
   https://bikeleague.org/league-of-american-bicyclists-recognizes-45-cities-and-towns-with-new-and-renewing-bicycle-friendly-community-awards/
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110471499152872488
 ---
 
 

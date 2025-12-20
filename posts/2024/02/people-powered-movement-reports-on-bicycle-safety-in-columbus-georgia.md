@@ -10,6 +10,9 @@ excerpt: >-
 external_link: >-
   https://www.peoplepoweredmovement.org/bicycle-safety-overview-in-columbus-ga-infrastructure-and-crash-stats/
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3klmgpb6cq62y
+  mastodon: https://indieweb.social/@bikewalklife/111946867867373586
 ---
 
 People Powered Movement, an organization that focuses on improving bicycle advocacy across the United States, just published a bicycle safety overview of Columbus Georgia. They summarize the state of our infrastructure, crash data, and the city's progress so far.

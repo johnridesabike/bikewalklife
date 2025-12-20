@@ -10,6 +10,8 @@ excerpt: >-
 external_link: >-
   https://www.cnu.org/publicsquare/2023/05/19/what-if-empire-state-building-met-typical-parking-requirements
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110561467058563681
 ---
 
 I saw this hypothetical recently: what if the Empire State Building met today's parking requirements? The answer is that we would have to demolish 56 acres, or 15 city blocks, around it. Now, what if we applied this to the most loved buildings in your town?

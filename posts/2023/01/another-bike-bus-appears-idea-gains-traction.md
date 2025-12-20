@@ -7,6 +7,8 @@ excerpt: >-
   bus." Now one of WIRED's editors has gotten her own bike bus off the ground.
 external_link: 'https://www.wired.com/story/how-to-start-a-bike-bus/'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109801453279543766
 ---
 
 

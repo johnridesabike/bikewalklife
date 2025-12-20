@@ -13,6 +13,8 @@ excerpt: Bicycling Magazine published a brutal report about what it describes as
   most dangerous road for bicycles in America, Hempstead Turnpike. It illustrates
   so much of what’s wrong with our transportation system.
 external_link: https://www.bicycling.com/culture/a41119529/the-most-dangerous-road-for-cyclists-in-america/
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109195408624320321
 
 ---
 Bicycling Magazine published a brutal report about what it describes as the most dangerous road for bicycles in America, Hempstead Turnpike. It illustrates so much of what’s wrong with our transportation system.

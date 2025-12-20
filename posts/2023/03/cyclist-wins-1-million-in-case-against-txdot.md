@@ -9,6 +9,8 @@ excerpt: >-
   Against all odds, they won.
 external_link: 'https://www.bikelaw.com/2023/03/one-million-dollars-for-texas-road-defect/'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110045154135881958
 ---
 
 Mike Bagg was riding his bicycle in a bike lane in El Paso when he hit an eroded area of concrete and crashed. Faced with $70K of medical bills, he and his family decided to hold the Texas Department of Transportation responsible. Against all odds, they won.

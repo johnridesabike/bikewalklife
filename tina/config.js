@@ -124,6 +124,30 @@ export default defineConfig({
             ],
           },
           {
+            name: "posse",
+            label: "POSSE social links",
+            description:
+              'Syndication links to "Publish (on your) Own Site, Syndicate Elsewhere."',
+            type: "object",
+            required: false,
+            fields: [
+              {
+                name: "bluesky",
+                label: "Bluesky",
+                description: "A link to the related Bluesky post.",
+                type: "string",
+                required: false,
+              },
+              {
+                name: "mastodon",
+                label: "Mastodon",
+                description: "A link to the related Mastodon post.",
+                type: "string",
+                required: false,
+              },
+            ],
+          },
+          {
             name: "excerpt",
             label: "Excerpt",
             type: "string",

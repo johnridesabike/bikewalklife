@@ -11,6 +11,8 @@ hero_image:
 excerpt: The 2022 Coffeeneuring Challenge has come to an end, and here are my results.
   This is my second time documenting my rides by video.
 external_link: ''
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109373289291520708
 
 ---
 The 2022 Coffeeneuring Challenge has come to an end, and here are my results. This is my second time documenting my rides by video.

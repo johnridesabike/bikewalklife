@@ -9,6 +9,8 @@ excerpt: >-
 external_link: >-
   https://www.wrbl.com/news/local-news/cycling-city-columbus-renews-bronze-level-bike-friendly-community-status/
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110984365480092499
 ---
 
 In 2023, Columbus was renewed as a bronze-level Bicycle Friendly Community (BFC) by The League of American Bicyclists. Local media station WRBL picked up the story this week.

@@ -9,6 +9,8 @@ excerpt: >-
 external_link: >-
   https://momentummag.com/sharrows-used-to-make-sense-in-theory-but-are-now-useless-in-practice/
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110373073730411958
 ---
 
 Sharrows, those ubiquitous and controversial arrows painted on our roads, continue drawing criticism. I recently saw a take from Momentum Magazine which compares their effectiveness to that against a swarm of angry bees.

@@ -9,6 +9,9 @@ excerpt: >-
   that your town used to be walkable, and it could be walkable once again.
 external_link: 'https://www.strongtowns.org/journal/2024/2/27/dallas-used-to-be-walkable'
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3kmqqius22y2a
+  mastodon: https://indieweb.social/@bikewalklife/112028621491634500
 ---
 
 It probably seems that your city must have always been built around interstates and parking lots. You may even have difficulty imagining that your city could ever function without cars. But that's a modern myth. The truth is that your town used to be walkable, and it could be walkable once again.

@@ -165,9 +165,6 @@ if (canonicalUrl instanceof HTMLLinkElement) {
       if (count.count !== 0) {
         let root = document.getElementById("webmentions-root");
         root.className = "entry-page__webmentions";
-        let hr = document.createElement("hr");
-        hr.className = "separator";
-        root.appendChild(hr);
         root.appendChild(
           createMentions(
             reposts.children,

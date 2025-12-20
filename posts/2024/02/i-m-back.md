@@ -7,6 +7,8 @@ excerpt: >-
   again. With the chaos that occupied the last few months of my life finally
   subsiding, I can hopefully return to my previous rhythm.
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/111864531048362451
 ---
 
 I took a hiatus following my [car crash](https://bikewalk.life/2023/10/i-was-hit-by-a-car-while-bicycling/), but now I'm biking and blogging once again. With the chaos that occupied the last few months of my life finally subsiding, I can hopefully return to my previous rhythm.

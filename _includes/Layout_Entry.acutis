@@ -10,6 +10,7 @@
   formattedDate = string
   isoDate = string
   hero_image = ?{alt: ?string, caption: ?string, image: string}
+  posse = ?{bluesky: ?string, mastodon: ?string}
   build = {environment: string}
   next = ?{data: {title: string}, url: string}
   previous = ?{data: {title: string}, url: string}
@@ -241,30 +242,40 @@
      index=0
   / %}
   <aside class="ui-font entry-page__actions">
-    {% match collections
-      with {pages: <contact: {url: href}>} %}
-      <div class="entry-page__actions-item">
-        {% Link href %}
-          Reply to this post by email.
-          <span aria-hidden=true>
-            {% Icon name="arrow-right" class=!"icon" /%}
-          </span>
-        {% /Link %}
+    <div class="entry-page__actions-item">
+      Want to support this blog?
+      <div>
+        <a href="https://www.buymeacoffee.com/johnridesabike">
+          <img
+            src="/assets/images/vendored/bmc-button.svg"
+            height=48
+            width=170
+            alt="Buy me a coffee.">
+        </a>
       </div>
-      <div class="entry-page__actions-item">
-        Want to support this blog?
-        <div>
-          <a href="https://www.buymeacoffee.com/johnridesabike">
-            <img
-              src="/assets/images/vendored/bmc-button.svg"
-              height=48
-              width=170
-              alt="Buy me a coffee.">
-          </a>
-        </div>
-      </div>
-    {% with _ %} {* Nothing *} {% /match %}
+    </div>
   </aside>
+  <hr class="separator">
+  <div id=reply-links>
+    <h2> Join the conversation </h2>
+    <div class="entry-page__actions-item">
+      <span> Reply to this post with: </span>
+      {% match posse with !{bluesky, mastodon} %}
+        {% match bluesky with null with !"" %}
+        {% with !url %}
+          <a href="{% url %}"> {% SimpleIcon name="Bluesky" / %} Bluesky</a>
+        {% /match %}
+        {% match mastodon with null with !"" %}
+        {% with !url %}
+          <a href="{% url %}"> {% SimpleIcon name="Mastodon" / %} Mastodon</a>
+        {% /match %}
+      {% with null %} {% /match %}
+      {% match collections
+        with {pages: <contact: {url: href}>} %}
+        {% Link href %} {% Icon name="mail" / %} Email {% /Link %}
+      {% with _ %} {* Nothing *} {% /match %}
+    </div>
+  </div>
   <div id=webmentions-root></div>
 </main>
 <hr class="separator">

@@ -11,6 +11,8 @@ excerpt: >-
   This was my first time coordinating it with Bicycle Columbus, and here's a
   quick recap of what we accomplished.
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110442471546293851
 ---
 
 This May has been another successful Bike Month for us in Columbus, Georgia. This was my first time coordinating it with Bicycle Columbus, and here's a quick recap of what we accomplished.

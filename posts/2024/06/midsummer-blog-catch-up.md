@@ -7,6 +7,9 @@ excerpt: >-
   events happen left me with hardly any time to write about other bike news.
   Here's a quick update with the stuff I've done since my last post.
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3kw5s4sdkls2p
+  mastodon: https://indieweb.social/@bikewalklife/112706524565674598
 ---
 
 It's been a couple of months since I blogged here. Being busy making bicycle events happen left me with hardly any time to write about other bike news. Here's a quick update with the stuff I've done since my last post.

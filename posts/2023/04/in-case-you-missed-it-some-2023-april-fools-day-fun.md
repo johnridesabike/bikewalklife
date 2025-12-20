@@ -12,6 +12,8 @@ excerpt: >-
   appeared in the Strut the Hooch parade.
 external_link: 'https://www.sheldonbrown.com/openai.html'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110153973799125238
 ---
 
 

@@ -10,6 +10,8 @@ excerpt: >-
   for children, but for all of us.
 external_link: 'https://letgrow.org/childhood-independence-bills-update/'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109925915086473528
 ---
 
 Why don't kids play outside anymore? One big reason is that it's often illegal. Childhood Independence is a growing movement across the United States which aims to change that. Several states have passed, and more are considering, bills to support it. These can improve our communities not just for children, but for all of us.

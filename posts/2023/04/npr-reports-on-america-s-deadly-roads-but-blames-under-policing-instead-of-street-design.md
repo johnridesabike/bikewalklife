@@ -13,6 +13,8 @@ excerpt: >-
 external_link: >-
   https://www.npr.org/2023/04/06/1167980495/americas-roads-are-more-dangerous-as-police-pull-over-fewer-drivers
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110157772962462495
 ---
 
 No one can deny that deaths on American roads are higher than ever, but commentators are still free to get creative when deciding who to blame for it. NPR just published a report arguing that rising traffic deaths are mainly caused by law enforcement policies. Nowhere do they mention the ways in which our streets are engineered to be deadly by design.

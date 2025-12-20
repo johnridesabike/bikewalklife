@@ -9,6 +9,8 @@ excerpt: >-
 external_link: >-
   https://www.npr.org/2023/06/26/1184034017/us-pedestrian-deaths-high-traffic-car
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110616305801281933
 ---
 
 A few months ago, [we saw that pedestrian fatalities in the U.S. have reached a 40-year high](https://bikewalk.life/2023/04/new-nhtsa-report-shows-pedestrian-and-bicycle-fatalities-hit-a-40-year-high/). Now the news is hitting mainstream outlets like NPR, who also have some ideas to fix it.

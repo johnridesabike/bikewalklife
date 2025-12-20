@@ -11,6 +11,8 @@ excerpt: >-
   and other local Black history sites in Columbus, Georgia. I think this was one
   of our most unique and impressive bicycle events to date.
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110593289158599646
 ---
 
 We celebrated Juneteenth this year with a bike ride to historic Black churches and other local Black history sites in Columbus, Georgia. I think this was one of our most unique and impressive bicycle events to date.

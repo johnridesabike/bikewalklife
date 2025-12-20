@@ -12,6 +12,9 @@ excerpt: >-
   designed for children and teenagers to learn the basics of mountain biking.
 external_link: 'https://www.ledger-enquirer.com/news/local/article312906403.html'
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3m65q3fr3n22o
+  mastodon: https://indieweb.social/@bikewalklife/115588686130385249
 ---
 
 This past Wednesday was Groundbreaking Day for the MidTown Children's Bicycle Playground. Once complete, it will feature trails, bridges, and pump tracks designed for children and teenagers to learn the basics of mountain biking. [You can read more in the Ledger-Enquirer's report][1]:

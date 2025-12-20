@@ -12,6 +12,8 @@ excerpt: >-
 external_link: >-
   https://news.harvard.edu/gazette/story/2020/01/massachusetts-car-economy-costs-64-billion-study-finds/
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/111023988309748336
 ---
 
 Harvard students have calculated the price of keeping cars running in Massachusetts: about $64.1 billion dollars annually, and more than half is paid by public funds. Per household, $14K is spent by the government and $12K is spent on personal car expenses every year.

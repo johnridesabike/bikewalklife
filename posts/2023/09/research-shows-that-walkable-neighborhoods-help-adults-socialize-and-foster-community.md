@@ -12,6 +12,8 @@ excerpt: >-
 external_link: >-
   https://today.ucsd.edu/story/walkable-neighborhoods-help-adults-socialize-increase-community
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110990065700761727
 ---
 
 In another case where science proves what common sense tells us, people who live in walkable neighborhoods are less lonely, less isolated, and have stronger communities. This has implications for not only our mental and social wellness, but also our physical health.

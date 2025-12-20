@@ -10,6 +10,8 @@ hero_image:
 excerpt: 'It’s not really a bus, more like a caravan, but children in Portland are
   parading their way to school on bicycles thanks to a PE teacher’s program. '
 external_link: https://www.washingtonpost.com/lifestyle/2022/10/11/bike-bus-school-sam-balto/
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109206705420212189
 
 ---
 It’s not really a bus, more like a caravan, but children in Portland are parading their way to school on bicycles thanks to a PE teacher’s program.

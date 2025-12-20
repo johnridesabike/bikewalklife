@@ -10,6 +10,8 @@ hero_image:
 excerpt: For all you DIY aficionados, the Low-Tech Lab website has a new guide for
   building a bike trailer with hand tools and up-cycled materials.
 external_link: https://wiki.lowtechlab.org/wiki/Simple_wooden_bike_trolley_-_hand_tools_only_-_back_wheel_attachment
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109200824288588068
 
 ---
 For all you DIY aficionados, the Low-Tech Lab website has a new guide for building a bike trailer with hand tools and up-cycled materials. There’s no welding required!

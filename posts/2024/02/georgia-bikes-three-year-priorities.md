@@ -12,6 +12,9 @@ excerpt: >-
   And a bill for one of them is already moving forward in the state house.
 external_link: 'https://georgiabikes.org/georgia-bikes-policy-priorities/'
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3kku6mmhm3f27
+  mastodon: https://indieweb.social/@bikewalklife/111892254503727581
 ---
 
 Georgia Bikes just shared their advocacy priorities for the next three years. And a bill for one of them, the "yield bill," is already moving forward in the state house.

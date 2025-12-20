@@ -10,6 +10,8 @@ excerpt: >-
   them.
 external_link: 'https://www.bicycling.com/news/a20044419/what-are-sharrows-used-for/'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109795955945582188
 ---
 
 Since they first appeared in the 90s, "sharrows" have been a contentious topic for bicyclists. They're those icons painted on roads that depict a bicycle beneath chevrons. They aren't bike lanes. In fact, most people don't know what they are. Bicycling Magazine published a new article that tries to explain them.

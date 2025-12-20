@@ -8,6 +8,8 @@ excerpt: >-
   cities across the world are.
 external_link: 'https://cityratings.peopleforbikes.org/'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109920053394331361
 ---
 
 The PeopleForBikes 2022 City Ratings are here. Every year, the organization PeopleForBikes aggregates data and collects stories to rate how bikeable cities across the world are.

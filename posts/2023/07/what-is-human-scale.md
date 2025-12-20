@@ -7,6 +7,8 @@ excerpt: >-
   everyone. Here is a quick explanation of it, specifically for how it relates
   to biking and walking.
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110714794755917897
 ---
 
 I often use the term "human scale" and assume that its meaning is obvious to everyone. Here is a quick explanation of it, specifically for how it relates to biking and walking.

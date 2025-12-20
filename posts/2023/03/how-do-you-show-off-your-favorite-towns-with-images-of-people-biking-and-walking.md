@@ -15,6 +15,8 @@ excerpt: >-
   when I saw the latest Southern Living magazine cover.
 external_link: 'https://www.southernliving.com/souths-best/small-towns'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110075266896784759
 ---
 
 Have you noticed that when someone wants to depict a happy, idyllic lifestyle, they often use photos of people on bicycles? I couldn't help but observe this when I saw the latest Southern Living magazine cover.

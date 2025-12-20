@@ -8,6 +8,9 @@ excerpt: >-
   lost to the Atlanta Metro's transportation system.
 external_link: 'https://storymaps.arcgis.com/stories/18e999a3c84a453687b4d0e71b683d36'
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3m7655j37rk2x
+  mastodon: https://indieweb.social/@bikewalklife/115661664597168642
 ---
 
 Propel ATL has their latest [Human Cost of Mobility][0] report online, which combines storytelling with data visualization to show the human lives that are lost to the Atlanta Metro's transportation system. The report should be alarming if it was not so aligned with the nationwide trend of rising traffic deaths. Since [traffic deaths rose drastically during the pandemic][1], they have still never returned close to their pre-pandemic levels. The few areas which have improved have only gone down slightly, and biking and walking remain as vulnerable as ever.

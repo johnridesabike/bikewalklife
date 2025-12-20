@@ -8,6 +8,8 @@ excerpt: >-
   about how our transportation system is dangerous by design, but it's scary to
   personally become one of its victims. 
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/111281018155964544
 ---
 
 Last week, a car crashed into me during my bike commute. This is a terrible situation, but I'm recovering and it could have been far worse. I often write about how our [transportation system is dangerous by design](https://bikewalk.life/2022/07/dangerous-by-design-2022-traffic-deaths-are-getting-worse-especially-in-the-sun-belt/), but it's scary to personally become one of its victims. 

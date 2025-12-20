@@ -12,6 +12,8 @@ excerpt: >-
   awareness of deadly driving. Sadly, a lot of it still rings true today.
 external_link: 'https://www.rd.com/article/reckless-driving/'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/111047119063714860
 ---
 
 I recently found an article from a 1935 Reader's Digest which tries to raise awareness of deadly driving. Sadly, a lot of it still rings true today.

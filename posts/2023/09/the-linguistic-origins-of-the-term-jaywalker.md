@@ -8,6 +8,8 @@ excerpt: >-
   means.
 external_link: 'https://www.grammarphobia.com/blog/2023/08/jaywalk.html'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/111108905963663355
 ---
 
 Jaywalker is a popular pejorative that also enjoys a legal definition. Most of us have heard the term, but we are unaware of its history or even what "jay" means.

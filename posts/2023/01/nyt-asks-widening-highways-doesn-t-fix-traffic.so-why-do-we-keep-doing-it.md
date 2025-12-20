@@ -12,6 +12,8 @@ excerpt: The New York Times published a new article critical of highway expansio
   It looks at several of the widest highways in the United States, their recent efforts
   for widening, and the resulting effects.
 external_link: https://www.nytimes.com/2023/01/06/us/widen-highways-traffic.html
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/109650189035334612
 
 ---
 The New York Times published a new article critical of highway expansion. It looks at several of the widest highways in the United States, their recent efforts for widening, and the resulting effects.

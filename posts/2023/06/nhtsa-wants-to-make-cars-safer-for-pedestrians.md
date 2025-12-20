@@ -8,6 +8,8 @@ excerpt: >-
   information for how dangerous cars are for pedestrians in a crash.
 external_link: 'https://www.nhtsa.gov/press-releases/automatic-emergency-braking-proposed-rule'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/110582365284078506
 ---
 
 The National Highway Traffic Safety Administration (NHTSA) has proposed that [cars add automatic emergency braking for pedestrians][0] and to [provide consumers information for how dangerous cars are for pedestrians in a crash][1].

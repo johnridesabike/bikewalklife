@@ -13,6 +13,8 @@ excerpt: >-
   and the Coffeeneuring Challenge kicks off one week later, on October seventh.
 external_link: 'https://chasingmailboxes.com/2023/09/24/coffeeneuring-challenge-2023-lucky-13/'
 draft: false
+posse:
+  mastodon: https://indieweb.social/@bikewalklife/111136888408434902
 ---
 
 For you bicycle and coffee lovers, we're getting two events back-to-back this year. International Coffee Outside Day is happening on Sunday, October first, and the Coffeeneuring Challenge kicks off one week later, on October seventh.

@@ -7,6 +7,9 @@ excerpt: >-
   town homes, and it’s meeting a familiar foe: the public’s fear of car traffic.
 external_link: 'https://www.ledger-enquirer.com/news/politics-government/article313661281.html'
 draft: false
+posse:
+  bluesky: https://bsky.app/profile/bikewalk.life/post/3ma6yyau64c2e
+  mastodon: https://indieweb.social/@bikewalklife/115735679998202999
 ---
 
 In Columbus, Georgia, there’s another attempt to rezone for more multifamily town homes, and it’s meeting a familiar foe: the public’s fear of car traffic. In a city council meeting this week, residents and officials both cited increased traffic in their arguments against rezoning an area from 83 single-family homes into 93 homes, 78 townhomes plus 15 larger lots.
