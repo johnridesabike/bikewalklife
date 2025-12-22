@@ -142,22 +142,19 @@ export function PageNumber({ pageNumber }) {
 }
 PageNumber.interface = { pageNumber: "int" };
 
-export function SimpleIcon({ name, className }) {
+export function SimpleIcon({ name }) {
   let icon = SimpleIcons["si" + name];
-  return `
-    <svg
+  return `<svg
       role="img"
       viewBox="0 0 24 24"
       height="24"
       width="24"
-      class="icon__svg ${className}"
+      class="icon__svg"
       style="fill: #${icon.hex}"
       aria-hidden="true">
       <path d="${icon.path}" />
-    </svg>
-  `;
+    </svg>`;
 }
 SimpleIcon.interface = {
   name: "string",
-  className: ["nullable", "string"]
-}
+};

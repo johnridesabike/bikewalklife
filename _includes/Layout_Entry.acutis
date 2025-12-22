@@ -132,8 +132,19 @@
         margin: auto;
       }
 
-      .entry-page__actions-item {
+      .entry-page__support-me {
         margin-top: 1em;
+      }
+
+      .entry-page__actions-wrapper,
+      .entry-page__actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1em;
+        align-items: center;
       }
 
       .entry-page__webmentions-header {
@@ -211,13 +222,6 @@
         .entry-page__avatar-wrapper {
           margin-right: 1em;
         }
-
-        .entry-page__actions {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
-
       }
     {%~ /PostCss ~%}
     </style>
@@ -241,38 +245,46 @@
      strings
      index=0
   / %}
-  <aside class="ui-font entry-page__actions">
-    <div class="entry-page__actions-item">
-      Want to support this blog?
-      <div>
-        <a href="https://www.buymeacoffee.com/johnridesabike">
-          <img
-            src="/assets/images/vendored/bmc-button.svg"
-            height=48
-            width=170
-            alt="Buy me a coffee.">
-        </a>
-      </div>
+  <aside class="entry-page__support-me">
+    Want to support this blog?
+    <div>
+      <a href="https://www.buymeacoffee.com/johnridesabike">
+        <img
+          src="/assets/images/vendored/bmc-button.svg"
+          height=48
+          width=170
+          alt="Buy me a coffee.">
+      </a>
     </div>
   </aside>
   <hr class="separator">
-  <div id=reply-links>
-    <h2> Join the conversation </h2>
-    <div class="entry-page__actions-item">
-      <span> Reply to this post with: </span>
+  <h2> Join the conversation </h2>
+  <div class="entry-page__actions-wrapper">
+    <div> Respond to this post with: </div>
+    <div class="entry-page__actions">
       {% match posse with !{bluesky, mastodon} %}
         {% match bluesky with null with !"" %}
         {% with !url %}
-          <a href="{% url %}"> {% SimpleIcon name="Bluesky" / %} Bluesky</a>
+          <div class="entry-page__actions-item">
+            <a href="{% url %}">
+              {% SimpleIcon name="Bluesky" / %} Bluesky
+            </a>
+          </div>
         {% /match %}
         {% match mastodon with null with !"" %}
         {% with !url %}
-          <a href="{% url %}"> {% SimpleIcon name="Mastodon" / %} Mastodon</a>
+          <div class="entry-page__actions-item">
+            <a href="{% url %}">
+              {% SimpleIcon name="Mastodon" / %} Mastodon
+            </a>
+          </div>
         {% /match %}
       {% with null %} {% /match %}
       {% match collections
         with {pages: <contact: {url: href}>} %}
-        {% Link href %} {% Icon name="mail" / %} Email {% /Link %}
+        <div class="entry-page__actions-item">
+          {% Link href %} {% Icon name="mail" / %} Email {% /Link %}
+        </div>
       {% with _ %} {* Nothing *} {% /match %}
     </div>
   </div>
