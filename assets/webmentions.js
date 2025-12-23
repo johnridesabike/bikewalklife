@@ -28,12 +28,19 @@ function createMentions(arr, count, title, className) {
     let ul = document.createElement("ul");
     frag.appendChild(ul);
     ul.className = className;
-    arr.forEach((data) => {
-      let li = document.createElement("li");
-      ul.appendChild(li);
-      li.className = "entry-page__webmentions-item";
-      li.appendChild(createPhoto(data));
-    });
+    // When a post is shared multiple times and the same people like or repost
+    // it, they will appear multiple times. This dedupes them based on their
+    // profile URL.
+    let dedupe = new Set();
+    for (let data of arr) {
+      if (!dedupe.has(data.author.url)) {
+        let li = document.createElement("li");
+        ul.appendChild(li);
+        li.className = "entry-page__webmentions-item";
+        li.appendChild(createPhoto(data));
+        dedupe.add(data.author.url);
+      }
+    }
     let diff = count - arr.length;
     if (diff > 0) {
       let li = document.createElement("li");
@@ -64,7 +71,7 @@ function createReplies(arr) {
     let comments = document.createElement("div");
     frag.appendChild(comments);
     comments.clasName = "entry-page__webmentions-replies";
-    arr.forEach((data) => {
+    for (let data of arr) {
       let comment = document.createElement("article");
       comments.appendChild(comment);
       comment.className = "h-entry entry-page__webmentions-reply";
@@ -105,7 +112,7 @@ function createReplies(arr) {
       link.appendChild(
         document.createTextNode("Posted on " + url.hostname + ".")
       );
-    });
+    }
   }
   return frag;
 }
