@@ -134,7 +134,7 @@ async function fetchMentions(params) {
 
 let canonicalUrl = document.getElementById("canonical-url");
 
-let emptyMentions = { children: [] };
+let emptyMentions = Promise.resolve({ children: [] });
 
 async function run(canonicalUrl) {
   let target = canonicalUrl.href;
@@ -143,7 +143,7 @@ async function run(canonicalUrl) {
   let reposts = emptyMentions;
   let replies = emptyMentions;
   if (count.type.like !== 0) {
-    likes = await fetchMentions([
+    likes = fetchMentions([
       ["wm-property", "like-of"],
       ["per-page", "5"],
       ["sort-dir", "down"],
@@ -151,7 +151,7 @@ async function run(canonicalUrl) {
     ]);
   }
   if (count.type.repost !== 0) {
-    reposts = await fetchMentions([
+    reposts = fetchMentions([
       ["wm-property", "repost-of"],
       ["per-page", "5"],
       ["sort-dir", "down"],
@@ -159,7 +159,7 @@ async function run(canonicalUrl) {
     ]);
   }
   if (count.type.reply !== 0) {
-    replies = await fetchMentions([
+    replies = fetchMentions([
       ["wm-property[]", "in-reply-to"],
       ["wm-property[]", "mention-of"],
       ["per-page", "20"],
@@ -172,7 +172,7 @@ async function run(canonicalUrl) {
     root.className = "entry-page__webmentions";
     root.appendChild(
       createMentions(
-        reposts.children,
+        (await reposts).children,
         count.type.repost,
         "Reposted by",
         "entry-page__webmentions-reposts"
@@ -180,14 +180,14 @@ async function run(canonicalUrl) {
     );
     root.appendChild(
       createMentions(
-        likes.children,
+        (await likes).children,
         count.type.like,
         "Liked by",
         "entry-page__webmentions-likes"
       )
     );
     // If I ever get enough replies I could add paging to this.
-    root.appendChild(createReplies(replies.children));
+    root.appendChild(createReplies((await replies).children));
   }
 }
 
