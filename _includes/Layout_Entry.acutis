@@ -267,7 +267,7 @@
         {% with !url %}
           <div class="entry-page__actions-item">
             <a href="{% url %}">
-              {% SimpleIcon name="Bluesky" / %} Bluesky
+              {% SimpleIcon name="Bluesky" class=!"icon" / %} Bluesky
             </a>
           </div>
         {% /match %}
@@ -275,7 +275,7 @@
         {% with !url %}
           <div class="entry-page__actions-item">
             <a href="{% url %}">
-              {% SimpleIcon name="Mastodon" / %} Mastodon
+              {% SimpleIcon name="Mastodon" class=!"icon" / %} Mastodon
             </a>
           </div>
         {% /match %}
@@ -283,7 +283,9 @@
       {% match collections
         with {pages: <contact: {url: href}>} %}
         <div class="entry-page__actions-item">
-          {% Link href %} {% Icon name="mail" / %} Email {% /Link %}
+          {% Link href %}
+            {% Icon name="mail" class=!"icon" / %} Email
+          {% /Link %}
         </div>
       {% with _ %} {* Nothing *} {% /match %}
     </div>

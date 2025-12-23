@@ -1,6 +1,6 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import featherIcons from "feather-icons";
+import FeatherIcons from "feather-icons";
 import * as SimpleIcons from "simple-icons";
 import Image from "@11ty/eleventy-img";
 import postcss from "postcss";
@@ -9,7 +9,6 @@ import postcssGlobalData from "@csstools/postcss-global-data";
 import config from "../_data/config.js";
 
 let { cloudinary_url } = config;
-let { icons } = featherIcons;
 
 let dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -47,7 +46,7 @@ export function PostCss({ children }) {
 PostCss.interface = { children: "string" };
 
 export function Icon(props) {
-  return icons[props.name].toSvg({ class: props.class || "" });
+  return FeatherIcons.icons[props.name].toSvg({ class: props.class || "" });
 }
 Icon.interface = {
   name: "string",
@@ -142,14 +141,14 @@ export function PageNumber({ pageNumber }) {
 }
 PageNumber.interface = { pageNumber: "int" };
 
-export function SimpleIcon({ name }) {
-  let icon = SimpleIcons["si" + name];
+export function SimpleIcon(props) {
+  let icon = SimpleIcons["si" + props.name];
   return `<svg
       role="img"
       viewBox="0 0 24 24"
       height="24"
       width="24"
-      class="icon__svg"
+      class="${props.class}"
       style="fill: #${icon.hex}"
       aria-hidden="true">
       <path d="${icon.path}" />
@@ -157,4 +156,5 @@ export function SimpleIcon({ name }) {
 }
 SimpleIcon.interface = {
   name: "string",
+  class: ["nullable", "string"],
 };
