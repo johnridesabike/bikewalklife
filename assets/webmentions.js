@@ -70,7 +70,7 @@ function createReplies(arr) {
     h2.appendChild(text);
     let comments = document.createElement("div");
     frag.appendChild(comments);
-    comments.clasName = "entry-page__webmentions-replies";
+    comments.className = "entry-page__webmentions-replies";
     for (let data of arr) {
       let comment = document.createElement("article");
       comments.appendChild(comment);
