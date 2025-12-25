@@ -1,3 +1,4 @@
+import * as React from "react";
 import { defineConfig } from "tinacms";
 import slugify from "@sindresorhus/slugify";
 import authorData from "../_data/authors.json";
@@ -183,7 +184,14 @@ export default defineConfig({
             type: "string",
             isBody: true,
             ui: {
-              component: "textarea",
+              component: ({ input }) => (
+                <textarea
+                  {...input}
+                  rows={18}
+                  cols={80}
+                  style={{ maxWidth: "100%" }}
+                />
+              ),
               validate: nonEmpty,
             },
           },
