@@ -1,21 +1,8 @@
-This is the source code for <https://bikewalk.life/>.
+![Bike Walk Life](./assets/images/2025/header-light-2025.svg)
 
-It is mostly powered by [Eleventy].
+This is the git repository for <https://bikewalk.life/>.
 
-[eleventy]: https://www.11ty.dev
-
-It uses the [Tina] CMS.
-
-[tina]: https://tina.io/
-
-Its templates are compiled with [Acutis], a language that I invented.
-
-[acutis]: https://johnridesa.bike/acutis/
-
-Images are hosted on [Cloundinary].
-
-[cloundinary]: https://cloudinary.com
-
-The rest of the site is hosted on [Netlify].
-
-[netlify]: https://www.netlify.com
+- [Source code home](https://github.com/johnridesabike/bikewalklife)
+  [(mirror)](https://git.sr.ht/~johnridesabike/bikewalk.life).
+- [Mailing list](https://lists.sr.ht/~johnridesabike/public-inbox).
+- [Read more about how it works](https://johnridesa.bike/software/bikewalklife/).
