@@ -65,12 +65,15 @@
   {%~ /match %}
   {% map [
       "/assets/node_modules/@fontsource/source-sans-pro/files/source-sans-pro-latin-400-normal.woff2",
+      "/assets/node_modules/@fontsource/source-sans-pro/files/source-sans-pro-latin-400-italic.woff2",
+      "/assets/node_modules/@fontsource/source-sans-pro/files/source-sans-pro-latin-700-normal.woff2",
       "/assets/node_modules/@fontsource/source-serif-pro/files/source-serif-pro-latin-400-normal.woff2",
     ]
     with asset
   ~%}
   <link rel=preload as=font crossorigin href="{% asset %}">
   {% /map ~%}
+  <link rel=preconnect href="https://res.cloudinary.com">
   {%~ match metadata with null %}
     {% Metadata config title absoluteUrl / %}
   {%~ with metadata ~%}
