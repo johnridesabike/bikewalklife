@@ -360,6 +360,6 @@
     {% /match %}
   </ul>
 </nav>
-<script async src="/assets/webmentions.js"></script>
+<script async type=module src="/assets/webmentions.js"></script>
 {% /Layout %}
 {% /match %}

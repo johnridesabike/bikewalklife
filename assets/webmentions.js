@@ -1,5 +1,3 @@
-"use strict";
-
 function createPhoto(data, alt) {
   let div = document.createElement("div");
   div.className = "entry-page__webmentions-photo";
@@ -119,7 +117,7 @@ function createReplies(arr) {
 
 async function fetchCount(params) {
   let response = await fetch(
-    "https://webmention.io/api/count?" + params.toString()
+    "https://webmention.io/api/count?" + new URLSearchParams(params).toString()
   );
   return response.json();
 }
@@ -132,65 +130,60 @@ async function fetchMentions(params) {
   return response.json();
 }
 
-let canonicalUrl = document.getElementById("canonical-url");
-
 let emptyMentions = Promise.resolve({ children: [] });
 
-async function run(canonicalUrl) {
-  let target = canonicalUrl.href;
-  let count = await fetchCount(new URLSearchParams({ target: target }));
-  let likes = emptyMentions;
-  let reposts = emptyMentions;
-  let replies = emptyMentions;
-  if (count.type.like !== 0) {
-    likes = fetchMentions([
-      ["wm-property", "like-of"],
-      ["per-page", "5"],
-      ["sort-dir", "down"],
-      ["target", target],
-    ]);
-  }
-  if (count.type.repost !== 0) {
-    reposts = fetchMentions([
-      ["wm-property", "repost-of"],
-      ["per-page", "5"],
-      ["sort-dir", "down"],
-      ["target", target],
-    ]);
-  }
-  if (count.type.reply !== 0) {
-    replies = fetchMentions([
-      ["wm-property[]", "in-reply-to"],
-      ["wm-property[]", "mention-of"],
-      ["per-page", "20"],
-      ["sort-dir", "up"],
-      ["target", target],
-    ]);
-  }
-  if (count.count !== 0) {
-    let root = document.getElementById("webmentions-root");
-    root.className = "entry-page__webmentions";
-    root.appendChild(
-      createMentions(
-        (await reposts).children,
-        count.type.repost,
-        "Reposted by",
-        "entry-page__webmentions-reposts"
-      )
-    );
-    root.appendChild(
-      createMentions(
-        (await likes).children,
-        count.type.like,
-        "Liked by",
-        "entry-page__webmentions-likes"
-      )
-    );
-    // If I ever get enough replies I could add paging to this.
-    root.appendChild(createReplies((await replies).children));
-  }
+async function run(root, target) {
+  let count = await fetchCount([["target", target]]);
+  let likes = count.type.like
+    ? fetchMentions([
+        ["wm-property", "like-of"],
+        ["per-page", "5"],
+        ["sort-dir", "down"],
+        ["target", target],
+      ])
+    : emptyMentions;
+  let reposts = count.type.repost
+    ? fetchMentions([
+        ["wm-property", "repost-of"],
+        ["per-page", "5"],
+        ["sort-dir", "down"],
+        ["target", target],
+      ])
+    : emptyMentions;
+  let replies =
+    count.type.reply || count.type.mention
+      ? fetchMentions([
+          ["wm-property[]", "in-reply-to"],
+          ["wm-property[]", "mention-of"],
+          ["per-page", "20"],
+          ["sort-dir", "up"],
+          ["target", target],
+        ])
+      : emptyMentions;
+  root.className = "entry-page__webmentions";
+  root.appendChild(
+    createMentions(
+      (await reposts).children,
+      count.type.repost,
+      "Reposted by",
+      "entry-page__webmentions-reposts"
+    )
+  );
+  root.appendChild(
+    createMentions(
+      (await likes).children,
+      count.type.like,
+      "Liked by",
+      "entry-page__webmentions-likes"
+    )
+  );
+  // If I ever get enough replies I could add paging to this.
+  root.appendChild(createReplies((await replies).children));
 }
 
-if (canonicalUrl instanceof HTMLLinkElement) {
-  run(canonicalUrl);
+let root = document.getElementById("webmentions-root");
+let canonicalUrl = document.getElementById("canonical-url");
+
+if (root && canonicalUrl instanceof HTMLLinkElement) {
+  run(root, canonicalUrl.href);
 }
