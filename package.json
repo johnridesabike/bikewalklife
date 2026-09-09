@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-img": "^7.0.0",
     "@csstools/postcss-global-data": "^3.1.0",
     "@fontsource/source-sans-pro": "^5.2.5",
     "@fontsource/source-serif-pro": "^5.2.5",
